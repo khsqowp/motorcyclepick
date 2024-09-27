@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오토바이 추천 설문조사</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+<section class="survey-section">
+    <div class="survey-content">
+        <h2>오토바이 설문조사</h2>
+        <p>아래 질문에 답변을 선택해주세요. 총 20문항 중 5문항을 보여드립니다.</p>
+        <!-- form 태그에 action 속성을 추가하여 다음 페이지로 이동 -->
+        <form id="survey-form" action="question16to20.html" method="GET">
+            <div class="question">
+                <p>11. 나는 잔고장이 적은 바이크를 원한다</p>
+                <label><input type="radio" name="q11" value="1"> 그렇다</label>
+                <label><input type="radio" name="q11" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>12. 나는 짐을 많이 실을 수 있는 바이크를 원한다</p>
+                <label><input type="radio" name="q12" value="1"> 그렇다</label>
+                <label><input type="radio" name="q12" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>13. 나는 연비를 중요하게 생각한다</p>
+                <label><input type="radio" name="q13" value="1"> 그렇다</label>
+                <label><input type="radio" name="q13" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>14. 나는 자가정비를 할 예정이라 정비성이 좋았으면 좋겠다</p>
+                <label><input type="radio" name="q14" value="1"> 그렇다</label>
+                <label><input type="radio" name="q14" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>15. 나는 정비를 받을 때 금전적인 부담이 적었으면 좋겠다</p>
+                <label><input type="radio" name="q15" value="1"> 그렇다</label>
+                <label><input type="radio" name="q15" value="0"> 그렇지 않다</label>
+            </div>
+
+            <button type="submit" class="submit-btn">다음</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

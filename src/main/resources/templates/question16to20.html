@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오토바이 추천 설문조사</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+<section class="survey-section">
+    <div class="survey-content">
+        <h2>오토바이 설문조사</h2>
+        <p>아래 질문에 답변을 선택해주세요. 총 20문항 중 마지막 5문항을 보여드립니다.</p>
+        <!-- form 태그에 action 속성을 추가하여 다음 페이지로 이동 -->
+        <form id="survey-form" action="/resultPage" method="POST">
+            <div class="question">
+                <p>16. 나는 바이크 구매에 금전적인 부담은 없다</p>
+                <label><input type="radio" name="q16" value="1"> 그렇다</label>
+                <label><input type="radio" name="q16" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>17. 나는 ㅏ살믇ㄹ이 많이 구매하는 브랜드의 바이크를 원한다</p>
+                <label><input type="radio" name="q17" value="1"> 그렇다</label>
+                <label><input type="radio" name="q17" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>18. 나는 커스텀을 할 수 있는 종류가 다양했으면 좋겠다</p>
+                <label><input type="radio" name="q18" value="1"> 그렇다</label>
+                <label><input type="radio" name="q18" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>19. 나는 감가방어가 잘 되는 바이크를 구매하고 싶다</p>
+                <label><input type="radio" name="q19" value="1"> 그렇다</label>
+                <label><input type="radio" name="q19" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>20. 나는 중고 바이크 구매를 고려하고 있다</p>
+                <label><input type="radio" name="q20" value="1"> 그렇다</label>
+                <label><input type="radio" name="q20" value="0"> 그렇지 않다</label>
+            </div>
+
+            <button type="submit" class="submit-btn">다음</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

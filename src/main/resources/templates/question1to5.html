@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오토바이 추천 설문조사</title>
+    <link rel="stylesheet" href="question1to5.css">
+</head>
+<body>
+<section class="survey-section">
+    <div class="survey-content">
+        <h2>오토바이 설문조사</h2>
+        <p>아래 질문에 답변을 선택해주세요. 총 20문항 중 5문항을 보여드립니다.</p>
+
+        <!-- form 태그를 POST 방식으로 설정하고 데이터를 전송 -->
+        <form id="survey-form" th:action="@{/question6to10}" method="POST">
+            <div class="question">
+                <p>1. 나는 고동감(진동)이 넘치는 바이크를 원한다</p>
+                <label><input type="radio" name="q1" value="1"> 그렇다</label>
+                <label><input type="radio" name="q1" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>2. 나는 빠르게 달릴 수 있는 바이크를 원한다</p>
+                <label><input type="radio" name="q2" value="1"> 그렇다</label>
+                <label><input type="radio" name="q2" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>3. 나는 편하게 탈 수 있는 바이크를 원한다</p>
+                <label><input type="radio" name="q3" value="1"> 그렇다</label>
+                <label><input type="radio" name="q3" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>4. 나는 투어와 같은 장거리 목적으로 탈 생각이다</p>
+                <label><input type="radio" name="q4" value="1"> 그렇다</label>
+                <label><input type="radio" name="q4" value="0"> 그렇지 않다</label>
+            </div>
+
+            <div class="question">
+                <p>5. 나는 추로티근용으로 바이크를 사용할 계획이다</p>
+                <label><input type="radio" name="q5" value="1"> 그렇다</label>
+                <label><input type="radio" name="q5" value="0"> 그렇지 않다</label>
+            </div>
+
+            <button type="submit" class="submit-btn">다음</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

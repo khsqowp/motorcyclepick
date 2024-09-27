@@ -1,0 +1,76 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.3'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Spring Boot 기본 의존성
+	implementation 'org.springframework.boot:spring-boot-starter'
+
+	// ===== Spring Boot Starter 의존성 =====
+	// Spring MVC 및 REST API 처리를 위한 웹 의존성
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Thymeleaf를 사용한 템플릿 엔진 지원
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	// Spring Data JPA를 사용한 데이터베이스 연동
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// Spring Security를 사용한 인증 및 권한 관리
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	// WebSocket을 사용한 실시간 통신 지원
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+	// 데이터 유효성 검사를 위한 의존성
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	// 이메일 전송을 위한 의존성
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+	// 개발 중에 핫 리로딩 기능을 제공하는 DevTools
+	implementation 'org.springframework.boot:spring-boot-devtools'
+
+	// ===== Lombok 의존성 =====
+	// Lombok을 사용한 코드 간소화 (컴파일 시점 의존성)
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// Lombok을 테스트 코드에서 사용하기 위한 의존성
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	// ===== MySQL 의존성 =====
+	// MySQL 데이터베이스 연결을 위한 의존성
+	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	// ===== 테스트 관련 의존성 =====
+	// Spring Boot 테스트 관련 의존성
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// JUnit5 플랫폼 런처를 위한 의존성 (테스트 실행기)
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// ===== 외부 API 연동 (예: ChatGPT) =====
+	// OkHttp를 사용한 HTTP 클라이언트 의존성 (ChatGPT API 연동용)
+	implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

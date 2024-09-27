@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>package com.example.motorcycle.controller;
+
+        import com.example.motorcycle.service.BoardService;
+        import com.example.motorcycle.domain.MotorcycleSpec;
+        import org.springframework.stereotype.Controller;
+        import org.springframework.ui.Model;
+        import org.springframework.web.bind.annotation.PostMapping;
+        import lombok.RequiredArgsConstructor;
+
+        import java.util.List;
+
+        @Controller
+        @RequiredArgsConstructor
+        public class BoardController {
+
+        private final BoardService boardService;
+
+        // 설문조사 결과를 처리하고, resultPage.html로 이동
+        @PostMapping("/resultPage")
+        public String showResultPage(Model model) {
+        // 바이크 추천 리스트를 데이터베이스에서 가져옴
+        List<MotorcycleSpec> recommendedBikes = boardService.getRecommendedBikes();
+
+        // 모델에 데이터를 추가하여 HTML에 전달
+        model.addAttribute("title", "당신을 위한 바이크는?");
+        model.addAttribute("bikes", recommendedBikes);
+
+        // resultPage.html로 이동
+        return "resultPage";
+        }
+        }
+    </title>
+</head>
+<body>
+
+</body>
+</html>

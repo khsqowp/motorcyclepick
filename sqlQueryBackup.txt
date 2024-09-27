@@ -1,0 +1,758 @@
+CREATE DATABASE IF NOT EXISTS MotorcycleDB;
+
+USE MotorcycleDB;
+
+DROP TABLE IF EXISTS MotorcycleSpecs;
+
+CREATE TABLE MotorcycleSpecs (
+                              brand VARCHAR(255),
+                              model VARCHAR(255),
+                              years VARCHAR(255),
+                              engine VARCHAR(255),
+                              capacity VARCHAR(255),
+                              bore_stroke VARCHAR(255),
+                              compression_ratio VARCHAR(255),
+                              cooling_system VARCHAR(255),
+                              exhaust VARCHAR(255),
+                              lubrication VARCHAR(255),
+                              engine_oil VARCHAR(255),
+                              induction VARCHAR(255),
+                              emission VARCHAR(255),
+                              ignition VARCHAR(255),
+                              battery VARCHAR(255),
+                              `starting` VARCHAR(255), -- 예약어인 starting을 백틱으로 감쌌습니다.
+                              max_power VARCHAR(255),
+                              max_torque VARCHAR(255),
+                              clutch VARCHAR(255),
+                              transmission_drive VARCHAR(255),
+                              transmission VARCHAR(255),
+                              final_drive VARCHAR(255),
+                              frame VARCHAR(255),
+                              front_suspension VARCHAR(255),
+                              front_wheel_travel VARCHAR(255),
+                              rear_suspension VARCHAR(255),
+                              rear_wheel_travel VARCHAR(255),
+                              front_brakes VARCHAR(255),
+                              rear_brakes VARCHAR(255),
+                              wheels VARCHAR(255),
+                              abs VARCHAR(255),
+                              front_wheel VARCHAR(255),
+                              rear_wheel VARCHAR(255),
+                              front_tyre VARCHAR(255),
+                              rear_tyre VARCHAR(255),
+                              front_rim VARCHAR(255),
+                              rear_rim VARCHAR(255),
+                              rake VARCHAR(255),
+                              trail VARCHAR(255),
+                              dimensions VARCHAR(255),
+                              seat_height VARCHAR(255),
+                              wheelbase VARCHAR(255),
+                              ground_clearance VARCHAR(255),
+                              wet_weight VARCHAR(255),
+                              fuel_capacity VARCHAR(255)
+);
+
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda','CBR 600RR', '2024', 'Four stroke, transverse four cylinder, DOHC, 4 valve per cylinder.',
+             '599 cc / 36.5 cu-in', '67 x 42.5 mm', '12.2:1', 'Liquid cooled', 'Wet sump',
+             'Synthetic, 10W/40', 'Programmed Dual Stage Fuel Injection (PGM-DSFI); 40mm throttle bodies, Denso 12-hole injectors',
+             'Computer-controlled digital transistorized with electronic advance and independent four-cylinder 3D-mapped computer control.',
+             '12-9.1Ah YTZ10S', 'Electric', '119 hp / 89 kW @ 14250 rpm', '63 Nm / 46.5 lb-ft @ 11500 rpm',
+             'Wet multiplate hydraulic clutch', 'Close-ratio 6 Speed', '#525 O-ring chain', 'Aluminium, twin spar',
+             '41mm inverted Big Piston Fork with spring preload, rebound and compression damping adjustability', '120 mm / 4.3 in',
+             'Fully adjustable Showa rear shock operating through Unit Pro-Link', '128 mm / 5.0 in', '2x 310mm discs with radial-mount 4 piston calipers',
+             'Single 220mm disc 1 piston caliper', '2 Channel', '17M/CxMT3.50', '17M/CcMT5.50', '120/70 ZR17', '180/55 ZR17',
+             '24.06°', '100 mm / 3.9 in', 'Length: 2030 mm / 79.9 in Width: 685 mm / 27.0 in Height: 1140 mm / 44.9 in',
+             '820 mm / 32.3 in', '1370 mm / 53.9 in', '125 mm / 4.9 in', '193 kg / 425 lbs', '18 liters / 4.8 gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CBR1000RR-R Fireblade', '2024', 'Four stroke, transverse 4 cylinder, DOHC, 4 valves per cylinder',
+             '999.9 cc / 61 cu-in', '81 x 48.5 mm', '13.6:1', 'Liquid cooled', null,
+             null, 'Programmed Dual Stage Fuel Injection (PGM-DSFI) with 52mm throttle bodies, Denso 12-hole injectors',
+             'Digital transistorized with electronic advance', '12-6 YTZ7S', 'Electric', '215 hp / 160kW @ 14000 rpm', '113 Nm / 82.6 lb-ft @ 12000 rpm',
+             'Wet, multiplate hydraulic clutch with assist slipper', '6 speed', 'Chain', 'Twin-spar aluminum',
+             'SHOWA BPF 43mm telescopic fork with preload, compression and rebound adjustment', '120 mm / 4.7 in',
+             'SHOWA BFRC-Lite Pro-Link swingarm with 10-step preload, stepless compression and rebound damping adjustment', '137 mm / 5.3 in',
+             '2 x 330mm discs with radially mounted 4-piston Nissin calipers', 'Single 220mm disc with 2-piston Brembo caliper', '2 Channel',
+             '3.5MT x 17', '6.0MT x 17', '120/70-ZR17 M/C (58W)', '200/55-ZR17 M/C (78W)', '23.56°', '100.8 mm / 4.0 in',
+             'Length 2100 mm / 82.7 in Width 740 mm / 29.1 in Height 1140 mm / 44.9 in', '830 mm / 32.7 in', '1450 mm / 57.1 in',
+             '130 mm / 5.1 in', '200 kg / 441 lbs', '16.5 Litres / 4.4 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CBR1000RR-R Fireblade SP', '2024', 'Four stroke, transverse 4 cylinder, DOHC, 4 valves per cylinder',
+             '999.9 cc / 61 cu-in', '81 x 48.5 mm', '13.6:1', 'Liquid cooled', NULL,
+             NULL, 'Programmed Dual Stage Fuel Injection (PGM-DSFI) with 52mm throttle bodies, Denso 12-hole injectors',
+             'Digital transistorized with electronic advance', '12-6 YTZ7S', 'Electric', '215 hp / 160kW @ 14000 rpm', '113 Nm / 82.6 lb-ft @ 12500 rpm',
+             'Wet, multiplate hydraulic clutch with assist slipper', '6 speed', 'Chain', 'Twin-spar aluminum',
+             'Öhlins NPX S-EC3.0 43mm telescopic fork with preload, compression and rebound adjustments', '125 mm / 4.9 in',
+             'Öhlins TTX36 S-EC3.0 Pro-Link swingarm with preload, compression and rebound damping', '143 mm / 5.6 in',
+             '2x 330mm discs with radially mounted 4-piston Brembo Stylema R calipers', 'Single 220mm disc with 2-piston Brembo caliper', '2 Channel',
+             '3.5MT x 17', '6.0MT x 17', '120/70-ZR17 M/C (58W)', '200/55-ZR17 M/C (78W)', '24.7°', '101.9 mm / 4 in',
+             'Length 2105 mm / 82.9 in Width 750 mm / 29.5 in Height 1140 mm / 44.9 in', '830 mm / 32.6 in', 'mm / 57.5 in', '130 mm / 5.1 in',
+             '201 kg / 443 lbs', '16.5 Litres / 4.3 US gal'
+         );
+
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'GL 1800 Gold Wing Tour / Automatic-DCT', '2024',
+             'Four stroke, opposed boxer six cylinders, SOHC, 4-valve per cylinder, finger-follower rocker arm on intake, roller-rocker arm on exhaust',
+             '1833 cc / 111.85 cub in', '73 x 73 mm', '10.5:1', 'Liquid cooled', NULL,
+             NULL, 'PGM-FI electronic fuel injection, 50mm throttle body', 'Computer controlled digital', '12V/20AH',
+             'Integrated Starter Generator system', '93 kW / 124.7 hp @ 5500 rpm', '170 Nm / 125.3 ft-lb @ 4500 rpm',
+             '(MT) Hydraulic, wet, multiplate with coil springs, assist slipper cam (DCT) Hydraulic, wet, multiplate with oil pressure',
+             '6 speed MT (including overdrive. Plus electric reverse) 7-speed forward and reverse DCT',
+             'Enclosed shaft', 'Aluminum die-cast, twin tube', 'Double-wishbone', '110 mm / 4.3 in',
+             'Pro-Link system with Showa shock absorber', '104 mm / 4.1 in', '2x 320mm hydraulic discs 6-piston Nissin calipers, floating rotors and sintered metal pads',
+             'Single 316mm ventilated disc 3-piston Nissin caliper, sintered metal pads', 'Electronically controlled combined ABS system',
+             '3.5 x 18', '6.0 x 16', '130/70R 18', '200/55R 16', '30.5°', '109 mm / 4.3 in',
+             'Length: 2615 mm / 102.9 in Width: DCT 905 mm / 35.6 in / MT 925 mm / 36.4 in Height: 1430 mm / 56.2 in',
+             '745 mm / 29.3 in', '1694 mm / 66.7 in', '130 mm / 5.11 in', 'MT 385 kg / 848.7 lbs - DCT with airbag 390 kg / 859.8 lbs',
+             '21.1 Litres / US 5.57 gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'NT 1100 / DCT', '2024',
+             'Four stroke, parallel Twin with 270° crank and Uni-cam, SOHC, 4 valves per cylinder',
+             '1084 cc / 66.1 cu-in', '92.0 x 81.5 mm', '10.1:1', 'Liquid cooled', NULL,
+             NULL, 'PGM-FI electronic fuel injection with 46mm throttle bodies (Throttle By Wire)', 'Full transistorized ignition', '12V-6Ah Li-ion battery (20hr)',
+             'Electric', '75 kW / 100.5 hp @ 7500 rpm', '105 Nm / 77.4 ft-lb @ 6250 rpm',
+             'Wet, multiplate', 'MT: 6-speed Manual DCT: 6-speed Dual Clutch',
+             '525 Chain', 'Semi-double cradle', 'Showa 43mm SFF-BP type inverted telescopic fork with dial-style preload adjuster', '150 mm / 5.9 in',
+             'Monoblock aluminium swing arm with Pro-Link with SHOWA gas-charged damper, hydraulic dial-style preload adjuster', '150 mm / 5.9 in',
+             '2x 310 mm floating disc, radial mounted four-piston brake caliper', 'Single 256mm, single piston caliper',
+             '2 channel', 'Multi-spoke cast aluminium', NULL, '120/70R17 M/C', '180/55R17 M/C',
+             '26.5°', '108 mm / 4.2 in', 'Length: 2240 mm / 88.1 in Width: 865 mm / 34.0 in Height: 1360 mm / 53.5 in (low screen position)',
+             '820 mm / 32.3 in', '1535 mm / 60.4 in', '175 mm / 6.9 in', '238 kg / 524.7 lbs - MT 248 kg / 546.7 lbs - DCT',
+             '20.4 Litres / 5.0 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'NX 500', '2024',
+             'Four stroke, parallel-twin, DOHC, 4 valves per cylinder', '471 cc / 28.7 cu-in', '67.0 x 66.8 mm',
+             '10.7:1', 'Liquid cooled', NULL, '3.2 Litres', 'PGM-FI with 34mm throttle bodies', 'Computer-controlled digital transistorized with electronic advance',
+             NULL, 'Electric', '46.9 hp / 35 kW @ 8600 rpm', '43 Nm / 31.7 lb-ft @ 6500 rpm', 'Wet multiplate, assisted slipper clutch',
+             '6 Speed', '#520 O-ring sealed chain', 'Steel diamond', '41mm Showa SFF-BP USD forks, pre-load adjustable',
+             '150 mm / 5.9 in', 'Prolink mono with 5 stage preload adjuster, steel hollow cross swingarm', '135 mm / 5.3 in',
+             '2x 296mm wave disc with Nissin radial-mount two piston calipers', 'Single 240mm wave disc 1 piston calipers',
+             '2 Channel system', '19 X MT2.5', '17 X MT4.5', '110/80R19M/C (59H)', '160/60R17M/C (69H)',
+             '27.5°', '108 mm / 4.25 in', 'Length: 2165 mm / 84.8 in Width: 830 mm / 32.6 in Height: 1415 mm / 55.7 in',
+             '830 mm / 32.7 in', '1445 mm / 56.9 in', '180 mm / 7.0 in', '198 kg / 437 lbs', '17.5 Litres / 4.6 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CL 500', '2023', 'Four stroke, parallel twin cylinder, DOHC, 4 valve per cylinder',
+             '471 cc / 28.7 cu-in', '67 x 66.8 mm', '10.7:1', 'Liquid-cooled', NULL, NULL, -- `lubrication`과 `engine_oil`을 NULL로 지정
+             'PGM-FI electronic fuel injection', 'Electric', NULL, 'Electric', '45.9 hp / 34.3kW @ 8500rpm',
+             '43.4Nm / 32 lb-ft @ 6250rpm', 'Wet multiplate, assisted slipper clutch', '6 speed manual transmission',
+             'Chain', 'Steel diamond', '41mm Telescopic, upright forks', '150 mm / 5.9 in',
+             'Twin shock with 45mm round pipe swingarm, 5-step pre-load adjustment', '145 mm / 5.7 in',
+             'Single 310mm floating disc, 2 piston calipers', 'Single 240mm disc, 1 piston calliper', '2 channel',
+             'Cast Aluminium', NULL, '110/80R19M/C 59H', '150/70R17M/C 69H', '27°', '108 mm / 4.3 in',
+             'Length: 2175 mm / 85.6 in Width: 831 mm / 32.7 in Height: 1135 mm / 44.7 in',
+             '790 mm / 31.1 in', '1485 mm / 58.5 in', '155 mm / 6.1 in', '192 kg / 423.2 lbs', '12 Litres / 3.2 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CMX 1100 Rebel / DCT', '2023', 'Four stroke, parallel twin with 270°crank and Uni-cam, SOHC, 4 valves per cylinder',
+             '1084 cc / 66.1 cu-in', '92.0 x 81.5 mm', '10.1:1', 'Liquid cooled', NULL, -- `lubrication`을 NULL로 설정
+             NULL, 'PGM-FI electronic fuel injection with 46mm throttle bodies (Throttle By Wire)', 'Full transistorized ignition',
+             '112V/11.2AH', 'Electric', '64 kW / 85.8 hp @ 7000 rpm', '98 Nm / 72.2 ft-lb @ 4750 rpm',
+             'Wet multiplate clutch / DCT: Wet multiplate hydraulic 2-clutch', '6-speed Manual Transmission / DCT: 6-speed automatic Dual Clutch Transmission',
+             '525 chain, 16T x 42T', 'Diamond', '43mm conventional telescopic fork with adjustable preload & dark titanium oxide coating',
+             '139.7 mm / 5.5 in', 'Dual Showa shocks with 12.5mm shafts & adjustable preload, piggyback pressurized reservoirs', '93.9 mm / 3.7 in',
+             'Single 330mm floating disc, four-piston monobloc, radial-mount hydraulic caliper', 'Single 256mm disc with single-piston hydraulic caliper',
+             '2 channel ABS', 'MT3.50', 'MT5.00', '130/70B18 M/C', '180/65B16 M/C', '28°', '110 mm / 4.3 in',
+             'Length: 2240mm / 88.1 in Width: 853 mm / 33.5 in / DCT: 834 mm / 32.8 in Height: 1115 mm / 43.9 in',
+             '700 mm / 27.5 in', '1520 mm / 59.8 in', '120 mm / 4.7 in', '223 kg / 491.6 lbs - DCT 233 kg / 513.6 lbs', '13.6 Litres / 3.6 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CRF 300L', '2023', 'Four stroke single cylinder, DOHC, 4 valves',
+             '286 cc / 17.4 cu-in', '76 x 63 mm', '10.7:1', 'Liquid cooled', 'Wet sump',
+             NULL, 'PGM-FI electronic fuel injection', 'Full transistor digital', NULL, 'Electric', '27 hp / 20.1 kW @ 8500rpm',
+             '26.6 Nm / 19.6 lb-ft @ 6500rpm', 'Wet multiplate, assist/slipper clutch', '6 Speed', '#520 chain',
+             'Steel semi-double cradle', '43mm Telescopic USD forks', NULL, 'Pro-Link single shock with spring', NULL,
+             'Single 256mm disc 2 piston caliper', 'Single 220mm disc 1 piston caliper', '2 channel ABS', NULL, NULL,
+             '80/100-21M/C 51P', '120/80-18M/C 62P', '27.5°', '109 mm / 4.3 in',
+             'Length: 2230 mm / 87.7 in Width: 820 mm / 32.2 in Height: 1200 mm / 47.2 in',
+             '880 mm / 34.6 in', '1455 mm / 57.2 in', '285 mm / 11.2 in', '142 kg / 313 lbs', '7.8 Litres / 2 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'Forza 750', '2023', 'Four stroke, parallel twin cylinder, SOHC, 4 valve per cylinder',
+             '745 cc / 45.4 cu-in', '77 x 80mm', '10.7:1', 'Liquid cooled', NULL,
+             NULL, 'PGM-FI electronic fuel injection', NULL, '12V/11.2AH, ACG Output 480W/5000rpm', 'Electric', '43.1kW / 57.7 hp @ 6750rpm',
+             '69Nm / 50.8 lb-ft @ 4750rpm', 'Wet multiplate hydraulic dual clutch', '6 Speed dual clutch transmission', 'Chain',
+             'Diamond, steel pipe', '41mm USD forks', '120 mm / 4.7 in', 'Monoshock damper, Pro-Link swingarm', '120 mm / 4.7 in',
+             '2x 310mm hydraulic discs with radial 4-piston caliper', 'Single 240mm hydraulic disc with 1-piston caliper', 'ABS System Type 2-channel ABS',
+             '17M/C x MT3.50', '15M/C x MT4.50', '120/70-R17M/C', '160/60-R15M/C', '27°', '104 mm / 4.3 in',
+             'Length 2200 mm / 86.6 in Width 790 mm / 31.1 in Height 1485 mm / 58.4 in',
+             '790 mm / 31.1 in', '1580 mm / 62.2 in', '135 mm / 5.3 in', '235 kg / 518 lbs', '13.2 Litres / 3.48 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'MSX 125 Grom', '2023', 'Four stroke, single cylinder, SOHC, 2 valve', '124.9 cc / 7.62 cu-in',
+             '50.0 x 63.1 mm', '10.0:1', 'Air cooled', NULL, NULL, 'Injection PGM-FI', 'Electronic CDI', NULL, 'Electric',
+             '9.6 hp / 7.2 kW @ 7250 rpm', '10.5 Nm / 7.7 lb-ft @ 5500 rpm', 'Wet multiplate', '5 Speed', 'Chain',
+             'Steel mono-backbone frame', '31mm USD forks', NULL, 'Mono shock, steel square pipe swingarm', NULL,
+             'Single 220mm disc with hydraulic dual-piston brake caliper', 'Single 190mm disc with hydraulic single-piston brake caliper',
+             NULL, 'MT 2.5-12', 'MT 2.5-12', '120/70-12', '130/70-12', '25.0°', '81 mm / 3.2 in',
+             'Length 1760 mm / 69.2 in Width 720 mm / 28.3 in Height 1015 mm / 39.9 in', '761 mm / 29.9 in',
+             '1200 mm / 47.2 in', '180 mm / 7.0 in', '103 kg / 227 lbs', '6 Litres / 1.58 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'ADV 350', '2022', 'Four stroke, single cylinder, SOHC, 4-valve', '330 cc / 20.1 cu-in',
+             '77 x 70.8mm', '10.5:1', 'Liquid cooled', NULL, NULL, 'PGM-FI electronic fuel injection', 'Fully transistorised ignition', NULL, 'Electric',
+             '21.5 kW / 28.8 horsepower @ 7500 rpm', '31.5 Nm / 23.2 lb-ft @ 5250 rpm', 'Automatic centrifugal dry type', 'CVT', 'V-Belt',
+             'Steel underbone', '37mm Upside down forks', '125 mm / 4.9 in', 'Twin shock', '130 mm / 5.1 in',
+             'Single 256mm disc, 2 piston Nissin caliper', 'Single 240mm disc, 1 piston Nissin caliper', '2-channel ABS', NULL, NULL,
+             '120/70-15MC 56P', '140/70-14MC 62P', '26.5°', '89 mm / 3.5 in',
+             'Length : 2200 mm / 86.6 in Width: 895 mm / 35.2 in Height: 1430 mm / 56.2 in', '795 mm / 31.3 in',
+             '1520 mm / 59.8 in', '145 mm / 5.7 in', '186kg / 410 lbs', '11.7 Litres / 3.0 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CB 300R', '2022', 'Four stroke, single cylinder, DOHC, 4 valve', '286 cc / 17.45 cub-in',
+             '76 x 63 mm', '10.7:1', 'Liquid cooled', NULL, NULL, 'PGM-FI electronic fuel injection', 'Full transistorized', NULL, 'Electric',
+             '22.9 kW / 31 hp @ 9000 rpm', '27.5 Nm / 20.2 lb-ft @ 7750 rpm', 'Wet multiplate hydraulic clutch', '6 Speed', '#520 O-ring-sealed chain',
+             'Steel diamond', '41mm Showa Separate Function front Fork Big Piston (SFF-BP) USD forks', '130 mm / 5.1 in',
+             'Monoshock damper with 5 stage adjustable preload', '107 mm / 4.2 in', 'Single 296 mm floating disc with radial-mount Nissin 4-piston caliper',
+             'Single 220 mm disc 1 piston caliper', '2 channel with IMU', NULL, NULL, '110/70R17M/C 54H', '150/60R17M/C 65H', '24.7°',
+             '93 mm / 3.7 in', 'Length 2012 mm / 79.2 in Width 802 mm / 31.6 in Height 1052 mm / 41.4 in', '799 mm / 31.5 in',
+             '1352 mm / 53.3 in', '151 mm / 5.9 in', '144 kg / 317.4 lbs', '10 Litres / 2.7 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, emission, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CBR 500R', '2022', 'Four stroke, parallel-twin, DOHC, 4 valves per cylinder', '471 cc / 28.7 cu-in',
+             '67.0 x 66.8 mm', '10.7:1', 'Liquid cooled', NULL, NULL, 'PGM-FI with 34mm throttle bodies', 'EURO5',
+             'Computer-controlled digital transistorized with electronic advance', NULL, 'Electric',
+             '46.9 hp / 35 kW @ 8600 rpm', '43 Nm / 31.7 lb-ft @ 6500 rpm', 'Wet multiplate, Assisted slipper clutch', '6 Speed',
+             'O-ring-sealed chain', 'Steel diamond', '41mm Showa SFF-BP Inverted fork, pre-load adjustable', '109 mm / 4.3 in',
+             'Prolink mono with 5 stage pre-load adjuster, Steel hollow cross swingarm', '120 mm / 4.7 in',
+             '2x 296mm wave disc with Nissin radial-mount two piston calipers', 'Single 240mm wave disc 1 piston calipers',
+             '2-channel', '17 x MT3.5', '17 x MT4.5', '120/70ZR17M/C (58W)', '160/60ZR17M/C (69W)', '25.5°', '102 mm / in',
+             'Length: 2080 mm / 81.8 in Width: 760 mm / 29.9 in Height: 1145 mm / 45 in', '785 mm / 30.9 in',
+             '1410 mm / 55.5 in', '130 mm / 5.1 in', '192 kg / 423 lbs', '17.1 Litres / 4.4 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication,
+    engine_oil, induction, emission, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CMX 1100T Rebel DCT', '2023', 'Four stroke, parallel twin with 270° crank and Uni-cam, SOHC, 4 valves per cylinder',
+             '1084 cc / 66.1 cu-in', '92.0 x 81.5 mm', '10.1:1', 'Liquid cooled', NULL, NULL, 'PGM-FI electronic fuel injection with 46mm throttle bodies (Throttle By Wire)',
+             'EURO5', 'Full transistorized ignition', '112V/11.2AH', 'Electric', '64 kW / 85.8 hp @ 7000 rpm', '98 Nm / 72.2 ft-lb @ 4750 rpm',
+             'Wet multiplate clutch / DCT: Wet multiplate hydraulic 2-clutch', '6-speed automatic Dual Clutch Transmission (DCT)', '525 chain, 16T x 42T',
+             'Diamond', '43mm conventional telescopic fork with adjustable preload & dark titanium oxide coating', '139.7 mm / 5.5 in',
+             'Dual Showa shocks with 12.5mm shafts & adjustable preload, piggyback pressurized reservoirs', '93.9 mm / 3.7 in',
+             'Single 330mm floating disc, four-piston monobloc, radial-mount hydraulic caliper', 'Single 256mm disc with single-piston hydraulic caliper',
+             '2 channel ABS', 'MT3.50', 'MT5.00', '130/70B18 M/C', '180/65B16 M/C', '28°', '110 mm / 4.3 in',
+             'Length: 2240 mm / 88.1 in Width: 848 mm / 33.4 in Height: 1181 mm / 46.5 in', '700 mm / 27.5 in', '1520 mm / 59.8 in',
+             '120 mm / 4.7 in', '245 kg / 542 lbs', '13.6 Litres / 3.6 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, exhaust,
+    induction, emission, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CBR1000RR-R Fireblade', '2022', 'Four stroke, transverse 4 cylinder, DOHC, 4 valves per cylinder',
+             '999.9 cc / 61 cu-in', '81 x 48.5 mm', '13.4:1', 'Liquid cooled', 'Titanium Akrapovič',
+             'Programmed Dual Stage Fuel Injection (PGM-DSFI) with 52mm throttle bodies, Denso 12-hole injectors', 'EURO5', 'Digital transistorized with electronic advance',
+             '12-6 YTZ7S', 'Electric', '215 hp / 160kW @ 14500', '113 Nm / 82.6 lb-ft @ 12500', 'Wet, multiplate hydraulic clutch with assist slipper',
+             '6 speed', 'Chain', 'Twin-spar aluminum', 'SHOWA BPF 43mm telescopic fork with preload, compression and rebound adjustment', '120 mm / 4.7 in',
+             'SHOWA BFRC-Lite Pro-Link swingarm with 10-step preload, stepless compression and rebound damping adjustment', '137 mm / 5.3 in',
+             '2x 330mm discs with radially mounted 4-piston Nissin calipers', 'Single 220mm disc with 2-piston Brembo caliper', '2 Channel',
+             '3.5 x 17', '6.0 x 17', '120/70-ZR17 M/C (58W)', '200/55-ZR17 M/C (78W)', '24°', '101.6 mm / 4 in',
+             'Length 2100 mm / 82.7 in Width 745 mm / 29.3 in Height 1140 mm / 44.9 in', '828 mm / 32.6 in', '57.5 in',
+             '115 mm / 4.5 in', '201 kg / 443 lbs', '16 Litres / 4.3 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, exhaust,
+    induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CBR1000RR-R Fireblade SP', '2022', 'Four stroke, transverse 4 cylinder, DOHC, 4 valves per cylinder',
+             '999.9 cc / 61 cu-in', '81 x 48.5 mm', '13.4:1', 'Liquid cooled', 'Titanium Akrapovič',
+             'Programmed Dual Stage Fuel Injection (PGM-DSFI) with 52mm throttle bodies, Denso 12-hole injectors',
+             'Digital transistorized with electronic advance', '12-6 YTZ7S', 'Electric', '215 hp / 160kW @ 14500',
+             '113 Nm / 82.6 lb-ft @ 12500', 'Wet, multiplate hydraulic clutch with assist slipper', '6 speed',
+             'Chain', 'Twin-spar aluminum', 'Öhlins NPX S-EC 43mm telescopic fork with preload, compression and rebound adjustments',
+             '125 mm / 4.9 in', 'Öhlins TTX36 S-EC Pro-Link swingarm with preload, compression and rebound damping',
+             '143 mm / 5.6 in', '2x 330mm discs with radially mounted 4-piston Brembo Stylema calipers',
+             'Single 220mm disc with 2-piston Brembo caliper', '2 Channel', '3.5 x 17', '6.0 x 17',
+             '120/70-ZR17 M/C (58W)', '200/55-ZR17 M/C (78W)', '24°', '101.6 mm / 4 in',
+             'Length 2100 mm / 82.7 in Width 745 mm / 29.3 in Height 1140 mm / 44.9 in', '828 mm / 32.6 in',
+             '57.5 in', '115 mm / 4.5 in', '201 kg / 443 lbs', '16 Litres / 4.3 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, exhaust,
+    induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel,
+    front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CBR1000RR-R Fireblade SP 30th Anniversary', '2022', 'Four stroke, transverse 4 cylinder, DOHC, 4 valves per cylinder',
+             '999.9 cc / 61 cu-in', '81 x 48.5 mm', '13.4:1', 'Liquid cooled', 'Titanium Akrapovič',
+             'Programmed Dual Stage Fuel Injection (PGM-DSFI) with 52mm throttle bodies, Denso 12-hole injectors',
+             'Digital transistorized with electronic advance', '12-6 YTZ7S', 'Electric', '215 hp / 160kW @ 14500',
+             '113 Nm / 82.6 lb-ft @ 12500', 'Wet, multiplate hydraulic clutch with assist slipper', '6 speed',
+             'Chain', 'Twin-spar aluminum', 'Öhlins NPX S-EC 43mm telescopic fork with preload, compression and rebound adjustments',
+             '125 mm / 4.9 in', 'Öhlins TTX36 S-EC Pro-Link swingarm with preload, compression and rebound damping',
+             '143 mm / 5.6 in', '2x 330mm discs with radially mounted 4-piston Brembo Stylema calipers',
+             'Single 220mm disc with 2-piston Brembo caliper', '2 Channel', '3.5 x 17', '6.0 x 17',
+             '120/70-ZR17 M/C (58W)', '200/55-ZR17 M/C (78W)', '24°', '101.6 mm / 4 in',
+             'Length 2100 mm / 82.7 in Width 745 mm / 29.3 in Height 1140 mm / 44.9 in', '828 mm / 32.6 in',
+             '57.5 in', '115 mm / 4.5 in', '201 kg / 443 lbs', '16 Litres / 4.3 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, induction, emission,
+    ignition, `starting`, max_power, max_torque, clutch, transmission, final_drive, frame,
+    front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel, front_brakes,
+    rear_brakes, wheels, front_tyre, rear_tyre, rake, trail, dimensions, wheelbase, seat_height,
+    ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'Monkey 125', '2022', 'Four stroke, single cylinder, SOHC, 2 valve',
+             '124 cc / 7.62 cu-in', '50.0 x 63.1', '10.0:1', 'Air-cooled', 'PGM-FI electronic fuel injection', 'Euro 5',
+             'Electronic CDI', 'Electric', '9.2 hp / 6.9 kW @ 6750 rpm', '11 Nm / 8.1 lb-ft @ 5500 rpm', 'Wet multiplate', '5 Speed',
+             'Chain', 'Steel backbone frame', 'Upside down telescopic forks', '100 mm / 3.9 in', 'Dual shocks', '102 mm / 4.0 in',
+             'Single 220 mm hydraulic disc with IMU-based ABS', 'Single 190 mm hydraulic disc', '10 Spoke cast aluminium',
+             '120/80-12M/C 65J', '130/80-12M/C 69J', '25.0°', '82 mm / 3.2 in', 'Length 1710 mm / 67.3 in Width 755 mm / 29.7 in Height 1029 mm / 40.5 in',
+             '1145 mm / 45.0 in', '775 mm / 30.5 in', '160 mm / 6.3 in', '104 kg / 229.2 lbs', '5.6 Litres / 1.45 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, cooling_system, compression_ratio, induction, ignition,
+    `starting`, max_power, max_torque, clutch, transmission_drive, final_drive, frame,
+    front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel, front_brakes,
+    rear_brakes, front_tyre, rear_tyre, rake, trail, dimensions, wheelbase, seat_height,
+    ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'Navi 110', '2022', 'Four stroke, 80° single cylinder, SOHC, 2 valves, with eSP friction-reducing technology',
+             '109.2 cc / 6.6 cu-in', '50 x 55.6 mm', 'Air cooled', '9.5:1', 'Carburetor', 'CDI',
+             'Electric & kick', '5.91 kW / 8 hp @ 7000 rpm', '8.9 Nm / 6.5 lb-ft @ 5500 rpm', 'Automatic centrifugal dry', 'V-Matic with CVT',
+             'Belt', 'Under bone', '26.8 mm telescopic inverted fork', '100 mm / 3.9 in', 'Single shock mounted on left side', '71 mm / 2.8 in',
+             'Single mechanical 130 mm drum, with parking brake', 'Single mechanical 130 mm drum', '90/90-12', '90/100-10', '27.5°', '81 mm / 3.2 in',
+             'Length 1285 mm / 71.1 in Width 739 mm / 29.1 in Height 1044 mm / 41.1 in', '1285 mm / 50.6 in', '765 mm / 30.1 in',
+             '155 mm / 6.1 in', '107 kg / 236 lbs', '3.4 Litres / 0.9 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, cooling_system, compression_ratio, emission, induction, ignition,
+    battery, `starting`, max_power, max_torque, clutch, transmission, final_drive, frame,
+    front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel, front_brakes,
+    rear_brakes, abs, wheels, front_tyre, rear_tyre, rake, trail, dimensions, wheelbase,
+    seat_height, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'NT 1100 / DCT', '2022', 'Four stroke, parallel Twin with 270° crank and Uni-cam, SOHC, 4 valves per cylinder',
+             '1084 cc / 66.1 cu-in', '92.0 x 81.5 mm', 'Liquid cooled', '10.1:1', 'EURO5', 'PGM-FI electronic fuel injection with 46mm throttle bodies (Throttle By Wire)',
+             'Full transistorized ignition', '12V-6Ah Li-ion battery (20hr)', 'Electric', '75 kW / 100.5 hp @ 7500 rpm', '105 Nm / 77.4 ft-lb @ 6250 rpm',
+             'Wet, multiplate', 'MT: 6-speed Manual DCT: 6-speed Dual Clutch', '525 Chain', 'Semi-double cradle',
+             'Showa 43mm SFF-BP type inverted telescopic fork with dial-style preload adjuster', '150 mm / 5.9 in',
+             'Monoblock aluminium swing arm with Pro-Link with SHOWA gas-charged damper, hydraulic dial-style preload adjuster', '150 mm / 5.9 in',
+             '2x 310 mm floating disc, radial mounted four-piston brake caliper', 'Single 256mm, single piston caliper', '2 channel',
+             'Multi-spoke cast aluminium', '120/70R17 M/C', '180/55R17 M/C', '26.5°', '108 mm / 4.2 in',
+             'Length: 2240 mm / 88.1 in Width: 865 mm / 34.0 in Height: 1360 mm / 53.5 in (low screen position)',
+             '1535 mm / 60.4 in', '820 mm / 32.3 in', '175 mm / 6.9 in', '238 kg / 524.7 lbs - MT 248 kg / 546.7 lbs - DCT', '20.4 Litres / 5.0 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, cooling_system, compression_ratio, induction, ignition,
+    `starting`, max_power, max_torque, transmission, final_drive, front_suspension, front_wheel_travel,
+    rear_suspension, rear_wheel_travel, front_brakes, rear_brakes, front_tyre, rear_tyre, rake, trail,
+    dimensions, wheelbase, seat_height, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'Rebel CMX 500 / SE', '2022', 'Four stroke, parallel-twin cylinder, DOHC; 4 valves per cylinder',
+             '471 cc / 28.7 cu-in', '67 x 66.8mm', 'Liquid-cooled', '10.7:1', 'PGM-FI',
+             'Computer-controlled digital transistorized w/ electronic advance', 'Electric', '46.9 hp / 34.3 kW @ 8500 rpm',
+             '43 Nm / 31.7 lb-ft @ 7000 rpm', '6 Speed', '#520 chain; 15T/40T', '41mm Telescopic fork', '121 mm / 4.8 in',
+             'Dual shocks with five-position spring preload adjustment', '96 mm / 3.8 in',
+             'Single 296mm hydraulic disc with two piston caliper', 'Single 240mm hydraulic disc with single piston caliper',
+             '130/90-16', '150/80-16', '28°', '110 mm / 4.3 in',
+             'Length 2189 mm / 86.2 in Height 1089 mm / 42.9 in', '1491 mm / 58.7 in', '691 mm / 27.2 in',
+             '137 mm / 5.4 in', '185 kg / 408 lbs - ABS 187.7 kg / 414 lbs', '11.4 Litres / 2.9 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, cooling_system, compression_ratio, lubrication, emission, induction, ignition,
+    battery, `starting`, max_power, max_torque, clutch, transmission, final_drive, frame, front_suspension,
+    rear_suspension, rear_wheel_travel, front_brakes, rear_brakes, abs, front_wheel, rear_wheel,
+    front_tyre, rear_tyre, rake, trail, dimensions, wheelbase, seat_height, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'honda', 'CB 1000R', '2021', 'Four stroke, transverse four cylinder, DOHC, 4 valve per cylinder',
+             '998 cc / 60.9 cu-in', '75 x 56.5 mm', 'Liquid cooled', '11.6:1', 'Wet sump', 'Euro5',
+             'PGM-F1 Electronic fuel injection', 'Computer controlled digital transistorized', '12V/8.6AH', 'Electric',
+             '143.5 hp / 107kW @ 10500rpm', '104 Nm / 77 ft-lb @ 8250 rpm', 'Wet, multiplate with coil springs', '6 Speed',
+             '#530 O-ring sealed chain', 'Steel mono backbone', 'Showa SFF-BP USD fork', 'Showa BRFC (Balance Free Rear Cushion) monoshock',
+             '131 mm / 5.1 in', '2x 310mm discs, 3 piston calipers', 'Single 256mm disc, 2 piston caliper', '2 channel',
+             'Cast aluminium', 'Cast aluminium', '120/70 ZR17', '190/55 ZR17', '25.0°', '100 mm / 3.9 in',
+             'Length 2120 mm / 83.4 in Width 789 mm / 31 in Length 1090 mm / 42.9 in', '1455 mm / 57.2 in', '830 mm / 32.6 in',
+             '135 mm', '212 kg / 467.3 lbs', '16.2 Litres / 4.2 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, exhaust, lubrication, engine_oil,
+    induction, emission, ignition, battery, `starting`, max_power, max_torque, clutch, transmission_drive, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel, front_brakes, rear_brakes,
+    wheels, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, front_rim, rear_rim, rake, trail, dimensions, seat_height,
+    wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'CB 1000R Black Edition', '2021', 'Four stroke, transverse four cylinder, DOHC, 4 valve per cylinder',
+             '998 cc / 60.9 cu-in', '75 x 56.5 mm', '11.6:1', 'Liquid cooled', NULL, 'Wet sump', NULL,
+             'PGM-F1 Electronic fuel injection', 'Euro5', 'Computer controlled digital transistorized', '12V/8.6AH', 'Electric',
+             '143.5 hp / 107kW @ 10500rpm', '104 Nm / 77 ft-lb @ 8250 rpm', 'Wet, multiplate with coil springs', NULL, '6 Speed',
+             '#530 O-ring sealed chain', 'Steel mono backbone', 'Showa SFF-BP USD fork', NULL, 'Showa BRFC (Balance Free Rear Cushion) monoshock',
+             '131 mm / 5.1 in', '2x 310mm discs, 3 piston calipers', 'Single 256mm disc, 2 piston caliper', 'Cast aluminium', '2 channel',
+             'Cast aluminium', 'Cast aluminium', '120/70 ZR17', '190/55 ZR17', NULL, NULL, '25.0°', '100 mm / 3.9 in',
+             'Length 2120 mm / 83.4 in Width 789 mm / 31 in Height 1090 mm / 42.9 in', '830 mm / 32.6 in', '1455 mm / 57.2 in',
+             '135 mm', '212 kg / 467.3 lbs', '16.2 Litres / 4.2 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, exhaust, lubrication, engine_oil,
+    induction, emission, ignition, battery, `starting`, max_power, max_torque, clutch, transmission_drive, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel, front_brakes, rear_brakes,
+    wheels, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, front_rim, rear_rim, rake, trail, dimensions, seat_height,
+    wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'CBR 500R', '2021', 'Four stroke, parallel-twin, DOHC; 4 valves per cylinder',
+             '471 cc / 28.7 cu-in', '67.0 x 66.8 mm', '10.7:1', 'Liquid cooled', NULL, NULL, NULL,
+             'PGM-FI with 34mm throttle bodies', NULL, 'Computer-controlled digital transistorized with electronic advance', NULL, 'Electric',
+             '46.9 hp / 35 kW @ 8500 rpm', '43 Nm / 31.7 lb-ft @ 6500 rpm', NULL, NULL, '6 Speed',
+             'O-ring-sealed chain', 'Back Bone', '41mm Telescopic fork', '109 mm / 4.3 in', 'Pro-Link® single shock with nine-position spring preload adjustability',
+             '120 mm / 4.7 in', 'Single 320mm wave disc 2 piston calipers', 'Single 240mm wave disc 1 piston calipers', NULL, 'Standard',
+             NULL, NULL, '120/70-17', '160/60-17', NULL, NULL, '25.5°', '103mm / 4.05 in',
+             NULL, '785 mm / 30.9 in', '1400 mm / 55.5 in', NULL, '192 kg / 423 lbs', '17.1 Litres / 4.4 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, exhaust, lubrication, engine_oil,
+    induction, emission, ignition, battery, `starting`, max_power, max_torque, clutch, transmission_drive, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel, front_brakes, rear_brakes,
+    wheels, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, front_rim, rear_rim, rake, trail, dimensions, seat_height,
+    wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'CMX 1100 Rebel / DCT', '2021', 'Four stroke, parallel twin with 270° crank and Uni-cam, SOHC, 4 valves per cylinder',
+             '1084 cc / 66.1 cu-in', '92.0 x 81.5 mm', '10.1:1', 'Liquid cooled', NULL, NULL, NULL,
+             'PGM-FI electronic fuel injection', 'EURO5', 'Full transistorized ignition', '112V/11.2AH', 'Electric',
+             '64 kW / 85.8 hp @ 7000 rpm', '98 Nm / 72.2 ft-lb @ 4750 rpm', 'MT: Wet multiplate clutch DCT: Wet multiplate hydraulic 2-clutch', NULL,
+             'MT: 6-speed Manual Transmission DCT: 6-speed Dual Clutch Transmission', '525 O-ring chain', 'Diamond', '43mm Showa cartridge style fork, preload adjustable',
+             '122 mm / 4.8 in', 'Preload adjustable twin Showa piggyback rear shock', '96.5 mm / 3.8 in', 'Single 330 mm floating disc, radial mounted monoblock four-piston caliper',
+             'Single 256mm disc with single-piston caliper', 'Multi-spoke cast aluminium', '2 channel ABS', 'MT3.50', 'MT5.00',
+             '130/70B18 M/C', '180/65B16 M/C', NULL, NULL, '28°', '110 mm / 4.3 in',
+             'Length: 2240mm / 88.1 in Width: 853mm / 33.5 in Width -DCT: 834mm / 32.8 in Height: 1115mm / 43.8 in',
+             '700 mm / 27.5 in', '1520 mm / 59.8 in', '120 mm / 4.7 in', '223 kg / 491.6 lbs - DCT 233 kg / 513.6 lbs', '13.6 Litres / 3.6 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, exhaust, lubrication, engine_oil,
+    induction, emission, ignition, battery, `starting`, max_power, max_torque, clutch, transmission_drive, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel, front_brakes, rear_brakes,
+    wheels, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, front_rim, rear_rim, rake, trail, dimensions, seat_height,
+    wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'CRF 300 Rally', '2021', 'Four stroke single cylinder, DOHC, 4 valves',
+             '286 cc / 17.4 cu-in', '76 x 63 mm', '10.7:1', 'Liquid cooled', NULL, 'Wet sump', NULL,
+             'PGM-FI electronic fuel injection', 'EURO5', 'Full transistor digital', NULL, 'Electric',
+             '27 hp / 20.1 kW @ 8500rpm', '26.6 Nm / 19.6 lb-ft @ 6500rpm', 'Wet multiplate, assist/slipper clutch', NULL,
+             '6 Speed', '#520 chain', 'Steel semi-double cradle', '43mm Telescopic USD forks', NULL, 'Pro-Link single shock with spring', NULL,
+             'Single 296mm disc 2 piston caliper', 'Single 220mm disc 1 piston caliper', 'Aluminium spoke', '2 channel ABS', NULL, NULL,
+             '80/100-21M/C 51P', '120/80-18M/C 62P', NULL, NULL, '27.5°', '109 mm / 4.3 in',
+             'Length: 2230 mm / 87.7 in Width: 920mm / 36.2 in Height: 1415 mm / 55.7 in',
+             '885 mm / 34.8 in', '1455 mm / 57.2 in', '275 mm / 10.8 in', '153 kg / 337.3 lbs', '12.8 Litres / 3.3 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, exhaust, lubrication, engine_oil,
+    induction, emission, ignition, battery, `starting`, max_power, max_torque, clutch, transmission_drive, transmission,
+    final_drive, frame, front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel, front_brakes, rear_brakes,
+    wheels, abs, front_wheel, rear_wheel, front_tyre, rear_tyre, front_rim, rear_rim, rake, trail, dimensions, seat_height,
+    wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'CRF 300L', '2021', 'Four stroke single cylinder, DOHC, 4 valves',
+             '286 cc / 17.4 cu-in', '76 x 63 mm', '10.7:1', 'Liquid cooled', NULL, 'Wet sump', NULL,
+             'PGM-FI electronic fuel injection', 'EURO5', 'Full transistor digital', NULL, 'Electric',
+             '27 hp / 20.1 kW @ 8500rpm', '26.6 Nm / 19.6 lb-ft @ 6500rpm', 'Wet multiplate, assist/slipper clutch', NULL,
+             '6 Speed', '#520 chain', 'Steel semi-double cradle', '43mm Telescopic USD forks', NULL, 'Pro-Link single shock with spring', NULL,
+             'Single 256mm disc 2 piston caliper', 'Single 220mm disc 1 piston caliper', 'Aluminium spoke', '2 channel ABS', NULL, NULL,
+             '80/100-21M/C 51P', '120/80-18M/C 62P', NULL, NULL, '27.5°', '109 mm / 4.3 in',
+             'Length: 2230 mm / 87.7 in Width: 820 mm / 32.2 in Height: 1200 mm / 47.2 in',
+             '880 mm / 34.6 in', '1455 mm / 57.2 in', '285 mm / 11.2 in', '142 kg / 313 lbs', '7.8 Litres / 2 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, emission, induction, battery,
+    `starting`, max_power, max_torque, clutch, transmission, final_drive, frame, front_suspension, front_wheel_travel,
+    rear_suspension, rear_wheel_travel, front_brakes, rear_brakes, wheels, abs, front_rim, rear_rim, front_tyre, rear_tyre,
+    rake, trail, dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'Forza 750', '2021', 'Four stroke, parallel twin cylinder, SOHC, 4 valve per cylinder',
+             '745 cc / 45.4 cu-in', '77 x 80mm', '10.7:1', 'Liquid cooled', 'Euro 5', 'PGM-FI electronic fuel injection',
+             'Battery 12V/11.2AH, ACG Output 480W/5000rpm', 'Electric', '43.1kW / 57.7 hp @ 750rpm', '69Nm / 50.8 lb-ft @ 4750rpm',
+             'Wet multiplate hydraulic dual clutch', '6 Speed dual clutch transmission', 'Chain', 'Diamond, steel pipe',
+             '41mm USD forks', '120 mm / 4.7 in', 'Monoshock damper, Pro-Link swingarm', '120 mm / 4.7 in',
+             '2x 310mm hydraulic discs with radial 4-piston caliper', 'Single 240mm hydraulic disc with 1-piston caliper',
+             'Spoked wheels', 'ABS System Type 2-channel ABS', '17M/C x MT3.50', '15M/C x MT4.50', '120/70-R17M/C', '60/60-R15M/C',
+             '27°', '104 mm / 4.3 in', 'Length 2200 mm / 86.6 in Width 790 mm / 31.1 in Height 1485 mm / 58.4 in',
+             '790 mm / 31.1 in', '1580 mm / 62.2 in', '135 mm / 5.3 in', '235 kg / 518 lbs', '13.2 Litres / 3.48 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, induction, ignition, battery,
+    `starting`, max_power, max_torque, clutch, transmission, final_drive, frame, front_suspension, front_wheel_travel,
+    rear_suspension, rear_wheel_travel, front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre,
+    rake, trail, dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'GLX 1800 Gold Wing / Automatic-DCT', '2021',
+             'Four stroke, opposed boxer six cylinders, SOHC, 4-valve per cylinder, finger-follower rocker arm on intake, roller-rocker arm on exhaust',
+             '1833 cc / 111.85 cub in', '73 x 73 mm', '10.5:1', 'Liquid cooled', 'PGM-FI electronic fuel injection, 50mm throttle body',
+             'Computer controlled digital', '12V/20AH', 'Integrated Starter Generator system', '124.7 hp / 93 kW @ 5500 rpm',
+             '170 Nm / 125.3 ft-lb @ 4500 rpm', '(MT) Hydraulic, wet, multiplate with coil springs, assist slipper cam (DCT) Hydraulic, wet, multiplate with oil pressure',
+             '6 speed MT (including overdrive. Plus electric reverse) 7-speed forward and reverse DCT', 'Enclosed shaft',
+             'Aluminum die-cast, twin tube', 'Double-wishbone', '110 mm / 4.3 in', 'Pro-Link system with Showa shock absorber',
+             '104 mm / 4.1 in', '2x 320mm hydraulic discs 6-piston Nissin calipers, floating rotors and sintered metal pads',
+             'Single 316mm ventilated disc 3-piston Nissin caliper, sintered metal pads', 'Electronically controlled combined ABS system',
+             '3.5 x 18', '6.0 x 16', '130/70R 18', '200/55R 16', '30.5°', '109 mm / 4.3 in',
+             'Length: 2475 mm / 97.4 in Width: DCT 925 mm / 36.4 in / MT 905 mm / 35.6 in Height: 1340 mm / 52.7 in',
+             '745 mm / 29.3 in', '1695 mm / 66.7 in', '130 mm / 5.11 in', 'MT 366 kg / 806.8 lbs - DCT 367 kg / 809 lbs',
+             '21.1 Litres / US 5.57 gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, induction, ignition, battery,
+    `starting`, max_power, max_torque, clutch, transmission, final_drive, frame, front_suspension, front_wheel_travel,
+    rear_suspension, rear_wheel_travel, front_brakes, rear_brakes, abs, front_rim, rear_rim, front_tyre, rear_tyre,
+    rake, trail, dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'GLX 1800 Gold Wing Tour / Automatic-DCT', '2021',
+             'Four stroke, opposed boxer six cylinders, SOHC, 4-valve per cylinder, finger-follower rocker arm on intake, roller-rocker arm on exhaust',
+             '1833 cc / 111.85 cub in', '73 x 73 mm', '10.5:1', 'Liquid cooled', 'PGM-FI electronic fuel injection, 50mm throttle body',
+             'Computer controlled digital', '12V/20AH', 'Integrated Starter Generator system', '124.7 hp / 93 kW @ 5500 rpm',
+             '170 Nm / 125.3 ft-lb @ 4500 rpm', '(MT) Hydraulic, wet, multiplate with coil springs, assist slipper cam (DCT) Hydraulic, wet, multiplate with oil pressure',
+             '6 speed MT (including overdrive. Plus electric reverse) 7-speed forward and reverse DCT', 'Enclosed shaft',
+             'Aluminum die-cast, twin tube', 'Double-wishbone', '110 mm / 4.3 in', 'Pro-Link system with Showa shock absorber',
+             '104 mm / 4.1 in', '2x 320mm hydraulic discs 6-piston Nissin calipers, floating rotors and sintered metal pads',
+             'Single 316mm ventilated disc 3-piston Nissin caliper, sintered metal pads', 'Electronically controlled combined ABS system',
+             '3.5 x 18', '6.0 x 16', '130/70R 18', '200/55R 16', '30.5°', '109 mm / 4.3 in',
+             'Length: 2615 mm / 102.9 in Width: DCT 905 mm / 35.6 in / MT 925 mm / 36.4 in Height: 1430 mm / 56.2 in',
+             '745 mm / 29.3 in', '1694 mm / 66.7 in', '130 mm / 5.11 in', 'MT 385 kg / 848.7 lbs - DCT with airbag 390 kg / 859.8 lbs',
+             '21.1 Litres / US 5.57 gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, induction, ignition, battery,
+    `starting`, max_power, max_torque, clutch, transmission, final_drive, frame, front_suspension, front_wheel_travel,
+    rear_suspension, rear_wheel_travel, front_brakes, rear_brakes, front_wheel, rear_wheel, front_tyre, rear_tyre,
+    rake, trail, dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'Monkey x Hot Wheels Limited Edition', '2021',
+             'Four stroke, single cylinder, SOHC, 2 valve',
+             '124.9 cc / 7.62 cu-in', '52.4 x 57.9 mm', '9.3:1', 'Air cooled', 'PGMFI electronic fuel injection',
+             'Electronic CDI', 'YTZ5S', 'Electric', '9.2 hp / 6.9 kW @ 7000 rpm',
+             '11 Nm / 8.1 lb-ft @ 5250 rpm', 'Wet multiplate', '4 Speed', 'Chain',
+             'Steel mono-backbone frame', 'Upside down telescopic forks', '100 mm / 3.9 in', 'Dual shocks',
+             '104 mm / 4.1 in', 'Single 220 mm hydraulic disc with IMU-based ABS', 'Single 190 mm hydraulic disc',
+             '10 Spoke cast aluminium', '10 Spoke cast aluminium', '120/80-12 65J', '130/80-12 69J', '25.0°',
+             '82 mm / 3.2 in', 'Length 1710 mm / 67.3 in Width 755 mm / 29.7 in Height 1029 mm / 40.5 in',
+             '776 mm / 30.5 in', '1155 mm / 45.4 in', '160 mm / 6.3 in', '107 kg / 235.8 lbs', '5.6 Litres / 1.45 US gal'
+         );
+
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, induction, ignition, battery,
+    `starting`, max_power, max_torque, clutch, transmission, final_drive, frame, front_suspension, rear_suspension,
+    front_brakes, rear_brakes, front_wheel, rear_wheel, front_rim, rear_rim, front_tyre, rear_tyre, rake, trail,
+    dimensions, seat_height, wheelbase, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'MSX 125 Grom', '2021',
+             'Four stroke, single cylinder, SOHC, 2 valve',
+             '124.9 cc / 7.62 cu-in', '50.0 x 63.1 mm', '10.0:1', 'Air cooled', 'Injection PGM-FI',
+             'Electronic CDI', NULL, 'Electric', '9.6 hp / 7.2 kW @ 7250 rpm',
+             '10.5 Nm / 7.7 lb-ft @ 5500 rpm', 'Wet multiplate', '5 Speed', 'Chain',
+             'Steel mono-backbone frame', '31mm USD forks', 'Mono shock, steel square pipe swingarm',
+             'Single 220mm disc with hydraulic dual-piston brake caliper', 'Single 190mm disc with hydraulic single-piston brake caliper',
+             '5 Spoke Aluminium Cast', '5 Spoke Aluminium Cast', 'MT 2.5-12', 'MT 2.5-12', '120/70-12', '130/70-12', '25.0°',
+             '81 mm / 3.2 in', 'Length 1760 mm / 69.2 in Width 720 mm / 28.3 in Height 1015 mm / 39.9 in',
+             '761 mm / 29.9 in', '1200 mm / 47.2 in', '180 mm / 7.0 in', '103 kg / 227 lbs', '6 Litres / 1.58 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, emission, induction, ignition,
+    `starting`, max_power, max_torque, clutch, transmission, final_drive, frame, front_suspension, front_wheel_travel,
+    rear_suspension, rear_wheel_travel, front_brakes, rear_brakes, abs, wheels, front_rim, rear_rim, front_tyre,
+    rear_tyre, rake, trail, dimensions, wheelbase, seat_height, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'NC 750X / DCT', '2021',
+             'Four stroke, parallel twin, SOHC, 4 valves per cylinder',
+             '745 cc / 45.4 cu-in', '77 x 80mm', '10.7:1', 'Liquid-cooled', 'EURO5',
+             'PGM-FI electronic fuel injection', 'Computer-controlled digital transistorised with electronic advance',
+             'Electric', '43.1 kW / 57.8 hp @ 6750 rpm', '69 Nm / 50.9 lb-ft @ 4750 rpm',
+             'Wet multiplate / DCT: Wet multiplate hydraulic 2-clutch', '6 Speed Manual / DCT: 6-Speed Dual Clutch Transmission',
+             'Chain', 'Rigid tube steel diamond', '41 mm telescopic forks', '120 mm / 4.7 in',
+             'Single monoshock damper, Pro-Link swingarm', '120 mm / 4.7 in',
+             'Single 320 mm wavy hydraulic disc 2 piston calipers and sintered metal pads',
+             'Single 240 mm wavy hydraulic disc 1 piston caliper and sintered metal pads',
+             '2-channel ABS standard', 'Multi-spoke cast aluminium', '17 x 3.50', '17 x 4.50', '120/70-ZR17', '160/60-ZR17',
+             '27°', '110 mm / 4.3 in', 'Length: 2210 mm / 87 in Width: 846 mm / 33.3 in Height: 1330 mm / 52.3 in',
+             '1535 mm / 60.4 in', '800 mm / 31.5 in', '145 mm / 5.7 in',
+             '214 kg / 471.7 lbs / DCT: 224 kg / 493.8 lbs', '14.1 Litres / 3.7 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, exhaust, emission,
+    induction, ignition, battery, `starting`, max_power, max_torque, clutch, transmission, final_drive, frame,
+    front_suspension, front_wheel_travel, rear_suspension, rear_wheel_travel, front_brakes, rear_brakes, wheels,
+    front_rim, rear_rim, front_tyre, rear_tyre, rake, trail, dimensions, wheelbase, seat_height, ground_clearance,
+    wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'PCX 125', '2021',
+             'Four stroke, single cylinder, SOHC, 4-valve',
+             '125 cc / 7.6 cu-in', '53.5 x 55.5mm', '11.5:1', 'Liquid cooled', '1-into-1', 'EURO5',
+             'PGM-FI electronic fuel injection', 'Fully transistorised ignition', '12V/7AH (10H)', 'Electric',
+             '9.2 kW @ 8750 rpm', '11.8 Nm @ 6500 rpm', 'Automatic, centrifugal, dry type',
+             'Honda V-Matic belt converter, automatic', 'Belt', 'Tubular steel duplex', '31mm telescopic fork', '89 mm / 3.5 in',
+             'Twin suspension aluminium swingarm', '95 mm / 3.7 in', 'Single 220mm hydraulic disc with combined 2 piston caliper, ABS',
+             '130mm Drum', '5-spoke Y-shaped cast aluminum', '14M/C x MT2.75', '13M/C x MT3.50', '110/70-14M/C', '130/70-13M/C',
+             '26°', '80 mm / 3.1 in', 'Length 1935 mm / 76.1 in Width 740 mm / 29.1 in Height 1105 mm / 43.5 in',
+             '1315 mm / 51.8 in', '764mm / 30.0 in', '135 mm / 5.3 in', '130 kg / 287 lbs', '8.1 Litres / 2.1 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, induction, ignition,
+    `starting`, max_power, max_torque, transmission, final_drive, front_suspension, front_wheel_travel,
+    rear_suspension, rear_wheel_travel, front_brakes, rear_brakes, front_tyre, rear_tyre, rake, trail, dimensions,
+    wheelbase, seat_height, ground_clearance, wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'Rebel CMX 500 / SE', '2021',
+             'Four stroke, parallel-twin cylinder, DOHC; 4 valves per cylinder',
+             '471 cc / 28.7 cu-in', '67 x 66.8mm', '10.7:1', 'Liquid-cooled', 'PGM-FI',
+             'Computer-controlled digital transistorized w/ electronic advance', 'Electric',
+             '46.9 hp / 34.3 kW @ 8500 rpm', '43 Nm / 31.7 lb-ft @ 7000 rpm', '6 Speed', '#520 chain; 15T/40T',
+             '41mm Telescopic fork', '121 mm / 4.8 in', 'Dual shocks with five-position spring preload adjustment',
+             '96 mm / 3.8 in', 'Single 296mm hydraulic disc with two piston caliper', 'Single 240mm hydraulic disc with single piston caliper',
+             '130/90-16', '150/80-16', '28°', '110 mm / 4.3 in', 'Length 2189 mm / 86.2 in Height 1089 mm / 42.9 in',
+             '1491 mm / 58.7 in', '691 mm / 27.2 in', '137 mm / 5.4 in', '185 kg / 408 lbs - ABS 187.7 kg / 414 lbs',
+             '11.4 Litres / 2.9 US gal'
+         );
+
+INSERT INTO MotorcycleSpecs (
+    brand, model, years, engine, capacity, bore_stroke, compression_ratio, cooling_system, emission, induction,
+    ignition, `starting`, max_power, max_torque, clutch, transmission, final_drive, frame, front_suspension,
+    front_wheel_travel, rear_suspension, rear_wheel_travel, front_brakes, rear_brakes, abs, wheels, front_rim,
+    rear_rim, front_tyre, rear_tyre, rake, trail, dimensions, wheelbase, seat_height, ground_clearance,
+    wet_weight, fuel_capacity
+) VALUES (
+             'Honda', 'X-ADV', '2021',
+             'Four stroke, Parallel twin, SOHC, 4 valves per cylinder',
+             '745 cc / 45.4 cu-in', '77 x 80mm', '10.7:1', 'Liquid-cooled', 'EURO5', 'PGM-FI electronic fuel injection',
+             'Computer-controlled digital transistorised with electronic advance', 'Electric',
+             '43.1 kW / 57.8 hp @ 6750 rpm', '69 Nm / 50.9 lb-ft @ 4750 rpm', 'Wet multiplate hydraulic 2-clutch',
+             '6-Speed Dual Clutch Transmission', 'Chain', 'Steel Diamond', '41 mm USD forks',
+             '120 mm / 4.7 in', 'Prolink with Rear Shock Preload adjustment', '120 mm / 4.7 in',
+             '2x 296mm discs with 4-piston calipers', 'Single 240mm disc with single-piston caliper', '2-channel ABS standard',
+             'Spoked', '17 x 3.50', '15 x 4.50', '120/70 R17', '160/60 R15', '27°', '104 mm / 4.0 in',
+             'Length 2215 mm / 87.2 in Width 940 mm / 37 in Height 1370 mm / 53.9 in',
+             '1590 mm / 62.6 in', '820 mm / 32.3 in', '165 mm / 6.4 in', '236 kg / 520.2 lbs',
+             '13.2 Litres / 3.4 US gal'
+         );
+
+-- 혼다 21년식까지 완료 https://www.moto-data.net/honda/year:2021
+
