@@ -18,6 +18,8 @@ public class BoardService {
     public List<MotorcycleSpec> getRecommendedBikes(BoardForm boardForm) {
         // boardForm의 값을 바탕으로 추천 로직을 구현
 
+
+        //
 //        /*여기서 q1 ~ q20 값들을 통해 계산하기
 //        1. 기통수, CC 기준
 //        2. 마력 기준
