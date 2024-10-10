@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href = "/static/list.css">
+<head>
+  <title>Motorcycle List</title>
+</head>
+<body>
+<h1>Motorcycle List</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Brand</th>
+    <th>Model</th>
+    <th>Years</th>
+    <th>Production</th>
+    <th>Replica</th>
+    <th>Cruiser</th>
+    <th>Tourer</th>
+    <th>Adventure</th>
+    <th>Multi-Purpose</th>
+    <th>Naked</th>
+    <th>Cafe Racer</th>
+    <th>Scrambler</th>
+    <th>Off-Road</th>
+    <th>Motard</th>
+    <th>Trial</th>
+    <th>Scooter</th>
+    <th>Classic</th>
+    <th>Dimensions</th>
+    <th>Seat Height</th>
+    <th>Wheelbase</th>
+    <th>Ground Clearance</th>
+    <th>Dry Weight</th>
+    <th>Wet Weight</th>
+    <th>Fuel Capacity</th>
+    <th>Inner Leg Curve</th>
+    <th>Permitted Total Weight</th>
+    <th>Engine Management</th>
+    <th>Emission Control</th>
+    <th>Engine Control</th>
+    <th>Alternator</th>
+    <th>Battery</th>
+    <th>Headlight</th>
+    <th>Ignition</th>
+    <th>Starting</th>
+    <th>Traction Control</th>
+    <th>Engine</th>
+    <th>Capacity</th>
+    <th>Bore Stroke</th>
+    <th>Compression Ratio</th>
+    <th>Cooling System</th>
+    <th>Lubrication</th>
+    <th>Max Power</th>
+    <th>Max Torque</th>
+    <th>Fuel System</th>
+    <th>Exhaust</th>
+    <th>Engine Oil</th>
+    <th>Mixture Control</th>
+    <th>Emission</th>
+    <th>Induction</th>
+    <th>Ignition</th>
+    <th>Frame</th>
+    <th>Front Suspension</th>
+    <th>Rear Suspension</th>
+    <th>Front Wheel Travel</th>
+    <th>Rear Wheel Travel</th>
+    <th>Front Brakes</th>
+    <th>Rear Brakes</th>
+    <th>ABS System</th>
+    <th>Front Wheel</th>
+    <th>Rear Wheel</th>
+    <th>Wheels</th>
+    <th>Abs</th>
+    <th>Abs Pro</th>
+    <th>Traction Control</th>
+    <th>Rake</th>
+    <th>Trail</th>
+    <th>Front Rim</th>
+    <th>Rear Rim</th>
+    <th>Castor</th>
+    <th>Steering Angle</th>
+    <th>Steering Head Angle</th>
+    <th>Transmission Drive</th>
+    <th>Transmission</th>
+    <th>Final Drive</th>
+    <th>Primary Drive Ratio</th>
+    <th>Primary Ratio</th>
+    <th>Gear Ratio</th>
+    <th>Transmission Ratio</th>
+    <th>Secondary Ratio</th>
+    <th>Gear Ratios</th>
+    <th>Clutch</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="motorcycle, iterStat : ${motorcycles}">
+    <td th:text="${iterStat.index + 1}"></td>
+    <td th:text="${motorcycle.brand}"></td>
+    <td th:text="${motorcycle.model}"></td>
+    <td th:text="${motorcycle.years}"></td>
+    <td th:text="${motorcycle.production}"></td>
+    <td th:text="${motorcycle.replica}"></td>
+    <td th:text="${motorcycle.cruiser}"></td>
+    <td th:text="${motorcycle.tourer}"></td>
+    <td th:text="${motorcycle.adventure}"></td>
+    <td th:text="${motorcycle.multiPurpose}"></td>
+    <td th:text="${motorcycle.naked}"></td>
+    <td th:text="${motorcycle.cafeRacer}"></td>
+    <td th:text="${motorcycle.scrambler}"></td>
+    <td th:text="${motorcycle.offRoad}"></td>
+    <td th:text="${motorcycle.motard}"></td>
+    <td th:text="${motorcycle.trial}"></td>
+    <td th:text="${motorcycle.scooter}"></td>
+    <td th:text="${motorcycle.classic}"></td>
+
+    <!-- DimensionsDTO -->
+    <td th:if="${motorcycle.dimensionsDTO != null}" th:text="${motorcycle.dimensionsDTO.dimensions}"></td>
+    <td th:if="${motorcycle.dimensionsDTO != null}" th:text="${motorcycle.dimensionsDTO.seatHeight}"></td>
+    <td th:if="${motorcycle.dimensionsDTO != null}" th:text="${motorcycle.dimensionsDTO.wheelbase}"></td>
+    <td th:if="${motorcycle.dimensionsDTO != null}" th:text="${motorcycle.dimensionsDTO.groundClearance}"></td>
+    <td th:if="${motorcycle.dimensionsDTO != null}" th:text="${motorcycle.dimensionsDTO.dryWeight}"></td>
+    <td th:if="${motorcycle.dimensionsDTO != null}" th:text="${motorcycle.dimensionsDTO.wetWeight}"></td>
+    <td th:if="${motorcycle.dimensionsDTO != null}" th:text="${motorcycle.dimensionsDTO.fuelCapacity}"></td>
+    <td th:if="${motorcycle.dimensionsDTO != null}" th:text="${motorcycle.dimensionsDTO.innerLegCurve}"></td>
+    <td th:if="${motorcycle.dimensionsDTO != null}" th:text="${motorcycle.dimensionsDTO.permittedTotalWeight}"></td>
+
+
+    <!-- ElectronicsDTO -->
+    <td th:if="${motorcycle.electronicsDTO != null}" th:text="${motorcycle.electronicsDTO.engineManagement}"></td>
+    <td th:if="${motorcycle.electronicsDTO != null}" th:text="${motorcycle.electronicsDTO.emissionControl}"></td>
+    <td th:if="${motorcycle.electronicsDTO != null}" th:text="${motorcycle.electronicsDTO.engineControl}"></td>
+    <td th:if="${motorcycle.electronicsDTO != null}" th:text="${motorcycle.electronicsDTO.alternator}"></td>
+    <td th:if="${motorcycle.electronicsDTO != null}" th:text="${motorcycle.electronicsDTO.battery}"></td>
+    <td th:if="${motorcycle.electronicsDTO != null}" th:text="${motorcycle.electronicsDTO.headlight}"></td>
+    <td th:if="${motorcycle.electronicsDTO != null}" th:text="${motorcycle.electronicsDTO.ignition}"></td>
+    <td th:if="${motorcycle.electronicsDTO != null}" th:text="${motorcycle.electronicsDTO.starting}"></td>
+    <td th:if="${motorcycle.electronicsDTO != null}" th:text="${motorcycle.electronicsDTO.tractionControl}"></td>
+
+    <!-- EnginesDTO -->
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.engine}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.capacity}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.boreStroke}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.compressionRatio}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.coolingSystem}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.lubrication}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.maxPower}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.maxTorque}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.fuelSystem}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.exhaust}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.engineOil}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.mixtureControl}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.emission}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.induction}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.ignition}"></td>
+
+    <!-- FramesDTO -->
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.frame}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.frontSuspension}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.rearSuspension}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.frontWheelTravel}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.rearWheelTravel}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.frontBrakes}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.rearBrakes}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.absSystem}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.frontWheel}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.rearWheel}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.frontTyre}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.rearTyre}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.wheels}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.abs}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.absPro}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.tractionControl}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.rake}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.trail}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.frontRim}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.rearRim}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.castor}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.steeringAngle}"></td>
+    <td th:if="${motorcycle.framesDTO != null}" th:text="${motorcycle.framesDTO.steeringHeadAngle}"></td>
+
+
+    <!-- TransmissionsDTO -->
+    <td th:if="${motorcycle.transmissionsDTO != null}" th:text="${motorcycle.transmissionsDTO.transmissionDrive}"></td>
+    <td th:if="${motorcycle.transmissionsDTO != null}" th:text="${motorcycle.transmissionsDTO.transmission}"></td>
+    <td th:if="${motorcycle.transmissionsDTO != null}" th:text="${motorcycle.transmissionsDTO.finalDrive}"></td>
+    <td th:if="${motorcycle.transmissionsDTO != null}" th:text="${motorcycle.transmissionsDTO.primaryDriveRatio}"></td>
+    <td th:if="${motorcycle.transmissionsDTO != null}" th:text="${motorcycle.transmissionsDTO.primaryRatio}"></td>
+    <td th:if="${motorcycle.transmissionsDTO != null}" th:text="${motorcycle.transmissionsDTO.gearRatio}"></td>
+    <td th:if="${motorcycle.transmissionsDTO != null}" th:text="${motorcycle.transmissionsDTO.transmissionRatio}"></td>
+    <td th:if="${motorcycle.transmissionsDTO != null}" th:text="${motorcycle.transmissionsDTO.secondaryRatio}"></td>
+    <td th:if="${motorcycle.transmissionsDTO != null}" th:text="${motorcycle.transmissionsDTO.gearRatios}"></td>
+    <td th:if="${motorcycle.transmissionsDTO != null}" th:text="${motorcycle.transmissionsDTO.clutch}"></td>
+
+  </tr>
+  </tbody>
+</table>
+<button onclick="location.href='/motorcycle'">Back to Main</button>
+</body>
+</html>

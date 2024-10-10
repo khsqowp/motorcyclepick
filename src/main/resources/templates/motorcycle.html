@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Motorcycle Main</title>
+
+</head>
+<body>
+<h1>Motorcycle Management</h1>
+
+<!-- motorcycle.html -->
+<a href="/" class="btn btn-secondary">시작 페이지로 돌아가기</a>
+
+<button onclick="location.href='/motorcycle/list'">Motorcycles 목록 조회</button>
+<button onclick="location.href='/motorcycle/new'">Motorcycle 데이터 추가</button>
+
+<!-- Edit Motorcycle Section -->
+<h2>Edit Motorcycle</h2>
+<form th:action="@{/motorcycle/edit/{id}(id=${editId})}" method="get">
+    <label for="editId">입력된 ID 수정:</label>
+    <input type="text" id="editId" name="editId" />
+    <button type="submit">Motorcycle 수정</button>
+</form>
+
+<!-- Delete Motorcycle Section -->
+<h2>Delete Motorcycle</h2>
+<form th:action="@{/motorcycle/delete}" method="post" th:object="${deleteMotorcycleDTO}">
+    <label for="deleteId">입력된 ID 삭제:</label>
+    <input type="text" id="deleteId" th:field="*{deleteId}" />
+    <button type="submit">Motorcycle 삭제</button>
+</form>
+
+</body>
+</html>

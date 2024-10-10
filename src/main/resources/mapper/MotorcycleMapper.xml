@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.motorcycle.mapper.MotorcycleMapper">
+
+        <!-- resultMap 정의 -->
+        <resultMap id="motorcycleResultMap" type="com.example.motorcycle.domain.Motorcycle">
+                <id property="motorcycleID" column="motorcycleID" />
+                <result property="brand" column="brand" />
+                <result property="model" column="model" />
+                <result property="years" column="years" />
+                <result property="production" column="production" />
+                <result property="replica" column="replica" />
+                <result property="cruiser" column="cruiser" />
+                <result property="tourer" column="tourer" />
+                <result property="adventure" column="adventure" />
+                <result property="multiPurpose" column="multiPurpose" />
+                <result property="naked" column="naked" />
+                <result property="cafeRacer" column="cafeRacer" />
+                <result property="scrambler" column="scrambler" />
+                <result property="offRoad" column="offRoad" />
+                <result property="motard" column="motard" />
+                <result property="trial" column="trial" />
+                <result property="scooter" column="scooter" />
+                <result property="classic" column="classic" />
+
+                <!-- Dimensions 연관 데이터 로드 -->
+                <association property="dimensions" column="motorcycleID" javaType="com.example.motorcycle.domain.Dimensions"
+                             select="com.example.motorcycle.mapper.DimensionsMapper.findByMotorcycleId" />
+
+                <!-- Frames 연관 데이터 로드 -->
+                <association property="frames" column="motorcycleID" javaType="com.example.motorcycle.domain.Frames"
+                             select="com.example.motorcycle.mapper.FramesMapper.findByMotorcycleId" />
+
+                <!-- Electronics 등 추가 데이터 로드 -->
+                <association property="electronics" column="motorcycleID" javaType="com.example.motorcycle.domain.Electronics"
+                             select="com.example.motorcycle.mapper.ElectronicsMapper.findByMotorcycleId" />
+
+                <!-- Transmissions 등 추가 데이터 로드 -->
+                <association property="transmissions" column="motorcycleID" javaType="com.example.motorcycle.domain.Transmissions"
+                             select="com.example.motorcycle.mapper.TransmissionsMapper.findByMotorcycleId" />
+
+                <!-- Engines 등 추가 데이터 로드 -->
+                <association property="engines" column="motorcycleID" javaType="com.example.motorcycle.domain.Engines"
+                             select="com.example.motorcycle.mapper.EnginesMapper.findByMotorcycleId" />
+
+        </resultMap>
+
+        <!-- 데이터 삽입 -->
+        <insert id="insertMotorcycleData" parameterType="com.example.motorcycle.domain.Motorcycle" useGeneratedKeys="true" keyProperty="motorcycleID">
+                INSERT INTO Motorcycle (brand, model, years, production, replica, cruiser, tourer, adventure, multiPurpose, naked, cafeRacer, scrambler, offRoad, motard, trial, scooter, classic)
+                VALUES (#{brand}, #{model}, #{years}, #{production}, #{replica}, #{cruiser}, #{tourer}, #{adventure}, #{multiPurpose}, #{naked}, #{cafeRacer}, #{scrambler}, #{offRoad}, #{motard}, #{trial}, #{scooter}, #{classic})
+        </insert>
+
+        <!-- 데이터 조회 -->
+        <select id="findByMotorcycleId" parameterType="long" resultMap="motorcycleResultMap">
+                SELECT * FROM Motorcycle WHERE motorcycleID = #{motorcycleID}
+        </select>
+
+        <!-- 데이터 업데이트 -->
+        <update id="updateMotorcycleData" parameterType="com.example.motorcycle.domain.Motorcycle">
+                UPDATE Motorcycle
+                SET brand = #{brand}, model = #{model}, years = #{years}, production = #{production}, replica = #{replica},
+                    cruiser = #{cruiser}, tourer = #{tourer}, adventure = #{adventure}, multiPurpose = #{multiPurpose},
+                    naked = #{naked}, cafeRacer = #{cafeRacer}, scrambler = #{scrambler}, offRoad = #{offRoad},
+                    motard = #{motard}, trial = #{trial}, scooter = #{scooter}, classic = #{classic}
+                WHERE motorcycleID = #{motorcycleID}
+        </update>
+
+        <!-- 데이터 삭제 -->
+        <delete id="deleteMotorcycleData" parameterType="long">
+                DELETE FROM Motorcycle WHERE motorcycleID = #{motorcycleID}
+        </delete>
+
+</mapper>

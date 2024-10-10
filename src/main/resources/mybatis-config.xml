@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!-- Type Alias 설정 추가 -->
+    <typeAliases>
+        <typeAlias alias="Motorcycle"       type="com.example.motorcycle.domain.Motorcycle"/>
+        <typeAlias alias="Electronics"      type="com.example.motorcycle.domain.Electronics"/>
+        <typeAlias alias="Dimensions"       type="com.example.motorcycle.domain.Dimensions"/>
+        <typeAlias alias="Frames"           type="com.example.motorcycle.domain.Frames"/>
+        <typeAlias alias="Transmissions"    type="com.example.motorcycle.domain.Transmissions"/>
+        <typeAlias alias="Engines"          type="com.example.motorcycle.domain.Engines"/>
+    </typeAliases>
+
+    <mappers>
+        <mapper resource="mapper/MotorcycleMapper.xml" />
+    </mappers>
+</configuration>

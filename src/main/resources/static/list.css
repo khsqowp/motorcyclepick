@@ -1,0 +1,23 @@
+/* list.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black; /* 테이블의 가로선과 세로선 */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; /* 헤더의 배경색 */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* 짝수 행 배경색 */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* 마우스를 올렸을 때 배경색 */
+}

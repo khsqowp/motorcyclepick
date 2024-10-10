@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Edit Motorcycle</title>
+</head>
+<body>
+<h1>Edit Motorcycle</h1>
+
+<!-- Form to edit a motorcycle -->
+<form th:action="@{/motorcycle/edit/{id}(id=${motorcycleDTO.motorcycleID})}" th:object="${motorcycleDTO}" method="post">
+
+  <!-- MotorcycleDTO -->
+  <h2>Motorcycle Details</h2>
+  <label for="brand">Brand:</label>
+  <input type="text" id="brand" th:field="*{brand}" />
+  <span th:text="${motorcycleDTO.brand}"></span><br>
+
+  <label for="model">Model:</label>
+  <input type="text" id="model" th:field="*{model}" />
+  <span th:text="${motorcycleDTO.model}"></span><br>
+
+  <label for="years">Years:</label>
+  <input type="text" id="years" th:field="*{years}" />
+  <span th:text="${motorcycleDTO.years}"></span><br>
+
+  <label for="production">Production:</label>
+  <input type="text" id="production" th:field="*{production}" />
+  <span th:text="${motorcycleDTO.production}"></span><br>
+
+  <label for="replica">Replica:</label>
+  <input type="number" id="replica" th:field="*{replica}" />
+  <span th:text="${motorcycleDTO.replica}"></span><br>
+
+  <label for="cruiser">Cruiser:</label>
+  <input type="number" id="cruiser" th:field="*{cruiser}" />
+  <span th:text="${motorcycleDTO.cruiser}"></span><br>
+
+  <label for="tourer">Tourer:</label>
+  <input type="number" id="tourer" th:field="*{tourer}" />
+  <span th:text="${motorcycleDTO.tourer}"></span><br>
+
+  <label for="adventure">Adventure:</label>
+  <input type="number" id="adventure" th:field="*{adventure}" />
+  <span th:text="${motorcycleDTO.adventure}"></span><br>
+
+  <label for="multiPurpose">Multi-Purpose:</label>
+  <input type="number" id="multiPurpose" th:field="*{multiPurpose}" />
+  <span th:text="${motorcycleDTO.multiPurpose}"></span><br>
+
+  <label for="naked">Naked:</label>
+  <input type="number" id="naked" th:field="*{naked}" />
+  <span th:text="${motorcycleDTO.naked}"></span><br>
+
+  <label for="cafeRacer">Cafe Racer:</label>
+  <input type="number" id="cafeRacer" th:field="*{cafeRacer}" />
+  <span th:text="${motorcycleDTO.cafeRacer}"></span><br>
+
+  <label for="scrambler">Scrambler:</label>
+  <input type="number" id="scrambler" th:field="*{scrambler}" />
+  <span th:text="${motorcycleDTO.scrambler}"></span><br>
+
+  <label for="offRoad">Off-Road:</label>
+  <input type="number" id="offRoad" th:field="*{offRoad}" />
+  <span th:text="${motorcycleDTO.offRoad}"></span><br>
+
+  <label for="motard">Motard:</label>
+  <input type="number" id="motard" th:field="*{motard}" />
+  <span th:text="${motorcycleDTO.motard}"></span><br>
+
+  <label for="trial">Trial:</label>
+  <input type="number" id="trial" th:field="*{trial}" />
+  <span th:text="${motorcycleDTO.trial}"></span><br>
+
+  <label for="scooter">Scooter:</label>
+  <input type="number" id="scooter" th:field="*{scooter}" />
+  <span th:text="${motorcycleDTO.scooter}"></span><br>
+
+  <label for="classic">Classic:</label>
+  <input type="number" id="classic" th:field="*{classic}" />
+  <span th:text="${motorcycleDTO.classic}"></span><br>
+
+  <!-- DimensionsDTO -->
+  <h2>Dimensions Details</h2>
+  <label for="seatHeight">Seat Height:</label>
+  <input type="number" id="seatHeight" th:field="*{dimensionsDTO.seatHeight}" />
+  <span th:text="${dimensionsDTO.seatHeight}"></span><br>
+
+  <label for="wheelbase">Wheelbase:</label>
+  <input type="number" id="wheelbase" th:field="*{dimensionsDTO.wheelbase}" />
+  <span th:text="${dimensionsDTO.wheelbase}"></span><br>
+
+  <label for="groundClearance">Ground Clearance:</label>
+  <input type="number" id="groundClearance" th:field="*{dimensionsDTO.groundClearance}" />
+  <span th:text="${dimensionsDTO.groundClearance}"></span><br>
+
+  <label for="dryWeight">Dry Weight:</label>
+  <input type="number" id="dryWeight" th:field="*{dimensionsDTO.dryWeight}" />
+  <span th:text="${dimensionsDTO.dryWeight}"></span><br>
+
+  <label for="wetWeight">Wet Weight:</label>
+  <input type="number" id="wetWeight" th:field="*{dimensionsDTO.wetWeight}" />
+  <span th:text="${dimensionsDTO.wetWeight}"></span><br>
+
+  <label for="fuelCapacity">Fuel Capacity:</label>
+  <input type="number" id="fuelCapacity" th:field="*{dimensionsDTO.fuelCapacity}" />
+  <span th:text="${dimensionsDTO.fuelCapacity}"></span><br>
+
+  <label for="innerLegCurve">Inner Leg Curve:</label>
+  <input type="text" id="innerLegCurve" th:field="*{dimensionsDTO.innerLegCurve}" />
+  <span th:text="${dimensionsDTO.innerLegCurve}"></span><br>
+
+  <label for="permittedTotalWeight">Permitted Total Weight:</label>
+  <input type="text" id="permittedTotalWeight" th:field="*{dimensionsDTO.permittedTotalWeight}" />
+  <span th:text="${dimensionsDTO.permittedTotalWeight}"></span><br>
+
+  <!-- ElectronicsDTO -->
+  <h2>Electronics Details</h2>
+  <label for="engineManagement">Engine Management:</label>
+  <input type="text" id="engineManagement" th:field="*{electronicsDTO.engineManagement}" />
+  <span th:text="${electronicsDTO.engineManagement}"></span><br>
+
+  <label for="emissionControl">Emission Control:</label>
+  <input type="text" id="emissionControl" th:field="*{electronicsDTO.emissionControl}" />
+  <span th:text="${electronicsDTO.emissionControl}"></span><br>
+
+  <label for="engineControl">Engine Control:</label>
+  <input type="text" id="engineControl" th:field="*{electronicsDTO.engineControl}" />
+  <span th:text="${electronicsDTO.engineControl}"></span><br>
+
+  <label for="alternator">Alternator:</label>
+  <input type="text" id="alternator" th:field="*{electronicsDTO.alternator}" />
+  <span th:text="${electronicsDTO.alternator}"></span><br>
+
+  <label for="battery">Battery:</label>
+  <input type="text" id="battery" th:field="*{electronicsDTO.battery}" />
+  <span th:text="${electronicsDTO.battery}"></span><br>
+
+  <label for="headlight">Headlight:</label>
+  <input type="text" id="headlight" th:field="*{electronicsDTO.headlight}" />
+  <span th:text="${electronicsDTO.headlight}"></span><br>
+
+  <label for="ignition">Ignition:</label>
+  <input type="text" id="ignition" th:field="*{electronicsDTO.ignition}" />
+  <span th:text="${electronicsDTO.ignition}"></span><br>
+
+  <label for="starting">Starting:</label>
+  <input type="text" id="starting" th:field="*{electronicsDTO.starting}" />
+  <span th:text="${electronicsDTO.starting}"></span><br>
+
+  <label for="tractionControl">Traction Control:</label>
+  <input type="text" id="tractionControl" th:field="*{electronicsDTO.tractionControl}" />
+  <span th:text="${electronicsDTO.tractionControl}"></span><br>
+
+  <!-- EnginesDTO -->
+  <h2>Engine Details</h2>
+  <label for="engine">Engine:</label>
+  <input type="text" id="engine" th:field="*{enginesDTO.engine}" />
+  <span th:text="${enginesDTO.engine}"></span><br>
+
+  <label for="capacity">Capacity:</label>
+  <input type="number" id="capacity" th:field="*{enginesDTO.capacity}" />
+  <span th:text="${enginesDTO.capacity}"></span><br>
+
+  <label for="boreStroke">Bore & Stroke:</label>
+  <input type="text" id="boreStroke" th:field="*{enginesDTO.boreStroke}" />
+  <span th:text="${enginesDTO.boreStroke}"></span><br>
+
+  <label for="compressionRatio">Compression Ratio:</label>
+  <input type="text" id="compressionRatio" th:field="*{enginesDTO.compressionRatio}" />
+  <span th:text="${enginesDTO.compressionRatio}"></span><br>
+
+  <label for="coolingSystem">Cooling System:</label>
+  <input type="text" id="coolingSystem" th:field="*{enginesDTO.coolingSystem}" />
+  <span th:text="${enginesDTO.coolingSystem}"></span><br>
+
+  <label for="lubrication">Lubrication:</label>
+  <input type="text" id="lubrication" th:field="*{enginesDTO.lubrication}" />
+  <span th:text="${enginesDTO.lubrication}"></span><br>
+
+  <label for="maxPower">Max Power:</label>
+  <input type="text" id="maxPower" th:field="*{enginesDTO.maxPower}" />
+  <span th:text="${enginesDTO.maxPower}"></span><br>
+
+  <label for="maxTorque">Max Torque:</label>
+  <input type="text" id="maxTorque" th:field="*{enginesDTO.maxTorque}" />
+  <span th:text="${enginesDTO.maxTorque}"></span><br>
+
+  <label for="fuelSystem">Fuel System:</label>
+  <input type="text" id="fuelSystem" th:field="*{enginesDTO.fuelSystem}" />
+  <span th:text="${enginesDTO.fuelSystem}"></span><br>
+
+  <label for="exhaust">Exhaust:</label>
+  <input type="text" id="exhaust" th:field="*{enginesDTO.exhaust}" />
+  <span th:text="${enginesDTO.exhaust}"></span><br>
+
+  <label for="engineOil">Engine Oil:</label>
+  <input type="text" id="engineOil" th:field="*{enginesDTO.engineOil}" />
+  <span th:text="${enginesDTO.engineOil}"></span><br>
+
+  <label for="mixtureControl">Mixture Control:</label>
+  <input type="text" id="mixtureControl" th:field="*{enginesDTO.mixtureControl}" />
+  <span th:text="${enginesDTO.mixtureControl}"></span><br>
+
+  <label for="emission">Emission:</label>
+  <input type="text" id="emission" th:field="*{enginesDTO.emission}" />
+  <span th:text="${enginesDTO.emission}"></span><br>
+
+  <label for="induction">Induction:</label>
+  <input type="text" id="induction" th:field="*{enginesDTO.induction}" />
+  <span th:text="${enginesDTO.induction}"></span><br>
+
+  <label for="ignition">Ignition:</label>
+  <input type="text" id="`ignition`" th:field="*{enginesDTO.ignition}" />
+  <span th:text="${enginesDTO.ignition}"></span><br>
+
+  <!-- FramesDTO -->
+  <h2>Frame Details</h2>
+  <label for="frame">Frame:</label>
+  <input type="text" id="frame" th:field="*{framesDTO.frame}" />
+  <span th:text="${framesDTO.frame}"></span><br>
+
+  <label for="frontSuspension">Front Suspension:</label>
+  <input type="text" id="frontSuspension" th:field="*{framesDTO.frontSuspension}" />
+  <span th:text="${framesDTO.frontSuspension}"></span><br>
+
+  <label for="rearSuspension">Rear Suspension:</label>
+  <input type="text" id="rearSuspension" th:field="*{framesDTO.rearSuspension}" />
+  <span th:text="${framesDTO.rearSuspension}"></span><br>
+
+  <label for="frontWheelTravel">Front Wheel Travel:</label>
+  <input type="number" id="frontWheelTravel" th:field="*{framesDTO.frontWheelTravel}" />
+  <span th:text="${framesDTO.frontWheelTravel}"></span><br>
+
+  <label for="rearWheelTravel">Rear Wheel Travel:</label>
+  <input type="number" id="rearWheelTravel" th:field="*{framesDTO.rearWheelTravel}" />
+  <span th:text="${framesDTO.rearWheelTravel}"></span><br>
+
+  <label for="frontBrakes">Front Brakes:</label>
+  <input type="text" id="frontBrakes" th:field="*{framesDTO.frontBrakes}" />
+  <span th:text="${framesDTO.frontBrakes}"></span><br>
+
+  <label for="rearBrakes">Rear Brakes:</label>
+  <input type="text" id="rearBrakes" th:field="*{framesDTO.rearBrakes}" />
+  <span th:text="${framesDTO.rearBrakes}"></span><br>
+
+  <label for="absSystem">ABS System:</label>
+  <input type="text" id="absSystem" th:field="*{framesDTO.absSystem}" />
+  <span th:text="${framesDTO.absSystem}"></span><br>
+
+  <!-- TransmissionsDTO -->
+  <h2>Transmission Details</h2>
+  <label for="transmissionDrive">Transmission Drive:</label>
+  <input type="text" id="transmissionDrive" th:field="*{transmissionsDTO.transmissionDrive}" />
+  <span th:text="${transmissionsDTO.transmissionDrive}"></span><br>
+
+  <label for="transmission">Transmission:</label>
+  <input type="text" id="transmission" th:field="*{transmissionsDTO.transmission}" />
+  <span th:text="${transmissionsDTO.transmission}"></span><br>
+
+  <label for="finalDrive">Final Drive:</label>
+  <input type="text" id="finalDrive" th:field="*{transmissionsDTO.finalDrive}" />
+  <span th:text="${transmissionsDTO.finalDrive}"></span><br>
+
+  <label for="primaryDriveRatio">Primary Drive Ratio:</label>
+  <input type="text" id="primaryDriveRatio" th:field="*{transmissionsDTO.primaryDriveRatio}" />
+  <span th:text="${transmissionsDTO.primaryDriveRatio}"></span><br>
+
+  <label for="primaryRatio">Primary Ratio:</label>
+  <input type="text" id="primaryRatio" th:field="*{transmissionsDTO.primaryRatio}" />
+  <span th:text="${transmissionsDTO.primaryRatio}"></span><br>
+
+  <label for="gearRatio">Gear Ratio:</label>
+  <input type="text" id="gearRatio" th:field="*{transmissionsDTO.gearRatio}" />
+  <span th:text="${transmissionsDTO.gearRatio}"></span><br>
+
+  <label for="clutch">Clutch:</label>
+  <input type="text" id="clutch" th:field="*{transmissionsDTO.clutch}" />
+  <span th:text="${transmissionsDTO.clutch}"></span><br>
+
+  <br><br>
+
+  <button type="submit">Update Motorcycle</button>
+</form>
+
+<button onclick="location.href='/motorcycle'">Back to Main</button>
+
+</body>
+</html>

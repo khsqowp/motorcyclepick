@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.motorcycle.mapper.ElectronicsMapper">
+
+        <!-- resultMap 정의 -->
+        <resultMap id="electronicsResultMap" type="com.example.motorcycle.domain.Electronics">
+                <id property="motorcycleID" column="motorcycleID" />
+                <result property="engineManagement" column="engineManagement" />
+                <result property="emissionControl" column="emissionControl" />
+                <result property="engineControl" column="engineControl" />
+                <result property="alternator" column="alternator" />
+                <result property="battery" column="battery" />
+                <result property="headlight" column="headlight" />
+                <result property="ignition" column="ignition" />
+                <result property="starting" column="starting" />
+                <result property="tractionControl" column="tractionControl" />
+        </resultMap>
+
+        <!-- 데이터 삽입 -->
+        <insert id="insertElectronicsData" parameterType="com.example.motorcycle.domain.Electronics">
+                INSERT INTO Electronics (motorcycleID, engineManagement, emissionControl, engineControl, alternator, battery, headlight, ignition, starting, tractionControl)
+                VALUES (#{motorcycleID}, #{engineManagement}, #{emissionControl}, #{engineControl}, #{alternator}, #{battery}, #{headlight}, #{ignition}, #{starting}, #{tractionControl})
+        </insert>
+
+        <!-- 데이터 조회 -->
+        <select id="findByMotorcycleId" parameterType="long" resultMap="electronicsResultMap">
+                SELECT * FROM Electronics WHERE motorcycleID = #{motorcycleID}
+        </select>
+
+        <!-- 데이터 업데이트 -->
+        <update id="updateElectronicsData" parameterType="com.example.motorcycle.domain.Electronics">
+                UPDATE Electronics
+                SET engineManagement = #{engineManagement}, emissionControl = #{emissionControl}, engineControl = #{engineControl},
+                    alternator = #{alternator}, battery = #{battery}, headlight = #{headlight}, ignition = #{ignition},
+                    starting = #{starting}, tractionControl = #{tractionControl}
+                WHERE motorcycleID = #{motorcycleID}
+        </update>
+
+        <!-- 데이터 삭제 -->
+        <delete id="deleteElectronicsData" parameterType="long">
+                DELETE FROM Electronics WHERE motorcycleID = #{motorcycleID}
+        </delete>
+
+</mapper>

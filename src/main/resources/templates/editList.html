@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <title>Edit Motorcycles</title>
+</head>
+<body>
+<h1>Edit Motorcycles</h1>
+
+<form method="post" th:action="@{/motorcycle/edit/multiple}" th:object="${motorcycles}">
+  <table>
+    <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Years</th>
+      <th>Production</th>
+      <th>Replica</th>
+      <th>Cruiser</th>
+      <th>Tourer</th>
+      <th>Adventure</th>
+      <th>Multi-Purpose</th>
+      <th>Naked</th>
+      <th>Cafe Racer</th>
+      <th>Scrambler</th>
+      <th>Off-Road</th>
+      <th>Motard</th>
+      <th>Trial</th>
+      <th>Scooter</th>
+      <th>Classic</th>
+      <th>Seat Height</th>
+      <th>Wheelbase</th>
+      <th>Ground Clearance</th>
+      <th>Dry Weight</th>
+      <th>Wet Weight</th>
+      <th>Fuel Capacity</th>
+      <th>Inner Leg Curve</th>
+      <th>Permitted Total Weight</th>
+      <th>Engine Management</th>
+      <th>Emission Control</th>
+      <th>Engine Control</th>
+      <th>Alternator</th>
+      <th>Battery</th>
+      <th>Headlight</th>
+      <th>Ignition</th>
+      <th>Starting</th>
+      <th>Traction Control</th>
+      <th>Engine</th>
+      <th>Capacity</th>
+      <th>Bore Stroke</th>
+      <th>Compression Ratio</th>
+      <th>Cooling System</th>
+      <th>Lubrication</th>
+      <th>Max Power</th>
+      <th>Max Torque</th>
+      <th>Fuel System</th>
+      <th>Exhaust</th>
+      <th>Engine Oil</th>
+      <th>Mixture Control</th>
+      <th>Emission</th>
+      <th>Induction</th>
+      <th>Ignition</th>
+      <th>Frame</th>
+      <th>Front Suspension</th>
+      <th>Rear Suspension</th>
+      <th>Front Wheel Travel</th>
+      <th>Rear Wheel Travel</th>
+      <th>Front Brakes</th>
+      <th>Rear Brakes</th>
+      <th>ABS System</th>
+      <th>Transmission Drive</th>
+      <th>Transmission</th>
+      <th>Final Drive</th>
+      <th>Primary Drive Ratio</th>
+      <th>Primary Ratio</th>
+      <th>Gear Ratio</th>
+      <th>Clutch</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="motorcycle, iterStat : ${motorcycles}">
+      <!-- MotorcycleDTO fields -->
+      <td><input type="text" th:field="*{model}" /></td>
+      <td><input type="text" th:field="*{years}" /></td>
+      <td><input type="text" th:field="*{production}" /></td>
+      <td><input type="number" th:field="*{replica}" /></td>
+      <td><input type="number" th:field="*{cruiser}" /></td>
+      <td><input type="number" th:field="*{tourer}" /></td>
+      <td><input type="number" th:field="*{adventure}" /></td>
+      <td><input type="number" th:field="*{multiPurpose}" /></td>
+      <td><input type="number" th:field="*{naked}" /></td>
+      <td><input type="number" th:field="*{cafeRacer}" /></td>
+      <td><input type="number" th:field="*{scrambler}" /></td>
+      <td><input type="number" th:field="*{offRoad}" /></td>
+      <td><input type="number" th:field="*{motard}" /></td>
+      <td><input type="number" th:field="*{trial}" /></td>
+      <td><input type="number" th:field="*{scooter}" /></td>
+      <td><input type="number" th:field="*{classic}" /></td>
+
+      <!-- DimensionsDTO fields -->
+      <td><input type="number" th:field="*{dimensionsDTO.seatHeight}" /></td>
+      <td><input type="number" th:field="*{dimensionsDTO.wheelbase}" /></td>
+      <td><input type="number" th:field="*{dimensionsDTO.groundClearance}" /></td>
+      <td><input type="number" th:field="*{dimensionsDTO.dryWeight}" /></td>
+      <td><input type="number" th:field="*{dimensionsDTO.wetWeight}" /></td>
+      <td><input type="number" th:field="*{dimensionsDTO.fuelCapacity}" /></td>
+      <td><input type="text" th:field="*{dimensionsDTO.innerLegCurve}" /></td>
+      <td><input type="number" th:field="*{dimensionsDTO.permittedTotalWeight}" /></td>
+
+      <!-- ElectronicsDTO fields -->
+      <td><input type="text" th:field="*{electronicsDTO.engineManagement}" /></td>
+      <td><input type="text" th:field="*{electronicsDTO.emissionControl}" /></td>
+      <td><input type="text" th:field="*{electronicsDTO.engineControl}" /></td>
+      <td><input type="text" th:field="*{electronicsDTO.alternator}" /></td>
+      <td><input type="text" th:field="*{electronicsDTO.battery}" /></td>
+      <td><input type="text" th:field="*{electronicsDTO.headlight}" /></td>
+      <td><input type="text" th:field="*{electronicsDTO.ignition}" /></td>
+      <td><input type="text" th:field="*{electronicsDTO.starting}" /></td>
+      <td><input type="text" th:field="*{electronicsDTO.tractionControl}" /></td>
+
+      <!-- EnginesDTO fields -->
+      <td><input type="text" th:field="*{enginesDTO.engine}" /></td>
+      <td><input type="number" th:field="*{enginesDTO.capacity}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.boreStroke}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.compressionRatio}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.coolingSystem}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.lubrication}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.maxPower}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.maxTorque}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.fuelSystem}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.exhaust}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.engineOil}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.mixtureControl}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.emission}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.induction}" /></td>
+      <td><input type="text" th:field="*{enginesDTO.ignition}" /></td>
+
+      <!-- FramesDTO fields -->
+      <td><input type="text" th:field="*{framesDTO.frame}" /></td>
+      <td><input type="text" th:field="*{framesDTO.frontSuspension}" /></td>
+      <td><input type="text" th:field="*{framesDTO.rearSuspension}" /></td>
+      <td><input type="number" th:field="*{framesDTO.frontWheelTravel}" /></td>
+      <td><input type="number" th:field="*{framesDTO.rearWheelTravel}" /></td>
+      <td><input type="text" th:field="*{framesDTO.frontBrakes}" /></td>
+      <td><input type="text" th:field="*{framesDTO.rearBrakes}" /></td>
+      <td><input type="text" th:field="*{framesDTO.absSystem}" /></td>
+
+      <!-- TransmissionsDTO fields -->
+      <td><input type="text" th:field="*{transmissionsDTO.transmissionDrive}" /></td>
+      <td><input type="text" th:field="*{transmissionsDTO.transmission}" /></td>
+      <td><input type="text" th:field="*{transmissionsDTO.finalDrive}" /></td>
+      <td><input type="text" th:field="*{transmissionsDTO.primaryDriveRatio}" /></td>
+      <td><input type="text" th:field="*{transmissionsDTO.primaryRatio}" /></td>
+      <td><input type="text" th:field="*{transmissionsDTO.gearRatio}" /></td>
+      <td><input type="text" th:field="*{transmissionsDTO.clutch}" /></td>
+
+      <td>
+        <button type="submit" th:formaction="@{/motorcycle/edit/{id}(id=${motorcycle.motorcycleID})}">Update</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</form>
+
+<button onclick="location.href='/motorcycle'">Back to Main</button>
+</body>
+</html>
