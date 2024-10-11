@@ -34,4 +34,6 @@ public class Dimensions {
         dimensions.setPermittedTotalWeight(dto.getPermittedTotalWeight());
         return dimensions;
     }
+
+
 }

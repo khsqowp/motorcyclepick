@@ -11,7 +11,7 @@ public interface ElectronicsMapper {
 
     @Insert(
             "INSERT INTO Electronics (motorcycleID, engineManagement, emissionControl, engineControl, alternator, battery, headlight, ignition, starting, tractionControl) VALUES (#{motorcycleID()}, #{electronics.engineManagement}, #{electronics.emissionControl}, #{electronics.engineControl}, #{electronics.alternator}, #{electronics.battery}, #{electronics.headlight}, #{electronics.ignition}, #{electronics.starting}, #{electronics.tractionControl})")
-    void insertElectronics(Electronics electronics);
+    void insertElectronicsData(@Param("electronics") Electronics electronics);
 
     @Update("UPDATE Electronics SET engineManagement=#{electronics.engineManagement}, emissionControl=#{electronics.emissionControl}, engineControl=#{electronics.engineControl}, alternator=#{electronics.alternator}, battery=#{electronics.battery}, headlight=#{electronics.headlight}, ignition=#{electronics.ignition}, starting=#{electronics.starting}, tractionControl=#{electronics.tractionControl} WHERE motorcycleID=#{motorcycleID}")
     void updateElectronics(@Param("motorcycleID") Long motorcycleID, @Param("electronics") Electronics electronics);

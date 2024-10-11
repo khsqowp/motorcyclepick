@@ -23,25 +23,25 @@ public class EnginesDTO {
     private String emission;
     private String induction;
     
-    public static EnginesDTO fromDomain(Engines engines) {
+    public Engines toDomain() {
         // Motorcycle 객체를 MotorcycleDTO 객체로 변환
-        EnginesDTO dto = new EnginesDTO();
-        dto.setEnginesID(engines.getEnginesID());
-        dto.setMotorcycleID(engines.getMotorcycleID());
-        dto.setEngine(engines.getEngine());
-        dto.setCapacity(engines.getCapacity());
-        dto.setBoreStroke(engines.getBoreStroke());
-        dto.setCompressionRatio(engines.getCompressionRatio());
-        dto.setCoolingSystem(engines.getCoolingSystem());
-        dto.setLubrication(engines.getLubrication());
-        dto.setMaxPower(engines.getMaxPower());
-        dto.setMaxTorque(engines.getMaxTorque());
-        dto.setFuelSystem(engines.getFuelSystem());
-        dto.setExhaust(engines.getExhaust());
-        dto.setMixtureControl(engines.getMixtureControl());
-        dto.setEmission(engines.getEmission());
-        dto.setInduction(engines.getInduction());
+        Engines engines = new Engines();
+        engines.setEnginesID(this.getEnginesID());
+        engines.setMotorcycleID(this.getMotorcycleID());
+        engines.setEngine(this.getEngine());
+        engines.setCapacity(this.getCapacity());
+        engines.setBoreStroke(this.getBoreStroke());
+        engines.setCompressionRatio(this.getCompressionRatio());
+        engines.setCoolingSystem(this.getCoolingSystem());
+        engines.setLubrication(this.getLubrication());
+        engines.setMaxPower(this.getMaxPower());
+        engines.setMaxTorque(this.getMaxTorque());
+        engines.setFuelSystem(this.getFuelSystem());
+        engines.setExhaust(this.getExhaust());
+        engines.setMixtureControl(this.getMixtureControl());
+        engines.setEmission(this.getEmission());
+        engines.setInduction(this.getInduction());
         // 필요한 필드를 설정합니다.
-        return dto;
+        return engines;
     }
 }

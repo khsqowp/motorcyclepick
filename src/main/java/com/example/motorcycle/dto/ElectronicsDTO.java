@@ -18,21 +18,21 @@ public class ElectronicsDTO {
     private String starting;
     private String tractionControl;
 
-    public static ElectronicsDTO fromDomain(Electronics electronics) {
+    public Electronics toDomain() {
         // Motorcycle 객체를 MotorcycleDTO 객체로 변환
-        ElectronicsDTO dto = new ElectronicsDTO();
-        dto.setElectronicsID(electronics.getElectronicsID());
-        dto.setMotorcycleID(electronics.getMotorcycleID());
-        dto.setEngineManagement(electronics.getEngineManagement());
-        dto.setEmissionControl(electronics.getEmissionControl());
-        dto.setEngineControl(electronics.getEngineControl());
-        dto.setAlternator(electronics.getAlternator());
-        dto.setBattery(electronics.getBattery());
-        dto.setHeadlight(electronics.getHeadlight());
-        dto.setIgnition(electronics.getIgnition());
-        dto.setStarting(electronics.getStarting());
-        dto.setTractionControl(electronics.getTractionControl());
+        Electronics electronics = new Electronics();
+        electronics.setElectronicsID(this.getElectronicsID());
+        electronics.setMotorcycleID(this.getMotorcycleID());
+        electronics.setEngineManagement(this.getEngineManagement());
+        electronics.setEmissionControl(this.getEmissionControl());
+        electronics.setEngineControl(this.getEngineControl());
+        electronics.setAlternator(this.getAlternator());
+        electronics.setBattery(this.getBattery());
+        electronics.setHeadlight(this.getHeadlight());
+        electronics.setIgnition(this.getIgnition());
+        electronics.setStarting(this.getStarting());
+        electronics.setTractionControl(this.getTractionControl());
         // 필요한 필드를 설정합니다.
-        return dto;
+        return electronics;
     }
 }

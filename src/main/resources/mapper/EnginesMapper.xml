@@ -6,7 +6,7 @@
 <mapper namespace="com.example.motorcycle.mapper.EnginesMapper">
 
         <!-- resultMap 정의 -->
-        <resultMap id="enginesResultMap" type="com.example.motorcycle.domain.Engines">
+        <resultMap id="enginesResultMap" type="com.example.motorcycle.dto.EnginesDTO">
                 <id property="motorcycleID" column="motorcycleID" />
                 <result property="engine" column="engine" />
                 <result property="capacity" column="capacity" />
@@ -25,7 +25,7 @@
         </resultMap>
 
         <!-- 데이터 삽입 -->
-        <insert id="insertEnginesData" parameterType="com.example.motorcycle.domain.Engines">
+        <insert id="insertEnginesData" parameterType="com.example.motorcycle.dto.EnginesDTO">
                 INSERT INTO Engines (motorcycleID, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication, max_power, max_torque, fuel_system, exhaust, engine_oil, mixture_control, emission, induction)
                 VALUES (#{motorcycleID}, #{engine}, #{capacity}, #{boreStroke}, #{compressionRatio}, #{coolingSystem}, #{lubrication}, #{maxPower}, #{maxTorque}, #{fuelSystem}, #{exhaust}, #{engineOil}, #{mixtureControl}, #{emission}, #{induction})
         </insert>
@@ -36,7 +36,7 @@
         </select>
 
         <!-- 데이터 업데이트 -->
-        <update id="updateEnginesData" parameterType="com.example.motorcycle.domain.Engines">
+        <update id="updateEnginesData" parameterType="com.example.motorcycle.dto.EnginesDTO">
                 UPDATE Engines
                 SET engine = #{engine}, capacity = #{capacity}, bore_stroke = #{boreStroke}, compression_ratio = #{compressionRatio},
                     cooling_system = #{coolingSystem}, lubrication = #{lubrication}, max_power = #{maxPower}, max_torque = #{maxTorque},

@@ -56,4 +56,5 @@ public class Motorcycle {
         motorcycle.setClassic(dto.getClassic());
         return motorcycle;
     }
+
 }

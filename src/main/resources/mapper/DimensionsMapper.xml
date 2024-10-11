@@ -6,7 +6,7 @@
 <mapper namespace="com.example.motorcycle.mapper.DimensionsMapper">
 
         <!-- resultMap 정의 -->
-        <resultMap id="dimensionsResultMap" type="com.example.motorcycle.domain.Dimensions">
+        <resultMap id="dimensionsResultMap" type="com.example.motorcycle.dto.DimensionsDTO">
                 <id property="motorcycleID" column="motorcycleID" />
                 <result property="dimensions" column="dimensions" />
                 <result property="seatHeight" column="seatHeight" />
@@ -20,7 +20,7 @@
         </resultMap>
 
         <!-- 데이터 삽입 -->
-        <insert id="insertDimensionsData" parameterType="com.example.motorcycle.domain.Dimensions">
+        <insert id="insertDimensionsData" parameterType="com.example.motorcycle.dto.DimensionsDTO">
                 INSERT INTO Dimensions (motorcycleID, dimensions, seatHeight, wheelbase, groundClearance, dryWeight, wetWeight, fuelCapacity, innerLegCurve, permittedTotalWeight)
                 VALUES (#{motorcycleID}, #{dimensions}, #{seatHeight}, #{wheelbase}, #{groundClearance}, #{dryWeight}, #{wetWeight}, #{fuelCapacity}, #{innerLegCurve}, #{permittedTotalWeight})
         </insert>
@@ -31,7 +31,7 @@
         </select>
 
         <!-- 데이터 업데이트 -->
-        <update id="updateDimensionsData" parameterType="com.example.motorcycle.domain.Dimensions">
+        <update id="updateDimensionsData" parameterType="com.example.motorcycle.dto.DimensionsDTO">
                 UPDATE Dimensions
                 SET dimensions = #{dimensions}, seatHeight = #{seatHeight}, wheelbase = #{wheelbase}, groundClearance = #{groundClearance},
                     dryWeight = #{dryWeight}, wetWeight = #{wetWeight}, fuelCapacity = #{fuelCapacity}, innerLegCurve = #{innerLegCurve},

@@ -6,7 +6,7 @@
 <mapper namespace="com.example.motorcycle.mapper.MotorcycleMapper">
 
         <!-- resultMap 정의 -->
-        <resultMap id="motorcycleResultMap" type="com.example.motorcycle.domain.Motorcycle">
+        <resultMap id="motorcycleResultMap" type="com.example.motorcycle.dto.MotorcycleDTO">
                 <id property="motorcycleID" column="motorcycleID" />
                 <result property="brand" column="brand" />
                 <result property="model" column="model" />
@@ -49,7 +49,7 @@
         </resultMap>
 
         <!-- 데이터 삽입 -->
-        <insert id="insertMotorcycleData" parameterType="com.example.motorcycle.domain.Motorcycle" useGeneratedKeys="true" keyProperty="motorcycleID">
+        <insert id="insertMotorcycleData" parameterType="com.example.motorcycle.dto.MotorcycleDTO" useGeneratedKeys="true" keyProperty="motorcycleID">
                 INSERT INTO Motorcycle (brand, model, years, production, replica, cruiser, tourer, adventure, multiPurpose, naked, cafeRacer, scrambler, offRoad, motard, trial, scooter, classic)
                 VALUES (#{brand}, #{model}, #{years}, #{production}, #{replica}, #{cruiser}, #{tourer}, #{adventure}, #{multiPurpose}, #{naked}, #{cafeRacer}, #{scrambler}, #{offRoad}, #{motard}, #{trial}, #{scooter}, #{classic})
         </insert>
@@ -60,7 +60,7 @@
         </select>
 
         <!-- 데이터 업데이트 -->
-        <update id="updateMotorcycleData" parameterType="com.example.motorcycle.domain.Motorcycle">
+        <update id="updateMotorcycleData" parameterType="com.example.motorcycle.dto.MotorcycleDTO">
                 UPDATE Motorcycle
                 SET brand = #{brand}, model = #{model}, years = #{years}, production = #{production}, replica = #{replica},
                     cruiser = #{cruiser}, tourer = #{tourer}, adventure = #{adventure}, multiPurpose = #{multiPurpose},

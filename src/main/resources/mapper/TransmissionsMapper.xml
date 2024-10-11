@@ -6,7 +6,7 @@
 <mapper namespace="com.example.motorcycle.mapper.TransmissionsMapper">
 
         <!-- resultMap 정의 -->
-        <resultMap id="transmissionsResultMap" type="com.example.motorcycle.domain.Transmissions">
+        <resultMap id="transmissionsResultMap" type="com.example.motorcycle.dto.TransmissionsDTO">
                 <id property="motorcycleID" column="motorcycleID" />
                 <result property="transmission_drive" column="transmission_drive" />
                 <result property="transmission" column="transmission" />
@@ -21,7 +21,7 @@
         </resultMap>
 
         <!-- 데이터 삽입 -->
-        <insert id="insertTransmissionsData" parameterType="com.example.motorcycle.domain.Transmissions">
+        <insert id="insertTransmissionsData" parameterType="com.example.motorcycle.dto.TransmissionsDTO">
                 INSERT INTO Transmissions (motorcycleID, transmission_drive, transmission, final_drive, primary_drive_ratio, primary_ratio, gear_ratio, transmission_ratio, secondary_ratio, gear_ratios, clutch)
                 VALUES (#{motorcycleID}, #{transmission_drive}, #{transmission}, #{final_drive}, #{primary_drive_ratio}, #{primary_ratio}, #{gear_ratio}, #{transmission_ratio}, #{secondary_ratio}, #{gear_ratios}, #{clutch})
         </insert>
@@ -32,7 +32,7 @@
         </select>
 
         <!-- 데이터 업데이트 -->
-        <update id="updateTransmissionsData" parameterType="com.example.motorcycle.domain.Transmissions">
+        <update id="updateTransmissionsData" parameterType="com.example.motorcycle.dto.TransmissionsDTO">
                 UPDATE Transmissions
                 SET transmission_drive = #{transmission_drive}, transmission = #{transmission}, final_drive = #{final_drive},
                     primary_drive_ratio = #{primary_drive_ratio}, primary_ratio = #{primary_ratio}, gear_ratio = #{gear_ratio},

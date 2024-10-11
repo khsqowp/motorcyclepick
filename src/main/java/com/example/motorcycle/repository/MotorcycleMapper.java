@@ -14,7 +14,7 @@ public interface MotorcycleMapper {
     @Insert(
             "INSERT INTO Motorcycle (brand, model, years, production, replica, cruiser, tourer, adventure, multiPurpose, naked, cafeRacer, scrambler, offRoad, motard, trial, scooter, classic) VALUES (#{motorcycle.brand}, #{motorcycle.model}, #{motorcycle.years}, #{motorcycle.production}, #{motorcycle.replica}, #{motorcycle.cruiser}, #{motorcycle.tourer}, #{motorcycle.adventure}, #{motorcycle.multiPurpose}, #{motorcycle.naked}, #{motorcycle.cafeRacer}, #{motorcycle.scrambler}, #{motorcycle.offRoad}, #{motorcycle.motard}, #{motorcycle.trial}, #{motorcycle.scooter}, #{motorcycle.classic})")
     @Options(useGeneratedKeys = true, keyProperty = "motorcycleID")
-    void insertMotorcycle(Motorcycle motorcycle);
+    void insertMotorcycleData(@Param("motorcycle") Motorcycle motorcycle);
 
     @Update("UPDATE Motorcycle SET brand=#{motorcycle.brand}, model=#{motorcycle.model}, years=#{motorcycle.years}, production=#{motorcycle.production}, replica=#{motorcycle.replica}, cruiser=#{motorcycle.cruiser}, tourer=#{motorcycle.tourer}, adventure=#{motorcycle.adventure}, multiPurpose=#{motorcycle.multiPurpose}, naked=#{motorcycle.naked}, cafeRacer=#{motorcycle.cafeRacer}, scrambler=#{motorcycle.scrambler}, offRoad=#{motorcycle.offRoad}, motard=#{motorcycle.motard}, trial=#{motorcycle.trial}, scooter=#{motorcycle.scooter}, classic=#{motorcycle.classic} WHERE motorcycleID=#{motorcycle.motorcycleID}")
     void updateMotorcycle(@Param("motorcycle") Motorcycle motorcycle);

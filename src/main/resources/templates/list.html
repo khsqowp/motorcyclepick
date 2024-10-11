@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" href = "/static/list.css">
 <head>
+  <meta charset="UTF-8">
   <title>Motorcycle List</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/list.css}">
 </head>
 <body>
 <h1>Motorcycle List</h1>
@@ -93,7 +94,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr th:each="motorcycle, iterStat : ${motorcycles}">
+  <tr th:each="motorcycle, iterStat : ${motorcycleList}">
     <td th:text="${iterStat.index + 1}"></td>
     <td th:text="${motorcycle.brand}"></td>
     <td th:text="${motorcycle.model}"></td>

@@ -1,5 +1,6 @@
 package com.example.motorcycle.domain;
 
+import com.example.motorcycle.dto.ElectronicsDTO;
 import com.example.motorcycle.dto.EnginesDTO;
 import lombok.Data;
 
@@ -44,4 +45,5 @@ public class Engines {
         engines.setInduction(dto.getInduction());
         return engines;
     }
+
 }

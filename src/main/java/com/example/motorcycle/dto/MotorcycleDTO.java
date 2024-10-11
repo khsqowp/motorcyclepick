@@ -30,15 +30,6 @@ public class MotorcycleDTO {
     private FramesDTO framesDTO;
     private TransmissionsDTO transmissionsDTO;
 
-    // 각 서브 엔티티의 DTO 추가
-    private Dimensions dimensions;  // 수정: ID가 아닌 전체  객체
-    private Electronics electronics;  // 수정: ID가 아닌 전체  객체
-    private Engines engines;  // 수정: ID가 아닌 전체  객체
-    private Frames frames;  // 수정: ID가 아닌 전체  객체
-//    private MotorcycleSpecs motorcycleSpecs;  // 수정: ID가 아닌 전체  객체
-    private Transmissions transmissions;  // 수정: ID가 아닌 전체  객체
-
-
 
     // fromDomain 메서드 추가
     public static MotorcycleDTO fromDomain(Motorcycle motorcycle) {
@@ -84,5 +75,46 @@ public class MotorcycleDTO {
         }
 
         return dto;
+    }
+
+    public Motorcycle toDomain() {
+        Motorcycle motorcycle = new Motorcycle();
+        motorcycle.setMotorcycleID(this.motorcycleID);
+        motorcycle.setBrand(this.brand);
+        motorcycle.setModel(this.model);
+        motorcycle.setYears(this.years);
+        motorcycle.setProduction(this.production);
+        motorcycle.setReplica(this.replica);
+        motorcycle.setCruiser(this.cruiser);
+        motorcycle.setTourer(this.tourer);
+        motorcycle.setAdventure(this.adventure);
+        motorcycle.setMultiPurpose(this.multiPurpose);
+        motorcycle.setNaked(this.naked);
+        motorcycle.setCafeRacer(this.cafeRacer);
+        motorcycle.setScrambler(this.scrambler);
+        motorcycle.setOffRoad(this.offRoad);
+        motorcycle.setMotard(this.motard);
+        motorcycle.setTrial(this.trial);
+        motorcycle.setScooter(this.scooter);
+        motorcycle.setClassic(this.classic);
+
+        // 서브 엔티티를 각 도메인 객체로 변환
+        if (this.dimensionsDTO != null) {
+            motorcycle.setDimensions(this.dimensionsDTO.toDomain());
+        }
+        if (this.electronicsDTO != null) {
+            motorcycle.setElectronics(this.electronicsDTO.toDomain());
+        }
+        if (this.enginesDTO != null) {
+            motorcycle.setEngines(this.enginesDTO.toDomain());
+        }
+        if (this.framesDTO != null) {
+            motorcycle.setFrames(this.framesDTO.toDomain());
+        }
+        if (this.transmissionsDTO != null) {
+            motorcycle.setTransmissions(this.transmissionsDTO.toDomain());
+        }
+
+        return motorcycle;
     }
 }

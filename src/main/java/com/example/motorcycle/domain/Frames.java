@@ -1,5 +1,6 @@
 package com.example.motorcycle.domain;
 
+import com.example.motorcycle.dto.ElectronicsDTO;
 import com.example.motorcycle.dto.FramesDTO;
 import lombok.Data;
 
@@ -60,4 +61,5 @@ public class Frames {
         frames.setSteeringHeadAngle(dto.getSteeringHeadAngle());
         return frames;
     }
+
 }

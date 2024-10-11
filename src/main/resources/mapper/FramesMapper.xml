@@ -6,7 +6,7 @@
 <mapper namespace="com.example.motorcycle.mapper.FramesMapper">
 
         <!-- resultMap 정의 -->
-        <resultMap id="framesResultMap" type="com.example.motorcycle.domain.Frames">
+        <resultMap id="framesResultMap" type="com.example.motorcycle.dto.FramesDTO">
                 <id property="motorcycleID" column="motorcycleID" />
                 <result property="frame" column="frame" />
                 <result property="frontSuspension" column="frontSuspension" />
@@ -33,7 +33,7 @@
         </resultMap>
 
         <!-- 데이터 삽입 -->
-        <insert id="insertFramesData" parameterType="com.example.motorcycle.domain.Frames">
+        <insert id="insertFramesData" parameterType="com.example.motorcycle.dto.FramesDTO">
                 INSERT INTO Frames (motorcycleID, frame, frontSuspension, rearSuspension, frontWheelTravel, rearWheelTravel, frontBrakes, rearBrakes, absSystem, frontWheel, rearWheel, frontTyre, rearTyre, wheels, abs, absPro, rake, trail, frontRim, rearRim, castor, steeringAngle, steeringHeadAngle)
                 VALUES (#{motorcycleID}, #{frame}, #{frontSuspension}, #{rearSuspension}, #{frontWheelTravel}, #{rearWheelTravel}, #{frontBrakes}, #{rearBrakes}, #{absSystem}, #{frontWheel}, #{rearWheel}, #{frontTyre}, #{rearTyre}, #{wheels}, #{abs}, #{absPro}, #{rake}, #{trail}, #{frontRim}, #{rearRim}, #{castor}, #{steeringAngle}, #{steeringHeadAngle})
         </insert>
@@ -44,7 +44,7 @@
         </select>
 
         <!-- 데이터 업데이트 -->
-        <update id="updateFramesData" parameterType="com.example.motorcycle.domain.Frames">
+        <update id="updateFramesData" parameterType="com.example.motorcycle.dto.FramesDTO">
                 UPDATE Frames
                 SET frame = #{frame}, frontSuspension = #{frontSuspension}, rearSuspension = #{rearSuspension},
                     frontWheelTravel = #{frontWheelTravel}, rearWheelTravel = #{rearWheelTravel}, frontBrakes = #{frontBrakes},
