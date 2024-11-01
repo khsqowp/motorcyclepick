@@ -21,7 +21,7 @@
         </resultMap>
 
         <!-- 데이터 삽입 -->
-        <insert id="insertTransmissionsData" parameterType="com.example.motorcycle.dto.TransmissionsDTO">
+        <insert id="insertTransmissionsData" parameterType="com.example.motorcycle.dto.TransmissionsDTO" keyProperty="motorcycleID">
                 INSERT INTO Transmissions (motorcycleID, transmission_drive, transmission, final_drive, primary_drive_ratio, primary_ratio, gear_ratio, transmission_ratio, secondary_ratio, gear_ratios, clutch)
                 VALUES (#{motorcycleID}, #{transmission_drive}, #{transmission}, #{final_drive}, #{primary_drive_ratio}, #{primary_ratio}, #{gear_ratio}, #{transmission_ratio}, #{secondary_ratio}, #{gear_ratios}, #{clutch})
         </insert>

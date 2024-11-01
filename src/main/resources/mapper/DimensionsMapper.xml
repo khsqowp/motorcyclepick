@@ -20,7 +20,7 @@
         </resultMap>
 
         <!-- 데이터 삽입 -->
-        <insert id="insertDimensionsData" parameterType="com.example.motorcycle.dto.DimensionsDTO">
+        <insert id="insertDimensionsData" parameterType="com.example.motorcycle.dto.DimensionsDTO" keyProperty="motorcycleID">
                 INSERT INTO Dimensions (motorcycleID, dimensions, seatHeight, wheelbase, groundClearance, dryWeight, wetWeight, fuelCapacity, innerLegCurve, permittedTotalWeight)
                 VALUES (#{motorcycleID}, #{dimensions}, #{seatHeight}, #{wheelbase}, #{groundClearance}, #{dryWeight}, #{wetWeight}, #{fuelCapacity}, #{innerLegCurve}, #{permittedTotalWeight})
         </insert>

@@ -7,7 +7,7 @@
 <h1>Edit Motorcycle</h1>
 
 <!-- Form to edit a motorcycle -->
-<form th:action="@{/motorcycle/edit/{id}(id=${motorcycleDTO.motorcycleID})}" th:object="${motorcycleDTO}" method="post">
+<form th:object="${motorcycleForm}" method="post" th:action="@{/motorcycle/edit/{id}(id=${motorcycleForm.motorcycleID})}">
 
   <!-- MotorcycleDTO -->
   <h2>Motorcycle Details</h2>

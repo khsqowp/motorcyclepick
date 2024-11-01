@@ -1,7 +1,7 @@
 package com.example.motorcycle.dto;
 
-import com.example.motorcycle.domain.Electronics;
-import com.example.motorcycle.domain.Engines;
+import com.example.motorcycle.domain.ElectronicsDomain;
+import com.example.motorcycle.domain.EnginesDomain;
 import lombok.Data;
 
 @Data
@@ -23,9 +23,9 @@ public class EnginesDTO {
     private String emission;
     private String induction;
     
-    public Engines toDomain() {
+    public EnginesDomain toDomain() {
         // Motorcycle 객체를 MotorcycleDTO 객체로 변환
-        Engines engines = new Engines();
+        EnginesDomain engines = new EnginesDomain();
         engines.setEnginesID(this.getEnginesID());
         engines.setMotorcycleID(this.getMotorcycleID());
         engines.setEngine(this.getEngine());
@@ -43,5 +43,27 @@ public class EnginesDTO {
         engines.setInduction(this.getInduction());
         // 필요한 필드를 설정합니다.
         return engines;
+    }
+
+    public static EnginesDTO fromDomain(EnginesDomain engines) {
+        // Motorcycle 객체를 MotorcycleDTO 객체로 변환
+        EnginesDTO dto = new EnginesDTO();
+        dto.setEnginesID(engines.getEnginesID());
+        dto.setMotorcycleID(engines.getMotorcycleID());
+        dto.setEngine(engines.getEngine());
+        dto.setCapacity(engines.getCapacity());
+        dto.setBoreStroke(engines.getBoreStroke());
+        dto.setCompressionRatio(engines.getCompressionRatio());
+        dto.setCoolingSystem(engines.getCoolingSystem());
+        dto.setLubrication(engines.getLubrication());
+        dto.setMaxPower(engines.getMaxPower());
+        dto.setMaxTorque(engines.getMaxTorque());
+        dto.setFuelSystem(engines.getFuelSystem());
+        dto.setExhaust(engines.getExhaust());
+        dto.setMixtureControl(engines.getMixtureControl());
+        dto.setEmission(engines.getEmission());
+        dto.setInduction(engines.getInduction());
+        // 필요한 필드를 설정합니다.
+        return dto;
     }
 }

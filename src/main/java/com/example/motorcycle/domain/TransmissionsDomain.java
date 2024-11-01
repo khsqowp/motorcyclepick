@@ -1,11 +1,10 @@
 package com.example.motorcycle.domain;
 
-import com.example.motorcycle.dto.MotorcycleDTO;
 import com.example.motorcycle.dto.TransmissionsDTO;
 import lombok.Data;
 
 @Data
-public class Transmissions {
+public class TransmissionsDomain {
 
     private Long transmissionsID;
     private Long motorcycleID;
@@ -21,8 +20,8 @@ public class Transmissions {
     private String gearRatios;
     private String clutch;
 
-    public static Transmissions fromDTO(TransmissionsDTO dto) {
-        Transmissions transmissions = new Transmissions();
+    public static TransmissionsDomain fromDTO(TransmissionsDTO dto) {
+        TransmissionsDomain transmissions = new TransmissionsDomain();
         transmissions.setTransmissionsID(dto.getTransmissionsID());
         transmissions.setMotorcycleID(dto.getMotorcycleID());
         transmissions.setTransmissionDrive(dto.getTransmissionDrive());

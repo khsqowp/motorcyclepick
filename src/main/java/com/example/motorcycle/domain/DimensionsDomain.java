@@ -4,7 +4,7 @@ import com.example.motorcycle.dto.DimensionsDTO;
 import lombok.Data;
 
 @Data
-public class Dimensions {
+public class DimensionsDomain {
 
     private Long dimensionsID;
     private Long motorcycleID;
@@ -19,8 +19,8 @@ public class Dimensions {
     private String innerLegCurve;
     private String permittedTotalWeight;
 
-    public static Dimensions fromDTO(DimensionsDTO dto) {
-        Dimensions dimensions = new Dimensions();
+    public static DimensionsDomain fromDTO(DimensionsDTO dto) {
+        DimensionsDomain dimensions = new DimensionsDomain();
         dimensions.setDimensionsID(dto.getDimensionsID());
         dimensions.setMotorcycleID(dto.getMotorcycleID());
         dimensions.setDimensions(dto.getDimensions());

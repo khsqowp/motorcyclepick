@@ -1,6 +1,6 @@
 package com.example.motorcycle.dto;
 
-import com.example.motorcycle.domain.Frames;
+import com.example.motorcycle.domain.FramesDomain;
 import lombok.Data;
 
 @Data
@@ -30,8 +30,8 @@ public class FramesDTO {
     private String steeringAngle;
     private String steeringHeadAngle;
 
-    public Frames toDomain() {
-        Frames frames = new Frames();
+    public FramesDomain toDomain() {
+        FramesDomain frames = new FramesDomain();
         frames.setFramesID(this.getFramesID());
         frames.setMotorcycleID(this.getMotorcycleID());
         frames.setFrame(this.getFrame());
@@ -57,5 +57,34 @@ public class FramesDTO {
         frames.setSteeringAngle(this.getSteeringAngle());
         frames.setSteeringHeadAngle(this.getSteeringHeadAngle());
         return frames;
+    }
+
+    public static FramesDTO fromDomain(FramesDomain frames) {
+        FramesDTO dto = new FramesDTO();
+        dto.setFramesID(frames.getFramesID());
+        dto.setMotorcycleID(frames.getMotorcycleID());
+        dto.setFrame(frames.getFrame());
+        dto.setFrontSuspension(frames.getFrontSuspension());
+        dto.setRearSuspension(frames.getRearSuspension());
+        dto.setFrontWheelTravel(frames.getFrontWheelTravel());
+        dto.setRearWheelTravel(frames.getRearWheelTravel());
+        dto.setFrontBrakes(frames.getFrontBrakes());
+        dto.setRearBrakes(frames.getRearBrakes());
+        dto.setAbsSystem(frames.getAbsSystem());
+        dto.setFrontWheel(frames.getFrontWheel());
+        dto.setRearWheel(frames.getRearWheel());
+        dto.setFrontTyre(frames.getFrontTyre());
+        dto.setRearTyre(frames.getRearTyre());
+        dto.setWheels(frames.getWheels());
+        dto.setAbs(frames.getAbs());
+        dto.setAbsPro(frames.getAbsPro());
+        dto.setRake(frames.getRake());
+        dto.setTrail(frames.getTrail());
+        dto.setFrontRim(frames.getFrontRim());
+        dto.setRearRim(frames.getRearRim());
+        dto.setCastor(frames.getCastor());
+        dto.setSteeringAngle(frames.getSteeringAngle());
+        dto.setSteeringHeadAngle(frames.getSteeringHeadAngle());
+        return dto;
     }
 }

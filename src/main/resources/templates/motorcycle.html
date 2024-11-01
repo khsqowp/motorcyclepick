@@ -2,7 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Motorcycle Main</title>
-
 </head>
 <body>
 <h1>Motorcycle Management</h1>
@@ -12,6 +11,16 @@
 
 <button onclick="location.href='/motorcycle/list'">Motorcycles 목록 조회</button>
 <button onclick="location.href='/motorcycle/new'">Motorcycle 데이터 추가</button>
+
+<!-- View Motorcycle Section -->
+<h2>View Motorcycle</h2>
+<form th:action="@{/motorcycle/singleSearchID}" method="get">
+    <label for="viewId">입력된 ID 조회:</label>
+    <input type="text" id="viewId" name="id" />
+    <button type="submit">Motorcycle 조회</button>
+</form>
+
+
 
 <!-- Edit Motorcycle Section -->
 <h2>Edit Motorcycle</h2>

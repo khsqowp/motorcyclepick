@@ -20,7 +20,7 @@
         </resultMap>
 
         <!-- 데이터 삽입 -->
-        <insert id="insertElectronicsData" parameterType="com.example.motorcycle.dto.ElectronicsDTO">
+        <insert id="insertElectronicsData" parameterType="com.example.motorcycle.dto.ElectronicsDTO" keyProperty="motorcycleID">
                 INSERT INTO Electronics (motorcycleID, engineManagement, emissionControl, engineControl, alternator, battery, headlight, ignition, starting, tractionControl)
                 VALUES (#{motorcycleID}, #{engineManagement}, #{emissionControl}, #{engineControl}, #{alternator}, #{battery}, #{headlight}, #{ignition}, #{starting}, #{tractionControl})
         </insert>

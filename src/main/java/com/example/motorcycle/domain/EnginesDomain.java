@@ -1,11 +1,10 @@
 package com.example.motorcycle.domain;
 
-import com.example.motorcycle.dto.ElectronicsDTO;
 import com.example.motorcycle.dto.EnginesDTO;
 import lombok.Data;
 
 @Data
-public class Engines {
+public class EnginesDomain {
 
     private Long enginesID;
     private Long motorcycleID;
@@ -25,8 +24,8 @@ public class Engines {
     private String emission;
     private String induction;
 
-    public static Engines fromDTO(EnginesDTO dto) {
-        Engines engines = new Engines();
+    public static EnginesDomain fromDTO(EnginesDTO dto) {
+        EnginesDomain engines = new EnginesDomain();
         engines.setEnginesID(dto.getEnginesID());
         engines.setMotorcycleID(dto.getMotorcycleID());
         engines.setEngine(dto.getEngine());

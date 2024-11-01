@@ -1,11 +1,10 @@
 package com.example.motorcycle.domain;
 
-import com.example.motorcycle.dto.ElectronicsDTO;
 import com.example.motorcycle.dto.FramesDTO;
 import lombok.Data;
 
 @Data
-public class Frames {
+public class FramesDomain {
 
     private Long framesID;
     private Long motorcycleID;
@@ -33,8 +32,8 @@ public class Frames {
     private String steeringAngle;
     private String steeringHeadAngle;
 
-    public static Frames fromDTO(FramesDTO dto) {
-        Frames frames = new Frames();
+    public static FramesDomain fromDTO(FramesDTO dto) {
+        FramesDomain frames = new FramesDomain();
         frames.setFramesID(dto.getFramesID());
         frames.setMotorcycleID(dto.getMotorcycleID());
         frames.setFrame(dto.getFrame());

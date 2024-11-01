@@ -27,13 +27,14 @@ public class MotorcycleForm {
     private Integer scooter;
     private Integer classic;
 
-    private Dimensions dimensions;
-    private Electronics electronics;
-    private Engines engines;
-    private Frames frames;
-    private Transmissions transmissions;
+    private DimensionsForm dimensionsForm;
+    private ElectronicsForm electronicsForm;
+    private EnginesForm enginesForm;
+    private FramesForm framesForm;
+    private TransmissionsForm transmissionsForm;
 
-    // toDTO 메서드: 도메인 객체에서 DTO로 변환
+
+    // toDTO 메서드: Form 데이터를 DTO로 변환
     public MotorcycleDTO toDTO() {
         MotorcycleDTO dto = new MotorcycleDTO();
         dto.setMotorcycleID(this.getMotorcycleID());
@@ -55,5 +56,29 @@ public class MotorcycleForm {
         dto.setScooter(this.getScooter());
         dto.setClassic(this.getClassic());
         return dto;
+    }
+
+    // fromDTO 메서드: DTO 데이터를 Form으로 변환
+    public static MotorcycleForm fromDTO(MotorcycleDTO dto) {
+        MotorcycleForm form = new MotorcycleForm();
+        form.setMotorcycleID(dto.getMotorcycleID());
+        form.setBrand(dto.getBrand());
+        form.setModel(dto.getModel());
+        form.setYears(dto.getYears());
+        form.setProduction(dto.getProduction());
+        form.setReplica(dto.getReplica());
+        form.setCruiser(dto.getCruiser());
+        form.setTourer(dto.getTourer());
+        form.setAdventure(dto.getAdventure());
+        form.setMultiPurpose(dto.getMultiPurpose());
+        form.setNaked(dto.getNaked());
+        form.setCafeRacer(dto.getCafeRacer());
+        form.setScrambler(dto.getScrambler());
+        form.setOffRoad(dto.getOffRoad());
+        form.setMotard(dto.getMotard());
+        form.setTrial(dto.getTrial());
+        form.setScooter(dto.getScooter());
+        form.setClassic(dto.getClassic());
+        return form;
     }
 }

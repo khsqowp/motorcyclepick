@@ -6,7 +6,8 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class Motorcycle {
+
+public class MotorcycleDomain {
     private Long motorcycleID;
 
     private String brand;
@@ -28,14 +29,14 @@ public class Motorcycle {
     private Integer scooter;
     private Integer classic;
 
-    private Dimensions dimensions;
-    private Electronics electronics;
-    private Engines engines;
-    private Frames frames;
-    private Transmissions transmissions;
+    private DimensionsDomain dimensionsDomain;
+    private ElectronicsDomain electronicsDomain;
+    private EnginesDomain enginesDomain;
+    private FramesDomain framesDomain;
+    private TransmissionsDomain transmissionsDomain;
 
-    public static Motorcycle fromDTO(MotorcycleDTO dto) {
-        Motorcycle motorcycle = new Motorcycle();
+    public static MotorcycleDomain fromDTO(MotorcycleDTO dto) {
+        MotorcycleDomain motorcycle = new MotorcycleDomain();
         motorcycle.setMotorcycleID(dto.getMotorcycleID());
         motorcycle.setBrand(dto.getBrand());
         motorcycle.setModel(dto.getModel());
@@ -54,6 +55,13 @@ public class Motorcycle {
         motorcycle.setTrial(dto.getTrial());
         motorcycle.setScooter(dto.getScooter());
         motorcycle.setClassic(dto.getClassic());
+
+        motorcycle.setDimensionsDomain(DimensionsDomain.fromDTO(dto.getDimensionsDTO()));
+        motorcycle.setElectronicsDomain(ElectronicsDomain.fromDTO(dto.getElectronicsDTO()));
+        motorcycle.setEnginesDomain(EnginesDomain.fromDTO(dto.getEnginesDTO()));
+        motorcycle.setFramesDomain(FramesDomain.fromDTO(dto.getFramesDTO()));
+        motorcycle.setTransmissionsDomain(TransmissionsDomain.fromDTO(dto.getTransmissionsDTO()));
+
         return motorcycle;
     }
 

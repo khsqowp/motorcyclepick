@@ -1,6 +1,6 @@
 package com.example.motorcycle.dto;
 
-import com.example.motorcycle.domain.Dimensions;
+import com.example.motorcycle.domain.DimensionsDomain;
 import lombok.Data;
 
 @Data
@@ -18,9 +18,9 @@ public class DimensionsDTO {
     private String innerLegCurve;  // inner_leg_curve -> innerLegCurve
     private String permittedTotalWeight;  // permitted_total_weight -> permittedTotalWeight
 
-    public Dimensions toDomain() {
+    public DimensionsDomain toDomain() {
         // Motorcycle 객체를 MotorcycleDTO 객체로 변환
-        Dimensions dimensions1 = new Dimensions();
+        DimensionsDomain dimensions1 = new DimensionsDomain();
         dimensions1.setDimensionsID(this.getDimensionsID());
         dimensions1.setMotorcycleID(this.getMotorcycleID());
         dimensions1.setDimensions(this.getDimensions());
@@ -33,5 +33,22 @@ public class DimensionsDTO {
         dimensions1.setPermittedTotalWeight(this.getPermittedTotalWeight());
         // 필요한 필드를 설정합니다.
         return dimensions1;
+    }
+
+    public static DimensionsDTO fromDomain(DimensionsDomain dimensions) {
+        // Motorcycle 객체를 MotorcycleDTO 객체로 변환
+        DimensionsDTO dto = new DimensionsDTO();
+        dto.setDimensionsID(dimensions.getDimensionsID());
+        dto.setMotorcycleID(dimensions.getMotorcycleID());
+        dto.setDimensions(dimensions.getDimensions());
+        dto.setSeatHeight(dimensions.getSeatHeight());
+        dto.setWheelbase(dimensions.getWheelbase());
+        dto.setGroundClearance(dimensions.getGroundClearance());
+        dto.setDryWeight(dimensions.getDryWeight());
+        dto.setFuelCapacity(dimensions.getFuelCapacity());
+        dto.setInnerLegCurve(dimensions.getInnerLegCurve());
+        dto.setPermittedTotalWeight(dimensions.getPermittedTotalWeight());
+        // 필요한 필드를 설정합니다.
+        return dto;
     }
 }

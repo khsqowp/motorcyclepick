@@ -25,7 +25,7 @@
         </resultMap>
 
         <!-- 데이터 삽입 -->
-        <insert id="insertEnginesData" parameterType="com.example.motorcycle.dto.EnginesDTO">
+        <insert id="insertEnginesData" parameterType="com.example.motorcycle.dto.EnginesDTO" keyProperty="motorcycleID">
                 INSERT INTO Engines (motorcycleID, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication, max_power, max_torque, fuel_system, exhaust, engine_oil, mixture_control, emission, induction)
                 VALUES (#{motorcycleID}, #{engine}, #{capacity}, #{boreStroke}, #{compressionRatio}, #{coolingSystem}, #{lubrication}, #{maxPower}, #{maxTorque}, #{fuelSystem}, #{exhaust}, #{engineOil}, #{mixtureControl}, #{emission}, #{induction})
         </insert>

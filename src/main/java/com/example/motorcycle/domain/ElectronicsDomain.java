@@ -4,7 +4,7 @@ import com.example.motorcycle.dto.ElectronicsDTO;
 import lombok.Data;
 
 @Data
-public class Electronics {
+public class ElectronicsDomain {
 
     private Long electronicsID;
     private Long motorcycleID;
@@ -19,8 +19,8 @@ public class Electronics {
     private String starting;
     private String tractionControl;
 
-    public static Electronics fromDTO(ElectronicsDTO dto) {
-        Electronics electronics = new Electronics();
+    public static ElectronicsDomain fromDTO(ElectronicsDTO dto) {
+        ElectronicsDomain electronics = new ElectronicsDomain();
         electronics.setElectronicsID(dto.getElectronicsID());
         electronics.setMotorcycleID(dto.getMotorcycleID());
         electronics.setEngineManagement(dto.getEngineManagement());

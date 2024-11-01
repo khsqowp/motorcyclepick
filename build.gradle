@@ -43,6 +43,8 @@ dependencies {
 
 	// ===== 테스트 관련 의존성 =====
 	testImplementation 'org.springframework.boot:spring-boot-starter-test' // 스프링 부트 테스트 지원 (JUnit, MockMVC 등 포함)
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 
 	// ===== 외부 API 연동 의존성 =====
 	implementation 'com.squareup.okhttp3:okhttp' // HTTP 클라이언트 라이브러리 OkHttp를 통한 외부 API 연동

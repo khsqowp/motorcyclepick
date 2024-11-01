@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Motorcycle Detail View</title>
+</head>
+<body>
+<h1 th:text="${motorcycleDTO.model} + ' 상세 정보'">Motorcycle Model Name</h1>
+
+<!-- Motorcycle 기본 정보 -->
+<h2>Motorcycle 정보</h2>
+<p>motorcycleID : <span th:text="${motorcycleDTO.motorcycleID}">ID</span></p>
+<p>brand : <span th:text="${motorcycleDTO.brand}">Brand</span></p>
+<p>model : <span th:text="${motorcycleDTO.model}">Model</span></p>
+<p>years : <span th:text="${motorcycleDTO.years}">Year</span></p>
+<p>production : <span th:text="${motorcycleDTO.production}">Production</span></p>
+<p>replica : <span th:text="${motorcycleDTO.replica}">Replica</span></p>
+<p>cruiser : <span th:text="${motorcycleDTO.cruiser}">Cruiser</span></p>
+<p>tourer : <span th:text="${motorcycleDTO.tourer}">Tourer</span></p>
+<p>adventure : <span th:text="${motorcycleDTO.adventure}">Adventure</span></p>
+<p>multiPurpose : <span th:text="${motorcycleDTO.multiPurpose}">MultiPurpose</span></p>
+<p>naked : <span th:text="${motorcycleDTO.naked}">Naked</span></p>
+<p>cafeRacer : <span th:text="${motorcycleDTO.cafeRacer}">Cafe Racer</span></p>
+<p>scrambler : <span th:text="${motorcycleDTO.scrambler}">Scrambler</span></p>
+<p>offRoad : <span th:text="${motorcycleDTO.offRoad}">Off Road</span></p>
+<p>motard : <span th:text="${motorcycleDTO.motard}">Motard</span></p>
+<p>trial : <span th:text="${motorcycleDTO.trial}">Trial</span></p>
+<p>scooter : <span th:text="${motorcycleDTO.scooter}">Scooter</span></p>
+<p>classic : <span th:text="${motorcycleDTO.classic}">Classic</span></p>
+
+<!-- Dimensions 정보 -->
+<h2>Dimensions 정보</h2>
+<p>dimensionsID : <span th:text="${dimensionsDTO.dimensionsID}">ID</span></p>
+<p>motorcycleID : <span th:text="${dimensionsForm.motorcycleID}">Motorcycle ID</span></p>
+<p>dimensions : <span th:text="${dimensionsForm.dimensions}">Dimensions</span></p>
+<p>seatHeight : <span th:text="${dimensionsForm.seatHeight}">Seat Height</span></p>
+<p>wheelbase : <span th:text="${dimensionsForm.wheelbase}">Wheelbase</span></p>
+<p>groundClearance : <span th:text="${dimensionsForm.groundClearance}">Ground Clearance</span></p>
+<p>dryWeight : <span th:text="${dimensionsForm.dryWeight}">Dry Weight</span></p>
+<p>wetWeight : <span th:text="${dimensionsForm.wetWeight}">Wet Weight</span></p>
+<p>fuelCapacity : <span th:text="${dimensionsForm.fuelCapacity}">Fuel Capacity</span></p>
+<p>innerLegCurve : <span th:text="${dimensionsForm.innerLegCurve}">Inner Leg Curve</span></p>
+<p>permittedTotalWeight : <span th:text="${dimensionsForm.permittedTotalWeight}">Permitted Total Weight</span></p>
+
+<!-- Electronics 정보 -->
+<h2>Electronics 정보</h2>
+<p>engineManagement : <span th:text="${electronicsForm.engineManagement}">Engine Management</span></p>
+<p>emissionControl : <span th:text="${electronicsForm.emissionControl}">Emission Control</span></p>
+<p>engineControl : <span th:text="${electronicsForm.engineControl}">Engine Control</span></p>
+<p>alternator : <span th:text="${electronicsForm.alternator}">Alternator</span></p>
+<p>battery : <span th:text="${electronicsForm.battery}">Battery</span></p>
+<p>headlight : <span th:text="${electronicsForm.headlight}">Headlight</span></p>
+<p>ignition : <span th:text="${electronicsForm.ignition}">Ignition</span></p>
+<p>starting : <span th:text="${electronicsForm.starting}">Starting</span></p>
+<p>tractionControl : <span th:text="${electronicsForm.tractionControl}">Traction Control</span></p>
+
+<!-- Engines 정보 -->
+<h2>Engines 정보</h2>
+<p>enginesID : <span th:text="${enginesForm.enginesID}">ID</span></p>
+<p>motorcycleID : <span th:text="${enginesForm.motorcycleID}">Motorcycle ID</span></p>
+<p>engine : <span th:text="${enginesForm.engine}">Engine</span></p>
+<p>capacity : <span th:text="${enginesForm.capacity}">Capacity</span></p>
+<p>boreStroke : <span th:text="${enginesForm.boreStroke}">Bore Stroke</span></p>
+<p>compressionRatio : <span th:text="${enginesForm.compressionRatio}">Compression Ratio</span></p>
+<p>coolingSystem : <span th:text="${enginesForm.coolingSystem}">Cooling System</span></p>
+<p>lubrication : <span th:text="${enginesForm.lubrication}">Lubrication</span></p>
+<p>maxPower : <span th:text="${enginesForm.maxPower}">Max Power</span></p>
+<p>maxTorque : <span th:text="${enginesForm.maxTorque}">Max Torque</span></p>
+<p>fuelSystem : <span th:text="${enginesForm.fuelSystem}">Fuel System</span></p>
+<p>exhaust : <span th:text="${enginesForm.exhaust}">Exhaust</span></p>
+<p>engineOil : <span th:text="${enginesForm.engineOil}">Engine Oil</span></p>
+<p>mixtureControl : <span th:text="${enginesForm.mixtureControl}">Mixture Control</span></p>
+<p>emission : <span th:text="${enginesForm.emission}">Emission</span></p>
+<p>induction : <span th:text="${enginesForm.induction}">Induction</span></p>
+
+<!-- Frames 정보 -->
+<h2>Frames 정보</h2>
+<p>framesID : <span th:text="${framesForm.framesID}">ID</span></p>
+<p>motorcycleID : <span th:text="${frames.motorcycleID}">Motorcycle ID</span></p>
+<p>frame : <span th:text="${frames.frame}">Frame</span></p>
+<p>frontSuspension : <span th:text="${frames.frontSuspension}">Front Suspension</span></p>
+<p>rearSuspension : <span th:text="${frames.rearSuspension}">Rear Suspension</span></p>
+<p>frontWheelTravel : <span th:text="${frames.frontWheelTravel}">Front Wheel Travel</span></p>
+<p>rearWheelTravel : <span th:text="${frames.rearWheelTravel}">Rear Wheel Travel</span></p>
+<p>frontBrakes : <span th:text="${frames.frontBrakes}">Front Brakes</span></p>
+<p>rearBrakes : <span th:text="${frames.rearBrakes}">Rear Brakes</span></p>
+<p>absSystem : <span th:text="${frames.absSystem}">ABS System</span></p>
+<p>frontWheel : <span th:text="${frames.frontWheel}">Front Wheel</span></p>
+<p>rearWheel : <span th:text="${frames.rearWheel}">Rear Wheel</span></p>
+<p>frontTyre : <span th:text="${frames.frontTyre}">Front Tyre</span></p>
+<p>rearTyre : <span th:text="${frames.rearTyre}">Rear Tyre</span></p>
+<p>wheels : <span th:text="${frames.wheels}">Wheels</span></p>
+<p>abs : <span th:text="${frames.abs}">ABS</span></p>
+<p>absPro : <span th:text="${frames.absPro}">ABS Pro</span></p>
+<p>rake : <span th:text="${frames.rake}">Rake</span></p>
+<p>trail : <span th:text="${frames.trail}">Trail</span></p>
+<p>frontRim : <span th:text="${frames.frontRim}">Front Rim</span></p>
+<p>rearRim : <span th:text="${frames.rearRim}">Rear Rim</span></p>
+<p>castor : <span th:text="${frames.castor}">Castor</span></p>
+<p>steeringAngle : <span th:text="${frames.steeringAngle}">Steering Angle</span></p>
+<p>steeringHeadAngle : <span th:text="${frames.steeringHeadAngle}">Steering Head Angle</span></p>
+
+<!-- Transmissions 정보 -->
+<h2>Transmissions 정보</h2>
+<p>transmissionsID : <span th:text="${transmissions.transmissionsID}">ID</span></p>
+<p>motorcycleID : <span th:text="${transmissions.motorcycleID}">Motorcycle ID</span></p>
+<p>transmissionDrive : <span th:text="${transmissions.transmissionDrive}">Transmission Drive</span></p>
+<p>transmission : <span th:text="${transmissions.transmission}">Transmission</span></p>
+<p>finalDrive : <span th:text="${transmissions.finalDrive}">Final Drive</span></p>
+<p>primaryDriveRatio : <span th:text="${transmissions.primaryDriveRatio}">Primary Drive Ratio</span></p>
+<p>primaryRatio : <span th:text="${transmissions.primaryRatio}">Primary Ratio</span></p>
+<p>gearRatio : <span th:text="${transmissions.gearRatio}">Gear Ratio</span></p>
+<p>transmissionRatio : <span th:text="${transmissions.transmissionRatio}">Transmission Ratio</span></p>
+<p>secondaryRatio : <span th:text="${transmissions.secondaryRatio}">Secondary Ratio</span></p>
+<p>gearRatios : <span th:text="${transmissions.gearRatios}">Gear Ratios</span></p>
+<p>clutch : <span th:text="${transmissions.clutch}">Clutch</span></p>
+
+</body>
+</html>

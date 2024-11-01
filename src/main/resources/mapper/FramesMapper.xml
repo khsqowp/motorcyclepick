@@ -33,7 +33,7 @@
         </resultMap>
 
         <!-- 데이터 삽입 -->
-        <insert id="insertFramesData" parameterType="com.example.motorcycle.dto.FramesDTO">
+        <insert id="insertFramesData" parameterType="com.example.motorcycle.dto.FramesDTO" keyProperty="motorcycleID">
                 INSERT INTO Frames (motorcycleID, frame, frontSuspension, rearSuspension, frontWheelTravel, rearWheelTravel, frontBrakes, rearBrakes, absSystem, frontWheel, rearWheel, frontTyre, rearTyre, wheels, abs, absPro, rake, trail, frontRim, rearRim, castor, steeringAngle, steeringHeadAngle)
                 VALUES (#{motorcycleID}, #{frame}, #{frontSuspension}, #{rearSuspension}, #{frontWheelTravel}, #{rearWheelTravel}, #{frontBrakes}, #{rearBrakes}, #{absSystem}, #{frontWheel}, #{rearWheel}, #{frontTyre}, #{rearTyre}, #{wheels}, #{abs}, #{absPro}, #{rake}, #{trail}, #{frontRim}, #{rearRim}, #{castor}, #{steeringAngle}, #{steeringHeadAngle})
         </insert>

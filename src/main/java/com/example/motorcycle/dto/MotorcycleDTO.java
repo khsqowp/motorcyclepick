@@ -32,7 +32,7 @@ public class MotorcycleDTO {
 
 
     // fromDomain 메서드 추가
-    public static MotorcycleDTO fromDomain(Motorcycle motorcycle) {
+    public static MotorcycleDTO fromDomain(MotorcycleDomain motorcycle) {
         // Motorcycle 객체를 MotorcycleDTO 객체로 변환
         MotorcycleDTO dto = new MotorcycleDTO();
         dto.setMotorcycleID(motorcycle.getMotorcycleID());
@@ -55,30 +55,30 @@ public class MotorcycleDTO {
         dto.setClassic(motorcycle.getClassic());
 
         // 각 서브 엔티티를 해당 DTO로 변환하여 설정
-        if (motorcycle.getDimensions() != null) {
-            dto.setDimensionsDTO(DimensionsDTO.fromDomain(motorcycle.getDimensions()));
+        if (motorcycle.getDimensionsDomain() != null) {
+            dto.setDimensionsDTO(DimensionsDTO.fromDomain(motorcycle.getDimensionsDomain()));
         }
-        if (motorcycle.getElectronics() != null) {
-            dto.setElectronicsDTO(ElectronicsDTO.fromDomain(motorcycle.getElectronics()));
+        if (motorcycle.getElectronicsDomain() != null) {
+            dto.setElectronicsDTO(ElectronicsDTO.fromDomain(motorcycle.getElectronicsDomain()));
         }
-        if (motorcycle.getEngines() != null) {
-            dto.setEnginesDTO(EnginesDTO.fromDomain(motorcycle.getEngines()));
+        if (motorcycle.getEnginesDomain() != null) {
+            dto.setEnginesDTO(EnginesDTO.fromDomain(motorcycle.getEnginesDomain()));
         }
-        if (motorcycle.getFrames() != null) {
-            dto.setFramesDTO(FramesDTO.fromDomain(motorcycle.getFrames()));
+        if (motorcycle.getFramesDomain() != null) {
+            dto.setFramesDTO(FramesDTO.fromDomain(motorcycle.getFramesDomain()));
         }
 //        if (motorcycle.getMotorcycleSpecs() != null) {
 //            dto.setMotorcycleSpecsDTO(MotorcycleSpecsDTO.fromDomain(motorcycle.getMotorcycleSpecs()));
 //        }
-        if (motorcycle.getTransmissions() != null) {
-            dto.setTransmissionsDTO(TransmissionsDTO.fromDomain(motorcycle.getTransmissions()));
+        if (motorcycle.getTransmissionsDomain() != null) {
+            dto.setTransmissionsDTO(TransmissionsDTO.fromDomain(motorcycle.getTransmissionsDomain()));
         }
 
         return dto;
     }
 
-    public Motorcycle toDomain() {
-        Motorcycle motorcycle = new Motorcycle();
+    public MotorcycleDomain toDomain() {
+        MotorcycleDomain motorcycle = new MotorcycleDomain();
         motorcycle.setMotorcycleID(this.motorcycleID);
         motorcycle.setBrand(this.brand);
         motorcycle.setModel(this.model);
@@ -100,19 +100,19 @@ public class MotorcycleDTO {
 
         // 서브 엔티티를 각 도메인 객체로 변환
         if (this.dimensionsDTO != null) {
-            motorcycle.setDimensions(this.dimensionsDTO.toDomain());
+            motorcycle.setDimensionsDomain(this.dimensionsDTO.toDomain());
         }
         if (this.electronicsDTO != null) {
-            motorcycle.setElectronics(this.electronicsDTO.toDomain());
+            motorcycle.setElectronicsDomain(this.electronicsDTO.toDomain());
         }
         if (this.enginesDTO != null) {
-            motorcycle.setEngines(this.enginesDTO.toDomain());
+            motorcycle.setEnginesDomain(this.enginesDTO.toDomain());
         }
         if (this.framesDTO != null) {
-            motorcycle.setFrames(this.framesDTO.toDomain());
+            motorcycle.setFramesDomain(this.framesDTO.toDomain());
         }
         if (this.transmissionsDTO != null) {
-            motorcycle.setTransmissions(this.transmissionsDTO.toDomain());
+            motorcycle.setTransmissionsDomain(this.transmissionsDTO.toDomain());
         }
 
         return motorcycle;

@@ -27,37 +27,97 @@
                 <result property="classic" column="classic" />
 
                 <!-- Dimensions 연관 데이터 로드 -->
-                <association property="dimensions" column="motorcycleID" javaType="com.example.motorcycle.domain.Dimensions"
+                <association property="dimensions" column="motorcycleID" javaType="com.example.motorcycle.domain.DimensionsDomain"
                              select="com.example.motorcycle.mapper.DimensionsMapper.findByMotorcycleId" />
 
                 <!-- Frames 연관 데이터 로드 -->
-                <association property="frames" column="motorcycleID" javaType="com.example.motorcycle.domain.Frames"
+                <association property="frames" column="motorcycleID" javaType="com.example.motorcycle.domain.FramesDomain"
                              select="com.example.motorcycle.mapper.FramesMapper.findByMotorcycleId" />
 
                 <!-- Electronics 등 추가 데이터 로드 -->
-                <association property="electronics" column="motorcycleID" javaType="com.example.motorcycle.domain.Electronics"
+                <association property="electronics" column="motorcycleID" javaType="com.example.motorcycle.domain.ElectronicsDomain"
                              select="com.example.motorcycle.mapper.ElectronicsMapper.findByMotorcycleId" />
 
                 <!-- Transmissions 등 추가 데이터 로드 -->
-                <association property="transmissions" column="motorcycleID" javaType="com.example.motorcycle.domain.Transmissions"
+                <association property="transmissions" column="motorcycleID" javaType="com.example.motorcycle.domain.TransmissionsDomain"
                              select="com.example.motorcycle.mapper.TransmissionsMapper.findByMotorcycleId" />
 
                 <!-- Engines 등 추가 데이터 로드 -->
-                <association property="engines" column="motorcycleID" javaType="com.example.motorcycle.domain.Engines"
+                <association property="engines" column="motorcycleID" javaType="com.example.motorcycle.domain.EnginesDomain"
                              select="com.example.motorcycle.mapper.EnginesMapper.findByMotorcycleId" />
 
         </resultMap>
+
+        <!--단일 데이터 조회 -->
+        <select id="findByMotorcycleId" parameterType="long" resultMap="motorcycleResultMap">
+                SELECT m.*,
+                       -- Dimensions 필드들
+                       d.dimensions,d.seatHeight,d.wheelbase,d.groundClearance,d.dryWeight,d.wetWeight, d.fuelCapacity,d.innerLegCurve,d.permittedTotalWeight,
+                       -- Electronics 필드들
+                       e.engineManagement,e.emissionControl,e.engineControl,e.alternator,e.battery,e.headlight,e.ignition  AS engineIgnition,e.starting,e.tractionControl,
+                       -- Engines 필드들
+                       en.engine,en.capacity,en.bore_stroke,en.compression_ratio,en.cooling_system,en.lubrication,en.max_power,en.max_torque,en.fuel_system,en.exhaust,en.engine_oil,en.mixture_control,en.emission, en.induction,
+                       -- Frames 필드들
+                       f.frame,f.frontSuspension,f.rearSuspension,f.frontWheelTravel,f.rearWheelTravel,f.frontBrakes,f.rearBrakes,f.absSystem,f.frontWheel,f.rearWheel,f.frontTyre,f.rearTyre,f.wheels,f.abs, f.absPro,f.rake,f.trail,f.frontRim,f.rearRim,f.castor,f.steeringAngle,f.steeringHeadAngle,
+                       -- Transmissions 필드들
+                       t.transmission_drive,t.transmission,t.final_drive,t.primary_drive_ratio,t.primary_ratio,t.gear_ratio,t.transmission_ratio,t.secondary_ratio,t.gear_ratios,t.clutch
+                FROM Motorcycle m
+                             LEFT JOIN Electronics e ON m.motorcycleID = e.motorcycleID
+                             LEFT JOIN Dimensions d ON m.motorcycleID = d.motorcycleID
+                             LEFT JOIN Frames f ON m.motorcycleID = f.motorcycleID
+                             LEFT JOIN Transmissions t ON m.motorcycleID = t.motorcycleID
+                             LEFT JOIN Engines en ON m.motorcycleID = en.motorcycleID
+                WHERE m.motorcycleID = #{motorcycleID}
+        </select>
+
+        <!--전체 데이터 조회 -->
+        <select id = "findAll" parameterType="com.example.motorcycle.dto.MotorcycleDTO">
+                SELECT m.*,
+                       -- Dimensions 필드들
+                       d.dimensions,d.seatHeight,d.wheelbase,d.groundClearance,d.dryWeight,d.wetWeight,d.fuelCapacity,d.innerLegCurve,d.permittedTotalWeight,
+                       -- Electronics 필드들
+                       e.engineManagement,e.emissionControl,e.engineControl,e.alternator,e.battery,e.headlight,e.ignition  AS engineIgnition,e.starting,e.tractionControl,
+                       -- Engines 필드들
+                       en.engine,en.capacity,en.bore_stroke,en.compression_ratio,en.cooling_system,en.lubrication,en.max_power,en.max_torque,en.fuel_system,en.exhaust,en.engine_oil,en.mixture_control,en.emission,en.induction,
+                       -- Frames 필드들
+                       f.frame,f.frontSuspension,f.rearSuspension,f.frontWheelTravel,f.rearWheelTravel,f.frontBrakes,f.rearBrakes,f.absSystem,f.frontWheel,f.rearWheel,f.frontTyre,f.rearTyre,f.wheels,f.abs,f.absPro,f.rake,f.trail,f.frontRim,f.rearRim,f.castor,f.steeringAngle,f.steeringHeadAngle,
+                       -- Transmissions 필드들
+                       t.transmission_drive,t.transmission,t.final_drive,t.primary_drive_ratio,t.primary_ratio,t.gear_ratio,t.transmission_ratio,t.secondary_ratio,t.gear_ratios,t.clutch
+                FROM Motorcycle m
+                             LEFT JOIN Electronics e ON m.motorcycleID = e.motorcycleID
+                             LEFT JOIN Dimensions d ON m.motorcycleID = d.motorcycleID
+                             LEFT JOIN Frames f ON m.motorcycleID = f.motorcycleID
+                             LEFT JOIN Transmissions t ON m.motorcycleID = t.motorcycleID
+                             LEFT JOIN Engines en ON m.motorcycleID = en.motorcycleID
+        </select>
+
 
         <!-- 데이터 삽입 -->
         <insert id="insertMotorcycleData" parameterType="com.example.motorcycle.dto.MotorcycleDTO" useGeneratedKeys="true" keyProperty="motorcycleID">
                 INSERT INTO Motorcycle (brand, model, years, production, replica, cruiser, tourer, adventure, multiPurpose, naked, cafeRacer, scrambler, offRoad, motard, trial, scooter, classic)
                 VALUES (#{brand}, #{model}, #{years}, #{production}, #{replica}, #{cruiser}, #{tourer}, #{adventure}, #{multiPurpose}, #{naked}, #{cafeRacer}, #{scrambler}, #{offRoad}, #{motard}, #{trial}, #{scooter}, #{classic})
         </insert>
+        <insert id="insertDimensionsData" parameterType="com.example.motorcycle.dto.DimensionsDTO" keyProperty="motorcycleID">
+            INSERT INTO Dimensions (motorcycleID, dimensions, seatHeight, wheelbase, groundClearance, dryWeight, wetWeight, fuelCapacity, innerLegCurve, permittedTotalWeight)
+            VALUES (#{motorcycleID}, #{dimensions}, #{seatHeight}, #{wheelbase}, #{groundClearance}, #{dryWeight}, #{wetWeight}, #{fuelCapacity}, #{innerLegCurve}, #{permittedTotalWeight})
+        </insert>
+        <insert id="insertElectronicsData" parameterType="com.example.motorcycle.dto.ElectronicsDTO" keyProperty="motorcycleID">
+            INSERT INTO Electronics (motorcycleID, engineManagement, emissionControl, engineControl, alternator, battery, headlight, ignition, starting, tractionControl)
+            VALUES (#{motorcycleID}, #{engineManagement}, #{emissionControl}, #{engineControl}, #{alternator}, #{battery}, #{headlight}, #{ignition}, #{starting}, #{tractionControl})
+        </insert>
+        <insert id="insertEnginesData" parameterType="com.example.motorcycle.dto.EnginesDTO" keyProperty="motorcycleID">
+            INSERT INTO Engines (motorcycleID, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication, max_power, max_torque, fuel_system, exhaust, engine_oil, mixture_control, emission, induction)
+            VALUES (#{motorcycleID}, #{engine}, #{capacity}, #{boreStroke}, #{compressionRatio}, #{coolingSystem}, #{lubrication}, #{maxPower}, #{maxTorque}, #{fuelSystem}, #{exhaust}, #{engineOil}, #{mixtureControl}, #{emission}, #{induction})
+        </insert>
+        <insert id="insertFramesData" parameterType="com.example.motorcycle.dto.FramesDTO" keyProperty="motorcycleID">
+            INSERT INTO Frames (motorcycleID, frame, frontSuspension, rearSuspension, frontWheelTravel, rearWheelTravel, frontBrakes, rearBrakes, absSystem, frontWheel, rearWheel, frontTyre, rearTyre, wheels, abs, absPro, rake, trail, frontRim, rearRim, castor, steeringAngle, steeringHeadAngle)
+            VALUES (#{motorcycleID}, #{frame}, #{frontSuspension}, #{rearSuspension}, #{frontWheelTravel}, #{rearWheelTravel}, #{frontBrakes}, #{rearBrakes}, #{absSystem}, #{frontWheel}, #{rearWheel}, #{frontTyre}, #{rearTyre}, #{wheels}, #{abs}, #{absPro}, #{rake}, #{trail}, #{frontRim}, #{rearRim}, #{castor}, #{steeringAngle}, #{steeringHeadAngle})
+        </insert>
+        <insert id="insertTransmissionsData" parameterType="com.example.motorcycle.dto.TransmissionsDTO" keyProperty="motorcycleID">
+            INSERT INTO Transmissions (motorcycleID, transmission_drive, transmission, final_drive, primary_drive_ratio, primary_ratio, gear_ratio, transmission_ratio, secondary_ratio, gear_ratios, clutch)
+            VALUES (#{motorcycleID}, #{transmission_drive}, #{transmission}, #{final_drive}, #{primary_drive_ratio}, #{primary_ratio}, #{gear_ratio}, #{transmission_ratio}, #{secondary_ratio}, #{gear_ratios}, #{clutch})
+        </insert>
 
-        <!-- 데이터 조회 -->
-        <select id="findByMotorcycleId" parameterType="long" resultMap="motorcycleResultMap">
-                SELECT * FROM Motorcycle WHERE motorcycleID = #{motorcycleID}
-        </select>
 
         <!-- 데이터 업데이트 -->
         <update id="updateMotorcycleData" parameterType="com.example.motorcycle.dto.MotorcycleDTO">
@@ -68,10 +128,65 @@
                     motard = #{motard}, trial = #{trial}, scooter = #{scooter}, classic = #{classic}
                 WHERE motorcycleID = #{motorcycleID}
         </update>
+        <update id="updateDimensionsData" parameterType="com.example.motorcycle.dto.DimensionsDTO">
+            UPDATE Dimensions
+            SET dimensions = #{dimensions}, seatHeight = #{seatHeight}, wheelbase = #{wheelbase}, groundClearance = #{groundClearance},
+                dryWeight = #{dryWeight}, wetWeight = #{wetWeight}, fuelCapacity = #{fuelCapacity}, innerLegCurve = #{innerLegCurve},
+                permittedTotalWeight = #{permittedTotalWeight}
+            WHERE motorcycleID = #{motorcycleID}
+        </update>
+        <update id="updateElectronicsData" parameterType="com.example.motorcycle.dto.ElectronicsDTO">
+            UPDATE Electronics
+            SET engineManagement = #{engineManagement}, emissionControl = #{emissionControl}, engineControl = #{engineControl},
+                alternator = #{alternator}, battery = #{battery}, headlight = #{headlight}, ignition = #{ignition},
+                starting = #{starting}, tractionControl = #{tractionControl}
+            WHERE motorcycleID = #{motorcycleID}
+        </update>
+        <update id="updateEnginesData" parameterType="com.example.motorcycle.dto.EnginesDTO">
+            UPDATE Engines
+            SET engine = #{engine}, capacity = #{capacity}, bore_stroke = #{boreStroke}, compression_ratio = #{compressionRatio},
+                cooling_system = #{coolingSystem}, lubrication = #{lubrication}, max_power = #{maxPower}, max_torque = #{maxTorque},
+                fuel_system = #{fuelSystem}, exhaust = #{exhaust}, engine_oil = #{engineOil}, mixture_control = #{mixtureControl},
+                emission = #{emission}, induction = #{induction}
+            WHERE motorcycleID = #{motorcycleID}
+        </update>
+        <update id="updateFramesData" parameterType="com.example.motorcycle.dto.FramesDTO">
+            UPDATE Frames
+            SET frame = #{frame}, frontSuspension = #{frontSuspension}, rearSuspension = #{rearSuspension},
+                frontWheelTravel = #{frontWheelTravel}, rearWheelTravel = #{rearWheelTravel}, frontBrakes = #{frontBrakes},
+                rearBrakes = #{rearBrakes}, absSystem = #{absSystem}, frontWheel = #{frontWheel}, rearWheel = #{rearWheel},
+                frontTyre = #{frontTyre}, rearTyre = #{rearTyre}, wheels = #{wheels}, abs = #{abs}, absPro = #{absPro},
+                rake = #{rake}, trail = #{trail}, frontRim = #{frontRim}, rearRim = #{rearRim}, castor = #{castor},
+                steeringAngle = #{steeringAngle}, steeringHeadAngle = #{steeringHeadAngle}
+            WHERE motorcycleID = #{motorcycleID}
+        </update>
+        <update id="updateTransmissionsData" parameterType="com.example.motorcycle.dto.TransmissionsDTO">
+            UPDATE Transmissions
+            SET transmission_drive = #{transmission_drive}, transmission = #{transmission}, final_drive = #{final_drive},
+                primary_drive_ratio = #{primary_drive_ratio}, primary_ratio = #{primary_ratio}, gear_ratio = #{gear_ratio},
+                transmission_ratio = #{transmission_ratio}, secondary_ratio = #{secondary_ratio}, gear_ratios = #{gear_ratios},
+                clutch = #{clutch}
+            WHERE motorcycleID = #{motorcycleID}
+        </update>
+
 
         <!-- 데이터 삭제 -->
         <delete id="deleteMotorcycleData" parameterType="long">
                 DELETE FROM Motorcycle WHERE motorcycleID = #{motorcycleID}
         </delete>
-
+        <delete id="deleteDimensionsData" parameterType="long">
+            DELETE FROM Dimensions WHERE motorcycleID = #{motorcycleID}
+        </delete>
+        <delete id="deleteElectronicsData" parameterType="long">
+            DELETE FROM Electronics WHERE motorcycleID = #{motorcycleID}
+        </delete>
+        <delete id="deleteEnginesData" parameterType="long">
+            DELETE FROM Engines WHERE motorcycleID = #{motorcycleID}
+        </delete>
+        <delete id="deleteFramesData" parameterType="long">
+            DELETE FROM Frames WHERE motorcycleID = #{motorcycleID}
+        </delete>
+        <delete id="deleteTransmissionsData" parameterType="long">
+            DELETE FROM Transmissions WHERE motorcycleID = #{motorcycleID}
+        </delete>
 </mapper>

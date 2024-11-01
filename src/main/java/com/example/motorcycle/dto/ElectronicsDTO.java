@@ -1,7 +1,7 @@
 package com.example.motorcycle.dto;
 
-import com.example.motorcycle.domain.Dimensions;
-import com.example.motorcycle.domain.Electronics;
+import com.example.motorcycle.domain.DimensionsDomain;
+import com.example.motorcycle.domain.ElectronicsDomain;
 import lombok.Data;
 
 @Data
@@ -18,9 +18,9 @@ public class ElectronicsDTO {
     private String starting;
     private String tractionControl;
 
-    public Electronics toDomain() {
+    public ElectronicsDomain toDomain() {
         // Motorcycle 객체를 MotorcycleDTO 객체로 변환
-        Electronics electronics = new Electronics();
+        ElectronicsDomain electronics = new ElectronicsDomain();
         electronics.setElectronicsID(this.getElectronicsID());
         electronics.setMotorcycleID(this.getMotorcycleID());
         electronics.setEngineManagement(this.getEngineManagement());
@@ -34,5 +34,23 @@ public class ElectronicsDTO {
         electronics.setTractionControl(this.getTractionControl());
         // 필요한 필드를 설정합니다.
         return electronics;
+    }
+
+    public static ElectronicsDTO fromDomain(ElectronicsDomain electronics) {
+        // Motorcycle 객체를 MotorcycleDTO 객체로 변환
+        ElectronicsDTO dto = new ElectronicsDTO();
+        dto.setElectronicsID(electronics.getElectronicsID());
+        dto.setMotorcycleID(electronics.getMotorcycleID());
+        dto.setEngineManagement(electronics.getEngineManagement());
+        dto.setEmissionControl(electronics.getEmissionControl());
+        dto.setEngineControl(electronics.getEngineControl());
+        dto.setAlternator(electronics.getAlternator());
+        dto.setBattery(electronics.getBattery());
+        dto.setHeadlight(electronics.getHeadlight());
+        dto.setIgnition(electronics.getIgnition());
+        dto.setStarting(electronics.getStarting());
+        dto.setTractionControl(electronics.getTractionControl());
+        // 필요한 필드를 설정합니다.
+        return dto;
     }
 }
