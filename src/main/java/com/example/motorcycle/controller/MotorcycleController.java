@@ -50,7 +50,7 @@ public class MotorcycleController {
 //        return "view";
 //    }
 
-    @PostMapping("/singleSearchID")
+    @GetMapping("/singleSearchID")
     public String viewMotorcycleById(@RequestParam(value = "id", required = false) Long id, Model model) {
         if ( id == null){
             model.addAttribute("error", "ID가 입력되지 않았습니다");

@@ -2,6 +2,7 @@ package com.example.motorcycle.domain;
 
 import com.example.motorcycle.dto.MotorcycleDTO;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
@@ -29,40 +30,45 @@ public class MotorcycleDomain {
     private Integer scooter;
     private Integer classic;
 
+    @Getter
     private DimensionsDomain dimensionsDomain;
+    @Getter
     private ElectronicsDomain electronicsDomain;
+    @Getter
     private EnginesDomain enginesDomain;
+    @Getter
     private FramesDomain framesDomain;
+    @Getter
     private TransmissionsDomain transmissionsDomain;
 
     public static MotorcycleDomain fromDTO(MotorcycleDTO dto) {
-        MotorcycleDomain motorcycle = new MotorcycleDomain();
-        motorcycle.setMotorcycleID(dto.getMotorcycleID());
-        motorcycle.setBrand(dto.getBrand());
-        motorcycle.setModel(dto.getModel());
-        motorcycle.setYears(dto.getYears());
-        motorcycle.setProduction(dto.getProduction());
-        motorcycle.setReplica(dto.getReplica());
-        motorcycle.setCruiser(dto.getCruiser());
-        motorcycle.setTourer(dto.getTourer());
-        motorcycle.setAdventure(dto.getAdventure());
-        motorcycle.setMultiPurpose(dto.getMultiPurpose());
-        motorcycle.setNaked(dto.getNaked());
-        motorcycle.setCafeRacer(dto.getCafeRacer());
-        motorcycle.setScrambler(dto.getScrambler());
-        motorcycle.setOffRoad(dto.getOffRoad());
-        motorcycle.setMotard(dto.getMotard());
-        motorcycle.setTrial(dto.getTrial());
-        motorcycle.setScooter(dto.getScooter());
-        motorcycle.setClassic(dto.getClassic());
+        MotorcycleDomain motorcycleDomain = new MotorcycleDomain();
+        motorcycleDomain.setMotorcycleID(dto.getMotorcycleID());
+        motorcycleDomain.setBrand(dto.getBrand());
+        motorcycleDomain.setModel(dto.getModel());
+        motorcycleDomain.setYears(dto.getYears());
+        motorcycleDomain.setProduction(dto.getProduction());
+        motorcycleDomain.setReplica(dto.getReplica());
+        motorcycleDomain.setCruiser(dto.getCruiser());
+        motorcycleDomain.setTourer(dto.getTourer());
+        motorcycleDomain.setAdventure(dto.getAdventure());
+        motorcycleDomain.setMultiPurpose(dto.getMultiPurpose());
+        motorcycleDomain.setNaked(dto.getNaked());
+        motorcycleDomain.setCafeRacer(dto.getCafeRacer());
+        motorcycleDomain.setScrambler(dto.getScrambler());
+        motorcycleDomain.setOffRoad(dto.getOffRoad());
+        motorcycleDomain.setMotard(dto.getMotard());
+        motorcycleDomain.setTrial(dto.getTrial());
+        motorcycleDomain.setScooter(dto.getScooter());
+        motorcycleDomain.setClassic(dto.getClassic());
 
-        motorcycle.setDimensionsDomain(DimensionsDomain.fromDTO(dto.getDimensionsDTO()));
-        motorcycle.setElectronicsDomain(ElectronicsDomain.fromDTO(dto.getElectronicsDTO()));
-        motorcycle.setEnginesDomain(EnginesDomain.fromDTO(dto.getEnginesDTO()));
-        motorcycle.setFramesDomain(FramesDomain.fromDTO(dto.getFramesDTO()));
-        motorcycle.setTransmissionsDomain(TransmissionsDomain.fromDTO(dto.getTransmissionsDTO()));
+        motorcycleDomain.setDimensionsDomain(DimensionsDomain.fromDTO(dto.getDimensionsDTO()));
+        motorcycleDomain.setElectronicsDomain(ElectronicsDomain.fromDTO(dto.getElectronicsDTO()));
+        motorcycleDomain.setEnginesDomain(EnginesDomain.fromDTO(dto.getEnginesDTO()));
+        motorcycleDomain.setFramesDomain(FramesDomain.fromDTO(dto.getFramesDTO()));
+        motorcycleDomain.setTransmissionsDomain(TransmissionsDomain.fromDTO(dto.getTransmissionsDTO()));
 
-        return motorcycle;
+        return motorcycleDomain;
     }
 
 }

@@ -2,8 +2,11 @@ package com.example.motorcycle.domain;
 
 import com.example.motorcycle.dto.ElectronicsDTO;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.pl.NIP;
 
 @Data
+@NoArgsConstructor
 public class ElectronicsDomain {
 
     private Long electronicsID;
@@ -20,19 +23,19 @@ public class ElectronicsDomain {
     private String tractionControl;
 
     public static ElectronicsDomain fromDTO(ElectronicsDTO dto) {
-        ElectronicsDomain electronics = new ElectronicsDomain();
-        electronics.setElectronicsID(dto.getElectronicsID());
-        electronics.setMotorcycleID(dto.getMotorcycleID());
-        electronics.setEngineManagement(dto.getEngineManagement());
-        electronics.setEmissionControl(dto.getEmissionControl());
-        electronics.setEngineControl(dto.getEngineControl());
-        electronics.setAlternator(dto.getAlternator());
-        electronics.setBattery(dto.getBattery());
-        electronics.setHeadlight(dto.getHeadlight());
-        electronics.setIgnition(dto.getIgnition());
-        electronics.setStarting(dto.getStarting());
-        electronics.setTractionControl(dto.getTractionControl());
-        return electronics;
+        ElectronicsDomain electronicsDomain = new ElectronicsDomain();
+        electronicsDomain.setElectronicsID(dto.getElectronicsID());
+        electronicsDomain.setMotorcycleID(dto.getMotorcycleID());
+        electronicsDomain.setEngineManagement(dto.getEngineManagement());
+        electronicsDomain.setEmissionControl(dto.getEmissionControl());
+        electronicsDomain.setEngineControl(dto.getEngineControl());
+        electronicsDomain.setAlternator(dto.getAlternator());
+        electronicsDomain.setBattery(dto.getBattery());
+        electronicsDomain.setHeadlight(dto.getHeadlight());
+        electronicsDomain.setIgnition(dto.getIgnition());
+        electronicsDomain.setStarting(dto.getStarting());
+        electronicsDomain.setTractionControl(dto.getTractionControl());
+        return electronicsDomain;
     }
 
 

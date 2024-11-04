@@ -2,8 +2,10 @@ package com.example.motorcycle.domain;
 
 import com.example.motorcycle.dto.EnginesDTO;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class EnginesDomain {
 
     private Long enginesID;
@@ -25,24 +27,24 @@ public class EnginesDomain {
     private String induction;
 
     public static EnginesDomain fromDTO(EnginesDTO dto) {
-        EnginesDomain engines = new EnginesDomain();
-        engines.setEnginesID(dto.getEnginesID());
-        engines.setMotorcycleID(dto.getMotorcycleID());
-        engines.setEngine(dto.getEngine());
-        engines.setCapacity(dto.getCapacity());
-        engines.setBoreStroke(dto.getBoreStroke());
-        engines.setCompressionRatio(dto.getCompressionRatio());
-        engines.setCoolingSystem(dto.getCoolingSystem());
-        engines.setLubrication(dto.getLubrication());
-        engines.setMaxPower(dto.getMaxPower());
-        engines.setMaxTorque(dto.getMaxTorque());
-        engines.setFuelSystem(dto.getFuelSystem());
-        engines.setExhaust(dto.getExhaust());
-        engines.setEngineOil(dto.getEngineOil());
-        engines.setMixtureControl(dto.getMixtureControl());
-        engines.setEmission(dto.getEmission());
-        engines.setInduction(dto.getInduction());
-        return engines;
+        EnginesDomain enginesDomain = new EnginesDomain();
+        enginesDomain.setEnginesID(dto.getEnginesID());
+        enginesDomain.setMotorcycleID(dto.getMotorcycleID());
+        enginesDomain.setEngine(dto.getEngine());
+        enginesDomain.setCapacity(dto.getCapacity());
+        enginesDomain.setBoreStroke(dto.getBoreStroke());
+        enginesDomain.setCompressionRatio(dto.getCompressionRatio());
+        enginesDomain.setCoolingSystem(dto.getCoolingSystem());
+        enginesDomain.setLubrication(dto.getLubrication());
+        enginesDomain.setMaxPower(dto.getMaxPower());
+        enginesDomain.setMaxTorque(dto.getMaxTorque());
+        enginesDomain.setFuelSystem(dto.getFuelSystem());
+        enginesDomain.setExhaust(dto.getExhaust());
+        enginesDomain.setEngineOil(dto.getEngineOil());
+        enginesDomain.setMixtureControl(dto.getMixtureControl());
+        enginesDomain.setEmission(dto.getEmission());
+        enginesDomain.setInduction(dto.getInduction());
+        return enginesDomain;
     }
 
 }

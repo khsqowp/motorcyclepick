@@ -2,8 +2,10 @@ package com.example.motorcycle.domain;
 
 import com.example.motorcycle.dto.FramesDTO;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class FramesDomain {
 
     private Long framesID;
@@ -33,32 +35,32 @@ public class FramesDomain {
     private String steeringHeadAngle;
 
     public static FramesDomain fromDTO(FramesDTO dto) {
-        FramesDomain frames = new FramesDomain();
-        frames.setFramesID(dto.getFramesID());
-        frames.setMotorcycleID(dto.getMotorcycleID());
-        frames.setFrame(dto.getFrame());
-        frames.setFrontSuspension(dto.getFrontSuspension());
-        frames.setRearSuspension(dto.getRearSuspension());
-        frames.setFrontWheelTravel(dto.getFrontWheelTravel());
-        frames.setRearWheelTravel(dto.getRearWheelTravel());
-        frames.setFrontBrakes(dto.getFrontBrakes());
-        frames.setRearBrakes(dto.getRearBrakes());
-        frames.setAbsSystem(dto.getAbsSystem());
-        frames.setFrontWheel(dto.getFrontWheel());
-        frames.setRearWheel(dto.getRearWheel());
-        frames.setFrontTyre(dto.getFrontTyre());
-        frames.setRearTyre(dto.getRearTyre());
-        frames.setWheels(dto.getWheels());
-        frames.setAbs(dto.getAbs());
-        frames.setAbsPro(dto.getAbsPro());
-        frames.setRake(dto.getRake());
-        frames.setTrail(dto.getTrail());
-        frames.setFrontRim(dto.getFrontRim());
-        frames.setRearRim(dto.getRearRim());
-        frames.setCastor(dto.getCastor());
-        frames.setSteeringAngle(dto.getSteeringAngle());
-        frames.setSteeringHeadAngle(dto.getSteeringHeadAngle());
-        return frames;
+        FramesDomain framesDomain = new FramesDomain();
+        framesDomain.setFramesID(dto.getFramesID());
+        framesDomain.setMotorcycleID(dto.getMotorcycleID());
+        framesDomain.setFrame(dto.getFrame());
+        framesDomain.setFrontSuspension(dto.getFrontSuspension());
+        framesDomain.setRearSuspension(dto.getRearSuspension());
+        framesDomain.setFrontWheelTravel(dto.getFrontWheelTravel());
+        framesDomain.setRearWheelTravel(dto.getRearWheelTravel());
+        framesDomain.setFrontBrakes(dto.getFrontBrakes());
+        framesDomain.setRearBrakes(dto.getRearBrakes());
+        framesDomain.setAbsSystem(dto.getAbsSystem());
+        framesDomain.setFrontWheel(dto.getFrontWheel());
+        framesDomain.setRearWheel(dto.getRearWheel());
+        framesDomain.setFrontTyre(dto.getFrontTyre());
+        framesDomain.setRearTyre(dto.getRearTyre());
+        framesDomain.setWheels(dto.getWheels());
+        framesDomain.setAbs(dto.getAbs());
+        framesDomain.setAbsPro(dto.getAbsPro());
+        framesDomain.setRake(dto.getRake());
+        framesDomain.setTrail(dto.getTrail());
+        framesDomain.setFrontRim(dto.getFrontRim());
+        framesDomain.setRearRim(dto.getRearRim());
+        framesDomain.setCastor(dto.getCastor());
+        framesDomain.setSteeringAngle(dto.getSteeringAngle());
+        framesDomain.setSteeringHeadAngle(dto.getSteeringHeadAngle());
+        return framesDomain;
     }
 
 }

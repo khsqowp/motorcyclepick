@@ -2,8 +2,11 @@ package com.example.motorcycle.domain;
 
 import com.example.motorcycle.dto.DimensionsDTO;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.pl.NIP;
 
 @Data
+@NoArgsConstructor
 public class DimensionsDomain {
 
     private Long dimensionsID;
@@ -20,19 +23,19 @@ public class DimensionsDomain {
     private String permittedTotalWeight;
 
     public static DimensionsDomain fromDTO(DimensionsDTO dto) {
-        DimensionsDomain dimensions = new DimensionsDomain();
-        dimensions.setDimensionsID(dto.getDimensionsID());
-        dimensions.setMotorcycleID(dto.getMotorcycleID());
-        dimensions.setDimensions(dto.getDimensions());
-        dimensions.setSeatHeight(dto.getSeatHeight());
-        dimensions.setWheelbase(dto.getWheelbase());
-        dimensions.setGroundClearance(dto.getGroundClearance());
-        dimensions.setDryWeight(dto.getDryWeight());
-        dimensions.setWetWeight(dto.getWetWeight());
-        dimensions.setFuelCapacity(dto.getFuelCapacity());
-        dimensions.setInnerLegCurve(dto.getInnerLegCurve());
-        dimensions.setPermittedTotalWeight(dto.getPermittedTotalWeight());
-        return dimensions;
+        DimensionsDomain dimensionsDomain = new DimensionsDomain();
+        dimensionsDomain.setDimensionsID(dto.getDimensionsID());
+        dimensionsDomain.setMotorcycleID(dto.getMotorcycleID());
+        dimensionsDomain.setDimensions(dto.getDimensions());
+        dimensionsDomain.setSeatHeight(dto.getSeatHeight());
+        dimensionsDomain.setWheelbase(dto.getWheelbase());
+        dimensionsDomain.setGroundClearance(dto.getGroundClearance());
+        dimensionsDomain.setDryWeight(dto.getDryWeight());
+        dimensionsDomain.setWetWeight(dto.getWetWeight());
+        dimensionsDomain.setFuelCapacity(dto.getFuelCapacity());
+        dimensionsDomain.setInnerLegCurve(dto.getInnerLegCurve());
+        dimensionsDomain.setPermittedTotalWeight(dto.getPermittedTotalWeight());
+        return dimensionsDomain;
     }
 
 

@@ -12,17 +12,31 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Transactional
 public class MotorcycleService {
 
+    private final MotorcycleMapper motorcycleMapper;
+
     @Autowired
-    private MotorcycleMapper motorcycleMapper;  // Motorcycle 테이블 관련 작업을 위한 매퍼
+    public MotorcycleService(MotorcycleMapper motorcycleMapper){
+        this.motorcycleMapper = motorcycleMapper;
+    }
 
     // Motorcycle 데이터 삽입
-    @Transactional  // 데이터 삽입을 하나의 트랜잭션으로 처리
     public void insertFullMotorcycle(MotorcycleForm form) {
         MotorcycleDTO motorcycleDTO = form.toDTO();  // Form 객체를 DTO로 변환
         MotorcycleDomain motorcycle = MotorcycleDomain.fromDTO(motorcycleDTO);  // DTO를 도메인 객체로 변환
-        motorcycleMapper.insertMotorcycleData(motorcycle);  // Motorcycle 기본 데이터를 데이터베이스에 삽입
+        motorcycleMapper.insertMotorcycleData(motorcycle);
+
+        //motorcycleID를 각 관련 도메인에 설정
+        Long motorcycleID = motorcycle.getMotorcycleID();
+        motorcycle.getDimensionsDomain().setMotorcycleID(motorcycleID);
+        motorcycle.getElectronicsDomain().setMotorcycleID(motorcycleID);
+        motorcycle.getEnginesDomain().setMotorcycleID(motorcycleID);
+        motorcycle.getFramesDomain().setMotorcycleID(motorcycleID);
+        motorcycle.getTransmissionsDomain().setMotorcycleID(motorcycleID);
+
+        //관련 데이터 삽입
         motorcycleMapper.insertDimensionsData(motorcycle.getDimensionsDomain());
         motorcycleMapper.insertElectronicsData(motorcycle.getElectronicsDomain());
         motorcycleMapper.insertEnginesData(motorcycle.getEnginesDomain());
@@ -31,17 +45,28 @@ public class MotorcycleService {
     }
 
     // Motorcycle 데이터 업데이트
-    @Transactional  // 데이터 업데이트를 하나의 트랜잭션으로 처리
     public void updateFullMotorcycle(MotorcycleForm form) {
         MotorcycleDTO motorcycleDTO = form.toDTO();  // Form 객체를 DTO로 변환
         MotorcycleDomain motorcycle = MotorcycleDomain.fromDTO(motorcycleDTO);  // DTO를 도메인 객체로 변환
+        Long motorcycleID = motorcycle.getMotorcycleID();
+
         motorcycleMapper.updateMotorcycle(motorcycle);  // Motorcycle 기본 데이터 업데이트
+        motorcycleMapper.updateDimensions(motorcycleID, motorcycle.getDimensionsDomain());
+        motorcycleMapper.updateElectronics(motorcycleID, motorcycle.getElectronicsDomain());
+        motorcycleMapper.updateEngines(motorcycleID, motorcycle.getEnginesDomain());
+        motorcycleMapper.updateFrames(motorcycleID, motorcycle.getFramesDomain());
+        motorcycleMapper.updateTransmissions(motorcycleID, motorcycle.getTransmissionsDomain());
     }
 
     // Motorcycle 데이터 삭제
-    @Transactional  // 데이터 삭제를 하나의 트랜잭션으로 처리
     public void deleteFullMotorcycle(Long motorcycleID) {
+        //관련 테이블 삭제
         motorcycleMapper.deleteMotorcycle(motorcycleID);  // Motorcycle 데이터 삭제
+        motorcycleMapper.deleteDimensions(motorcycleID);
+        motorcycleMapper.deleteElectronics(motorcycleID);
+        motorcycleMapper.deleteEngines(motorcycleID);
+        motorcycleMapper.deleteFrames(motorcycleID);
+        motorcycleMapper.deleteTransmissions(motorcycleID);
     }
 
     // Motorcycle 데이터 조회 (단일)
