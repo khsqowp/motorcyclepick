@@ -19,7 +19,7 @@ public class ElectronicsDomain {
     private String battery;
     private String headlight;
     private String ignition;
-    private String starting;
+    private String startSystem;
     private String tractionControl;
 
     public static ElectronicsDomain fromDTO(ElectronicsDTO dto) {
@@ -33,7 +33,7 @@ public class ElectronicsDomain {
         electronicsDomain.setBattery(dto.getBattery());
         electronicsDomain.setHeadlight(dto.getHeadlight());
         electronicsDomain.setIgnition(dto.getIgnition());
-        electronicsDomain.setStarting(dto.getStarting());
+        electronicsDomain.setStartSystem(dto.getStartSystem());
         electronicsDomain.setTractionControl(dto.getTractionControl());
         return electronicsDomain;
     }

@@ -4,9 +4,7 @@ import com.example.motorcycle.dto.DeleteMotorcycleDTO;
 import com.example.motorcycle.dto.MotorcycleDTO;
 import com.example.motorcycle.form.MotorcycleForm;
 import com.example.motorcycle.service.MotorcycleService;
-import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +12,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -43,16 +42,9 @@ public class MotorcycleController {
         return "list";
     }
 
-//    @GetMapping("/view/{motorcycleID}")
-//    public String viewMotorcycle(@PathVariable Long motorcycleID, Model model) {
-//        MotorcycleDTO motorcycle = motorcycleService.findOneMotorcycle(motorcycleID);
-//        model.addAttribute("motorcycle", motorcycle);
-//        return "view";
-//    }
-
     @GetMapping("/singleSearchID")
     public String viewMotorcycleById(@RequestParam(value = "id", required = false) Long id, Model model) {
-        if ( id == null){
+        if (id == null) {
             model.addAttribute("error", "ID가 입력되지 않았습니다");
         } else {
             MotorcycleDTO motorcycle = motorcycleService.findOneMotorcycle(id);
@@ -71,15 +63,20 @@ public class MotorcycleController {
     public String createMotorcycle(@ModelAttribute @Valid MotorcycleForm form, RedirectAttributes redirectAttributes) {
         motorcycleService.insertFullMotorcycle(form);
         redirectAttributes.addFlashAttribute("message", "새로운 Motorcycle이 성공적으로 생성되었습니다.");
-        return "redirect:/motorcycle";
+        return "redirect:/motorcycle/";
     }
 
-    @GetMapping("/edit/{motorcycleID}")
-    public String editMotorcycleForm(@PathVariable Long motorcycleID, Model model) {
-        MotorcycleDTO motorcycle = motorcycleService.findOneMotorcycle(motorcycleID);
-        MotorcycleForm form = MotorcycleForm.fromDTO(motorcycle);
-        model.addAttribute("motorcycleForm", form);
-        return "edit";
+    @GetMapping("/edit")  // 이건 그대로 유지
+    public String editMotorcycle(@RequestParam("editId") Long motorcycleID, Model model) {
+        try {
+            MotorcycleDTO motorcycleDTO = motorcycleService.findOneMotorcycle(motorcycleID);
+            MotorcycleForm motorcycleForm = MotorcycleForm.fromDTO(motorcycleDTO);
+            model.addAttribute("motorcycleDTO", motorcycleDTO);
+            model.addAttribute("motorcycleForm", motorcycleForm);
+            return "edit";
+        } catch (IllegalArgumentException e) {
+            return "redirect:/motorcycle?error=" + e.getMessage();
+        }
     }
 
     // 전체 Motorcycle 리스트를 불러와서 엑셀처럼 수정할 수 있는 페이지로 이동
@@ -96,18 +93,28 @@ public class MotorcycleController {
         motorcycleService.updateMultipleMotorcycles(forms);
         return "redirect:/motorcycle/list";
     }
-//
-//    @PostMapping("/edit/{motorcycleID}")
-//    public String updateMotorcycle(@PathVariable Long motorcycleID, @ModelAttribute @Valid MotorcycleForm form) {
-//        form.setMotorcycleID(motorcycleID);
-//        motorcycleService.updateFullMotorcycle(form);
-//        return "redirect:/motorcycle";
-//    }
 
-    @PostMapping("/delete/{motorcycleID}")
-    public String deleteMotorcycle(@PathVariable Long motorcycleID, RedirectAttributes redirectAttributes) {
-        motorcycleService.deleteFullMotorcycle(motorcycleID);
-        redirectAttributes.addFlashAttribute("message", "Motorcycle이 성공적으로 삭제되었습니다.");
-        return "redirect:/motorcycle";
+    @PostMapping("/edit")  // /edit 에서 /update로 변경
+    public String updateMotorcycle(@ModelAttribute @Valid MotorcycleForm form, RedirectAttributes redirectAttributes) {
+        try {
+            motorcycleService.updateFullMotorcycle(form);
+            redirectAttributes.addFlashAttribute("message", "Motorcycle이 성공적으로 수정되었습니다.");
+            return "redirect:/motorcycle/";
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("error", "수정 중 오류가 발생했습니다:" + e.getMessage());
+            return "redirect:/motorcycle/";
+        }
+    }
+
+    @PostMapping("/delete")
+    public String deleteMotorcycle(@ModelAttribute DeleteMotorcycleDTO dto, RedirectAttributes redirectAttributes) {
+        try{
+            motorcycleService.deleteFullMotorcycle(dto.getMotorcycleID());
+            redirectAttributes.addFlashAttribute("message", "Motorcycle이 성공적으로 삭제되었습니다.");
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("error", "삭제중 오류가 발생했습니다 : " + e.getMessage());
+        }
+
+        return "redirect:/motorcycle/";
     }
 }

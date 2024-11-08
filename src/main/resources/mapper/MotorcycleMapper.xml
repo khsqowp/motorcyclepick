@@ -46,7 +46,7 @@
                 <result property="battery" column="battery" />
                 <result property="headlight" column="headlight" />
                 <result property="ignition" column="ignition" />
-                <result property="starting" column="starting" />
+                <result property="startSystem" column="startSystem" />
                 <result property="tractionControl" column="tractionControl" />
             </association>
 
@@ -111,7 +111,7 @@
                        -- Dimensions 필드들
                        d.dimensions,d.seatHeight,d.wheelbase,d.groundClearance,d.dryWeight,d.wetWeight, d.fuelCapacity,d.innerLegCurve,d.permittedTotalWeight,
                        -- Electronics 필드들
-                       e.engineManagement,e.emissionControl,e.engineControl,e.alternator,e.battery,e.headlight,e.ignition  AS engineIgnition,e.starting,e.tractionControl,
+                       e.engineManagement,e.emissionControl,e.engineControl,e.alternator,e.battery,e.headlight,e.ignition  AS engineIgnition,e.startSystem,e.tractionControl,
                        -- Engines 필드들
                        en.engine,en.capacity,en.bore_stroke,en.compression_ratio,en.cooling_system,en.lubrication,en.max_power,en.max_torque,en.fuel_system,en.exhaust,en.engine_oil,en.mixture_control,en.emission, en.induction,
                        -- Frames 필드들
@@ -133,7 +133,7 @@
                        -- Dimensions 필드들
                        d.dimensions,d.seatHeight,d.wheelbase,d.groundClearance,d.dryWeight,d.wetWeight,d.fuelCapacity,d.innerLegCurve,d.permittedTotalWeight,
                        -- Electronics 필드들
-                       e.engineManagement,e.emissionControl,e.engineControl,e.alternator,e.battery,e.headlight,e.ignition  AS engineIgnition,e.starting,e.tractionControl,
+                       e.engineManagement,e.emissionControl,e.engineControl,e.alternator,e.battery,e.headlight,e.ignition  AS engineIgnition,e.startSystem,e.tractionControl,
                        -- Engines 필드들
                        en.engine,en.capacity,en.bore_stroke,en.compression_ratio,en.cooling_system,en.lubrication,en.max_power,en.max_torque,en.fuel_system,en.exhaust,en.engine_oil,en.mixture_control,en.emission,en.induction,
                        -- Frames 필드들
@@ -154,96 +154,171 @@
                 INSERT INTO Motorcycle (brand, model, years, production, replica, cruiser, tourer, adventure, multiPurpose, naked, cafeRacer, scrambler, offRoad, motard, trial, scooter, classic)
                 VALUES (#{brand}, #{model}, #{years}, #{production}, #{replica}, #{cruiser}, #{tourer}, #{adventure}, #{multiPurpose}, #{naked}, #{cafeRacer}, #{scrambler}, #{offRoad}, #{motard}, #{trial}, #{scooter}, #{classic})
         </insert>
-        <insert id="insertDimensionsData" parameterType="com.example.motorcycle.dto.DimensionsDTO">
+        <insert id="insertDimensionsData" parameterType="com.example.motorcycle.domain.DimensionsDomain">
             INSERT INTO Dimensions (motorcycleID, dimensions, seatHeight, wheelbase, groundClearance, dryWeight, wetWeight, fuelCapacity, innerLegCurve, permittedTotalWeight)
             VALUES (#{motorcycleID}, #{dimensions}, #{seatHeight}, #{wheelbase}, #{groundClearance}, #{dryWeight}, #{wetWeight}, #{fuelCapacity}, #{innerLegCurve}, #{permittedTotalWeight})
         </insert>
-        <insert id="insertElectronicsData" parameterType="com.example.motorcycle.dto.ElectronicsDTO">
-            INSERT INTO Electronics (motorcycleID, engineManagement, emissionControl, engineControl, alternator, battery, headlight, ignition, starting, tractionControl)
-            VALUES (#{motorcycleID}, #{engineManagement}, #{emissionControl}, #{engineControl}, #{alternator}, #{battery}, #{headlight}, #{ignition}, #{starting}, #{tractionControl})
+        <insert id="insertElectronicsData" parameterType="com.example.motorcycle.domain.ElectronicsDomain">
+            INSERT INTO Electronics (motorcycleID, engineManagement, emissionControl, engineControl, alternator, battery, headlight, ignition, startSystem, tractionControl)
+            VALUES (#{motorcycleID}, #{engineManagement}, #{emissionControl}, #{engineControl}, #{alternator}, #{battery}, #{headlight}, #{ignition}, #{startSystem}, #{tractionControl})
         </insert>
-        <insert id="insertEnginesData" parameterType="com.example.motorcycle.dto.EnginesDTO">
+        <insert id="insertEnginesData" parameterType="com.example.motorcycle.domain.EnginesDomain">
             INSERT INTO Engines (motorcycleID, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication, max_power, max_torque, fuel_system, exhaust, engine_oil, mixture_control, emission, induction)
             VALUES (#{motorcycleID}, #{engine}, #{capacity}, #{boreStroke}, #{compressionRatio}, #{coolingSystem}, #{lubrication}, #{maxPower}, #{maxTorque}, #{fuelSystem}, #{exhaust}, #{engineOil}, #{mixtureControl}, #{emission}, #{induction})
         </insert>
-        <insert id="insertFramesData" parameterType="com.example.motorcycle.dto.FramesDTO">
+        <insert id="insertFramesData" parameterType="com.example.motorcycle.domain.FramesDomain">
             INSERT INTO Frames (motorcycleID, frame, frontSuspension, rearSuspension, frontWheelTravel, rearWheelTravel, frontBrakes, rearBrakes, absSystem, frontWheel, rearWheel, frontTyre, rearTyre, wheels, abs, absPro, rake, trail, frontRim, rearRim, castor, steeringAngle, steeringHeadAngle)
             VALUES (#{motorcycleID}, #{frame}, #{frontSuspension}, #{rearSuspension}, #{frontWheelTravel}, #{rearWheelTravel}, #{frontBrakes}, #{rearBrakes}, #{absSystem}, #{frontWheel}, #{rearWheel}, #{frontTyre}, #{rearTyre}, #{wheels}, #{abs}, #{absPro}, #{rake}, #{trail}, #{frontRim}, #{rearRim}, #{castor}, #{steeringAngle}, #{steeringHeadAngle})
         </insert>
-        <insert id="insertTransmissionsData" parameterType="com.example.motorcycle.dto.TransmissionsDTO">
+        <insert id="insertTransmissionsData" parameterType="com.example.motorcycle.domain.TransmissionsDomain">
             INSERT INTO Transmissions (motorcycleID, transmission_drive, transmission, final_drive, primary_drive_ratio, primary_ratio, gear_ratio, transmission_ratio, secondary_ratio, gear_ratios, clutch)
             VALUES (#{motorcycleID}, #{transmissionDrive}, #{transmission}, #{finalDrive}, #{primaryDriveRatio}, #{primaryRatio}, #{gearRatio}, #{transmissionRatio}, #{secondaryRatio}, #{gearRatios}, #{clutch})
         </insert>
 
 
-        <!-- 데이터 업데이트 -->
-        <update id="updateMotorcycle" parameterType="com.example.motorcycle.domain.MotorcycleDomain">
-                UPDATE Motorcycle
-                SET brand = #{brand}, model = #{model}, years = #{years}, production = #{production}, replica = #{replica},
-                    cruiser = #{cruiser}, tourer = #{tourer}, adventure = #{adventure}, multiPurpose = #{multiPurpose},
-                    naked = #{naked}, cafeRacer = #{cafeRacer}, scrambler = #{scrambler}, offRoad = #{offRoad},
-                    motard = #{motard}, trial = #{trial}, scooter = #{scooter}, classic = #{classic}
-                WHERE motorcycleID = #{motorcycleID}
-        </update>
-        <update id="updateDimensionsData" parameterType="com.example.motorcycle.dto.DimensionsDTO">
-            UPDATE Dimensions
-            SET dimensions = #{dimensions}, seatHeight = #{seatHeight}, wheelbase = #{wheelbase}, groundClearance = #{groundClearance},
-                dryWeight = #{dryWeight}, wetWeight = #{wetWeight}, fuelCapacity = #{fuelCapacity}, innerLegCurve = #{innerLegCurve},
-                permittedTotalWeight = #{permittedTotalWeight}
-            WHERE motorcycleID = #{motorcycleID}
-        </update>
-        <update id="updateElectronicsData" parameterType="com.example.motorcycle.dto.ElectronicsDTO">
-            UPDATE Electronics
-            SET engineManagement = #{engineManagement}, emissionControl = #{emissionControl}, engineControl = #{engineControl},
-                alternator = #{alternator}, battery = #{battery}, headlight = #{headlight}, ignition = #{ignition},
-                starting = #{starting}, tractionControl = #{tractionControl}
-            WHERE motorcycleID = #{motorcycleID}
-        </update>
-        <update id="updateEnginesData" parameterType="com.example.motorcycle.dto.EnginesDTO">
-            UPDATE Engines
-            SET engine = #{engine}, capacity = #{capacity}, bore_stroke = #{boreStroke}, compression_ratio = #{compressionRatio},
-                cooling_system = #{coolingSystem}, lubrication = #{lubrication}, max_power = #{maxPower}, max_torque = #{maxTorque},
-                fuel_system = #{fuelSystem}, exhaust = #{exhaust}, engine_oil = #{engineOil}, mixture_control = #{mixtureControl},
-                emission = #{emission}, induction = #{induction}
-            WHERE motorcycleID = #{motorcycleID}
-        </update>
-        <update id="updateFramesData" parameterType="com.example.motorcycle.dto.FramesDTO">
-            UPDATE Frames
-            SET frame = #{frame}, frontSuspension = #{frontSuspension}, rearSuspension = #{rearSuspension},
-                frontWheelTravel = #{frontWheelTravel}, rearWheelTravel = #{rearWheelTravel}, frontBrakes = #{frontBrakes},
-                rearBrakes = #{rearBrakes}, absSystem = #{absSystem}, frontWheel = #{frontWheel}, rearWheel = #{rearWheel},
-                frontTyre = #{frontTyre}, rearTyre = #{rearTyre}, wheels = #{wheels}, abs = #{abs}, absPro = #{absPro},
-                rake = #{rake}, trail = #{trail}, frontRim = #{frontRim}, rearRim = #{rearRim}, castor = #{castor},
-                steeringAngle = #{steeringAngle}, steeringHeadAngle = #{steeringHeadAngle}
-            WHERE motorcycleID = #{motorcycleID}
-        </update>
-        <update id="updateTransmissionsData" parameterType="com.example.motorcycle.dto.TransmissionsDTO">
-            UPDATE Transmissions
-            SET transmission_drive = #{transmissionDrive}, transmission = #{transmission}, final_drive = #{finalDrive},
-                primary_drive_ratio = #{primaryDriveRatio}, primary_ratio = #{primaryRatio}, gear_ratio = #{gearRatio},
-                transmission_ratio = #{transmissionRatio}, secondary_ratio = #{secondaryRatio}, gear_ratios = #{gearRatios},
-                clutch = #{clutch}
-            WHERE motorcycleID = #{motorcycleID}
-        </update>
+    <!-- 데이터 업데이트 -->
+    <update id="updateMotorcycle" parameterType="com.example.motorcycle.domain.MotorcycleDomain">
+        UPDATE Motorcycle
+        <set>
+            <if test="brand != null">brand = #{brand},</if>
+            <if test="model != null">model = #{model},</if>
+            <if test="years != null">years = #{years},</if>
+            <if test="production != null">production = #{production},</if>
+            <if test="replica != null">replica = #{replica},</if>
+            <if test="cruiser != null">cruiser = #{cruiser},</if>
+            <if test="tourer != null">tourer = #{tourer},</if>
+            <if test="adventure != null">adventure = #{adventure},</if>
+            <if test="multiPurpose != null">multiPurpose = #{multiPurpose},</if>
+            <if test="naked != null">naked = #{naked},</if>
+            <if test="cafeRacer != null">cafeRacer = #{cafeRacer},</if>
+            <if test="scrambler != null">scrambler = #{scrambler},</if>
+            <if test="offRoad != null">offRoad = #{offRoad},</if>
+            <if test="motard != null">motard = #{motard},</if>
+            <if test="trial != null">trial = #{trial},</if>
+            <if test="scooter != null">scooter = #{scooter},</if>
+            <if test="classic != null">classic = #{classic},</if>
+        </set>
+        WHERE motorcycleID = #{motorcycleID}
+    </update>
+
+    <update id="updateDimensions" parameterType="com.example.motorcycle.domain.DimensionsDomain">
+        UPDATE Dimensions
+        <set>
+            <if test="dimensions.dimensions != null">dimensions = #{dimensions.dimensions},</if>
+            <if test="dimensions.seatHeight != null">seatHeight = #{dimensions.seatHeight},</if>
+            <if test="dimensions.wheelbase != null">wheelbase = #{dimensions.wheelbase},</if>
+            <if test="dimensions.groundClearance != null">groundClearance = #{dimensions.groundClearance},</if>
+            <if test="dimensions.dryWeight != null">dryWeight = #{dimensions.dryWeight},</if>
+            <if test="dimensions.wetWeight != null">wetWeight = #{dimensions.wetWeight},</if>
+            <if test="dimensions.fuelCapacity != null">fuelCapacity = #{dimensions.fuelCapacity},</if>
+            <if test="dimensions.innerLegCurve != null">innerLegCurve = #{dimensions.innerLegCurve},</if>
+            <if test="dimensions.permittedTotalWeight != null">permittedTotalWeight = #{dimensions.permittedTotalWeight},</if>
+        </set>
+        WHERE motorcycleID = #{motorcycleID}
+    </update>
+
+    <update id="updateElectronics" parameterType="com.example.motorcycle.domain.ElectronicsDomain">
+        UPDATE Electronics
+        <set>
+            <if test="electronics.engineManagement != null">engineManagement = #{electronics.engineManagement},</if>
+            <if test="electronics.emissionControl != null">emissionControl = #{electronics.emissionControl},</if>
+            <if test="electronics.engineControl != null">engineControl = #{electronics.engineControl},</if>
+            <if test="electronics.alternator != null">alternator = #{electronics.alternator},</if>
+            <if test="electronics.battery != null">battery = #{electronics.battery},</if>
+            <if test="electronics.headlight != null">headlight = #{electronics.headlight},</if>
+            <if test="electronics.ignition != null">ignition = #{electronics.ignition},</if>
+            <if test="electronics.startSystem != null">startSystem = #{electronics.startSystem},</if>
+            <if test="electronics.tractionControl != null">tractionControl = #{electronics.tractionControl},</if>
+        </set>
+        WHERE motorcycleID = #{motorcycleID}
+    </update>
+
+    <update id="updateEngines" parameterType="com.example.motorcycle.domain.EnginesDomain">
+        UPDATE Engines
+        <set>
+            <if test="engines.engine != null">engine = #{engines.engine},</if>
+            <if test="engines.capacity != null">capacity = #{engines.capacity},</if>
+            <if test="engines.boreStroke != null">bore_stroke = #{engines.boreStroke},</if>
+            <if test="engines.compressionRatio != null">compression_ratio = #{engines.compressionRatio},</if>
+            <if test="engines.coolingSystem != null">cooling_system = #{engines.coolingSystem},</if>
+            <if test="engines.lubrication != null">lubrication = #{engines.lubrication},</if>
+            <if test="engines.maxPower != null">max_power = #{engines.maxPower},</if>
+            <if test="engines.maxTorque != null">max_torque = #{engines.maxTorque},</if>
+            <if test="engines.fuelSystem != null">fuel_system = #{engines.fuelSystem},</if>
+            <if test="engines.exhaust != null">exhaust = #{engines.exhaust},</if>
+            <if test="engines.engineOil != null">engine_oil = #{engines.engineOil},</if>
+            <if test="engines.mixtureControl != null">mixture_control = #{engines.mixtureControl},</if>
+            <if test="engines.emission != null">emission = #{engines.emission},</if>
+            <if test="engines.induction != null">induction = #{engines.induction},</if>
+        </set>
+        WHERE motorcycleID = #{motorcycleID}
+    </update>
+
+    <update id="updateFrames" parameterType="com.example.motorcycle.domain.FramesDomain">
+        UPDATE Frames
+        <set>
+            <if test="frames.frame != null">frame = #{frames.frame},</if>
+            <if test="frames.frontSuspension != null">frontSuspension = #{frames.frontSuspension},</if>
+            <if test="frames.rearSuspension != null">rearSuspension = #{frames.rearSuspension},</if>
+            <if test="frames.frontWheelTravel != null">frontWheelTravel = #{frames.frontWheelTravel},</if>
+            <if test="frames.rearWheelTravel != null">rearWheelTravel = #{frames.rearWheelTravel},</if>
+            <if test="frames.frontBrakes != null">frontBrakes = #{frames.frontBrakes},</if>
+            <if test="frames.rearBrakes != null">rearBrakes = #{frames.rearBrakes},</if>
+            <if test="frames.absSystem != null">absSystem = #{frames.absSystem},</if>
+            <if test="frames.frontWheel != null">frontWheel = #{frames.frontWheel},</if>
+            <if test="frames.rearWheel != null">rearWheel = #{frames.rearWheel},</if>
+            <if test="frames.frontTyre != null">frontTyre = #{frames.frontTyre},</if>
+            <if test="frames.rearTyre != null">rearTyre = #{frames.rearTyre},</if>
+            <if test="frames.wheels != null">wheels = #{frames.wheels},</if>
+            <if test="frames.abs != null">abs = #{frames.abs},</if>
+            <if test="frames.absPro != null">absPro = #{frames.absPro},</if>
+            <if test="frames.rake != null">rake = #{frames.rake},</if>
+            <if test="frames.trail != null">trail = #{frames.trail},</if>
+            <if test="frames.frontRim != null">frontRim = #{frames.frontRim},</if>
+            <if test="frames.rearRim != null">rearRim = #{frames.rearRim},</if>
+            <if test="frames.castor != null">castor = #{frames.castor},</if>
+            <if test="frames.steeringAngle != null">steeringAngle = #{frames.steeringAngle},</if>
+            <if test="frames.steeringHeadAngle != null">steeringHeadAngle = #{frames.steeringHeadAngle},</if>
+        </set>
+        WHERE motorcycleID = #{motorcycleID}
+    </update>
+
+    <update id="updateTransmissions" parameterType="com.example.motorcycle.domain.TransmissionsDomain">
+        UPDATE Transmissions
+        <set>
+            <if test="transmissions.transmissionDrive != null">transmission_drive = #{transmissions.transmissionDrive},</if>
+            <if test="transmissions.transmission != null">transmission = #{transmissions.transmission},</if>
+            <if test="transmissions.finalDrive != null">final_drive = #{transmissions.finalDrive},</if>
+            <if test="transmissions.primaryDriveRatio != null">primary_drive_ratio = #{transmissions.primaryDriveRatio},</if>
+            <if test="transmissions.primaryRatio != null">primary_ratio = #{transmissions.primaryRatio},</if>
+            <if test="transmissions.gearRatio != null">gear_ratio = #{transmissions.gearRatio},</if>
+            <if test="transmissions.transmissionRatio != null">transmission_ratio = #{transmissions.transmissionRatio},</if>
+            <if test="transmissions.secondaryRatio != null">secondary_ratio = #{transmissions.secondaryRatio},</if>
+            <if test="transmissions.gearRatios != null">gear_ratios = #{transmissions.gearRatios},</if>
+            <if test="transmissions.clutch != null">clutch = #{transmissions.clutch},</if>
+        </set>
+        WHERE motorcycleID = #{motorcycleID}
+    </update>
+
 
 
         <!-- 데이터 삭제 -->
-        <delete id="deleteMotorcycleData" parameterType="long">
+        <delete id="deleteMotorcycle" parameterType="long">
                 DELETE FROM Motorcycle WHERE motorcycleID = #{motorcycleID}
         </delete>
-        <delete id="deleteDimensionsData" parameterType="long">
+        <delete id="deleteDimensions" parameterType="long">
             DELETE FROM Dimensions WHERE motorcycleID = #{motorcycleID}
         </delete>
-        <delete id="deleteElectronicsData" parameterType="long">
+        <delete id="deleteElectronics" parameterType="long">
             DELETE FROM Electronics WHERE motorcycleID = #{motorcycleID}
         </delete>
-        <delete id="deleteEnginesData" parameterType="long">
+        <delete id="deleteEngines" parameterType="long">
             DELETE FROM Engines WHERE motorcycleID = #{motorcycleID}
         </delete>
-        <delete id="deleteFramesData" parameterType="long">
+        <delete id="deleteFrames" parameterType="long">
             DELETE FROM Frames WHERE motorcycleID = #{motorcycleID}
         </delete>
-        <delete id="deleteTransmissionsData" parameterType="long">
+        <delete id="deleteTransmissions" parameterType="long">
             DELETE FROM Transmissions WHERE motorcycleID = #{motorcycleID}
         </delete>
 </mapper>

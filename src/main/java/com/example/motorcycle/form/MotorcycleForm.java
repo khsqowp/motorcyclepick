@@ -1,7 +1,7 @@
 package com.example.motorcycle.form;
 
 import com.example.motorcycle.domain.*;
-import com.example.motorcycle.dto.MotorcycleDTO;
+import com.example.motorcycle.dto.*;
 import lombok.Data;
 
 @Data
@@ -46,7 +46,7 @@ public class MotorcycleForm {
     private String battery;
     private String headlight;
     private String ignition;
-    private String starting;
+    private String startSystem;
     private String tractionControl;
 
     // Engines 필드
@@ -105,6 +105,7 @@ public class MotorcycleForm {
     // toDTO 메서드: Form 데이터를 DTO로 변환
     public MotorcycleDTO toDTO() {
         MotorcycleDTO dto = new MotorcycleDTO();
+
         dto.setMotorcycleID(this.getMotorcycleID());
         dto.setBrand(this.getBrand());
         dto.setModel(this.getModel());
@@ -124,7 +125,9 @@ public class MotorcycleForm {
         dto.setScooter(this.getScooter());
         dto.setClassic(this.getClassic());
 
-        //DimensionsDTO
+        DimensionsDTO dimensionsDTO = new DimensionsDTO();
+        dimensionsDTO.setMotorcycleID(this.getMotorcycleID());
+        dto.setDimensionsDTO(dimensionsDTO);
 //        dto.getDimensionsDTO().setDimensionsID(this.dimensionsID);
         dto.getDimensionsDTO().setMotorcycleID(this.motorcycleID);
         dto.getDimensionsDTO().setDimensions(this.dimensions);
@@ -137,7 +140,9 @@ public class MotorcycleForm {
         dto.getDimensionsDTO().setInnerLegCurve(this.innerLegCurve);
         dto.getDimensionsDTO().setPermittedTotalWeight(this.permittedTotalWeight);
 
-        //ElectronicsDTO
+        ElectronicsDTO electronicsDTO = new ElectronicsDTO();
+        electronicsDTO.setMotorcycleID(this.getMotorcycleID());
+        dto.setElectronicsDTO(electronicsDTO);
 //        dto.setMotorcycleID(motorcycleID);  // 외래키 설정
         dto.getElectronicsDTO().setEngineManagement(this.engineManagement);
         dto.getElectronicsDTO().setEmissionControl(this.emissionControl);
@@ -146,10 +151,12 @@ public class MotorcycleForm {
         dto.getElectronicsDTO().setBattery(this.battery);
         dto.getElectronicsDTO().setHeadlight(this.headlight);
         dto.getElectronicsDTO().setIgnition(this.ignition);
-        dto.getElectronicsDTO().setStarting(this.starting);
+        dto.getElectronicsDTO().setStartSystem(this.startSystem);
         dto.getElectronicsDTO().setTractionControl(this.tractionControl);
 
-        //EnginesDTO
+        EnginesDTO enginesDTO = new EnginesDTO();
+        enginesDTO.setMotorcycleID(this.getMotorcycleID());
+        dto.setEnginesDTO(enginesDTO);
         dto.getEnginesDTO().setMotorcycleID(this.getMotorcycleID());
         dto.getEnginesDTO().setEngine(this.getEngine());
         dto.getEnginesDTO().setCapacity(this.getCapacity());
@@ -166,7 +173,9 @@ public class MotorcycleForm {
         dto.getEnginesDTO().setEmission(this.getEmission());
         dto.getEnginesDTO().setInduction(this.getInduction());
 
-        //FramesDTO
+        FramesDTO framesDTO = new FramesDTO();
+        framesDTO.setMotorcycleID(this.getMotorcycleID());
+        dto.setFramesDTO(framesDTO);
         dto.getFramesDTO().setFrame(this.getFrame());
         dto.getFramesDTO().setFrontSuspension(this.getFrontSuspension());
         dto.getFramesDTO().setRearSuspension(this.getRearSuspension());
@@ -190,7 +199,9 @@ public class MotorcycleForm {
         dto.getFramesDTO().setSteeringAngle(this.getSteeringAngle());
         dto.getFramesDTO().setSteeringHeadAngle(this.getSteeringHeadAngle());
 
-        //TransmissionsDTO
+        TransmissionsDTO transmissionsDTO = new TransmissionsDTO();
+        transmissionsDTO.setMotorcycleID(this.getMotorcycleID());
+        dto.setTransmissionsDTO(transmissionsDTO);
         dto.getTransmissionsDTO().setTransmissionDrive(this.getTransmissionDrive());
         dto.getTransmissionsDTO().setTransmission(this.getTransmission());
         dto.getTransmissionsDTO().setFinalDrive(this.getFinalDrive());
@@ -248,7 +259,7 @@ public class MotorcycleForm {
         form.setBattery(dto.getElectronicsDTO().getBattery());
         form.setHeadlight(dto.getElectronicsDTO().getHeadlight());
         form.setIgnition(dto.getElectronicsDTO().getIgnition());
-        form.setStarting(dto.getElectronicsDTO().getStarting());
+        form.setStartSystem(dto.getElectronicsDTO().getStartSystem());
         form.setTractionControl(dto.getElectronicsDTO().getTractionControl());
 
         // Engines 정보 설정
@@ -305,4 +316,5 @@ public class MotorcycleForm {
 
         return form;
     }
+
 }

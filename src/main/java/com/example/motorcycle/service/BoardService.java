@@ -1,76 +1,87 @@
-//package com.example.motorcycle.service;
-//
-//import com.example.motorcycle.dto.BoardForm;
-//import com.example.motorcycle.domain.MotorcycleSpec;
-////import com.example.motorcycle.repository.BoardRepository;
-//import lombok.RequiredArgsConstructor;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.stereotype.Service;
-//
-//import java.util.List;
-//
-//@Service
-//@RequiredArgsConstructor
-//public class BoardService {
-//
-//    private final BoardRepository boardRepository;
-//
-//    // 설문 응답을 바탕으로 추천 오토바이를 가져옴
-//    public List<MotorcycleSpec> getRecommendedBikes(BoardForm boardForm) {
-//        // boardForm의 값을 바탕으로 추천 로직을 구현
-//
-//
-//
-////        /*여기서 q1 ~ q20 값들을 통해 계산하기
-////        1. 기통수, CC 기준
-////        2. 마력 기준
-////        3. 휠베이스 핸들바 무게 기준
-////        4. 고배기량, 휠베이스, 연비, 무게, 서스펜션트래블 기준
-////        5. 낮은 배기량, 연비, 무게, 유지보수 비용 기준
-////        6. 레플리카, 멀티퍼포즈, 어드벤처 등
-////        7. 레플리카, 스포츠투어러, 카페레이서 등
-////        8. 투어러, 크루저, 어드벤처, 클래식 등
-////        9. 시트고 높이 기준
-////        10. abs유무, tcs유무
-////        11. 브랜드별 수치화, 배기량별 수치화, 모델별 고질병 확인
-////        12. 레플리카, 네이키드 제외(추가 가능성 ㅇ)
-////        13. 연비와 배기량 비례계산
-////        14. 11번 동일
-////        15. 11번 동일
-////        16. 바이크 금액별 상한치 조사
-////        17. 연도별 바이크 판매량 조사해서 수치화
-////        18. 바이크 장르별 조사
-////        19. 바이크 판매량 + 중고카페 크롤링
-////        20. 16번 데이터와 연결하여 계산
-////        주행 목적 및 스타일
-////1. 나는 고동감이 넘치는 바이크를 원한다.
-////2. 나는 빠르게 달릴 수 있는 바이크를 원한다.
-////3. 나는 편하게 탈 수 있는 바이크를 원한다.
-////4. 나는 투어와 같은 장거리 목적으로 탈 생각이다.
-////5. 나는 출퇴근용으로 바이크를 사용할 계획이다.
-////
-////바이크 특성 및 디자인
-////6. 나는 카울이 있는 바이크가 좋다.
-////7. 나는 핸들이 낮고 숙이는 바이크가 좋다.
-////8. 나는 핸들이 높아서 편하게 탈 수 있으면 좋겠다.
-////9. 나는 시트고가 낮은 바이크를 원한다.
-////10. 나는 ABS와 같은 안전 기능이 탑재된 바이크를 원한다.
-////
-////실용성 및 유지보수
-////11. 나는 잔고장이 적은 바이크를 원한다.
-////12. 나는 짐을 많이 실을 수 있는 바이크를 원한다.
-////13. 나는 연비를 중요하게 생각한다.
-////14. 나는 자가정비를 할 예정이라 정비성이 좋았으면 좋겠다.
-////15. 나는 정비를 받을 때 금전적인 부담이 적었으면 좋겠다.
-////
-////경제성 및 가치
-////16. 나는 바이크 구매에 금전적인 부담은 없다.
-////17. 나는 사람들이 많이 구매하는 브랜드의 바이크를 원한다.
-////18. 나는 커스텀을 할 수 있는 종류가 다양했으면 좋겠다.
-////19. 나는 감가방어가 잘 되는 바이크를 구매하고 싶다.
-////20. 나는 중고 바이크 구매를 고려하고 있다.
-//
-//        int score = boardForm.getQ1() + boardForm.getQ2();
-//        return boardRepository.findByBrand(String.valueOf(score));
-//    }
-//}
+package com.example.motorcycle.service;
+
+import com.example.motorcycle.form.BoardForm;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class BoardService {
+
+    // 설문 응답 정수값들을 받아옴
+    public Object getRecommendedBikes(BoardForm boardForm) {
+        // Q1-Q5: 주행 목적 및 스타일
+        int ridingStyleScore = formCalculate(
+                boardForm.getQ1(),  // 고동감
+                boardForm.getQ2(),  // 속도
+                boardForm.getQ3(),  // 편안함
+                boardForm.getQ4(),  // 투어링
+                boardForm.getQ5(),
+                boardForm.getQ6(),
+                boardForm.getQ7(),
+                boardForm.getQ8(),
+                boardForm.getQ9(),
+                boardForm.getQ10(),
+                boardForm.getQ11(),
+                boardForm.getQ12(),
+                boardForm.getQ13(),
+                boardForm.getQ14(),
+                boardForm.getQ15(),
+                boardForm.getQ16(),
+                boardForm.getQ17(),
+                boardForm.getQ18(),
+                boardForm.getQ19(),
+                boardForm.getQ20()
+        );
+        return null;
+    }
+
+    private int formCalculate(Integer q1, Integer q2, Integer q3, Integer q4, Integer q5, Integer q6, Integer q7, Integer q8, Integer q9, Integer q10, Integer q11, Integer q12, Integer q13, Integer q14, Integer q15, Integer q16, Integer q17, Integer q18, Integer q19, Integer q20) {
+        double powerWeight = 0.3;     // 고동감 가중치
+        double speedWeight = 0.3;     // 속도 가중치
+        double comfortWeight = 0.15;  // 편안함 가중치
+        double touringWeight = 0.15;  // 투어링 가중치
+        double commutingWeight = 0.1; // 통근 가중치
+        double fairingWeight = 0.2;    // 카울 가중치
+        double lowHandleWeight = 0.2;  // 낮은 핸들 가중치
+        double highHandleWeight = 0.2; // 높은 핸들 가중치
+        double lowSeatWeight = 0.2;    // 낮은 시트고 가중치
+        double safetyWeight = 0.2;     // 안전장비 가중치
+        double reliabilityWeight = 0.25;      // 신뢰성 가중치
+        double cargoWeight = 0.15;            // 적재 공간 가중치
+        double fuelEfficiencyWeight = 0.2;    // 연비 가중치
+        double selfMaintenanceWeight = 0.2;   // 자가정비 가중치
+        double maintenanceCostWeight = 0.2;   // 정비 비용 가중치
+        double budgetWeight = 0.3;          // 예산 가중치
+        double brandWeight = 0.15;          // 브랜드 가중치
+        double customWeight = 0.15;         // 커스텀 가중치
+        double depreciationWeight = 0.2;    // 감가상각 가중치
+        double usedBikeWeight = 0.2;        // 중고 바이크 가중치
+
+        return (int) ((q1 * powerWeight) +
+                (q2 * speedWeight) +
+                (q3 * comfortWeight) +
+                (q4 * touringWeight) +
+                (q5 * commutingWeight) +
+                (q6 * fairingWeight) +
+                (q7 * lowHandleWeight) +
+                (q8 * highHandleWeight) +
+                (q9 * lowSeatWeight) +
+                (q10 * safetyWeight) +
+                (q6 * fairingWeight) +
+                (q7 * lowHandleWeight) +
+                (q8 * highHandleWeight) +
+                (q9 * lowSeatWeight) +
+                (q10 * safetyWeight) +
+                (q11 * reliabilityWeight) +
+                (q12 * cargoWeight) +
+                (q13 * fuelEfficiencyWeight) +
+                (q14 * selfMaintenanceWeight) +
+                (q15 * maintenanceCostWeight) +
+                (q16 * budgetWeight) +
+                (q17 * brandWeight) +
+                (q18 * customWeight) +
+                (q19 * depreciationWeight) +
+                (q20 * usedBikeWeight));
+    }
+}

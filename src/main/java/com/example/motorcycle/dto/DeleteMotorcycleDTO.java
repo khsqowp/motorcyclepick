@@ -1,14 +1,14 @@
 package com.example.motorcycle.dto;
 
 public class DeleteMotorcycleDTO {
-    private Long deleteId;
+    private Long motorcycleID;
 
-    public Long getDeleteId() {
-        return deleteId;
+    public Long getMotorcycleID() {
+        return motorcycleID;
     }
 
-    public void setDeleteId(Long deleteId) {
-        this.deleteId = deleteId;
+    public void setMotorcycleID(Long motorcycleID) {
+        this.motorcycleID = motorcycleID;
     }
 }
 

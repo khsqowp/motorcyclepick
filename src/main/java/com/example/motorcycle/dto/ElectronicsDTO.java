@@ -15,7 +15,7 @@ public class ElectronicsDTO {
     private String battery;
     private String headlight;
     private String ignition;
-    private String starting;
+    private String startSystem;
     private String tractionControl;
 
     public ElectronicsDomain toDomain() {
@@ -30,7 +30,7 @@ public class ElectronicsDTO {
         electronics.setBattery(this.getBattery());
         electronics.setHeadlight(this.getHeadlight());
         electronics.setIgnition(this.getIgnition());
-        electronics.setStarting(this.getStarting());
+        electronics.setStartSystem(this.getStartSystem());
         electronics.setTractionControl(this.getTractionControl());
         // 필요한 필드를 설정합니다.
         return electronics;
@@ -48,7 +48,7 @@ public class ElectronicsDTO {
         dto.setBattery(electronics.getBattery());
         dto.setHeadlight(electronics.getHeadlight());
         dto.setIgnition(electronics.getIgnition());
-        dto.setStarting(electronics.getStarting());
+        dto.setStartSystem(electronics.getStartSystem());
         dto.setTractionControl(electronics.getTractionControl());
         // 필요한 필드를 설정합니다.
         return dto;

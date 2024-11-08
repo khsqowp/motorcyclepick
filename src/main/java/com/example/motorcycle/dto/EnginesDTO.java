@@ -22,7 +22,7 @@ public class EnginesDTO {
     private String mixtureControl;  // mixture_control -> mixtureControl
     private String emission;
     private String induction;
-    
+
     public EnginesDomain toDomain() {
         // Motorcycle 객체를 MotorcycleDTO 객체로 변환
         EnginesDomain engines = new EnginesDomain();

@@ -1,6 +1,4 @@
-package com.example.motorcycle.dto;
-
-
+package com.example.motorcycle.form;
 
 import lombok.Getter;
 import lombok.Setter;
