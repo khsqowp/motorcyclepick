@@ -1,33 +1,53 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>오토바이 추천 테스트</title>-->
+<!--    <link rel="stylesheet" th:href="@{/startPage.css}">-->
+<!--</head>-->
+<!--<body>-->
+<!--<header>-->
+<!--    <div class="logo">-->
+<!--        <h1 th:text="${siteTitle}">16Motorbikes</h1>-->
+<!--    </div>-->
+<!--    <div class="hero">-->
+<!--        &lt;!&ndash; 메뉴 버튼을 클릭하면 /motorcycle 경로로 이동 &ndash;&gt;-->
+<!--        <a href="/motorcycle/" class="btn btn-primary">오토바이 관리</a>-->
+<!--    </div>-->
+<!--</header>-->
+
+<!--<section class="hero">-->
+<!--    <div class="text-content">-->
+<!--        <h2 th:text="${heroText}">"드디어 제 스타일의 오토바이를 찾을 수 있어서 정말 기뻐요."</h2>-->
+<!--        <p th:text="${heroDescription}">테스트를 통해 자신에게 맞는 오토바이를 추천받아보세요!</p>-->
+
+<!--        &lt;!&ndash; '검사 실시' 버튼 클릭 시 question1to5 페이지로 이동 &ndash;&gt;-->
+<!--        <form th:action="@{/question1to5}" method="get">-->
+<!--            <button type="submit" class="start-button">검사 실시</button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오토바이 추천 테스트</title>
-    <link rel="stylesheet" th:href="@{/startPage.css}">
+    <title>16Motorbikes</title>
 </head>
 <body>
-<header>
-    <div class="logo">
-        <h1 th:text="${siteTitle}">16Motorbikes</h1>
-    </div>
-    <nav class="navbar">
-        <!-- 메뉴 버튼을 클릭하면 /motorcycle 경로로 이동 -->
-        <a href="/motorcycle/" class="btn btn-primary">오토바이 관리</a>
-    </nav>
-</header>
-
-<section class="hero">
+<div class="logo">
+    <h1 th:text="${siteTitle}">16Motorbikes</h1>
+</div>
+<div class="hero">
     <div class="text-content">
-        <h2 th:text="${heroText}">"드디어 제 스타일의 오토바이를 찾을 수 있어서 정말 기뻐요."</h2>
-        <p th:text="${heroDescription}">테스트를 통해 자신에게 맞는 오토바이를 추천받아보세요!</p>
-
-        <!-- '검사 실시' 버튼 클릭 시 question1to5 페이지로 이동 -->
-        <form th:action="@{/question1to5}" method="get">
-            <button type="submit" class="start-button">검사 실시</button>
-        </form>
+        <h2 th:text="${heroText}"></h2>
+        <p th:text="${heroDescription}"></p>
+        <a href="/question1to5" class="btn btn-primary">검사 실시</a>
     </div>
-</section>
-
+</div>
 </body>
 </html>

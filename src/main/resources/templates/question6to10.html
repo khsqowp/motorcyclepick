@@ -1,51 +1,48 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오토바이 추천 설문조사</title>
-    <link rel="stylesheet" href="question6to10.css">
 </head>
 <body>
-<section class="survey-section">
+<form method="POST" th:action="@{/question11to15}" th:object="${boardForm}">
     <div class="survey-content">
         <h2>오토바이 설문조사</h2>
         <p>아래 질문에 답변을 선택해주세요. 총 20문항 중 5문항을 보여드립니다.</p>
 
-        <form id="survey-form" th:action="@{/question11to15}" method="POST">
-            <div class="question">
-                <p>6. 나는 카울이 있는 바이크가 좋다</p>
-                <label><input type="radio" name="q6" value="1"> 그렇다</label>
-                <label><input type="radio" name="q6" value="0"> 그렇지 않다</label>
-            </div>
+        <div class="question">
+            <p>6. 나는 카울이 있는 바이크가 좋다</p>
+            <label><input th:field="*{q6}" type="radio" value="1"> 그렇다</label>
 
-            <div class="question">
-                <p>7. 나는 핸들이 낮고 숙이는 바이크가 좋다</p>
-                <label><input type="radio" name="q7" value="1"> 그렇다</label>
-                <label><input type="radio" name="q7" value="0"> 그렇지 않다</label>
-            </div>
+            <label><input th:field="*{q6}" type="radio" value="0"> 그렇지 않다</label>
+        </div>
 
-            <div class="question">
-                <p>8. 나는 핸들이 높아서 편하게 탈 수 있으면 좋겠다</p>
-                <label><input type="radio" name="q8" value="1"> 그렇다</label>
-                <label><input type="radio" name="q8" value="0"> 그렇지 않다</label>
-            </div>
+        <div class="question">
+            <p>7. 나는 핸들이 낮고 숙이는 바이크가 좋다</p>
+            <label><input th:field="*{q7}" type="radio" value="1"> 그렇다</label>
+            <label><input th:field="*{q7}" type="radio" value="0"> 그렇지 않다</label>
+        </div>
 
-            <div class="question">
-                <p>9. 나는 시트고가 낮는 바이크를 원한다</p>
-                <label><input type="radio" name="q9" value="1"> 그렇다</label>
-                <label><input type="radio" name="q9" value="0"> 그렇지 않다</label>
-            </div>
+        <div class="question">
+            <p>8. 나는 핸들이 높아서 편하게 탈 수 있으면 좋겠다</p>
+            <label><input th:field="*{q8}" type="radio" value="1"> 그렇다</label>
+            <label><input th:field="*{q8}" type="radio" value="0"> 그렇지 않다</label>
+        </div>
 
-            <div class="question">
-                <p>10. 나는 ABS와 같은 안전과 관련된 기능이 탑재된 바이크를 원한다</p>
-                <label><input type="radio" name="q10" value="1"> 그렇다</label>
-                <label><input type="radio" name="q10" value="0"> 그렇지 않다</label>
-            </div>
+        <div class="question">
+            <p>9. 나는 시트고가 낮는 바이크를 원한다</p>
+            <label><input th:field="*{q9}" type="radio" value="1"> 그렇다</label>
+            <label><input th:field="*{q9}" type="radio" value="0"> 그렇지 않다</label>
+        </div>
 
-            <button type="submit" class="submit-btn">다음</button>
-        </form>
+        <div class="question">
+            <p>10. 나는 ABS와 같은 안전과 관련된 기능이 탑재된 바이크를 원한다</p>
+            <label><input th:field="*{q10}" type="radio" value="1"> 그렇다</label>
+            <label><input th:field="*{q10}" type="radio" value="0"> 그렇지 않다</label>
+        </div>
+
+        <button class="submit-btn" type="submit">다음</button>
+
     </div>
-</section>
+</form>
 </body>
 </html>

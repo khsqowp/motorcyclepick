@@ -39,50 +39,50 @@ public class BoardController {
 
     // 설문조사 6~10번 질문 페이지
     @PostMapping("/question6to10")
-    public String showQuestion6To10(
-            @ModelAttribute("boardForm") BoardForm boardForm) {
+    public String showQuestion6To10(@ModelAttribute("boardForm") BoardForm boardForm) {
         if (!isValidQ1toQ5(boardForm)) {
             return "redirect:/question1to5";
         }
+        log.info("question1to5 문항 완료");
         return "question6to10";
     }
 
     // 설문조사 11~15번 질문 페이지
     @PostMapping("/question11to15")
-    public String showQuestion11To15(
-            @ModelAttribute("boardForm") BoardForm boardForm) {
+    public String showQuestion11To15(@ModelAttribute("boardForm") BoardForm boardForm) {
         // Q6-Q10 데이터 유효성 검사
         if (!isValidQ6toQ10(boardForm)) {
             return "redirect:/question6to10";
         }
+        log.info("question6to10 문항 완료");
         return "question11to15";
     }
 
     // 설문조사 16~20번 질문 페이지
     @PostMapping("/question16to20")
-    public String showQuestion16To20(
-            @ModelAttribute("boardForm") BoardForm boardForm) {
+    public String showQuestion16To20(@ModelAttribute("boardForm") BoardForm boardForm) {
         // Q11-Q15 데이터 유효성 검사
         if (!isValidQ11toQ15(boardForm)) {
             return "redirect:/question11to15";
         }
+        log.info("question11to15 문항 완료");
         return "question16to20";
     }
 
     // 설문조사 결과를 처리하고, resultPage.html로 이동
     @PostMapping("/resultPage")
     public String showResultPage(
-            @ModelAttribute("boardForm") BoardForm boardForm,
-            Model model) {
+            @ModelAttribute("boardForm") BoardForm boardForm, Model model) {
         // 바이크 추천 리스트를 데이터베이스에서 가져옴
         if (!isValidQ16toQ20(boardForm)) {
             return "redirect:/question16to20";
         }
-
+        log.info("question16to20 문항 완료");
         model.addAttribute("result", boardService.getRecommendedBikes(boardForm));
         // resultPage.html로 이동
         return "resultPage";
     }
+
 
     // 유효성 검사 메소드들
     private boolean isValidQ1toQ5(BoardForm form) {
