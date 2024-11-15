@@ -1,7 +1,6 @@
 package com.example.motorcycle.controller;
 
-import com.example.motorcycle.dto.DeleteMotorcycleDTO;
-import com.example.motorcycle.dto.MotorcycleDTO;
+import com.example.motorcycle.dto.*;
 import com.example.motorcycle.form.MotorcycleForm;
 import com.example.motorcycle.service.MotorcycleService;
 import lombok.RequiredArgsConstructor;
@@ -71,6 +70,16 @@ public class MotorcycleController {
         try {
             MotorcycleDTO motorcycleDTO = motorcycleService.findOneMotorcycle(motorcycleID);
             MotorcycleForm motorcycleForm = MotorcycleForm.fromDTO(motorcycleDTO);
+            if (motorcycleDTO.getEnginesDTO() == null) {
+                motorcycleDTO.setEnginesDTO(new EnginesDTO());
+            }
+            if (motorcycleDTO.getElectronicsDTO() == null) {
+                motorcycleDTO.setElectronicsDTO(new ElectronicsDTO());
+            }
+            if (motorcycleDTO.getDimensionsDTO() == null) {
+                motorcycleDTO.setDimensionsDTO(new DimensionsDTO());
+            }
+
             model.addAttribute("motorcycleDTO", motorcycleDTO);
             model.addAttribute("motorcycleForm", motorcycleForm);
             return "edit";

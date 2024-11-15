@@ -11,169 +11,178 @@
                 <result property="brand" column="brand" />
                 <result property="model" column="model" />
                 <result property="years" column="years" />
-                <result property="production" column="production" />
+<!--                <result property="production" column="production" />-->
                 <result property="replica" column="replica" />
                 <result property="cruiser" column="cruiser" />
                 <result property="tourer" column="tourer" />
                 <result property="adventure" column="adventure" />
                 <result property="multiPurpose" column="multiPurpose" />
                 <result property="naked" column="naked" />
-                <result property="cafeRacer" column="cafeRacer" />
                 <result property="scrambler" column="scrambler" />
                 <result property="offRoad" column="offRoad" />
                 <result property="motard" column="motard" />
                 <result property="trial" column="trial" />
                 <result property="scooter" column="scooter" />
                 <result property="classic" column="classic" />
+                <result property="cafeRacer" column="cafe_racer" />
 
-            <association property="dimensionsDomain" javaType="com.example.motorcycle.domain.DimensionsDomain">
-                <result property="dimensions" column="dimensions" />
-                <result property="seatHeight" column="seatHeight" />
+
+            <association property="dimensionsDomain"
+                         javaType="com.example.motorcycle.domain.DimensionsDomain"
+                         notNullColumn="motorcycleID">
                 <result property="wheelbase" column="wheelbase" />
-                <result property="groundClearance" column="groundClearance" />
-                <result property="dryWeight" column="dryWeight" />
-                <result property="wetWeight" column="wetWeight" />
-                <result property="fuelCapacity" column="fuelCapacity" />
-                <result property="innerLegCurve" column="innerLegCurve" />
-                <result property="permittedTotalWeight" column="permittedTotalWeight" />
+                <result property="seatHeight" column="seat_height" />
+                <result property="wetWeight" column="wet_weight" />
+                <result property="fuelCapacity" column="fuel_capacity" />
+                <result property="groundClearance" column="ground_clearance" />
+                <result property="dryWeight" column="dry_weight" />
+                <result property="length" column="length" />
+                <result property="width" column="width" />
+                <result property="height" column="height" />
+                <result property="frontTyreWidth" column="front_tyre_width" />
+                <result property="frontTyreAspectRatio" column="front_tyre_aspect_ratio" />
+                <result property="frontTyreStructure" column="front_tyre_structure" />
+                <result property="frontTyreDiameter" column="front_tyre_diameter" />
+                <result property="rearTyreWidth" column="rear_tyre_width" />
+                <result property="rearTyreAspectRatio" column="rear_tyre_aspect_ratio" />
+                <result property="rearTyreStructure" column="rear_tyre_structure" />
+                <result property="rearTyreDiameter" column="rear_tyre_diameter" />
+                <result property="frontBrakeDiscCount" column="front_brake_disc_count" />
+                <result property="frontBrakeDiscSize" column="front_brake_disc_size" />
+                <result property="frontBrakeDiscType" column="front_brake_disc_type" />
+                <result property="frontBrakePistonCount" column="front_brake_piston_count" />
+                <result property="rearBrakeDiscSize" column="rear_brake_disc_size" />
+                <result property="rearBrakeDiscType" column="rear_brake_disc_type" />
+                <result property="rearBrakePistonCount" column="rear_brake_piston_count" />
+                <result property="frameType" column="frame_type" />
+                <result property="frameMaterial" column="frame_material" />
             </association>
 
-            <association property="electronicsDomain" javaType="com.example.motorcycle.domain.ElectronicsDomain">
-                <result property="engineManagement" column="engineManagement" />
-                <result property="emissionControl" column="emissionControl" />
-                <result property="engineControl" column="engineControl" />
-                <result property="alternator" column="alternator" />
-                <result property="battery" column="battery" />
-                <result property="headlight" column="headlight" />
-                <result property="ignition" column="ignition" />
-                <result property="startSystem" column="startSystem" />
-                <result property="tractionControl" column="tractionControl" />
+            <association property="electronicsDomain"
+                         javaType="com.example.motorcycle.domain.ElectronicsDomain"
+                         notNullColumn="motorcycleID">
+                <result property="startSystem" column="start_system" />
+                <result property="abs" column="abs" />
+                <result property="tcs" column="tcs" />
+                <result property="cruiseControl" column="cruise_control" />
+                <result property="assistSlipperClutch" column="assist_slipper_clutch" />
+                <result property="electricScreen" column="electronic_screen" />
+                <result property="clutchAssistSystem" column="clutch_assist_system" />
+                <result property="imu" column="imu" />
+                <result property="corneringAbs" column="cornering_abs" />
+                <result property="wheelieControl" column="wheelie_control" />
+                <result property="ridingModeChange" column="riding_mode_change" />
+                <result property="bankingAngleDisplay" column="banking_angle_display" />
+                <result property="absLevelControl" column="abs_level_control" />
+                <result property="quickshiftUp" column="quickshift_up" />
+                <result property="quickshiftUpDown" column="quickshift_up_down" />
             </association>
 
-            <association property="enginesDomain" javaType="com.example.motorcycle.domain.EnginesDomain">
-                <result property="engine" column="engine" />
+            <association property="enginesDomain"
+                         javaType="com.example.motorcycle.domain.EnginesDomain"
+                         notNullColumn="motorcycleID">
                 <result property="capacity" column="capacity" />
                 <result property="boreStroke" column="bore_stroke" />
                 <result property="compressionRatio" column="compression_ratio" />
                 <result property="coolingSystem" column="cooling_system" />
                 <result property="lubrication" column="lubrication" />
-                <result property="maxPower" column="max_power" />
-                <result property="maxTorque" column="max_torque" />
                 <result property="fuelSystem" column="fuel_system" />
-                <result property="exhaust" column="exhaust" />
-                <result property="engineOil" column="engine_oil" />
-                <result property="mixtureControl" column="mixture_control" />
                 <result property="emission" column="emission" />
                 <result property="induction" column="induction" />
-            </association>
-
-            <association property="framesDomain" javaType="com.example.motorcycle.domain.FramesDomain">
-                <result property="frame" column="frame" />
-                <result property="frontSuspension" column="frontSuspension" />
-                <result property="rearSuspension" column="rearSuspension" />
-                <result property="frontWheelTravel" column="frontWheelTravel" />
-                <result property="rearWheelTravel" column="rearWheelTravel" />
-                <result property="frontBrakes" column="frontBrakes" />
-                <result property="rearBrakes" column="rearBrakes" />
-                <result property="absSystem" column="absSystem" />
-                <result property="frontWheel" column="frontWheel" />
-                <result property="rearWheel" column="rearWheel" />
-                <result property="frontTyre" column="frontTyre" />
-                <result property="rearTyre" column="rearTyre" />
-                <result property="wheels" column="wheels" />
-                <result property="abs" column="abs" />
-                <result property="absPro" column="absPro" />
-                <result property="rake" column="rake" />
-                <result property="trail" column="trail" />
-                <result property="frontRim" column="frontRim" />
-                <result property="rearRim" column="rearRim" />
-                <result property="castor" column="castor" />
-                <result property="steeringAngle" column="steeringAngle" />
-                <result property="steeringHeadAngle" column="steeringHeadAngle" />
-            </association>
-
-            <association property="transmissionsDomain" javaType="com.example.motorcycle.domain.TransmissionsDomain">
-                <result property="transmissionDrive" column="transmission_drive" />
-                <result property="transmission" column="transmission" />
-                <result property="finalDrive" column="final_drive" />
-                <result property="primaryDriveRatio" column="primary_drive_ratio" />
-                <result property="primaryRatio" column="primary_ratio" />
-                <result property="gearRatio" column="gear_ratio" />
-                <result property="transmissionRatio" column="transmission_ratio" />
-                <result property="secondaryRatio" column="secondary_ratio" />
-                <result property="gearRatios" column="gear_ratios" />
+                <result property="mileage" column="mileage" />
+                <result property="topSpeed" column="top_speed" />
                 <result property="clutch" column="clutch" />
+                <result property="transmissionGearCount" column="transmission_gear_count" />
+                <result property="transmissionType" column="transmission_type" />
+                <result property="engineStroke" column="engine_stroke" />
+                <result property="engineCylinder" column="engine_cylinder" />
+                <result property="engineCamshaft" column="engine_camshaft" />
+                <result property="engineType" column="engine_type" />
+                <result property="engineCrankAngle" column="engine_crank_angle" />
+                <result property="maxPowerHp" column="max_power_hp" />
+                <result property="maxPowerRpm" column="max_power_rpm" />
+                <result property="maxTorqueNm" column="max_torque_nm" />
+                <result property="maxTorqueRpm" column="max_torque_rpm" />
             </association>
+
         </resultMap>
         <!--단일 데이터 조회 -->
-        <select id="findByMotorcycleId" parameterType="long" resultMap="motorcycleResultMap">
-                SELECT m.*,
-                       -- Dimensions 필드들
-                       d.dimensions,d.seatHeight,d.wheelbase,d.groundClearance,d.dryWeight,d.wetWeight, d.fuelCapacity,d.innerLegCurve,d.permittedTotalWeight,
-                       -- Electronics 필드들
-                       e.engineManagement,e.emissionControl,e.engineControl,e.alternator,e.battery,e.headlight,e.ignition  AS engineIgnition,e.startSystem,e.tractionControl,
-                       -- Engines 필드들
-                       en.engine,en.capacity,en.bore_stroke,en.compression_ratio,en.cooling_system,en.lubrication,en.max_power,en.max_torque,en.fuel_system,en.exhaust,en.engine_oil,en.mixture_control,en.emission, en.induction,
-                       -- Frames 필드들
-                       f.frame,f.frontSuspension,f.rearSuspension,f.frontWheelTravel,f.rearWheelTravel,f.frontBrakes,f.rearBrakes,f.absSystem,f.frontWheel,f.rearWheel,f.frontTyre,f.rearTyre,f.wheels,f.abs, f.absPro,f.rake,f.trail,f.frontRim,f.rearRim,f.castor,f.steeringAngle,f.steeringHeadAngle,
-                       -- Transmissions 필드들
-                       t.transmission_drive,t.transmission,t.final_drive,t.primary_drive_ratio,t.primary_ratio,t.gear_ratio,t.transmission_ratio,t.secondary_ratio,t.gear_ratios,t.clutch
+    <select id="findByMotorcycleId" parameterType="long" resultMap="motorcycleResultMap">
+        SELECT m.*,
+               -- Dimensions 필드들
+               d.wheelbase, d.seat_height, d.wet_weight, d.fuel_capacity, d.ground_clearance,
+               d.dry_weight, d.length, d.width, d.height, d.front_tyre_width,
+               d.front_tyre_aspect_ratio, d.front_tyre_structure, d.front_tyre_diameter,
+               d.rear_tyre_width, d.rear_tyre_aspect_ratio, d.rear_tyre_structure,
+               d.rear_tyre_diameter, d.front_brake_disc_count, d.front_brake_disc_size,
+               d.front_brake_disc_type, d.front_brake_piston_count, d.rear_brake_disc_size,
+               d.rear_brake_disc_type, d.rear_brake_piston_count, d.frame_type, d.frame_material,
+                -- Electronics 필드들
+               e.start_system, e.abs, e.tcs, e.cruise_control, e.assist_slipper_clutch,
+               e.electric_screen, e.clutch_assist_system, e.imu, e.cornering_abs,
+               e.wheelie_control, e.riding_mode_change, e.banking_angle_display,
+               e.abs_level_control, e.quickshift_up, e.quickshift_up_down,
+               -- Engines 필드들
+               en.capacity, en.bore_stroke, en.compression_ratio, en.cooling_system,
+               en.lubrication, en.fuel_system, en.emission, en.induction, en.mileage,
+               en.top_speed, en.clutch, en.transmission_gear_count, en.transmission_type,
+               en.engine_stroke, en.engine_cylinder, en.engine_camshaft, en.engine_type,
+               en.engine_crank_angle, en.max_power_hp, en.max_power_rpm, en.max_torque_nm,
+               en.max_torque_rpm
                 FROM Motorcycle m
-                             LEFT JOIN Electronics e ON m.motorcycleID = e.motorcycleID
-                             LEFT JOIN Dimensions d ON m.motorcycleID = d.motorcycleID
-                             LEFT JOIN Frames f ON m.motorcycleID = f.motorcycleID
-                             LEFT JOIN Transmissions t ON m.motorcycleID = t.motorcycleID
-                             LEFT JOIN Engines en ON m.motorcycleID = en.motorcycleID
-                WHERE m.motorcycleID = #{motorcycleID}
-        </select>
+                LEFT JOIN Dimensions d ON m.motorcycleID = d.motorcycleID
+                LEFT JOIN Electronics e ON m.motorcycleID = e.motorcycleID
+                LEFT JOIN Engines en ON m.motorcycleID = en.motorcycleID
+        WHERE m.motorcycleID = #{motorcycleID}
+    </select>
 
         <!--전체 데이터 조회 -->
         <select id = "findAll" resultMap="motorcycleResultMap">
-                SELECT m.*,
-                       -- Dimensions 필드들
-                       d.dimensions,d.seatHeight,d.wheelbase,d.groundClearance,d.dryWeight,d.wetWeight,d.fuelCapacity,d.innerLegCurve,d.permittedTotalWeight,
-                       -- Electronics 필드들
-                       e.engineManagement,e.emissionControl,e.engineControl,e.alternator,e.battery,e.headlight,e.ignition  AS engineIgnition,e.startSystem,e.tractionControl,
-                       -- Engines 필드들
-                       en.engine,en.capacity,en.bore_stroke,en.compression_ratio,en.cooling_system,en.lubrication,en.max_power,en.max_torque,en.fuel_system,en.exhaust,en.engine_oil,en.mixture_control,en.emission,en.induction,
-                       -- Frames 필드들
-                       f.frame,f.frontSuspension,f.rearSuspension,f.frontWheelTravel,f.rearWheelTravel,f.frontBrakes,f.rearBrakes,f.absSystem,f.frontWheel,f.rearWheel,f.frontTyre,f.rearTyre,f.wheels,f.abs,f.absPro,f.rake,f.trail,f.frontRim,f.rearRim,f.castor,f.steeringAngle,f.steeringHeadAngle,
-                       -- Transmissions 필드들
-                       t.transmission_drive,t.transmission,t.final_drive,t.primary_drive_ratio,t.primary_ratio,t.gear_ratio,t.transmission_ratio,t.secondary_ratio,t.gear_ratios,t.clutch
-                FROM Motorcycle m
-                             LEFT JOIN Electronics e ON m.motorcycleID = e.motorcycleID
-                             LEFT JOIN Dimensions d ON m.motorcycleID = d.motorcycleID
-                             LEFT JOIN Frames f ON m.motorcycleID = f.motorcycleID
-                             LEFT JOIN Transmissions t ON m.motorcycleID = t.motorcycleID
-                             LEFT JOIN Engines en ON m.motorcycleID = en.motorcycleID
+            SELECT m.*,
+                   -- Dimensions 필드들
+                   d.wheelbase, d.seat_height, d.wet_weight, d.fuel_capacity, d.ground_clearance,
+                   d.dry_weight, d.length, d.width, d.height, d.front_tyre_width,
+                   d.front_tyre_aspect_ratio, d.front_tyre_structure, d.front_tyre_diameter,
+                   d.rear_tyre_width, d.rear_tyre_aspect_ratio, d.rear_tyre_structure,
+                   d.rear_tyre_diameter, d.front_brake_disc_count, d.front_brake_disc_size,
+                   d.front_brake_disc_type, d.front_brake_piston_count, d.rear_brake_disc_size,
+                   d.rear_brake_disc_type, d.rear_brake_piston_count, d.frame_type, d.frame_material,
+                   -- Electronics 필드들
+                   e.start_system, e.abs, e.tcs, e.cruise_control, e.assist_slipper_clutch,
+                   e.electric_screen, e.clutch_assist_system, e.imu, e.cornering_abs,
+                   e.wheelie_control, e.riding_mode_change, e.banking_angle_display,
+                   e.abs_level_control, e.quickshift_up, e.quickshift_up_down,
+                   -- Engines 필드들
+                   en.capacity, en.bore_stroke, en.compression_ratio, en.cooling_system,
+                   en.lubrication, en.fuel_system, en.emission, en.induction, en.mileage,
+                   en.top_speed, en.clutch, en.transmission_gear_count, en.transmission_type,
+                   en.engine_stroke, en.engine_cylinder, en.engine_camshaft, en.engine_type,
+                   en.engine_crank_angle, en.max_power_hp, en.max_power_rpm, en.max_torque_nm,
+                   en.max_torque_rpm
+            FROM Motorcycle m
+                     LEFT JOIN Dimensions d ON m.motorcycleID = d.motorcycleID
+                     LEFT JOIN Electronics e ON m.motorcycleID = e.motorcycleID
+                     LEFT JOIN Engines en ON m.motorcycleID = en.motorcycleID
         </select>
 
 
         <!-- 데이터 삽입 -->
-        <insert id="insertMotorcycleData" parameterType="com.example.motorcycle.domain.MotorcycleDomain" useGeneratedKeys="true" keyProperty="motorcycleID">
-                INSERT INTO Motorcycle (brand, model, years, production, replica, cruiser, tourer, adventure, multiPurpose, naked, cafeRacer, scrambler, offRoad, motard, trial, scooter, classic)
-                VALUES (#{brand}, #{model}, #{years}, #{production}, #{replica}, #{cruiser}, #{tourer}, #{adventure}, #{multiPurpose}, #{naked}, #{cafeRacer}, #{scrambler}, #{offRoad}, #{motard}, #{trial}, #{scooter}, #{classic})
-        </insert>
-        <insert id="insertDimensionsData" parameterType="com.example.motorcycle.domain.DimensionsDomain">
-            INSERT INTO Dimensions (motorcycleID, dimensions, seatHeight, wheelbase, groundClearance, dryWeight, wetWeight, fuelCapacity, innerLegCurve, permittedTotalWeight)
-            VALUES (#{motorcycleID}, #{dimensions}, #{seatHeight}, #{wheelbase}, #{groundClearance}, #{dryWeight}, #{wetWeight}, #{fuelCapacity}, #{innerLegCurve}, #{permittedTotalWeight})
-        </insert>
-        <insert id="insertElectronicsData" parameterType="com.example.motorcycle.domain.ElectronicsDomain">
-            INSERT INTO Electronics (motorcycleID, engineManagement, emissionControl, engineControl, alternator, battery, headlight, ignition, startSystem, tractionControl)
-            VALUES (#{motorcycleID}, #{engineManagement}, #{emissionControl}, #{engineControl}, #{alternator}, #{battery}, #{headlight}, #{ignition}, #{startSystem}, #{tractionControl})
-        </insert>
-        <insert id="insertEnginesData" parameterType="com.example.motorcycle.domain.EnginesDomain">
-            INSERT INTO Engines (motorcycleID, engine, capacity, bore_stroke, compression_ratio, cooling_system, lubrication, max_power, max_torque, fuel_system, exhaust, engine_oil, mixture_control, emission, induction)
-            VALUES (#{motorcycleID}, #{engine}, #{capacity}, #{boreStroke}, #{compressionRatio}, #{coolingSystem}, #{lubrication}, #{maxPower}, #{maxTorque}, #{fuelSystem}, #{exhaust}, #{engineOil}, #{mixtureControl}, #{emission}, #{induction})
-        </insert>
-        <insert id="insertFramesData" parameterType="com.example.motorcycle.domain.FramesDomain">
-            INSERT INTO Frames (motorcycleID, frame, frontSuspension, rearSuspension, frontWheelTravel, rearWheelTravel, frontBrakes, rearBrakes, absSystem, frontWheel, rearWheel, frontTyre, rearTyre, wheels, abs, absPro, rake, trail, frontRim, rearRim, castor, steeringAngle, steeringHeadAngle)
-            VALUES (#{motorcycleID}, #{frame}, #{frontSuspension}, #{rearSuspension}, #{frontWheelTravel}, #{rearWheelTravel}, #{frontBrakes}, #{rearBrakes}, #{absSystem}, #{frontWheel}, #{rearWheel}, #{frontTyre}, #{rearTyre}, #{wheels}, #{abs}, #{absPro}, #{rake}, #{trail}, #{frontRim}, #{rearRim}, #{castor}, #{steeringAngle}, #{steeringHeadAngle})
-        </insert>
-        <insert id="insertTransmissionsData" parameterType="com.example.motorcycle.domain.TransmissionsDomain">
-            INSERT INTO Transmissions (motorcycleID, transmission_drive, transmission, final_drive, primary_drive_ratio, primary_ratio, gear_ratio, transmission_ratio, secondary_ratio, gear_ratios, clutch)
-            VALUES (#{motorcycleID}, #{transmissionDrive}, #{transmission}, #{finalDrive}, #{primaryDriveRatio}, #{primaryRatio}, #{gearRatio}, #{transmissionRatio}, #{secondaryRatio}, #{gearRatios}, #{clutch})
-        </insert>
+    <insert id="insertMotorcycleData" parameterType="com.example.motorcycle.domain.MotorcycleDomain" useGeneratedKeys="true" keyProperty="motorcycleID">
+        INSERT INTO Motorcycle ( brand, model, years, replica, cruiser, tourer, adventure, multiPurpose, naked, scrambler, offRoad, motard, trial, scooter, classic, cafe_racer )
+        VALUES ( #{brand}, #{model}, #{years}, #{replica}, #{cruiser}, #{tourer}, #{adventure}, #{multiPurpose}, #{naked}, #{scrambler}, #{offRoad}, #{motard}, #{trial}, #{scooter}, #{classic}, #{cafeRacer} )
+    </insert>
+    <insert id="insertDimensionsData" parameterType="com.example.motorcycle.domain.DimensionsDomain">
+        INSERT INTO Dimensions ( motorcycleID, wheelbase, seat_height, wet_weight, fuel_capacity, ground_clearance, dry_weight, length, width, height, front_tyre_width, front_tyre_aspect_ratio, front_tyre_structure, front_tyre_diameter, rear_tyre_width, rear_tyre_aspect_ratio, rear_tyre_structure, rear_tyre_diameter, front_brake_disc_count, front_brake_disc_size, front_brake_disc_type, front_brake_piston_count, rear_brake_disc_size, rear_brake_disc_type, rear_brake_piston_count, frame_type, frame_material )
+        VALUES ( #{motorcycleID}, #{wheelbase}, #{seatHeight}, #{wetWeight}, #{fuelCapacity}, #{groundClearance}, #{dryWeight}, #{length}, #{width}, #{height}, #{frontTyreWidth}, #{frontTyreAspectRatio}, #{frontTyreStructure}, #{frontTyreDiameter}, #{rearTyreWidth}, #{rearTyreAspectRatio}, #{rearTyreStructure}, #{rearTyreDiameter}, #{frontBrakeDiscCount}, #{frontBrakeDiscSize}, #{frontBrakeDiscType}, #{frontBrakePistonCount}, #{rearBrakeDiscSize}, #{rearBrakeDiscType}, #{rearBrakePistonCount}, #{frameType}, #{frameMaterial} )
+    </insert>
+    <insert id="insertElectronicsData" parameterType="com.example.motorcycle.domain.ElectronicsDomain">
+        INSERT INTO Electronics ( motorcycleID, start_system, abs, tcs, cruise_control, assist_slipper_clutch, electric_screen, clutch_assist_system, imu, cornering_abs, wheelie_control, riding_mode_change, banking_angle_display, abs_level_control, quickshift_up, quickshift_up_down )
+        VALUES ( #{motorcycleID}, #{startSystem}, #{abs}, #{tcs}, #{cruiseControl}, #{assistSlipperClutch}, #{electricScreen}, #{clutchAssistSystem}, #{imu}, #{corneringAbs}, #{wheelieControl}, #{ridingModeChange}, #{bankingAngleDisplay}, #{absLevelControl}, #{quickshiftUp}, #{quickshiftUpDown} )
+    </insert>
+    <insert id="insertEnginesData" parameterType="com.example.motorcycle.domain.EnginesDomain">
+        INSERT INTO Engines ( motorcycleID, capacity, bore_stroke, compression_ratio, cooling_system, lubrication, fuel_system, emission, induction, mileage, top_speed, clutch, transmission_gear_count, transmission_type, engine_stroke, engine_cylinder, engine_camshaft, engine_type, engine_crank_angle, max_power_hp, max_power_rpm, max_torque_nm, max_torque_rpm )
+        VALUES ( #{motorcycleID}, #{capacity}, #{boreStroke}, #{compressionRatio}, #{coolingSystem}, #{lubrication}, #{fuelSystem}, #{emission}, #{induction}, #{mileage}, #{topSpeed}, #{clutch}, #{transmissionGearCount}, #{transmissionType}, #{engineStroke}, #{engineCylinder}, #{engineCamshaft}, #{engineType}, #{engineCrankAngle}, #{maxPowerHp}, #{maxPowerRpm}, #{maxTorqueNm}, #{maxTorqueRpm} )
+    </insert>
 
 
     <!-- 데이터 업데이트 -->
@@ -183,20 +192,19 @@
             <if test="brand != null">brand = #{brand},</if>
             <if test="model != null">model = #{model},</if>
             <if test="years != null">years = #{years},</if>
-            <if test="production != null">production = #{production},</if>
             <if test="replica != null">replica = #{replica},</if>
             <if test="cruiser != null">cruiser = #{cruiser},</if>
             <if test="tourer != null">tourer = #{tourer},</if>
             <if test="adventure != null">adventure = #{adventure},</if>
             <if test="multiPurpose != null">multiPurpose = #{multiPurpose},</if>
             <if test="naked != null">naked = #{naked},</if>
-            <if test="cafeRacer != null">cafeRacer = #{cafeRacer},</if>
             <if test="scrambler != null">scrambler = #{scrambler},</if>
             <if test="offRoad != null">offRoad = #{offRoad},</if>
             <if test="motard != null">motard = #{motard},</if>
             <if test="trial != null">trial = #{trial},</if>
             <if test="scooter != null">scooter = #{scooter},</if>
             <if test="classic != null">classic = #{classic},</if>
+            <if test="cafeRacer != null">cafe_racer = #{cafeRacer}</if>
         </set>
         WHERE motorcycleID = #{motorcycleID}
     </update>
@@ -204,15 +212,32 @@
     <update id="updateDimensions" parameterType="com.example.motorcycle.domain.DimensionsDomain">
         UPDATE Dimensions
         <set>
-            <if test="dimensions.dimensions != null">dimensions = #{dimensions.dimensions},</if>
-            <if test="dimensions.seatHeight != null">seatHeight = #{dimensions.seatHeight},</if>
-            <if test="dimensions.wheelbase != null">wheelbase = #{dimensions.wheelbase},</if>
-            <if test="dimensions.groundClearance != null">groundClearance = #{dimensions.groundClearance},</if>
-            <if test="dimensions.dryWeight != null">dryWeight = #{dimensions.dryWeight},</if>
-            <if test="dimensions.wetWeight != null">wetWeight = #{dimensions.wetWeight},</if>
-            <if test="dimensions.fuelCapacity != null">fuelCapacity = #{dimensions.fuelCapacity},</if>
-            <if test="dimensions.innerLegCurve != null">innerLegCurve = #{dimensions.innerLegCurve},</if>
-            <if test="dimensions.permittedTotalWeight != null">permittedTotalWeight = #{dimensions.permittedTotalWeight},</if>
+            <if test="wheelbase != null">wheelbase = #{wheelbase},</if>
+            <if test="seatHeight != null">seat_height = #{seatHeight},</if>
+            <if test="wetWeight != null">wet_weight = #{wetWeight},</if>
+            <if test="fuelCapacity != null">fuel_capacity = #{fuelCapacity},</if>
+            <if test="groundClearance != null">ground_clearance = #{groundClearance},</if>
+            <if test="dryWeight != null">dry_weight = #{dryWeight},</if>
+            <if test="length != null">length = #{length},</if>
+            <if test="width != null">width = #{width},</if>
+            <if test="height != null">height = #{height},</if>
+            <if test="frontTyreWidth != null">front_tyre_width = #{frontTyreWidth},</if>
+            <if test="frontTyreAspectRatio != null">front_tyre_aspect_ratio = #{frontTyreAspectRatio},</if>
+            <if test="frontTyreStructure != null">front_tyre_structure = #{frontTyreStructure},</if>
+            <if test="frontTyreDiameter != null">front_tyre_diameter = #{frontTyreDiameter},</if>
+            <if test="rearTyreWidth != null">rear_tyre_width = #{rearTyreWidth},</if>
+            <if test="rearTyreAspectRatio != null">rear_tyre_aspect_ratio = #{rearTyreAspectRatio},</if>
+            <if test="rearTyreStructure != null">rear_tyre_structure = #{rearTyreStructure},</if>
+            <if test="rearTyreDiameter != null">rear_tyre_diameter = #{rearTyreDiameter},</if>
+            <if test="frontBrakeDiscCount != null">front_brake_disc_count = #{frontBrakeDiscCount},</if>
+            <if test="frontBrakeDiscSize != null">front_brake_disc_size = #{frontBrakeDiscSize},</if>
+            <if test="frontBrakeDiscType != null">front_brake_disc_type = #{frontBrakeDiscType},</if>
+            <if test="frontBrakePistonCount != null">front_brake_piston_count = #{frontBrakePistonCount},</if>
+            <if test="rearBrakeDiscSize != null">rear_brake_disc_size = #{rearBrakeDiscSize},</if>
+            <if test="rearBrakeDiscType != null">rear_brake_disc_type = #{rearBrakeDiscType},</if>
+            <if test="rearBrakePistonCount != null">rear_brake_piston_count = #{rearBrakePistonCount},</if>
+            <if test="frameType != null">frame_type = #{frameType},</if>
+            <if test="frameMaterial != null">frame_material = #{frameMaterial}</if>
         </set>
         WHERE motorcycleID = #{motorcycleID}
     </update>
@@ -220,15 +245,21 @@
     <update id="updateElectronics" parameterType="com.example.motorcycle.domain.ElectronicsDomain">
         UPDATE Electronics
         <set>
-            <if test="electronics.engineManagement != null">engineManagement = #{electronics.engineManagement},</if>
-            <if test="electronics.emissionControl != null">emissionControl = #{electronics.emissionControl},</if>
-            <if test="electronics.engineControl != null">engineControl = #{electronics.engineControl},</if>
-            <if test="electronics.alternator != null">alternator = #{electronics.alternator},</if>
-            <if test="electronics.battery != null">battery = #{electronics.battery},</if>
-            <if test="electronics.headlight != null">headlight = #{electronics.headlight},</if>
-            <if test="electronics.ignition != null">ignition = #{electronics.ignition},</if>
-            <if test="electronics.startSystem != null">startSystem = #{electronics.startSystem},</if>
-            <if test="electronics.tractionControl != null">tractionControl = #{electronics.tractionControl},</if>
+            <if test="startSystem != null">start_system = #{startSystem},</if>
+            <if test="abs != null">abs = #{abs},</if>
+            <if test="tcs != null">tcs = #{tcs},</if>
+            <if test="cruiseControl != null">cruise_control = #{cruiseControl},</if>
+            <if test="assistSlipperClutch != null">assist_slipper_clutch = #{assistSlipperClutch},</if>
+            <if test="electricScreen != null">electric_screen = #{electricScreen},</if>
+            <if test="clutchAssistSystem != null">clutch_assist_system = #{clutchAssistSystem},</if>
+            <if test="imu != null">imu = #{imu},</if>
+            <if test="corneringAbs != null">cornering_abs = #{corneringAbs},</if>
+            <if test="wheelieControl != null">wheelie_control = #{wheelieControl},</if>
+            <if test="ridingModeChange != null">riding_mode_change = #{ridingModeChange},</if>
+            <if test="bankingAngleDisplay != null">banking_angle_display = #{bankingAngleDisplay},</if>
+            <if test="absLevelControl != null">abs_level_control = #{absLevelControl},</if>
+            <if test="quickshiftUp != null">quickshift_up = #{quickshiftUp},</if>
+            <if test="quickshiftUpDown != null">quickshift_up_down = #{quickshiftUpDown}</if>
         </set>
         WHERE motorcycleID = #{motorcycleID}
     </update>
@@ -236,70 +267,31 @@
     <update id="updateEngines" parameterType="com.example.motorcycle.domain.EnginesDomain">
         UPDATE Engines
         <set>
-            <if test="engines.engine != null">engine = #{engines.engine},</if>
-            <if test="engines.capacity != null">capacity = #{engines.capacity},</if>
-            <if test="engines.boreStroke != null">bore_stroke = #{engines.boreStroke},</if>
-            <if test="engines.compressionRatio != null">compression_ratio = #{engines.compressionRatio},</if>
-            <if test="engines.coolingSystem != null">cooling_system = #{engines.coolingSystem},</if>
-            <if test="engines.lubrication != null">lubrication = #{engines.lubrication},</if>
-            <if test="engines.maxPower != null">max_power = #{engines.maxPower},</if>
-            <if test="engines.maxTorque != null">max_torque = #{engines.maxTorque},</if>
-            <if test="engines.fuelSystem != null">fuel_system = #{engines.fuelSystem},</if>
-            <if test="engines.exhaust != null">exhaust = #{engines.exhaust},</if>
-            <if test="engines.engineOil != null">engine_oil = #{engines.engineOil},</if>
-            <if test="engines.mixtureControl != null">mixture_control = #{engines.mixtureControl},</if>
-            <if test="engines.emission != null">emission = #{engines.emission},</if>
-            <if test="engines.induction != null">induction = #{engines.induction},</if>
+            <if test="capacity != null">capacity = #{capacity},</if>
+            <if test="boreStroke != null">bore_stroke = #{boreStroke},</if>
+            <if test="compressionRatio != null">compression_ratio = #{compressionRatio},</if>
+            <if test="coolingSystem != null">cooling_system = #{coolingSystem},</if>
+            <if test="lubrication != null">lubrication = #{lubrication},</if>
+            <if test="fuelSystem != null">fuel_system = #{fuelSystem},</if>
+            <if test="emission != null">emission = #{emission},</if>
+            <if test="induction != null">induction = #{induction},</if>
+            <if test="mileage != null">mileage = #{mileage},</if>
+            <if test="topSpeed != null">top_speed = #{topSpeed},</if>
+            <if test="clutch != null">clutch = #{clutch},</if>
+            <if test="transmissionGearCount != null">transmission_gear_count = #{transmissionGearCount},</if>
+            <if test="transmissionType != null">transmission_type = #{transmissionType},</if>
+            <if test="engineStroke != null">engine_stroke = #{engineStroke},</if>
+            <if test="engineCylinder != null">engine_cylinder = #{engineCylinder},</if>
+            <if test="engineCamshaft != null">engine_camshaft = #{engineCamshaft},</if>
+            <if test="engineType != null">engine_type = #{engineType},</if>
+            <if test="engineCrankAngle != null">engine_crank_angle = #{engineCrankAngle},</if>
+            <if test="maxPowerHp != null">max_power_hp = #{maxPowerHp},</if>
+            <if test="maxPowerRpm != null">max_power_rpm = #{maxPowerRpm},</if>
+            <if test="maxTorqueNm != null">max_torque_nm = #{maxTorqueNm},</if>
+            <if test="maxTorqueRpm != null">max_torque_rpm = #{maxTorqueRpm}</if>
         </set>
         WHERE motorcycleID = #{motorcycleID}
     </update>
-
-    <update id="updateFrames" parameterType="com.example.motorcycle.domain.FramesDomain">
-        UPDATE Frames
-        <set>
-            <if test="frames.frame != null">frame = #{frames.frame},</if>
-            <if test="frames.frontSuspension != null">frontSuspension = #{frames.frontSuspension},</if>
-            <if test="frames.rearSuspension != null">rearSuspension = #{frames.rearSuspension},</if>
-            <if test="frames.frontWheelTravel != null">frontWheelTravel = #{frames.frontWheelTravel},</if>
-            <if test="frames.rearWheelTravel != null">rearWheelTravel = #{frames.rearWheelTravel},</if>
-            <if test="frames.frontBrakes != null">frontBrakes = #{frames.frontBrakes},</if>
-            <if test="frames.rearBrakes != null">rearBrakes = #{frames.rearBrakes},</if>
-            <if test="frames.absSystem != null">absSystem = #{frames.absSystem},</if>
-            <if test="frames.frontWheel != null">frontWheel = #{frames.frontWheel},</if>
-            <if test="frames.rearWheel != null">rearWheel = #{frames.rearWheel},</if>
-            <if test="frames.frontTyre != null">frontTyre = #{frames.frontTyre},</if>
-            <if test="frames.rearTyre != null">rearTyre = #{frames.rearTyre},</if>
-            <if test="frames.wheels != null">wheels = #{frames.wheels},</if>
-            <if test="frames.abs != null">abs = #{frames.abs},</if>
-            <if test="frames.absPro != null">absPro = #{frames.absPro},</if>
-            <if test="frames.rake != null">rake = #{frames.rake},</if>
-            <if test="frames.trail != null">trail = #{frames.trail},</if>
-            <if test="frames.frontRim != null">frontRim = #{frames.frontRim},</if>
-            <if test="frames.rearRim != null">rearRim = #{frames.rearRim},</if>
-            <if test="frames.castor != null">castor = #{frames.castor},</if>
-            <if test="frames.steeringAngle != null">steeringAngle = #{frames.steeringAngle},</if>
-            <if test="frames.steeringHeadAngle != null">steeringHeadAngle = #{frames.steeringHeadAngle},</if>
-        </set>
-        WHERE motorcycleID = #{motorcycleID}
-    </update>
-
-    <update id="updateTransmissions" parameterType="com.example.motorcycle.domain.TransmissionsDomain">
-        UPDATE Transmissions
-        <set>
-            <if test="transmissions.transmissionDrive != null">transmission_drive = #{transmissions.transmissionDrive},</if>
-            <if test="transmissions.transmission != null">transmission = #{transmissions.transmission},</if>
-            <if test="transmissions.finalDrive != null">final_drive = #{transmissions.finalDrive},</if>
-            <if test="transmissions.primaryDriveRatio != null">primary_drive_ratio = #{transmissions.primaryDriveRatio},</if>
-            <if test="transmissions.primaryRatio != null">primary_ratio = #{transmissions.primaryRatio},</if>
-            <if test="transmissions.gearRatio != null">gear_ratio = #{transmissions.gearRatio},</if>
-            <if test="transmissions.transmissionRatio != null">transmission_ratio = #{transmissions.transmissionRatio},</if>
-            <if test="transmissions.secondaryRatio != null">secondary_ratio = #{transmissions.secondaryRatio},</if>
-            <if test="transmissions.gearRatios != null">gear_ratios = #{transmissions.gearRatios},</if>
-            <if test="transmissions.clutch != null">clutch = #{transmissions.clutch},</if>
-        </set>
-        WHERE motorcycleID = #{motorcycleID}
-    </update>
-
 
 
         <!-- 데이터 삭제 -->
@@ -314,11 +306,5 @@
         </delete>
         <delete id="deleteEngines" parameterType="long">
             DELETE FROM Engines WHERE motorcycleID = #{motorcycleID}
-        </delete>
-        <delete id="deleteFrames" parameterType="long">
-            DELETE FROM Frames WHERE motorcycleID = #{motorcycleID}
-        </delete>
-        <delete id="deleteTransmissions" parameterType="long">
-            DELETE FROM Transmissions WHERE motorcycleID = #{motorcycleID}
         </delete>
 </mapper>

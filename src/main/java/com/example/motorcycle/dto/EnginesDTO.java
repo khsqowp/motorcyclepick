@@ -1,69 +1,90 @@
 package com.example.motorcycle.dto;
 
-import com.example.motorcycle.domain.ElectronicsDomain;
 import com.example.motorcycle.domain.EnginesDomain;
 import lombok.Data;
 
 @Data
 public class EnginesDTO {
     private Long enginesID;
-    private Long motorcycleID;  // 외래키
-    private String engine;
+    private Long motorcycleID;
     private Float capacity;
-    private String boreStroke;  // bore_stroke -> boreStroke
-    private String compressionRatio;  // compression_ratio -> compressionRatio
-    private String coolingSystem;  // cooling_system -> coolingSystem
+    private String boreStroke;
+    private String compressionRatio;
+    private String coolingSystem;
     private String lubrication;
-    private String maxPower;  // max_power -> maxPower
-    private String maxTorque;  // max_torque -> maxTorque
-    private String fuelSystem;  // fuel_system -> fuelSystem
-    private String exhaust;
-    private String engineOil;  // engine_oil -> engineOil
-    private String mixtureControl;  // mixture_control -> mixtureControl
+    private String fuelSystem;
     private String emission;
     private String induction;
+    private Float mileage;
+    private Float topSpeed;
+    private String clutch;
+    private String transmissionGearCount;
+    private String transmissionType;
+    private Float engineStroke;
+    private Float engineCylinder;
+    private String engineCamshaft;
+    private String engineType;
+    private String engineCrankAngle;
+    private Float maxPowerHp;
+    private Float maxPowerRpm;
+    private Float maxTorqueNm;
+    private Float maxTorqueRpm;
 
     public EnginesDomain toDomain() {
-        // Motorcycle 객체를 MotorcycleDTO 객체로 변환
         EnginesDomain engines = new EnginesDomain();
         engines.setEnginesID(this.getEnginesID());
         engines.setMotorcycleID(this.getMotorcycleID());
-        engines.setEngine(this.getEngine());
         engines.setCapacity(this.getCapacity());
         engines.setBoreStroke(this.getBoreStroke());
         engines.setCompressionRatio(this.getCompressionRatio());
         engines.setCoolingSystem(this.getCoolingSystem());
         engines.setLubrication(this.getLubrication());
-        engines.setMaxPower(this.getMaxPower());
-        engines.setMaxTorque(this.getMaxTorque());
         engines.setFuelSystem(this.getFuelSystem());
-        engines.setExhaust(this.getExhaust());
-        engines.setMixtureControl(this.getMixtureControl());
         engines.setEmission(this.getEmission());
         engines.setInduction(this.getInduction());
-        // 필요한 필드를 설정합니다.
+        engines.setMileage(this.getMileage());
+        engines.setTopSpeed(this.getTopSpeed());
+        engines.setClutch(this.getClutch());
+        engines.setTransmissionGearCount(this.getTransmissionGearCount());
+        engines.setTransmissionType(this.getTransmissionType());
+        engines.setEngineStroke(this.getEngineStroke());
+        engines.setEngineCylinder(this.getEngineCylinder());
+        engines.setEngineCamshaft(this.getEngineCamshaft());
+        engines.setEngineType(this.getEngineType());
+        engines.setEngineCrankAngle(this.getEngineCrankAngle());
+        engines.setMaxPowerHp(this.getMaxPowerHp());
+        engines.setMaxPowerRpm(this.getMaxPowerRpm());
+        engines.setMaxTorqueNm(this.getMaxTorqueNm());
+        engines.setMaxTorqueRpm(this.getMaxTorqueRpm());
         return engines;
     }
 
     public static EnginesDTO fromDomain(EnginesDomain engines) {
-        // Motorcycle 객체를 MotorcycleDTO 객체로 변환
         EnginesDTO dto = new EnginesDTO();
         dto.setEnginesID(engines.getEnginesID());
         dto.setMotorcycleID(engines.getMotorcycleID());
-        dto.setEngine(engines.getEngine());
         dto.setCapacity(engines.getCapacity());
         dto.setBoreStroke(engines.getBoreStroke());
         dto.setCompressionRatio(engines.getCompressionRatio());
         dto.setCoolingSystem(engines.getCoolingSystem());
         dto.setLubrication(engines.getLubrication());
-        dto.setMaxPower(engines.getMaxPower());
-        dto.setMaxTorque(engines.getMaxTorque());
         dto.setFuelSystem(engines.getFuelSystem());
-        dto.setExhaust(engines.getExhaust());
-        dto.setMixtureControl(engines.getMixtureControl());
         dto.setEmission(engines.getEmission());
         dto.setInduction(engines.getInduction());
-        // 필요한 필드를 설정합니다.
+        dto.setMileage(engines.getMileage());
+        dto.setTopSpeed(engines.getTopSpeed());
+        dto.setClutch(engines.getClutch());
+        dto.setTransmissionGearCount(engines.getTransmissionGearCount());
+        dto.setTransmissionType(engines.getTransmissionType());
+        dto.setEngineStroke(engines.getEngineStroke());
+        dto.setEngineCylinder(engines.getEngineCylinder());
+        dto.setEngineCamshaft(engines.getEngineCamshaft());
+        dto.setEngineType(engines.getEngineType());
+        dto.setEngineCrankAngle(engines.getEngineCrankAngle());
+        dto.setMaxPowerHp(engines.getMaxPowerHp());
+        dto.setMaxPowerRpm(engines.getMaxPowerRpm());
+        dto.setMaxTorqueNm(engines.getMaxTorqueNm());
+        dto.setMaxTorqueRpm(engines.getMaxTorqueRpm());
         return dto;
     }
 }

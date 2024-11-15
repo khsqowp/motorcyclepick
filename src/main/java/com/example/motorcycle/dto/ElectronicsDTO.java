@@ -1,56 +1,69 @@
 package com.example.motorcycle.dto;
 
-import com.example.motorcycle.domain.DimensionsDomain;
 import com.example.motorcycle.domain.ElectronicsDomain;
 import lombok.Data;
 
 @Data
 public class ElectronicsDTO {
     private Long electronicsID;
-    private Long motorcycleID;  // 외래키
-    private String engineManagement;
-    private String emissionControl;
-    private String engineControl;
-    private String alternator;
-    private String battery;
-    private String headlight;
-    private String ignition;
+    private Long motorcycleID;
     private String startSystem;
-    private String tractionControl;
+    private Boolean abs;
+    private Boolean tcs;
+    private Boolean cruiseControl;
+    private Boolean assistSlipperClutch;
+    private Boolean electricScreen;
+    private Boolean clutchAssistSystem;
+    private Boolean imu;
+    private Boolean corneringAbs;
+    private Boolean wheelieControl;
+    private Boolean ridingModeChange;
+    private Boolean bankingAngleDisplay;
+    private Boolean absLevelControl;
+    private Boolean quickshiftUp;
+    private Boolean quickshiftUpDown;
 
     public ElectronicsDomain toDomain() {
-        // Motorcycle 객체를 MotorcycleDTO 객체로 변환
         ElectronicsDomain electronics = new ElectronicsDomain();
         electronics.setElectronicsID(this.getElectronicsID());
         electronics.setMotorcycleID(this.getMotorcycleID());
-        electronics.setEngineManagement(this.getEngineManagement());
-        electronics.setEmissionControl(this.getEmissionControl());
-        electronics.setEngineControl(this.getEngineControl());
-        electronics.setAlternator(this.getAlternator());
-        electronics.setBattery(this.getBattery());
-        electronics.setHeadlight(this.getHeadlight());
-        electronics.setIgnition(this.getIgnition());
         electronics.setStartSystem(this.getStartSystem());
-        electronics.setTractionControl(this.getTractionControl());
-        // 필요한 필드를 설정합니다.
+        electronics.setAbs(this.getAbs());
+        electronics.setTcs(this.getTcs());
+        electronics.setCruiseControl(this.getCruiseControl());
+        electronics.setAssistSlipperClutch(this.getAssistSlipperClutch());
+        electronics.setElectricScreen(this.getElectricScreen());
+        electronics.setClutchAssistSystem(this.getClutchAssistSystem());
+        electronics.setImu(this.getImu());
+        electronics.setCorneringAbs(this.getCorneringAbs());
+        electronics.setWheelieControl(this.getWheelieControl());
+        electronics.setRidingModeChange(this.getRidingModeChange());
+        electronics.setBankingAngleDisplay(this.getBankingAngleDisplay());
+        electronics.setAbsLevelControl(this.getAbsLevelControl());
+        electronics.setQuickshiftUp(this.getQuickshiftUp());
+        electronics.setQuickshiftUpDown(this.getQuickshiftUpDown());
         return electronics;
     }
 
     public static ElectronicsDTO fromDomain(ElectronicsDomain electronics) {
-        // Motorcycle 객체를 MotorcycleDTO 객체로 변환
         ElectronicsDTO dto = new ElectronicsDTO();
         dto.setElectronicsID(electronics.getElectronicsID());
         dto.setMotorcycleID(electronics.getMotorcycleID());
-        dto.setEngineManagement(electronics.getEngineManagement());
-        dto.setEmissionControl(electronics.getEmissionControl());
-        dto.setEngineControl(electronics.getEngineControl());
-        dto.setAlternator(electronics.getAlternator());
-        dto.setBattery(electronics.getBattery());
-        dto.setHeadlight(electronics.getHeadlight());
-        dto.setIgnition(electronics.getIgnition());
         dto.setStartSystem(electronics.getStartSystem());
-        dto.setTractionControl(electronics.getTractionControl());
-        // 필요한 필드를 설정합니다.
+        dto.setAbs(electronics.getAbs());
+        dto.setTcs(electronics.getTcs());
+        dto.setCruiseControl(electronics.getCruiseControl());
+        dto.setAssistSlipperClutch(electronics.getAssistSlipperClutch());
+        dto.setElectricScreen(electronics.getElectricScreen());
+        dto.setClutchAssistSystem(electronics.getClutchAssistSystem());
+        dto.setImu(electronics.getImu());
+        dto.setCorneringAbs(electronics.getCorneringAbs());
+        dto.setWheelieControl(electronics.getWheelieControl());
+        dto.setRidingModeChange(electronics.getRidingModeChange());
+        dto.setBankingAngleDisplay(electronics.getBankingAngleDisplay());
+        dto.setAbsLevelControl(electronics.getAbsLevelControl());
+        dto.setQuickshiftUp(electronics.getQuickshiftUp());
+        dto.setQuickshiftUpDown(electronics.getQuickshiftUpDown());
         return dto;
     }
 }

@@ -33,47 +33,14 @@ public class MotorcycleService {
         motorcycleMapper.insertMotorcycleData(motorcycle);
         Long motorcycleID = motorcycle.getMotorcycleID();
 
-//        // 필드가 NULL일 경우 빈 객체로 초기화
-//        if (motorcycleDTO.getDimensionsDTO() == null) {
-//            motorcycleDTO.setDimensionsDTO(new DimensionsDTO());
-//        }
-//        if (motorcycleDTO.getElectronicsDTO() == null) {
-//            motorcycleDTO.setElectronicsDTO(new ElectronicsDTO());
-//        }
-//        if (motorcycleDTO.getEnginesDTO() == null) {
-//            motorcycleDTO.setEnginesDTO(new EnginesDTO());
-//        }
-//        if (motorcycleDTO.getFramesDTO() == null) {
-//            motorcycleDTO.setFramesDTO(new FramesDTO());
-//        }
-//        if (motorcycleDTO.getTransmissionsDTO() == null) {
-//            motorcycleDTO.setTransmissionsDTO(new TransmissionsDTO());
-//        }
-//
-//        //motorcycleID를 각 관련 도메인에 설정]
-//        DimensionsDomain dimensionsDomain = new DimensionsDomain();
-//        motorcycle.getDimensionsDomain().setMotorcycleID(motorcycleID);
-//        ElectronicsDomain electronicsDomain = new ElectronicsDomain();
-//        motorcycle.getElectronicsDomain().setMotorcycleID(motorcycleID);
-//        EnginesDomain enginesDomain = new EnginesDomain();
-//        motorcycle.getEnginesDomain().setMotorcycleID(motorcycleID);
-//        FramesDomain framesDomain = new FramesDomain();
-//        motorcycle.getFramesDomain().setMotorcycleID(motorcycleID);
-//        TransmissionsDomain transmissionsDomain = new TransmissionsDomain();
-//        motorcycle.getTransmissionsDomain().setMotorcycleID(motorcycleID);
-
         motorcycle.getDimensionsDomain().setMotorcycleID(motorcycleID);
         motorcycle.getElectronicsDomain().setMotorcycleID(motorcycleID);
         motorcycle.getEnginesDomain().setMotorcycleID(motorcycleID);
-        motorcycle.getFramesDomain().setMotorcycleID(motorcycleID);
-        motorcycle.getTransmissionsDomain().setMotorcycleID(motorcycleID);
 
         //관련 데이터 삽입
         motorcycleMapper.insertDimensionsData(motorcycle.getDimensionsDomain());
         motorcycleMapper.insertElectronicsData(motorcycle.getElectronicsDomain());
         motorcycleMapper.insertEnginesData(motorcycle.getEnginesDomain());
-        motorcycleMapper.insertFramesData(motorcycle.getFramesDomain());
-        motorcycleMapper.insertTransmissionsData(motorcycle.getTransmissionsDomain());
     }
 
     // Motorcycle 데이터 업데이트
@@ -90,15 +57,11 @@ public class MotorcycleService {
         motorcycle.getDimensionsDomain().setMotorcycleID(motorcycleID);
         motorcycle.getElectronicsDomain().setMotorcycleID(motorcycleID);
         motorcycle.getEnginesDomain().setMotorcycleID(motorcycleID);
-        motorcycle.getFramesDomain().setMotorcycleID(motorcycleID);
-        motorcycle.getTransmissionsDomain().setMotorcycleID(motorcycleID);
 
         motorcycleMapper.updateMotorcycle(motorcycle);  // Motorcycle 기본 데이터 업데이트
         motorcycleMapper.updateDimensions(motorcycleID, motorcycle.getDimensionsDomain());
         motorcycleMapper.updateElectronics(motorcycleID, motorcycle.getElectronicsDomain());
         motorcycleMapper.updateEngines(motorcycleID, motorcycle.getEnginesDomain());
-        motorcycleMapper.updateFrames(motorcycleID, motorcycle.getFramesDomain());
-        motorcycleMapper.updateTransmissions(motorcycleID, motorcycle.getTransmissionsDomain());
     }
 
     // Motorcycle 데이터 삭제
@@ -107,8 +70,6 @@ public class MotorcycleService {
         motorcycleMapper.deleteDimensions(motorcycleID);
         motorcycleMapper.deleteElectronics(motorcycleID);
         motorcycleMapper.deleteEngines(motorcycleID);
-        motorcycleMapper.deleteFrames(motorcycleID);
-        motorcycleMapper.deleteTransmissions(motorcycleID);
         motorcycleMapper.deleteMotorcycle(motorcycleID);  // Motorcycle 데이터 삭제
 
     }
@@ -119,7 +80,28 @@ public class MotorcycleService {
         if(motorcycle == null){
             throw new IllegalArgumentException("Motorcycle ID " + motorcycleID + "에 해당하는 데이터가 없습니다.");
         }
-        return MotorcycleDTO.fromDomain(motorcycle);  // 도메인 객체를 DTO로 변환하여 반환
+        // Domain 객체의 null 체크 및 빈 객체 생성
+        if (motorcycle.getDimensionsDomain() == null) {
+            motorcycle.setDimensionsDomain(new DimensionsDomain());
+        }
+        if (motorcycle.getElectronicsDomain() == null) {
+            motorcycle.setElectronicsDomain(new ElectronicsDomain());
+        }
+        if (motorcycle.getEnginesDomain() == null) {
+            motorcycle.setEnginesDomain(new EnginesDomain());
+        }
+        MotorcycleDTO dto = MotorcycleDTO.fromDomain(motorcycle);
+
+        if (dto.getEnginesDTO() == null) {
+            dto.setEnginesDTO(new EnginesDTO());
+        }
+        if (dto.getDimensionsDTO() == null) {
+            dto.setDimensionsDTO(new DimensionsDTO());
+        }
+        if (dto.getElectronicsDTO() == null) {
+            dto.setElectronicsDTO(new ElectronicsDTO());
+        }
+        return dto;  // 도메인 객체를 DTO로 변환하여 반환
     }
 
     // Motorcycle 데이터 조회 (리스트)
@@ -135,9 +117,6 @@ public class MotorcycleService {
     public void updateMultipleMotorcycles(List<MotorcycleForm> forms) {
         // 각각의 MotorcycleForm을 순회하여 업데이트 작업 수행
         for (MotorcycleForm form : forms) {
-//            MotorcycleDTO motorcycleDTO = form.toDTO();  // Form 객체를 DTO로 변환
-//            MotorcycleDomain motorcycle = MotorcycleDomain.fromDTO(motorcycleDTO);  // DTO를 도메인 객체로 변환
-//            motorcycleMapper.updateMotorcycle(motorcycle);  // 각 Motorcycle 데이터를 업데이트
             updateFullMotorcycle(form);
         }
     }

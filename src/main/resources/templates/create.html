@@ -20,148 +20,236 @@
     </div>
     <div>
         <label for="years">Years:</label>
-        <input type="text" id="years" th:field="*{years}" />
-    </div>
-    <div>
-        <label for="production">Production:</label>
-        <input type="text" id="production" th:field="*{production}" />
+        <input type="number" step="0.1" id="years" th:field="*{years}" />
     </div>
     <div>
         <label for="replica">Replica:</label>
-        <input type="number" id="replica" th:field="*{replica}"/>
+        <input type="number" step="0.1" id="replica" th:field="*{replica}" />
     </div>
     <div>
         <label for="cruiser">Cruiser:</label>
-        <input type="number" id="cruiser" th:field="*{cruiser}"/>
+        <input type="number" step="0.1" id="cruiser" th:field="*{cruiser}" />
     </div>
     <div>
         <label for="tourer">Tourer:</label>
-        <input type="number" id="tourer" th:field="*{tourer}"/>
+        <input type="number" step="0.1" id="tourer" th:field="*{tourer}" />
     </div>
     <div>
         <label for="adventure">Adventure:</label>
-        <input type="number" id="adventure" th:field="*{adventure}"/>
+        <input type="number" step="0.1" id="adventure" th:field="*{adventure}" />
     </div>
     <div>
-        <label for="multiPurpose">Multi-Purpose:</label>
-        <input type="number" id="multiPurpose" th:field="*{multiPurpose}"/>
+        <label for="multipurpose">Multi-Purpose:</label>
+        <input type="number" step="0.1" id="multipurpose" th:field="*{multiPurpose}" />
     </div>
     <div>
         <label for="naked">Naked:</label>
-        <input type="number" id="naked" th:field="*{naked}"/>
-    </div>
-    <div>
-        <label for="cafeRacer">Cafe Racer:</label>
-        <input type="number" id="cafeRacer" th:field="*{cafeRacer}"/>
+        <input type="number" step="0.1" id="naked" th:field="*{naked}" />
     </div>
     <div>
         <label for="scrambler">Scrambler:</label>
-        <input type="number" id="scrambler" th:field="*{scrambler}"/>
+        <input type="number" step="0.1" id="scrambler" th:field="*{scrambler}" />
     </div>
     <div>
         <label for="offRoad">Off-Road:</label>
-        <input type="number" id="offRoad" th:field="*{offRoad}"/>
+        <input type="number" step="0.1" id="offRoad" th:field="*{offRoad}" />
     </div>
     <div>
         <label for="motard">Motard:</label>
-        <input type="number" id="motard" th:field="*{motard}"/>
+        <input type="number" step="0.1" id="motard" th:field="*{motard}" />
     </div>
     <div>
         <label for="trial">Trial:</label>
-        <input type="number" id="trial" th:field="*{trial}"/>
+        <input type="number" step="0.1" id="trial" th:field="*{trial}" />
     </div>
     <div>
         <label for="scooter">Scooter:</label>
-        <input type="number" id="scooter" th:field="*{scooter}"/>
+        <input type="number" step="0.1" id="scooter" th:field="*{scooter}" />
     </div>
     <div>
         <label for="classic">Classic:</label>
-        <input type="number" id="classic" th:field="*{classic}"/>
+        <input type="number" step="0.1" id="classic" th:field="*{classic}" />
+    </div>
+    <div>
+        <label for="cafeRacer">Cafe Racer:</label>
+        <input type="number" step="0.1" id="cafeRacer" th:field="*{cafeRacer}" />
     </div>
 
     <!-- DimensionsForm -->
-    <div>
     <h2>Dimensions Details</h2>
-        <label for="dimensions">Dimensions:</label>
-        <input type="number" id="dimensions" th:field="*{dimensions}" />
+    <div>
+        <label for="wheelbase">Wheelbase:</label>
+        <input type="number" step="0.1" id="wheelbase" th:field="*{wheelbase}" />
     </div>
     <div>
         <label for="seatHeight">Seat Height:</label>
-        <input type="number" id="seatHeight" th:field="*{seatHeight}" />
-    </div>
-    <div>
-        <label for="wheelbase">Wheelbase:</label>
-        <input type="number" id="wheelbase" th:field="*{wheelbase}" />
-    </div>
-    <div>
-        <label for="groundClearance">Ground Clearance:</label>
-        <input type="number" id="groundClearance" th:field="*{groundClearance}" />
-    </div>
-    <div>
-        <label for="dryWeight">Dry Weight:</label>
-        <input type="number" id="dryWeight" th:field="*{dryWeight}" />
+        <input type="number" step="0.1" id="seatHeight" th:field="*{seatHeight}" />
     </div>
     <div>
         <label for="wetWeight">Wet Weight:</label>
-        <input type="number" id="wetWeight" th:field="*{wetWeight}" />
+        <input type="number" step="0.1" id="wetWeight" th:field="*{wetWeight}" />
     </div>
     <div>
         <label for="fuelCapacity">Fuel Capacity:</label>
-        <input type="number" id="fuelCapacity" th:field="*{fuelCapacity}" />
+        <input type="number" step="0.1" id="fuelCapacity" th:field="*{fuelCapacity}" />
     </div>
     <div>
-        <label for="innerLegCurve">Inner Leg Curve:</label>
-        <input type="text" id="innerLegCurve" th:field="*{innerLegCurve}" />
+        <label for="groundClearance">Ground Clearance:</label>
+        <input type="number" step="0.1" id="groundClearance" th:field="*{groundClearance}" />
     </div>
     <div>
-        <label for="permittedTotalWeight">Permitted Total Weight:</label>
-        <input type="text" id="permittedTotalWeight" th:field="*{permittedTotalWeight}" />
+        <label for="dryWeight">Dry Weight:</label>
+        <input type="number" step="0.1" id="dryWeight" th:field="*{dryWeight}" />
+    </div>
+    <div>
+        <label for="length">Length:</label>
+        <input type="number" step="0.1" id="length" th:field="*{length}" />
+    </div>
+    <div>
+        <label for="width">Width:</label>
+        <input type="number" step="0.1" id="width" th:field="*{width}" />
+    </div>
+    <div>
+        <label for="height">Height:</label>
+        <input type="number" step="0.1" id="height" th:field="*{height}" />
+    </div>
+    <div>
+        <label for="frontTyreWidth">Front Tyre Width:</label>
+        <input type="number" step="0.1" id="frontTyreWidth" th:field="*{frontTyreWidth}" />
+    </div>
+    <div>
+        <label for="frontTyreAspectRatio">Front Tyre Aspect Ratio:</label>
+        <input type="number" step="0.1" id="frontTyreAspectRatio" th:field="*{frontTyreAspectRatio}" />
+    </div>
+    <div>
+        <label for="frontTyreStructure">Front Tyre Structure:</label>
+        <input type="text" id="frontTyreStructure" th:field="*{frontTyreStructure}" />
+    </div>
+    <div>
+        <label for="frontTyreDiameter">Front Tyre Diameter:</label>
+        <input type="number" step="0.1" id="frontTyreDiameter" th:field="*{frontTyreDiameter}" />
+    </div>
+    <div>
+        <label for="rearTyreWidth">Rear Tyre Width:</label>
+        <input type="number" step="0.1" id="rearTyreWidth" th:field="*{rearTyreWidth}" />
+    </div>
+    <div>
+        <label for="rearTyreAspectRatio">Rear Tyre Aspect Ratio:</label>
+        <input type="number" step="0.1" id="rearTyreAspectRatio" th:field="*{rearTyreAspectRatio}" />
+    </div>
+    <div>
+        <label for="rearTyreStructure">Rear Tyre Structure:</label>
+        <input type="text" id="rearTyreStructure" th:field="*{rearTyreStructure}" />
+    </div>
+    <div>
+        <label for="rearTyreDiameter">Rear Tyre Diameter:</label>
+        <input type="number" step="0.1" id="rearTyreDiameter" th:field="*{rearTyreDiameter}" />
+    </div>
+    <div>
+        <label for="frontBrakeDiscCount">Front Brake Disc Count:</label>
+        <input type="number" step="0.1" id="frontBrakeDiscCount" th:field="*{frontBrakeDiscCount}" />
+    </div>
+    <div>
+        <label for="frontBrakeDiscSize">Front Brake Disc Size:</label>
+        <input type="number" step="0.1" id="frontBrakeDiscSize" th:field="*{frontBrakeDiscSize}" />
+    </div>
+    <div>
+        <label for="frontBrakeDiscType">Front Brake Disc Type:</label>
+        <input type="text" id="frontBrakeDiscType" th:field="*{frontBrakeDiscType}" />
+    </div>
+    <div>
+        <label for="frontBrakePistonCount">Front Brake Piston Count:</label>
+        <input type="number" step="0.1" id="frontBrakePistonCount" th:field="*{frontBrakePistonCount}" />
+    </div>
+    <div>
+        <label for="rearBrakeDiscSize">Rear Brake Disc Size:</label>
+        <input type="number" step="0.1" id="rearBrakeDiscSize" th:field="*{rearBrakeDiscSize}" />
+    </div>
+    <div>
+        <label for="rearBrakeDiscType">Rear Brake Disc Type:</label>
+        <input type="text" id="rearBrakeDiscType" th:field="*{rearBrakeDiscType}" />
+    </div>
+    <div>
+        <label for="rearBrakePistonCount">Rear Brake Piston Count:</label>
+        <input type="number" step="0.1" id="rearBrakePistonCount" th:field="*{rearBrakePistonCount}" />
+    </div>
+    <div>
+        <label for="frameType">Frame Type:</label>
+        <input type="text" id="frameType" th:field="*{frameType}" />
+    </div>
+    <div>
+        <label for="frameMaterial">Frame Material:</label>
+        <input type="text" id="frameMaterial" th:field="*{frameMaterial}" />
     </div>
 
     <!-- ElectronicsForm -->
     <h2>Electronics Details</h2>
     <div>
-        <label for="engineManagement">Engine Management:</label>
-        <input type="text" id="engineManagement" th:field="*{engineManagement}" />
-    </div>
-    <div>
-        <label for="emissionControl">Emission Control:</label>
-        <input type="text" id="emissionControl" th:field="*{emissionControl}" />
-    </div>
-    <div>
-        <label for="engineControl">Engine Control:</label>
-        <input type="text" id="engineControl" th:field="*{engineControl}" />
-    </div>
-    <div>
-        <label for="alternator">Alternator:</label>
-        <input type="text" id="alternator" th:field="*{alternator}" />
-    </div>
-    <div>
-        <label for="battery">Battery:</label>
-        <input type="text" id="battery" th:field="*{battery}" />
-    </div>
-    <div>
-        <label for="headlight">Headlight:</label>
-        <input type="text" id="headlight" th:field="*{headlight}" />
-    </div>
-    <div>
-        <label for="ignition">Ignition:</label>
-        <input type="text" id="ignition" th:field="*{ignition}" />
-    </div>
-    <div>
         <label for="startSystem">Start System:</label>
         <input type="text" id="startSystem" th:field="*{startSystem}" />
+    </div>
+    <div>
+        <label for="abs">ABS:</label>
+        <input type="checkbox" id="abs" th:field="*{abs}" />
+    </div>
+    <div>
+        <label for="tcs">TCS:</label>
+        <input type="checkbox" id="tcs" th:field="*{tcs}" />
+    </div>
+    <div>
+        <label for="cruiseControl">Cruise Control:</label>
+        <input type="checkbox" id="cruiseControl" th:field="*{cruiseControl}" />
+    </div>
+    <div>
+        <label for="assistSlipperClutch">Assist Slipper Clutch:</label>
+        <input type="checkbox" id="assistSlipperClutch" th:field="*{assistSlipperClutch}" />
+    </div>
+    <div>
+        <label for="electricScreen">Electronic Screen:</label>
+        <input type="checkbox" id="electricScreen" th:field="*{electricScreen}" />
+    </div>
+    <div>
+        <label for="clutchAssistSystem">Clutch Assist System:</label>
+        <input type="checkbox" id="clutchAssistSystem" th:field="*{clutchAssistSystem}" />
+    </div>
+    <div>
+        <label for="imu">IMU:</label>
+        <input type="checkbox" id="imu" th:field="*{imu}" />
+    </div>
+    <div>
+        <label for="corneringAbs">Cornering ABS:</label>
+        <input type="checkbox" id="corneringAbs" th:field="*{corneringAbs}" />
+    </div>
+    <div>
+        <label for="wheelieControl">Wheelie Control:</label>
+        <input type="checkbox" id="wheelieControl" th:field="*{wheelieControl}" />
+    </div>
+    <div>
+        <label for="ridingModeChange">Riding Mode Change:</label>
+        <input type="checkbox" id="ridingModeChange" th:field="*{ridingModeChange}" />
+    </div>
+    <div>
+        <label for="bankingAngleDisplay">Banking Angle Display:</label>
+        <input type="checkbox" id="bankingAngleDisplay" th:field="*{bankingAngleDisplay}" />
+    </div>
+    <div>
+        <label for="absLevelControl">ABS Level Control:</label>
+        <input type="checkbox" id="absLevelControl" th:field="*{absLevelControl}" />
+    </div>
+    <div>
+        <label for="quickshiftUp">Quickshift Up:</label>
+        <input type="checkbox" id="quickshiftUp" th:field="*{quickshiftUp}" />
+    </div>
+    <div>
+        <label for="quickshiftUpDown">Quickshift Up Down:</label>
+        <input type="checkbox" id="quickshiftUpDown" th:field="*{quickshiftUpDown}" />
     </div>
 
     <!-- EnginesForm -->
     <h2>Engine Details</h2>
     <div>
-        <label for="engine">Engine:</label>
-        <input type="text" id="engine" th:field="*{engine}" />
-    </div>
-    <div>
         <label for="capacity">Capacity:</label>
-        <input type="number" id="capacity" th:field="*{capacity}" />
+        <input type="number" step="0.1" id="capacity" th:field="*{capacity}" />
     </div>
     <div>
         <label for="boreStroke">Bore & Stroke:</label>
@@ -180,28 +268,8 @@
         <input type="text" id="lubrication" th:field="*{lubrication}" />
     </div>
     <div>
-        <label for="maxPower">Max Power:</label>
-        <input type="text" id="maxPower" th:field="*{maxPower}" />
-    </div>
-    <div>
-        <label for="maxTorque">Max Torque:</label>
-        <input type="text" id="maxTorque" th:field="*{maxTorque}" />
-    </div>
-    <div>
         <label for="fuelSystem">Fuel System:</label>
         <input type="text" id="fuelSystem" th:field="*{fuelSystem}" />
-    </div>
-    <div>
-        <label for="exhaust">Exhaust:</label>
-        <input type="text" id="exhaust" th:field="*{exhaust}" />
-    </div>
-    <div>
-        <label for="engineOil">Engine Oil:</label>
-        <input type="text" id="engineOil" th:field="*{engineOil}" />
-    </div>
-    <div>
-        <label for="mixtureControl">Mixture Control:</label>
-        <input type="text" id="mixtureControl" th:field="*{mixtureControl}" />
     </div>
     <div>
         <label for="emission">Emission:</label>
@@ -212,144 +280,62 @@
         <input type="text" id="induction" th:field="*{induction}" />
     </div>
     <div>
-    </div>
-<!--        <label for="ignition">Ignition:</label>-->
-<!--        <input type="text" id="`ignition`" th:field="*{ignition}" />-->
-
-    <!-- FramesForm -->
-    <h2>Frame Details</h2>
-
-    <div>
-        <label for="frame">Frame:</label>
-        <input type="text" id="frame" th:field="*{frame}" />
+        <label for="mileage">Mileage:</label>
+        <input type="number" step="0.1" id="mileage" th:field="*{mileage}" />
     </div>
     <div>
-        <label for="frontSuspension">Front Suspension:</label>
-        <input type="text" id="frontSuspension" th:field="*{frontSuspension}" />
-    </div>
-    <div>
-        <label for="rearSuspension">Rear Suspension:</label>
-        <input type="text" id="rearSuspension" th:field="*{rearSuspension}" />
-    </div>
-    <div>
-        <label for="frontWheelTravel">Front Wheel Travel:</label>
-        <input type="number" id="frontWheelTravel" th:field="*{frontWheelTravel}" />
-    </div>
-    <div>
-        <label for="rearWheelTravel">Rear Wheel Travel:</label>
-        <input type="number" id="rearWheelTravel" th:field="*{rearWheelTravel}" />
-    </div>
-    <div>
-        <label for="frontBrakes">Front Brakes:</label>
-        <input type="text" id="frontBrakes" th:field="*{frontBrakes}" />
-    </div>
-    <div>
-        <label for="rearBrakes">Rear Brakes:</label>
-        <input type="text" id="rearBrakes" th:field="*{rearBrakes}" />
-    </div>
-    <div>
-        <label for="absSystem">ABS System:</label>
-        <input type="text" id="absSystem" th:field="*{absSystem}" />
-    </div>
-    <div>
-        <label for="frontWheel">Front Wheel:</label>
-        <input type="text" id="frontWheel" th:field="*{frontWheel}" />
-    </div>
-    <div>
-        <label for="rearWheel">Rear Wheel:</label>
-        <input type="text" id="rearWheel" th:field="*{rearWheel}" />
-    </div>
-    <div>
-        <label for="frontTyre">Front Tyre:</label>
-        <input type="text" id="frontTyre" th:field="*{frontTyre}" />
-    </div>
-    <div>
-        <label for="rearTyre">Rear Tyre:</label>
-        <input type="text" id="rearTyre" th:field="*{rearTyre}" />
-    </div>
-    <div>
-        <label for="wheels">Wheels:</label>
-        <input type="text" id="wheels" th:field="*{wheels}" />
-    </div>
-    <div>
-        <label for="abs">ABS:</label>
-        <input type="text" id="abs" th:field="*{abs}" />
-    </div>
-    <div>
-        <label for="absPro">ABS PRO:</label>
-        <input type="text" id="absPro" th:field="*{absPro}" />
-    </div>
-    <div>
-        <label for="rake">Rake:</label>
-        <input type="text" id="rake" th:field="*{rake}" />
-    </div>
-    <div>
-        <label for="trail">Trail:</label>
-        <input type="text" id="trail" th:field="*{trail}" />
-    </div>
-    <div>
-        <label for="frontRim">Front Rim:</label>
-        <input type="text" id="frontRim" th:field="*{frontRim}" />
-    </div>
-    <div>
-        <label for="rearRim">Rear Rim:</label>
-        <input type="text" id="rearRim" th:field="*{rearRim}" />
-    </div>
-    <div>
-        <label for="castor">Castor:</label>
-        <input type="text" id="castor" th:field="*{castor}" />
-    </div>
-    <div>
-        <label for="steeringAngle">Steering Angle:</label>
-        <input type="text" id="steeringAngle" th:field="*{steeringAngle}" />
-    </div>
-    <div>
-        <label for="steeringHeadAngle">Steering Head Angle:</label>
-        <input type="text" id="steeringHeadAngle" th:field="*{steeringHeadAngle}" />
-    </div>
-
-    <!-- TransmissionsForm -->
-    <h2>Transmission Details</h2>
-    <div>
-        <label for="transmissionDrive">Transmission Drive:</label>
-        <input type="text" id="transmissionDrive" th:field="*{transmissionDrive}" />
-    </div>
-    <div>
-        <label for="transmission">Transmission:</label>
-        <input type="text" id="transmission" th:field="*{transmission}" />
-    </div>
-    <div>
-        <label for="finalDrive">Final Drive:</label>
-        <input type="text" id="finalDrive" th:field="*{finalDrive}" />
-    </div>
-    <div>
-        <label for="primaryDriveRatio">Primary Drive Ratio:</label>
-        <input type="text" id="primaryDriveRatio" th:field="*{primaryDriveRatio}" />
-    </div>
-    <div>
-        <label for="primaryRatio">Primary Ratio:</label>
-        <input type="text" id="primaryRatio" th:field="*{primaryRatio}" />
-    </div>
-    <div>
-        <label for="gearRatio">Gear Ratio:</label>
-        <input type="text" id="gearRatio" th:field="*{gearRatio}" />
-    </div>
-    <div>
-        <label for="transmissionRatio">Transmission Ratio:</label>
-        <input type="text" id="transmissionRatio" th:field="*{transmissionRatio}" />
-    </div>
-    <div>
-        <label for="secondaryRatio">Secondary Ratio:</label>
-        <input type="text" id="secondaryRatio" th:field="*{secondaryRatio}" />
-    </div>
-    <div>
-        <label for="gearRatios">Gear Ratios:</label>
-        <input type="text" id="gearRatios" th:field="*{gearRatios}" />
+        <label for="topSpeed">Top Speed:</label>
+        <input type="number" step="0.1" id="topSpeed" th:field="*{topSpeed}" />
     </div>
     <div>
         <label for="clutch">Clutch:</label>
         <input type="text" id="clutch" th:field="*{clutch}" />
     </div>
+    <div>
+        <label for="transmissionGearCount">Transmission Gear Count:</label>
+        <input type="text" id="transmissionGearCount" th:field="*{transmissionGearCount}" />
+    </div>
+    <div>
+        <label for="transmissionType">Transmission Type:</label>
+        <input type="text" id="transmissionType" th:field="*{transmissionType}" />
+    </div>
+    <div>
+        <label for="engineStroke">Engine Stroke:</label>
+        <input type="number" step="0.1" id="engineStroke" th:field="*{engineStroke}" />
+    </div>
+    <div>
+        <label for="engineCylinder">Engine Cylinder:</label>
+        <input type="number" step="0.1" id="engineCylinder" th:field="*{engineCylinder}" />
+    </div>
+    <div>
+        <label for="engineCamshaft">Engine Camshaft:</label>
+        <input type="text" id="engineCamshaft" th:field="*{engineCamshaft}" />
+    </div>
+    <div>
+        <label for="engineType">Engine Type:</label>
+        <input type="text" id="engineType" th:field="*{engineType}" />
+    </div>
+    <div>
+        <label for="engineCrankAngle">Engine Crank Angle:</label>
+        <input type="text" id="engineCrankAngle" th:field="*{engineCrankAngle}" />
+    </div>
+    <div>
+        <label for="maxPowerHp">Max Power (HP):</label>
+        <input type="number" step="0.1" id="maxPowerHp" th:field="*{maxPowerHp}" />
+    </div>
+    <div>
+        <label for="maxPowerRpm">Max Power RPM:</label>
+        <input type="number" step="0.1" id="maxPowerRpm" th:field="*{maxPowerRpm}" />
+    </div>
+    <div>
+        <label for="maxTorqueNm">Max Torque (Nm):</label>
+        <input type="number" step="0.1" id="maxTorqueNm" th:field="*{maxTorqueNm}" />
+    </div>
+    <div>
+        <label for="maxTorqueRpm">Max Torque RPM:</label>
+        <input type="number" step="0.1" id="maxTorqueRpm" th:field="*{maxTorqueRpm}" />
+    </div>
+
     <div>
         <button type="submit" class="submit-btn">Create Motorcycle</button>
     </div>

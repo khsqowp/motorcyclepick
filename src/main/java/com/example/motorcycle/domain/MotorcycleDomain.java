@@ -13,22 +13,21 @@ public class MotorcycleDomain {
 
     private String brand;
     private String model;
-    private Long years;
-    private String production;
+    private Float years;
 
-    private Integer replica;
-    private Integer cruiser;
-    private Integer tourer;
-    private Integer adventure;
-    private Integer multiPurpose;
-    private Integer naked;
-    private Integer cafeRacer;
-    private Integer scrambler;
-    private Integer offRoad;
-    private Integer motard;
-    private Integer trial;
-    private Integer scooter;
-    private Integer classic;
+    private Float replica;
+    private Float cruiser;
+    private Float tourer;
+    private Float adventure;
+    private Float multiPurpose;
+    private Float naked;
+    private Float scrambler;
+    private Float offRoad;
+    private Float motard;
+    private Float trial;
+    private Float scooter;
+    private Float classic;
+    private Float cafeRacer;
 
     @Getter
     private DimensionsDomain dimensionsDomain;
@@ -36,10 +35,6 @@ public class MotorcycleDomain {
     private ElectronicsDomain electronicsDomain;
     @Getter
     private EnginesDomain enginesDomain;
-    @Getter
-    private FramesDomain framesDomain;
-    @Getter
-    private TransmissionsDomain transmissionsDomain;
 
     public static MotorcycleDomain fromDTO(MotorcycleDTO dto) {
         MotorcycleDomain motorcycleDomain = new MotorcycleDomain();
@@ -47,27 +42,54 @@ public class MotorcycleDomain {
         motorcycleDomain.setBrand(dto.getBrand());
         motorcycleDomain.setModel(dto.getModel());
         motorcycleDomain.setYears(dto.getYears());
-        motorcycleDomain.setProduction(dto.getProduction());
         motorcycleDomain.setReplica(dto.getReplica());
         motorcycleDomain.setCruiser(dto.getCruiser());
         motorcycleDomain.setTourer(dto.getTourer());
         motorcycleDomain.setAdventure(dto.getAdventure());
         motorcycleDomain.setMultiPurpose(dto.getMultiPurpose());
         motorcycleDomain.setNaked(dto.getNaked());
-        motorcycleDomain.setCafeRacer(dto.getCafeRacer());
         motorcycleDomain.setScrambler(dto.getScrambler());
         motorcycleDomain.setOffRoad(dto.getOffRoad());
         motorcycleDomain.setMotard(dto.getMotard());
         motorcycleDomain.setTrial(dto.getTrial());
         motorcycleDomain.setScooter(dto.getScooter());
         motorcycleDomain.setClassic(dto.getClassic());
+        motorcycleDomain.setCafeRacer(dto.getCafeRacer());
+
 
         motorcycleDomain.setDimensionsDomain(DimensionsDomain.fromDTO(dto.getDimensionsDTO()));
         motorcycleDomain.setElectronicsDomain(ElectronicsDomain.fromDTO(dto.getElectronicsDTO()));
         motorcycleDomain.setEnginesDomain(EnginesDomain.fromDTO(dto.getEnginesDTO()));
-        motorcycleDomain.setFramesDomain(FramesDomain.fromDTO(dto.getFramesDTO()));
-        motorcycleDomain.setTransmissionsDomain(TransmissionsDomain.fromDTO(dto.getTransmissionsDTO()));
 
+        // 각 DTO가 null이더라도 빈 도메인 객체 생성
+        motorcycleDomain.setDimensionsDomain(dto.getDimensionsDTO() != null ?
+                DimensionsDomain.fromDTO(dto.getDimensionsDTO()) :
+                new DimensionsDomain());
+
+        motorcycleDomain.setElectronicsDomain(dto.getElectronicsDTO() != null ?
+                ElectronicsDomain.fromDTO(dto.getElectronicsDTO()) :
+                new ElectronicsDomain());
+
+        motorcycleDomain.setEnginesDomain(dto.getEnginesDTO() != null ?
+                EnginesDomain.fromDTO(dto.getEnginesDTO()) :
+                new EnginesDomain());
+//        if(dto.getEnginesDTO() != null) {
+//            motorcycleDomain.setEnginesDomain(EnginesDomain.fromDTO(dto.getEnginesDTO()));
+//        } else {
+//            motorcycleDomain.setEnginesDomain(new EnginesDomain());
+//        }
+//
+//        if(dto.getElectronicsDTO() != null) {
+//            motorcycleDomain.setElectronicsDomain(ElectronicsDomain.fromDTO(dto.getElectronicsDTO()));
+//        } else {
+//            motorcycleDomain.setElectronicsDomain(new ElectronicsDomain());
+//        }
+//
+//        if(dto.getDimensionsDTO() != null) {
+//            motorcycleDomain.setDimensionsDomain(DimensionsDomain.fromDTO(dto.getDimensionsDTO()));
+//        } else {
+//            motorcycleDomain.setDimensionsDomain(new DimensionsDomain());
+//        }
         return motorcycleDomain;
     }
 
