@@ -26,86 +26,63 @@ public class BoardController {
     @GetMapping("")
     public String startPage(Model model) {
         model.addAttribute("siteTitle", "16Motorbikes");
-        model.addAttribute("heroText", "드디어 제 스타일의 오토바이를 찾을 수 있어서 정말 기뻐요.");
+        model.addAttribute("heroText", "바이크 입문, 기변병 고민 해결을 도와드려요.");
         model.addAttribute("heroDescription", "테스트를 통해 자신에게 맞는 오토바이를 추천받아보세요!");
         return "startPage";
     }
 
-    // 설문조사 1~5번 질문 페이지
-    @GetMapping("/question1to5")
-    public String showQuestion1To5(@ModelAttribute("boardForm") BoardForm boardForm) {
-        return "question1to5";
+    @GetMapping ("/surveyMotorcycle")
+    public String showSurveyMotorcycle(@ModelAttribute("boardForm") BoardForm boardForm){
+        log.info("설문조사 시작!");
+        return "surveyMotorcycle";
     }
 
-    // 설문조사 6~10번 질문 페이지
-    @PostMapping("/question6to10")
-    public String showQuestion6To10(@ModelAttribute("boardForm") BoardForm boardForm) {
-        if (!isValidQ1toQ5(boardForm)) {
-            return "redirect:/question1to5";
-        }
-        log.info("question1to5 문항 완료");
-        return "question6to10";
-    }
-
-    // 설문조사 11~15번 질문 페이지
-    @PostMapping("/question11to15")
-    public String showQuestion11To15(@ModelAttribute("boardForm") BoardForm boardForm) {
-        // Q6-Q10 데이터 유효성 검사
-        if (!isValidQ6toQ10(boardForm)) {
-            return "redirect:/question6to10";
-        }
-        log.info("question6to10 문항 완료");
-        return "question11to15";
-    }
-
-    // 설문조사 16~20번 질문 페이지
-    @PostMapping("/question16to20")
-    public String showQuestion16To20(@ModelAttribute("boardForm") BoardForm boardForm) {
-        // Q11-Q15 데이터 유효성 검사
-        if (!isValidQ11toQ15(boardForm)) {
-            return "redirect:/question11to15";
-        }
-        log.info("question11to15 문항 완료");
-        return "question16to20";
-    }
-
-    // 설문조사 결과를 처리하고, resultPage.html로 이동
     @PostMapping("/resultPage")
     public String showResultPage(
             @ModelAttribute("boardForm") BoardForm boardForm, Model model) {
-        // 바이크 추천 리스트를 데이터베이스에서 가져옴
-        if (!isValidQ16toQ20(boardForm)) {
-            return "redirect:/question16to20";
+        // 먼저 유효성 검사
+        if (!isValidSurvey(boardForm)) {
+            log.warn("일부 문항이 작성되지 않았습니다.");
+            return "redirect:/surveyMotorcycle";
         }
-        log.info("question16to20 문항 완료");
-        model.addAttribute("result", boardService.getRecommendedBikes(boardForm));
+
+        // BoardDTO 변환과 추천 처리를 먼저 실행
+        Object result = boardService.getRecommendedBikes(boardForm);
+        model.addAttribute("result", result);
+
+        // 모든 처리가 끝난 후 로그 출력
+        log.info("====== 설문 응답 데이터 ======");
+        log.info("====== 설문 응답 데이터 ======");
+        log.info("투자 가능 비용: {}", formatPrice(Integer.parseInt(boardForm.getQuestion1())));
+        log.info("주행 목적: {}", boardForm.getQuestion2());
+        log.info("주행 스타일: {}", boardForm.getQuestion3());
+        log.info("평균 주행 속도: {}", boardForm.getQuestion4());
+        log.info("평균 주행 거리: {}", boardForm.getQuestion5());
+        log.info("희망 주행 RPM: {}", boardForm.getQuestion6());
+        log.info("선호하는 바이크 외형: {}", boardForm.getQuestion7());
+        log.info("==============================");
+        log.info("surveyMotorcycle 문항 완료");
+
         // resultPage.html로 이동
         return "resultPage";
     }
 
-
-    // 유효성 검사 메소드들
-    private boolean isValidQ1toQ5(BoardForm form) {
-        return form.getQ1() != null && form.getQ2() != null &&
-                form.getQ3() != null && form.getQ4() != null &&
-                form.getQ5() != null;
+    // 설문조사 유효성 검사
+    private boolean isValidSurvey(BoardForm boardForm) {
+        return boardForm.getQuestion1() != null && !boardForm.getQuestion1().isEmpty() &&
+                boardForm.getQuestion2() != null && !boardForm.getQuestion2().isEmpty() &&
+                boardForm.getQuestion3() != null && !boardForm.getQuestion3().isEmpty() &&
+                boardForm.getQuestion4() != null && !boardForm.getQuestion4().isEmpty() &&
+                boardForm.getQuestion5() != null && !boardForm.getQuestion5().isEmpty() &&
+                boardForm.getQuestion6() != null && !boardForm.getQuestion6().isEmpty() &&
+                boardForm.getQuestion7() != null && !boardForm.getQuestion7().isEmpty();
     }
 
-    private boolean isValidQ6toQ10(BoardForm form) {
-        return form.getQ6() != null && form.getQ7() != null &&
-                form.getQ8() != null && form.getQ9() != null &&
-                form.getQ10() != null;
-    }
-
-    private boolean isValidQ11toQ15(BoardForm form) {
-        return form.getQ11() != null && form.getQ12() != null &&
-                form.getQ13() != null && form.getQ14() != null &&
-                form.getQ15() != null;
-    }
-
-    private boolean isValidQ16toQ20(BoardForm form) {
-        return form.getQ16() != null && form.getQ17() != null &&
-                form.getQ18() != null && form.getQ19() != null &&
-                form.getQ20() != null;
+    // 가격 포맷팅을 위한 private 메서드 추가
+    private String formatPrice(int price) {
+        if (price >= 10000) {
+            return String.format("%d억원", price / 10000);
+        }
+        return String.format("%d만원", price);
     }
 }

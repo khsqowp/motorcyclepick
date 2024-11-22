@@ -1,0 +1,221 @@
+:root {
+    --razer-green: #00ff00;
+    --razer-dark: #111111;
+    --razer-gray: #222222;
+    --razer-light-gray: #333333;
+    --terminal-font: 'Consolas', 'Monaco', monospace;
+}
+
+body {
+    background-color: var(--razer-dark);
+    color: var(--razer-green);
+    font-family: var(--terminal-font);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.motorcycle-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--razer-green);
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    position: relative;
+}
+
+.section-container::before {
+    content: "RAZER CONSOLE v1.0.0";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: var(--razer-dark);
+    padding: 0 10px;
+    color: var(--razer-green);
+    font-size: 12px;
+}
+
+.section-title {
+    color: var(--razer-green);
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--razer-green);
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.section-title::before {
+    content: "> ";
+    color: var(--razer-green);
+    opacity: 0.7;
+}
+
+.details-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--razer-green);
+    border-radius: 2px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.input-group, .checkbox-group {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-left: 2px solid var(--razer-green);
+    background-color: rgba(0, 255, 0, 0.05);
+}
+
+.input-group label, .checkbox-group label {
+    color: var(--razer-green);
+    min-width: 150px;
+    font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"] {
+    background-color: var(--razer-dark);
+    border: 1px solid var(--razer-green);
+    color: var(--razer-green);
+    padding: 8px;
+    width: 100%;
+    font-family: var(--terminal-font);
+    outline: none;
+    border-radius: 2px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--razer-green);
+    background-color: var(--razer-dark);
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+}
+
+.checkbox-group input[type="checkbox"]:checked::before {
+    content: "✓";
+    position: absolute;
+    color: var(--razer-green);
+    font-size: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-group input[type="checkbox"]:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.checkbox-group input[type="number"] {
+    width: 60px;
+    text-align: center;
+    margin-left: auto;
+    background-color: var(--razer-dark);
+    border: 1px solid var(--razer-green);
+    color: var(--razer-green);
+    padding: 8px;
+    font-family: var(--terminal-font);
+    outline: none;
+    border-radius: 2px;
+}
+
+.input-group input:focus,
+.checkbox-group input:focus {
+    background-color: rgba(0, 255, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.input-group input::placeholder,
+.checkbox-group input::placeholder {
+    color: rgba(0, 255, 0, 0.3);
+}
+
+.input-group input::selection,
+.checkbox-group input::selection {
+    background-color: var(--razer-green);
+    color: var(--razer-dark);
+}
+
+.btn {
+    background-color: transparent;
+    color: var(--razer-green);
+    border: 1px solid var(--razer-green);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: var(--terminal-font);
+    font-size: 14px;
+    border-radius: 2px;
+    display: inline-block;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn::before {
+    content: "$ ";
+    opacity: 0.7;
+}
+
+.btn:hover {
+    background-color: var(--razer-green);
+    color: var(--razer-dark);
+    box-shadow: 0 0 15px var(--razer-green);
+    text-shadow: none;
+}
+
+.btn-secondary {
+    border-color: #666;
+    color: #888;
+}
+
+.btn-secondary:hover {
+    background-color: #666;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.action-container {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.section-title::after {
+    content: "_";
+    display: inline-block;
+    animation: blink 1s infinite;
+    color: var(--razer-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-group label, .checkbox-group label {
+        min-width: 120px;
+    }
+}

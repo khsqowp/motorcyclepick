@@ -6,26 +6,21 @@ import lombok.Setter;
 @Getter
 @Setter
 public class BoardForm {
+    private String question1;
+    private String question2;
+    private String question3;
+    private String question4;
+    private String question5;
+    private String question6;
+    private String question7;
 
-    private Integer q1;
-    private Integer q2;
-    private Integer q3;
-    private Integer q4;
-    private Integer q5;
-    private Integer q6;
-    private Integer q7;
-    private Integer q8;
-    private Integer q9;
-    private Integer q10;
-    private Integer q11;
-    private Integer q12;
-    private Integer q13;
-    private Integer q14;
-    private Integer q15;
-    private Integer q16;
-    private Integer q17;
-    private Integer q18;
-    private Integer q19;
-    private Integer q20;
-
+    // question1만 직접 setter 구현
+    public void setQuestion1(String question1) {
+        // 혹시 콤마가 있다면 첫 번째 값만 사용
+        if(question1 != null && question1.contains(",")) {
+            this.question1 = question1.split(",")[0];
+        } else {
+            this.question1 = question1;
+        }
+    }
 }

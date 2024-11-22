@@ -2,51 +2,51 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed; /* 셀 크기를 일정하게 설정 */
+    table-layout: fixed;
 }
 
 th, td {
-    border: 1px solid #d0d7de; /* 테이블의 테두리 색상 */
-    padding: 12px; /* 셀 내부 여백 */
-    text-align: center; /* 중앙 정렬 */
-    word-wrap: break-word; /* 긴 텍스트 줄바꿈 */
+    border: 1px solid #d0d7de;
+    padding: 12px;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 th {
-    background-color: #d9ead3; /* 헤더의 배경색 (엑셀의 헤더 스타일을 참고) */
+    background-color: #d9ead3;
     font-weight: bold;
-    color: #434343; /* 헤더 텍스트 색상 */
+    color: #434343;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f3f6f9; /* 짝수 행 배경색 (엑셀의 보기 좋게 구분된 배경색) */
+    background-color: #f3f6f9;
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #ffffff; /* 홀수 행 배경색 */
+    background-color: #ffffff;
 }
 
 tbody tr:hover {
-    background-color: #ddebf7; /* 마우스를 올렸을 때 배경색 (엑셀 셀 선택 스타일) */
+    background-color: #ddebf7;
 }
 
 td {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 텍스트 스타일 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
-    color: #333; /* 텍스트 색상 */
+    color: #333;
 }
 
 button {
-    margin-top: 15px; /* 버튼 상단 여백 */
-    padding: 10px 20px; /* 버튼 패딩 */
-    background-color: #007acc; /* 버튼 배경색 (엑셀 파란색 스타일) */
-    color: #ffffff; /* 버튼 텍스트 색상 */
-    border: none; /* 테두리 제거 */
-    border-radius: 5px; /* 테두리 둥글게 */
-    cursor: pointer; /* 마우스 포인터 변경 */
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
 }
 
 button:hover {
-    background-color: #005a9e; /* 버튼에 마우스를 올렸을 때 색상 변경 */
+    background-color: #005a9e;
 }

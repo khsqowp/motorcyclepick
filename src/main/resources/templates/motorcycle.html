@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Motorcycle Main</title>
+    <meta charset="UTF-8">
+    <title>Motorcycle Management</title>
+    <link rel="stylesheet" th:href="@{/motorcycle.css}">
+    <script src="/js/motorcycle.js"></script>   <!-- 이 부분을 추가해주세요 -->
+
 </head>
 <body>
-<h1>Motorcycle Management</h1>
+<div class="motorcycle-container">
+    <div class="section-container">
+        <h1 class="section-title">Motorcycle Management</h1>
 
-<div th:if="${message}" th:text="${message}" style="color: green;"></div>
-<div th:if="${error}" th:text="${error}" style="color: red;"></div>
+        <div th:if="${message}" th:text="${message}" class="message success"></div>
+        <div th:if="${error}" th:text="${error}" class="message error"></div>
 
-<div><!-- motorcycle.html -->
-<a th:href="@{/}" class="btn btn-secondary">시작 페이지로 돌아가기</a>
-</div>
+        <div class="action-container">
+            <div>
+                <a th:href="@{/}" class="btn btn-secondary">시작 페이지로 돌아가기</a>
+            </div>
 
-<div>
-    <h2>Motorcycle 목록 조회</h2>
-    <a th:href="@{/motorcycle/list}">전체 목록 보기</a>
-</div>
+            <div>
+                <h2 class="section-title">Motorcycle 목록 조회</h2>
+                <a th:href="@{/motorcycle/list}" class="btn">전체 목록 보기</a>
+            </div>
 
-<div>
-    <h2>Motorcycle 데이터 추가</h2>
-    <a th:href="@{/motorcycle/new}">새 데이터 추가</a>
-</div>
-<div>
-    <h2>View Motorcycle</h2>
-    <form th:action="@{/motorcycle/singleSearchID}" method="get">
-        <label>입력된 ID 조회:</label>
-        <input type="number" name="id" />
-        <button type="submit">Motorcycle 조회</button>
-    </form>
-</div>
+            <div>
+                <h2 class="section-title">Motorcycle 데이터 추가</h2>
+                <a th:href="@{/motorcycle/new}" class="btn">새 데이터 추가</a>
+            </div>
 
-<div>
-    <h2>Edit Motorcycle</h2>
-    <form th:action="@{/motorcycle/edit}" method="get">
-        <label>입력된 ID 수정:</label>
-        <input type="number" name="editId" />
-        <button type="submit">Motorcycle 수정</button>
-    </form>
-</div>
+            <div>
+                <h2 class="section-title">View Motorcycle</h2>
+                <div class="input-group">
+                    <input type="number" id="viewId" placeholder="Motorcycle ID">
+                    <button onclick="viewMotorcycle()" class="btn">Motorcycle 조회</button>
+                </div>
+            </div>
 
-<div>
-    <h2>Delete Motorcycle</h2>
-    <form th:action="@{/motorcycle/delete}" method="post" th:object="${deleteMotorcycleDTO}">
-        <div>
-        <label>입력된 ID 삭제:</label>
-        <input type="number" id="motorcycleID" th:field="*{motorcycleID}" required>
+            <div>
+                <h2 class="section-title">Edit Motorcycle</h2>
+                <div class="input-group">
+                    <input type="number" id="editId" placeholder="Motorcycle ID">
+                    <button onclick="editMotorcycle()" class="btn">Motorcycle 수정</button>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="section-title">Delete Motorcycle</h2>
+                <div class="input-group">
+                    <input type="number" id="deleteId" placeholder="Motorcycle ID">
+                    <button onclick="deleteMotorcycle()" class="btn">Motorcycle 삭제</button>
+                </div>
+            </div>
         </div>
-        <button type="submit" class="btn btn-danger">Motorcycle 삭제</button>
-    </form>
+    </div>
 </div>
+<script th:src="@{/static/js/motorcycle.js}"></script>
 </body>
 </html>

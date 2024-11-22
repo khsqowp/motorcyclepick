@@ -1,52 +1,174 @@
-<!--<!DOCTYPE html>-->
-<!--<html xmlns:th="http://www.thymeleaf.org">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>오토바이 추천 테스트</title>-->
-<!--    <link rel="stylesheet" th:href="@{/startPage.css}">-->
-<!--</head>-->
-<!--<body>-->
-<!--<header>-->
-<!--    <div class="logo">-->
-<!--        <h1 th:text="${siteTitle}">16Motorbikes</h1>-->
-<!--    </div>-->
-<!--    <div class="hero">-->
-<!--        &lt;!&ndash; 메뉴 버튼을 클릭하면 /motorcycle 경로로 이동 &ndash;&gt;-->
-<!--        <a href="/motorcycle/" class="btn btn-primary">오토바이 관리</a>-->
-<!--    </div>-->
-<!--</header>-->
-
-<!--<section class="hero">-->
-<!--    <div class="text-content">-->
-<!--        <h2 th:text="${heroText}">"드디어 제 스타일의 오토바이를 찾을 수 있어서 정말 기뻐요."</h2>-->
-<!--        <p th:text="${heroDescription}">테스트를 통해 자신에게 맞는 오토바이를 추천받아보세요!</p>-->
-
-<!--        &lt;!&ndash; '검사 실시' 버튼 클릭 시 question1to5 페이지로 이동 &ndash;&gt;-->
-<!--        <form th:action="@{/question1to5}" method="get">-->
-<!--            <button type="submit" class="start-button">검사 실시</button>-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</section>-->
-
-<!--</body>-->
-<!--</html>-->
-
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>16Motorbikes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #1a1a1a;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .motorcycle-btn {
+            background: #3b82f6;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: all 0.3s ease;
+        }
+
+        .motorcycle-btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .text-content {
+            position: absolute;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .text-content h2 {
+            font-size: 2.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .hexagon-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .text {
+            fill: #fff;
+            font-size: 14px;
+            text-anchor: middle;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-<div class="logo">
-    <h1 th:text="${siteTitle}">16Motorbikes</h1>
+<!-- 네비게이션 바 -->
+<div class="nav-container">
+    <div class="nav-content">
+        <div class="logo" th:text="${siteTitle}">16Motorbikes</div>
+        <a href="/motorcycle" class="motorcycle-btn">Motorcycle</a>
+    </div>
 </div>
+
+<!-- 히어로 섹션 -->
 <div class="hero">
     <div class="text-content">
-        <h2 th:text="${heroText}"></h2>
-        <p th:text="${heroDescription}"></p>
-        <a href="/question1to5" class="btn btn-primary">검사 실시</a>
+        <h2 th:text="${heroText}">드디어 제 스타일의 오토바이를 찾을 수 있어서 정말 기뻐요.</h2>
+        <p class="mb-8" th:text="${heroDescription}">테스트를 통해 자신에게 맞는 오토바이를 추천받아보세요!</p>
+        <a href="/surveyMotorcycle" class="btn-primary">검사 실시</a>
+    </div>
+
+    <!-- 육각형 애니메이션 -->
+    <div class="hexagon-container">
+        <svg viewBox="-175 -175 350 350">  <!-- viewBox 크기 30% 감소 -->
+            <defs>
+                <path id="text-path-1" d="M 0,-140 A 140,140 0 0,1 121,-70" />
+                <path id="text-path-2" d="M 121,-70 A 140,140 0 0,1 121,70" />
+                <path id="text-path-3" d="M 121,70 A 140,140 0 0,1 0,140" />
+                <path id="text-path-4" d="M 0,140 A 140,140 0 0,1 -121,70" />
+                <path id="text-path-5" d="M -121,70 A 140,140 0 0,1 -121,-70" />
+                <path id="text-path-6" d="M -121,-70 A 140,140 0 0,1 0,-140" />
+            </defs>
+
+            <polygon class="hexagon" fill="none" stroke="#fff" stroke-width="2">
+                <animate
+                        attributeName="points"
+                        dur="2s"
+                        fill="freeze"
+                        calcMode="spline"
+                        keySplines="0.4 0 0.2 1; 0.4 0 0.2 1"
+                        values="0,-105 91,-52.5 91,52.5 0,105 -91,52.5 -91,-52.5;
+                        0,-140 133,-56 119,63 0,126 -133,66.5 -112,-77;
+                        0,-94.5 82,-47.25 82,47.25 0,94.5 -82,47.25 -82,-47.25"
+                />
+            </polygon>
+
+            <!-- 카테고리 텍스트 위치 조정 -->
+            <text class="text" x="0" y="-108.5">레플리카</text>
+            <text class="text" x="94.5" y="-47.25">멀티퍼포즈</text>
+            <text class="text" x="94.5" y="47.25">클래식</text>
+            <text class="text" x="0" y="108.5">어드벤처</text>
+            <text class="text" x="-94.5" y="47.25">네이키드</text>
+            <text class="text" x="-94.5" y="-47.25">스쿠터</text>
+
+            <!-- 점들 위치 조정 -->
+            <circle class="text" cx="0" cy="-94.5" r="4" fill="#fff"/>
+            <circle class="text" cx="82" cy="-47.25" r="4" fill="#fff"/>
+            <circle class="text" cx="82" cy="47.25" r="4" fill="#fff"/>
+            <circle class="text" cx="0" cy="94.5" r="4" fill="#fff"/>
+            <circle class="text" cx="-82" cy="47.25" r="4" fill="#fff"/>
+            <circle class="text" cx="-82" cy="-47.25" r="4" fill="#fff"/>
+        </svg>
     </div>
 </div>
 </body>

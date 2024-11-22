@@ -1,102 +1,365 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Motorcycle Detail View</title>
+  <meta charset="UTF-8">
+  <title th:text="${motorcycleDTO.model} + ' Details'"></title>
+  <link rel="stylesheet" th:href="@{/singleSearchID.css}">
+    <script src="/js/singleSearchID.js"></script>   <!-- 이 부분을 추가해주세요 -->
+
 </head>
 <body>
-<h1 th:text="${motorcycleDTO.model} + ' 상세 정보'">Motorcycle Model Name</h1>
+<div class="motorcycle-container">
+  <div class="section-container">
+    <h1 class="section-title" th:text="${motorcycleDTO.model} + ' 상세 정보'">Motorcycle Model Name</h1>
 
-<!-- Motorcycle 기본 정보 -->
-<h2>Motorcycle 정보</h2>
-<p>motorcycleID : <span th:text="${motorcycleDTO.motorcycleID}">ID</span></p>
-<p>brand : <span th:text="${motorcycleDTO.brand}">Brand</span></p>
-<p>model : <span th:text="${motorcycleDTO.model}">Model</span></p>
-<p>years : <span th:text="${motorcycleDTO.years}">Year</span></p>
-<p>replica : <span th:text="${motorcycleDTO.replica}">Replica</span></p>
-<p>cruiser : <span th:text="${motorcycleDTO.cruiser}">Cruiser</span></p>
-<p>tourer : <span th:text="${motorcycleDTO.tourer}">Tourer</span></p>
-<p>adventure : <span th:text="${motorcycleDTO.adventure}">Adventure</span></p>
-<p>multiPurpose : <span th:text="${motorcycleDTO.multiPurpose}">Multi Purpose</span></p>
-<p>naked : <span th:text="${motorcycleDTO.naked}">Naked</span></p>
-<p>scrambler : <span th:text="${motorcycleDTO.scrambler}">Scrambler</span></p>
-<p>offRoad : <span th:text="${motorcycleDTO.offRoad}">Off Road</span></p>
-<p>motard : <span th:text="${motorcycleDTO.motard}">Motard</span></p>
-<p>trial : <span th:text="${motorcycleDTO.trial}">Trial</span></p>
-<p>scooter : <span th:text="${motorcycleDTO.scooter}">Scooter</span></p>
-<p>classic : <span th:text="${motorcycleDTO.classic}">Classic</span></p>
-<p>cafeRacer : <span th:text="${motorcycleDTO.cafeRacer}">Cafe Racer</span></p>
+    <div class="details-section">
+      <h2 class="section-title">Motorcycle 정보</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="label">motorcycleID:</span>
+          <span class="value" th:text="${motorcycleDTO.motorcycleID}">ID</span>
+        </div>
+        <div class="info-item">
+          <span class="label">brand:</span>
+          <span class="value" th:text="${motorcycleDTO.brand}">Brand</span>
+        </div>
+        <div class="info-item">
+          <span class="label">model:</span>
+          <span class="value" th:text="${motorcycleDTO.model}">Model</span>
+        </div>
+        <div class="info-item">
+          <span class="label">years:</span>
+          <span class="value" th:text="${motorcycleDTO.years}">Year</span>
+        </div>
+        <div class="info-item">
+          <span class="label">replica:</span>
+          <span class="value" th:text="${motorcycleDTO.replica}">Replica</span>
+        </div>
+        <div class="info-item">
+          <span class="label">cruiser:</span>
+          <span class="value" th:text="${motorcycleDTO.cruiser}">Cruiser</span>
+        </div>
+        <div class="info-item">
+          <span class="label">tourer:</span>
+          <span class="value" th:text="${motorcycleDTO.tourer}">Tourer</span>
+        </div>
+        <div class="info-item">
+          <span class="label">adventure:</span>
+          <span class="value" th:text="${motorcycleDTO.adventure}">Adventure</span>
+        </div>
+        <div class="info-item">
+          <span class="label">multiPurpose:</span>
+          <span class="value" th:text="${motorcycleDTO.multiPurpose}">Multi Purpose</span>
+        </div>
+        <div class="info-item">
+          <span class="label">naked:</span>
+          <span class="value" th:text="${motorcycleDTO.naked}">Naked</span>
+        </div>
+        <div class="info-item">
+          <span class="label">scrambler:</span>
+          <span class="value" th:text="${motorcycleDTO.scrambler}">Scrambler</span>
+        </div>
+        <div class="info-item">
+          <span class="label">offRoad:</span>
+          <span class="value" th:text="${motorcycleDTO.offRoad}">Off Road</span>
+        </div>
+        <div class="info-item">
+          <span class="label">motard:</span>
+          <span class="value" th:text="${motorcycleDTO.motard}">Motard</span>
+        </div>
+        <div class="info-item">
+          <span class="label">trial:</span>
+          <span class="value" th:text="${motorcycleDTO.trial}">Trial</span>
+        </div>
+        <div class="info-item">
+          <span class="label">scooter:</span>
+          <span class="value" th:text="${motorcycleDTO.scooter}">Scooter</span>
+        </div>
+        <div class="info-item">
+          <span class="label">classic:</span>
+          <span class="value" th:text="${motorcycleDTO.classic}">Classic</span>
+        </div>
+        <div class="info-item">
+          <span class="label">cafeRacer:</span>
+          <span class="value" th:text="${motorcycleDTO.cafeRacer}">Cafe Racer</span>
+        </div>
+      </div>
+    </div>
 
-<!-- Dimensions 정보 -->
-<h2>Dimensions 정보</h2>
-<p>wheelbase : <span th:text="${motorcycleDTO.dimensionsDTO.wheelbase}">Wheelbase</span></p>
-<p>seatHeight : <span th:text="${motorcycleDTO.dimensionsDTO.seatHeight}">Seat Height</span></p>
-<p>wetWeight : <span th:text="${motorcycleDTO.dimensionsDTO.wetWeight}">Wet Weight</span></p>
-<p>fuelCapacity : <span th:text="${motorcycleDTO.dimensionsDTO.fuelCapacity}">Fuel Capacity</span></p>
-<p>groundClearance : <span th:text="${motorcycleDTO.dimensionsDTO.groundClearance}">Ground Clearance</span></p>
-<p>dryWeight : <span th:text="${motorcycleDTO.dimensionsDTO.dryWeight}">Dry Weight</span></p>
-<p>length : <span th:text="${motorcycleDTO.dimensionsDTO.length}">Length</span></p>
-<p>width : <span th:text="${motorcycleDTO.dimensionsDTO.width}">Width</span></p>
-<p>height : <span th:text="${motorcycleDTO.dimensionsDTO.height}">Height</span></p>
-<p>frontTyreWidth : <span th:text="${motorcycleDTO.dimensionsDTO.frontTyreWidth}">Front Tyre Width</span></p>
-<p>frontTyreAspectRatio : <span th:text="${motorcycleDTO.dimensionsDTO.frontTyreAspectRatio}">Front Tyre Aspect Ratio</span></p>
-<p>frontTyreStructure : <span th:text="${motorcycleDTO.dimensionsDTO.frontTyreStructure}">Front Tyre Structure</span></p>
-<p>frontTyreDiameter : <span th:text="${motorcycleDTO.dimensionsDTO.frontTyreDiameter}">Front Tyre Diameter</span></p>
-<p>rearTyreWidth : <span th:text="${motorcycleDTO.dimensionsDTO.rearTyreWidth}">Rear Tyre Width</span></p>
-<p>rearTyreAspectRatio : <span th:text="${motorcycleDTO.dimensionsDTO.rearTyreAspectRatio}">Rear Tyre Aspect Ratio</span></p>
-<p>rearTyreStructure : <span th:text="${motorcycleDTO.dimensionsDTO.rearTyreStructure}">Rear Tyre Structure</span></p>
-<p>rearTyreDiameter : <span th:text="${motorcycleDTO.dimensionsDTO.rearTyreDiameter}">Rear Tyre Diameter</span></p>
-<p>frontBrakeDiscCount : <span th:text="${motorcycleDTO.dimensionsDTO.frontBrakeDiscCount}">Front Brake Disc Count</span></p>
-<p>frontBrakeDiscSize : <span th:text="${motorcycleDTO.dimensionsDTO.frontBrakeDiscSize}">Front Brake Disc Size</span></p>
-<p>frontBrakeDiscType : <span th:text="${motorcycleDTO.dimensionsDTO.frontBrakeDiscType}">Front Brake Disc Type</span></p>
-<p>frontBrakePistonCount : <span th:text="${motorcycleDTO.dimensionsDTO.frontBrakePistonCount}">Front Brake Piston Count</span></p>
-<p>rearBrakeDiscSize : <span th:text="${motorcycleDTO.dimensionsDTO.rearBrakeDiscSize}">Rear Brake Disc Size</span></p>
-<p>rearBrakeDiscType : <span th:text="${motorcycleDTO.dimensionsDTO.rearBrakeDiscType}">Rear Brake Disc Type</span></p>
-<p>rearBrakePistonCount : <span th:text="${motorcycleDTO.dimensionsDTO.rearBrakePistonCount}">Rear Brake Piston Count</span></p>
-<p>frameType : <span th:text="${motorcycleDTO.dimensionsDTO.frameType}">Frame Type</span></p>
-<p>frameMaterial : <span th:text="${motorcycleDTO.dimensionsDTO.frameMaterial}">Frame Material</span></p>
+    <div class="details-section">
+      <h2 class="section-title">Dimensions 정보</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="label">wheelbase:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.wheelbase}">Wheelbase</span>
+        </div>
+        <div class="info-item">
+          <span class="label">seatHeight:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.seatHeight}">Seat Height</span>
+        </div>
+        <div class="info-item">
+          <span class="label">wetWeight:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.wetWeight}">Wet Weight</span>
+        </div>
+        <div class="info-item">
+          <span class="label">fuelCapacity:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.fuelCapacity}">Fuel Capacity</span>
+        </div>
+        <div class="info-item">
+          <span class="label">groundClearance:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.groundClearance}">Ground Clearance</span>
+        </div>
+        <div class="info-item">
+          <span class="label">dryWeight:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.dryWeight}">Dry Weight</span>
+        </div>
+        <div class="info-item">
+          <span class="label">length:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.length}">Length</span>
+        </div>
+        <div class="info-item">
+          <span class="label">width:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.width}">Width</span>
+        </div>
+        <div class="info-item">
+          <span class="label">height:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.height}">Height</span>
+        </div>
+        <div class="info-item">
+          <span class="label">frontTyreWidth:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.frontTyreWidth}">Front Tyre Width</span>
+        </div>
+        <div class="info-item">
+          <span class="label">frontTyreAspectRatio:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.frontTyreAspectRatio}">Front Tyre Aspect Ratio</span>
+        </div>
+        <div class="info-item">
+          <span class="label">frontTyreStructure:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.frontTyreStructure}">Front Tyre Structure</span>
+        </div>
+        <div class="info-item">
+          <span class="label">frontTyreDiameter:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.frontTyreDiameter}">Front Tyre Diameter</span>
+        </div>
+        <div class="info-item">
+          <span class="label">rearTyreWidth:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.rearTyreWidth}">Rear Tyre Width</span>
+        </div>
+        <div class="info-item">
+          <span class="label">rearTyreAspectRatio:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.rearTyreAspectRatio}">Rear Tyre Aspect Ratio</span>
+        </div>
+        <div class="info-item">
+          <span class="label">rearTyreStructure:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.rearTyreStructure}">Rear Tyre Structure</span>
+        </div>
+        <div class="info-item">
+          <span class="label">rearTyreDiameter:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.rearTyreDiameter}">Rear Tyre Diameter</span>
+        </div>
+        <div class="info-item">
+          <span class="label">frontBrakeDiscCount:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.frontBrakeDiscCount}">Front Brake Disc Count</span>
+        </div>
+        <div class="info-item">
+          <span class="label">frontBrakeDiscSize:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.frontBrakeDiscSize}">Front Brake Disc Size</span>
+        </div>
+        <div class="info-item">
+          <span class="label">frontBrakeDiscType:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.frontBrakeDiscType}">Front Brake Disc Type</span>
+        </div>
+        <div class="info-item">
+          <span class="label">frontBrakePistonCount:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.frontBrakePistonCount}">Front Brake Piston Count</span>
+        </div>
+        <div class="info-item">
+          <span class="label">rearBrakeDiscSize:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.rearBrakeDiscSize}">Rear Brake Disc Size</span>
+        </div>
+        <div class="info-item">
+          <span class="label">rearBrakeDiscType:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.rearBrakeDiscType}">Rear Brake Disc Type</span>
+        </div>
+        <div class="info-item">
+          <span class="label">rearBrakePistonCount:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.rearBrakePistonCount}">Rear Brake Piston Count</span>
+        </div>
+        <div class="info-item">
+          <span class="label">frameType:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.frameType}">Frame Type</span>
+        </div>
+        <div class="info-item">
+          <span class="label">frameMaterial:</span>
+          <span class="value" th:text="${motorcycleDTO.dimensionsDTO.frameMaterial}">Frame Material</span>
+        </div>
+      </div>
+    </div>
 
-<!-- Electronics 정보 -->
-<h2>Electronics 정보</h2>
-<p>startSystem : <span th:text="${motorcycleDTO.electronicsDTO.startSystem}">Start System</span></p>
-<p>abs : <span th:text="${motorcycleDTO.electronicsDTO.abs}">ABS</span></p>
-<p>tcs : <span th:text="${motorcycleDTO.electronicsDTO.tcs}">TCS</span></p>
-<p>cruiseControl : <span th:text="${motorcycleDTO.electronicsDTO.cruiseControl}">Cruise Control</span></p>
-<p>assistSlipperClutch : <span th:text="${motorcycleDTO.electronicsDTO.assistSlipperClutch}">Assist Slipper Clutch</span></p>
-<p>electronicScreen : <span th:text="${motorcycleDTO.electronicsDTO.electricScreen}">Electronic Screen</span></p>
-<p>clutchAssistSystem : <span th:text="${motorcycleDTO.electronicsDTO.clutchAssistSystem}">Clutch Assist System</span></p>
-<p>imu : <span th:text="${motorcycleDTO.electronicsDTO.imu}">IMU</span></p>
-<p>corneringAbs : <span th:text="${motorcycleDTO.electronicsDTO.corneringAbs}">Cornering ABS</span></p>
-<p>wheelieControl : <span th:text="${motorcycleDTO.electronicsDTO.wheelieControl}">Wheelie Control</span></p>
-<p>ridingModeChange : <span th:text="${motorcycleDTO.electronicsDTO.ridingModeChange}">Riding Mode Change</span></p>
-<p>bankingAngleDisplay : <span th:text="${motorcycleDTO.electronicsDTO.bankingAngleDisplay}">Banking Angle Display</span></p>
-<p>absLevelControl : <span th:text="${motorcycleDTO.electronicsDTO.absLevelControl}">ABS Level Control</span></p>
-<p>quickshiftUp : <span th:text="${motorcycleDTO.electronicsDTO.quickshiftUp}">Quickshift Up</span></p>
-<p>quickshiftUpDown : <span th:text="${motorcycleDTO.electronicsDTO.quickshiftUpDown}">Quickshift Up Down</span></p>
+    <div class="details-section">
+      <h2 class="section-title">Electronics 정보</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="label">startSystem:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.startSystem}">Start System</span>
+        </div>
+        <div class="info-item">
+          <span class="label">abs:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.abs}">ABS</span>
+        </div>
+        <div class="info-item">
+          <span class="label">tcs:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.tcs}">TCS</span>
+        </div>
+        <div class="info-item">
+          <span class="label">cruiseControl:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.cruiseControl}">Cruise Control</span>
+        </div>
+        <div class="info-item">
+          <span class="label">assistSlipperClutch:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.assistSlipperClutch}">Assist Slipper Clutch</span>
+        </div>
+        <div class="info-item">
+          <span class="label">electronicScreen:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.electricScreen}">Electronic Screen</span>
+        </div>
+        <div class="info-item">
+          <span class="label">clutchAssistSystem:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.clutchAssistSystem}">Clutch Assist System</span>
+        </div>
+        <div class="info-item">
+          <span class="label">imu:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.imu}">IMU</span>
+        </div>
+        <div class="info-item">
+          <span class="label">corneringAbs:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.corneringAbs}">Cornering ABS</span>
+        </div>
+        <div class="info-item">
+          <span class="label">wheelieControl:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.wheelieControl}">Wheelie Control</span>
+        </div>
+        <div class="info-item">
+          <span class="label">ridingModeChange:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.ridingModeChange}">Riding Mode Change</span>
+        </div>
+        <div class="info-item">
+          <span class="label">bankingAngleDisplay:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.bankingAngleDisplay}">Banking Angle Display</span>
+        </div>
+        <div class="info-item">
+          <span class="label">absLevelControl:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.absLevelControl}">ABS Level Control</span></div>
+        <div class="info-item">
+          <span class="label">quickshiftUp:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.quickshiftUp}">Quickshift Up</span>
+        </div>
+        <div class="info-item">
+          <span class="label">quickshiftUpDown:</span>
+          <span class="value" th:text="${motorcycleDTO.electronicsDTO.quickshiftUpDown}">Quickshift Up Down</span>
+        </div>
+      </div>
+    </div>
 
-<!-- Engines 정보 -->
-<h2>Engines 정보</h2>
-<p>capacity : <span th:text="${motorcycleDTO.enginesDTO.capacity}">Capacity</span></p>
-<p>boreStroke : <span th:text="${motorcycleDTO.enginesDTO.boreStroke}">Bore Stroke</span></p>
-<p>compressionRatio : <span th:text="${motorcycleDTO.enginesDTO.compressionRatio}">Compression Ratio</span></p>
-<p>coolingSystem : <span th:text="${motorcycleDTO.enginesDTO.coolingSystem}">Cooling System</span></p>
-<p>lubrication : <span th:text="${motorcycleDTO.enginesDTO.lubrication}">Lubrication</span></p>
-<p>fuelSystem : <span th:text="${motorcycleDTO.enginesDTO.fuelSystem}">Fuel System</span></p>
-<p>emission : <span th:text="${motorcycleDTO.enginesDTO.emission}">Emission</span></p>
-<p>induction : <span th:text="${motorcycleDTO.enginesDTO.induction}">Induction</span></p>
-<p>mileage : <span th:text="${motorcycleDTO.enginesDTO.mileage}">Mileage</span></p>
-<p>topSpeed : <span th:text="${motorcycleDTO.enginesDTO.topSpeed}">Top Speed</span></p>
-<p>clutch : <span th:text="${motorcycleDTO.enginesDTO.clutch}">Clutch</span></p>
-<p>transmissionGearCount : <span th:text="${motorcycleDTO.enginesDTO.transmissionGearCount}">Transmission Gear Count</span></p>
-<p>transmissionType : <span th:text="${motorcycleDTO.enginesDTO.transmissionType}">Transmission Type</span></p>
-<p>engineStroke : <span th:text="${motorcycleDTO.enginesDTO.engineStroke}">Engine Stroke</span></p>
-<p>engineCylinder : <span th:text="${motorcycleDTO.enginesDTO.engineCylinder}">Engine Cylinder</span></p>
-<p>engineCamshaft : <span th:text="${motorcycleDTO.enginesDTO.engineCamshaft}">Engine Camshaft</span></p>
-<p>engineType : <span th:text="${motorcycleDTO.enginesDTO.engineType}">Engine Type</span></p>
-<p>engineCrankAngle : <span th:text="${motorcycleDTO.enginesDTO.engineCrankAngle}">Engine Crank Angle</span></p>
-<p>maxPowerHp : <span th:text="${motorcycleDTO.enginesDTO.maxPowerHp}">Max Power HP</span></p>
-<p>maxPowerRpm : <span th:text="${motorcycleDTO.enginesDTO.maxPowerRpm}">Max Power RPM</span></p>
-<p>maxTorqueNm : <span th:text="${motorcycleDTO.enginesDTO.maxTorqueNm}">Max Torque NM</span></p>
-<p>maxTorqueRpm : <span th:text="${motorcycleDTO.enginesDTO.maxTorqueRpm}">Max Torque RPM</span></p>
+    <div class="details-section">
+      <h2 class="section-title">Engines 정보</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="label">capacity:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.capacity}">Capacity</span>
+        </div>
+        <div class="info-item">
+          <span class="label">boreStroke:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.boreStroke}">Bore Stroke</span>
+        </div>
+        <div class="info-item">
+          <span class="label">compressionRatio:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.compressionRatio}">Compression Ratio</span>
+        </div>
+        <div class="info-item">
+          <span class="label">coolingSystem:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.coolingSystem}">Cooling System</span>
+        </div>
+        <div class="info-item">
+          <span class="label">lubrication:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.lubrication}">Lubrication</span>
+        </div>
+        <div class="info-item">
+          <span class="label">fuelSystem:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.fuelSystem}">Fuel System</span>
+        </div>
+        <div class="info-item">
+          <span class="label">emission:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.emission}">Emission</span>
+        </div>
+        <div class="info-item">
+          <span class="label">induction:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.induction}">Induction</span>
+        </div>
+        <div class="info-item">
+          <span class="label">mileage:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.mileage}">Mileage</span>
+        </div>
+        <div class="info-item">
+          <span class="label">topSpeed:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.topSpeed}">Top Speed</span>
+        </div>
+        <div class="info-item">
+          <span class="label">clutch:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.clutch}">Clutch</span>
+        </div>
+        <div class="info-item">
+          <span class="label">transmissionGearCount:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.transmissionGearCount}">Transmission Gear Count</span>
+        </div>
+        <div class="info-item">
+          <span class="label">transmissionType:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.transmissionType}">Transmission Type</span>
+        </div>
+        <div class="info-item">
+          <span class="label">engineStroke:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.engineStroke}">Engine Stroke</span>
+        </div>
+        <div class="info-item">
+          <span class="label">engineCylinder:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.engineCylinder}">Engine Cylinder</span>
+        </div>
+        <div class="info-item">
+          <span class="label">engineCamshaft:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.engineCamshaft}">Engine Camshaft</span>
+        </div>
+        <div class="info-item">
+          <span class="label">engineType:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.engineType}">Engine Type</span>
+        </div>
+        <div class="info-item">
+          <span class="label">engineCrankAngle:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.engineCrankAngle}">Engine Crank Angle</span>
+        </div>
+        <div class="info-item">
+          <span class="label">maxPowerHp:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.maxPowerHp}">Max Power HP</span>
+        </div>
+        <div class="info-item">
+          <span class="label">maxPowerRpm:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.maxPowerRpm}">Max Power RPM</span>
+        </div>
+        <div class="info-item">
+          <span class="label">maxTorqueNm:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.maxTorqueNm}">Max Torque NM</span>
+        </div>
+        <div class="info-item">
+          <span class="label">maxTorqueRpm:</span>
+          <span class="value" th:text="${motorcycleDTO.enginesDTO.maxTorqueRpm}">Max Torque RPM</span>
+        </div>
+      </div>
+    </div>
 
+    <div class="action-container">
+      <a href="/motorcycle" class="btn btn-secondary">돌아가기</a>
+    </div>
+  </div>
+</div>
+<script th:src="@{/js/singleSearch.js}"></script>
 </body>
 </html>

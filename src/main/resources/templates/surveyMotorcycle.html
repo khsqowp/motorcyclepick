@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Motorcycle Survey</title>
+  <style>
+    .error {
+      color: #ff0000;
+      font-size: 0.8em;
+      margin-top: 5px;
+      display: none;
+      text-align: center;
+    }
+    .question {
+      display: none;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .question.active {
+      display: block;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .progress-fill {
+      height: 100%;
+      background-color: #4CAF50;
+      transition: width 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+    .input-group {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .input-group input {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 200px;
+    }
+    .input-group button {
+      padding: 8px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .input-group button:hover {
+      background-color: #45a049;
+    }
+    .option-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .option-container button {
+      width: 100%;
+      padding: 15px;
+      text-align: left;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .option-container button:hover {
+      background-color: #f5f5f5;
+      border-color: #4CAF50;
+    }
+    .multiple-select {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .select-item {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .select-item:hover {
+      background-color: #f5f5f5;
+      border-color: #4CAF50;
+    }
+    .select-item.selected {
+      background-color: #e8f5e9;
+      border-color: #4CAF50;
+    }
+    #finalSubmitBtn {
+      margin-top: 20px;
+      padding: 15px 30px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    #finalSubmitBtn:hover {
+      background-color: #45a049;
+    }
+    h3 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+    #progress {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+  <link rel="stylesheet" href="surveyMotorcycle.css">
+</head>
+<body>
+<form th:action="@{/resultPage}" th:object="${boardForm}" method="POST">
+  <div class="question-container">
+    <div class="progress-bar">
+      <div id="progressFill" class="progress-fill" style="width:14.28%"></div>
+    </div>
+
+    <div id="progress">
+      <span id="currentStep">1</span> / <span id="totalSteps">7</span>
+    </div>
+
+    <div id="q1" class="question active">
+      <h3>당신이 바이크 구매에 투자 가능한 비용은?</h3>
+      <div class="input-group">
+        <input type="number" id="costInput" th:field="*{question1}" placeholder="금액을 입력하세요" min="1">
+        <span>만원</span>
+        <button type="button" onclick="handleCostSubmit()">완료</button>
+      </div>
+      <div id="budgetError" class="error">유효한 금액을 입력해주세요</div>
+    </div>
+
+    <div id="q2" class="question">
+      <h3>당신의 바이크 주행 목적은?</h3>
+      <div class="option-container">
+        <button type="button" class="option-btn" onclick="selectOption(2, '동네마실')">동네 마실 (125cc)</button>
+        <button type="button" class="option-btn" onclick="selectOption(2, '출퇴근')">출퇴근 (125 ~ 300cc)</button>
+        <button type="button" class="option-btn" onclick="selectOption(2, '시내바리')">시내바리 (125 ~ 600cc)</button>
+        <button type="button" class="option-btn" onclick="selectOption(2, '근교바리')">근교바리 (300 ~ 1000cc)</button>
+        <button type="button" class="option-btn" onclick="selectOption(2, '중거리투어')">중거리 투어 (500cc ~)</button>
+        <button type="button" class="option-btn" onclick="selectOption(2, '장거리투어')">장거리 투어 (650cc ~)</button>
+      </div>
+      <div id="q2Error" class="error">선택해주세요</div>
+    </div>
+
+    <div id="q3" class="question">
+      <h3>당신의 평균적인 주행 스타일은?</h3>
+      <div class="option-container">
+        <button type="button" class="option-btn" onclick="selectOption(3, '레플리카')">나는 날카로운 코너링과 스포티한 자세가 최고야</button>
+        <button type="button" class="option-btn" onclick="selectOption(3, '크루저')">나는 시트고가 낮고 편안하게 앉아서 한적한 도로를 따라 여유롭게 달리고싶어</button>
+        <button type="button" class="option-btn" onclick="selectOption(3, '투어러')">나는 장거리 투어를 좋아하고, 넉넉한 수납공간과 편안한 시트가 필요해</button>
+        <button type="button" class="option-btn" onclick="selectOption(3, '어드벤처')">나는 공도도 주행하고 싶고, 임도도 주행하면서 여기저기 돌아다니고싶어</button>
+        <button type="button" class="option-btn" onclick="selectOption(3, '멀티퍼포즈')">도심 출퇴근부터, 주말 투어까지 모든걸 딱 한대로 해결하고싶어</button>
+        <button type="button" class="option-btn" onclick="selectOption(3, '네이키드')">도심 사이를 가로지르며 날것 그대로의 라이딩을 즐기고 싶어</button>
+        <button type="button" class="option-btn" onclick="selectOption(3, '클래식')">옛날 디자인이 좋고, 엔진의 고동감을 느끼면서 여유있게 주행하는게 좋아</button>
+        <button type="button" class="option-btn" onclick="selectOption(3, '스크램블러')">오프로드도 좋은데 클래식한 디자인이 내 취향이야</button>
+        <button type="button" class="option-btn" onclick="selectOption(3, '오프로드')">난 산길 어디든 마음대로 다니고, 험난한 지형을 타고싶어</button>
+        <button type="button" class="option-btn" onclick="selectOption(3, '모타드')">난 도심속에서 가볍고 높은 시트고로 치고 나가면서, 산 속에서 스릴을 느끼고 싶어</button>
+        <button type="button" class="option-btn" onclick="selectOption(3, '스쿠터')">난 실용성과 경제성을 모두 갖추고, 무엇보다 편한게 최고야</button>
+        <button type="button" class="option-btn" onclick="selectOption(3, '카페레이서')">클래식한 멋과, 레플리카와 같은 스포티한 주행이 내 취향이야</button>
+      </div>
+      <div id="q3Error" class="error">선택해주세요</div>
+    </div>
+
+    <div id="q4" class="question">
+      <h3>당신의 평균적인 주행 속도는?</h3>
+      <div class="option-container">
+        <button type="button" class="option-btn" onclick="selectOption(4, '60km')">난 자동차랑 비슷한 속도로 다닐거야 (60km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '80km')">국도 제한속도는 그래도 달려야지 (80km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '100km')">난 세자리 숫자로는 달릴거야 (100km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '120km')">100Km에서 추월은 가능해야지 (120km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '170km')">빠른건 좋지만 200은 무서워 (170km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '200km')">y영역대까지는 달리고싶어 (200km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '250km')">난 y영역 이상을 원해 (250km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '250km+')">y? 나는 z영역도 달릴거야</button>
+      </div>
+      <div id="q4Error" class="error">선택해주세요</div>
+    </div>
+
+    <div id="q5" class="question">
+      <h3>당신의 평균 주행 거리는?</h3>
+      <div class="option-container">
+        <button type="button" class="option-btn" onclick="selectOption(5, '동네')">난 내 동네 주변에서만 탈거야 (언더본, 쿼터)</button>
+        <button type="button" class="option-btn" onclick="selectOption(5, '도시')">난 내 도시에서 타고 투어는 안나가 (쿼터 미들)</button>
+        <button type="button" class="option-btn" onclick="selectOption(5, '근교')">난 근교까지는 투어 다니고 싶어 (쿼터 미들 리터 오버리터)</button>
+        <button type="button" class="option-btn" onclick="selectOption(5, '장거리')">난 장거리 위주로 다닐거야 (미들 리터 오버리터)</button>
+      </div>
+      <div id="q5Error" class="error">선택해주세요</div>
+    </div>
+
+    <div id="q6" class="question">
+      <h3>당신이 희망하는 평균 주행 rpm은?</h3>
+      <div class="option-container">
+        <button type="button" class="option-btn" onclick="selectOption(6, '3500')">난 조금만 당겨서 여유롭게 다닐거야 (3500rpm)</button>
+        <button type="button" class="option-btn" onclick="selectOption(6, '6000')">그래도 차 2배는 써야지 (6000rpm)</button>
+        <button type="button" class="option-btn" onclick="selectOption(6, '10000')">난 우와앙 거리는게 좋아 (10000rpm)</button>
+        <button type="button" class="option-btn" onclick="selectOption(6, '10000+')">나는 10,000rpm은 넘기면서 짜야지 재밌을거같아</button>
+      </div>
+      <div id="q6Error" class="error">선택해주세요</div>
+    </div>
+
+    <div id="q7" class="question">
+      <h3>당신이 좋아하는 바이크 외형은? (복수선택 가능)</h3>
+      <div class="multiple-select">
+        <div class="select-item" onclick="toggleSelect(this, '카울')">카울로 덮힌 공긱역학적인 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '엔진노출')">엔진이 보이는 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '낮은시트')">낮은 시트고를 가진 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '높은시트')">높은 시트고를 가진 바이크</div>
+          <div class="select-item" onclick="toggleSelect(this, '탱크기대')">탱크에 몸을 기대고 타는 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '키작은')">키가 작은 사람도 편하게 앉을 수 있는 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '가벼운')">가벼운 바이크 (조작은 편하지만 고속 안정성 V)</div>
+        <div class="select-item" onclick="toggleSelect(this, '무거운')">무거운 바이크 (저속에서 조작이 힘들수도 있으나 고속 안정성 ^)</div>
+        <div class="select-item" onclick="toggleSelect(this, '수납')">수납력이 좋은 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '스크린')">스크린이 장착된 바이크</div>
+      </div>
+      <div id="q7Error" class="error">선택해주세요</div>
+      <button type="button" id="finalSubmitBtn" class="final-submit-btn" onclick="submitSurvey(event)" style="display: none;">설문 완료</button>
+    </div>
+
+    <input type="hidden" th:field="*{question1}" id="question1Input">
+    <input type="hidden" th:field="*{question2}" id="question2Input">
+    <input type="hidden" th:field="*{question3}" id="question3Input">
+    <input type="hidden" th:field="*{question4}" id="question4Input">
+    <input type="hidden" th:field="*{question5}" id="question5Input">
+    <input type="hidden" th:field="*{question6}" id="question6Input">
+    <input type="hidden" th:field="*{question7}" id="question7Input">
+  </div>
+</form>
+
+<script th:src="@{/js/surveyMotorcycle.js}"></script>
+</body>
+</html>

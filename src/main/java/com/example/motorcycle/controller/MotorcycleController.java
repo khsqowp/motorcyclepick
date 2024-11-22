@@ -27,7 +27,7 @@ public class MotorcycleController {
         binder.registerCustomEditor(String.class, stringTrimmerEditor);
     }
 
-    @GetMapping("/")
+    @GetMapping({"", "/"})
     public String motorcycleMain(Model model) {
         model.addAttribute("motorcycleForm", new MotorcycleForm());
         model.addAttribute("deleteMotorcycleDTO", new DeleteMotorcycleDTO());

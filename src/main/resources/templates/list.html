@@ -3,102 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <title>Motorcycle List</title>
-  <link rel="stylesheet" type="text/css" th:href="@{/list.css}">
+  <link rel="stylesheet" href="@{/list.css}">
   <style>
-    * {
-      box-sizing: border-box;
+    body {
       margin: 0;
       padding: 0;
+      background-color: #111111;
+      color: #ffffff;
     }
 
-    body {
-      padding: 20px;
-      font-family: Arial, sans-serif;
+    .search-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #1a1a1a;
+      padding: 8px 20px;
+      box-shadow: none;
+      z-index: 1000;
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 1px solid #00FF00;
+      height: 40px;
     }
 
-    .container {
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 20px;
+    #searchInput {
+      padding: 8px 12px;
+      width: 250px;
+      border: 1px solid #00FF00;
+      border-radius: 4px;
+      font-size: 14px;
+      background-color: #222222;
+      color: #00FF00;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+    }
+
+    #searchInput:focus {
+      outline: none;
+      border-color: #00FF00;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    }
+
+    .highlight {
+      background-color: #003300;
+      color: #00FF00;
+      padding: 2px;
+      border-radius: 2px;
+    }
+
+    .hidden-row {
+      display: none;
     }
 
     h1 {
-      margin-bottom: 20px;
+      margin-top: 50px;
+      margin-bottom: 0;
+      padding-left: 20px;
+      color: #00FF00;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
     }
 
     .table-container {
-      width: 100%;
+      margin-top: 0;
       overflow-x: auto;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
+      position: relative;
     }
 
     table {
-      width: max-content;  /* 내용물 크기만큼 테이블 너비 설정 */
-      min-width: 100%;
       border-collapse: collapse;
-      background: white;
+      width: max-content;
+      min-width: 100%;
+      background-color: #1a1a1a;
     }
 
-    th, td {
-      padding: 12px 15px;
-      text-align: left;
-      border: 1px solid #ddd;
-      white-space: nowrap;  /* 텍스트 줄바꿈 방지 */
-      min-width: 120px;     /* 최소 칼럼 너비 설정 */
+    thead {
+      position: sticky;
+      top: 55px;
+      z-index: 99;
     }
 
     th {
-      background-color: #f8f9fa;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      white-space: nowrap;
+      padding: 8px 12px;
+      background-color: #0D1F0D;
+      font-weight: bold;
+      color: #00FF00;
+      border: 1px solid #333333;
+      min-width: 100px;
+      height: 18px;
+      box-sizing: border-box;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
+    td {
+      padding: 8px 12px;
+      border: 1px solid #333333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
+      color: #cccccc;
+      white-space: normal;
+      word-break: break-word;
     }
 
-    tr:hover {
-      background-color: #f5f5f5;
+    tbody tr:nth-child(even) {
+      background-color: #1a1a1a;
     }
 
-    .back-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+    tbody tr:nth-child(odd) {
+      background-color: #222222;
     }
 
-    .back-button:hover {
-      background-color: #45a049;
+    tbody tr:hover {
+      background-color: #2a2a2a;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
     }
 
-    /* Fixed header styles */
-    thead th {
-      position: sticky;
-      top: 0;
-      background-color: #f8f9fa;
-      z-index: 1;
-    }
-
-    /* 첫 번째 열 고정 (선택사항) */
-    .freeze-first-column th:first-child,
-    .freeze-first-column td:first-child {
-      position: sticky;
+    .search-container::after {
+      content: '';
+      position: fixed;
+      top: 33px;
       left: 0;
-      background-color: inherit;
-      z-index: 2;
+      right: 0;
+      height: 0px;
+      background-color: #00FF00;
+      z-index: 1001;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
     }
 
-    thead th:first-child {
-      z-index: 3;
+    thead::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      height: 2px;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    }
+
+    button {
+      margin: 20px;
+      padding: 8px 16px;
+      background-color: #003300;
+      color: #00FF00;
+      border: 1px solid #00FF00;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004400;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* 스크롤바 커스터마이징 */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      background-color: #1a1a1a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #00FF00;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #1a1a1a;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="search..">
+</div>
+
 <h1>Motorcycle List</h1>
 <table>
   <thead>
@@ -284,6 +371,67 @@
   </tr>
   </tbody>
 </table>
+<script th:inline="javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const tableRows = document.querySelectorAll('tbody tr');
+    let debounceTimer;
+
+    // debounce 함수
+    function debounce(func, wait) {
+      return function executedFunction() {
+        const context = this;
+        const args = arguments;
+
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          func.apply(context, args);
+        }, wait);
+      };
+    }
+
+    // 하이라이트 적용 함수 최적화
+    function highlightText(text, searchTerm) {
+      if (!searchTerm) return text;
+      const regex = new RegExp(`(${searchTerm})`, 'gi');
+      return text.replace(regex, '<span class="highlight">$1</span>');
+    }
+
+    // 검색 함수 최적화
+    function performSearch() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+
+      tableRows.forEach(row => {
+        const cells = row.getElementsByTagName('td');
+        let found = false;
+        let rowText = Array.from(cells).map(cell => cell.textContent.toLowerCase()).join(' ');
+
+        if (searchTerm === '') {
+          row.classList.remove('hidden-row');
+          Array.from(cells).forEach(cell => {
+            cell.textContent = cell.textContent;
+          });
+          found = true;
+        } else if (rowText.includes(searchTerm)) {
+          row.classList.remove('hidden-row');
+          Array.from(cells).forEach(cell => {
+            const originalText = cell.textContent;
+            if (originalText.toLowerCase().includes(searchTerm)) {
+              cell.innerHTML = highlightText(originalText, searchTerm);
+            }
+          });
+          found = true;
+        } else {
+          row.classList.add('hidden-row');
+        }
+      });
+    }
+
+    // debounce 적용된 검색 실행
+    const debouncedSearch = debounce(performSearch, 300);
+    searchInput.addEventListener('input', debouncedSearch);
+  });
+</script>
 <button onclick="location.href='/motorcycle'">Back to Main</button>
 </body>
 </html>
