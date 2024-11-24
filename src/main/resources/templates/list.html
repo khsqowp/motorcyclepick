@@ -277,6 +277,7 @@
     <th>Max Power RPM</th>
     <th>Max Torque NM</th>
     <th>Max Torque RPM</th>
+    <th>Class Grade</th>
   </tr>
   </thead>
   <tbody>
@@ -368,6 +369,7 @@
     <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.maxPowerRpm}"></td>
     <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.maxTorqueNm}"></td>
     <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.maxTorqueRpm}"></td>
+    <td th:if="${motorcycle.enginesDTO != null}" th:text="${motorcycle.enginesDTO.classGrade}"></td>
   </tr>
   </tbody>
 </table>

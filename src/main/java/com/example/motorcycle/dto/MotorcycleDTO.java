@@ -24,6 +24,7 @@ public class MotorcycleDTO {
     private Float scooter;
     private Float classic;
     private Float cafeRacer;
+    private Float price;
 
     private DimensionsDTO dimensionsDTO;
     private ElectronicsDTO electronicsDTO;
@@ -51,6 +52,7 @@ public class MotorcycleDTO {
         dto.setScooter(motorcycle.getScooter());
         dto.setClassic(motorcycle.getClassic());
         dto.setCafeRacer(motorcycle.getCafeRacer());
+        dto.setPrice(motorcycle.getPrice());
 
         // 각 도메인이 null이더라도 빈 DTO 객체 생성
         dto.setDimensionsDTO(motorcycle.getDimensionsDomain() != null ?
@@ -64,16 +66,6 @@ public class MotorcycleDTO {
         dto.setEnginesDTO(motorcycle.getEnginesDomain() != null ?
                 EnginesDTO.fromDomain(motorcycle.getEnginesDomain()) :
                 new EnginesDTO());
-//        // 각 서브 엔티티를 해당 DTO로 변환하여 설정
-//        if (motorcycle.getDimensionsDomain() != null) {
-//            dto.setDimensionsDTO(DimensionsDTO.fromDomain(motorcycle.getDimensionsDomain()));
-//        }
-//        if (motorcycle.getElectronicsDomain() != null) {
-//            dto.setElectronicsDTO(ElectronicsDTO.fromDomain(motorcycle.getElectronicsDomain()));
-//        }
-//        if (motorcycle.getEnginesDomain() != null) {
-//            dto.setEnginesDTO(EnginesDTO.fromDomain(motorcycle.getEnginesDomain()));
-//        }
 
         return dto;
     }
@@ -97,6 +89,7 @@ public class MotorcycleDTO {
         motorcycle.setScooter(this.scooter);
         motorcycle.setClassic(this.classic);
         motorcycle.setCafeRacer(this.cafeRacer);
+        motorcycle.setPrice(this.price);
 
         // 서브 엔티티를 각 도메인 객체로 변환
         if (this.dimensionsDTO != null) {

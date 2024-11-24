@@ -75,16 +75,28 @@ function toggleSelect(element, value) {
     const errorDiv = document.getElementById('q7Error');
     const hiddenInput = document.getElementById('question7Input');
 
-    if (index === -1) {
+    if(index !== -1) {
+        selectedItems.splice(index,1);
+        element.classList.remove('selected');
+    }
+
+    else {
+        if (selectedItems.length >= 2){
+            const firstSelected = document.querySelector('.select-item.selected');
+            if(firstSelected){
+                firstSelected.classList.remove('selected');
+                selectedItems.shift();
+            }
+        }
         selectedItems.push(value);
-    } else {
-        selectedItems.splice(index, 1);
+        element.classList.add('selected');
     }
 
     answers.question7 = selectedItems;
-    if (hiddenInput) {
+    if(hiddenInput) {
         hiddenInput.value = selectedItems.join(',');
     }
+
 
     errorDiv.style.display = selectedItems.length > 0 ? 'none' : 'block';
 

@@ -148,9 +148,9 @@
     <div id="q2" class="question">
       <h3>당신의 바이크 주행 목적은?</h3>
       <div class="option-container">
-        <button type="button" class="option-btn" onclick="selectOption(2, '동네마실')">동네 마실 (125cc)</button>
-        <button type="button" class="option-btn" onclick="selectOption(2, '출퇴근')">출퇴근 (125 ~ 300cc)</button>
-        <button type="button" class="option-btn" onclick="selectOption(2, '시내바리')">시내바리 (125 ~ 600cc)</button>
+        <button type="button" class="option-btn" onclick="selectOption(2, '동네마실')">동네 마실 (125cc 미만)</button>
+        <button type="button" class="option-btn" onclick="selectOption(2, '출퇴근')">출퇴근 (125 ~ 350cc)</button>
+        <button type="button" class="option-btn" onclick="selectOption(2, '시내바리')">시내바리 (125 ~ 650cc)</button>
         <button type="button" class="option-btn" onclick="selectOption(2, '근교바리')">근교바리 (300 ~ 1000cc)</button>
         <button type="button" class="option-btn" onclick="selectOption(2, '중거리투어')">중거리 투어 (500cc ~)</button>
         <button type="button" class="option-btn" onclick="selectOption(2, '장거리투어')">장거리 투어 (650cc ~)</button>
@@ -180,14 +180,14 @@
     <div id="q4" class="question">
       <h3>당신의 평균적인 주행 속도는?</h3>
       <div class="option-container">
-        <button type="button" class="option-btn" onclick="selectOption(4, '60km')">난 자동차랑 비슷한 속도로 다닐거야 (60km)</button>
-        <button type="button" class="option-btn" onclick="selectOption(4, '80km')">국도 제한속도는 그래도 달려야지 (80km)</button>
-        <button type="button" class="option-btn" onclick="selectOption(4, '100km')">난 세자리 숫자로는 달릴거야 (100km)</button>
-        <button type="button" class="option-btn" onclick="selectOption(4, '120km')">100Km에서 추월은 가능해야지 (120km)</button>
-        <button type="button" class="option-btn" onclick="selectOption(4, '170km')">빠른건 좋지만 200은 무서워 (170km)</button>
-        <button type="button" class="option-btn" onclick="selectOption(4, '200km')">y영역대까지는 달리고싶어 (200km)</button>
-        <button type="button" class="option-btn" onclick="selectOption(4, '250km')">난 y영역 이상을 원해 (250km)</button>
-        <button type="button" class="option-btn" onclick="selectOption(4, '250km+')">y? 나는 z영역도 달릴거야</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '60km')">난 자동차랑 비슷한 속도로 다닐거야 (60 ~ 110km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '80km')">국도 제한속도는 그래도 달려야지 (80 ~ 120km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '100km')">난 세자리 숫자로는 달릴거야 (100 ~ 130km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '120km')">100Km에서 추월은 가능해야지 (120 ~ 170km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '170km')">빠른건 좋지만 200은 무서워 (150 ~ 199km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '200km')">y영역대까지는 달리고싶어 (200 ~ 240km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '250km')">난 y영역 이상을 원해 (250 ~ 299km)</button>
+        <button type="button" class="option-btn" onclick="selectOption(4, '250km+')"> y? 나는 z영역도 달릴거야(300 ~ )</button>
       </div>
       <div id="q4Error" class="error">선택해주세요</div>
     </div>
@@ -215,18 +215,15 @@
     </div>
 
     <div id="q7" class="question">
-      <h3>당신이 좋아하는 바이크 외형은? (복수선택 가능)</h3>
+      <h3>당신이 좋아하는 바이크 외형은? (가장 필요한 기능 2개)</h3>
       <div class="multiple-select">
-        <div class="select-item" onclick="toggleSelect(this, '카울')">카울로 덮힌 공긱역학적인 바이크</div>
-        <div class="select-item" onclick="toggleSelect(this, '엔진노출')">엔진이 보이는 바이크</div>
-        <div class="select-item" onclick="toggleSelect(this, '낮은시트')">낮은 시트고를 가진 바이크</div>
-        <div class="select-item" onclick="toggleSelect(this, '높은시트')">높은 시트고를 가진 바이크</div>
-          <div class="select-item" onclick="toggleSelect(this, '탱크기대')">탱크에 몸을 기대고 타는 바이크</div>
-        <div class="select-item" onclick="toggleSelect(this, '키작은')">키가 작은 사람도 편하게 앉을 수 있는 바이크</div>
-        <div class="select-item" onclick="toggleSelect(this, '가벼운')">가벼운 바이크 (조작은 편하지만 고속 안정성 V)</div>
-        <div class="select-item" onclick="toggleSelect(this, '무거운')">무거운 바이크 (저속에서 조작이 힘들수도 있으나 고속 안정성 ^)</div>
-        <div class="select-item" onclick="toggleSelect(this, '수납')">수납력이 좋은 바이크</div>
-        <div class="select-item" onclick="toggleSelect(this, '스크린')">스크린이 장착된 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '토크중시')">출력보다는 토크가 더 좋은 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '낮은시트')">키 작은 사람도 편하게 탈 수 있는 낮은 시트고를 가진 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '경량화')">직진성보다는 조작성이 편한 가벼운 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '대형바이크')">컴팩트한 사이즈보다는 우람한 크기를 가진 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '연비중시')">퍼포먼스보다는 좋은 연비를 가진 바이크</div>
+        <div class="select-item" onclick="toggleSelect(this, '대용량')">한번 주유하면 오랫동안 달릴 수 있는 큰 연료탱크를 가진 바이크</div>
+        <!-- 나머지 4개의 선택지는 유지하거나 다른 조건으로 대체할 수 있습니다 -->
       </div>
       <div id="q7Error" class="error">선택해주세요</div>
       <button type="button" id="finalSubmitBtn" class="final-submit-btn" onclick="submitSurvey(event)" style="display: none;">설문 완료</button>

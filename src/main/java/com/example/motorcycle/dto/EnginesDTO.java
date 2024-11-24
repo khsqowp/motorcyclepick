@@ -29,6 +29,7 @@ public class EnginesDTO {
     private Float maxPowerRpm;
     private Float maxTorqueNm;
     private Float maxTorqueRpm;
+    private String classGrade;
 
     public EnginesDomain toDomain() {
         EnginesDomain engines = new EnginesDomain();
@@ -56,6 +57,7 @@ public class EnginesDTO {
         engines.setMaxPowerRpm(this.getMaxPowerRpm());
         engines.setMaxTorqueNm(this.getMaxTorqueNm());
         engines.setMaxTorqueRpm(this.getMaxTorqueRpm());
+        engines.setClassGrade(this.getClassGrade());
         return engines;
     }
 
@@ -85,6 +87,7 @@ public class EnginesDTO {
         dto.setMaxPowerRpm(engines.getMaxPowerRpm());
         dto.setMaxTorqueNm(engines.getMaxTorqueNm());
         dto.setMaxTorqueRpm(engines.getMaxTorqueRpm());
+        dto.setClassGrade(engines.getClassGrade());
         return dto;
     }
 }

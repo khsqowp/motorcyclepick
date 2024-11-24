@@ -4,6 +4,7 @@ import com.example.motorcycle.domain.*;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface MotorcycleMapper {
@@ -31,4 +32,9 @@ public interface MotorcycleMapper {
     void deleteDimensions(Long motorcycleID);
     void deleteElectronics(Long motorcycleID);
     void deleteEngines(Long motorcycleID);
+
+
+    // 정확한 값 범위로 검색
+    List<MotorcycleDomain> findByAllRangePreferences(Map<String, Object> params);
+
 }

@@ -28,6 +28,8 @@ public class MotorcycleDomain {
     private Float scooter;
     private Float classic;
     private Float cafeRacer;
+    private Float price;
+
 
     @Getter
     private DimensionsDomain dimensionsDomain;
@@ -55,6 +57,7 @@ public class MotorcycleDomain {
         motorcycleDomain.setScooter(dto.getScooter());
         motorcycleDomain.setClassic(dto.getClassic());
         motorcycleDomain.setCafeRacer(dto.getCafeRacer());
+        motorcycleDomain.setPrice(dto.getPrice());
 
 
         motorcycleDomain.setDimensionsDomain(DimensionsDomain.fromDTO(dto.getDimensionsDTO()));
@@ -73,23 +76,7 @@ public class MotorcycleDomain {
         motorcycleDomain.setEnginesDomain(dto.getEnginesDTO() != null ?
                 EnginesDomain.fromDTO(dto.getEnginesDTO()) :
                 new EnginesDomain());
-//        if(dto.getEnginesDTO() != null) {
-//            motorcycleDomain.setEnginesDomain(EnginesDomain.fromDTO(dto.getEnginesDTO()));
-//        } else {
-//            motorcycleDomain.setEnginesDomain(new EnginesDomain());
-//        }
-//
-//        if(dto.getElectronicsDTO() != null) {
-//            motorcycleDomain.setElectronicsDomain(ElectronicsDomain.fromDTO(dto.getElectronicsDTO()));
-//        } else {
-//            motorcycleDomain.setElectronicsDomain(new ElectronicsDomain());
-//        }
-//
-//        if(dto.getDimensionsDTO() != null) {
-//            motorcycleDomain.setDimensionsDomain(DimensionsDomain.fromDTO(dto.getDimensionsDTO()));
-//        } else {
-//            motorcycleDomain.setDimensionsDomain(new DimensionsDomain());
-//        }
+
         return motorcycleDomain;
     }
 

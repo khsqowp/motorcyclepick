@@ -25,6 +25,7 @@
                 <result property="scooter" column="scooter" />
                 <result property="classic" column="classic" />
                 <result property="cafeRacer" column="cafe_racer" />
+                <result property="price" column="price" />
 
 
             <association property="dimensionsDomain"
@@ -103,6 +104,7 @@
                 <result property="maxPowerRpm" column="max_power_rpm" />
                 <result property="maxTorqueNm" column="max_torque_nm" />
                 <result property="maxTorqueRpm" column="max_torque_rpm" />
+                <result property="classGrade" column="classGrade" />
             </association>
 
         </resultMap>
@@ -128,7 +130,7 @@
                en.top_speed, en.clutch, en.transmission_gear_count, en.transmission_type,
                en.engine_stroke, en.engine_cylinder, en.engine_camshaft, en.engine_type,
                en.engine_crank_angle, en.max_power_hp, en.max_power_rpm, en.max_torque_nm,
-               en.max_torque_rpm
+               en.max_torque_rpm, en.classGrade
                 FROM Motorcycle m
                 LEFT JOIN Dimensions d ON m.motorcycleID = d.motorcycleID
                 LEFT JOIN Electronics e ON m.motorcycleID = e.motorcycleID
@@ -158,7 +160,7 @@
                    en.top_speed, en.clutch, en.transmission_gear_count, en.transmission_type,
                    en.engine_stroke, en.engine_cylinder, en.engine_camshaft, en.engine_type,
                    en.engine_crank_angle, en.max_power_hp, en.max_power_rpm, en.max_torque_nm,
-                   en.max_torque_rpm
+                   en.max_torque_rpm, en.classGrade
             FROM Motorcycle m
                      LEFT JOIN Dimensions d ON m.motorcycleID = d.motorcycleID
                      LEFT JOIN Electronics e ON m.motorcycleID = e.motorcycleID
@@ -168,8 +170,8 @@
 
         <!-- 데이터 삽입 -->
     <insert id="insertMotorcycleData" parameterType="com.example.motorcycle.domain.MotorcycleDomain" useGeneratedKeys="true" keyProperty="motorcycleID">
-        INSERT INTO Motorcycle ( brand, model, years, replica, cruiser, tourer, adventure, multiPurpose, naked, scrambler, offRoad, motard, trial, scooter, classic, cafe_racer )
-        VALUES ( #{brand}, #{model}, #{years}, #{replica}, #{cruiser}, #{tourer}, #{adventure}, #{multiPurpose}, #{naked}, #{scrambler}, #{offRoad}, #{motard}, #{trial}, #{scooter}, #{classic}, #{cafeRacer} )
+        INSERT INTO Motorcycle ( brand, model, years, replica, cruiser, tourer, adventure, multiPurpose, naked, scrambler, offRoad, motard, trial, scooter, classic, cafe_racer, price )
+        VALUES ( #{brand}, #{model}, #{years}, #{replica}, #{cruiser}, #{tourer}, #{adventure}, #{multiPurpose}, #{naked}, #{scrambler}, #{offRoad}, #{motard}, #{trial}, #{scooter}, #{classic}, #{cafeRacer}, #{price} )
     </insert>
     <insert id="insertDimensionsData" parameterType="com.example.motorcycle.domain.DimensionsDomain">
         INSERT INTO Dimensions ( motorcycleID, wheelbase, seat_height, wet_weight, fuel_capacity, ground_clearance, dry_weight, length, width, height, front_tyre_width, front_tyre_aspect_ratio, front_tyre_structure, front_tyre_diameter, rear_tyre_width, rear_tyre_aspect_ratio, rear_tyre_structure, rear_tyre_diameter, front_brake_disc_count, front_brake_disc_size, front_brake_disc_type, front_brake_piston_count, rear_brake_disc_size, rear_brake_disc_type, rear_brake_piston_count, frame_type, frame_material )
@@ -180,8 +182,8 @@
         VALUES ( #{motorcycleID}, #{startSystem}, #{abs}, #{tcs}, #{cruiseControl}, #{assistSlipperClutch}, #{electricScreen}, #{clutchAssistSystem}, #{imu}, #{corneringAbs}, #{wheelieControl}, #{ridingModeChange}, #{bankingAngleDisplay}, #{absLevelControl}, #{quickshiftUp}, #{quickshiftUpDown} )
     </insert>
     <insert id="insertEnginesData" parameterType="com.example.motorcycle.domain.EnginesDomain">
-        INSERT INTO Engines ( motorcycleID, capacity, bore_stroke, compression_ratio, cooling_system, lubrication, fuel_system, emission, induction, mileage, top_speed, clutch, transmission_gear_count, transmission_type, engine_stroke, engine_cylinder, engine_camshaft, engine_type, engine_crank_angle, max_power_hp, max_power_rpm, max_torque_nm, max_torque_rpm )
-        VALUES ( #{motorcycleID}, #{capacity}, #{boreStroke}, #{compressionRatio}, #{coolingSystem}, #{lubrication}, #{fuelSystem}, #{emission}, #{induction}, #{mileage}, #{topSpeed}, #{clutch}, #{transmissionGearCount}, #{transmissionType}, #{engineStroke}, #{engineCylinder}, #{engineCamshaft}, #{engineType}, #{engineCrankAngle}, #{maxPowerHp}, #{maxPowerRpm}, #{maxTorqueNm}, #{maxTorqueRpm} )
+        INSERT INTO Engines ( motorcycleID, capacity, bore_stroke, compression_ratio, cooling_system, lubrication, fuel_system, emission, induction, mileage, top_speed, clutch, transmission_gear_count, transmission_type, engine_stroke, engine_cylinder, engine_camshaft, engine_type, engine_crank_angle, max_power_hp, max_power_rpm, max_torque_nm, max_torque_rpm, classGrade)
+        VALUES ( #{motorcycleID}, #{capacity}, #{boreStroke}, #{compressionRatio}, #{coolingSystem}, #{lubrication}, #{fuelSystem}, #{emission}, #{induction}, #{mileage}, #{topSpeed}, #{clutch}, #{transmissionGearCount}, #{transmissionType}, #{engineStroke}, #{engineCylinder}, #{engineCamshaft}, #{engineType}, #{engineCrankAngle}, #{maxPowerHp}, #{maxPowerRpm}, #{maxTorqueNm}, #{maxTorqueRpm}, #{classGrade} )
     </insert>
 
 
@@ -205,6 +207,7 @@
             <if test="scooter != null">scooter = #{scooter},</if>
             <if test="classic != null">classic = #{classic},</if>
             <if test="cafeRacer != null">cafe_racer = #{cafeRacer}</if>
+            <if test="price != null">price = #{price}</if>
         </set>
         WHERE motorcycleID = #{motorcycleID}
     </update>
@@ -289,6 +292,7 @@
             <if test="maxPowerRpm != null">max_power_rpm = #{maxPowerRpm},</if>
             <if test="maxTorqueNm != null">max_torque_nm = #{maxTorqueNm},</if>
             <if test="maxTorqueRpm != null">max_torque_rpm = #{maxTorqueRpm}</if>
+            <if test="class != null">classGrade = #{classGrade}</if>
         </set>
         WHERE motorcycleID = #{motorcycleID}
     </update>
@@ -307,4 +311,93 @@
         <delete id="deleteEngines" parameterType="long">
             DELETE FROM Engines WHERE motorcycleID = #{motorcycleID}
         </delete>
+
+
+
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+
+    <select id="findByAllRangePreferences" parameterType="map" resultMap="motorcycleResultMap">
+        SELECT m.*, d.*, el.*, en.*,
+        CASE
+        WHEN (
+        <if test="price != null">m.price &lt;= #{price} AND </if>
+        <if test="minCapacity != null and maxCapacity != null">en.capacity BETWEEN #{minCapacity} AND #{maxCapacity} AND </if>
+        <if test="minSpeed != null and maxSpeed != null">en.top_speed BETWEEN #{minSpeed} AND #{maxSpeed} AND </if>
+        <if test="minRpm != null and maxRpm != null">(en.max_power_rpm BETWEEN #{minRpm} AND #{maxRpm} OR en.max_torque_rpm BETWEEN #{minRpm} AND #{maxRpm})</if>
+        1=1
+        ) THEN 'EXACT'
+        WHEN (
+        <if test="price != null">m.price &lt;= #{price} * 1.2 AND </if>
+        <if test="minCapacity != null and maxCapacity != null">en.capacity BETWEEN #{minCapacity} * 0.8 AND #{maxCapacity} * 1.2 AND </if>
+        <if test="minSpeed != null and maxSpeed != null">en.top_speed BETWEEN #{minSpeed} * 0.8 AND #{maxSpeed} * 1.2 AND </if>
+        <if test="minRpm != null and maxRpm != null">(en.max_power_rpm BETWEEN #{minRpm} * 0.8 AND #{maxRpm} * 1.2 OR en.max_torque_rpm BETWEEN #{minRpm} * 0.8 AND #{maxRpm} * 1.2)</if>
+        1=1
+        ) THEN 'MEDIUM'
+        WHEN (
+        <if test="price != null">m.price &lt;= #{price} * 1.3 AND </if>
+        <if test="minCapacity != null and maxCapacity != null">en.capacity BETWEEN #{minCapacity} * 0.7 AND #{maxCapacity} * 1.3 AND </if>
+        <if test="minSpeed != null and maxSpeed != null">en.top_speed BETWEEN #{minSpeed} * 0.7 AND #{maxSpeed} * 1.3 AND </if>
+        <if test="minRpm != null and maxRpm != null">(en.max_power_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3 OR en.max_torque_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3)</if>
+        1=1
+        ) THEN 'WIDE'
+        END as match_range
+        FROM Motorcycle m
+        LEFT JOIN Dimensions d ON m.motorcycleID = d.motorcycleID
+        LEFT JOIN Electronics el ON m.motorcycleID = el.motorcycleID
+        LEFT JOIN Engines en ON m.motorcycleID = en.motorcycleID
+        WHERE 1=1
+        <!-- 장르 조건 -->
+        <if test="primaryGenre != null">
+            AND (
+            CASE #{primaryGenre}
+            WHEN 'replica' THEN m.replica > 1
+            WHEN 'cruiser' THEN m.cruiser > 1
+            WHEN 'tourer' THEN m.tourer > 1
+            WHEN 'adventure' THEN m.adventure > 1
+            WHEN 'multiPurpose' THEN m.multiPurpose > 1
+            WHEN 'naked' THEN m.naked > 1
+            WHEN 'classic' THEN m.classic > 1
+            WHEN 'scrambler' THEN m.scrambler > 1
+            WHEN 'offRoad' THEN m.offRoad > 1
+            WHEN 'motard' THEN m.motard > 1
+            WHEN 'scooter' THEN m.scooter > 1
+            WHEN 'cafeRacer' THEN m.cafe_racer > 1
+            ELSE 1=1
+            END
+            )
+        </if>
+
+        <!-- 등급 조건 -->
+        <if test="classGrades != null and classGrades.size() > 0">
+            AND en.classGrade IN
+            <foreach item="grade" collection="classGrades" open="(" separator="," close=")">
+                #{grade}
+            </foreach>
+        </if>
+
+        <!-- 최소한 넓은 범위(±30%)에는 들어와야 함 -->
+        AND (
+        <if test="price != null">m.price &lt;= #{price} * 1.3 AND </if>
+        <if test="minCapacity != null and maxCapacity != null">en.capacity BETWEEN #{minCapacity} * 0.7 AND #{maxCapacity} * 1.3 AND </if>
+        <if test="minSpeed != null and maxSpeed != null">en.top_speed BETWEEN #{minSpeed} * 0.7 AND #{maxSpeed} * 1.3 AND </if>
+        <if test="minRpm != null and maxRpm != null">(en.max_power_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3 OR en.max_torque_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3) AND </if>
+        1=1
+        )
+        ORDER BY
+        CASE match_range
+        WHEN 'EXACT' THEN 1
+        WHEN 'MEDIUM' THEN 2
+        WHEN 'WIDE' THEN 3
+        END,
+        m.motorcycleID
+    </select>
 </mapper>

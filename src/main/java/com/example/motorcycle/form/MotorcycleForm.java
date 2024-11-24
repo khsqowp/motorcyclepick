@@ -24,6 +24,7 @@ public class MotorcycleForm {
     private Float scooter;
     private Float classic;
     private Float cafeRacer;
+    private Float price;
 
     // Dimensions 필드
     private Float wheelbase;
@@ -93,6 +94,7 @@ public class MotorcycleForm {
     private Float maxPowerRpm;
     private Float maxTorqueNm;
     private Float maxTorqueRpm;
+    private String classGrade;
 
     // toDTO 메서드: Form 데이터를 DTO로 변환
     public MotorcycleDTO toDTO() {
@@ -115,6 +117,7 @@ public class MotorcycleForm {
         dto.setScooter(this.scooter);
         dto.setClassic(this.classic);
         dto.setCafeRacer(this.cafeRacer);
+        dto.setPrice(this.price);
 
         DimensionsDTO dimensionsDTO = new DimensionsDTO();
         dimensionsDTO.setMotorcycleID(this.getMotorcycleID());
@@ -193,6 +196,7 @@ public class MotorcycleForm {
         dto.getEnginesDTO().setMaxPowerRpm(this.maxPowerRpm);
         dto.getEnginesDTO().setMaxTorqueNm(this.maxTorqueNm);
         dto.getEnginesDTO().setMaxTorqueRpm(this.maxTorqueRpm);
+        dto.getEnginesDTO().setClassGrade(this.classGrade);
 
         return dto;
     }
@@ -219,6 +223,7 @@ public class MotorcycleForm {
         form.setScooter(dto.getScooter());
         form.setClassic(dto.getClassic());
         form.setCafeRacer(dto.getCafeRacer());
+        form.setPrice(dto.getPrice());
 
         // Dimensions 정보 설정
         form.setWheelbase(dto.getDimensionsDTO().getWheelbase());
@@ -288,6 +293,7 @@ public class MotorcycleForm {
         form.setMaxPowerRpm(dto.getEnginesDTO().getMaxPowerRpm());
         form.setMaxTorqueNm(dto.getEnginesDTO().getMaxTorqueNm());
         form.setMaxTorqueRpm(dto.getEnginesDTO().getMaxTorqueRpm());
+        form.setClassGrade(dto.getEnginesDTO().getClassGrade());
 
         return form;
     }
