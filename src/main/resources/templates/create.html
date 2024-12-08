@@ -1,566 +1,3 @@
-<!--<!DOCTYPE html>-->
-<!--<html xmlns:th="http://www.thymeleaf.org">-->
-<!--<head>-->
-<!--    <title>Create Motorcycle</title>-->
-<!--    <style>-->
-<!--        body {-->
-<!--            margin: 0;-->
-<!--            padding: 20px;-->
-<!--            background-color: #111111;-->
-<!--            color: #00FF00;-->
-<!--            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;-->
-<!--        }-->
-
-<!--        /* 섹션 컨테이너 */-->
-<!--        section {-->
-<!--            width: 800px;-->
-<!--            margin: 0 auto;-->
-<!--            padding: 20px;-->
-<!--        }-->
-
-<!--        /* 테이블명(h2) 스타일링 */-->
-<!--        h1, h2 {-->
-<!--            color: #00FF00;-->
-<!--            text-transform: uppercase;-->
-<!--            letter-spacing: 2px;-->
-<!--            text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);-->
-<!--            margin: 40px 0 20px 240px;-->
-<!--        }-->
-
-<!--        h1 {-->
-<!--            margin-left: 0;-->
-<!--            font-size: 24px;-->
-<!--            text-align: center;-->
-<!--        }-->
-
-<!--        /* 일반 입력 필드 컨테이너 */-->
-<!--        div:not(.electronics-detail) {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            margin: 1px 0;-->
-<!--            min-height: 40px;-->
-<!--            background: #1a1a1a;-->
-<!--            border: none;-->
-<!--            border-bottom: 1px solid #333333;-->
-<!--            padding: 0 20px; /* 좌우 여백 추가 */-->
-<!--        }-->
-
-<!--        /* 라벨 영역 */-->
-<!--        div:not(.electronics-detail)::before {-->
-<!--            content: attr(data-label);-->
-<!--            width: 200px;-->
-<!--            padding-left: 20px;-->
-<!--            color: #00FF00;-->
-<!--            font-weight: bold;-->
-<!--            min-height: 40px;-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--        }-->
-
-<!--        /* 입력 필드 스타일링 */-->
-<!--        input:not([type="checkbox"]), select {-->
-<!--            flex: 1;-->
-<!--            height: 32px; /* 상하 4px 여백을 위해 조정 */-->
-<!--            margin: 4px 20px; /* 상하 여백 4px로 변경 */-->
-<!--            padding: 0 12px;-->
-<!--            background-color: #222222;-->
-<!--            border: 1px solid #333333;-->
-<!--            border-radius: 4px;-->
-<!--            color: #00FF00;-->
-<!--            font-size: 14px;-->
-<!--        }-->
-
-<!--        input:not([type="checkbox"]):focus, select:focus {-->
-<!--            outline: none;-->
-<!--            border-color: #00FF00;-->
-<!--            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);-->
-<!--        }-->
-
-<!--        /* Electronics Details 체크박스 컨테이너 */-->
-<!--        .electronics-detail {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            margin: 1px 0;-->
-<!--            min-height: 40px;-->
-<!--            background: #1a1a1a;-->
-<!--            border: none;-->
-<!--            border-bottom: 1px solid #333333;-->
-<!--            padding: 0 220px; /* 좌우 여백 20px로 통일 */-->
-<!--        }-->
-
-<!--        /* 체크박스 라벨 영역 */-->
-<!--        .electronics-detail label {-->
-<!--            padding-left: 20px;-->
-<!--            color: #00FF00;-->
-<!--            font-weight: bold;-->
-<!--            min-height: 40px;-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            width: 200px;-->
-<!--        }-->
-
-<!--        /* 체크박스 영역 */-->
-<!--        .checkbox-wrapper {-->
-<!--            margin-left: auto;-->
-<!--            padding-right: 20px; /* 오른쪽 여백 */-->
-<!--            display: flex;-->
-<!--            justify-content: flex-end;-->
-<!--        }-->
-
-<!--        /* 체크박스 스타일링 */-->
-<!--        .electronics-detail input[type="checkbox"] {-->
-<!--            appearance: none;-->
-<!--            -webkit-appearance: none;-->
-<!--            width: 24px; /* 20% 감소 */-->
-<!--            height: 24px; /* 20% 감소 */-->
-<!--            border: 2px solid #00FF00;-->
-<!--            border-radius: 4px;-->
-<!--            background-color: #222222;-->
-<!--            cursor: pointer;-->
-<!--            margin: 4px 0; /* 상하 여백 4px */-->
-<!--        }-->
-
-<!--        .electronics-detail input[type="checkbox"]:checked {-->
-<!--            background-color: #00FF00;-->
-<!--        }-->
-
-<!--        .electronics-detail input[type="checkbox"]:checked::after {-->
-<!--            content: '✓';-->
-<!--            position: absolute;-->
-<!--            color: #000;-->
-<!--            font-size: 12px; /* 체크 마크 크기도 비례하여 감소 */-->
-<!--            top: 50%;-->
-<!--            left: 50%;-->
-<!--            transform: translate(-50%, -50%);-->
-<!--        }-->
-
-<!--        /* 생성 버튼 스타일링 */-->
-<!--        .create-button {-->
-<!--            background-color: #003300;-->
-<!--            color: #00FF00;-->
-<!--            border: 1px solid #00FF00;-->
-<!--            padding: 12px 24px;-->
-<!--            font-size: 16px;-->
-<!--            text-transform: uppercase;-->
-<!--            letter-spacing: 2px;-->
-<!--            cursor: pointer;-->
-<!--            display: block;-->
-<!--            margin: 40px auto;-->
-<!--            border-radius: 4px;-->
-<!--            transition: all 0.3s ease;-->
-<!--            height: 40px;-->
-<!--        }-->
-
-<!--        .create-button:hover {-->
-<!--            background-color: #004400;-->
-<!--            box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);-->
-<!--            transform: translateY(-2px);-->
-<!--        }-->
-<!--    </style>-->
-<!--</head>-->
-<!--<body>-->
-<!--<h1>Create New Motorcycle</h1>-->
-
-<!--<form th:action="@{/motorcycle/new}" th:object = "${motorcycleForm}" method="post">-->
-
-<!--    &lt;!&ndash; MotorcycleForm &ndash;&gt;-->
-<!--    <h2>Motorcycle Details</h2>-->
-<!--    <div>-->
-<!--        <label for="brand">Brand:</label>-->
-<!--        <input type="text" id="brand" th:field="*{brand}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="model">Model:</label>-->
-<!--        <input type="text" id="model" th:field="*{model}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="years">Years:</label>-->
-<!--        <input type="number" step="0.1" id="years" th:field="*{years}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="replica">Replica:</label>-->
-<!--        <input type="number" step="0.1" id="replica" th:field="*{replica}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="cruiser">Cruiser:</label>-->
-<!--        <input type="number" step="0.1" id="cruiser" th:field="*{cruiser}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="tourer">Tourer:</label>-->
-<!--        <input type="number" step="0.1" id="tourer" th:field="*{tourer}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="adventure">Adventure:</label>-->
-<!--        <input type="number" step="0.1" id="adventure" th:field="*{adventure}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="multipurpose">Multi-Purpose:</label>-->
-<!--        <input type="number" step="0.1" id="multipurpose" th:field="*{multiPurpose}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="naked">Naked:</label>-->
-<!--        <input type="number" step="0.1" id="naked" th:field="*{naked}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="scrambler">Scrambler:</label>-->
-<!--        <input type="number" step="0.1" id="scrambler" th:field="*{scrambler}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="offRoad">Off-Road:</label>-->
-<!--        <input type="number" step="0.1" id="offRoad" th:field="*{offRoad}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="motard">Motard:</label>-->
-<!--        <input type="number" step="0.1" id="motard" th:field="*{motard}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="trial">Trial:</label>-->
-<!--        <input type="number" step="0.1" id="trial" th:field="*{trial}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="scooter">Scooter:</label>-->
-<!--        <input type="number" step="0.1" id="scooter" th:field="*{scooter}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="classic">Classic:</label>-->
-<!--        <input type="number" step="0.1" id="classic" th:field="*{classic}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="cafeRacer">Cafe Racer:</label>-->
-<!--        <input type="number" step="0.1" id="cafeRacer" th:field="*{cafeRacer}" />-->
-<!--    </div>-->
-
-<!--    &lt;!&ndash; DimensionsForm &ndash;&gt;-->
-<!--    <h2>Dimensions Details</h2>-->
-<!--    <div>-->
-<!--        <label for="wheelbase">Wheelbase:</label>-->
-<!--        <input type="number" step="0.1" id="wheelbase" th:field="*{wheelbase}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="seatHeight">Seat Height:</label>-->
-<!--        <input type="number" step="0.1" id="seatHeight" th:field="*{seatHeight}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="wetWeight">Wet Weight:</label>-->
-<!--        <input type="number" step="0.1" id="wetWeight" th:field="*{wetWeight}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="fuelCapacity">Fuel Capacity:</label>-->
-<!--        <input type="number" step="0.1" id="fuelCapacity" th:field="*{fuelCapacity}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="groundClearance">Ground Clearance:</label>-->
-<!--        <input type="number" step="0.1" id="groundClearance" th:field="*{groundClearance}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="dryWeight">Dry Weight:</label>-->
-<!--        <input type="number" step="0.1" id="dryWeight" th:field="*{dryWeight}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="length">Length:</label>-->
-<!--        <input type="number" step="0.1" id="length" th:field="*{length}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="width">Width:</label>-->
-<!--        <input type="number" step="0.1" id="width" th:field="*{width}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="height">Height:</label>-->
-<!--        <input type="number" step="0.1" id="height" th:field="*{height}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="frontTyreWidth">Front Tyre Width:</label>-->
-<!--        <input type="number" step="0.1" id="frontTyreWidth" th:field="*{frontTyreWidth}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="frontTyreAspectRatio">Front Tyre Aspect Ratio:</label>-->
-<!--        <input type="number" step="0.1" id="frontTyreAspectRatio" th:field="*{frontTyreAspectRatio}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="frontTyreStructure">Front Tyre Structure:</label>-->
-<!--        <input type="text" id="frontTyreStructure" th:field="*{frontTyreStructure}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="frontTyreDiameter">Front Tyre Diameter:</label>-->
-<!--        <input type="number" step="0.1" id="frontTyreDiameter" th:field="*{frontTyreDiameter}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="rearTyreWidth">Rear Tyre Width:</label>-->
-<!--        <input type="number" step="0.1" id="rearTyreWidth" th:field="*{rearTyreWidth}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="rearTyreAspectRatio">Rear Tyre Aspect Ratio:</label>-->
-<!--        <input type="number" step="0.1" id="rearTyreAspectRatio" th:field="*{rearTyreAspectRatio}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="rearTyreStructure">Rear Tyre Structure:</label>-->
-<!--        <input type="text" id="rearTyreStructure" th:field="*{rearTyreStructure}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="rearTyreDiameter">Rear Tyre Diameter:</label>-->
-<!--        <input type="number" step="0.1" id="rearTyreDiameter" th:field="*{rearTyreDiameter}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="frontBrakeDiscCount">Front Brake Disc Count:</label>-->
-<!--        <input type="number" step="0.1" id="frontBrakeDiscCount" th:field="*{frontBrakeDiscCount}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="frontBrakeDiscSize">Front Brake Disc Size:</label>-->
-<!--        <input type="number" step="0.1" id="frontBrakeDiscSize" th:field="*{frontBrakeDiscSize}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="frontBrakeDiscType">Front Brake Disc Type:</label>-->
-<!--        <input type="text" id="frontBrakeDiscType" th:field="*{frontBrakeDiscType}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="frontBrakePistonCount">Front Brake Piston Count:</label>-->
-<!--        <input type="number" step="0.1" id="frontBrakePistonCount" th:field="*{frontBrakePistonCount}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="rearBrakeDiscSize">Rear Brake Disc Size:</label>-->
-<!--        <input type="number" step="0.1" id="rearBrakeDiscSize" th:field="*{rearBrakeDiscSize}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="rearBrakeDiscType">Rear Brake Disc Type:</label>-->
-<!--        <input type="text" id="rearBrakeDiscType" th:field="*{rearBrakeDiscType}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="rearBrakePistonCount">Rear Brake Piston Count:</label>-->
-<!--        <input type="number" step="0.1" id="rearBrakePistonCount" th:field="*{rearBrakePistonCount}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="frameType">Frame Type:</label>-->
-<!--        <input type="text" id="frameType" th:field="*{frameType}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="frameMaterial">Frame Material:</label>-->
-<!--        <input type="text" id="frameMaterial" th:field="*{frameMaterial}" />-->
-<!--    </div>-->
-
-<!--    &lt;!&ndash; ElectronicsForm &ndash;&gt;-->
-<!--    <h2>Electronics Details</h2>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="startSystem">Start System:</label>-->
-<!--        <div class="input-wrapper">-->
-<!--            <input type="text" id="startSystem" th:field="*{startSystem}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="abs">ABS:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="abs" th:field="*{abs}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="tcs">TCS:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="tcs" th:field="*{tcs}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="cruiseControl">Cruise Control:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="cruiseControl" th:field="*{cruiseControl}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="assistSlipperClutch">Assist Slipper Clutch:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="assistSlipperClutch" th:field="*{assistSlipperClutch}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="electricScreen">Electronic Screen:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="electricScreen" th:field="*{electricScreen}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="clutchAssistSystem">Clutch Assist System:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="clutchAssistSystem" th:field="*{clutchAssistSystem}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="imu">IMU:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="imu" th:field="*{imu}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="corneringAbs">Cornering ABS:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="corneringAbs" th:field="*{corneringAbs}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="wheelieControl">Wheelie Control:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="wheelieControl" th:field="*{wheelieControl}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="ridingModeChange">Riding Mode Change:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="ridingModeChange" th:field="*{ridingModeChange}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="bankingAngleDisplay">Banking Angle Display:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="bankingAngleDisplay" th:field="*{bankingAngleDisplay}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="absLevelControl">ABS Level Control:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="absLevelControl" th:field="*{absLevelControl}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="quickshiftUp">Quickshift Up:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="quickshiftUp" th:field="*{quickshiftUp}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="electronics-detail">-->
-<!--        <label for="quickshiftUpDown">Quickshift Up Down:</label>-->
-<!--        <div class="checkbox-wrapper">-->
-<!--            <input type="checkbox" id="quickshiftUpDown" th:field="*{quickshiftUpDown}" />-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash; EnginesForm &ndash;&gt;-->
-<!--    <h2>Engine Details</h2>-->
-<!--    <div>-->
-<!--        <label for="capacity">Capacity:</label>-->
-<!--        <input type="number" step="0.1" id="capacity" th:field="*{capacity}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="boreStroke">Bore & Stroke:</label>-->
-<!--        <input type="text" id="boreStroke" th:field="*{boreStroke}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="compressionRatio">Compression Ratio:</label>-->
-<!--        <input type="text" id="compressionRatio" th:field="*{compressionRatio}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="coolingSystem">Cooling System:</label>-->
-<!--        <input type="text" id="coolingSystem" th:field="*{coolingSystem}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="lubrication">Lubrication:</label>-->
-<!--        <input type="text" id="lubrication" th:field="*{lubrication}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="fuelSystem">Fuel System:</label>-->
-<!--        <input type="text" id="fuelSystem" th:field="*{fuelSystem}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="emission">Emission:</label>-->
-<!--        <input type="text" id="emission" th:field="*{emission}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="induction">Induction:</label>-->
-<!--        <input type="text" id="induction" th:field="*{induction}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="mileage">Mileage:</label>-->
-<!--        <input type="number" step="0.1" id="mileage" th:field="*{mileage}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="topSpeed">Top Speed:</label>-->
-<!--        <input type="number" step="0.1" id="topSpeed" th:field="*{topSpeed}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="clutch">Clutch:</label>-->
-<!--        <input type="text" id="clutch" th:field="*{clutch}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="transmissionGearCount">Transmission Gear Count:</label>-->
-<!--        <input type="text" id="transmissionGearCount" th:field="*{transmissionGearCount}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="transmissionType">Transmission Type:</label>-->
-<!--        <input type="text" id="transmissionType" th:field="*{transmissionType}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="engineStroke">Engine Stroke:</label>-->
-<!--        <input type="number" step="0.1" id="engineStroke" th:field="*{engineStroke}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="engineCylinder">Engine Cylinder:</label>-->
-<!--        <input type="number" step="0.1" id="engineCylinder" th:field="*{engineCylinder}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="engineCamshaft">Engine Camshaft:</label>-->
-<!--        <input type="text" id="engineCamshaft" th:field="*{engineCamshaft}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="engineType">Engine Type:</label>-->
-<!--        <input type="text" id="engineType" th:field="*{engineType}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="engineCrankAngle">Engine Crank Angle:</label>-->
-<!--        <input type="text" id="engineCrankAngle" th:field="*{engineCrankAngle}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="maxPowerHp">Max Power (HP):</label>-->
-<!--        <input type="number" step="0.1" id="maxPowerHp" th:field="*{maxPowerHp}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="maxPowerRpm">Max Power RPM:</label>-->
-<!--        <input type="number" step="0.1" id="maxPowerRpm" th:field="*{maxPowerRpm}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="maxTorqueNm">Max Torque (Nm):</label>-->
-<!--        <input type="number" step="0.1" id="maxTorqueNm" th:field="*{maxTorqueNm}" />-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <label for="maxTorqueRpm">Max Torque RPM:</label>-->
-<!--        <input type="number" step="0.1" id="maxTorqueRpm" th:field="*{maxTorqueRpm}" />-->
-<!--    </div>-->
-
-<!--    <div>-->
-<!--        <button type="submit" class="submit-btn">Create Motorcycle</button>-->
-<!--    </div>-->
-<!--</form>-->
-<!--<script>-->
-<!--    document.addEventListener('DOMContentLoaded', function() {-->
-<!--        // Electronics Details 섹션의 div들을 체크박스로 변환-->
-<!--        const electronicsSection = document.querySelector('h2:contains("Electronics Details")').parentElement;-->
-<!--        const electronicsDivs = electronicsSection.querySelectorAll('div');-->
-
-<!--        electronicsDivs.forEach(div => {-->
-<!--            const label = div.textContent.trim().replace(':', '');-->
-<!--            const id = label.toLowerCase().replace(/\s+/g, '-');-->
-
-<!--            div.className = 'electronics-detail';-->
-<!--            div.innerHTML = `-->
-<!--      <label for="${id}">${label}</label>-->
-<!--      <div class="checkbox-wrapper">-->
-<!--        <input type="checkbox" id="${id}" name="${id}">-->
-<!--      </div>-->
-<!--    `;-->
-<!--        });-->
-
-<!--        // 나머지 일반 입력 필드 처리-->
-<!--        const allDivs = document.querySelectorAll('div:not(.electronics-detail)');-->
-<!--        allDivs.forEach(div => {-->
-<!--            if (div.textContent.trim() && !div.querySelector('input')) {-->
-<!--                const label = div.textContent.trim().replace(':', '');-->
-<!--                div.setAttribute('data-label', label);-->
-<!--                div.innerHTML = `<input type="text" name="${label.toLowerCase().replace(/\s+/g, '-')}" id="${label.toLowerCase().replace(/\s+/g, '-')}">`;-->
-<!--            }-->
-<!--        });-->
-
-<!--        // Create Motorcycle 버튼 스타일링-->
-<!--        const createButton = document.querySelector('div:last-child');-->
-<!--        createButton.innerHTML = '<button class="create-button">Create Motorcycle</button>';-->
-<!--    });-->
-<!--</script>-->
-<!--</body>-->
-<!--</html>-->
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -579,11 +16,11 @@
                 <div class="info-grid">
                     <div class="input-group">
                         <label>Brand:</label>
-                        <input type="number" name="brand" required>
+                        <input type="text" name="brand" required>
                     </div>
                     <div class="input-group">
                         <label>Model:</label>
-                        <input type="number" name="model" required>
+                        <input type="text" name="model" required>
                     </div>
                     <div class="input-group">
                         <label>Years:</label>
@@ -591,55 +28,59 @@
                     </div>
                     <div class="checkbox-group">
                         <label>Replica:</label>
-                        <input type="number" name="replica" min="0" max="1">
+                        <input type="number" name="replica" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Cruiser:</label>
-                        <input type="number" name="cruiser" min="0" max="1">
+                        <input type="number" name="cruiser" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Tourer:</label>
-                        <input type="number" name="tourer" min="0" max="1">
+                        <input type="number" name="tourer" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Adventure:</label>
-                        <input type="number" name="adventure" min="0" max="1">
+                        <input type="number" name="adventure" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Multi-Purpose:</label>
-                        <input type="number" name="multiPurpose" min="0" max="1">
+                        <input type="number" name="multiPurpose" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Naked:</label>
-                        <input type="number" name="naked" min="0" max="1">
+                        <input type="number" name="naked" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Scrambler:</label>
-                        <input type="number" name="scrambler" min="0" max="1">
+                        <input type="number" name="scrambler" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Off-Road:</label>
-                        <input type="number" name="offRoad" min="0" max="1">
+                        <input type="number" name="offRoad" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Motard:</label>
-                        <input type="number" name="motard" min="0" max="1">
+                        <input type="number" name="motard" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Trial:</label>
-                        <input type="number" name="trial" min="0" max="1">
+                        <input type="number" name="trial" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Scooter:</label>
-                        <input type="number" name="scooter" min="0" max="1">
+                        <input type="number" name="scooter" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Classic:</label>
-                        <input type="number" name="classic" min="0" max="1">
+                        <input type="number" name="classic" min="0" max="100">
                     </div>
                     <div class="checkbox-group">
                         <label>Cafe Racer:</label>
-                        <input type="number" name="cafeRacer" min="0" max="1">
+                        <input type="number" name="cafeRacer" min="0" max="100">
+                    </div>
+                    <div class="input-group">
+                        <label>price:</label>
+                        <input type="number" name="price" required>
                     </div>
                 </div>
             </div>
@@ -649,107 +90,107 @@
                 <div class="info-grid">
                     <div class="input-group">
                         <label>Wheelbase:</label>
-                        <input type="number" step="0.1" name="dimensionsDTO.wheelbase">
+                        <input type="number" step="0.1" name="wheelbase">
                     </div>
                     <div class="input-group">
                         <label>Seat Height:</label>
-                        <input type="number" step="0.1" name="dimensionsDTO.seatHeight">
+                        <input type="number" step="0.1" name="seatHeight">
                     </div>
                     <div class="input-group">
                         <label>Wet Weight:</label>
-                        <input type="number" step="0.1" name="dimensionsDTO.wetWeight">
+                        <input type="number" step="0.1" name="wetWeight">
                     </div>
                     <div class="input-group">
                         <label>Fuel Capacity:</label>
-                        <input type="number" step="0.1" name="dimensionsDTO.fuelCapacity">
+                        <input type="number" step="0.1" name="fuelCapacity">
                     </div>
                     <div class="input-group">
                         <label>Ground Clearance:</label>
-                        <input type="number" step="0.1" name="dimensionsDTO.groundClearance">
+                        <input type="number" step="0.1" name="groundClearance">
                     </div>
                     <div class="input-group">
                         <label>Dry Weight:</label>
-                        <input type="number" step="0.1" name="dimensionsDTO.dryWeight">
+                        <input type="number" step="0.1" name="dryWeight">
                     </div>
                     <div class="input-group">
                         <label>Length:</label>
-                        <input type="number" step="0.1" name="dimensionsDTO.length">
+                        <input type="number" step="0.1" name="length">
                     </div>
                     <div class="input-group">
                         <label>Width:</label>
-                        <input type="number" step="0.1" name="dimensionsDTO.width">
+                        <input type="number" step="0.1" name="width">
                     </div>
                     <div class="input-group">
                         <label>Height:</label>
-                        <input type="number" step="0.1" name="dimensionsDTO.height">
+                        <input type="number" step="0.1" name="height">
                     </div>
                     <div class="input-group">
                         <label>Front Tyre Width:</label>
-                        <input type="number" name="dimensionsDTO.frontTyreWidth">
+                        <input type="number" name="frontTyreWidth">
                     </div>
                     <div class="input-group">
                         <label>Front Tyre Aspect Ratio:</label>
-                        <input type="number" name="dimensionsDTO.frontTyreAspectRatio">
+                        <input type="number" name="frontTyreAspectRatio">
                     </div>
                     <div class="input-group">
                         <label>Front Tyre Structure:</label>
-                        <input type="text" name="dimensionsDTO.frontTyreStructure">
+                        <input type="text" name="frontTyreStructure">
                     </div>
                     <div class="input-group">
                         <label>Front Tyre Diameter:</label>
-                        <input type="number" name="dimensionsDTO.frontTyreDiameter">
+                        <input type="number" name="frontTyreDiameter">
                     </div>
                     <div class="input-group">
                         <label>Rear Tyre Width:</label>
-                        <input type="number" name="dimensionsDTO.rearTyreWidth">
+                        <input type="number" name="rearTyreWidth">
                     </div>
                     <div class="input-group">
                         <label>Rear Tyre Aspect Ratio:</label>
-                        <input type="number" name="dimensionsDTO.rearTyreAspectRatio">
+                        <input type="number" name="rearTyreAspectRatio">
                     </div>
                     <div class="input-group">
                         <label>Rear Tyre Structure:</label>
-                        <input type="text" name="dimensionsDTO.rearTyreStructure">
+                        <input type="text" name="rearTyreStructure">
                     </div>
                     <div class="input-group">
                         <label>Rear Tyre Diameter:</label>
-                        <input type="number" name="dimensionsDTO.rearTyreDiameter">
+                        <input type="number" name="rearTyreDiameter">
                     </div>
                     <div class="input-group">
                         <label>Front Brake Disc Count:</label>
-                        <input type="number" name="dimensionsDTO.frontBrakeDiscCount">
+                        <input type="number" name="frontBrakeDiscCount">
                     </div>
                     <div class="input-group">
                         <label>Front Brake Disc Size:</label>
-                        <input type="number" name="dimensionsDTO.frontBrakeDiscSize">
+                        <input type="number" name="frontBrakeDiscSize">
                     </div>
                     <div class="input-group">
                         <label>Front Brake Disc Type:</label>
-                        <input type="text" name="dimensionsDTO.frontBrakeDiscType">
+                        <input type="text" name="frontBrakeDiscType">
                     </div>
                     <div class="input-group">
                         <label>Front Brake Piston Count:</label>
-                        <input type="number" name="dimensionsDTO.frontBrakePistonCount">
+                        <input type="number" name="frontBrakePistonCount">
                     </div>
                     <div class="input-group">
                         <label>Rear Brake Disc Size:</label>
-                        <input type="number" name="dimensionsDTO.rearBrakeDiscSize">
+                        <input type="number" name="rearBrakeDiscSize">
                     </div>
                     <div class="input-group">
                         <label>Rear Brake Disc Type:</label>
-                        <input type="text" name="dimensionsDTO.rearBrakeDiscType">
+                        <input type="text" name="rearBrakeDiscType">
                     </div>
                     <div class="input-group">
                         <label>Rear Brake Piston Count:</label>
-                        <input type="number" name="dimensionsDTO.rearBrakePistonCount">
+                        <input type="number" name="rearBrakePistonCount">
                     </div>
                     <div class="input-group">
                         <label>Frame Type:</label>
-                        <input type="text" name="dimensionsDTO.frameType">
+                        <input type="text" name="frameType">
                     </div>
                     <div class="input-group">
                         <label>Frame Material:</label>
-                        <input type="text" name="dimensionsDTO.frameMaterial">
+                        <input type="text" name="frameMaterial">
                     </div>
                 </div>
             </div>
@@ -759,63 +200,63 @@
                 <div class="info-grid">
                     <div class="input-group">
                         <label>Start System:</label>
-                        <input type="text" name="electronicsDTO.startSystem">
+                        <input type="text" name="startSystem">
                     </div>
                     <div class="checkbox-group">
                         <label>ABS:</label>
-                        <input type="checkbox" name="electronicsDTO.abs">
+                        <input type="checkbox" name="abs">
                     </div>
                     <div class="checkbox-group">
                         <label>TCS:</label>
-                        <input type="checkbox" name="electronicsDTO.tcs">
+                        <input type="checkbox" name="tcs">
                     </div>
                     <div class="checkbox-group">
                         <label>Cruise Control:</label>
-                        <input type="checkbox" name="electronicsDTO.cruiseControl">
+                        <input type="checkbox" name="cruiseControl">
                     </div>
                     <div class="checkbox-group">
                         <label>Assist Slipper Clutch:</label>
-                        <input type="checkbox" name="electronicsDTO.assistSlipperClutch">
+                        <input type="checkbox" name="assistSlipperClutch">
                     </div>
                     <div class="checkbox-group">
                         <label>Electronic Screen:</label>
-                        <input type="checkbox" name="electronicsDTO.electronicsScreen">
+                        <input type="checkbox" name="electronicsScreen">
                     </div>
                     <div class="checkbox-group">
                         <label>Clutch Assist System:</label>
-                        <input type="checkbox" name="electronicsDTO.clutchAssistSystem">
+                        <input type="checkbox" name="clutchAssistSystem">
                     </div>
                     <div class="checkbox-group">
                         <label>IMU:</label>
-                        <input type="checkbox" name="electronicsDTO.imu">
+                        <input type="checkbox" name="imu">
                     </div>
                     <div class="checkbox-group">
                         <label>Cornering ABS:</label>
-                        <input type="checkbox" name="electronicsDTO.corneringAbs">
+                        <input type="checkbox" name="corneringAbs">
                     </div>
                     <div class="checkbox-group">
                         <label>Wheelie Control:</label>
-                        <input type="checkbox" name="electronicsDTO.wheelieControl">
+                        <input type="checkbox" name="wheelieControl">
                     </div>
                     <div class="checkbox-group">
                         <label>Riding Mode Change:</label>
-                        <input type="checkbox" name="electronicsDTO.ridingModeChange">
+                        <input type="checkbox" name="ridingModeChange">
                     </div>
                     <div class="checkbox-group">
                         <label>Banking Angle Display:</label>
-                        <input type="checkbox" name="electronicsDTO.bankingAngleDisplay">
+                        <input type="checkbox" name="bankingAngleDisplay">
                     </div>
                     <div class="checkbox-group">
                         <label>ABS Level Control:</label>
-                        <input type="checkbox" name="electronicsDTO.absLevelControl">
+                        <input type="checkbox" name="absLevelControl">
                     </div>
                     <div class="checkbox-group">
                         <label>Quickshift Up:</label>
-                        <input type="checkbox" name="electronicsDTO.quickshiftUp">
+                        <input type="checkbox" name="quickshiftUp">
                     </div>
                     <div class="checkbox-group">
                         <label>Quickshift Up Down:</label>
-                        <input type="checkbox" name="electronicsDTO.quickshiftUpDown">
+                        <input type="checkbox" name="quickshiftUpDown">
                     </div>
                 </div>
             </div>
@@ -825,95 +266,95 @@
                 <div class="info-grid">
                     <div class="input-group">
                         <label>Capacity:</label>
-                        <input type="number" step="0.1" name="enginesDTO.capacity">
+                        <input type="number" step="0.1" name="capacity">
                     </div>
                     <div class="input-group">
                         <label>Bore & Stroke:</label>
-                        <input type="text" name="enginesDTO.boreStroke">
+                        <input type="text" name="boreStroke">
                     </div>
                     <div class="input-group">
                         <label>Compression Ratio:</label>
-                        <input type="text" name="enginesDTO.compressionRatio">
+                        <input type="text" name="compressionRatio">
                     </div>
                     <div class="input-group">
                         <label>Cooling System:</label>
-                        <input type="text" name="enginesDTO.coolingSystem">
+                        <input type="text" name="coolingSystem">
                     </div>
                     <div class="input-group">
                         <label>Lubrication:</label>
-                        <input type="text" name="enginesDTO.lubrication">
+                        <input type="text" name="lubrication">
                     </div>
                     <div class="input-group">
                         <label>Fuel System:</label>
-                        <input type="text" name="enginesDTO.fuelSystem">
+                        <input type="text" name="fuelSystem">
                     </div>
                     <div class="input-group">
                         <label>Emission:</label>
-                        <input type="text" name="enginesDTO.emission">
+                        <input type="text" name="emission">
                     </div>
                     <div class="input-group">
                         <label>Induction:</label>
-                        <input type="text" name="enginesDTO.induction">
+                        <input type="text" name="induction">
                     </div>
                     <div class="input-group">
                         <label>Mileage:</label>
-                        <input type="number" step="0.1" name="enginesDTO.mileage">
+                        <input type="number" step="0.1" name="mileage">
                     </div>
                     <div class="input-group">
                         <label>Top Speed:</label>
-                        <input type="number" step="0.1" name="enginesDTO.topSpeed">
+                        <input type="number" step="0.1" name="topSpeed">
                     </div>
                     <div class="input-group">
                         <label>Clutch:</label>
-                        <input type="text" name="enginesDTO.clutch">
+                        <input type="text" name="clutch">
                     </div>
                     <div class="input-group">
                         <label>Transmission Gear Count:</label>
-                        <input type="number" name="enginesDTO.transmissionGearCount">
+                        <input type="number" name="transmissionGearCount">
                     </div>
                     <div class="input-group">
                         <label>Transmission Type:</label>
-                        <input type="text" name="enginesDTO.transmissionType">
+                        <input type="text" name="transmissionType">
                     </div>
                     <div class="input-group">
                         <label>Engine Stroke:</label>
-                        <input type="text" name="enginesDTO.engineStroke">
+                        <input type="text" name="engineStroke">
                     </div>
                     <div class="input-group">
                         <label>Engine Cylinder:</label>
-                        <input type="text" name="enginesDTO.engineCylinder">
+                        <input type="text" name="engineCylinder">
                     </div>
                     <div class="input-group">
                         <label>Engine Camshaft:</label>
-                        <input type="text" name="enginesDTO.engineCamshaft">
+                        <input type="text" name="engineCamshaft">
                     </div>
                     <div class="input-group">
                         <label>Engine Type:</label>
-                        <input type="text" name="enginesDTO.engineType">
+                        <input type="text" name="engineType">
                     </div>
                     <div class="input-group">
                         <label>Engine Crank Angle:</label>
-                        <input type="text" name="enginesDTO.engineCrankAngle">
+                        <input type="text" name="engineCrankAngle">
                     </div>
                     <div class="input-group">
                         <label>Max Power (HP):</label>
-                        <input type="number" step="0.1" name="enginesDTO.maxPowerHp">
+                        <input type="number" step="0.1" name="maxPowerHp">
                     </div>
                     <div class="input-group">
                         <label>Max Power RPM:</label>
-                        <input type="number" name="enginesDTO.maxPowerRpm">
+                        <input type="number" name="maxPowerRpm">
                     </div>
                     <div class="input-group">
                         <label>Max Torque (Nm):</label>
-                        <input type="number" step="0.1" name="enginesDTO.maxTorqueNm">
+                        <input type="number" step="0.1" name="maxTorqueNm">
                     </div>
                     <div class="input-group">
                         <label>Max Torque RPM:</label>
-                        <input type="number" name="enginesDTO.maxTorqueRpm">
+                        <input type="number" name="maxTorqueRpm">
                     </div>
                     <div class="input-group">
                         <label>Class Grade:</label>
-                        <input type="number" name="enginesDTO.classGrade">
+                        <input type="number" name="classGrade">
                     </div>
                 </div>
             </div>

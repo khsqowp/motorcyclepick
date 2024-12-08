@@ -1,0 +1,40 @@
+Model : FTR1200 Carbon
+Years : 2020
+Engine : Four stroke, 60&#176; V Twin , DOHC, 4 valves per cylinder, graded buckets
+Capacity : 1203 cc / 73 cu-in
+Bore x Stroke : 102 x 73.6 mm
+Compression Ratio : 12.5:1
+Cooling System : Liquid Cooled
+Induction : Electronic Fuel Injection Closed Loop, 60 mm bore
+Exhaust : Akrapovi&#269; 2-into-1
+Starting : Electric
+Max Power : 123 hp / 91.7 kW @ 6000 rpm
+Max Torque : 120 Nm / 87 lb-ft @ 5900 rpm
+Clutch : Wet multi-plate w/ assist-and-slip
+Transmission : 6 Speed
+Final Drive : 525 Chain
+Final Drive Ratio : 2.882:1
+Gear Ratios : 1st 13.361:1 2nd 9.082:1 3rd 7.237:1 4th 6.141:1 5th 5.428:1 6th 4.658:1
+Lean Angle : 43&#176;
+Frame : Steel trellis
+Front Suspension : Fully adjustable inverted 43mm telescopic cartridge fork
+Front Wheel Travel : 150 mm / 5.9 in
+Rear Suspension : Fully adjustable piggyback IFP
+Rear Wheel Travel : 150 mm / 5.9 in
+Front Brakes : 2x 320mm t5 Rotor Brembo with 4-Piston Calipers
+Rear Brakes : Single 260mm t5 Rotor Brembo with 2-Piston Calipers
+ABS : Standard, option to disable
+Front Wheel : Cast 19 in x 3 in
+Rear Wheel : Cast 18 in x 4.25 in
+Front Tyre : 120/70R19 60V
+Rear Tyre : 150/80R18 70V
+Rake : 26.3&#176;
+Trail : 130 mm / 5.1 in
+Dimensions : Length 2287 mm / 90.0 in Width 862 mm / 33.9 in Height 1166 mm / 45.9 in
+Wheelbase : 1524 mm / 60 in
+Seat Height : 815 mm - 853 mm / 32 in - 33.5 in
+Ground Clearance : 183 mm / 7.2 in
+Dry Weight : 228 kg / 502.6 lbs
+Wet Weight : 235 kg / 518 lbs
+Fuel Capacity : 12.9 Litres / 3.4 US gal
+Standard Equipment : Cruise control, stability, traction &amp; wheelie mitigation control, and 3 ride modes: Sport, Standard and Rain

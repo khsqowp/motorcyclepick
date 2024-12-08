@@ -1,0 +1,33 @@
+Model : DL 1050 V-Strom XT
+Years : 2020
+Engine : Four stroke, 90&#176;-V-twin, DOHC, 4 valves per cylinder
+Capacity : 1037 cc / 63.2 cu-in
+Bore x Stroke : 100 x 66.0mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5:1
+Lubrication : Wet sump
+Induction : EFI w/ 49mm throttle body
+Ignition : Electronic ignition (transistorized)
+Starting : Electric
+Clutch : Wet, multiple-plate
+Transmission : 6 Speed
+Final Drive : RK 525 O-ring chain
+Frame : Aluminium, twin spar
+Front Suspension : 43mm KYB fully adjustable inverted 43mm fork
+Front Wheel Travel : 160 mm / 6.3 in
+Rear Suspension : Linkage-assisted, rebound-damping and spring-preload adjustable shock
+Rear Wheel Travel : 160 mm / 6.3 in
+Front Brakes : 2 x 310mm discs, radially mounted 4-piston Tokico calipers
+Rear Brakes : Single 265mm disc, 2-piston Nissin caliper
+ABS : IMU-supported ABS
+Wheels : Wire-spoke
+Front Tyre : 110/80 x 19 Bridgestone Battleax Adventure A41
+Rear Tyre : 150/70 x 17 Bridgestone Battleax Adventure A41
+Rake : 25.3&#176;
+Trail : 109 mm / 4.3 in
+Dimensions : Length 2265 mm / 98.2 in Width 940 mm / 37.0 in Height 1465 mm / 57.7 in
+Wheelbase : 1554 mm / 61.2 in
+Seat Height : 850 mm / 33.5 in
+Ground Clearance : 160 mm / 6.3 in
+Wet Weight : kg / 545 lbs
+Fuel Capacity : 20 Litres / 5.3 US gal / 4.4 Imp gal

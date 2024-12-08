@@ -1,0 +1,28 @@
+Model : GTS 300 Touring
+Years : 2018-
+Engine : Four strike single cylinder, SOHC, 4 valve
+Capacity : 278 cc / 18.2 cub in
+Bore x Stroke : 75 mm x 63 mm
+Cooling : Liquid cooled
+Lubrication : Wet sump, chain driven lube pump
+Ignition : Electric
+Starting : Electric
+Max Power : 15.8 kW / 21.5 hp @ 7500 rpm
+Max Torque : 22.3 Nm / 2.27 kgf-m / 16.45 ft/lb @ 5250 rpm
+Clutch : Automatic, dry centrifuge with damper buffers
+Transmission : CVT with torque server
+Final Drive : Belt
+Frame : Sheetmetal body with welded reinforcements
+Front Suspension : Single arm, dual chamber hydraulic shock absorber with coaxial spring
+Rear Suspension : Duel effect shock absorbers with adjustable preload
+Front Brakes : Single 220 mm disc
+Rear Brakes : Single 220 mm disc
+Front Tyre : 110/70-R12"
+Rear Tyre : 130/70-R12"
+Dimensions : Length 1930 mm / 75.9 in Width 755 mm / 29.7 in
+Wheelbase : 1370 mm / 53.9 in
+Seat Height : 790 mm / 31.1 in
+Dry Weight : 158 kg / 348 lbs
+Fuel Capacity : 9.2 Litres / 2.4 US gal
+Consumption Average : 3.5 L/100 km / 28 km/l / 67 US mpg
+Top Speed : 129 km/h / 80 mph

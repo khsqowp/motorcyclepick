@@ -1,0 +1,32 @@
+Model : GSX-R 1000R Moto GP Replica
+Years : 2018
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder, TSCC
+Capacity : 998.6 cc / 60.9 cub. in
+Bore x Stroke : 76.0 x 55.1 mm
+Compression Ratio : 13.2:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Exhaust : Titanium
+Induction : Fuel Injection
+Ignition : Electronic ignition Transistorized
+Starting : Electric
+Max Power : 148.6 kW / 199.2 hp @ 13200rpm
+Max Torque : 117.6 Nm / 86.7 lb-ft @ 10800rpm
+Clutch : Hydraulically-actuated multiplate wet clutch.
+Transmission : 6 Speed, constant mesh
+Final Drive : Chain, DID50VAZ, 114 links
+Frame : Aluminum
+Front Suspension : Inverted telescopic, coil spring, oil damped
+Rear Suspension : Link type, coil spring, oil damped
+Front Brakes : 2 x 320mm Discs radial mount Brembo 4-piston calipers
+Rear Brakes : Single 220mm disc, Nissin,1-piston
+Front Tyre : 120/70ZR17M/C (58W) tubeless
+Rear Tyre : 190/50 ZR17 M/C (73W), tubeless
+Rake : 23.2&#176;
+Trail : 94 mm / 3.7 in
+Dimensions : Length 2075mm / 81.7in Width 710mm / 28 in Height 1150mm / 45.3 in
+Wheelbase : 1410mm / 55.5 in
+Seat Height : 825 mm / 32.5 in
+Ground clearance : 130 mm / 5.1 in
+Wet Weight : 203.0kg / 447.5lbs
+Fuel Capacity : 16 Litres / 3.5 US gal

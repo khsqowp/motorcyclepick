@@ -1,0 +1,34 @@
+Model : MP3 530 HPE Exclusive
+Years : 2022
+Engine : Four stroke, Master HPE single cylinder, SOHC, 4 valves and roller tappets
+Capacity : 530 cc / 32.3 cu-in
+Bore x Stroke : 97.5 x 71 mm
+Cooling System : Liquid cooled
+Compression Ratio : -
+Lubrication : Wet sump
+Induction : Electronic injection
+Emission : EURO5
+Ignition : Electronic with inductive exhaust and variable advance integrated in the injection CPU. Closed loop system with Lambda probe for the exhaust. Electronic immobilizer, block of injection pump when the vehicle is tilted. Twin spark ignition. Throttle valve management maps (ECO, COMFORT, SPORT). Traction control (ASR)
+Starting : Electric
+Max Power : 32.5 kW / 44.2 hp @ 7250 rpm
+Max Toque : 50 Nm / 36.8 lb-ft @ 5250 rpm
+Clutch : Automatic centrifugal dry clutch
+Transmission : Twist-and-go CVT with torque server and reverse gear
+Final Drive : Belt
+Frame : Double cradle in high strength tubular steel
+Front Suspension : Articulated quadrilateral, electro-hydraulic suspension blocking system
+Front Wheel Travel : 85 mm / 3.3 in
+Rear Suspension : Double hydraulic shock absorber with four position spring pre-load adjustment (double gas shock with continuous spring pre-load adjustment on the Sport and Sport Advanced versions)
+Rear Wheel Travel : 108 mm / 4.2 in
+Front Brakes : 2x 258mm stainless steel discs, one disc brake per wheel, 2 piston caliper
+Rear Brakes : Single 240mm disc
+ABS : ABS with braking integrated with the pedal
+Front Wheel : Aluminium alloy 13 x 3.00
+Rear Wheel : Aluminium alloy 14 x 4.50
+Front Tyre : 2x 110/70 -13
+Rear Tyre : 140/70 -14
+Dimensions : Length 2160 mm / 85 in Width 815 mm / 32 in
+Wheelbase : 1550 mm / 61 in
+Seat Height : 790 mm / 30.9 in
+Dry Weight : -
+Fuel Capacity : 13.7 Litres / 3.61 US gal

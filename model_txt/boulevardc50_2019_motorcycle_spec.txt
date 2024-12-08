@@ -1,0 +1,32 @@
+Model : Boulevard C50
+Years : 2019
+Engine : Four stroke, 45&#176; V-Twin
+Capacity : 805cc / 49.1 cu-in
+Bore x Stroke : 83 x 74.4 mm
+Cooling System : Liquid cooled
+Compression Ratio : 9.4:1
+Lubrication : Wet sump
+Induction : Mikuni BDSR34
+Ignition : Electronic
+Starting : Electric
+Max Power : 39 kW / 52 hp @ 6000 rpm
+Max Torque : 69 Nm / 7.04 kgf-m / 51 lb-ft @ 3200 rpm
+Clutch : Wet, multiple discs, cable operated
+Transmission : 5 Speed
+Final Drive : Shaft
+Front Suspension : Telescopic forks, coil spring oil damping
+Rear Suspension : Link-type single shock, 7-way adjustable preload
+Front Wheel Travel : 140 mm / 5.5 in
+Rear Wheel Travel : 104 mm / 4.1 in
+Front Brakes : Single disc, 2 piston caliper
+Rear Brakes : Drum
+Front Tyre : 130/90-16M/C 67H, tube type
+Rear Tyre : 170/80-15M/C 77H, tube type
+Rake : 33&#176;
+Trail : 140 mm / 5.5 in
+Dimensions : Length: 2500 mm / 98.4 in Width: 955 mm / 37.6 in
+Wheelbase : 1655 mm / 65.2 in
+Seat Height : 700 mm / 27.6 in.
+Ground Clearance : 140 mm / 5.5 in
+Wet Weight : 277 kg / 611 lbs
+Fuel Capacity : 15.5 Litres / 4.1 US gal

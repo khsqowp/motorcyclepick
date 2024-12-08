@@ -1,0 +1,35 @@
+Model : GSX-S 1000 / ABS
+Years : 2019
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder, TSCC
+Capacity : 998.6 cc / 60.9 cub. in
+Bore x Stroke : 73.4 x 59.0 mm
+Compression Ratio : 12.2:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Fuel Injection
+Ignition : Electronic ignition (transistorised)
+Starting : Electric
+Max Power : 150 hp / 111.8 kW @ 10000 rpm
+Max Torque : 108 Nm / 79.6 lb-ft @ 9500 rpm
+Clutch : Wet, multi-plate SCAS type
+Transmission : 6 Speed, constant mesh
+Final Drive : Chain, DID50VAZ, 114 links
+Primary Reduction Ratio : 1.553 (73/47)
+Final Reduction Ratio : 2.588 ( 44/17)
+Frame : Aluminium, twin spar
+Front Suspension : Inverted telescopic, coil spring, oil damped
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Link type, coil spring, oil damped
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2 x 310mm Brembo discs, 4 piston Brembo calipers / ABS
+Rear Brakes : Single 220 mm disc / ABS
+Front Tyre : 120/70ZR17M/C (58W) tubeless
+Rear Tyre : 190/50ZR17M/C (73W) tubeless
+Rake : 25.0&#176;
+Trail : 100 mm / 3.9 in
+Dimensions : Length 2115 mm / 83. 2 in Width 795 mm / 31.2 in Height 1180 mm / 46.5 in
+Wheelbase : 1460 mm / 57.5 in
+Seat Height : 810 mm / 31.9 in
+Ground clearance : 140 mm / 5.5 in.
+Wet Weight : 210 kg / 461 lbs
+Fuel Capacity : 17 Litres / 4.4 US gal / 3.7 Imp gal

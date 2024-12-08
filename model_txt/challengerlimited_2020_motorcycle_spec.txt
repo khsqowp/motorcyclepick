@@ -1,0 +1,42 @@
+Model : Challenger Limited
+Years : 2020
+Engine : Four stroke, PowerPlus, 60&#176; V-twin, SOHC, 4 valve per cylinder
+Capacity : 1768 cc / 108 cu-in
+Bore x Stroke : 108 x 96.5 mm
+Compression Ratio : 11.0:1
+Cooling System : Liquid cooled
+Exhaust : Split Dual exhaust w/ Resonator
+Lubrication : Semi-dry sump
+Induction : EFI with 52mm dual-bore throttle bodies
+Ignition : Electronic
+Battery : 12V 18AH
+Charging Output : 803 watts max.
+Starting : Electric
+Max Power : 122 hp / 90 kW @ 5500 rpm
+Max Torque : 173.5 Nm / 128 lb-ft @ 3800 rpm
+Clutch : Wet, multi-plate, assist
+Transmission : 6 Speed with overdrive
+Final Drive : Belt
+Gear Ratio : 1st 10.169:1 2nd 6.933:1 3rd 5.151:1 4th 4.105:1 5th 3.508:1 6th 3.017:1
+Frame : Cast aluminum
+Front Suspension : 43mm Inverted telescopic fork
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Spring-preload adjustable Fox shock
+Rear Wheel Travel : 114 mm / 4.5 in
+Front Brakes : 2x 320mm floating discs, with radially mounted Brembo 4-piston caliper
+Rear Brakes : Single 290mm floating disc, 2-piston caliper
+ABS System : Standard
+Wheels : Cast aluminum
+Front Wheel : 3.5 x 19
+Rear Wheel : 5.0 x 16
+Front Tyre : 130/60B19 66H Metzeler Cruisetec
+Rear Tyre : 180/60R16 80H Metzeler Cruisetec
+Rake : 25&#176;
+Trail : 150 mm / 5.9 in
+Dimensions : Length: 2500.7 mm / 98.5 in Width: 990.2 mm / 39.0 in Height: 1428.5 mm / 56.2 in
+Wheelbase : 1668.7 mm / 65.7 in
+Seat Height : 672 mm / 26.5 in
+Ground Clearance : 137.3 mm / 5.4 in
+Dry Weight : 365 kg / 805 lbs
+Wet Weight : 381 kg / 840 lbs
+Fuel Capacity : 22.7 Litres / 6 US gal

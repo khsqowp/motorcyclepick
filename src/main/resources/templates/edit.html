@@ -8,7 +8,7 @@
 <body>
 <div class="motorcycle-container">
     <div class="section-container">
-        <h1 class="section-title" th:text="'Edit : ' + ${motorcycleDTO.model}"></h1>
+        <h1 class="section-title" th:text="'Edit : '+ ${motorcycleDTO.model}"></h1>
 
         <form action="/motorcycle/edit" method="post" class="edit-form">
             <input type="hidden" name="motorcycleID" th:value="${motorcycleDTO.motorcycleID}">
@@ -28,57 +28,57 @@
                         <label>Years:</label>
                         <input type="number" name="years" th:value="${motorcycleDTO.years}" required>
                     </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Replica:</label>
-                        <input type="number" name="replica" th:value="${motorcycleDTO.replica}" min="0" max="1">
+                        <input type="number" name="replica" th:value="${motorcycleDTO.replica}" min="0" max="100">
                     </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Cruiser:</label>
-                        <input type="number" name="cruiser" th:value="${motorcycleDTO.cruiser}" min="0" max="1">
+                        <input type="number" name="cruiser" th:value="${motorcycleDTO.cruiser}" min="0" max="100">
                     </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Tourer:</label>
-                        <input type="number" name="tourer" th:value="${motorcycleDTO.tourer}" min="0" max="1">
+                        <input type="number" name="tourer" th:value="${motorcycleDTO.tourer}" min="0" max="100">
                     </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Adventure:</label>
-                        <input type="number" name="adventure" th:value="${motorcycleDTO.adventure}" min="0" max="1">
+                        <input type="number" name="adventure" th:value="${motorcycleDTO.adventure}" min="0" max="100">
                     </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Multi-Purpose:</label>
-                        <input type="number" name="multiPurpose" th:value="${motorcycleDTO.multiPurpose}" min="0" max="1">
+                        <input type="number" name="multiPurpose" th:value="${motorcycleDTO.multiPurpose}" min="0" max="100">
                     </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Naked:</label>
-                        <input type="number" name="naked" th:value="${motorcycleDTO.naked}" min="0" max="1">
+                        <input type="number" name="naked" th:value="${motorcycleDTO.naked}" min="0" max="100">
                     </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Scrambler:</label>
-                        <input type="number" name="scrambler" th:value="${motorcycleDTO.scrambler}" min="0" max="1">
+                        <input type="number" name="scrambler" th:value="${motorcycleDTO.scrambler}" min="0" max="100">
                     </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Off-Road:</label>
-                        <input type="number" name="offRoad" th:value="${motorcycleDTO.offRoad}" min="0" max="1">
+                        <input type="number" name="offRoad" th:value="${motorcycleDTO.offRoad}" min="0" max="100">
                     </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Motard:</label>
-                        <input type="number" name="motard" th:value="${motorcycleDTO.motard}" min="0" max="1">
+                        <input type="number" name="motard" th:value="${motorcycleDTO.motard}" min="0" max="100">
                     </div>
-                    <div class="checkbox-group">
-                        <label>Trial:</label>
-                        <input type="number" name="trial" th:value="${motorcycleDTO.trial}" min="0" max="1">
-                    </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Scooter:</label>
-                        <input type="number" name="scooter" th:value="${motorcycleDTO.scooter}" min="0" max="1">
+                        <input type="number" name="scooter" th:value="${motorcycleDTO.scooter}" min="0" max="100">
                     </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Classic:</label>
-                        <input type="number" name="classic" th:value="${motorcycleDTO.classic}" min="0" max="1">
+                        <input type="number" name="classic" th:value="${motorcycleDTO.classic}" min="0" max="100">
                     </div>
-                    <div class="checkbox-group">
+                    <div class="input-group">
                         <label>Cafe Racer:</label>
-                        <input type="number" name="cafeRacer" th:value="${motorcycleDTO.cafeRacer}" min="0" max="1">
+                        <input type="number" name="cafeRacer" th:value="${motorcycleDTO.cafeRacer}" min="0" max="100">
+                    </div>
+                    <div class="input-group">
+                        <label>Price:</label>
+                        <input type="number" name="price" th:value="${motorcycleDTO.price}" required>
                     </div>
                 </div>
             </div>
@@ -88,107 +88,107 @@
                 <div class="info-grid">
                     <div class="input-group">
                         <label>Wheelbase:</label>
-                        <input type="text" name="dimensionsDTO.wheelbase" th:value="${motorcycleDTO.dimensionsDTO.wheelbase}">
+                        <input type="text" name="wheelbase" th:value="${motorcycleDTO.wheelbase}">
                     </div>
                     <div class="input-group">
                         <label>Seat Height:</label>
-                        <input type="text" name="dimensionsDTO.seatHeight" th:value="${motorcycleDTO.dimensionsDTO.seatHeight}">
+                        <input type="text" name="seatHeight" th:value="${motorcycleDTO.seatHeight}">
                     </div>
                     <div class="input-group">
                         <label>Wet Weight:</label>
-                        <input type="text" name="dimensionsDTO.wetWeight" th:value="${motorcycleDTO.dimensionsDTO.wetWeight}">
+                        <input type="text" name="wetWeight" th:value="${motorcycleDTO.wetWeight}">
                     </div>
                     <div class="input-group">
                         <label>Fuel Capacity:</label>
-                        <input type="text" name="dimensionsDTO.fuelCapacity" th:value="${motorcycleDTO.dimensionsDTO.fuelCapacity}">
+                        <input type="text" name="fuelCapacity" th:value="${motorcycleDTO.fuelCapacity}">
                     </div>
                     <div class="input-group">
                         <label>Ground Clearance:</label>
-                        <input type="text" name="dimensionsDTO.groundClearance" th:value="${motorcycleDTO.dimensionsDTO.groundClearance}">
+                        <input type="text" name="groundClearance" th:value="${motorcycleDTO.groundClearance}">
                     </div>
                     <div class="input-group">
                         <label>Dry Weight:</label>
-                        <input type="text" name="dimensionsDTO.dryWeight" th:value="${motorcycleDTO.dimensionsDTO.dryWeight}">
+                        <input type="text" name="dryWeight" th:value="${motorcycleDTO.dryWeight}">
                     </div>
                     <div class="input-group">
                         <label>Length:</label>
-                        <input type="text" name="dimensionsDTO.length" th:value="${motorcycleDTO.dimensionsDTO.length}">
+                        <input type="text" name="length" th:value="${motorcycleDTO.length}">
                     </div>
                     <div class="input-group">
                         <label>Width:</label>
-                        <input type="text" name="dimensionsDTO.width" th:value="${motorcycleDTO.dimensionsDTO.width}">
+                        <input type="text" name="width" th:value="${motorcycleDTO.width}">
                     </div>
                     <div class="input-group">
                         <label>Height:</label>
-                        <input type="text" name="dimensionsDTO.height" th:value="${motorcycleDTO.dimensionsDTO.height}">
+                        <input type="text" name="height" th:value="${motorcycleDTO.height}">
                     </div>
                     <div class="input-group">
                         <label>Front Tyre Width:</label>
-                        <input type="text" name="dimensionsDTO.frontTyreWidth" th:value="${motorcycleDTO.dimensionsDTO.frontTyreWidth}">
+                        <input type="text" name="frontTyreWidth" th:value="${motorcycleDTO.frontTyreWidth}">
                     </div>
                     <div class="input-group">
                         <label>Front Tyre Aspect Ratio:</label>
-                        <input type="text" name="dimensionsDTO.frontTyreAspectRatio" th:value="${motorcycleDTO.dimensionsDTO.frontTyreAspectRatio}">
+                        <input type="text" name="frontTyreAspectRatio" th:value="${motorcycleDTO.frontTyreAspectRatio}">
                     </div>
                     <div class="input-group">
                         <label>Front Tyre Structure:</label>
-                        <input type="text" name="dimensionsDTO.frontTyreStructure" th:value="${motorcycleDTO.dimensionsDTO.frontTyreStructure}">
+                        <input type="text" name="frontTyreStructure" th:value="${motorcycleDTO.frontTyreStructure}">
                     </div>
                     <div class="input-group">
                         <label>Front Tyre Diameter:</label>
-                        <input type="text" name="dimensionsDTO.frontTyreDiameter" th:value="${motorcycleDTO.dimensionsDTO.frontTyreDiameter}">
+                        <input type="text" name="frontTyreDiameter" th:value="${motorcycleDTO.frontTyreDiameter}">
                     </div>
                     <div class="input-group">
                         <label>Rear Tyre Width:</label>
-                        <input type="text" name="dimensionsDTO.rearTyreWidth" th:value="${motorcycleDTO.dimensionsDTO.rearTyreWidth}">
+                        <input type="text" name="rearTyreWidth" th:value="${motorcycleDTO.rearTyreWidth}">
                     </div>
                     <div class="input-group">
                         <label>Rear Tyre Aspect Ratio:</label>
-                        <input type="text" name="dimensionsDTO.rearTyreAspectRatio" th:value="${motorcycleDTO.dimensionsDTO.rearTyreAspectRatio}">
+                        <input type="text" name="rearTyreAspectRatio" th:value="${motorcycleDTO.rearTyreAspectRatio}">
                     </div>
                     <div class="input-group">
                         <label>Rear Tyre Structure:</label>
-                        <input type="text" name="dimensionsDTO.rearTyreStructure" th:value="${motorcycleDTO.dimensionsDTO.rearTyreStructure}">
+                        <input type="text" name="rearTyreStructure" th:value="${motorcycleDTO.rearTyreStructure}">
                     </div>
                     <div class="input-group">
                         <label>Rear Tyre Diameter:</label>
-                        <input type="text" name="dimensionsDTO.rearTyreDiameter" th:value="${motorcycleDTO.dimensionsDTO.rearTyreDiameter}">
+                        <input type="text" name="rearTyreDiameter" th:value="${motorcycleDTO.rearTyreDiameter}">
                     </div>
                     <div class="input-group">
                         <label>Front Brake Disc Count:</label>
-                        <input type="text" name="dimensionsDTO.frontBrakeDiscCount" th:value="${motorcycleDTO.dimensionsDTO.frontBrakeDiscCount}">
+                        <input type="text" name="frontBrakeDiscCount" th:value="${motorcycleDTO.frontBrakeDiscCount}">
                     </div>
                     <div class="input-group">
                         <label>Front Brake Disc Size:</label>
-                        <input type="text" name="dimensionsDTO.frontBrakeDiscSize" th:value="${motorcycleDTO.dimensionsDTO.frontBrakeDiscSize}">
+                        <input type="text" name="frontBrakeDiscSize" th:value="${motorcycleDTO.frontBrakeDiscSize}">
                     </div>
                     <div class="input-group">
                         <label>Front Brake Disc Type:</label>
-                        <input type="text" name="dimensionsDTO.frontBrakeDiscType" th:value="${motorcycleDTO.dimensionsDTO.frontBrakeDiscType}">
+                        <input type="text" name="frontBrakeDiscType" th:value="${motorcycleDTO.frontBrakeDiscType}">
                     </div>
                     <div class="input-group">
                         <label>Front Brake Piston Count:</label>
-                        <input type="text" name="dimensionsDTO.frontBrakePistonCount" th:value="${motorcycleDTO.dimensionsDTO.frontBrakePistonCount}">
+                        <input type="text" name="frontBrakePistonCount" th:value="${motorcycleDTO.frontBrakePistonCount}">
                     </div>
                     <div class="input-group">
                         <label>Rear Brake Disc Size:</label>
-                        <input type="text" name="dimensionsDTO.rearBrakeDiscSize" th:value="${motorcycleDTO.dimensionsDTO.rearBrakeDiscSize}">
+                        <input type="text" name="rearBrakeDiscSize" th:value="${motorcycleDTO.rearBrakeDiscSize}">
                     </div>
                     <div class="input-group">
                         <label>Rear Brake Disc Type:</label>
-                        <input type="text" name="dimensionsDTO.rearBrakeDiscType" th:value="${motorcycleDTO.dimensionsDTO.rearBrakeDiscType}">
+                        <input type="text" name="rearBrakeDiscType" th:value="${motorcycleDTO.rearBrakeDiscType}">
                     </div>
                     <div class="input-group">
                         <label>Rear Brake Piston Count:</label>
-                        <input type="text" name="dimensionsDTO.rearBrakePistonCount" th:value="${motorcycleDTO.dimensionsDTO.rearBrakePistonCount}">
+                        <input type="text" name="rearBrakePistonCount" th:value="${motorcycleDTO.rearBrakePistonCount}">
                     </div>
                     <div class="input-group">
                         <label>Frame Type:</label>
-                        <input type="text" name="dimensionsDTO.frameType" th:value="${motorcycleDTO.dimensionsDTO.frameType}">
+                        <input type="text" name="frameType" th:value="${motorcycleDTO.frameType}">
                     </div>
                     <div class="input-group">
                         <label>Frame Material:</label>
-                        <input type="text" name="dimensionsDTO.frameMaterial" th:value="${motorcycleDTO.dimensionsDTO.frameMaterial}">
+                        <input type="text" name="frameMaterial" th:value="${motorcycleDTO.frameMaterial}">
                     </div>
                 </div>
             </div>
@@ -198,63 +198,63 @@
                 <div class="info-grid">
                     <div class="input-group">
                         <label>Start System:</label>
-                        <input type="text" name="electronicsDTO.startSystem" th:value="${motorcycleDTO.electronicsDTO.startSystem}">
+                        <input type="text" name="startSystem" th:value="${motorcycleDTO.startSystem}">
                     </div>
                     <div class="checkbox-group">
                         <label>ABS:</label>
-                        <input type="checkbox" name="electronicsDTO.abs" th:checked="${motorcycleDTO.electronicsDTO.abs}">
+                        <input type="checkbox" name="abs" th:checked="${motorcycleDTO.abs}">
                     </div>
                     <div class="checkbox-group">
                         <label>TCS:</label>
-                        <input type="checkbox" name="electronicsDTO.tcs" th:checked="${motorcycleDTO.electronicsDTO.tcs}">
+                        <input type="checkbox" name="tcs" th:checked="${motorcycleDTO.tcs}">
                     </div>
                     <div class="checkbox-group">
                         <label>Cruise Control:</label>
-                        <input type="checkbox" name="electronicsDTO.cruiseControl" th:checked="${motorcycleDTO.electronicsDTO.cruiseControl}">
+                        <input type="checkbox" name="cruiseControl" th:checked="${motorcycleDTO.cruiseControl}">
                     </div>
                     <div class="checkbox-group">
                         <label>Assist & Slipper Clutch:</label>
-                        <input type="checkbox" name="electronicsDTO.assistSlipperClutch" th:checked="${motorcycleDTO.electronicsDTO.assistSlipperClutch}">
+                        <input type="checkbox" name="assistSlipperClutch" th:checked="${motorcycleDTO.assistSlipperClutch}">
                     </div>
                     <div class="checkbox-group">
                         <label>Electric Screen:</label>
-                        <input type="checkbox" name="electronicsDTO.electricScreen" th:checked="${motorcycleDTO.electronicsDTO.electricScreen}">
+                        <input type="checkbox" name="electricScreen" th:checked="${motorcycleDTO.electricScreen}">
                     </div>
                     <div class="checkbox-group">
                         <label>Clutch Assist System:</label>
-                        <input type="checkbox" name="electronicsDTO.clutchAssistSystem" th:checked="${motorcycleDTO.electronicsDTO.clutchAssistSystem}">
+                        <input type="checkbox" name="clutchAssistSystem" th:checked="${motorcycleDTO.clutchAssistSystem}">
                     </div>
                     <div class="checkbox-group">
                         <label>IMU:</label>
-                        <input type="checkbox" name="electronicsDTO.imu" th:checked="${motorcycleDTO.electronicsDTO.imu}">
+                        <input type="checkbox" name="imu" th:checked="${motorcycleDTO.imu}">
                     </div>
                     <div class="checkbox-group">
                         <label>Cornering ABS:</label>
-                        <input type="checkbox" name="electronicsDTO.corneringAbs" th:checked="${motorcycleDTO.electronicsDTO.corneringAbs}">
+                        <input type="checkbox" name="corneringAbs" th:checked="${motorcycleDTO.corneringAbs}">
                     </div>
                     <div class="checkbox-group">
                         <label>Wheelie Control:</label>
-                        <input type="checkbox" name="electronicsDTO.wheelieControl" th:checked="${motorcycleDTO.electronicsDTO.wheelieControl}">
+                        <input type="checkbox" name="wheelieControl" th:checked="${motorcycleDTO.wheelieControl}">
                     </div>
                     <div class="checkbox-group">
                         <label>Riding Mode Change:</label>
-                        <input type="checkbox" name="electronicsDTO.ridingModeChange" th:checked="${motorcycleDTO.electronicsDTO.ridingModeChange}">
+                        <input type="checkbox" name="ridingModeChange" th:checked="${motorcycleDTO.ridingModeChange}">
                     </div>
                     <div class="checkbox-group">
                         <label>Banking Angle Display:</label>
-                        <input type="checkbox" name="electronicsDTO.bankingAngleDisplay" th:checked="${motorcycleDTO.electronicsDTO.bankingAngleDisplay}">
+                        <input type="checkbox" name="bankingAngleDisplay" th:checked="${motorcycleDTO.bankingAngleDisplay}">
                     </div>
                     <div class="checkbox-group">
                         <label>ABS Level Control:</label>
-                        <input type="checkbox" name="electronicsDTO.absLevelControl" th:checked="${motorcycleDTO.electronicsDTO.absLevelControl}">
+                        <input type="checkbox" name="absLevelControl" th:checked="${motorcycleDTO.absLevelControl}">
                     </div>
                     <div class="checkbox-group">
                         <label>Quickshift Up:</label>
-                        <input type="checkbox" name="electronicsDTO.quickshiftUp" th:checked="${motorcycleDTO.electronicsDTO.quickshiftUp}">
+                        <input type="checkbox" name="quickshiftUp" th:checked="${motorcycleDTO.quickshiftUp}">
                     </div>
                     <div class="checkbox-group">
                         <label>Quickshift Up/Down:</label>
-                        <input type="checkbox" name="electronicsDTO.quickshiftUpDown" th:checked="${motorcycleDTO.electronicsDTO.quickshiftUpDown}">
+                        <input type="checkbox" name="quickshiftUpDown" th:checked="${motorcycleDTO.quickshiftUpDown}">
                     </div>
                 </div>
             </div>
@@ -264,95 +264,95 @@
                 <div class="info-grid">
                     <div class="input-group">
                         <label>Capacity:</label>
-                        <input type="text" name="enginesDTO.capacity" th:value="${motorcycleDTO.enginesDTO.capacity}">
+                        <input type="text" name="capacity" th:value="${motorcycleDTO.capacity}">
                     </div>
                     <div class="input-group">
                         <label>Bore & Stroke:</label>
-                        <input type="text" name="enginesDTO.boreStroke" th:value="${motorcycleDTO.enginesDTO.boreStroke}">
+                        <input type="text" name="boreStroke" th:value="${motorcycleDTO.boreStroke}">
                     </div>
                     <div class="input-group">
                         <label>Compression Ratio:</label>
-                        <input type="text" name="enginesDTO.compressionRatio" th:value="${motorcycleDTO.enginesDTO.compressionRatio}">
+                        <input type="text" name="compressionRatio" th:value="${motorcycleDTO.compressionRatio}">
                     </div>
                     <div class="input-group">
                         <label>Cooling System:</label>
-                        <input type="text" name="enginesDTO.coolingSystem" th:value="${motorcycleDTO.enginesDTO.coolingSystem}">
+                        <input type="text" name="coolingSystem" th:value="${motorcycleDTO.coolingSystem}">
                     </div>
                     <div class="input-group">
                         <label>Lubrication:</label>
-                        <input type="text" name="enginesDTO.lubrication" th:value="${motorcycleDTO.enginesDTO.lubrication}">
+                        <input type="text" name="lubrication" th:value="${motorcycleDTO.lubrication}">
                     </div>
                     <div class="input-group">
                         <label>Fuel System:</label>
-                        <input type="text" name="enginesDTO.fuelSystem" th:value="${motorcycleDTO.enginesDTO.fuelSystem}">
+                        <input type="text" name="fuelSystem" th:value="${motorcycleDTO.fuelSystem}">
                     </div>
                     <div class="input-group">
                         <label>Emission:</label>
-                        <input type="text" name="enginesDTO.emission" th:value="${motorcycleDTO.enginesDTO.emission}">
+                        <input type="text" name="emission" th:value="${motorcycleDTO.emission}">
                     </div>
                     <div class="input-group">
                         <label>Induction:</label>
-                        <input type="text" name="enginesDTO.induction" th:value="${motorcycleDTO.enginesDTO.induction}">
+                        <input type="text" name="induction" th:value="${motorcycleDTO.induction}">
                     </div>
                     <div class="input-group">
                         <label>Mileage:</label>
-                        <input type="text" name="enginesDTO.mileage" th:value="${motorcycleDTO.enginesDTO.mileage}">
+                        <input type="text" name="mileage" th:value="${motorcycleDTO.mileage}">
                     </div>
                     <div class="input-group">
                         <label>Top Speed:</label>
-                        <input type="text" name="enginesDTO.topSpeed" th:value="${motorcycleDTO.enginesDTO.topSpeed}">
+                        <input type="text" name="topSpeed" th:value="${motorcycleDTO.topSpeed}">
                     </div>
                     <div class="input-group">
                         <label>Clutch:</label>
-                        <input type="text" name="enginesDTO.clutch" th:value="${motorcycleDTO.enginesDTO.clutch}">
+                        <input type="text" name="clutch" th:value="${motorcycleDTO.clutch}">
                     </div>
                     <div class="input-group">
                         <label>Transmission Gear Count:</label>
-                        <input type="text" name="enginesDTO.transmissionGearCount" th:value="${motorcycleDTO.enginesDTO.transmissionGearCount}">
+                        <input type="text" name="transmissionGearCount" th:value="${motorcycleDTO.transmissionGearCount}">
                     </div>
                     <div class="input-group">
                         <label>Transmission Type:</label>
-                        <input type="text" name="enginesDTO.transmissionType" th:value="${motorcycleDTO.enginesDTO.transmissionType}">
+                        <input type="text" name="transmissionType" th:value="${motorcycleDTO.transmissionType}">
                     </div>
                     <div class="input-group">
                         <label>Engine Stroke:</label>
-                        <input type="text" name="enginesDTO.engineStroke" th:value="${motorcycleDTO.enginesDTO.engineStroke}">
+                        <input type="text" name="engineStroke" th:value="${motorcycleDTO.engineStroke}">
                     </div>
                     <div class="input-group">
                         <label>Engine Cylinder:</label>
-                        <input type="text" name="enginesDTO.engineCylinder" th:value="${motorcycleDTO.enginesDTO.engineCylinder}">
+                        <input type="text" name="engineCylinder" th:value="${motorcycleDTO.engineCylinder}">
                     </div>
                     <div class="input-group">
                         <label>Engine Camshaft:</label>
-                        <input type="text" name="enginesDTO.engineCamshaft" th:value="${motorcycleDTO.enginesDTO.engineCamshaft}">
+                        <input type="text" name="engineCamshaft" th:value="${motorcycleDTO.engineCamshaft}">
                     </div>
                     <div class="input-group">
                         <label>Engine Type:</label>
-                        <input type="text" name="enginesDTO.engineType" th:value="${motorcycleDTO.enginesDTO.engineType}">
+                        <input type="text" name="engineType" th:value="${motorcycleDTO.engineType}">
                     </div>
                     <div class="input-group">
                         <label>Engine Crank Angle:</label>
-                        <input type="text" name="enginesDTO.engineCrankAngle" th:value="${motorcycleDTO.enginesDTO.engineCrankAngle}">
+                        <input type="text" name="engineCrankAngle" th:value="${motorcycleDTO.engineCrankAngle}">
                     </div>
                     <div class="input-group">
                         <label>Max Power (HP):</label>
-                        <input type="text" name="enginesDTO.maxPowerHp" th:value="${motorcycleDTO.enginesDTO.maxPowerHp}">
+                        <input type="text" name="maxPowerHp" th:value="${motorcycleDTO.maxPowerHp}">
                     </div>
                     <div class="input-group">
                         <label>Max Power RPM:</label>
-                        <input type="text" name="enginesDTO.maxPowerRpm" th:value="${motorcycleDTO.enginesDTO.maxPowerRpm}">
+                        <input type="text" name="maxPowerRpm" th:value="${motorcycleDTO.maxPowerRpm}">
                     </div>
                     <div class="input-group">
                         <label>Max Torque (Nm):</label>
-                        <input type="text" name="enginesDTO.maxTorqueNm" th:value="${motorcycleDTO.enginesDTO.maxTorqueNm}">
+                        <input type="text" name="maxTorqueNm" th:value="${motorcycleDTO.maxTorqueNm}">
                     </div>
                     <div class="input-group">
                         <label>Max Torque RPM:</label>
-                        <input type="text" name="enginesDTO.maxTorqueRpm" th:value="${motorcycleDTO.enginesDTO.maxTorqueRpm}">
+                        <input type="text" name="maxTorqueRpm" th:value="${motorcycleDTO.maxTorqueRpm}">
                     </div>
                     <div class="input-group">
                         <label>class Grade:</label>
-                        <input type="text" name="enginesDTO.claasGrade" th:value="${motorcycleDTO.enginesDTO.classGrade}">
+                        <input type="text" name="claasGrade" th:value="${motorcycleDTO.classGrade}">
                     </div>
                 </div>
             </div>

@@ -1,0 +1,24 @@
+Model : Metropolis 400
+Years : 2017-
+Engine : Four stroke, single cylinder, 4 valve
+Capacity : 400 cc / 24.4 cu in
+Bore x Stroke : 84 x 72 mm
+Cooling System : Liquid cooled
+Induction : Electronic fuel injection
+Emission : Euro 4 compliant
+Starting : Electric
+Max Power : 26.5 kW / 35.6 hp @ 7000 rpm
+Max Torque : 38 Nm / 28 lb-ft @ 5250 rpm
+Transmission : Automatic
+Final Drive : Belt
+Front Suspension : Single hydraulic suspension
+Rear Suspension : Adjustable double hydraulic shock absorber
+Front Brakes : 2 x 230 mm discs with 2-pod caliper, ABS
+Rear Brakes : Single 240 mm disc, ABS
+Front Tyre : 110/70-13
+Rear Tyre : 140/70-14
+Wheelbase : 1555 mm / 61.2 in
+Dimensions : Length 2160 mm / 85.0 in Width 745 mm / 29.3 in Height: 1445 mm / 56.9 in
+Seat Height : 780 mm / 30.7 in
+Wet Weight : 256 kg / 564 lbs
+Fuel Capacity : 13.5 Litres / 3.57 US gal / 3.0 Imp gal

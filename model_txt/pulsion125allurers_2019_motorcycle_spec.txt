@@ -1,0 +1,22 @@
+Model : Pulsion 125 Allure / RS
+Years : 2019
+Engine : Four stroke, single cylinder
+Capacity : 125 cc / 7.6 cu in
+Cooling System : Liquid cooled
+Ignition : EFI
+Starting : Electric
+Max Power : 10.9 kW / 14.6 hp @11000 rpm
+Max Torque : 11.9 Nm / 1.2 kgf-m / 2.7 lb-ft @ 7000 rpm
+Transmission : CVT Automatic
+Final Drive : Belt
+Frame : Steel Tubular
+Front Suspension : Hydraulic telescopic forks
+Rear Suspension : Dual shocks
+Front Brakes : Singe hydraulic disc, ABS
+Rear Brakes : Singe hydraulic disc, ABS
+Wheels : 14 in
+Wheelbase : 1435 mm / 56.5 in
+Seat Height : 790 mm / 31.1 in
+Wet Weight : 165 kg / 364 lbs
+Fuel Capacity : 12 Litres / 3.1 US gal / 2.6 Imp gal
+Fuel Consumption : 2.9 L/100 km / 81.1 US mpg / 97.4 Imp mpg (claimed)

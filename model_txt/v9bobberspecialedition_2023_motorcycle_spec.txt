@@ -1,0 +1,40 @@
+Model : V9 Bobber Special Edition
+Years : 2023
+Engine : Transversal 90° V-twin, 4-stroke, 2-valves per cylinder
+Capacity : 853 cc / 52.0 cu-in
+Bore x Stroke : 84 x 77 mm
+Cooling System : Air/oil cooled
+Compression Ratio : 10.5:1
+Exhaust : Stainless steel, 2-in-2 type, three-way catalytic converter with double lambda probe
+Emission : Euro 5
+Induction : Marelli MIU single-body electronic injection, integrated management of traction control on 2 levels
+Ignition : Electronic
+Starting : Electric
+Max Power : 65 hp / 47.8 kW @ 6800 rpm
+Max Torque : 73 Nm / 53.8 lb-ft @ 5000 rpm
+Clutch : 170 mm Single disc with integrated flexible couplings
+Transmission : 6 speeds (with overdrive top gear)
+Final Drive : Double universal joint and double bevel gear units (8/33 ratio = 1: 4.125)
+Gear Ratios : 1st 16/39 = 1: 2.437 2nd 18/32 = 1: 1.777 3rd 21/28 = 1: 1.333 4th 24/26 = 1: 1.083 5th 25/24 = 1: 0.96 6th 28/24 = 1: 0.857
+Primary Drive : Helical teeth,ratio 21/25 = 1: 1.190
+Frame : ALS steel twin tube cradle frame
+Front Suspension : 40mm Standard fork
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Swingarm with double shock absorber with adjustable spring preload.
+Rear Wheel Travel : 91 mm / 3.6 in
+Front Brakes : Single 320 mm stainless steel floating disc, Brembo opposed four-piston callipers
+Rear Brakes : Single 260 mm stainless steel floating disc, Brembo opposed two-piston callipers
+Wheels : Aluminium alloy
+Front Rim : 3.50 x 16
+Rear Rim : 4.00 x 16
+Front Tyre : 130/90 - 16
+Rear Tyre : 150/80 B 16
+Steering Head Angle : 38°
+Rake : 26.4°
+Trail : 117 mm / 4.6 in
+Dimensions : Length: 2185 mm / 86.0 in Width: 840 mm / 33.0 in Height: 1120 mm / 44.0 in
+Wheelbase : 1465 mm / 57.6 in
+Seat Height : 785 mm / 30.9 in
+Dry Weight : 194 kg / 427.6 lbs
+Wet Weight : 210 kg / 462.9 lbs
+Fuel Capacity : 15 Litres / 4.0 US gal

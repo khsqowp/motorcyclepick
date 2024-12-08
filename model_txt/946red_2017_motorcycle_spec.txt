@@ -1,0 +1,31 @@
+Model : 946 Red
+Years : 2017-
+Production : Limited to 100 units
+Engine : Four stroke, single cylinder, SOHC, 3 valves
+Capacity : 155 cc / 9.5 cub in
+Bore x Stroke : 58 x 58.6 mm
+Cooling System : Forced air cooling system
+Compression Ratio : 10.5:1
+Exhaust : Catalytic converter
+Emission : Euro 3
+Lubrication : Wet sump
+Fuel System : Port Injected injection
+Ignition : Electronic
+Starting : Electric
+Clutch : Automatic, dry centrifuge with vibration dampets
+Transmission : CVT, twist and go
+Final Drive : Belt
+Frame : Metal body with welded reinforcements and aluminium elements
+Front Suspension : Single link arm with coil spring and dual-action hydraulic shock absorber
+Rear Suspension : Coil spring with adjustable preload, mono shock with progressive lever system
+Braking System : ABS, 2 channels, with ASR system
+Front Brakes : 220 mm disc ABS
+Rear Brakes : 220 mm disc
+Front Tyre : 120/70-12 in
+Rear Tyre : 130/70-12 in
+Dimensions : Length: 1965 mm / 77.4 in Width: 730 mm / 28.7 in Height: 1404 mm / 55.3 in
+Wheelbase : 1405 mm / 55.3 in
+Seat Height : 805 mm / 31.6 in
+Fuel Capacity : 8.5 Litres / 2.2 US gal
+Consumption (up to) : 2.0 L/100 km / 50 km/l / 117 US mpg
+Top Speed : 93 km/h / 57 mph

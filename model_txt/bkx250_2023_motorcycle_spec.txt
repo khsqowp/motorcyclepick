@@ -1,0 +1,37 @@
+Model : BKX 250
+Years : 2023
+Engine : Four stroke, single cylinder, DOHC, 4 valves
+Capacity : 249.2 cc / 15.2 cu in
+Bore x Stroke : 72 x 61.2 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Lubrication : Forced wet sump
+Exhaust : With catalytic converters and oxygen sensor
+Emission : Euro 5
+Induction : Electronic fuel injection with 37mm Ø throttle body
+Ignition : Delphi MT05.03
+Starting : Electric
+Max Power : 19 kW / 25.8 hp @ 9250 rpm
+Max Torque : 21.1 Nm / 15.5 lb-ft @ 8000 rpm
+Clutch : Wet
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Trellis frame in steel tubes
+Front Suspension : 41 mm Upside down telescopic forks
+Front Wheel Travel : 180 mm / 7.0 in
+Rear Suspension : Rear swing arm in steel, shock absorber with progressive link, adjustable in spring preload
+Rear Wheel Travel : 180 mm / 7.0 in
+Front Brakes : Single 280 mm disc, 4-piston caliper
+Rear Brakes : Single 240 mm disc, 1-piston caliper
+ABS : Standard
+Wheels : Spoked wheel with Aluminum hub and rim
+Front Rim : 2.15 x 19
+Rear Rim : 2.5 x 17
+Front Tyre : 100/90 - R19  M/C 57V M+S
+Rear Tyre : 140/80 - R17  M/C 65V M+S
+Dimensions : Length: 2068 mm / 81.4 in Width: 970 mm / 38.1 in Height: 1215 mm / 47.8 in
+Wheelbase : 1432 mm / 56.3 in
+Ground Clearance : 220 mm / 8.6 in
+Seat Height : 835 mm / 32.8 in
+Wet Weight : 165 kg / 363.7 lbs
+Fuel Capacity : 13.5 Litres / 3.5 US gal

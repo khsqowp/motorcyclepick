@@ -1,0 +1,35 @@
+Model : 302R
+Years : 2018
+Engine : Parallel twin, DOHC, 8 valves
+Capacity : 300 cc / 18.3 cu in
+Bore x Stroke : 65 x 42.5 mm
+Compression Ratio : 12.0:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Exhaust : With catalytic converter and oxygen sensors, Euro 4 compliant
+Induction : EFI with 37 mm throttle body
+Ignition : ECU
+Spark Plug : NGK CR8E
+Starting : Electric
+Max Power : 28.3 kW / 38 hp @ 12000 rpm
+Max Torque : 26 Nm / 2.8 kgf-m @ 9000 rpm
+Clutch : Wet clutch
+Transmission : 6-Speed
+Final Drive : Chain
+Frame : Steel tube trellis frame
+Front Suspension : 41 mm USD fork, adjustable
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Swingarm with monoshock, spring preload adjustable
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : Dual 260 mm floating discs, 4-piston calipers
+Rear Brakes : Single 240 mm disc, 2-piston caliper, ABS
+Front Wheel : MT 2.75 x 17 in DOT, Aluminium alloy
+Rear Wheel : MT 4.00 x 17 in DOT, Aluminium alloy
+Front Tyre : 110/70-ZR17
+Rear Tyre : 150/60-ZR17
+Dimensions : Length: 2175 mm / 85.6 in Width: 746 mm / 29.4 in Height: 1146 mm / 45.1 in
+Wheelbase : 1410 mm / 55.5 in
+Ground Clearance : 180 mm / 7.1 in
+Seat Height : 790 mm / 31.1 in
+Dry Weight : 180 kg / 397 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal

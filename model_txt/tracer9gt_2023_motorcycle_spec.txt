@@ -1,0 +1,36 @@
+Model : Tracer 9 GT
+Years : 2023
+Engine : Four stroke, transverse triple cylinder, DOHC, 4 valves per cylinder
+Capacity : 890 cc / 54.3 cu-in
+Bore x Stroke : 78 x 62.1 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5:1
+Lubrication : Wet sump
+Emission : Euro 5
+Induction : Electronic Fuel Injection with YCC-T
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : 117.4 hp / 87.5 kW @ 10000 rpm
+Max Torque : 93 Nm / 68.6 lb-ft @ 7000 rpm
+Clutch : Wet multiplate assist and slipper clutch
+Transmission : 6 Speed, constant mesh
+Final Drive : O-ring chain
+Frame : Lightweight CF aluminium die-cast frame
+Front Suspension : 41mm semi-active KYB inverted fork, fully adjustable preload, compression and rebound
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Single shock, fully adjustable, semi-active horizontal KYB shock
+Rear Wheel Travel : 137 mm / 5.4 in
+Front Brakes : 2x 298mm hydraulic discs, 4-piston Nissin calipers
+Rear Brakes : Single 245mm hydraulic disc, single piston Nissin caliper
+ABS : Standard
+Wheels : Ultra-light SpinForged 17-inch 10-spoke wheels
+Front Tyre : 120/70Z R17 M/C (58W) (Tubeless)
+Rear Tyre : 180/55Z R17 M/C (73W) (Tubeless)
+Caster Angle : 25°
+Trail : 108 mm / 4.3 in
+Dimensions : Length 2174 mm / 85.6 in Width 884 mm / 34.8 in Height 1430 mm - 1470 mm / 56.3 in - 57.9 in
+Wheelbase : 1500 mm / 59.1 in
+Seat Height : 810 mm or 825.5 mm / 31.9 or 32.5
+Ground Clearance : 135 mm / 5.3 in
+Wet Weight : 220 kg / 485 lbs
+Fuel Capacity : 18 Litres / 4.7 US gal

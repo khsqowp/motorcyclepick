@@ -1,0 +1,37 @@
+Model : Daytona 660
+Years : 2024
+Engine : Four stroke, transverse three cylinder, DOHC, 4 valves per cylinder, 240? firing order
+Capacity : 660 cc / 40.2 cu-in
+Bore x Stroke : 74.4 x 51.1mm
+Compression Ratio : 12.05:1
+Cooling System : Liquid cooled
+Exhaust : Stainless steel 3 into 1 header system with low single sided stainless steel silencer
+Emission : Euro-5
+Induction : Multipoint sequential electronic fuel injection with electronic throttle control
+Starting : Electric
+Max Power : 69.8 kW / 95 hp @ 11250 rpm
+Max Torque : 69 Nm / 50.9 lb-ft @ 8250 rpm
+Clutch : Wet, multi-plate, slip and assist
+Transmission : 6 Speed
+Final Drive : X-ring chain
+Frame : Tubular steel perimeter frame, fabricated steel Swingarm
+Front Suspension : 41mm Showa upside down Separate Function Forks - Big Piston (SFF-BP)
+Front Wheel Travel : 110 mm / 4.33 in
+Rear Suspension : Showa monoshock RSU, with preload adjustment
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2 x 310mm floating discs, 4-piston calipers
+Rear Brakes : Single 220mm disc single-piston sliding caliper
+ABS System : Standard
+Wheels : 5 Spoke cast aluminum
+Front Rim : 3.5 x 17
+Rear Rim : 5.5 x 17
+Front Tyre : 120/70 - R17
+Rear Tyre : 180/55 - R17
+Rake : 23.8?
+Trail : 82.3 mm / 3.2 in
+Dimensions : Width 736 mm / 28.97 in (incl Handlebars) Height 1145 mm / 45.1 in (excl Mirrors)
+Wheelbase : 1425 mm / 56.1 in
+Seat Height : 810 mm / 31.9 in
+Wet Weight : 196 kg / 433 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal
+Instruments : Multi-function instruments with colour TFT screen

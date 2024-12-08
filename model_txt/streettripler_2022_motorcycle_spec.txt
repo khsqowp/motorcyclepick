@@ -1,0 +1,39 @@
+Model : Street Triple R
+Years : 2022
+Engine : Four stroke, in-line 3-cylinder, DOHC, 4 valve per cylinder
+Capacity : 765 cc / 46.6 cu-in
+Bore x Stroke : 78 x 53.4 mm
+Cooling System : Liquid-cooled
+Compression Ratio : 12.54:1
+Lubrication : Wet sump
+Induction : Multipoint sequential electronic fuel injection with SAI. Electronic throttle control
+Exhaust : Stainless steel 3 into 1 exhaust system low single sided stainless steel silencer
+Emission : Euro 5
+Ignition : Digital - inductive type
+Starting : Electric
+Max Power : 121.3 hp / 90 kW @ 11750 rpm
+Max Torque : 79 Nm / 58.3 lb-ft @ 9350 rpm
+Clutch : Wet, multi-plate, slip-assisted
+Transmission : 6 Speed with Triumph Shift Assist
+Final Drive : X ring chain
+Frame : Front - Aluminum beam twin spar Rear - 2 piece high pressure die cast
+Swingarm : Twin-sided, cast aluminum alloy
+Front Suspension : Showa 41 mm upside down separate function big piston forks (SF-BPF), Adjustable compression damping and rebound damping.
+Front Wheel Travel : 115 mm / 4.5 in
+Rear Suspension : Showa piggyback reservoir monoshock, Adjustable compression and rebound damping
+Rear Wheel Travel : 131 mm / 5.2 in
+Front Brakes : 2 x 310mm floating discs, Brembo M50 4-piston radial monoblock calipers
+Rear Brakes : Single 220mm disc, Brembo single-piston caliper
+ABS : Adjustable ABS
+Wheels : 5-spoke cast aluminum alloy
+Front Wheels : 3.5 x 17
+Rear Wheels : 5.5 x 17
+Front Tyre : 120/70 ZR17
+Rear Tyre : 180/55 ZR17
+Rake : 23.9°
+Trail : 100 mm / 3.9 in
+Dimensions : Width 775 mm / 30.5 in - with handlebars Height 1085 mm / 42.7 in - without mirrors
+Wheelbase : 1405 mm / 55.3 in
+Seat Height : 825 mm / 32.5 in
+Dry Weight : 168 kg / 370.3 lbs
+Fuel Capacity : 17.4 Litres / 4.6 US gal

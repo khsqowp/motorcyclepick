@@ -1,0 +1,29 @@
+Model : RV 200 VanVan
+Years : 2017-18
+Engine : Single cylinder, four stroke, SOHC, 2 valves
+Capacity : 199 cc / 12.1 cu in
+Bore x Stroke : 66 x 58.2 mm
+Compression Ratio : 9.4:1
+Cooling System : Air cooled
+Lubrication System : Wet sump
+Induction : Fuel injection
+Ignition : Electric
+Transmission : 5 Speed, constant mesh
+Final Drive : Chain
+Frame : Single steel cradle
+Front Suspension : Telescopic fork, coil spring, oil damped
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Swingarm, mono shock, coil spring, oil damped
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : Single 220 mm disc, 2 piston calipeer
+Rear Brakes : Drum
+Front Tyre : 130/80 -18M/C 66P, tube type
+Rear Tyre : 180/80 -14M/C 78P, tube type
+Rake : 26o
+Trail : 91 mm / 3.6 in
+Dimensions : Length: 2140 mm / 84.3 in Width: 865 mm / 34.1 in Height: 1125 mm / 44.3 in
+Wheelbase : 1385 mm / 54.5 in
+Ground Clearance : 220 mm / 8.7 in
+Seat Height : 770 mm / 30.3 cu in
+Wet Weight : 128 kg / 282 lbs
+Fuel Capacity : 6.5 Litres / 1.7 US gal / 1.4 Imp gal

@@ -1,0 +1,42 @@
+Model : 701 Enduro
+Years : 2021
+Engine : Four stroke, single cylinder, SOHC, 4 valves
+Capacity : 692.7 cc / 42.27 cu in
+Bore x Stroke : 105 x 80 mm
+Compression Ratio : 12.7:1
+Cooling System : Liquid cooling
+Lubrication : Pressure lubrication with 2 oil pumps
+Exhaust : Stainless steel silencer with regulated catalytic converter
+Engine Management : Keihin EMS with Ride By Wire
+Induction : Keihin EFI with 50mm throttle body
+Emission : EURO5
+Ignition : Double ignition
+Starting : Electric
+Battery : 12V 8.6Ah
+Max Power : 55 kW / 74 hp @ 8000 rpm
+Max Torque : 73 Nm / 54 ft-lb @ 6500 rpm
+Clutch : APTC slipper clutch, hydraulically operated
+Transmission : 6 Speed with quickshifter
+Final Drive : Chain X-Ring 5/8 x 1/4 in
+Frame : Chromium-Molybdenum-Steel trellis frame, powder coated, Subframe self-supporting polymer fuel tank
+Handlebar : Aluminium, tapered, &#216; 28/22 mm
+Front Suspension : 48mm Fully adjustable WP Xplor inverted forks
+Front Wheel Travel : 250 mm / 9.8 in
+Rear Suspension : Linkage-assisted fully adjustable WP Xplor shock
+Rear Wheel Travel : 250 mm / 9.8 in
+Front Brakes : Single 300 mm disc, Brembo floating caliper, 2 piston
+Rear Brakes : Single 240 mm disc, Brembo single piston, floating caliper
+ABS : Two-channel Bosch 9.1 MP, cornering aware and disengageable
+Front Wheel : Spoked wheels with aluminium tubeless rims 1.85 x 21
+Rear Wheel : Spoked wheels with aluminium tubeless rims 2.50 x 18
+Front Tyre : 90/90 - 21
+Rear Tyre : 140/80 - 18
+Steering Head Angle : 62.3&#176;
+Triple Clamp Offset : 35 - 33 mm
+Rake : 27.7&#176;
+Trail : 112 mm / 4.4 in
+Wheelbase : 1504 mm / 59.2 in
+Seat Height : 910 mm / 35.8 in
+Ground Clearance : 270 mm / 10.6 in
+Wet Weight : 155 kg / 342 lbs
+Fuel Capacity : 13 Litres / 3.5 US gal

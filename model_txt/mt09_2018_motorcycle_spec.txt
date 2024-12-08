@@ -1,0 +1,36 @@
+Model : MT-09
+Years : 2018
+Engine : Four stroke, transverse triple cylinder, DOHC, 4 valve per cylinder
+Capacity : 847 cc / 51.6 cu-in
+Bore x Stroke : 78 x 59.1 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5:1
+Lubrication : Wet sump
+Induction : Electronic Fuel Injection
+Ignition : Transistorized coil ignition
+Starting : Electric
+Max Power : 84.6 kW / 115 hp @ 10,000 rpm
+Max Torque : 87.5 Nm / 8.9 kgf-m @ 8,500 rpm
+Clutch : Wet multi-plate
+Transmission : 6 Speed
+Transmission system : Constant Mesh
+Final Drive : O"-ring chain
+Frame : Diamond frame
+Front Suspension : Telescopic fork
+Front Wheel Travel : 137 mm / 5.3 in
+Rear Suspension : Swingarm (link suspension)
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 298mm discs
+Rear Brakes : Single 245mm disc
+Front Tyre : 120/70 ZR17 M/C (58W) (Tubeless)
+Rear Tyre : 180/55 ZR17 M/C (73W) (Tubeless)
+Caster Angle : 25&#176;
+Trail : 103 mm / 4.0 in
+Dimensions : Length 2075 mm / 81.7 in Width 815 mm / 32.1 in Height 1135 mm ./ 44.7 in
+Wheelbase : 1440 mm / 56.7 in
+Seat Height : 815 mm / 32.1 in
+Wet Weight : 188 kg / 414 lbs - ABS 191 kg / 421 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal
+Consumption Average : 20.7 km/lit
+Standing &#188; Mile : 11.1 sec
+Top Speed : 209.8 km/h / 130.3 mph

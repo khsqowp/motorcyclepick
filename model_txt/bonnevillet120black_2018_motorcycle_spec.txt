@@ -1,0 +1,36 @@
+Model : Bonneville T120 Black
+Years : 2018-19
+Engine : Four stoke, parallel twin, 270o crank, SOHC
+Capacity : 1198 cc / 73.1 cu in
+Bore x Stroke : 97.6 x 80 mm
+Compression Ratio : 10.0:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Exhaust : Chromed 2 into 2 exhaust system with twin chrome silencers, EURO 4 compliant
+Induction : Multipoint sequential electronic fuel injection
+Ignition : Digital
+Starting : Electric
+Max Power : 59 kW / 80 hp @ 6550 rpm
+Max Torque : 105 Nm / 10.7 kgf-m / 77.4 lb-ft @ 3100 rpm
+Clutch : Wet, multi-plate
+Transmission : 6-Speed
+Final Drive : Chain, X-ring
+Frame : Dual tubular steel cradle
+Front Suspension : Kayaba 41 mm forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Kayaba twin shocks with adjustable preload
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2 x 310 mm Discs, 2 piston floating Nissen calipers, ABS
+Rear Brakes : Single 255 mm disc, 2 piston floating Nissen caliper, ABS
+Wheels Front : 2.75 x 18, 32 spokes
+Wheels Rear : 4.25 x 17, 32 spokes
+Front Tyre : 100/90-18
+Rear Tyre : 150/70-17
+Rake : 25.5o
+Trail : 105.2 mm / 4.1 in
+Dimensions : Length 2170 mm / 85.4 in Width 785 mm / 30.9 in Height 1125 mm / 44.3 in
+Wheelbase : 1445 mm / 56.9 in
+Seat Height : 785 mm / 30.9 in
+Dry Weight : 224 kg / 494 lbs
+Fuel Capacity : 14.4 Litres / 3.8 US gal / 3.2 Imp gal
+Review : Rider Magazine

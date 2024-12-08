@@ -1,0 +1,37 @@
+Model : MT-07
+Years : 2018
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valves per cylinder
+Capacity : 689 cc / 42.04 cu-in
+Bore x Stroke : 80 x 68.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5:1
+Lubrication : Wet sump
+Induction : Mikuni 38 mm dual bore throttle body F.I.
+Ignition : TCI Transistor Controlled Ignition
+Starting : Electric
+Max Power : 55 kW / 74.8 hp @ 9000 rpm
+Max Torque : 68 Nm / 50 lb-ft @ 6500 rpm
+Transmission : Constant Mesh
+Final Drive : Chain
+Clutch : Wet multiplate
+Frame : Diamond
+Front Suspension : 41mm Telescopic forks
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Adjustable link Monocross
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 282mm discs, 4-piston calipers
+Rear Brakes : Single 245mm disc, single piston caliper
+ABS : Standard
+Front Tyre : 120/70 ZR 17M/C(58W) (Tubeless)
+Rear Tyre : 180/55 ZR 17M/C(73W) (Tubeless)
+Caster Angle : 24.5&#186;
+Trail : 90 mm
+Dimensions : Length 2085 mm / 82.1 in Width 745 mm / 29.3 in Height 1090 mm / 42.9 in
+Wheel base : 1400 mm / 55.1 in
+Ground Clearance : 140 mm / 5.51 in
+Seat Height : 805 mm / 31.7 in
+Wet Weight : 183 kg / 403 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal
+Consumption Average : 23.1 km/lit
+Standing &#188; Mile : 12.3 sec
+Top Speed : 205.7 km/h / 127.8 mph

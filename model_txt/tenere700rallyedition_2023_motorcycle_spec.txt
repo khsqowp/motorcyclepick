@@ -1,0 +1,36 @@
+Model : Ténéré 700 Rally Edition
+Years : 2023
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valve per cylinder
+Capacity : 689 cc / 42.04 cu-in
+Bore x Stroke : 80 x 68.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5:1
+Lubrication : Wet sump
+Induction : Fuel Injection
+Exhaust : Akrapovič slip-on muffler
+Emission : Euro 5
+Ignition : TCI - Transistor Controlled Ignition
+Starting : Electric
+Max Power : 73.4 hp / 54 kW @ 8750 rpm
+Max Torque : 67 Nm / 49.4 lb-ft @ 6500 rpm
+Transmission : Constant Mesh, 6 Speed
+Final Drive : Chain
+Clutch : Wet multiplate
+Frame : Double cradle steel tube chassis
+Front Suspension : 43mm Upside down telescopic fork, fully adjustable
+Front Wheel Travel : 210 mm / 8.3 in
+Rear Suspension : Single shock, adjustable preload (with remote adjuster) and rebound damping
+Rear Wheel Travel : 200 mm / 7.9 in
+Front Brakes : 2x 282mm Hydraulic discs
+Rear Brakes : Single 245mm Hydraulic disc
+ABS : Standard
+Front Tyre : 90/90 R21 M/C 54V M+S  Spoke wheels with Pirelli Scorpion Rally STR
+Rear Tyre : 150/70 R18 M/C 70V M+S  Spoke wheels with Pirelli Scorpion Rally STR
+Rake : 27°
+Trail : 105 mm / 4.1 in
+Dimensions : Length 2370 mm / 93.3 in Width 905 mm / 35.6 in Height 1455 mm / 57.3 in
+Wheel base : 1595 mm / 62.8 in
+Seat Height : 875 mm / 34.4 in
+Ground Clearance : 240 mm / 9.4 in
+Wet Weight : 204 kg / 449.7 lbs
+Fuel Capacity : 16 Litres / 4.2 US gal

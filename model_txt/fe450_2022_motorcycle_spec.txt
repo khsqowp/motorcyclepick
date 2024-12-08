@@ -1,0 +1,35 @@
+Model : FE 450
+Years : 2022
+Engine : Four stroke, single cylinder, SOHC, 4 valve
+Capacity : 449 cc / 27.4 cu-in
+Bore x Stroke : 95 x 63.4 mm
+Compression Ratio : 11.8:1
+Cooling System : Liquid cooling system, continuous circulation of cooling liquid with water pump
+Lubrication : Forced oil lubrication with 2 Eaton pumps
+Induction : Fuel Injection
+Ignition : Keihin EMS
+Starting : Electric
+Max Power : NA
+Max Torque : NA
+Clutch : DDS wet multi-disc clutch, Braktec hydraulics
+Transmission : 6 speed, claw shifted
+Final Drive : Chain X-Ring 5/8 x 1/4 in
+Primary Ratio : 24:73
+Secondary Ratio : 14:52 (13:52)
+Frame : Central double-cradle-type 25CrMo4 steel
+Front Suspension : 48mm WP XACT-USD
+Front Wheel Travel : 300 mm / 11.8 in
+Rear Suspension : WP XACT Monoshock with linkage
+Rear Wheel Travel : 300 mm / 11.8 in
+Front Brakes : Single 260 mm Magura two-piston floating calliper
+Rear Brakes : Single 220 mm Magura single-piston floating calliper
+Front Tyre : 90/90-21
+Rear Tyre : 140/90-18
+Steering Head Angle : 63.5 &#176;
+Trail : 107 mm / 4.2 in
+Dimensions : Length 2260 mm / 89.0 in
+Wheelbase : 1482&#177;10 mm / 58.3 in
+Seat Height : 950 mm / 37.4 in
+Ground Clearance : 360 mm / 14.1 in
+Dry Weight : 108.3 kg / 238.7 lbs
+Fuel Capacity : 9 Litres / 2.37 US gal

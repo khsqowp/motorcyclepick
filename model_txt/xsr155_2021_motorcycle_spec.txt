@@ -1,0 +1,30 @@
+Model : XSR 155
+Years : 2021
+Engine : Four stroke, single cylinder, SOHC, 4 valve with variable valve actuation
+Capacity : 155.1 cc / 9.14 cu-in
+Bore x Stroke : 58.0 &#215; 58.7 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.6:1
+Induction : Fuel Injection
+Lubrication : Wet sump
+Ignition : TCI
+Starting : Electric
+Max Power : 14.1 kW / 19 hp @ 10000 rpm
+Max Torque : 14.7 Nm / 40.8 lb-ft @ 8500 rpm
+Clutch : Wet multiple-disc
+Transmission : 6 Speed slip-and-assist clutch
+Final Drive : Chain
+Frame : Steel Deltabox
+Front Suspension : Upside-down Telescopic fork
+Rear Suspension : Monoshock operating on a die-cast aluminium swingarm
+Front Brakes : Single 282mm disc 2 piston caliper, ABS
+Rear Brakes : Single 240mm disc 1 piston caliper, ABS
+Front Tyre : 110/70 -17
+Rear Tyre : 140/70 -17
+Caster : 15.7&#176;
+Trail : 89 mm / 3.5 in
+Wheelbase : 1330 mm / 52.3 in
+Seat Height : 810 mm / 31.8 in
+Ground Clearance : 170 mm / 6.6 in
+Wet Weight : 134 kg / 295.4 lbs
+Fuel Capacity : 10 Litres / 2.6 US gal

@@ -1,0 +1,42 @@
+Model : F3 800RC
+Years : 2022
+Production : 200 units
+Engine : Four stroke, transverse three cylinder, DOHC with mechanical chain tensioner and DLC tappet, 4 valves per cylinder, Titanium intake and exhaust valves
+Capacity : 798 cc / 48.6 cu-in
+Bore x Stroke : 79.0 x 54.3 mm
+Compression Ratio : 13.3:1
+Cooling System : Cooling with separated liquid and oil radiators
+Exhaust : Akrapovič full titanium exhaust
+Induction : Integrated ignition - injection system MVICS 2.1 (Motor &amp; Vehicle Integrated Control System) with six injectors. Engine control unit Eldor Nemo 2.1, throttle body bore 50 mm diameters full ride by wire Mikuni, pencil-coil with ion- sensing technology, control of detonation and misfire. Torque control with four maps. Traction Control with eight levels of intervention
+Emission : EURO5
+Ignition : Digital CDI
+Starting : Electric
+Max Power : 147 hp / 108 kW @ 13000 rpm
+Max Torque : 88 Nm / 64.9 lb-ft @ 10100 rpm
+Electronic quick-shift : MV EAS 3.0 (Electronically Assisted Shift Up &amp; Down)
+Clutch : Wet, multi plate with slipper clutch
+Transmission : Cassette style, six speed, constant mesh
+Final Drive : Chain
+Gear Ratio : 1st: 13/37 2nd: 16/34 3rd: 18/32 4 th 19/30 5th 21/30 6 th 22/29
+Final Drive Ratio : 17/43
+Primary Drive Ratio : 22/41
+Frame : ALS Steel tubular trellis, Aluminium alloy rear swing arm pivot plates
+Front Suspension : 43 mm Marzocchi UPSIDE DOWN telescopic hydraulic fork with TIN treatment and compression rebound-damping and spring pre load external and separate adjustment
+Front Wheel Travel : 125 mm / 4.92 in
+Rear Suspension : Progressive Sachs, single shock absorber with rebound and compression damping and spring preload adjustment, Aluminium alloy single sided swing arm
+Rear Wheel Travel : 130 mm / 5.12 in
+Front Brakes : 2x 320mm Double floating discs, with steel braking disc and flange, Brembo radial-type monobloc, with 4 piston calipers
+Rear Brakes : Single 220mm disc, Brembo with 2 piston caliper
+ABS : Continental MK100 with RLM (Rear Wheel Lift-up Mitigation) and with cornering function
+Rim Front : Forged aluminium 3.50 x 17
+Rim Rear : Forged aluminium 5.50 x 17
+Front Tyre : 120/70 - ZR 17 M/C (58 W)
+Rear Tyre : 180/55 - ZR 17 M/C (73 W)
+Rake : 23.6°
+Trail : 99 mm / 3.89 in
+Dimensions : Length 2030 mm / 79.92 in Width 730 mm / 28.74 in
+Wheelbase : 1380 mm / 54.33 in
+Seat Height : 830 mm / 32.68 in
+Ground Clearance : 120 mm / 4.72 in
+Dry Weight : 173 kg / 381.4 lbs - 165 kg / 363.8 lbs Racing Kit version, with exhaust and ECU map
+Fuel Capacity : 16.5 Litres / 4.36 US gal

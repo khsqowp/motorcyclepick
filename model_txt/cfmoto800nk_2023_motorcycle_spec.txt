@@ -1,0 +1,28 @@
+Model : CFMoto 800NK
+Years : 2023
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valve per cylinder
+Capacity : 799 cc / 48.7 cu-in
+Bore x Stroke : 88 mm x 65.7 mm
+Cooling System : Liquid cooled
+Compression Ratio : -
+Lubrication : Pressure lubrication with two oil pumps
+Induction : DKK DellOrto, 46 mm throttle body
+Ignition : Bosch EMS with Ride-By-Wire
+Starting : Electric
+Max Power : 99hp / 73.8 kW @ 9000 rpm
+Max Torque : 81 Nm / 59.7 lb-ft @ 8000 rpm
+Clutch : -
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Tubular steel
+Front Suspension : KYB USD Telescopic fork, adjustablew compression and rebound
+Rear Suspension : KYB Monoshock, adjustable preload and rebound
+Front Brakes : 2 x 320 mm discs, J.Juan radial four-pot calipers
+Rear Brakes : Single 260 mm disc, J,Juan caliper
+ABS : Bosch cornering ABS
+Front Tyre : 120/70 ZR17
+Rear Tyre : 180/55 ZR17
+Wheelbase : 1465 mm / 57.7 in
+Seat Height : 795 mm / 31.3 in
+Wet Weight : 186 kg / 410 lbs
+Fuel Capacity : 15 Litres / 4.0 US gal

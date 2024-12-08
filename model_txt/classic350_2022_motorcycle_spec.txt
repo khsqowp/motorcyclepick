@@ -1,0 +1,30 @@
+Model : Classic 350
+Years : 2022
+Engine : Four stroke, single cylinder, SOHC, 2 valve
+Capacity : 349 cc / 21.2 cu-in
+Bore x Stroke : 72 x 85.8 mm
+Compression Ratio : 8.5:1
+Cooling System : Air-oil cooled
+Emission : BS6-Compliant
+Induction : EFI
+Starting : Electric
+Max Power : 20.2 hp / 15 kW @ 6100 rpm
+Max Torque : 27 Nm / 19.9 lb-ft @ 4000 rpm
+Clutch : Wet, multiplate
+Transmission : 5 Speed
+Final Drive : Chain
+Frame : Twin downtube spine
+Front Suspension : 41mm Telescopic forks non adjustable
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Spring preload adjustable twin-tube emulsion shocks
+Rear Wheel Travel : 80 mm / 3.1 in
+Front Brakes : Single 300mm disc, 2 piston floating calliper
+Rear Brakes : Single 270mm disc, single piston calliper
+ABS System : Two-channel ABS standard.
+Wheels : 10 Spoke aluminum
+Front Tyre : 100/90-19
+Rear Tyre : 120/80-18
+Wheelbase : 1389 mm / 54.7 in
+Seat Height : 805 mm / 31.7 in
+Wet Weight : 195 kg / 430 lbs
+Fuel Capacity : 12.8 Litres / 3.4 US gal

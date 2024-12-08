@@ -1,0 +1,39 @@
+Model : Scout Bobber Sixty
+Years : 2020
+Engine : Four stroke, 60&#176; V-Twin, DOHC, 4 valves per cylinder
+Capacity : 999.6 cc / 61 cu in
+Bore x Stroke : 93 x 73.6 mm
+Cooling System : Liquid
+Lubrication : Semi-Dry sump
+Compression Ratio : 11.0:1
+Exhaust : Split dual exhaust with crossover
+Induction : EFI, closed loop fuel injection, 54mm bore
+Starting : Electric
+Max Power : 78 hp / 58.2 kW @ 7,300 rpm
+Max Torque : 88 Nm / 65 lb-ft @ 5,800rpm
+Clutch : Wet, multi-plate
+Transmission : 5 Speed, constant mesh
+Final Drive : Belt
+Final Drive Ratio : 2.357:1
+Primary Drive : Gear drive wet clutch
+Gear Ratio : 1st 10.926:1 / 2nd 7.427:1 / 3rd 5.918:1 / 4th 5.022:1 / 5th 4.087:1
+Front Suspension : 41mm Telescopic fork - cartridge type, non-adjustable
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Dual shocks, non-adjustable
+Rear Wheel Travel : 76 mm / 3.0 in
+Front Brakes : Single 298 mm rotor with 2 piston caliper
+Rear Brakes : Single 298 mm rotor with 1 piston caliper
+ABS : Optional
+Front Wheel : Cast aluminum 16 x 3.5
+Rear Wheel : Cast aluminum 16 x 3.5
+Front Tyre : 130/90-16
+Rear Tyre : 150/80-16
+Rake : 29&#176;
+Trail : 120 mm / 4.7 in
+Dimensions : Length 2223 mm / 87.5 in Width 926 mm / 36.5 in Height 1053 mm / 41.5 in
+Wheelbase : 157.6 mm / 62 in
+Seat Height : 649 mm / 25.6 in
+Ground Clearance : 130 mm / 5.1 in
+Dry Weight : 239 kg / 528 lbs
+Wet Weight : 249 kg / 548 lbs
+Fuel Capacity : 12.5 Litres / 3.3 gal

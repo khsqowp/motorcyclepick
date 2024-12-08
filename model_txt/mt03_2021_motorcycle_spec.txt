@@ -1,0 +1,33 @@
+Model : MT-03
+Years : 2021
+Engine : Four stroke, parallel twin cylinder, 4 valve per cylinder
+Capacity : 321 cc / 19.5 cu-in
+Bore x Stroke : 68.0 x 44.1mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Induction : Electronic Fuel Injection
+Lubrication : Wet sump
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : 30.9 kW 41.4 hp @ 10750 rpm
+Max Torque : 29.6 Nm / 22 lb-ft @ 9000 rpm
+Clutch : Wet, multiple-disc coil spring
+Transmission : Constant Mesh, 6-speed
+Final Drive : Chain
+Frame : Delta box
+Front Suspension : 37mm Non-adjustable KYB inverted forks.
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Linkage-assisted spring-preload adjustable KYB shock
+Rear Wheel Travel : 124.4 mm / 4.9 in
+Front Brakes : Single 298mm disc, ABS
+Rear Brakes : Single 220mm disc. ABS
+Front Tyre : 110/70-17
+Rear Tyre : 140/70-17
+Caster : 25&#176;
+Trail : 93.9 mm / 3.7 in
+Dimension : Length 2090.4 mm / 82.3 in Width 718.8 mm / 28.3 in Height 1133 mm / 40.7 in
+Wheelbase : 1379.2 mm / 54.3 in
+Seat Height : 779.7 mm / 30.7 in
+Ground Clearance : 160 mm / 6.2 in
+Wet Weight : 167 kg / 370 lbs
+Fuel Capacity : 14 Litres / 3.7 gal

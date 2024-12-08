@@ -1,0 +1,32 @@
+Model : GSX-S 750 / ABS
+Years : 2021
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder, TSCC
+Capacity : 749 cc / 45.7 cub. in
+Bore x Stroke : 72.0 x 46.0 mm
+Compression Ratio : 12.3:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Suzuki Fuel Injection with SDTV
+Ignition : Electronic ignition (transistorised)
+Traction Control : Suzuki Advanced Traction Control
+Starting : Electric
+Max Power : 73.8 kW / 99.1 hp @ 10170 rpm
+Max Torque : 73.6 Nm / 54.3 lb-ft / @ 9060 rpm
+Clutch : Wet, multi-plate type
+Transmission : 6 Speed, constant mesh
+Final Drive : Chain, DID50VAZ, 114 links
+Frame : Aluminium, twin spar
+Front Suspension : Inverted telescopic, coil spring, oil damped
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Link type, coil spring, oil damped, 7-way adjustable
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 310 mm Full floating discs, 4-piston calipers. ABS
+Rear Brakes : Single 220 mm disc, Nissin, 1-piston caliper. ABS
+Front Tyre : 120/70ZR17M/C (58W), tubeless
+Rear Tyre : 180/55ZR17M/C (73W), tubeless
+Dimensions : Length 2125 mm / 83.6 in Width 785 mm / 30.9 in Height 1055 mm / 41.5 in
+Wheelbase : 1455 mm / 57.2 in
+Seat Height : 820 mm / 32.2 in
+Ground Clearance : 135 mm / 5.1 in
+Wet Weight : 213 kg / 469.6 lbs
+Fuel Capacity : 16 Litres / 4.2 US gal / 3.7 Imp gal

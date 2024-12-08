@@ -1,0 +1,42 @@
+Model : GSX-R 600
+Years : 2020
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder
+Capacity : 599 c / 36.6 cub. in.
+Bore x Stroke : 67.0 x 42.5 mm
+Compression Ratio : 12.8:1
+Cooling System : Liquid cooled
+Oil : 10W40
+Lubrication : Wet sump
+Exhaust System : Suzuki Advanced Exhaust System (SAES), under engine chamber leading to large volume muffler and triangular silencer
+Induction : EFI, Four 40 mm throttle bodies, 2 valves per body. S-DMS engine management system
+Ignition : Digital CDI
+Spark Plug : NGK CR9E
+Starting : Electric
+Max Power : 93.2 kW / 125 hp @ 13500 rpm with maximum RAM air
+Max Torque : 67.7 Nm / 6.9 kgf-m / 49.9 ft-lb @ 11500 rpm, RAM air
+Clutch : Wet, slipper, cable operated
+Transmission : 6 Speed, constant mesh
+Gear Ratios : 1st 2.69 / 2nd 2.11 / 3rd 1.76 / 4th 1.52 / 5th 1.35 / 6th 1.23:1
+Final Drive : #525 Chain, 114 links
+Frame : Aluminium, twin spar extrusion frame
+Rake : 23.25&#176;
+Trail : 93 mm / 3.7 in
+Front Suspension : Showa Big Piston front-Fork (BPF)
+Rear Suspension : Link type, coil spring, oil damped
+Front Wheel Travel : 125 mm / 4.9 in.
+Rear Wheel Travel : 130 mm / 5.1 in.
+Front Brakes : 2 x 310 mm Discs, Brembo 4 piston calipers
+Rear Brakes : Single 220 mm disc, Nissin 2 piston caliper
+Wheels : Alloy, 3 spoke
+Front Tyre : 120/70 ZR17
+Rear Tyre : 180/55 ZR17
+Wheelbase : 1385 mm / 54.5 in.
+Dimensions : Length 2030 mm / 80.0 in. Width 715 mm / 28.1 in. Height 1125 mm / 44.7 in.
+Seat Height : 810 mm / 31.9 in.
+Ground clearance : 130 mm / 5.1 in.
+Dry Weight : 160 kg / 352 lbs
+Wet Weight : 187kg / 412 lbs
+Fuel Capacity : 17 Litres / 4.5 US gal / 3.7 Imp gal
+Average Fuel Consumption : 5.4 L/100 km / 18.4 km/l / 43.3 US mpg / 52.3 Imp mpg
+Standing &#188; mile : 11.1 sec
+Top Speed : 253 km/h / 157 mph

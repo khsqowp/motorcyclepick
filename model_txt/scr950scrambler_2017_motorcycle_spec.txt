@@ -1,0 +1,33 @@
+Model : SCR 950 Scrambler
+Years : 2017
+Engine : Four stroke, 60&#176;V-cylinder, SOHC, 4 valve per cylinder
+Capacity : 942 cc / 57.4 in-in
+Bore x Stroke : 85 x 83 mm
+Cooling System : Air cooled
+Compression Ratio : 9.0:1
+Oil Capacity : 4.3 Litres / 0.28 gal
+Induction : 35 mm dual bore throttle body fuel injection
+Ignition : Digital TCI
+Starting : Electric
+Max Power : 51.3 hp / 38.3 kW @ 5500 rpm
+Max Torque : 7.8 kgf-m / 56.7 ft-lb / 79.5 Nm @ 3000rpm
+Clutch : Wet, Multiple Disc
+Transmission : 5 Speed
+Final Drive : Belt
+Frame : Double cradle
+Front Suspension : Telescopic forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Dual piggyback shocks
+Rear Wheel Travel : 71 mm / 2.8 in
+Front Brakes : Single 298 mm disc Wave-type
+Rear Brakes : Single 298 mm disc Wave-type
+Front Tyre : 100/90-19
+Rear Tyre : 140/80R-17
+Rake : 28.4&#176;
+Trail : 130 mm / 5.1 in
+Dimensions : Length 2250.4 mm / 88.6 in Width 90.0 mm / 35.2 in Height 1165.8 mm / 45.9 in
+Wheelbase : 1574 mm / 62.0 in
+Seat Height : 830 mm / 32.7 in
+Ground Clearance : 130 mm / 5.5 in
+Wet Weight : 248 kg / 547 lbs.
+Fuel Capacity : 12 Litres / 3.2 US gal

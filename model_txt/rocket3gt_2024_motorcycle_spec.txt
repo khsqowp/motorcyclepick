@@ -1,0 +1,39 @@
+Model : Rocket 3 GT
+Years : 2024
+Engine : Four stroke, inline 3-cylinder, DOHC
+Capacity : 2458 cc / 150 cu-in
+Bore x Stroke : 110.2 x 85.9 mm
+Cooling System : Liquid cooled
+Compression Ratio : 10.8:1
+Induction : Ride-by-Wire, fuel injected
+Lubrication : Wet sump
+Exhaust : Stainless 3-into-1 headers with 3 exit silencer / CAT box
+Emission : EURO 5+
+Ignition : Digital inductive type via electronic engine management
+Starting : Electric
+Max Power : 134 kW / 180 hp @ 7000 rpm
+Max Torque : 225 Nm / 166 ft-lb @ 4000 rpm
+Clutch : Wet, multi-plate hydraulically operated, torque assist
+Transmission : 6 Speed
+Final Drive : Shaft, bevel box
+Frame : Full aluminum frame
+Swingarm : Single-sided, cast aluminum
+Front Suspension : Showa 47mm upside-down 1+1 cartridge front forks, compression and rebound adjustement
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Fully adjustable Showa piggyback reservoir RSU with remote hydraulic preload adjustement
+Rear Wheel Travel : 107 mm / 4.2 in
+Front Brakes : 2x 320 mm discs with Brembo M4.30 Stylema 4-piston radial monobloc calipers
+Rear Brakes : Single 300mm disc, Brembo M4.32 4-piston monobloc caliper
+ABS : Cornering ABS
+Front Wheel : 17 x 3.5 in cast aluminium
+Rear Wheel : 16 x 7.5 in cast aluminium
+Front Tyre : 150/80 R17 V
+Rear Tyre : 240/50 R16 V
+Rake : 27.9?
+Trail : 134.9 mm / 5.3 in
+Dimensions : Length: 2365 mm / 93.1 in Width: 920 mm / 36 in (with handlebars) Height: 1183 mm / 46.6 in (with mirrors
+Wheelbase : 1677 mm / 66 in
+Seat Height : 750 mm / 29.5 in
+Wet Weight : 320kg / 705 lbs
+Fuel Capacity : 18 Litres / 4.76 US gal
+Instruments : TFT multi-functional instrument pack with digital speedometer, trip computer, digital tachometer, gear position indicator, fuel gauge, service indicator, ambient temperature, clock and rider modes (Rain/Road/Sport/Rider-configurable) Triumph TFT Connectivity System can be added with accessory fitted Bluetooth module

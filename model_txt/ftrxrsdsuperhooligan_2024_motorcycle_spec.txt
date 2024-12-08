@@ -1,0 +1,43 @@
+Model : FTR x RSD Super Hooligan
+Years : 2024
+Engine : Four stroke, 60? V Twin , DOHC, 4 valves per cylinder, graded buckets
+Capacity : 1203 cc / 73 cu-in
+Bore x Stroke : 102 x 73.6 mm
+Compression Ratio : 12.5:1
+Cooling System : Liquid Cooled
+Induction : Electronic Fuel Injection closed loop, 60 mm bore
+Emission : EURO5
+Exhaust : 2-into-1, catalyst in collector
+Starting : Electric
+Max Power : 120 hp / 89.4 kW @ 6000 rpm
+Max Torque : 117.9 Nm / 87 lb-ft @ 6000 rpm
+Clutch : Assist &amp; Slip, Multi-Plate
+Transmission : 6 Speed
+Final Drive : Chain
+Final Drive Ratio : 2.647 : 1
+Gear Ratios : 1st 12.270, 2nd 8.341, 3rd 6.646, 4th 5.639, 5th 4.985, 6th 4.278
+Primary Drive : Gear drive wet clutch
+Lean Angle : 43?
+Frame : Steel trellis
+Front Suspension : 43 mm ?hlins Fully Adjustable Inverted Telescopic Cartidge Fork
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : ?hlins Fully Adjustable Piggyback IFP
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2x 320mm t5 Rotor Brembo with 4-piston calipers
+Rear Brakes : Single 260mm t5 Rotor Brembo with 2-piston calipers
+ABS : Standard, option to disable
+Wheels : Cast Aluminum
+Front Wheel : 17 x 3.5
+Rear Wheel : 17 x 5.5
+Front Tyre : 120/70ZR17 58W
+Rear Tyre : 180/55ZR17 73W
+Rake : 25.3?
+Trail : 99.9 mm / 3.9 in
+Dimensions : Length 2223 mm / 87.5 in Width 830 mm / 32.7 in Height 1295 mm / 51 in
+Wheelbase : 1524 mm / 60 in
+Seat Height : 805 mm / 31.7 in
+Ground Clearance : 165 mm / 6.5 in
+Dry Weight : 223 kg / 491 lbs
+Wet Weight : 237 kg / 522 lbs
+Fuel Capacity : 12.9 Litres / 3.4 US gal
+Standard Equipment : Ride Modes (Rain, Standard, Sport), Lean Angle Sensitive ABS, Stabilitiy Control, Traction Control, Wheelie and rear lift Mitigation, USB Charge Port, Cruise Control

@@ -1,0 +1,43 @@
+Model : Vitpilen 401
+Years : 2022
+Engine : Four stroke, single cylinder, DOHC with cam levers, 4 valves
+Capacity : 373.2 cc / 22.8 cu-in
+Bore x Stroke : 89 x 60 mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.6:1
+Lubrication : Wet sump with 2 oil pumps
+Exhaust : Stainless steel / Aluminum silencer with regulated catalytic converter
+Emission : EURO 5
+Induction : Bosch EFI (throttle body 46 mm)
+Engine Management : Bosch EMS
+Starting : Electric
+Max Power : 44 hp / 32 kW @ 9000 rpm
+Max Torque : 37 Nm / 27.3 lb-ft @ 7000 rpm
+Clutch : Multi disc slipper clutch
+Transmission : 6 Speed
+Primary Drive Ratio : 30:80
+Final Drive Ratio : 15:45
+Final Drive : Chain, X-Ring 5/8 x 1/4″
+EMS : Bosch EMS
+Frame : Steel trellis frame, powder coated
+Front Suspension : 43mm WP APEX upside-down forks, with compression rebound adjustability
+Front Wheel Travel : 142 mm / 5.6 in
+Rear Suspension : WP APEX monoshock with preload adjustability
+Rear Wheel Travel : 142 mm / 5.6 in
+Front Brakes : Single 320mm disc, ByBre 4 piston caliper
+Rear Brakes : Single 230mm disc, ByBre, single piston, floating caliper
+ABS : Two channel Bosch 10.1MB
+Wheels : Spoked wheels with aluminium rims
+Front Wheel : 3.00 x 17
+Rear Wheel : 4.00 x 17
+Front Tyre : 110/70-R17 Metzeler M5
+Rear Tyre : 150/60-R17 Metzeler M5
+Steering Head Angle : 65 °
+Rake : 25°
+Triple Clamp Offset : 32 mm / 1.8 in
+Trail : 95 mm / 3.7 in
+Wheelbase : 1357 ± 15.5 mm / 53.4 in
+Seat Height : 835 mm / 32.8 in
+Ground Clearance : 145 mm / 5.6 in
+Wet Weight : 151 kg / 332.8 lbs
+Fuel Capacity : 9.5 Litres / 2.5 US gal

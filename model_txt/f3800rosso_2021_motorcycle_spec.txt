@@ -1,0 +1,39 @@
+Model : F3 800 Rosso
+Years : 2021
+Engine : Four stroke, transverse three cylinder, DOHC, with mechanical chain tensioner and DLC tappet, 4 valves per cylinder
+Capacity : 798 cc / 48.7 cu-in
+Bore x Stroke : 79 x 54.3 mm
+Compression Ratio : 13.3:1
+Cooling System : Cooling with separated liquid and oil radiators
+Engine management system : Integrated ignition - injection system MVICS 2.1 (Motor &amp; Vehicle Integrated Control System) with six injectors. Engine control unit Eldor Nemo 2.1, throttle body bore 50 mm diameters full ride by wire Mikuni, pencil-coil with ion- sensing technology, control of detonation and misfire. Torque control with four maps. Traction Control with eight levels of intervention
+Emission : EURO5
+Electronic Quick-Shift : MV EAS 3.0 (Electronically Assisted Shift Up &amp; Down)
+Ignition : Multipoint electronic injection
+Starting : Electric
+Max Power : 108 kW / 147 hp @ 13000 rpm
+Max Torque : 88 Nm / 65 lb-ft @ 10100 rpm
+Clutch : Wet, multi-disc slipper clutch
+Transmission : 6 Speed, cassette style, constant mesh
+Final Drive : Chain
+Primary Drive Ratio : 22/41
+Gear Ratio : 1st 13/37 2nd 16/34 3rd 18/32 4th 19/30 5dth 21/30 6th 22/29
+Final Drive Ratio : 17/43
+Frame : ALS Steel tubular trellis, aluminium alloy rear swing arm pivot plates
+Front Suspension : 43mm Marzocchi USD telescopic hydraulic fork with rebound-compression damping and spring preload external and separate adjustment
+Front Wheel Travel : 125 mm / 4.9 in
+Rear Suspension : Progressive Sachs, single shock absorber with rebound and compression damping and spring preload adjustment, aluminium alloy single sided swing arm
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 320mm floating discs with steel braking disc and flange, Brembo radial-type monobloc, with 4 piston caliper
+Rear Brakes : Single 220mm disc, Brembo 2 piston caliper
+ABS : Continental MK100 with RLM (Rear Wheel Lift-up Mitigation) and with cornering function
+Front Wheel : Aluminium alloy 3.50 x 17
+Rear Wheel : Aluminium alloy 5.50 x 17
+Front Tyre : 120/70 - ZR 17 M/C (58 W)
+Rear Tyre : 180/55 - ZR 17 M/C (73 W)
+Trail : 99 mm / 3.89 in
+Dimensions : Length 2030 mm / 79.9 in Width 730 mm / 28.7 in
+Wheelbase : 1380 mm / 54.3 in
+Seat Height : 830 mm / 32.6 in
+Ground Clearance : 120 mm / 4.7 in
+Dry Weight : 173 Kg / 381.4 lbs
+Fuel Capacity : 16.5 Litres / 4.36 US gal

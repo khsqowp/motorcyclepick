@@ -1,0 +1,41 @@
+Model : Brutal 800RR Pirelli Special Edition
+Years : 2018
+Engine : Four stroke, transverse three cylinder. DOHC, 4 Valve per cylinder
+Capacity : 798 cc / 48.68 cu. in
+Bore x Stroke : 79 x 54.3 mm
+Cooling System : Cooling with separated liquid and oil radiators
+Compression Ratio : 12.3:1
+Engine management system : Engine management system Integrated ignition - injection system MVICS 2.0 (Motor &amp; Vehicle Integrated Control System) with six injectors. Engine control unit Eldor EM2.0, throttle body full drive by wire Mikuni, pencil-coil with ion-sensing technology, control of detonation and misfire. Torque control with four maps, Traction Control with eight levels of intervention Electronic quick-shift MV EAS 2.0 (Electronically Assisted Shift up &amp; down)
+Environmental Standard : Euro 4
+Ignition : Multipoint electronic injection
+Starting : Electric
+Battery : 12 V - 8.6 Ah
+Alternator : 350 Wat 5000 rpm
+Max Power : 103 kW / 140 hp @ 13100 rpm
+Max Torque : 86 Nm / 8.77 kgm @ 10100 rpm
+Electronic Quick-shift : MV EAS 2.0 (Electronically Assisted Shift up &amp; down)
+Clutch : Multi-disk wet clutch with hydraulic actuation
+Transmission : Cassette style 6 speed constant mesh
+Final Drive : Chain
+Primary Drive : 19/36 - Gear ratio
+Gear Ratio : 1st 13/37 2nd 16/34 3rd 18/32 4th 19/30 5th 21/30 6th 22/29
+Final Drive Ratio : 16/41
+Frame : ALS Steel tubular trellis Aluminium alloy
+Front Suspension : 43 mm Marzocchi &#8220;UPSIDE DOWN&#8221; telescopic hydraulic fork in DLC treated aluminium, with gold colour anodized fork legs and having rebound-compression damping and spring preload external and separate adjustment
+Front Wheel Travel : 125 mm / 4.9 in
+Rear Suspension : Progressive Sachs, single shock absorber with rebound and compression damping and spring preload adjustment Single sided swing arm material Aluminium alloy
+Rear Wheel Travel : 124 mm / 4.8 in
+Front Brakes : 2x 320mm floating discs Brembo 4 piston calipers
+Rear Brakes : Single 220mm disc Brembo 2 piston caliper
+ABS : ABS System Bosch 9 Plus with RLM
+Rim Front : Aluminium alloy 3.50 x 17 in
+Rim Rear : Aluminium alloy 5.50 x 17 in
+Front Tyre : 120/70 - ZR 17 M/C (58 W)
+Rear Tyre : 180/55 - ZR 17 M/C (73 W)
+Trail : 103.5 mm / 4.0 in.
+Dimensions : Length 2045 mm / 80,51 in Width 875 mm / 34,45 in
+Wheelbase : 1400 mm / 55,12 in
+Seat Height : 830 mm / 32,6 in
+Ground Clarence : 135 mm / 5.3 in
+Dry Weight : 175 Kg / 385.8 lbs
+Fuel Capacity : 16.5 Litres / 4.36 US gal

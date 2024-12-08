@@ -1,0 +1,27 @@
+Model : DL 250X V-Strom
+Years : 2018
+Engine : Four stroke, twin-twin
+Capacity : 248 cc / 15.1 cu-in
+Bore x Stroke : 53.5 x 55.2 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5:1
+Lubrication : Wet sump
+Induction : Fuel Injection
+Ignition : Electronic Ignition
+Starting : Electric
+Max Power : 24.7 hp / 18.4 kW @ 8000 rpm
+Max Torque : 17.3 lb-ft / 23.4 Nm @ 6500 rpm
+Clutch : Wet, multiple discs, cable operated
+Transmission : 6 Speed
+Final Drive : Chain
+Front Suspension : Telescopic forks
+Rear Suspension : single shock, steel swingarm
+Front Brakes : Single disc ABS
+Rear Brakes : Single disc ABS
+Front Tyre : 110 / 80-17
+Rear Tyre : 140 / 70-17
+Dimensions : Length 2085 mm / 89.9 in Width 710 mm / 27.9 in Height 1110 mm / 43.7 in
+Wheelbase : 1430 mm / 56.3 in
+Seat Height : 790 mm / 31.1 in
+Wet Weight : 178 kg / 392 lbs
+Fuel Capacity : 15 Litres / 4.0 US gal / 4.8 Imp gal

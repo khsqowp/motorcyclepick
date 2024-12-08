@@ -1,0 +1,36 @@
+Model : V-Strom 800RE Tour
+Years : 2024
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valves per cylinder
+Capacity : 776 cc / 47.4 cu-in
+Bore x Stroke : 84 x 70 mm
+Compression Ratio : 12.8:1
+Cooling System : Liquid/oil cooled
+Lubrication : Wet sump, forced feed circulation
+Induction : EFI with two 42mm throttle bodies
+Exhaust : Stainless-steel 2-into-1 exhaust system
+Emission : Euro 5
+Starting : Electric
+Max Power : 84.3 hp / 62 kW @ 8500 rpm
+Max Torque : 78 Nm / 57.5 lb-ft @ 6800 rpm
+Clutch : Wet multiplate
+Transmission : 6-speed constant mesh
+Final Drive : D.I.D O-ring chain
+Frame : Steel
+Front Suspension : Inverted telescopic fork, coil spring, oil damped, Showa
+Front Wheel Travel : 220 mm / 8.7 in
+Rear Suspension : Link type, coil spring, oil damped, Showa
+Rear Wheel Travel : 220 mm / 8.7 in
+Front Brakes : 2 x 310mm discs with 2-piston Nissan calipers
+Rear Brakes : Single 260mm disc with single-piston Nissin caliper
+ABS : Standard
+Wheels : Forged aluminum, 7 spoke
+Front Tyre : 110/80R19M/C 59V tubeless type
+Rear Tyre : 150/70R17M/C 69V tubeless type
+Rake : 26.0?
+Trail : 124 mm / 4.9 in
+Dimensions : Length: 2255 mm / 88.8 in Width: 905 mm / 36.6 in Height: 1355 mm / 53.3 in
+Wheelbase : 1515 mm / 59.6 in in
+Seat Height : 825 mm / 32.5 in
+Ground clearance : 185 mm / 7.3 in
+Wet Weight : 223 kg / 492 lbs
+Fuel Capacity : 20 Litres / 5.3 US gal

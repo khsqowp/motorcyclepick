@@ -1,0 +1,29 @@
+Model : GSX 250T
+Years : 2017-18
+Engine : Four stroke, parallel twin cylinder, SOHC, 2 valves per cylinder
+Capacity : 249 cc / 15.2 cu in
+Bore x Stroke : 53.5 x 55.2 mm
+Compression Ratio : 11.5;1
+Cooling System : Liquid cooled
+Induction : EFI fuel injection
+Ignition : ECU
+Battery : 12V, 8Ah
+Starting : Electric
+Max Power : 24.7 hp / 18.4 kW @ 8000 rpm
+Max Torque : 23.3 Nm / 17.1 lb-ft @ 6500 rpm
+Clutch : Wet, multi-plate clutch
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Cross cradle
+Front Suspension : Telescopic forks
+Rear Suspension : Monoshock with adjustable damping
+Front Brakes : Single 290 mm disc 2 piston caliper
+Rear Brakes : Single 240 mm disc 1 piston caliper
+Front Tyre : 110/80-17 57H
+Rear Tyre : 140/70-17 66H
+Dimensions : Length: 1577mm / 62.1 in Width: 739 mm / 29.1 in Height: 1110 mm / 43.7 in
+Wheelbase : 1430 mm / 56.3 in
+Seat Height : 780 mm / 31.3 in
+Ground Clearance : 157.4 mm / 6.3 in
+Wet Weight : 178 kg / 392.4 lbs
+Fuel Capacity : 15 Litres / 3.9 US gal

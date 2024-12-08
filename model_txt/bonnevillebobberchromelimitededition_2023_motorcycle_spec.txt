@@ -1,0 +1,38 @@
+Model : Bonneville Bobber Chrome Limited Edition
+Years : 2023
+Engine : Four stoke, parallel twin, 270° crank angle, SOHC, 4 valve per cylinder
+Capacity : 1198 cc / 73.1 cu in
+Bore x Stroke : 97.6 x 80 mm
+Compression Ratio : 10.0:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Exhaust : Brushed stainless steel 2 into 2 twin-skin exhaust system with brushed stainless silencers
+Emission : EURO5
+Induction : Multipoint sequential electronic fuel injection
+Ignition : Digital
+Starting : Electric
+Max Power : 57.5 kW / 76.9 hp @ 6100 rpm
+Max Torque : 106 Nm / 78.2 lb-ft @ 4000 rpm
+Clutch : Wet, multi-plate, torque assist clutch
+Transmission : 6-Speed
+Final Drive : Chain
+Frame : Tubular steel, twin cradle frame
+Swingarm : Twin sided fabrication
+Front Suspension : 47 mm Showa cartridge forks
+Front Wheel Travel : 90 mm / 3.5 in
+Rear Suspension : Mono-shock RSU with linkage
+Rear Wheel Travel : 73 mm / 2.8 in
+Front Brakes : 2x 310mm disc, Brembo 2-piston sliding axial calipers
+Rear Brakes : Single 255mm disc, Nissin single piston sliding axial caliper
+ABS : Standard
+Front Wheels : Wire 32-spoke, 16 x 2.5 in
+Rear Wheels : Wire 32-spoke, 16 x 3.5 in
+Front Tyre : 130/90 B16
+Rear Tyre : 150/80 R16
+Rake : 25.4°
+Trail : 92.0 mm / 3.6 in
+Dimensions : Length: 2220 mm / 87.4 in Width: 800 mm / 31.5 in Height: 1024 - 1055 mm / 40.3 - 41.5 in
+Wheelbase : 1500 mm / 59.1 in
+Seat Height : 690 - 700 mm / 27.2  27.6 in
+Wet Weight : 251 kg / 553 lbs
+Fuel Capacity : 12 Litres / 3.2 US gal

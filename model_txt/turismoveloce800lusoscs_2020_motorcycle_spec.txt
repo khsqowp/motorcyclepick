@@ -1,0 +1,39 @@
+Model : Turismo Veloce 800 Luso SCS
+Years : 2020
+Engine : Four stroke, transverse three cylinder, DOHC with mechanical chain tensioner, 4 valve per cylinder
+Capacity : 798 cc / 48.6 cu-in
+Bore x Stroke : 79 x 54.3 mm
+Cooling System : Cooling with separated liquid and oil radiators
+Compression Ratio : 12.2:1
+Engine management system : Integrated ignition &#8211; injection system, MVICS 2.0 (Motor &amp; Vehicle Integrated Control System) with three injectors, Engine control unit Eldor EM2.0, throttle body full ride by wire Mikuni, pencil-coil with ion-sensing technology, control of detonation and misfire Torque control with four maps, Traction Control with eight levels of intervention with lean angle sensor
+Electronic Quick-Shift : MV EAS 2.0 (Electronically Assisted Shift Up &amp; Down)
+Emission : Euro 4
+Ignition : Motor and Vehicle Integrated Control System
+Starting : Electric
+Max Power : 110 hp / 80.3 kW @ 10150 rpm
+Max Torque : 80 Nm / 59.0 lb-ft @ 8000 rpm
+Clutch : S.C.S. 2.0 (Smart Clutch System) Raius CX automatic clutch with hydraulic clutch actuation, wet multi-disc
+Transmission : Cassette style, 6 speed, constant mesh
+Final Drive : Chain
+Final Drive Ratio : 16/41
+Primary Drive Ratio : 22/41
+Gear Ratio : 1st: 13/37 2nd: 16/35 3rd: 18/32 4th: 20/30 5th: 22/29 6th: 21/25
+Frame : ALS Steel tubular trellis (MAG welded), aluminium alloy rear swing arm pivot plates
+Front Suspension : 43mm Sachs USD semi-active telescopic hydraulic fork MVCSC (MV Agusta Chassis Stability Control)
+Front Wheel Travel : 160 mm / 6.3 in
+Rear Suspension : Progressive Sachs, semi-active single shock absorber with hydraulic spring preload adjustment MVCSC (MV Agusta Chassis Stability Control), aluminium alloy single sided swing arm
+Rear Wheel Travel : 165 mm / 6.5 in
+Front Brakes : 2x 320mm floating discs, Brembo 4 piston calipers
+Rear Brakes : Single 220mm disc, Brembo 2 piston caliper
+ABS : Bosch 9 Plus with RLM (Rear wheel Lift-up Mitigation)
+Rim Front : Aluminium alloy 3.50 x 17 in
+Rim Rear : Aluminium alloy 6.00 x 17 in
+Front Tyre : 120/70 - ZR 17 M/C (58 W)
+Rear Tyre : 190/55 - ZR 17 M/C (75 W)
+Trail : 108 mm / 4.25 in
+Dimensions : Length: 2125 mm / 83.7 in Width: 910 mm / 35.8 in
+Wheelbase : 1445 mm / 56.89 in
+Ground Clarence : 140 mm / 5.51 in
+Seat Height : 850 mm / 33.46 in
+Dry Weight : 192 kg / 423.2 lbs
+Fuel Capacity : 21.5 Litres / 5.68 US gal

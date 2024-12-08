@@ -1,0 +1,32 @@
+Model : MT 25
+Years : 2021
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valve per cylinder
+Capacity : 249 cc / 15.1 cu-in
+Bore x Stroke : 60 x 44.1 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.6:1
+Induction : Electronic Fuel Injection
+Lubrication : Wet sump
+Oil Capacity : 2.4 Litres
+Ignition : TCI: Transistor Controlled Ignition
+Spark Plug : CR9E
+Battery : GTZ8V (MF Battery 7.4 Ah)
+Starting : Electric
+Max Power : 26.5 kW / 36 PS @ 12000 rpm
+Max Torque : 22.1 Nm / 16.7 lb-ft @ 10000 rpm
+Clutch : Wet, multiple-disc coil spring
+Transmission : Constant Mesh, 6-speed
+Final Drive : Chain
+Frame : Diamond-type steel frame
+Front Suspension : Telescopic forks
+Rear Suspension : KYBA single shock swinging arm
+Front Brakes : Single 298mm disc 2 piston caliper
+Rear Brakes : Single 220mm disc 2 piston caliper
+Front Tyre : 110/70-17M/C 54H
+Rear Tyre : 140/70-17M/C 66H
+Dimension : Length 2090.4 mm / 82.3 in Width 745 mm / 29.3 in Height 1035 mm / 40.7 in
+Wheelbase : 1379.2 mm / 54.3 in
+Seat Height : 779.7 mm / 30.7 in
+Ground Clearance : 160 mm / 6.2 in
+Wet Weight : 165 kg / 363.8 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal

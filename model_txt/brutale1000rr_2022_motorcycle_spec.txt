@@ -1,0 +1,40 @@
+Model : Brutale 1000RR
+Years : 2022
+Engine : Four stroke, transverse four cylinder, DOHC, radial valves and DLC tappet, 4 valves per cylinder
+Capacity : 998 cc / 60.9 cu-in
+Bore x Stroke : 79 x 50.9 mm
+Cooling System : Cooling with separated liquid and oil radiators
+Compression Ratio : 13.4:1
+Emission : Euro 5
+Engine management system : Integrated ignition - injection system MVICS 2.1 (Motor &amp; Vehicle Integrated Control System) with eight injectors (4 lower fuel injectors by Mikuni + 4 upper fuel injectors by Magneti Marelli with increased fuel flow). Engine control unit Eldor Nemo 2.1, throttle body bore 50 mm diameters full ride by wire Mikuni, pencil-coil with ion-sensing technology, control of detonation and misfire Torque control with four maps - Traction control with 8 levels + off and wheelie control with inertial platform
+Starting : Electric
+Max Power : 208 hp / 153 kW @ 13000 rpm
+Max Torque : 116.5 Nm / 86 lb-ft @ 11000 rpm
+Electronic Quick Shift : MV EAS 3.0 (Electronically Assisted Shift Up &amp; Down)
+Clutch : Wet, multi-disc with back torque limiting device and Brembo radial pump/lever assembly
+Transmission : Cassette style, 6 speed, constant mesh
+Primary Drive : 48/82
+Final Drive : Chain
+Gear Ratio : 1st 14/37 2nd 16/33 3rd 18/31 4th 20/30 5th 22/29 6th 21/25
+Final Drive Ratio : 15/41
+Frame : CrMo Steel tubular trellis, Aluminium alloy rear swing arm pivot plates, adjustable swingarm pivot height
+Steering damper : Öhlins EC with electronic manual and automatic adjustment modes
+Front Suspension : 43mm Öhlins Nix EC hydraulic upside down front forks with TiN superficial treatment. Completely adjustable with electronically controlled compression and rebound damping with manually controlled spring preload
+Front Wheel Travel : 120 mm / 4.72 in
+Rear Suspension : Progressive, single shock absorber Öhlins EC TTX completely adjustable with electronicall controlled compression and rebound damping and spring preload, aluminium alloy single sided swing arm
+Rear Wheel Travel : 120 mm / 4.72 in
+Front Brakes : 2x 320mm floating discs and aluminium flange - Brembo radial pump/level assembly
+Rear Brakes : Single 220mm disc, Brembo PS13 brake pump with 2 pistons caliper
+ABS : Continental MK100 with RLM (Rear Wheel Lift-up Mitigation) and with cornering function
+Wheels : Forged aluminium alloy
+Front Wheel : 3.50 x 17
+Rear Wheel : 6.00 x 17
+Front Tyre : 120/70 - ZR 17 M/C (58 W)
+Rear Tyre : 200/55 - ZR 17 M/C (78 W)
+Trail : 97 mm / 3.82 in
+Dimensions : Length: 2080 mm / 81.89 in Width: 805 mm / 31.69 in
+Wheelbase : 1415 mm / 55.7 in
+Seat Height : 845 mm / 33.27 in
+Ground Clearance : 141 mm / 5.55 in
+Dry Weight : 186 kg / 410.06 lbs
+Fuel Capacity : 16 Litres / 4.23 US gal

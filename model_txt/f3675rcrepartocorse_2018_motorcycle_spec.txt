@@ -1,0 +1,38 @@
+Model : F3 675 RC Reparto Corse
+Years : 2018
+Engine : Four stroke, transverse three cylinder. DOHC, 4 Valve per cylinder, Titanium intake and exhaust valves
+Capacity : 675 cc / 41.4 cu-in
+Bore x Stroke : 79 x 45.9 mm
+Compression Ratio : 12.3:1
+Cooling System : Liquid Cooled
+Emission : Euro 4
+Induction : Integrated Control System) with three injectors Engine control unit Eldor EM2.0, throttle body full drive by wire Mikuni, pencil-coil with ion-sensing technology, control of detonation
+Ignition : Digital CDI
+Alternator : 350 W at 5000 r.p.m.
+Starting : Electric
+Max Power : 99.1 kW / 133 hp @ 14500 rpm
+Max Torque : 70.9 Nm / 52.3 lb-ft @ 14570 rpm
+Clutch : Wet, multi plate with slipper clutch
+Transmission : 6 Speed
+Final Drive : Chain
+Gear Ratio : 1st : 1/14.493 2nd: 1/10.821 3rd: 1/9.053 4th: 1/8.040 5th: 1/7.274 6th: 1/6.712
+Final Drive Ratio : 16/43
+Frame : ALS Steel tubular trellis, Rear swing arm pivot plates: material Aluminium alloy
+Front Suspension : 43 mm Marzocchi &#8220;UPSIDE DOWN&#8221; telescopic hydraulic fork with rebound-compression damping and spring preload external and separate adjustment
+Front Wheel Travel : 125 mm / 4.92 in
+Rear Suspension : Progressive Sachs, single shock absorber with rebound and compression damping and spring preload adjustment
+Rear Wheel Travel : 123 mm / 4.84 in
+Front Brakes : 2x 320mm Double floating discs, 4 pistons calipers
+Rear Brakes : Single 220mm disc, single piston calipers
+Rim Front : Aluminium alloy 3.50 &#8221; x 17 &#8221;
+Rim Rear : Aluminium alloy 5.50 &#8221; x 17 &#8221;
+Front Tyre : 120/70 - ZR 17 M/C (58 W)
+Rear Tyre : 180/55 - ZR 17 M/C (73 W)
+Rake : 23.6&#176;
+Trail : 95 mm / 3.7 in
+Dimensions : Length 2060 mm./ 81.01 in Width 725 mm / 28.54 in
+Wheelbase : 1380 mm / 54.3 in
+Seat Height : 805 mm / 31.6 in
+Ground Clearance : 125 mm / 4.92 in
+Wet Weight : 167 kg / 368 lbs
+Fuel Capacity : 16 Litres / 4.2 US gal

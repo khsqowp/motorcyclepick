@@ -1,0 +1,28 @@
+Model : T-150 / Exciter 150 / Sniper 150 MXi / Jupiter MX/MX King 150 / Y15ZR
+Years : 2018-
+Engine : Four stroke, single cylinder, SOHC, 4 valve
+Capacity : 149.7 cc / 9.1 cu-in
+Bore x Stroke : 57.0 &#215; 58.7 mm
+Cooling System : Liquid cooled
+Compression Ratio : 10.4:1
+Lubrication : Wet Sump
+Induction : Fuel injection
+Ignition : TCI
+Starting : Electric
+Max Power : 15.1 hp / 11.3 kW @ 8500 rpm
+Max Torque : 13.8 Nm / 10.1 lb-ft @ 7000rpm
+Transmission : 5 Speed constant mesh
+Final Drive : Chain
+Frame : Tubular steel diamond backbone
+Front Suspension : Telescopic fork
+Rear Suspension : Swingarm with monoshock
+Front Brakes : Single disc 1 piston caliper
+Rear Brakes : Single disc 1 piston caliper
+Front Tyre : 80/90-17 tubeless
+Rear Tyre : 120/70-17 tubeless
+Dimensions : Length 1970 mm / 78 in Width 670 mm / 26 in Height 1080 mm / 43 in
+Wheelbase : 1240 mm / 49 in
+Seat Height : 780 mm / 31 in
+Wet Weight : 116 kg / 255.7 lbs
+Fuel Capacity : 4.2 Litres / 0.92US gal
+Oil Capacity : 1.15 Litres / 0.25 imp gal / 0.30 US gal

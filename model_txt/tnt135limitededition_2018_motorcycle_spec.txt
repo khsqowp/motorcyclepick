@@ -1,0 +1,35 @@
+Model : TNT 135 Limited Edition
+Years : 2018
+Engine : Four stroke, single cylinder, SOHC, 4 valves
+Capacity : 134.7 cc / 8.2 cu-in
+Bore x Stroke : 54 x 58.8 mm
+Cooling System : oil cooled
+Compression Ratio : 9.8:1
+Lubrication : Wet sump
+Exhaust : With catalytic converter and oxygen sensors
+Emissions : Euro 4
+Induction : Electronic fuel injection with throttle body d.28
+Spark Plug : BOSCH A7RC
+Ignition : DELPHI MT 05
+Starting : Electric
+Max Power : 9,5 kW / 13 hp @ 9000 rpm
+Max Torque : 10,8 Nm / 1,0 kgm @ 7000 rpm
+Clutch : Wet, multiplate
+Transmission : 5 Speed
+Final Drive : Chain
+Final Drive Ratio : 2.645:1
+Frame : Trestle in steel tubes
+Front Suspension : 41 mm Inverted fork
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : swing arm with lateral shock absorber with spring pre-load adjustment
+Front Brakes : Single 220mm disc 2 piston caliper
+Rear Brakes : Single 190mm disc 1 piston caliper
+Front Wheel : Aluminium alloy rim, 12&#8221; x MT 3.0 DOT
+Rear Wheel : Aluminium alloy rim, 12&#8221; x MT 3.5 DOT
+Front Tyre : 120/70-ZR12
+Rear Tyre : 130/70 - ZR12
+Dimensions : Length 1750 mm / 68.8 in Height 1025 mm / 40.3 in
+Ground Clearance : 160 mm / 6.2 in
+Seat Height : 780 mm / 30.7 in
+Wet Weight : 121 kg / 266.7 lbs
+Fuel Capacity : 7.2 Litres / 1.9 US gal

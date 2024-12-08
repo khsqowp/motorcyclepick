@@ -1,0 +1,32 @@
+Model : MP3 300 HPE / MP3 300 Sport
+Years : 2020-
+Engine : Four stroke, single cylinder, SOHC, 4 valves and roller tappets
+Capacity : 278 cc / 17.0 cu-in
+Bore x Stroke : 75 mm x 63 mm
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Electronic fuel injection
+Emission : EURO5
+Ignition : Electronic with inductive exhaust and variable advance integrated in the injection CPU. Closed loop system with Lambda probe for the exhaust. Electronic immobilizer, block of injection pump when the vehicle is tilted. Traction control (ASR)
+Starting : Electric
+Max Power : 19 kW / 25.8 hp @ 7750 rpm
+Max Toque : 26.1 Nm / 19.2 lb-ft @ 6250 rpm
+Clutch : Automatic, centrifugal dry clutch
+Transmission : CVT with torque server
+Final Drive : Belt
+Frame : Double cradle in high strength tubular steel
+Front Suspension : Articulated quadrilateral, Electro-hydraulic suspension blocking system
+Rear Suspension : Dual hydraulic shock absorber with pre-adjusted spring in one of 4 positions
+Front Brakes : 2x 258mm discs, one disc brake per wheel
+Rear Brakes : Single 240mm disc
+ABS : ABS with braking integrated with the pedal
+Wheels : Aluminium alloy
+Front Wheel : 13 x 3.00
+Rear Wheel : 14 x 3.75
+Front Tyre : 2 x 110/70-13 tubeless
+Rear Tyre : 140/60-14 tubeless
+Dimensions : Length 2000 mm / 78.7 in Width 800 mm / 31.5 in
+Wheelbase : 1450 mm / 57 in
+Seat Height : 780 mm / 30.7 in
+Dry Weight : -
+Fuel Capacity : 11 Litres / 2.9 US gal

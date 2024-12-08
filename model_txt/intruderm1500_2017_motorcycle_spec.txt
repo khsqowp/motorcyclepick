@@ -1,0 +1,26 @@
+Model : Intruder M 1500
+Years : 2017-18
+Engine : Four stroke, 54&#176; V-Twin, SOHC, 4 valve per cylinder
+Capacity : 1462 cc / 89.2 cu. in
+Bore x Stroke : 96 x 101 mm
+Cooling System : Liquid cooled
+Compression Ratio : 9.5:1
+Induction : EFI, 2 x 56mm throttle bodies
+Ignition : Electronic
+Starting : Electric
+Max Power : 66.6 hp / 49 kW @ 4800 rpm
+Max Torque : 115 Nm / 11.73 kg-m / 84.8 lb-ft @ 2800 rpm
+Transmission : 5 Speed
+Final Drive : Shaft
+Front Suspension : Inverted telescopic forks, oil damped
+Rear Suspension : Link type, coil spring, oil damped adjustable spring preload
+Front Brakes : 2 x 290 mm Discs, 3 piston calipers
+Rear Brakes : Single 274 mm disc 2 piston caliper
+Front Tyre : 120/70ZR18M/C (59W), tubeless
+Rear Tyre : 200/50ZR17M/C (75W), tubeless
+Dimensions : Length 2390 mm / 94.1 in Width 970 mm / 34.3 in Height 1100 mm / 43.3 in
+Wheelbase : 1690 mm / 66.5 in
+Seat Height : 716 mm / 28.2 in
+Ground Clearance : 145mm / 5.7 in
+Wet Weight : 328 kg / 723 lbs
+Fuel Capacity : 18 Litres / 4.8 US gal / 4.0 Imp gal

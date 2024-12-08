@@ -1,0 +1,38 @@
+Model : Stelvio
+Years : 2024
+Engine : Four stroke, transversal 90? V-twin, DOHC, timing with finger followers, longitudinal crank, 4 valves per cylinder
+Capacity : 1042 cc / 63.5 cu-in
+Bore x Stroke : 96 x 72 mm
+Cooling System : Liquid-cooled
+Compression Ratio : 12.6:1
+Emission : EURO5
+Induction : Electronic injection, 52 mm double throttle body, Ride-by-Wire
+Engine Management : 3 engine mappings (MGCM), 2 levels of engine brake control (MGFM), 4 levels of traction control (MGTC), cruise control, 4 Riding Modes (Tour, Rain, Road, Sport), quick shift
+Starting : Electric
+Max Power : 115 hp / 84.5 kW @ 8700 rpm
+Max Torque : 104.3 Nm / 77 lb-ft @ 6750 rpm
+Clutch : Hydraulically actuated wet multiplate w/ assist and slipper functions
+Transmission : 6-Speed quickshifter optional
+Final Drive : Shaft: Drive ratio: 12/38 (3.166)
+Primary Drive : Straight cut gears and integrated flexible coupling, gear ratio: 31/48 (1.548)
+Frame : Tubular steel
+Front Suspension : Sachs 46mm inverted fork, Spring-preload and rebound-damping adjustable
+Front Wheel Travel : 170 mm / 6.8 in
+Rear Suspension : Aluminum single-sided shock absorber left side, adjustable in spring preload with knob and rebound hydraulics
+Rear Wheel Travel : 170 mm / 6.8 in
+Front Brakes : 2x 320 mm floating discs, radially mounted Brembo 4-piston calipers and steel-braided brake lines
+Rear Brakes : Single 280 mm disc, 2-piston Brembo caliper
+ABS : Cornering-aware Continental ABS
+Wheels : Spoked
+Front Rim : 3.00 x 19
+Rear Rim : 4.50 x 17
+Front Tyre : 120/70 ? R19
+Rear Tyre : 170/60 ? R17
+Rake : 25.6?
+Trail : 116.49 mm / 4.59 in
+Dimensions : Length: 2195 mm / 86.4 in Width: 945 mm / 37.2 in
+Wheelbase : 1520 mm / 59.8 in
+Seat Height : 830 mm / 32.7 in
+Dry Weight : 222 kg / 489 lbs
+Wet Weight : 246 kg / 542 lbs
+Fuel Capacity : 20.8 Litres / 5.5 US gal

@@ -1,0 +1,27 @@
+Model : XMAX 400
+Years : 2017-18
+Engine : Four stroke, single cylinder, DOHC
+Capacity : 395 cc / 24.1 cu-in
+Bore x Stroke : 83 x 73 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Lubrication : Wet sump
+Induction : Fuel Injection
+Ignition : ECU
+Starting : Electric
+Transmission : Automatic
+Final Drive : V-Belt Automatic
+Front Suspension : Telescopic fork
+Front Wheel Travel : 110 mm / 4.3 in
+Rear Suspension : Unit swing
+Rear Wheel Travel : 110 mm / 4.3 in
+Front Brakes : Single 267mm disc
+Rear Brakes : Single 267mm disc
+Front Tyre : 120/70-15
+Rear Tyre : 150/70-13
+Dimensions : Width 780 mm / 30.7 in Length: 2,190 mm / 86.2 in
+Wheelbase : 1,565 mm / 61.6 in
+Seat Height : 785 mm / 30.9 in
+Ground Clearance : 105 mm / 4.1 in
+Wet Weight : 210 kg / 465 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal

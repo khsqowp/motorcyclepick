@@ -1,0 +1,34 @@
+Model : Boulevard S40
+Years : 2019
+Engine : Four stroke, single cylinder, SOHC
+Capacity : 652 cc / 39.8 cu-in
+Bore x Stroke : 94 x 94.0 mm
+Cooling System : Air cooled
+Compression Ratio : 8.5:1
+Lubrication : Wet sump
+Induction : Mikuni BS40
+Ignition : Transistorized
+Starting : Electric
+Max Power : 23 kW / 31 hp @5400 rpm
+Max Torque : 50 Nm / 5.1 kgf-m / 37 lb-ft @3400 rpm
+Clutch : Wet, multiple discs, cable operated
+Transmission : 5 Speed
+Final Drive : Belt
+Front Suspension : Telescopic 38 mm stanchions, coil spring, oil damped
+Front Wheel Travel : 140 mm / 5.5 in
+Rear Suspension : Twin shock, 5-way adjustable spring preload
+Rear Wheel Travel : 80 mm / 3.1 in
+Front Brakes : 265 mm Single disc
+Rear Brakes : Drum, rod operated
+Front Tyre : 100/90-19 57H, tube type
+Rear Tyre : 140/80-15 67H, tube type
+Rake : 35&#176;
+Trail : 147 mm / 5.8 in
+Dimensions : Length 2180 mm / 85.8 in Width 720 mm / 28.3 in Height 1105 mm / 43.5 in
+Wheelbase : 1480 mm / 58.3 in
+Seat Height : 700 mm / 27.6 in
+Ground Clearance : 135mm / 5.3 in
+Dry Weight : 160 kg / 352 lbs
+Wet Weight : 172 kg / 380 lbs
+GVWR : 356 kg / 785 lbs
+Fuel Capacity : 10.5 Litres / 2.6 US gal

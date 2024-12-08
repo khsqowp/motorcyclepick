@@ -1,0 +1,36 @@
+Model : Leoncino 251
+Years : 2019-
+Engine : Four stroke, single cylinder, DOHC, 4 valve
+Capacity : 249.2 cc / 15.2 cu in
+Bore x Stroke : 72 x 61.2 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Lubrication : Wet sump
+Exhaust : 2-into-1, two catalytic converters and oxygen sensor
+Induction : Electronic fuel injection with 37mm &#216; throttle body
+Ignition : Delphi MT05
+Spark Plug : NGK CR8E
+Starting : Electric
+Max Power : 18 kW / 24.5 hp @ 9000 rpm
+Max Torque : 21 Nm / 2.14 kgf-m / 15.5 lbs-ft @ 7000 rpm
+Clutch : Wet
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Steel trestle in steel tubes, engine used as stress member
+Front Suspension : Upside down telescopic forks, 41 mm &#216;
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Swingarm, monoshock
+Rear Wheel Travel : 50 mm / 2.0 in
+Front Brakes : Single 280 mm disc, 4-piston caliper
+Rear Brakes : Single 240 mm disc, 2-piston caliper
+Wheels : Aluminium alloy, 12 spoke
+Front Rim : 3.5 x 17
+Rear Rim : 4.0 x 17
+Front Tyre : 120/70-ZR17
+Rear Tyre : 150/60-ZR17
+Dimensions : Length 2080 mm / 81.9 in Height 1100 mm / 43.3 in
+Wheelbase : 1400 mm / 55.1 in
+Ground Clearance : 180 mm / 7.1 in
+Seat Height : 810 mm / 31.9 in
+Dry Weight : 153 kg / 337.3 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal

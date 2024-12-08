@@ -1,5 +1,6 @@
 package com.example.motorcycle.controller;
 
+import com.example.motorcycle.domain.MotorcycleDomain;
 import com.example.motorcycle.dto.*;
 import com.example.motorcycle.form.MotorcycleForm;
 import com.example.motorcycle.service.MotorcycleService;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -70,15 +72,15 @@ public class MotorcycleController {
         try {
             MotorcycleDTO motorcycleDTO = motorcycleService.findOneMotorcycle(motorcycleID);
             MotorcycleForm motorcycleForm = MotorcycleForm.fromDTO(motorcycleDTO);
-            if (motorcycleDTO.getEnginesDTO() == null) {
-                motorcycleDTO.setEnginesDTO(new EnginesDTO());
-            }
-            if (motorcycleDTO.getElectronicsDTO() == null) {
-                motorcycleDTO.setElectronicsDTO(new ElectronicsDTO());
-            }
-            if (motorcycleDTO.getDimensionsDTO() == null) {
-                motorcycleDTO.setDimensionsDTO(new DimensionsDTO());
-            }
+//            if (motorcycleDTO.getEnginesDTO() == null) {
+//                motorcycleDTO.setEnginesDTO(new EnginesDTO());
+//            }
+//            if (motorcycleDTO.getElectronicsDTO() == null) {
+//                motorcycleDTO.setElectronicsDTO(new ElectronicsDTO());
+//            }
+//            if (motorcycleDTO.getDimensionsDTO() == null) {
+//                motorcycleDTO.setDimensionsDTO(new DimensionsDTO());
+//            }
 
             model.addAttribute("motorcycleDTO", motorcycleDTO);
             model.addAttribute("motorcycleForm", motorcycleForm);
@@ -106,6 +108,10 @@ public class MotorcycleController {
     @PostMapping("/edit")  // /edit 에서 /update로 변경
     public String updateMotorcycle(@ModelAttribute @Valid MotorcycleForm form, RedirectAttributes redirectAttributes) {
         try {
+
+            MotorcycleDTO existingData = motorcycleService.findOneMotorcycle((form.getMotorcycleID()));
+//            if (form.getWheelbase() == null) form.setWheelbase(existingData.getDimensionsDTO().getWheelbase());
+
             motorcycleService.updateFullMotorcycle(form);
             redirectAttributes.addFlashAttribute("message", "Motorcycle이 성공적으로 수정되었습니다.");
             return "redirect:/motorcycle/";
@@ -125,5 +131,43 @@ public class MotorcycleController {
         }
 
         return "redirect:/motorcycle/";
+    }
+
+
+
+    //___________________________________________-
+
+
+
+    @GetMapping("/testCode/resultPage")
+    public String testResultPage(Model model, HttpSession session) {
+        try {
+            // 모든 모터사이클 DTO 조회
+            List<MotorcycleDTO> motorcycles = motorcycleService.findFullMotorcycleList();
+
+            if (motorcycles.isEmpty()) {
+                model.addAttribute("noResults", true);
+                model.addAttribute("message", "데이터베이스에 등록된 모터사이클이 없습니다.");
+                return "resultPage";
+            }
+
+            // 세션에 결과 저장
+            session.setAttribute("results", motorcycles);
+
+            // 모델에 필요한 데이터 추가
+            model.addAttribute("motorcycle", motorcycles.get(0));
+            model.addAttribute("results", motorcycles);
+            model.addAttribute("currentIndex", 0);
+            model.addAttribute("totalResults", motorcycles.size());
+
+            return "resultPage";
+
+        } catch (Exception e) {
+            model.addAttribute("error", "데이터 로딩 중 오류가 발생했습니다.");
+            model.addAttribute("errorMessage", e.getMessage());
+            model.addAttribute("errorLocation", "testResultPage");
+            model.addAttribute("errorType", e.getClass().getSimpleName());
+            return "error";
+        }
     }
 }

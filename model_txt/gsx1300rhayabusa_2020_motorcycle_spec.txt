@@ -1,0 +1,46 @@
+Model : GSX 1300R Hayabusa
+Years : 2020
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder
+Capacity : 1340 cc / 81.8 cu-in
+Bore x Stroke : 81 x 65 mm
+Compression Ratio : 12.5:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Suzuki Fuel Injection fuel injection
+Ignition : Electronic
+Starting : Electric
+Max Power : 146 kW / 195.7 hp @ 9800 rpm
+Max Torque : 154 Nm / 15.81 kg-m / 113.6 lb-ft @ 7200 rpm
+Clutch : Wet multi-plate, manual, hydraulic, 6 spring coil, Plates: 10 Drive, 9 Driven
+Transmission : 6 Speed
+Final Drive : Chain
+Gear Ratio : 1st 1.596 / 2nd 2.615 / 3rd 1.937 / 4th 1.526 / 5th 1.136 / 5th 1.136
+Primary Drive Ratio : 1.596 (83/52)
+Final Drive Ratio : 2.388 (43/18)
+Frame : Design (Material): Twin-spar (aluminum alloy)
+Front Suspension : Inverted telescopic coil springs, spring preload, rebound and compression damping fully adjustable.
+Rear Suspension : Link type, oil damped, coil springs, spring preload, rebound and compression damping fully adjustable.
+Front Brakes : 2 x 310 mm Discs, 4 piston calipers
+Rear Brakes : Single 260 mm disc, 1 piston caliper
+Wheels Front : 17 M/C x MT3.50, cast aluminum alloy
+Wheels Rear : 17 M/C x MT6.00, cast aluminum alloy
+Front Tyre : 120/70 ZR17
+Rear Tyre : 190/50 ZR17
+Rake : 24.2&#176;
+Trail : 98 mm / 3.8 in
+Dimensions : Length 2190 mm / 86.2 in Width 735 mm / 28.9 in Height 1165 mm / 45.9 in
+Wheelbase : 1480 mm / 58.3in
+Seat Height : 805 mm / 31.7 in
+Ground Clearance : 120 mm / 4.7 in
+Dry Weight : 220 kg / 485 lbs
+Wet Weight : 266 kg / 586 lbs
+Fuel Capacity : 21 Litres / 5.5 US gal / 4.6 Imp gal
+Consumption Average : 6.1 L/100 km / 16.3 km/l / 38.3 US mpg / 46.0 Imp mpg
+Standing 0 - 100km : 3.0 sec
+Standing 0 - 140km : 4.4 sec
+Standing 0 - 200km : 7.3 sec
+Acceleration 60-140 km/h : 7.1 sec
+Acceleration 100 - 140 km/h : 3.2 sec
+Acceleration 140 - 180 km/h : 3.4 sec
+Standing &#188; Mile : 10.2 sec
+Top Speed : 296.9 km/h / 184.49 mph

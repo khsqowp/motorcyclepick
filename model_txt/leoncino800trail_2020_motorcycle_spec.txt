@@ -1,0 +1,31 @@
+Model : Leoncino 800 Trail
+Years : 2020
+Engine : Four stroke, parallel twin, DOHC, 8 valves
+Capacity : 754 cc / 46.0 cu-in
+Bore x Stroke : 88 x 62 mm
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : EFI with twin 43 mm throttle bodies
+Ignition : TLI
+Starting : Electric
+Max Power : 80 hp / 60 kW @ 9000 rpm
+Max Torque : 50 lb-ft / 67Nm @ 6500 rpm
+Clutch : Wet clutch
+Transmission : 6-Speed
+Final Drive : Chain
+Frame : Steel tube trellis frame
+Front Suspension : 50mm USD fork, adjustable
+Front Wheel Travel : 140 mm / 5.5
+Rear Suspension : Swingarm with monoshock, spring preload adjustable, hydraulic rebound adjustable
+Rear Wheel Travel : 145 mm / 5.7 in
+Front Brakes : 2x 320mm floating discs, Brembo 4-piston calipers
+Rear Brakes : Single 260mm disc, 2-piston caliper,
+ABS : Standard
+Front Tyre : 120/70 R 19 Pirelli Scorpion Rally
+Rear Tyre : 170/60 R17 Pirelli Scorpion Rally
+Dimensions : Length 2140 mm / 84.2 in Width 880 mm / 34.6 in Height 1170 mm / 46.0 in
+Wheelbase : 1460 mm / 57.4 in
+Ground Clearance : 180 mm / 7.1 in
+Seat Height : 818 mm / 32.2 in
+Wet Weight : 224 kg / 494 lbs
+Fuel Capacity : 15 Litres / 4.0 US gal

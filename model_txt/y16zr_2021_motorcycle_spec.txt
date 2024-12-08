@@ -1,0 +1,29 @@
+Model : Y 16ZR
+Years : 2021
+Engine : Four stroke, single cylinder, SOHC, 4 valve
+Capacity : 155 cc / cu-in
+Bore x Stroke : 58.0 x 58.7mm
+Cooling System : Liquid cooled
+Compression Ratio : 10.5:1
+Lubrication : Wet sump
+Induction : Fuel injection
+Ignition : TCI
+Starting : Electric
+Max Power : 17.7 hp / 13.2 kW @ 9500rpm
+Max Torque : 14.4 Nm / 10.6 lb-ft @ 8000rpm
+Clutch : Wet multi-plate
+Transmission : 6 Speed constant mesh
+Final Drive : Chain
+Frame : Tubular steel diamond backbone
+Front Suspension : Telescopic fork
+Rear Suspension : Monoshock cradle arm
+Front Brakes : Single 245mm hydraulic disc, 2 piston caliper
+Rear Brakes : Single hydraulic disc
+Front Tyre : 90/80-17M/C (46P)
+Rear Tyre : 120/70-17M/C (58P)
+Dimensions : Length 1975 mm / 77.7 in Width 665 mm / 26.1 in Height 1085 mm / 42.7 in
+Wheelbase : 1290 mm / 50.7 in
+Seat Height : -
+Ground Clearance : 150 mm / 5.9 in
+Weight : 119 kg / 262.3 lbs
+Fuel Capacity : 5.4 Litres / 1.42 US gal

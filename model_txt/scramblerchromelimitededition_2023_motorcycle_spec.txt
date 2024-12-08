@@ -1,0 +1,40 @@
+Model : Scrambler Chrome Limited Edition
+Years : 2023
+Engine : Four stroke, 270° crank angle parallel twin, SOHC, 4 valves per cylinder
+Capacity : 900 cc / 54.9 cu-in
+Bore x Stroke : 84.6 x 80 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.0:1
+Lubrication : Wet sump
+Exhaust : Brushed stainless steel 2-into-2 exhaust system with twin brushed silencers
+Induction : Multipoint sequential electronic fuel injection, Ride by wire
+Emission : EURO 5
+Ignition : Digital
+Starting : Electric
+Max Power : 47.8 kW / 64.1 hp @ 7250 rpm
+Max Torque : 80 Nm / 59 lb-ft @ 3250 rpm
+Clutch : Wet, multi-plate torque assist clutch
+Transmission : 5-Speed
+Final Drive : O ring chain
+Frame : Tubular steel with twin cradles
+Swingarm : Twin-sided steel fabrication
+Front Suspension : 41mm forks with cartridge damping
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Twin shocks with adjustable preload
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : Single 310mm floating disc, Brembo 4 piston fixed axial caliper
+Rear Brakes : Single 255mm disc, Nissin 2-piston floating caliper
+ABS : Standard
+Wheels : Spoked steel rims
+Front Rim : 2.5 x 19
+Rear Rim : 4.25 x 17
+Front Tyre : 100/90-19 Metzeler Tourance
+Rear Tyre : 150/70 R17 Metzeler Tourance
+Rake : 25.6°
+Trail : 109 mm
+Dimensions : Length: 2125 mm / 83.6 in Width: 835 mm / 32.8 in Height: 1180 mm / 46.4 in (without mirrors)
+Wheelbase : 1445 mm / 56.8 in
+Seat Height : 790 mm / 31.1 in
+Wet Weight : 223 kg / 491.6 lbs
+Fuel Capacity : 12 Litres / 3.2 US gal
+Instruments : Analogue speedometer with LCD multi-functional display

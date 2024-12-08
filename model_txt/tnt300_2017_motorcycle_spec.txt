@@ -1,0 +1,40 @@
+Model : TNT 300
+Years : 2017
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valves per cylinder
+Capacity : 300 cc / 18.3 cu in
+Bore x Stroke : 65 x 45.2 mm
+Cooling System : Liquid cooled
+Compression Ratio : 12:1
+Lubrication : Pressure splach
+Exhaust : Two catalytic converters and two oxygen sensors
+Emissions : Euro 3
+Induction : Electronic fuel injection
+Spark Plug : CR8EIA-9
+Ignition : TLI
+Starting : Electric
+Max Power : 27.7 kW / 37.6 hp @ 10000 rpm
+Max Torque : 27.4 Nm / 2.8 kgf-m / 20.21 ft-lb @ 9000 rpm
+Clutch : Wet, multiplate
+Transmission : 6 Speed
+Final Drive : Chain
+Final Drive Ratio : 2.645:1
+Frame : Steel trestle
+Front Suspension : 41 mm Inverted fork
+Front Wheel Travel : 135 mm / 5.3 in
+Rear Suspension : Swing arm with lateral shock absorber with spring preload adjustment
+Front Brakes : Double floating discs &#248;260 mm with 4 pistons per caliper
+Rear Brakes : Single disc, &#248;240 mm
+Front Wheel : Aluminium alloy rim, E 17"xMT3.5 DOT-D
+Rear Wheel : Aluminium alloy rim, E 17"xMT4.5 DOT-D
+Front Tyre : 110/70-17
+Rear Tyre : 140/70-17
+Dimensions : Length: 2125 mm / 83.7 in Width: 800 mm / 31.5 in (excl. mirrors) Height: 1130 mm / 44.5 in (excl. mirrors)
+Wheelbase : 1405 mm / 55.3 in
+Ground Clearance : 140 mm / 5.5 in
+Seat Height : 795 mm / 31.3 in
+Dry Weight : 183 kg / 404 lbs
+Wet Weight : 196 kg / 432 lbs
+GVWR : 356 kg / 785 lbs
+Fuel Capacity : 16 L / 4.2 US gal / 3.5 Imp gal
+Fuel Reserve : 3.0 L / 0.8 US gal / 0.7 Imp gal
+Top Seed : 158 km/h / 98 mph

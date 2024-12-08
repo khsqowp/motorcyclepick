@@ -1,0 +1,31 @@
+Model : YZF 1000 R1M
+Years : 2017
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder.
+Capacity : 998 cc / 60.9 cu-in
+Bore x Stroke : 79.0 x 50.9 mm
+Compression Ratio : 13.0:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Engine Management : YCC-T, YCC-I, PWR, TCS, LCS, LIF, SCS, QSS, CCU &amp; SCU
+Induction : Fuel Injection with YCC-T and YCC-I
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : 147.1 kW / 200.0 hp @ 13500 rpm
+Max Torque : 112.4 Nm / 11.5 kg-m @ 11500 rpm
+Clutch : Wet, Multiple Disc
+Transmission : 6-speed w/multiplate slipper clutch
+Final Drive : "O" ring chain
+Front Suspension : 43mm KYB&#174; inverted fork; fully adjustable
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : KYB&#174; Single shock w/piggyback reservoir, 4-way adjustable
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2x 320mm discs 4 piston calipers, UBS ABS
+Rear Brakes : Single 220mm disc 1 piston caliper, UBS ABS
+Front Tyre : 120/70 ZR17
+Rear Tyre : 190/55 ZR17
+Dimensions : Length 2054.8 mm / 80.9 in Width 690 mm / 27.2 in Height 1150 mm / 45.3 in
+Wheelbase : 1419 mm / 55.9 in
+Ground Clearance : 135mm / 5.3 in
+Seat Height : 830 mm / 32.7 in
+Wet Weight : 199 kg / 439 lbs
+Fuel Capacity : 17 Liters / 4.5 US gal

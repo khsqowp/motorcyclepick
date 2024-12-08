@@ -1,0 +1,32 @@
+Model : TE 300i Rockstar Edition
+Years : 2021
+Engine : Two stroke, single cylinder with reed intake and exhaust control
+Capacity : 293.2 cc / 17.8 cu-in
+Bore x Stroke : 72 x 72 mm
+Cooling System : Liquid cooled
+Compression Ratio : NA
+Exhaust : TVC power valve
+Lubrication : Electronically controlled oil injection
+Induction : Dell&#8217; Orto EFI w/ 39mm throttle body
+Ignition : Contactless, controlled, fully electronic ignition system with digital ignition timing adjustment
+Starting : Electric
+Max Power : NA
+Clutch : Wet, DDS multi-disc clutch, Magura hydraulics
+Transmission : 6 Speed
+Final Drive : ChainX-Ring 5/8 x 1/4 in
+Frame : Central double-cradle chromoly steel, Carbon-fiber reinforced polyamide Subframe
+Front Suspension : 48mm Fully adjustable WP Xplor inverted fork
+Front Wheel Travel : 300 mm / 11.8 in
+Rear Suspension : Linkage-assisted fully adjustable WP Xact shock
+Rear Wheel Travel : 330 mm / 13.0 in
+Front Brakes : Single 260mm disc
+Rear Brakes : Single 220mm disc
+Front Tyre : 80/100-21
+Rear Tyre : 110/100-18
+Rake : 26.5&#176;
+Dimensions : Length 2260 mm / 89.0 in
+Wheelbase : 1482&#177;10 mm / 58.5 in
+Seat Height : 950 mm / 37.4 in
+Ground Clearance : 355 mm / 14.0 in
+Dry Weight : 111.5 kg / 246 lbs
+Fuel Capacity : 8.310 Litres / 2.2 US gal

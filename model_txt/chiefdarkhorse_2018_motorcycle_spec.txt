@@ -1,0 +1,36 @@
+Model : Chief Dark Horse
+Years : 2018-19
+Engine : Four stroke, Thunder Stroke&#8482; 111 v-Twin
+Capacity : 1811.cc / 105 cu-in
+Bore x Stroke : 101 x 113 mm
+Compression Ratio : 9.5:1
+Induction : Electronic Fuel Injection System Closed loop fuel injection / 54mm bore
+Exhaust : Split dual exhaust w/ cross-over
+Battery : 12 volts / 18 amp/hour, 310 CCA
+Starting : Electric
+Max Toque : 139 Nm / 14.2 kgf-m @ 2800 rpm
+Clutch : Wet, Multi-Plate
+Transmission : 6 Speed
+Final Drive : Belt
+Gear Ratio : 1st 9.403 : 1 2nd 6.411 : 1 3rd 4.763 : 1 4th 3.796 : 1 5th 3.243 : 1 6th 2.789 : 1
+Final Drive Ratio : 2.2 : 1
+Frame : Cast Aluminum Frame with Integrated Air-Box
+Front Suspension : 46mm cartridge forks with dual rate springs
+Front Wheel Travel : 119 mm / 4.7 in
+Rear Suspension : Single shock,
+Rear Wheel Travel : 104 mm / 3.7 in
+Front Brakes : 2x 300 mm Floating Rotor 4 piston calipers
+Rear Brakes : Single 300 mm Floating Rotor 2 piston calipers
+Front Tyre : Dunlop&#174; Elite 3 130/90B16 73H
+Rear Tyre : Dunlop&#174; American Elite 180/65B16 81H
+Front Wheel : 16" x 3.5 in
+Rear Wheel : 16" x 5 in
+Rake : 25&#176;
+Trail : 150 mm / 5.9 in
+Ground Clearance : 139.7 mm / 5.5 in
+Dimensions : Length 2630 mm / 103.5 in Width (INT) 1000 mm / 39.3 in Height (INT) 1176 mm / 46.3 in
+Wheelbase : 1730 mm / 68.1 in
+Seat Height : 660 mm / 25.9 in
+Dry Weighty : 332 kg / 732 lbs
+Wet Weight : 377 kg / 831 lbs
+Fuel Capacity : 20.8 Litres / US 5.5 Gal

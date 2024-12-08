@@ -1,0 +1,39 @@
+Model : F3 800RC Reparto Corse
+Years : 2019
+Engine : Four stroke, transverse three cylinder. DOHC, 4 Valve per cylinder, Titanium intake and exhaust valves
+Capacity : 798 cc / 48.6 cu-in
+Bore x Stroke : 79.0 x 54.3 mm
+Compression Ratio : 13.3:1
+Cooling System : Liquid Cooled
+Emission : Euro 4
+Induction : Integrated ignition &#8211; injection system MVICS (Motor &amp; Vehicle Integrated Control System) with six injectors Engine control unit Eldor EM2.0, throttle body full drive by wire Mikuni, pencil-coil with ion-sensing technology, control of detonation and misfire Torque control with four maps, Traction Control with eight levels of intervention Electronic quick shift MV EAS (Electronically Assisted Shift)
+Ignition : Digital CDI
+Alternator : 350 W at 5000 r.p.m.
+Starting : Electric
+Max Power : 148 hp / 108.0 kW) @ 13000 rpm
+Max Torque : 88.0 Nm / 64.9 lb-ft @ 10600 rpm
+Clutch : Wet, multi plate with slipper clutch
+Transmission : 6 Speed
+Final Drive : Chain
+Gear Ratio : 1st: 13/37 2nd: 16/34 3rd: 18/32 4 th 19/30 5th 21/30 6 th 22/29
+Final Drive Ratio : 17/43
+Primary Drive : 19/36
+Frame : ALS Steel tubular trellis, Rear swing arm pivot plates: material Aluminium alloy
+Front Suspension : 43 mm Marzocchi &#8220;UPSIDE DOWN&#8221; telescopic hydraulic fork with rebound-compression damping and spring preload external and separate adjustment
+Front Wheel Travel : 125 mm / 4.92 in
+Rear Suspension : Progressive Sachs, single shock absorber with rebound and compression damping and spring preload adjustment
+Rear Wheel Travel : 123 mm / 4.84 in
+Front Brakes : 2x 320mm Double floating discs, 4 pistons calipers
+Rear Brakes : Single 220mm disc, single piston calipers
+Rim Front : Aluminium alloy 3.50 &#8221; x 17 &#8221;
+Rim Rear : Aluminium alloy 5.50 &#8221; x 17 &#8221;
+Front Tyre : 120/70 - ZR 17 M/C (58 W)
+Rear Tyre : 180/55 - ZR 17 M/C (73 W)
+Rake : 23.6&#176;
+Trail : 99 mm / 3.89 in
+Dimensions : Length 2060 mm./ 81.01 in Width 725 mm / 28.54 in
+Wheelbase : 1380 mm / 54.33 in
+Seat Height : 805 mm / 31.6 in
+Ground Clearance : 125 mm / 4.92 in
+Dry Weight : 173 kg / 381.4 lbs
+Fuel Capacity : 16 Litres / 4.2 US gal

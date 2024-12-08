@@ -1,0 +1,29 @@
+Model : Boulevard C90 B.O.S.S
+Years : 2019
+Engine : Four stroke, 54&#176; V-twin, SOHC, 3 valves per cylinder
+Capacity : 1462 cc / 89.2 cu-in
+Bore x Stroke : 96 x 101 mm
+Cooling System : Liquid cooled
+Compression Ratio : 9.5:1
+Lubrication : Wet sump
+Induction : Fuel injected
+Ignition : Digital transistorized
+Starting : Electric
+Max Power : 49.2 kW / 66 hp @ 4800 rpm
+Max Torque : 115 Nm /11.7 kgf-m / 84.8 ft-lbs @ 2800 rpm
+Frame : Double cradle steel frame
+Transmission : 5 Speed
+Final Drive : Shaft
+Front Suspension : Telescopic, coil springs, oil damped
+Rear Suspension : Link type, coil spring, oil damped
+Front Brakes : Dual 300 mm discs, 4 piston caliper
+Rear Brakes : Single 180 mm disc, 2 piston caliper
+Front Tyre : 130/80-17M/C 65H, tubeless
+Rear Tyre : 200/60-16M/C 79H, tubeless
+Rake : 32&#176;
+Dimensions : Length: 2560 mm / 100.8 in Width: 990 mm / 39.0 in
+Wheelbase : 1675 mm / 65.9 in
+Ground Clearance : 140 mm / 5.5 in
+Seat Height : 720 mm / 28.3 in
+Wet Weight : 344 kg / 758 lbs.
+Fuel Capacity : 18 Litres / 4.8 US gal

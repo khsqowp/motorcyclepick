@@ -1,0 +1,33 @@
+Model : DR-Z 400S
+Years : 2018-19
+Engine : Four stroke, single cylinder, DOHC, 4 valve
+Capacity : 398 cc / 24.3 cu-in
+Bore x Stroke : 90 x 62.6 mm.
+Cooling System : Liquid cooled
+Compression Ratio : 11.3:1
+Induction : Mikuni BSR36 carburetor
+Lubrication : Dry sump
+Ignition : Digital CDI
+Starting : Electric
+Max Power : 29.2 kW / 39.7 hp @ 8500 rpm
+Max Torque : 39 Nm / 3.98 kg-m / 28.8 lb-ft @ 6600 rpm
+Clutch : Wet, multiple discs, cable operated
+Transmission : 5 Speed
+Final Drive : Chain, #520
+Front Suspension : Telescopic, 49 mm, oil-damped, 11-way compression damping, adjustable spring preload
+Front Wheel Travel : 290 mm / 11.4 in
+Rear Suspension : Link-type, fully adjustable spring preload, 26-way compression damping
+Rear Wheel Travel : 295 mm / 11.6 in
+Front Brakes : Single 250mm disc, 2 piston caliper
+Rear Brakes : Single 220mm disc, 1 piston caliper
+Front Tyre : 80/100-21
+Rear Tyre : 120/90-18
+Dimensions : Length 2310 mm / 90.9 in Width 875 mm / 34.4 in. Height 1230 mm / 48.4 in
+Wheelbase : 1485 mm / 58.5 in
+Seat Height : 935 mm / 36.8 in
+Ground Clearance : 300 mm / 11.8 in
+Dry Weight : 132 kg / 291 lbs
+Fuel Capacity : 10 Litres / 2.6 US gal / 2.2 Imp gal
+Consumption Average : 4.5 L/100 km / 21.9 km/l / 51.1 US mpg / 61.9 Imp mpg
+Standing &#188; Mile : 13.9 sec
+Top Speed : 152 km/h / 94 mph

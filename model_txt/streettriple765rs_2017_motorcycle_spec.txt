@@ -1,0 +1,35 @@
+Model : Street Triple 765RS
+Years : 2017
+Engine : Four stroke, in-line 3-cylinder, DOHC, 4 valve per cylinder
+Capacity : 765 cc / 46.6 cu-in
+Bore x Stroke : 78 x 53.4 mm
+Cooling System : Liquid-cooled
+Compression Ratio : 12.65:1
+Lubrication : Wet sump
+Induction : Multipoint sequential electronic fuel injection with SAI. Electronic throttle control
+Exhaust : Stainless steel 3 into 1 exhaust system low single sided stainless steel silencer
+Ignition : Digital - inductive type
+Starting : Electric
+Max Power : 121 hp / 90 kW @ 11,700rpm
+Max Torque : 56.8 lb-ft / 77 Nm @ 10,800 rpm
+Clutch : Wet, multi-plate, slip and assist clutch
+Transmission : 6 Speed, close ratio
+Final Drive : O ring chain
+Frame : Front &#8211; Aluminium beam twin spar. Rear &#8211; 2 piece high pressure die cast
+Front Suspension : Showa 41 mm upside down big piston forks (BPF). Adjustable compression damping, rebound damping and preload.
+Front Wheel Travel : 115 mm / 4.5 in
+Rear Suspension : &#214;hlins STX40 piggyback reservoir monoshock. Adjustable spring preload (lock-rings), compression damping and rebound damping
+Rear Wheel Travel : 131 mm / 5.1 in
+Front Brakes : 2 x 310 mm floating discs, Brembo M50 4-piston radial monobloc calipers
+Rear Brakes : Single 220 mm fixed disc, Brembo single piston sliding calliper
+Front Wheels : 3.5 x 17 in cast
+Rear Wheels : 5.5 x 17 in cast
+Front Tyre : 120/70 ZR17 Pirelli Diablo Supercorsa SP
+Rear Tyre : 180/55 ZR17 Pirelli Diablo Supercorsa SP
+Rake : 23.9&#186;
+Trail : 100 mm / 3.9 in
+Dimensions : Length 2065 mm / 81.2 in Height 1085 mm / 42.7 in (without mirrors)
+Wheelbase : 1410 mm / 55.5 in
+Seat Height : 825 mm / 32.4 in
+Dry Weight : 165.5 kg / 365 lbs
+Fuel Capacity : 17.4 Litres / 4.6 US gal / 3.8 Imp gal

@@ -1,0 +1,36 @@
+Model : Speed Triple S
+Years : 2020
+Engine : Four stroke, transverse three cylinder, DOHC, 4 valves per cylinder
+Capacity : 1050 cc / 64.1 cub in
+Bore x Stroke : 79 x 71.4 mm
+Cooling System : Liquid-cooled
+Compression Ratio : 12.92:1
+Induction : Multipoint sequential electronic fuel injection with SAI
+Oil Capacity : 3.8 L / 1.0 US gal / 0.8 Imp gal
+Exhaust : Stainless Steel 3 into 1 into 2 high level stainless steel silencers
+Ignition : Electronic
+Starting : Electric
+Max Power : 148 hp / 110 kW @ 10500 rpm
+Max Torque : 117 Nm / 86.2 lb-ft @ 7150 rpm
+Clutch : Wet, multi-plate slip assist clutch
+Transmission : 6 Speed
+Final Drive : X ring chain
+Frame : Aluminium beam twin-spar, single sided swingarm, aluminium alloy with eccentric chain adjuster
+Front Suspension : Showa 43 mm upside down forks with adjustable preload, rebound and compression damping
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Showa monoshock with adjustable preload, rebound and compression damping
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2 x 320mm floating discs, Brembo 4 piston monobloc radial calipers, switchable ABS
+Rear Brakes : Single 255mm disc, Nissin 2 piston sliding caliper, switchable ABS
+Front Wheel : Cast aluminium alloy multi spoke 17 x 3.5 in
+Rear Wheel : Cast aluminium alloy multi spoke 17 x 6.0 in
+Front Tyre : 120/70 ZR17
+Rear Tyre : 190/55 ZR17
+Rake : 22.9&#176;
+Trail : 91.3 mm / 3.6 in
+Dimensions : Width 775 mm / 30.5 in Height 1070 mm / 42.1 in
+Wheelbase : 1445 mm / 56.8 in
+Seat Height : 825 mm / 32.4 in
+Dry Weight : 192 kg / 423.2 lbs
+Fuel Capacity : 15.5 Litres / 4.1 US gal / 3.4 Imp gal
+Instruments : Full-colour 5" TFT instruments

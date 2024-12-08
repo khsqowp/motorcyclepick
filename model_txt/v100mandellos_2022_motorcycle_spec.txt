@@ -1,0 +1,37 @@
+Model : V100 Mandello S
+Years : 2022
+Engine : Four stroke, transversal 90° V-twin, DOHC, timing with finger followers and four valves per cylinder
+Capacity : 1042 cc / 63.5 cu-in
+Bore x Stroke : 96 x 72 mm
+Cooling System : Liquid-cooled
+Compression Ratio : 12.6:1
+Emission : EURO5
+Induction : Electronic injection, 52 mm double throttle body, Ride-by-Wire
+Engine Management : 3 engine mappings (MGCM), 2 levels of engine brake control (MGFM), 4 levels of traction control (MGTC), cruise control, 4 Riding Modes (Tour, Rain, Road, Sport), quick shift
+Starting : Electric
+Max Power : 115 hp / 84.5 kW @ 8700 rpm
+Max Torque : 104.3 Nm / 77 lb-ft @ 6750 rpm
+Clutch : Hydraulic multi-plate wet clutch with anti-juddering system
+Transmission : 6-Speed with electronic quick shift system
+Final Drive : Shaft: Drive ratio: 12/38 (3.166)
+Primary Drive : Straight cut gears and integrated flexible coupling, gear ratio: 31/48 (1.548)
+Frame : High strength steel tubular frame
+Front Suspension : Fully adjustable 43 mm USD Öhlins Smart EC2.0 fork, with semi-active compression and rebound damping.
+Front Wheel Travel : 130 mm / 5.1
+Rear Suspension : Fully adjustable Öhlins TTX Smart EC2.0 monoshock with semi-active compression and rebound damping, remote preload adjustment
+Rear Wheel Travel : 130 mm / 5.1
+Front Brakes : 2 x 320 mm floating discs, 4-piston Brembo monobloc radial calipers Radial front master cylinder
+Rear Brakes : Single 280 mm disc, 2-piston Brembo caliper
+ABS : Cornering ABS
+Wheels : Aluminium alloy
+Front Rim : 3.50 x 17
+Rear Rim : 6.00 x 17
+Front Tyre : 120/70  R17
+Rear Tyre : 190/55  R17
+Rake : 26.4°
+Trail : 125.1 mm / 4.9 i n
+Dimensions : Length: 2126 mm / 83.7 in Width: 835.6 mm / 32.9 in
+Wheelbase : 1476 mm / 58.1 in
+Seat Height : 815 mm / 32 in
+Wet Weight : 233 kg / 513.6 lbs
+Fuel Capacity : 17 Litres / 4.5 US gal

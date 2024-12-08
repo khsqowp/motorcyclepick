@@ -1,0 +1,33 @@
+Model : Bonneville Bobber TFC
+Years : 2020
+Production : 750 Units
+Engine : Four stoke, parallel twin, 270o crank, SOHC, 4 valve per cylinder
+Capacity : 1198 cc / 73.1 cu in
+Bore x Stroke : 97.6 x 80 mm
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Exhaust : Brushed stainless steel 2-into-2 w/ Arrow titanium mufflers and carbon fiber endcaps
+Induction : Multipoint sequential electronic fuel injection
+Ignition : Digital
+Starting : Electric
+Max Power : 86 hp / 64 kW @ 6250 rpm
+Max Torque : 100 Nm / 81 lb-ft @ 4500 rpm
+Clutch : Wet, multi-plate
+Transmission : 6 Speed
+Final Drive : Chain, X-ring
+Frame : Dual tubular steel cradle
+Front Suspension : 43mm &#214;hlins NIX30 inverted fork, fully adjustable
+Rear Suspension : Linkage-assisted, rebound-damping and spring-preload adjustable &#214;hlins RSU shock
+Front Brakes : 2x 310 mm Discs, Brembo M50 4-piston monoblock calipers and Brembo MCS radial master cylinder
+Rear Brakes : Single 255 mm disc,, Nissin single-piston floating caliper
+ABS : Standard
+Front Wheels : 32-spoke, 19 x 2.5
+Rear Wheels : 32-spoke, 16 x 3.5
+Front Tyre : 100/90 x 19
+Rear Tyre : 150/70 x 16
+Rake : TBD
+Trail : TBD
+Wheelbase : TBD
+Seat Height Solo : TBD
+Wet Weight : TBD
+Fuel Capacity : 9.1 Litres / 2.4 US gal

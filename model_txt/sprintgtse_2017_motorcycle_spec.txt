@@ -1,0 +1,36 @@
+Model : Sprint GT SE
+Years : 2017-18
+Engine : Four stroke, transverse three cylinder, DOHC, 4 valves per cylinder.
+Capacity : 1050 cc / 64.1 cu in
+Bore x Stroke : 79 x 71.4mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.0:1
+Lubrication : Wet sump
+Engine Oil : Synthetic, 10W/40 Synthetic
+Induction : Multipoint sequential electronic fuel injection with SAI
+Ignition : Digital
+Spark Plug : NGK, CR9EK
+Starting : Electric
+Max Power : 96 kW / 128 hp @ 9200 rpm
+Max Torque : 108 Nm / 11.0 kgf-m / 80 ft-lb @ 6300 rpm
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Aluminium beam perimeter, swingarm single-sided, aluminium alloy with eccentric chain adjuster
+Front Suspension : Showa 43mm cartridge forks with dual rate springs and adjustable preload
+Front Wheel Travel : 127 mm / 5.0 in
+Rear Suspension : Showa monoshock with adjustable preload and rebound damping
+Rear Wheel Travel : 152 mm / 6.0 in
+Front Brakes : 2 x 320 mm Floating discs, 4 piston calipers, ABS
+Rear Brakes : Single 255 mm disc, 2 piston caliper, ABS
+Front Wheel : Cast aluminium alloy 5-spoke 17 x 3.50 in
+Rear Wheels : Cast aluminium alloy 5-spoke 17 x 5.50 in
+Front Tyre : 120/70-ZR17
+Rear Tyre : 180/55-ZR17
+Rake : 23.5&#186;
+Trail : 84 mm / 3.3 in
+Dimensions : Length 2260 mm / 88.9 in Width (handlebars) 760 mm / 29.9 in Height without mirrors 1210 mm / 47.6 in
+Wheelbase : 1565 mm / 61.6 in
+Seat Height : 830 mm / 32.6 in
+Dry Weight : 239 kg / 527 lbs
+Wet Weight : 265 kg / 584.2 lbs
+Fuel Capacity : 20 Litres / 5.3 US gal / 4.4 Imp gal

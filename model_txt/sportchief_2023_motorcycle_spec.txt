@@ -1,0 +1,40 @@
+Model : Sport Chief
+Years : 2023
+Engine : Thunderstroke 116
+Capacity : 1890 cc / 116 cu-in
+Bore x Stroke : 103.2 x 113 mm
+Cooling System : Air-cooled
+Compression Ratio : 11.0:1
+Exhaust : Dual Exhaust with Crossover
+Induction : Electronic Fuel Injection System Closed loop fuel injection / 54 mm bore
+Starting : Electric
+Max Toque : 162 Nm / 120 lb-ft @ 2900 rpm
+Clutch : Wet, Multi-Plate
+Transmission : 6 Speed
+Final Drive : Belt
+Gear Ratio : 1st 9.403 : 1 2nd 6.411 : 1 3rd 4.763 : 1 4th 3.796 : 1 5th 3.243 : 1 6th 2.789 : 1
+Final Drive Ratio : 2.2 : 1
+Frame : Steel-tube frame
+Lean Angle : 29.5°
+Front Suspension : 43mm KYB® Inverted Telescopic Fork
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Dual Fox® Piggyback Shocks
+Rear Wheel Travel : 100 mm / 3.9 in
+Front Brakes : 2x 320 mm Brembo semi-floating discs, 4 piston caliper
+Rear Brakes : Single 300 mm semi-floating disc, 2 piston caliper
+ABS : Standard
+Wheels : Sport Cast Black
+Front Wheel : 19 x 3.5
+Rear Wheel : 16 x 5.0
+Front Tyre : 130/60B19 61H
+Rear Tyre : 180/65 B16 81H
+Rake : 28°
+Trail : 111 mm / 4.4 in
+Dimensions : Length 2301 mm / 90.6 in Width 842 mm / 33.1 in Height 1270 mm / 50.0 in
+Wheelbase : 1640 mm / 64.6 in
+Seat Height : 686 mm / 27.0 in
+Ground Clearance : 149 mm / 5.9 in
+Dry Weight : 302 kg / 665 lbs
+Wet Weight : 311 kg / 685 lbs
+Fuel Capacity : 15.1 Litres / 4.0 US gal
+Standard Equipment : ABS, Ride Modes, Keyless Ignition, USB charge port, 12V Charge Port, Rear Cylinder Deactivation

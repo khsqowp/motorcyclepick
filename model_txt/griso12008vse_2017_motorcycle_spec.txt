@@ -1,0 +1,40 @@
+Model : Griso 1200 8V S.E.
+Years : 2017
+Engine : Four stroke, V twin, longitudinally mounted, OHV, 4 valve per cylinder.
+Capacity : 1151 cc / 70.2 cu-in
+Bore x Stroke : 95 x 81.2 mm
+Cooling System : Air cooled
+Compression Ratio : 11.0:1
+Lubrication : Wet sump
+Exhaust : Stainless steel two-into-one 3-way catalysed with Lambda probe.
+Induction : Multipoint sequential electronic injection, Magneti Marelli IAW 5A phased, alfa-n system; 2 x &#216;50 mm throttle bodies with Weber IWP 189 injectors, Lambda probe.
+Ignition : Inductive discharge, digitally controlled, electronic twin spark ignition
+Spark Plugs : NGK PMR8B (Long Life)
+Starting : Electric
+Max Power : 80.8 kW / 108.3 hp @ 7500 rpm
+Max Torque : 108 Nm / 80 lb-ft @ 6400 rpm
+Clutch : Single plate with integrated flexible couplings
+Transmission : 5 Speed
+Final Drive : Shaft
+Gear Ratio : 1st 17/38 = 1 : 2.235 2nd 20/34 = 1 : 1.700 3rd 23/31 = 1 : 1.348 4th 26/29 = 1 : 1.115 5th 31/30 = 1 : 0.968 6th 29/25 = 1 : 0.862
+Frame : High tensile steel tubular twin cradle
+Front Suspension : Upside down &#216; 43 mm fully adjustable forks (spring preload and hydraulic for rebound and compression) with mounting for radial calipers.
+Front Wheel Travel : 120 mm / 4.7
+Rear Suspension : Progressive single swingarm, fully adjustable monoshock with separate gas reservoir spring preload and hydraulic for rebound and compression.
+Rear Wheel Travel : 110 mm / 4.3 in
+Front Brakes : 2x 320 mm discs 4 piston calipers
+Rear Brakes : Single 282mm disc 2 piston caliper
+Wheels : Tubeless spoke wheels with aluminium Ber rim and Alpina spokes.
+Front wheel : 3.50&#8221; x 17&#8221;
+Rear whee : l 5.50&#8221; x 17&#8221;
+Front Tyre : 120/70 ZR17
+Rear Tyre : 180/55 ZR17
+Steering angle : 34&#176;
+Rake : 26.3&#176;
+Trail : 108 mm / 4.2 in
+Dimensions : Length 2260 mm / 89.0 in Width 830 mm / 32.6 in Height 1070 mm / 42.1 in
+Wheelbase : 1554 mm / 61.0 in
+Seat Height : 800 mm / 31.4 in
+Ground Clearance : 185 mm / 7.28 in
+Dry Weight : 222 kg / 489 lbs
+Fuel Capacity : 16.7 Litres / 4.5 gal

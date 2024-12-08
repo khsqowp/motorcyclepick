@@ -1,0 +1,37 @@
+Model : Speed Triple 1200RS
+Years : 2021
+Engine : Four stroke, transverse three cylinder, DOHC, 4 valves per cylinder
+Capacity : 1160 cc / 70.7 cu-in
+Bore x Stroke : 90 x 60.8 mm
+Cooling System : Liquid-cooled
+Compression Ratio : 13.2:1
+Induction : Multipoint sequential electronic fuel injection with electronic throttle control
+Emission : EURO5
+Exhaust : Stainless steel 3 into 1 header system with underslung primary silencer and side mounted secondary silencer
+Ignition : Electronic
+Starting : Electric
+Max Power : 177.5 hp /132.4 kW @ 10750 rpm
+Max Torque : 125 Nm / 92 lb-ft @ 9000 rpm
+Clutch : Wet, multi-plate, slip &amp; assist
+Transmission : 6 Speed
+Final Drive : X-ring chain
+Frame : Aluminium twin spar frame, bolt-on aluminium rear subframe
+Swingarm : Aluminium, single-sided
+Front Suspension : &#214;hlins 43 mm NIX30 upside down forks with adjustable preload, rebound and compression damping
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : &#214;hlins TTX36 twin tube monoshock with preload, rebound and compression damping
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2 x 320mm floating discs, Brembo Stylema monobloc calipers, OC-ABS, radial master cylinder with separate reservoir, span &amp; ratio adjustable
+Rear Brakes : Single 220mm disc, Brembo twin piston caliper, OC-ABS, Rear master cylinder with separate reservoir
+Front Wheel : Cast aluminium, 17 x 3.50 in
+Rear Wheel : Cast aluminium, 17 x 6.00 in
+Front Tyre : 120/70 ZR17 Metzeler Racetec RR K3
+Rear Tyre : 190/55 ZR17 Metzeler Racetec RR K3
+Rake : 23.9&#176;
+Trail : 104.7 mm / 4.1 in
+Dimensions : Length: 2090 mm / 82.3 in Width: 792 mm / 31.2 in - with handlebars Height: 1089 mm / 42.9 in - without mirrors
+Wheelbase : 1445 mm / 56.9 in
+Seat Height : 830 mm / 32.7 in
+Wet Weight : 198 kg / 437 lb
+Fuel Capacity : 15.5 Litres / 4.1 US gal
+Instruments : Full-colour 5 in TFT

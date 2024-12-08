@@ -1,0 +1,28 @@
+Model : CFMoto 650MT
+Years : 2017-
+Engine : Four stroke, Parallel twin cylinder, DOHC, 4 valve per cylinder with 180&#176; crankshaft, chain camshaft drive and single gear-driven counterbalancer
+Capacity : 649 cc / 39.6 cu-in
+Bore x Stroke : 83.0 x 60.0 mm
+Compression Ratio : 11.3:1
+Cooling System : Liquid cooled
+Induction : EFI with 2 x 38mm ITT throttle bodies and single injector per cylinder
+Ignition : ECU
+Starting : Electric
+Max Power : 69.7 hp / 51 kW @ 8500 rpm
+Max Torque : 62 Nm / 45.7 lb-ft @ 7000 rpm
+Clutch : Wet multi-plate
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Tubular steel diamond frame employing engine as fully-stressed member
+Front Suspension : 41mm Telescopic Fork
+Rear Suspension : Extruded steel swingarm with tubular steel bracing, Kyaba cantilever monoshock
+Front Brakes : 2x 300mm discs, 2 piston caliper, Continental ABS System
+Rear Brakes : Single 225mm disc, 1 piston caliper, Continental ABS System
+Front Tyre : 120/70-17
+Rear Tyre : 160/60-17
+Wheelbase : 1415 mm / 55.7 in
+Seat Height : 840 mm / 33.1 in
+Ground Clearance : 170 mm / 6.7 in
+Dry Weight : 185.7 kg / 409.5 lbs
+Wet Weight : 206 kg / 454 lbs
+Fuel Capacity : 18 Litres / 4.7 US gal

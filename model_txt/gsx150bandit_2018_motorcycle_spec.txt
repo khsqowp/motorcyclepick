@@ -1,0 +1,26 @@
+Model : GSX 150 Bandit
+Years : 2018
+Engine : Four stroke, single cylinder, DOHC, 4 valves
+Capacity : 147.3 cc / 8.95 cu in
+Bore x Stroke : 62 x 48.8 mm
+Cooling System : Water cooled
+Induction : Fuel injection
+Starting : Electric
+Battery : 12V, 3Ah, maintenance free
+Max Power : 14.1 kW / 18.9 hp @ 10500 rpm
+Max Torque : 14 Nm / 1.4 kgf-m / 10.3 ft-lb @ 9000 rpm
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Cradle
+Front Suspension : Telescopic fork
+Rear Suspension : Swing Arm, mono shock
+Front Brakes : Single disc
+Rear Brakes : Single disc
+Front Tyre : 90/80-17 Tubeless
+Rear Tyre : 130/70-17 Tubeless
+Dimensions : Length 2000 mm / 78.7 in Width 745 mm / 29.3 in Height 1035 mm / 40.7 in
+Wheelbase : 1300 mm / 51.2 in
+Seat Height : 785 mm / 30.9 in
+Ground Clearance : 150 mm / 5.9 in
+Dry Weight : 135 kg / 297.6 lbs
+Fuel Capacity : 11 Litres / 2.9 US gal / 2.6 Imp gal

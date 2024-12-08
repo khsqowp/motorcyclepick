@@ -1,0 +1,40 @@
+Model : Dragster 800 Rosso
+Years : 2020
+Engine : Four stroke, transverse three cylinder. DOHC, 4 Valve per cylinder
+Capacity : 798 cc / 48.69 cu-in
+Bore x Stroke : 79 x 54.3 mm
+Cooling System : Cooling with separeted liquid and oil radiators
+Compression Ratio : 12.3:1
+Engine Management System : Integrated ignition &#8211; injection system MVICS (Motor &amp; Vehicle Integrated Control System) with three injectors. Engine control unit Eldor EM2.0, throttle body full drive by wire Mikuni, pencil-coil. Torque control with four maps, Traction Control with eight levels of intervention.
+Environmental Standard : Euro 4
+Ignition : Multipoint electronic injection
+Starting : Electric
+Max Power : 81 kW / 110 hp @ 11500 rpm
+Max Torque : 83 Nm / 61.2 lb-ft @ 7600 ron
+Electronic Quick-shift : MV EAS 2.0 (Electronically Assisted Shift up &amp; down)
+Clutch : Hydraulically actuated Wet-clutch, multi-disc with back torque limiting device
+Transmission : 6 Speed constant mesh
+Final Drive : Chain
+Gear Ratio : 1st: 13/37 2nd: 16/35 3rd: 18/32 4th: 20/30 5th: 22/29 6th: 21/25
+Primary Drive : 19/36
+Final Drive Ratio : 16/41
+Frame : ALS Steel tubular trellis, aluminium alloy rear swing arm pivot plates
+Front Suspension : 43mm Type Marzocchi USD telescopic hydraulic fork in DLC treated aluminium, with anodized fork legs and having rebound-compression damping and spring preload external and separate adjustment
+Front Wheel Travel : 125 mm / 4.92 in
+Rear Suspension : Progressive Sachs, single shock absorber with rebound and compression damping and spring preload adjustment, Aluminium alloy single sided swing arm
+Rear Wheel Travel : 125 mm / 4.92 in
+Front Brakes : 2x 320mm floating discs, 4 piston Brembo calipers
+Rear Brakes : Single 220mm disc 2 piston Brembo caliper
+ABS : Bosh 9 Plus with rear wheel lift-up mitigation (RLM)
+Rim Front : Material/size With aluminium alloy spokes 3.50 x 17 in
+Rim Rear : Material/size With aluminium alloy spokes 6.00 x 17 in
+Front Tyre : 120/70- ZR 17 M/C (58 W)
+Rear Tyre : 200/50- ZR 17 M/C (75 W)
+Trail : 103.5 mm / 4.07 in
+Dimensions : Length: 2035 mm / 80.1 in Width: 935 mm / 36.8 in
+Wheelbase : 1400 mm / 55.1 in
+Seat Height : 845 mm / 33.3 in
+Ground Clarence : 135 mm / 5.3 in
+Dry Weight : 168 Kg / 370.38 lbs
+Fuel Capacity : 16.5 Litres / US 4.36 gal
+Reserve : 5 Litres / 1.3 US gal

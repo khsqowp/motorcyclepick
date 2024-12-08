@@ -1,0 +1,39 @@
+Model : Speed Triple 1200RR Bond Edition
+Years : 2023
+Engine : Four stroke, transverse three cylinder, DOHC, 4 valves per cylinder
+Capacity : 1160 cc / 70.7 cu-in
+Bore x Stroke : 90 x 60.8 mm
+Cooling System : Liquid-cooled
+Compression Ratio : 13.2:1
+Induction : Multipoint sequential electronic fuel injection with electronic throttle control
+Emission : EURO5
+Exhaust : Stainless steel 3 into 1 header system with underslung primary silencer and side mounted secondary silencer
+Ignition : Electronic
+Starting : Electric
+Max Power : 177.6 hp / 132.4 kW @ 10750 rpm
+Max Torque : 125 Nm / 92 lb-ft @ 9000 rpm
+Clutch : Wet, multi-plate, slip &amp; assist
+Transmission : 6 Speed
+Final Drive : X-ring chain
+Frame : Aluminium twin spar frame, bolt-on aluminium rear subframe
+Swingarm : Aluminium, single-sided
+Front Suspension : Öhlins 43mm fully adjustable USD forks. Öhlins S-EC 2.0 OBTi system electronic compression / rebound damping
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Öhlins monoshock RSU with linkage. Öhlins S-EC 2.0 OBTi system electronic compression / rebound damping
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2 x 320mm floating discs. Brembo Stylema monobloc calipers, OC-ABS, radial master cylinder with separate reservoir, span &amp; ratio adjustable
+Rear Brakes : Single 220mm disc. Brembo twin piston caliper, OC-ABS. Rear master cylinder with separate reservoir
+ABS : Optimised cornering ABS and switchable optimised cornering traction control (with IMU)
+Front Wheel : Cast aluminium, 17 x 3.50 in
+Rear Wheel : Cast aluminium, 17 x 6.00 in
+Front Tyre : 120/70 ZR 17 (58W) Pirelli Diablo Supercorsa SP V3
+Rear Tyre : 190/55 ZR 17 (75W) Pirelli Diablo Supercorsa SP V3
+Rake : 23.9°
+Trail : 104.7 mm / 4.1 in
+Dimensions : Length: 2085 mm / 82 in Width: 758 mm / 30 in Height: 1120 mm / 44 in
+Wheelbase : 1439 mm / 56.5 in
+Seat Height : 830 mm / 32.5 in
+Wet Weight : 199 kg / 439 lbs
+Fuel Capacity : 15.5 Litres / 4.1 US gal
+Riding Modes : Five riding modes  Road, Rain, Sport, Track and Rider-configurable
+Instruments : Full-colour 5" TFT instruments

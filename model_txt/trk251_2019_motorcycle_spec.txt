@@ -1,0 +1,34 @@
+Model : TRK 251
+Years : 2019-
+Engine : Four stroke, singlecylinder DOHC, 4 valve
+Capacity : 249.2 cc / 15.2 cu in
+Bore x Stroke : 72.0 x 61.2 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2;1
+Lubrication : Wet sump
+Induction : Electronic fuel injection
+Ignition : Delphi MT05
+Starting : Electric
+Max Power : 18 kW / 24.5 hp @ 9000 rpm
+Max Torque : 21 Nm / 2.14 kgf-m / 15.5 lbs-ft @ 7000 rpm
+Clutch : Wet
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Trestle in steel tubes
+Front Suspension : 41 mm upside-down forks
+Rear Suspension : Swingarm, monoshock
+Front Brakes : Single 280 mm disc, 4-piston caliper
+Rear Brakes : Single 240 mm disc, 2-piston caliper
+Wheels : Aluminum alloy
+Front Rim : 3.5 x 17
+Rear Rim : 4.0 x 17
+Front Tyre : 110/70-R17
+Rear Tyre : 150/60-ZR17
+Dimensions : Length 2130 mm / 83.9 in Height 1120 mm / 44.1 in
+Wheelbase : 1410 mm / 55.5 in
+Ground Clearance : 175 mm / 6.9 in
+Seat Height : 795 mm / 31.3 in
+Dry Weight : 185.0 kg / 407.9 lbs
+Wet Weight : 196.0 kg / 432.1 lbs
+Fuel Capacity : 16.5 Litres / 4.4 US gal
+Reserve : 3.5 Litres / 0.9 US gal

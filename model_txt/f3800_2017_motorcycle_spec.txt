@@ -1,0 +1,39 @@
+Model : F3 800
+Years : 2017
+Engine : Four stroke, transverse three cylinder. DOHC, 4 Valve per cylinde
+Capacity : 798 cc / 48.6 cu-in
+Bore x Stroke : 79 x 54.3 mm
+Compression Ratio : 13.3:1
+Cooling System : Cooling with separated liquid and oil radiators
+Engine management system : Integrated ignition - injection system MVICS (Motor &amp; Vehicle Integrated Control System) with six injectors Engine control unit Eldor EM2.0, throttle body full drive by wire Mikuni, pencil-coil with ion-sensing technology, control of detonation and misfire Torque control with four maps
+Traction : Control with eight levels of intervention Electronic quick shift MV EAS (Electronically Assisted Shift)
+Ignition : Multipoint electronic injection
+Starting : Electric
+Alternator : 350 W at 5000 rpm
+Battery : 12 V - 8.6 Ah
+Max Power : 108.8 kW / 148 hp @ 13000 rpm
+Max Torque : 88 Nm / 8.97 kg-m @ 10600 rpm
+Clutch : Wet, multi-disc with mechanical drive Cassette style
+Transmission : 6 Speed
+Final Drive : Chain
+Gear Ratio : 1st 13/37 2nd 16/34 3rd 18/32 4th 19/30 5dth 21/30 6th 22/29
+Final Drive Ratio 1 : 17/4
+Frame : Type ALS Steel tubular trellis Rear swing arm pivot plates material Aluminium alloy
+Front Suspension : 43mm Marzocchi "UPSIDE DOWN" telescopic hydraulic fork with rebound-compression damping and spring preload external, and separate adjustment
+Front Wheel Travel : 125 mm / 4.6 in
+Rear Suspension : Progressive Sachs, single shock absorber with rebound and compression damping and spring preload adjustment Single sided swing arm material Aluminium alloy
+Rear Wheel Travel : 123 mm / 4.8 in
+Front Brakes : 2x 320mm floating discs 4 piston calipers
+Rear Brakes : Single 220mm disc 2 piston caliper
+Rim Front : Aluminium alloy 3.50 x 17
+Rim Rear : Aluminium alloy 5.50 x 17
+Front Tyre : 120/65 ZR17
+Rear Tyre : 180/55 ZR17
+Trail : 99 mm / 3.89 in
+Dimensions : Length 2060 mm / 81.0 in Width 725 mm / 28.5 in
+Wheelbase : 1380 mm / 54.3 in
+Seat Height : 805 mm / 31.6 in
+Ground Clarence : 125 mm / 4.2 in
+Dry Weight : 173 Kg / 381.4 lbs
+Fuel Capacity : 16.6 Litres / 4.3 US gal
+Reserve : 5 Litres / 1.3 US gal

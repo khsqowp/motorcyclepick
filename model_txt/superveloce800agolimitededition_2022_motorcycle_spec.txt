@@ -1,0 +1,42 @@
+Model : Superveloce 800 Ago Limited Edition
+Years : 2022
+Production : 311 units
+Engine : Four stroke, transverse three cylinder, DOHC with mechanical chain tensioner and DLC tappet, 4 valves per cylinder
+Capacity : 798 cc / 48.7 cu-in
+Bore x Stroke : 79 x 54.3 mm
+Cooling System : Cooling with separated liquid and oil radiators
+Compression Ratio : 13.3:1
+Engine Management System : Integrated ignition - injection system MVICS 2.1 (Motor &amp; Vehicle Integrated Control System) with six injectors. Engine control unit Eldor Nemo 2.1, throttle body bore 50 mm diameters full ride by wire Mikuni, pencil-coil with ion- sensing technology, control of detonation and misfire. Torque control with four maps. Traction Control with eight levels of intervention
+Exhaust : Arrow 3-exit exhaust system (homologated for road use)
+Emission : Euro 5
+Starting : Electric
+Max Power : 147 hp / 108 kW @ 13000 rpm
+Max Power Race Kit : 151 hp / 111 kW @ 13250 rpm (Racing Kit with Arrow exhaust and dedicated ECU Map)
+Max Torque : 88 Nm / 65 lb-ft @ 10100 rpm
+Electronic Quick Shift : MV EAS 3.0 (Electronically Assisted Shift Up &amp; Down)
+Clutch : Wet, multi-disc slipper clutch
+Transmission : Cassette-style 6-speed, constant mesh
+Primary Drive : 22/41
+Final Drive : Chain
+Gear Ratio : 1st 13/37 2nd 16/34 3rd 18/32 4th 19/30 5th 21/30 6th 22/29
+Final Drive Ratio : 17/43
+Frame : ALS Steel tubular trellis with aluminium alloy rear swing arm pivot plates
+Front Suspension : 43 mm Öhlins Nix USD telescopic hydraulic fork with rebound-compression damping and spring preload external and separate adjustment
+Front Wheel Travel : 125 mm / 4.9 in
+Rear Suspension : Progressive Öhlins TTX, single shock absorber with rebound and compression damping and spring preload adjustment with aluminium alloy single sided swing arm
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 320mm double floating discs with steel braking disc and flange, 4 pistons Brembo radial-type monobloc
+Rear Brakes : Single 220mm disc, Brembo 2 piston caliper
+ABS : Continental MK100 with RLM (Rear Wheel Lift-up Mitigation) and with cornering function
+Wheels : Alloy spoke
+Front Wheel : 3.50 x 17
+Rear Wheel : 5.50 x 17
+Front Tyre : 120/70 - ZR 17 M/C (58 W) Pirelli Diablo Rosso Corsa II
+Rear Tyre : 80/55 - ZR 17 M/C (73 W) Pirelli Diablo Rosso Corsa II
+Trail : 99 mm / 3.89 in
+Dimensions : Length: 2015 mm / 79.92 in Width: 760 mm / 28.74 in
+Wheelbase : 1380 mm / 54.33 in
+Ground Clarence : 120 mm / 4.72 in
+Seat Height : 830 mm / 32.7 in
+Dry Weight : 173 kg / 381.4 lbs - 165 kg / 363.8 lbs (Racing Kit)
+Fuel Capacity : 16.5 Litres / 4.36 US gal

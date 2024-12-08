@@ -1,0 +1,38 @@
+Model : America
+Years : 2017-18
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valves per cylinder, 360&#176; firing interval
+Capacity : 865 cc / 52.8 cub in.
+Bore x Stroke : 90 x 68 mm
+Cooling System : Air-cooled
+Compression Ratio : 9.2:1
+Induction : Twin carburettors, with throttle position sensor and electric carburettor heaters
+Lubrication : Wet sump
+Engine Oil : Synthetic, 15W/50
+Oil Capacity : 4.5 L / 1.2 US gal / 1.0 Imp gal
+Exhaust : Stainless steel twin-walled headers, twin chromed silencers
+Ignition : Digital
+Starting : Electric
+Max Power : 45.5 kW / 61 hp @ 6800 rpm
+Max Torque : 72 Nm / 7.34 kgf-m / 53.1 ft-lb @ 3300 rpm
+Clutch : Wet multi plate
+Transmission : 5 Speed
+Final Drive : Chain, X-ring
+Frame : Tubular steel cradle, swing arm: twin-sided, tubular steel
+Front Suspension : 41mm Kayaba telescopic forks, polished stainless steel shrouds
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Kayaba chrome spring twin shocks with adjustable preload
+Rear Wheel Travel : 96 mm / 3.8 in
+Front Brakes : Single 310 mm disc, Nissin 2 piston floating caliper
+Rear Brakes : Single 285 mm disc, Nissin 2 piston floating caliper
+Wheels Front : Cast aluminum alloy, 12 spoke, 16 x 3.0 inch
+Wheels Rear : Cast aluminum alloy, 12 spoke, 15 x 4.0 inch
+Front Tyre : 130/90 - 16
+Rear Tyre : 170/80 B15
+Rake : 33.3&#176;
+Trail : 143 mm / 5.6 in
+Dimensions : Length 2387 mm / 94.0 in Width 920 mm / 36.2 in (at handlebars) Height 1175 mm / 46.3 in (without mirrors)
+Wheelbase : 1610 mm / 63.4 in
+Seat Height : 690 mm / 27.2 in
+Dry Weight : 231 kg / 509 lbs
+Wet Weight : 250 kg / 551 lbs
+Fuel Capacity : 19.3 Litres / 5.1 US gal / 4.2 Imp gal

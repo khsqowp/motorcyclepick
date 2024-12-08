@@ -1,0 +1,29 @@
+Model : CFMoto 450SR S
+Years : 2024
+Engine : Four stroke Two cylinder, DOHC
+Capacity : 449.5 cc / 27.4 cu in
+Bore x Stroke : 72 x 55.2 mm
+Compresion Ratio : 11.1:1
+Cooling System : Liquid cooled
+Induction : Electronic Fuel Injection
+Ignition : ECU
+Starting : Electric
+Max Power : 34.5 kW / 46.9 hp @ 9250 rpm
+Max Torque : 39.3 Nm 29 lb-ft @ 7750 rpm
+Clutch : Wet multi-plate
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Chrome Moly chassis
+Front Suspension : 39mm Upside down Hydraulic damper, adjustable
+Rear Suspension : Single swingarm, centrally aligned
+Front Brakes : Single 320mm disc, Brembo M40
+Rear Brakes : Single 240mm disc, 2 piston caliper
+Wheels : 6-Spoke aluminium alloy
+Front Tyre : 110/70-R17
+Rear Tyre : 150/60-R17
+ABS : Standard
+Dimensions : Length: 1995 mm / 78.5 in Width: 715 mm / 28.1 in Height: 1140 mm / 44.9 in
+Wheelbase : 1370 mm / 53.9 in
+Ground Clearance : 140 mm / 5.5 in
+Wet Weight : 179 kg / lbs / 394 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal

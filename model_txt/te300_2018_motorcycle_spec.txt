@@ -1,0 +1,34 @@
+Model : TE 300
+Years : 2018-19
+Engine : Two stroke, single cylinder with reed intake and exhaust control
+Capacity : 293.2 cc / 17.8 cu-in
+Bore x Stroke : 72 x 72 mm
+Cooling System : Liquid cooled
+Compression Ratio : NA
+Lubrication : Mixture oil lubrication
+Induction : Dell&#8217; Orto EFI with 39mm throttle body
+Ignition : Contactless, controlled, fully electronic ignition system with digital ignition timing adjustment, type Kokusan
+Starting : Electric &amp; kick
+Max Power : NA
+Clutch : Wet, DDS multi-disc clutch, Brembo hydraulics
+Transmission : 6 Speed
+Final Drive : Chain 520 X-Ring
+Primary Ratio : 26:72
+Secondary Gear Ratio : 14:50 (13:50)
+Frame : Central tube frame made of chrome molybdenum steel tubing
+Front Suspension : WP Suspension Up Side Down 4CS
+Front Wheel Travel : 300 mm / 11.8 in
+Rear Suspension : WP Monoshock with linkage
+Rear Wheel Travel : 330 mm / 13.0 in
+Front Brakes : Single 260mm disc
+Rear Brakes : Single 220mm disc
+Front Tyre : 90/90-21
+Rear Tyre : 140/90-18
+Rake : 26.5&#176;
+Trail : 107 mm / 4.2 in
+Dimensions : Length 2260 mm / 89.0 in
+Wheelbase : 1482&#177;10 mm / 58.3 in
+Seat Height : 960 mm / 38.0 in
+Ground Clearance : 355 mm / 14.0 in
+Dry Weight : 102.4 kg / 225.8 lbs
+Fuel Capacity : 10 Litres / 2.6 US gal

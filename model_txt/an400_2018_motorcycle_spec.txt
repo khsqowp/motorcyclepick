@@ -1,0 +1,27 @@
+Model : AN 400
+Years : 2018
+Engine : Four stroke, single cylinder, DOHC, 4 valves
+Capacity : 400 cc / 24.4 cu in
+Bore x Stroke : 81 x 77.6 mm
+Compression Ratio : 10.6: 1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Suzuki Fuel Injection
+Ignition : Digital electronic
+Starting : Electric
+Transmission : CVT- automatic, centrifugal clutch
+Final Drive : V-belt drive
+Front Suspension : Telescopic, coil spring, oil damped
+Front Wheel Travel : 109 mm / 4.3"
+Rear Suspension : Link type, single shock, coil spring, oil damped
+Rear heel Travel : 99 mm / 3.9"
+Front Brakes : 2 x 260 mm discs, ABS
+Rear Brakes : Single 210 mm disc, ABS
+Front Tyre : 120/70-15M/C (56S), tubeless
+Rear Tyre : 150/70-13M/C (64S), tubeless
+Dimensions : Length 2235 mm / 88.0 in Width 765 mm / 30.1 in
+Wheelbase : 1580 mm / 53.1 in
+Ground Clearance : 125 mm / 4.9"
+Seat Height : 755 mm / 29.7 in
+Wet Weight : 215 kg / 474 lbs
+Fuel Capacity : 13.5 Litres / 3.6 US gal

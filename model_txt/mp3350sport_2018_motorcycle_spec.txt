@@ -1,0 +1,28 @@
+Model : MP3 350 Sport
+Years : 2018-
+Engine : Four stroke, single cylinder, SOHC, 4 valve
+Capacity : 330 cc / 20.1 cu-in
+Bore x Stroke : 78 x 69 mm
+Cooling System : Liquid cooled
+Induction : Fuel system: Electronic fuel injection
+Lubrication : Dry sump
+Ignition : Electronic with inductive exhaust and variable advance integrated in the injection CPU. Closed loop system with Lambda probe for the exhaust. Electronic immobilizer, block of injection pump when the vehicle is tilted. Traction control (ASR)
+Starting : Electric with oil-bath free wheel
+Clutch : Centrifugal multi plate wet clutch
+Transmission : CVT with torque server
+Final Drive : Belt
+Frame : Double cradle in high strength tubular steel
+Front Suspension : Articulated quadrilateral - Electro-hydraulic suspension blocking system.
+Front Wheel Travel : 85 mm / 3.3 in.
+Rear Suspension : Dual hydraulic shock absorber with pre-adjusted spring in one of 4 positions - Stroke:
+Rear Wheel Travel : 110 mm / 4.2 in
+Front Brakes : 2x 258mm discs, One disc brake per wheel, c 2 piston caliper
+Rear Brakes : Single 240mm disc
+ABS : ABS with braking integrated with the pedal
+Wheels : Aluminium alloy
+Front Tyre : 2 x 110/70 -13
+Rear Tyre : 140/60-14
+Dimensions : Length 2225 mm / 87.6 in Width 800 mm / 31.5 in
+Wheelbase : 1500 mm / 59.0 in.
+Seat Height : 790 mm / 31.0 in.
+Fuel Capacity : 12 Litres / 3.2 US gal

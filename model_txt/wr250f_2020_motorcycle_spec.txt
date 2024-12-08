@@ -1,0 +1,34 @@
+Model : WR 250F
+Years : 2020-21
+Engine : Four stroke, single cylinder, DOHC, 4 valve Titanium
+Capacity : 249 cc / 15.2 cu-in
+Bore x Stroke : 77 x 53.6 mm
+Cooling System : Liquid cooled,
+Compression Ratio : 13.5:1
+Lubrication : Dry sump
+Induction : 44 mm Keihin throttle body F.I.
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric / Kick
+Clutch : Wet, multiple discs, cable operated
+Transmission : 5 Speed Wide ratio
+Final Drive : #520 Chain
+Primary Ratio : 3.353 (57/17)
+Secondary Ratio : 3.923 (51/13)
+Gear Ratio : 1st 2.385 (31/13) 2nd 1.813 (29/16) 3rd 1.444 (26/18) 4th 1.143 (24/21) 5th 0.957 (22/23) 6th 0.815 (22/27)
+Frame : Aluminium Bilateral Beam
+Front Suspension : 48 mm inverted fork, Adjustable
+Front Wheel Travel : 310 mm / 12.2 in
+Rear Suspension : KYB Fully adjustable single shock
+Rear Wheel Travel : 315 mm / 12.4 in
+Front Brakes : Single 270mm floating wave disc 2 piston caliper
+Rear Brakes : Single 245mm disc 1 piston caliper
+Front Tyre : 80/100-21
+Rear Tyre : 100/100-18
+Rake : 27.0&#176;
+Trail : 115 mm / 4.5 in
+Dimensions : Length 2165 mm / 85.2 in Width 825 mm / 32.5 in Height 1280 mm / 50.4 in
+Wheelbase : 1,465 mm / 57.7 in
+Seat Height : 965 mm / 38.0 in
+Ground Clearance : 325 mm / 12.8 in
+Wet Weight : 117 kg / 258 lbs
+Fuel Capacity : 7.5 Liters / 2.0 gal

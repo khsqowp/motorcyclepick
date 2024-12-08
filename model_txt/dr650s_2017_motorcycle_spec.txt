@@ -1,0 +1,37 @@
+Model : DR 650S
+Years : 2017-18
+Engine : Four stroke, single cylinder. SOHC, 4 Valve per cylinder.
+Capacity : 644 cc / 39.3 cu in
+Bore x Stroke : 100 x 82 mm
+Cooling System : Air/oil cooled
+Compression Ratio : 9.5:1
+Lubrication : Wet sump
+Induction : Mikuni BST40
+Ignition : Electronic Ignition
+Starting : Electric
+Max Power : 32 kW / 43.5 hp / @ 6400 rpm (at rear tyre 27.9 kW / 37.4 hp @ 6500 rpm)
+Max Torque : 54 Nm / 5.51 kg-m / 39.8 lb-ft@ 4600 rpm
+Clutch : Wet, cable operated
+Transmission : 5 Speed
+Final Drive : Chain, 525 links
+Frame : Steel, single cradle frame
+Front Suspension : Telescopic, leading axle, oil damped
+Front Wheel Travel : 259 mm / 10.2 in
+Rear Suspension : Link-type, fully adjustable spring preload, gas/oil damped, adjustable compression damping
+Rear Wheel Travel : 259 mm / 10.2 in
+Front Brakes : Single 280 mm disc, 2 piston caliper
+Rear Brakes : Single 230 mm disc, 2 piston caliper
+Front Tyre : 90/90-21
+Rear Tyre : 120/90-17
+Dimensions : Length 2255 mm / 88.8 in Width 865 mm / 34.1 in Height 1195 mm / 47.0 in
+Wheelbase : 1490 mm / 58.7 in
+Seat Height : 885 mm / 34.8 in.
+Ground Clearance : 265mm / 10.4 in
+Dry Weight : 147 kg /324 lbs
+Wet-Weight : 162 kg / 357 lbs
+Fuel Capacity : 13 Liter / 3.4 US gal / 2.9 Imp gal (CA model 12 Liter / 3.2 US gal / 2.6 Imp gal)
+Consumption Average : 5.0 L/100 km / 20.1 km/l / 47.3 US mpg / 56.8 Imp mpg
+Braking 60 km/h - 0 : 14.7 m / 48.2 ft
+Braking 100 km/h - 0 : 41.4 m / 135.8 ft
+Standing &#188; Mile : 14.1 sec / 142.5 km/h / 88.5 mph
+Top Speed : 160.6 km/h / 99.8 mph

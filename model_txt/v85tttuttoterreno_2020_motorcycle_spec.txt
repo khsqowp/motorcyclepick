@@ -1,0 +1,36 @@
+Model : V85 TT Tutto Terreno
+Years : 2020
+Engine : Four stroke, Transversal 90&#176; V-twin, 2-valves per cylinder, titanium intake
+Capacity : 853 cc / 52.0 cu in
+Bore x Stroke : 84 x 77 mm
+Cooling System : Air/oil cooled
+Compression Ratio : 10.5:1
+Emission : EURO4
+Induction : Electronic injection; &#216; 52 mm single throttle body, Ride-by-Wire
+Ignition : Electronic
+Starting : Electric
+Battery : 12V &#8211; 12 Ah
+A/C generator : 430 W System voltage 12 V
+Max Power : 80 hp / 59 kW @ 7750 rpm (Also available at 35 kW, A2 driver license)
+Max Torque : 80 Nm / 59 lb-ft @ 5000 rpm
+Clutch : Dry single disc
+Transmission : 6 Speed
+Final Drive : Shaft, double universal joint and double bevel gear units, 8:33 ratio
+Gear Ratios : 1st 16/39 = 1: 2.437 2nd 18/32 = 1: 1.778 3rd 21/28 = 1: 1.333 4th 24/26 = 1: 1.083 5th 25/24 = 1: 0.960 6th 27/24 = 1: 0.889
+Frame : High strength steel tubular frame
+Front Suspension : 41 mm hydraulic telescopic USD fork, with adjustable spring preload and hydraulic rebound
+Front Wheel Travel : 170 mm / 6.7 in
+Rear Suspension : Double-sided swingarm in box-type aluminum with a single shock on the right side, with adjustable spring preload and hydraulic rebound
+Rear Wheel Travel : 170 mm / 6.7 in
+Front Brakes : 2x stainless steel floating discs, Brembo radial-mounted calipers with 4 opposed pistons
+Rear Brakes : Single 260 mm stainless steel disc, floating caliper with 2 pistons
+ABS : Standard double channel ABS
+Wheels : Spoked
+Front Wheel : 2.50 x 19
+Rear Wheel : 4.25 x 17
+Front Tyre : 110/80 &#8211; R19 With air chamber
+Rear Tyre : 150/70 &#8211; R17 With air chamber
+Seat Height : 830 mm / 32.6 in
+Dry Weight : 208 kg / 458.5 lbs
+Wet Weight : 229 kg / 504.8 lbs
+Fuel Capacity : 23 Litres / 6.0 US gal

@@ -1,0 +1,32 @@
+Model : Boulevard / Intruder M109R B.O.S.S.
+Years : 2018-19
+Engine : Four stroke, 54&#176; V-Twin
+Capacity : 1786 cc / 109 cu. in
+Bore x Stroke : 112 x 90.5 mm
+Cooling System : Liquid cooled
+Compression Ratio : 10.5:1
+Lubrication : Semi-dry sump
+Induction : EFI, 2 x 56mm throttle bodies
+Ignition : Electronic ignition (Transistorised)
+Starting : Electric
+Max Power : 92 kW / 123 hp @ 6200 rpm
+Max Torque : 160 Nm / 16.3 kgf-m / 118 lb-ft @ 3200 rpm
+Clutch : Wet multi-plate type
+Transmission : 5 Speed
+Final Drive : Shaft
+Primary Reduction : 1.647
+Gear Ratio : 1st 2.188 (35/16) / 2nd 1.400 (28/20) / 3rd 1.038 (27/26) / 4th 0.828 (24/29) / 5th 0.686 (24/35)
+Front Suspension : Inverted, 46mm stanchions
+Front Wheel Travel : 130 mm / 5.1"
+Rear Suspension : Single damper, preload adjustable
+Rear Wheel Travel : 120 mm / 4.7"
+Front Brakes : 2 x 310mm discs, 2 piston calipers
+Rear Brakes : Single 274mm disc, 2 piston caliper
+Front Tyre : 130/70 R18
+Rear Tyre : 240/40 R18
+Dimensions : Length 2450 mm / 95.5 in Width 875 mm / 34.4 in
+Wheelbase : 1710 mm / 67.3 in)
+Ground Clearance : 130 mm / 5.1 in
+Seat Height : 705 mm / 27.8 in
+Wet Weight : 347 kg / 764 lbs
+Fuel Capacity : 19 Litres / 4.3 US gal

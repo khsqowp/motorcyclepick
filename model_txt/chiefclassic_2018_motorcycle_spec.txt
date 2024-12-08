@@ -1,0 +1,32 @@
+Model : Chief Classic
+Years : 2018-
+Engine : Thunder Stroke&#8482; 111
+Capacity : 1811.cc / 105 cu-in
+Bore x Stroke : 101 x 113 mm
+Compression Ratio : 9.5:1
+Induction : Electronic Fuel Injection System Closed loop fuel injection / 54mm bore
+Starting : Electric
+Max Toque : 139 Nm / 14.2 kgf-m @ 2800 rpm
+Clutch : Wet, Multi-Plate
+Transmission : 6 Speed
+Final Drive : Belt
+Gear Ratio : 1st 9.403 : 1 2nd 6.411 : 1 3rd 4.763 : 1 4th 3.796 : 1 5th 3.243 : 1 6th 2.789 : 1
+Final Drive Ratio : 2.2 : 1
+Frame : Cast Aluminum Frame with Integrated Air-Box
+Front Suspension : Telescopic forks,
+Front Wheel Travel : 119 mm / 4.7 in
+Rear Suspension : Single shock,
+Rear Wheel Travel : 94 mm / 3.7 in
+Front Brakes : 2x 300 mm Floating Rotor 4 piston calipers
+Rear Brakes : Single 300 mm Floating Rotor 2 piston calipers
+Front Tyre : 130/90B16 67H
+Rear Tyre : 180/65B16 81H
+Rake : 29&#176;
+Trail : 155 mm / 6.1 in
+Ground Clearance : 139.7 mm / 5.5 in
+Dimensions : Length 2553 mm/ 100.5 in Width 1029 mm / 40.5 in Height 1283 mm / 50.5 in
+Wheelbase : 1646 mm mm / 68.1 in
+Seat Height : 692 mm / 29.0 in
+Dry Weight : 354.0 kg / 780.4 lbs
+Wet Weight : 370 kg / 815.7 lbs
+Fuel Capacity : 20.8 Litres / 5.5 Gal

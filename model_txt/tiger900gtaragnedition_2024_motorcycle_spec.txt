@@ -1,0 +1,39 @@
+Model : Tiger 900 GT Aragón Edition
+Years : 2024
+Engine : Four stroke, transverse three cylinder, DOHC, 4 valve per cylinder.
+Capacity : 888 cc / 54.1 cu-in
+Bore x Stroke : 78 x 61.9 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.27:1
+Exhaust : Stainless steel 3 into 1 header system, side mounted stainless steel silencer
+Emission : Euro 5
+Lubrication : Wet sump
+Induction : Multipoint sequential electronic fuel injection
+Ignition : Digital CDI
+Starting : Electric
+Max Power : 70 kW / 93.9 hp @ 8750 rpm
+Max Torque : 87 Nm / 64.1 lb-ft @ 7250 rpm
+Clutch : Wet, multi-plate
+Transmission : 6 Speed
+Final Drive : O-ring chain
+Frame : Tubular steel frame, bolt on sub frame
+Swingarm : Twin-sided, cast aluminium alloy
+Front Suspension : Marzocchi 45 mm upside down forks, manual rebound and compression damping adjustment.
+Front Wheel Travel : 180 mm / 7.08 in
+Rear Suspension : Marzocchi rear suspension unit, electronically adjustable preload and rebound damping.
+Rear Wheel Travel : 170 mm / 6.7 in
+Front Brakes : 2 x 320mm floating discs, Brembo Stylema 4 piston Monobloc calipers. Radial front master cylinder
+Rear Brakes : Single 255mm disc, Brembo single piston sliding caliper
+ABS System : Multimode, Optimised Cornering ABS
+Wheels : Cast iron
+Front Wheel : 19 x 2.5 in
+Rear Wheel : 17 x 4.25 in
+Front Tyre : 100/90-19
+Rear Tyre : 150/70R17
+Rake : 24.6°
+Trail : 133.3 mm / 5.24 in
+Dimensions : Width 930 mm / 36.6 in Height 1410 - 1460 mm / 55.5 - 57.5 in
+Wheelbase : 1556 mm / 61.25 in
+Seat Height : 820 - 840 mm / 32.3 - 33.1 in
+Dry Weight : 198 kg / 436.5 lbs
+Fuel Capacity : 20 Litres / 5.28 US gal

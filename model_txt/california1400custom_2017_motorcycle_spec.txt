@@ -1,0 +1,46 @@
+Model : California 1400 Custom
+Years : 2017
+Engine : Four stroke, 90&#176; V-twin, SOHC, 4 valves per cylinder
+Capacity : 1380 cc / 84.2 cu-in
+Bore x Stroke : 104 x 81.2 mm
+Cooling System : Air/ oil cooled
+Compression Ratio : 10.5:1
+Lubrication : Wet sump
+Timing System Diagram : Intake valve opens 19&#176; BTDC (1-mm checking clearance) intake valve closes 55&#176; ABDC exhaust valve opens 49&#176; BBDC exhaust valve closes 12&#176; ATDC
+Fuel Supply : Magneti Marelli IAW7SM; &#8220;ride by wire&#8221; &#216; 52 mm throttle body, IWP 243 Magneti Marelli injectors, double oxygen sensor, integrated management of 3 engine mappings, traction control, cruise control
+Ignition : Phased electronic Multipoint sequential injection
+Spark Plugs : NGK LMAR8F, 2 per cylinder
+Starting : Electric
+Exhaust : Stainless steel, 2-in-2 type, three-way catalytic converter with double lambda probe
+Battery : 12V - 18 Ah
+Alternator : 12 V - 550 W
+Max Power : 96 hp / 71 kW @ 6500 rpm
+Max Torque : 89 ft/lb / 120 Nm @ 2750 rpm
+Clutch : Single-disc with integrated anti-vibration buffer
+Transmission : 6 speeds with final overdrive
+Final Drive : Shaft
+Gear Ratio : 1st 17/38 = 1 : 2.235 2nd 20/34 = 1 : 1.700 3rd 23/31 = 1 : 1.348 4th 26/29 = 1 : 1.115 5th 31/30 = 1 : 0.968 6th 30/24 = 1 : 0.8
+Primary Drive : 26/35 = 1: 1,346)
+Final Drive Ratio : Double cardan joint and fixed bevel gear seat, drive ratio 10/36 = 1: 3.6)
+Frame : Steel tubing, closed double cradle with elastic kinematic engine mounting system to isolate vibrations.
+Front Suspension : Standard swingarm, &#216; 46 mm, with radial calliper mounting bracket and telescopes on the stanchions,
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Swingarm with double shock absorber with adjustable spring preload.
+Rear Wheel Travel : 110 mm / 4.3 in
+Front Brakes : 2x 320 mm stainless steel floating discs, Brembo radial callipers with 4 horizontally opposed pistons
+Rear Brakes : Single 282 mm stainless steel fixed disc, Brembo floating calliper with 2 parallel pistons
+Front wheel : Aluminium alloy 3.50&#8221; x 18&#8221;
+Rear Wheel : Aluminium alloy 6.00&#8221; x 16&#8221;
+Front Tyre : 130/70 R18
+Rear Tyre : 200/60 R16
+Trail : 152 mm / 6 in
+Headstock Angle : 32&#176;
+Steering Angle : 38&#176;
+Dimensions : Length 2443.5 mm / 96.2 in Width 1028.7 mm / 40.5 in Height 1460.5 mm / 57.5 in
+Seat Height : 736.6 mm / 29 in
+Wheelbase : 1676.4 mm / 66 in
+Ground Clearance : 165 mm / 6.4 in
+Dry Weight : 322 Kg / 709.8 lbs
+Wet Weight : 336.5 kg / 742 lbs
+Fuel Capacity : 20.5 Litres / 5.4 US gal
+Reserve : 5 Litres / 1.3 US gal

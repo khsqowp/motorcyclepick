@@ -1,0 +1,37 @@
+Model : YZF-R7 World GP 60th Anniversary Edition
+Years : 2022
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valves per cylinder
+Capacity : 689 cc / 42.04 cu-in
+Bore x Stroke : 80 x 68.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5:1
+Lubrication : Wet sump
+Exhaust : Integrated 2-into-1 exhaust pipes and muffler
+Induction : Mikuni 38 mm dual bore throttle body F.I.
+Emission : Euro 5
+Ignition : TCI Transistor Controlled Ignition
+Starting : Electric
+Max Power : 55 kW / 74.8 hp @ 8750 rpm
+Max Power A2 License : 35 kW / 47 hp @7750 rpm
+Max Torque : 68 Nm / 50 lb-ft @ 6500 rpm
+Transmission : 6 Speed constant mesh
+Final Drive : Chain
+Clutch : Multiplate wet clutch, with Assist &amp; Slipper clutch
+Frame : A high-strength steel frame with a rigid-mount aluminum center
+Front Suspension : 41mm Telescopic fork, adjustable for preload, rebound and compression
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Linked-type Monocross shock, adjustable preload and rebound
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 298mm discs, 4-piston calipers
+Rear Brakes : Single 245mm disc, single piston caliper
+ABS : Standard
+Front Tyre : 120/70ZR17M/C (58W) Tubeless
+Rear Tyre : 180/55ZR17M/C (73W) Tubeless
+Caster Angle : 23&#176;
+Trail : 90 mm
+Dimensions : Length 2070 mm / 81.5 in Width 705 mm / 27.8 in Height 1160 mm / 45.7 in
+Wheelbase : 1395 mm / 54.9 in
+Ground Clearance : 135 mm / 5.3 in
+Seat Height : 835 mm / 32.9 in
+Wet Weight : 188 kg / 414 lbs
+Fuel Capacity : 13 Litres / 3.4 US gal

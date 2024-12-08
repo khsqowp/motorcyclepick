@@ -1,0 +1,34 @@
+Model : MP3 400 HPE / Sport
+Years : 2022
+Engine : Four stroke, single cylinder, SOHC, 4 valves and roller tappets
+Capacity : 399 cc / 24.34 cu-in
+Bore x Stroke : 84 x 72 mm
+Cooling System : Liquid cooled
+Induction : Electronic fuel injection
+Emmission : Euro 5
+Lubrication : Dry sump
+Ignition : Electronic with inductive exhaust and variable advance integrated in the injection CPU. Closed loop system with Lambda probe for the exhaust. Electronic immobilizer, block of injection pump when the vehicle is tilted. Traction control (ASR)
+Starting : Electric with oil-bath free wheel
+Max Power : 26 kW / 35.3 hp @ 7500 rpm
+Max Toque : 37.7 Nm / 27.8 lb-ft @ 5750 rpm
+Clutch : Centrifugal multi plate wet clutch
+Transmission : CVT with torque server
+Final Drive : Belt
+Frame : Double cradle in high strength tubular steel
+Front Suspension : Articulated quadrilateral, Electro-hydraulic suspension blocking system
+Front Wheel Travel : 85 mm / 3.3 in
+Rear Suspension : Dual hydraulic shock absorber with pre-adjusted spring in one of 4 positions
+Rear Wheel Travel : 102 mm / 4.0 in
+Front Brakes : 2x 258mm discs, one disc brake per wheel, 2 piston caliper
+Rear Brakes : Single 240mm disc
+ABS : ABS with braking integrated with the pedal
+Wheels : Aluminium alloy
+Front Rim : 13 x 3.00
+Rear Rim : 14 x 4.00
+Front Tyre : 2x 110/70-13 Tubeless
+Rear Tyre : 140/70-14 Tubeless
+Dimensions : Length 2160 mm / 85 in Width 815 mm / 32 in
+Wheelbase : 1560 mm / 61.4 in
+Seat Height : 790 mm / 31.0 in
+Dry Weight : -
+Fuel Capacity : 13.7 Litres / 3.61 US gal

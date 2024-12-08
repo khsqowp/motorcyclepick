@@ -1,0 +1,34 @@
+Model : SV 650 / ABS
+Years : 2018-19
+Engine : Four stroke, 90&#176;-V-twin, DOHC, 4 valves per cylinder
+Capacity : 645 cc / 39.3 cu in
+Bore x Stroke : 81 x 62.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Lubrication : Wet sump
+Induction : Fuel Injection, 39mm throttle bodies
+Ignition : Electronic ignition (Transistorized)
+Starting : Electric
+Max Power : 56 kW / 75 hp @ 8500 rpm
+Max Torque : 64 Nm / 6.5 kgf-m / 47.2 lb-ft @ 8100 rpm
+Transmission : 6 Speed, constant mesh
+Final Drive : Chain, DID525V8, 114 links
+Frame : Compact trellis steel frame
+Rake : 25o
+Trail : 104 mm / 4.1 in
+Front Suspension : Telescopic fork, coil spring, oil damped
+Front Wheel Travel : 125 mm / 4.9 in
+Rear Suspension : Link type, coil spring, oil damped, spring preload 7-step adjustable
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2 x 290 mm Discs, 2 piston calipers, / ABS
+Rear Brakes : Single 240 mm disc, 1 piston caliper, / ABS
+Front Wheel : 3.50 x 17, Aluminium alloy, 5-spoke
+Rear Wheel : 5.00 x 17, Aluminium alloy, 5-spoke
+Front Tyre : 120/70 ZR17M/C 58W, tubeless
+Rear Tyre : 160/60 ZR17M/C 69W, tubeless
+Dimensions : Length 2140 mm / 84.2 in Width 760 mm / 29.9 in Height 1090mm / 42.9 in
+Wheelbase : 1445 mm / 56.9 in
+Seat Height : 785 mm / 30.9 in
+Ground clearance : 135mm / 5.3 in
+Dry Weight : Non ABS: 195 kg / 430 lbs, ABS: 197 kg / 434 lbs
+Fuel Capacity : 14.5 Litres / 3.8 US gal / 3.2 Imp gal

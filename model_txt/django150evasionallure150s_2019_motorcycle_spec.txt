@@ -1,0 +1,21 @@
+Model : Django 150 (Evasion, Allure, 150S)
+Years : 2019
+Engine : Four stroke, single cylinder, SOHC, 2 valves
+Capacity : 150.6 cc / 9.2 cu-in
+Cooling System : Air cooled
+Emission : Euro 4
+Battery : 12V
+Starting : Electric
+Max Power : 8.3 kW / 11.1 hp
+Max Torque : 9.2 Nm / 0.94 kgf-m / 2.07lb-ft
+Transmission : Automatic
+Final Drive : Belt
+Front Brakes : Singe disc, ABS
+Rear Brakes : Single disc, ABS
+Front Wheel : 12 in
+Rear Wheel : 12 in
+Wheelbase : 1350 mm / 53.1 in
+Seat Height : 770 mm / 30.3 in
+Dry Weight : 135 kg / 298 lbs
+Wet Weight : 140 kg / 308 lbs
+Fuel Capacity : 8.5 Litres / 2.25 US gal / 1.87 Imp gal

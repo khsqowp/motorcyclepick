@@ -1,0 +1,38 @@
+Model : Chief Bobber Dark Horse Jack Daniels Limited Edition
+Years : 2023
+Production : 177 Units
+Engine : Thunderstroke 116
+Capacity : 1890 cc / 116 cu-in
+Bore x Stroke : 103.2 x 113 mm
+Cooling System : Air-cooled
+Compression Ratio : 11.0:1
+Exhaust : Dual Exhaust with Crossover
+Induction : Electronic Fuel Injection System Closed loop fuel injection / 54 mm bore
+Starting : Electric
+Max Toque : 162 Nm / 120 lb-ft @ 2900 rpm
+Clutch : Wet, Multi-Plate
+Transmission : 6 Speed
+Final Drive : Belt
+Gear Ratio : 1st 9.403 : 1 2nd 6.411 : 1 3rd 4.763 : 1 4th 3.796 : 1 5th 3.243 : 1 6th 2.789 : 1
+Final Drive Ratio : 2.2 : 1
+Frame : Steel-tube frame
+Front Suspension : 46mm Telescopic fork
+Front Wheel Travel : 132 mm / 5.2 in
+Rear Suspension : Dual shocks with adjustable preload
+Rear Wheel Travel : 75 mm / 3.0 in
+Front Brakes : Single 300 mm semi-floating rotor 4 piston caliper
+Rear Brakes : Single 300 mm floating rotor 2 piston caliper
+ABS : Standard
+Front Wheel : Wire Spoke 16 x 3.0
+Rear Wheel : Wire Spoke 16 x 5.0
+Front Tyre : 130/90B16 67H
+Rear Tyre : 180/65 B16 81H
+Rake : 29°
+Trail : 131.5 mm / 5.2 in
+Dimensions : Length 2286 mm / 90.0 in Width 915 mm / 36 in Height 1349 mm / 53.1 in
+Wheelbase : 1626 mm / 64.0 in
+Seat Height : 662 mm / 26.0 in
+Ground Clearance : 125 mm / 4.9 in
+Dry Weight : 304 kg / 670 lbs
+Wet Weight : 315 kg / 694 lbs
+Fuel Capacity : 15.1 Litres / 4.0 US gal

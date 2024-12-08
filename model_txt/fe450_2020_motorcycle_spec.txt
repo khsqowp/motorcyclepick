@@ -1,0 +1,35 @@
+Model : FE 450
+Years : 2020-21
+Engine : Four stroke, single cylinder, SOHC, 4 valve
+Capacity : 449 cc / 27.4 cu-in
+Bore x Stroke : 95 x 63.4 mm
+Compression Ratio : 11.8:1
+Cooling System : Liquid cooling system, continuous circulation of cooling liquid with water pump
+Lubrication : Forced oil lubrication with 2 Eaton pumps
+Induction : Fuel Injection
+Ignition : Keihin EMS
+Starting : Electric
+Max Power : NA
+Max Torque : NA
+Clutch : Wet, DDS multi-disc clutch, Magura hydraulics
+Transmission : 6 speed, claw shifted
+Final Drive : Chain X-Ring 5/8 x 1/4 in
+Primary Ratio : 24:73
+Secondary Ratio : 14:52 (13:52)
+Frame : 25CrMo4 steel central-tube frame
+Front Suspension : 48mm WP-USD Xplor with preload adjuster
+Front Wheel Travel : 300 mm / 11.8 in
+Rear Suspension : WP Monoshock with linkage
+Rear Wheel Travel : 330 mm / 13.0 in
+Front Brakes : Single 260 mm Magura two-piston floating calliper
+Rear Brakes : Single 220 mm Magura single-piston floating calliper
+Front Tyre : 90/90-21
+Rear Tyre : 140/90-18
+Steering Head Angle : 63.5 &#176;
+Trail : 107 mm / 4.2 in
+Dimensions : Length 2260 mm / 89.0 in
+Wheelbase : 1482&#177;10 mm / 58.3 in
+Seat Height : 970 mm / 38.2 in
+Ground Clearance : 370 mm / 14.5 in
+Dry Weight : 110.4 kg / 243 lbs
+Fuel Capacity : 8.5 Litres / 2.3 US gal

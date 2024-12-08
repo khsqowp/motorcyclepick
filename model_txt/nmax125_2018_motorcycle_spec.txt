@@ -1,0 +1,29 @@
+Model : NMAX 125
+Years : 2018
+Engine : Four stroke, single cylinder
+Capacity : 124 cc / 7.6 cu-in
+Bore x Stroke : 52 x 58.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Lubrication : Wet sump
+Induction : Fuel Injection
+Ignition : Electronic TCI
+Starting : Electric
+Max Power : 12 hp / 9 kW @ 8750 rpm
+Max Torque : 11.7 Nm / 8.8 lb-ft @ 6500 rpm
+Transmission : Automatic
+Final Drive : Belt
+Front Suspension : Hydraulic telescopic fork
+Front Wheel Travel : 100 mm / 3.9 in
+Rear Suspension : Unit Swing
+Rear Wheel Travel : 90 mm / 3.5 in
+Front Brakes : Single 230mm disc
+Rear Brakes : Single 230mm disc
+Front Tyre : 110/70-13
+Rear Tyre : 130/70-13
+Dimensions : Height 1115 mm / 43.8 in Width 740 mm / 29.1 in Length 1955 mm / 76.9 in
+Wheelbase : 1350 mm / 53.1 in
+Seat Height : 765 mm / 30.1 in
+Ground Clearance : 135 mm / 5.5 in
+Wet Weight : 127 kg / 280 lbs
+Fuel Capacity : 6 Litres / 1.58 US gal

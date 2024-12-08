@@ -1,0 +1,32 @@
+Model : Hipster 250
+Years : 2016
+Engine : Single cylinder, 4-stroke, DOHC, 4 valves
+Capacity : 249 cc / 15.2 cu in
+Bore x Stroke : 77 x 53.6 mm
+Cooling System : Liquid cooled
+Lubrication System : Wet sump
+Compression Ratio : 11.5:1
+Induction : Electronic Fuel injection
+Ignition : Electronic
+Starting : Electric
+Max Power : 11 kW / 14.8 hp @ 9750 rpm
+Max Torque : 12.3 Nm / 1.22 kgf-m / 9 lb-ft @ 7500 rpm
+Clutch : Wet, multiplate
+Transmission : 6-Speed
+Final Drive : Chain
+Front Suspension : 41 mm USD hydraulic fork
+Front Wheel Travel : 90 mm / 3.5"
+Rear Suspension : Twin shock absorbers
+Rear Wheel Travel : 120 mm / 4.7"
+Front Brakes : Single disc 280 mm, 4 piston radial caliper
+Rear Brakes : Single disc, single floating piston caliper
+Front Wheel : 2.15 x 18, multi spokes
+Rear Wheel : 2.75 x 17 , multi spokes
+Front Tyre : 100/90-18
+Rear Tyre : 130/70-17
+Dimensions : Length: 2016 mm / 79.4" Width: 765 mm / 30.9" Height: 1060 mm / 41.7"
+Seat Height : 785 mm / 30.9"
+Wheelbase : 1370 mm / 53.9"
+Ground Clearance : 155 mm / 6.1"
+Dry Weight : 130 kg / 287 lbs
+Fuel Capacity : 14 L / 3.7 US gal / 3.1 Imp gal

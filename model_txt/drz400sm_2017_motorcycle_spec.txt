@@ -1,0 +1,36 @@
+Model : DR-Z 400SM
+Years : 2017-18
+Engine : Four stroke, single cylinder, DOHC, 4 valve
+Capacity : 398 cc / 24.3 cu-in
+Bore x Stroke : 90 x 62.6 mm.
+Cooling System : Liquid cooled
+Compression Ratio : 11.3:1
+Induction : Mikuni BSR36 CV carburetor
+Lubrication : Dry sump
+Ignition : Digital CDI
+Battery : 12V, 6.5Ah
+Starting : Electric
+Max Power : 29.2 kW / 39.7 hp @ 8500 rpm
+Max Power Rear Tyre : 24.9 kW / 33.4 hp @ 8500 rpm
+Max Torque : 39 Nm / 3.98 kg-m / 28.8 lb-ft @ 6600 rpm
+Clutch : Wet, multiple discs, cable operated
+Transmission : 5 Speed
+Final Drive : Chain, #520
+Frame : Chrome-moly steel frame, single front down tube
+Front Suspension : Telescopic, 49 mm, oil-damped, 11-way compression damping, adjustable spring preload
+Rear Suspension : Link-type, fully adjustable spring preload, 26-way compression damping
+Rear Wheel Travel : 277 mm / 10.9 in
+Front Brakes : Single 310 mm floating disc, 2 piston caliper
+Rear Brakes : Single 240mm disc, 1 piston caliper
+Front Tyre : 120/70-17
+Rear Tyre : 140/70-17
+Dimensions : Length 2225 mm / 87.6 in Width 855 mm / 33.7 in Height: 1230 mm / 48.4 in
+Wheelbase : 1460 mm / 57.5 in
+Seat Height : 890 mm / 35.0 in
+Ground Clearance : 260 mm / 10.2 in
+Dry Weight : 137 kg / 302 lbs
+Wet Weight : 146 kg / 321 lbs
+Fuel Capacity : 10 Litres / 2.6 US gal / 2.2 Imp gal
+Consumption Average : 5.5 L/100 km / 18.2 km/l / 42.8 US mpg / 51.4 Imp mpg
+Standing &#188; Mile : 15.0 sec
+Top Speed : 145 km/h / 90 mph

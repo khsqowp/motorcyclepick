@@ -1,0 +1,37 @@
+Model : DL 650XT V-Strom
+Years : 2021-22
+Engine : Four stroke, 90°V-twin, DOHC, 4 valves per cylinder
+Capacity : 645 cc / 39.4 cu-in
+Bore x Stroke : 81 x 62.6 mm
+Compression Ratio : 11.2:1
+Cooling System : Liquid cooled
+Oil Capacity : 3.0 L (3.2 / 2.6 US / Imp qt)
+Lubrication : Wet sump
+Induction : Fuel Injection, SDTV-equipped
+Ignition : Electronic Ignition (transistorized)
+Starting : Electric
+Max Power : 69 hp / 50.4 kW) @ 8000 rpm
+Max Torque : 69 Nm / 50.9 lb-ft @ 6400 rpm
+Clutch : Wet, multiple discs, cable operated
+Transmission : 6 Speed
+Final Drive : Chain
+Primary Reduction Ratio : 2.088 (71 / 34)
+Final Reduction Ratio : 3.133 (47 / 15)
+Frame : Aluminium, twin spar
+Front Suspension : 43mm Telescopic, coil spring, oil damped
+Front Wheel Travel : 150 mm / 5.9 in
+Rear Suspension : Link type, with adjustable rebound and spring preload
+Rear Wheel Travel : 160 mm / 6.3 in
+Front Brakes : 2 x 310 mm disc, 2 piston calipers
+Rear Brakes : Single 260 mm disc, 1 piston caliper
+ABS : Standard
+Front Tyre : 110/80R19 M/C (59V), tubeless
+Rear Tyre : 150/70R17 M/C (69V), tubeless
+Rake : 26°
+Trail : 110 mm / 4.3 in
+Dimensions : Length 2275 mm / 89.5 in Width 910 mm / 35.8 in Height 1405 mm / 55.3 in
+Wheelbase : 1560 mm / 61.4 in
+Seat Height : 835 mm / 32.9 in
+Ground Clearance : 170 mm / 6.7 in
+Wet Weight : 216 kg / 476 lbs
+Fuel Capacity : 20 Litres / 5.3 US gal

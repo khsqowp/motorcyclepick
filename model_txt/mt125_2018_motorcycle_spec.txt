@@ -1,0 +1,35 @@
+Model : MT-125
+Years : 2018-19
+Engine : Four stroke, single cylinder, SOHC, 4-valves
+Capacity : 124.7 cc / 7.6 cub in.
+Bore x Stroke : 52 x 58.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Lubrication : Wet sump
+Oil Capacity : 1.15 L / 0.3 US gal
+Exhaust : Single, stainless steel
+Induction : Electronic fuel injection
+Ignition : TCI (digital)
+Starting : Electric
+Max Power : 11 kW / 15 hp @ 9000 rpm
+Max Torque : 12.4 Nm / 1.25 kgf-m / 9.14 ft-lb
+Clutch : Wet, multi-disc, coil spring
+Transmission : 6-Speed, constant mesh
+Final Drive : Chain
+Frame : Steel Deltabox
+Front Suspension : Upside-down telescopic fork, 41 mm dia.
+Front Wheel Travel : 130 mm / 5.1 in.
+Rear Suspension : Linked monoshock with spring preload adjustment
+Rear Wheel Travel : 114 mm / 4.5 in.
+Front Brakes : Hydraulic, single disc, 292 mm dia.
+Rear Brakes : Hydraulic, single disc, 230 mm dia.
+Front Tyre : 100/80-17 MC
+Rear Tyre : 130/70-17 M
+Caster : 25&#176;
+Trail : 89 mm / 3.5 in.
+Dimensions : Length: 1955 mm / 77.0 in Width: 740 mm / 29.1 in Height: 1040 mm / 40.9 in
+Wheelbase : 1355 mm / 53.3 in
+Ground Clearance : 140 mm / 5.5 in
+Seat Height : 810 mm / 31.9 in
+Wet Weight : 138 kg / 304 lbs
+Fuel Capacity : 11.5 Litres / 3.0 US gal

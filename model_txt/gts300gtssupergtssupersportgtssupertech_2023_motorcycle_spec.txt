@@ -1,0 +1,28 @@
+Model : GTS 300 / GTS Super / GTS Supersport / GTS Supertech
+Years : 2023
+Engine : Four stroke single cylinder, I-Get, SOHC, 3 valves
+Capacity : 278 cc / 18.2 cub-in
+Bore x Stroke : 75 x 63 mm
+Cooling System : Liquid cooled
+Induction : Electronic fuel injection
+Ignition : Magneti Marelli MIUG4 ECU
+Emission : Euro 5
+Starting : Electric
+Max Power : 17.5 kW / 23.8 hp @ 8250 rpm
+Max Torque : 26.7 Nm / 19.7 lb-ft @ 5250 rpm
+Clutch : Automatic centrifugal dry clutch
+Transmission : Automatic CVT
+Final Drive : Belt
+Frame : Sheet steel body with welded reinforcements
+Front Suspension : Single-sided link arm with coil spring and hydraulic monoshock absorber
+Rear Suspension : Dual hydraulic shock absorbers with coil spring with preload with 4 position height adjustment
+Front Brakes : Single 220 mm disc, single Nissin caliper
+Rear Brakes : Single 220 mm disc, single ByBre caliper
+ABS : Standard
+Front Tyre : 110/70 - 12 Tubeless
+Rear Tyre : 130/70 - 12 Tubeless
+Dimensions : Length 1948 mm / 76.7 in Width 754 mm / 29.7 in
+Wheelbase : 1374 mm / 54.1 in
+Seat Height : 790 mm / 31.1 in
+Wet Weight : 157 kg / 347 lbs
+Fuel Capacity : 8.3 Litres / 2.2 US gal

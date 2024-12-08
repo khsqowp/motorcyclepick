@@ -1,0 +1,38 @@
+Model : Scout Bobber
+Years : 2024
+Engine : Four stroke, 60? V-Twin, DOHC, 4 valves per cylinder
+Capacity : 1250 cc / 76 cu in
+Bore x Stroke : 104 x 73.6 mm
+Cooling System : Liquid Cooled
+Lubrication : Semi-Dry Sump
+Compression Ratio : 12.5:1
+Exhaust : 2-into-1
+Induction : Electronic fuel injection, closed loop / 60 mm bore
+Starting : Electric
+Max Power : 107 hp / 79 kW @ 7250 rpm
+Max Torque : 79.7 lb-ft / 108 NM @ 6300 rpm
+Clutch : Wet, multi-plate
+Transmission : 6 Speed constant mesh, foot shift
+Final Drive : Belt, 146 tooth
+Primary Drive : Gear drive wet clutch
+Gear Ratios : 1st 2.760:1, 2nd 1.882:1, 3rd 1.500:1, 4th 1.273:1, 5th 1.125:1, 5th 0.966:1
+Front Suspension : 41 mm Telescopic fork - cartridge type, adjustable
+Front Wheel Travel : 119 mm / 4.7 in
+Rear Suspension : Dual preload adjustable shocks
+Rear Wheel Travel : 50.8 mm / 2.0 in
+Brake System : Individual front and rear control
+Front Brakes : Single 298 mm semi-floating disc with 2 piston caliper
+Rear Brakes : Single 298 mm semi-floating disc with 1 piston caliper
+Front Wheel : Cast 8-spoke 16 in x 3.5 in
+Rear Wheel : Cast 5-spoke 16 in x 3.5 in
+Front Tyre : 130/90B16 67H
+Rear Tyre : 150/80B16 77H
+Rake : 29?
+Trail : 125 mm / 4.9 in
+Dimensions : Length 2207 mm / 86.9 in
+Wheelbase : 1562 mm / 61.5 in
+Seat Height : 649 mm / 25.5 in
+Ground Clearance : 109 mm / 4.3 in
+Dry Weight : 237 kg / 522 lbs
+GVWR : 449 kg / 988 lbs
+Fuel Capacity : 13 Litres / 3.4 US gal

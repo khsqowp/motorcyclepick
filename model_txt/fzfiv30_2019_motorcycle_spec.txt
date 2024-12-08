@@ -1,0 +1,28 @@
+Model : FZ Fi V 3.0
+Years : 2019
+Engine : Four stroke, single cylinder, SOHC, 2 valve
+Capacity : 149cc / 9.09 cu-in
+Bore x Stroke : 57.3 &#215; 57.9 mm
+Cooling System : Air cooled
+Compression Ratio : 9.5:1
+Induction : Fuel Injection
+Lubrication : Wet sump
+Ignition : TCI
+Starting : Electric
+Max Power : kW / 13.2 hp @ 8000 rpm
+Max Torque : 12.8 Nm / lb-ft @ 6000 rpm
+Clutch : Wet, multiple disc
+Transmission : 5 Speed
+Final Drive : Chain
+Frame : Diamond
+Front Suspension : Telescopic fork
+Rear Suspension : Swingarm with monoshock
+Front Brakes : Single 257mm disc 2 piston caliper, single channel ABS
+Rear Brakes : Single disc 1 piston caliper
+Front Tyre : 100/80-17
+Rear Tyre : 140/60-R17
+Wheelbase : 1330 mm / 52.3 in
+Seat Height : 790 mm / 31.1 in
+Ground Clearance : 160 mm / 6.3 in
+Wet Weight : 137 kg / 302 lbs
+Fuel Capacity : 12 Litres / 3.17 US gal

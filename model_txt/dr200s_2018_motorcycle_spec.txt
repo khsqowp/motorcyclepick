@@ -1,0 +1,33 @@
+Model : DR 200S
+Years : 2018-19
+Engine : Four stroke, single cylinder, OHC, 2 valves per cylinder.
+Capacity : 198.5 cc / 12.1 cu in
+Bore x Stroke : 66 x 58.2 mm
+Cooling System : Air cooled
+Lubrication System : Wet sump
+Compression Ratio : 9.4:1
+Induction : Mikuni BST31
+Ignition : Digital CDI
+Spark Plug : NGK DR8EA or DENSO X24ESR-U
+Starting : Electric
+Max Power : 15.5 kW / 20 hp @ 8500 rpm
+Max Torque : 18.6 Nm / 1.9 kgf-m / 13.7 lb-ft @ 7000 rpm
+Clutch : Wet, multi-plate
+Transmission : 5 Speed
+Final Drive : Chain, DID525V9, 110 links
+Frame : Semi-double cradle.
+Front Suspension : Telescopic, oil damped
+Front Wheel Travel : 206 mm / 8.1 in.
+Rear Suspension : Mono shock, oil damped, adjustable preload
+Rear Wheel Travel : 206 mm / 8.1 in
+Front Brakes : Single disc 230 mm
+Rear Brakes : Drum, 130 mm
+Front Tyre : 70/100-21 M/C 44P, tube type
+Rear Tyre : 100/90-18 M/C 56P, tube type
+Dimensions : Length: 2155 mm / 84.8 in Width: 805 mm / 31.7 in Height: 1185 mm / 46.7 in
+Seat Height : 845 mm /33.3 in
+Wheelbase : 1405 mm / 55.3 in
+Ground Clearance : 255 mm / 10.0 in
+Dry Weight : 113 kg / 249 lbs
+Wet Weight : 126 kg / 278 lbs
+Fuel Capacity : 13 Litres / 3.4 US gal / 2.9 Imp gal

@@ -1,0 +1,38 @@
+Model : GSX-S 1000GT / GSX-S 1000GT+
+Years : 2022
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder, TSCC
+Capacity : 999 cc / 60.9 cub-in
+Bore x Stroke : 73.4 x 59.0 mm
+Compression Ratio : 12.2:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Fuel injection with Ride-by-Wire electronic throttle bodies
+Emission : EURO5
+Exhaust : 4-2-1
+Ignition : Electronic ignition (transistorised)
+Starting : Electric
+Max Power : 150 hp / 111.8 kW @ 11000 rpm
+Max Torque : 108 Nm / 79.6 lb-ft @ 9250 rpm
+Clutch : Wet, multi-plate SCAS type
+Transmission : 6 Speed, constant mesh
+Final Drive : Chain, RK525GSH, 525 x 116 links
+Primary Reduction Ratio : 1.553 (73/47)
+Final Reduction Ratio : 2.588 ( 44/17)
+Frame : Aluminium, twin spar
+Front Suspension : Inverted telescopic, coil spring, oil damped
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Link type, single shock, coil spring, oil damped
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2 x 310mm floating discs with Brembo monoblock 4-piston calipers
+Rear Brakes : Single 240 mm disc with Nissin single-piston caliper
+ABS : Standard
+Front Tyre : 120/70ZR17M/C (58W) tubeless
+Rear Tyre : 190/50ZR17M/C (73W) tubeless
+Rake : 25.0&#176;
+Trail : 100 mm / 3.9 in
+Dimensions : Length 2140 mm / 84. 3 in Width 825 mm / 32.5 in Height 1215 mm / 47.5 in
+Wheelbase : 1460 mm / 57.5 in
+Seat Height : 810 mm / 31.9 in
+Ground clearance : 140 mm / 5.5 in
+Wet Weight : 226 kg / 498 lbs
+Fuel Capacity : 19 Litres / 5 US gal

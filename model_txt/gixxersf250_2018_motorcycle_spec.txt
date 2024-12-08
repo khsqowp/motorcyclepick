@@ -1,0 +1,28 @@
+Model : Gixxer SF250
+Years : 2018
+Engine : Four stroke, single cylinder, SOHC, 4 valves
+Capacity : 249 cc / 15.2 cu in
+Bore x Stroke : 76.0 x 54.9 mm
+Cooling System : Oil cooled
+Induction : EFI fuel injection
+Ignition : ECU
+Starting : Electric
+Max Power : 26 hp / 19.3 kW @ 9000 rpm
+Max Torque : 30.6 Nm / 22.6 lb-ft @ 7500 rpm
+Clutch : Wet, multi-plate clutch
+Transmission : 6 Speed
+Final Drive : Chain
+Front Suspension : Telescopic, coil spring, oil damped, non-adjustable forks
+Rear Suspension : Monoshock, Swing arm type
+Front Brakes : Single 300 mm disc 2 piston caliper
+Rear Brakes : Single 240 mm disc 1 piston caliper
+ABS : 2-Channel ABS (Standard)
+Wheels : Cast Alloy
+Front Tyre : 110/70-R17
+Rear Tyre : 150/60-R17
+Dimensions : Length: 2010 mm / 79.1 in Width: 740 mm / 29.1 in Height: 1035 mm / 40.7 in
+Wheelbase : 1345 mm / 52.9 in
+Seat Height : 800 mm / 31.5 in
+Ground Clearance : 165 mm / 6.5 in
+Wet Weight : 161 kg / 355 lbs
+Fuel Capacity : 12 Litres / 3.2 US gal

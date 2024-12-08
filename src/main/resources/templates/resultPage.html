@@ -1,41 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>package com.example.motorcycle.controller;
-
-        import com.example.motorcycle.service.BoardService;
-        import com.example.motorcycle.domain.MotorcycleSpec;
-        import org.springframework.stereotype.Controller;
-        import org.springframework.ui.Model;
-        import org.springframework.web.bind.annotation.PostMapping;
-        import lombok.RequiredArgsConstructor;
-
-        import java.util.List;
-
-        @Controller
-        @RequiredArgsConstructor
-        public class BoardController {
-
-        private final BoardService boardService;
-
-        // 설문조사 결과를 처리하고, resultPage.html로 이동
-        @PostMapping("/resultPage")
-        public String showResultPage(Model model) {
-        // 바이크 추천 리스트를 데이터베이스에서 가져옴
-        List<MotorcycleSpec> recommendedBikes = boardService.getRecommendedBikes();
-
-        // 모델에 데이터를 추가하여 HTML에 전달
-        model.addAttribute("title", "당신을 위한 바이크는?");
-        model.addAttribute("bikes", recommendedBikes);
-
-        // resultPage.html로 이동
-        return "resultPage";
-        }
-        }
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오토바이 상세 정보</title>
+    <link rel="stylesheet" th:href="@{/resultPage.css}">
 </head>
 <body>
+<div class="container">
+        <div class="main-card">
+            <div class="content-wrapper">
+                <div class="main-content">
+                    <!-- 이미지 추가 -->
+                    <img th:src="@{'/images/' + ${motorcycle.brand} + '/' + ${motorcycle.model.replace(' ', '_')} + '.jpg'}"
+                            alt="Motorcycle Image"
+                            class="motorcycle-image" />
+                </div>
+                <div class="side-content"></div>
+            </div>
+        </div>
 
+
+    <div class="motorcycle-info-card">
+        <div class="header-section">
+            <div>
+                <div class="model-header">
+                    <h1 id="section" th:text="${motorcycle.model}"></h1>
+                    <span class="tag" th:if="${motorcycle.adventure > 0}">어드벤처</span>
+                    <span class="tag" th:if="${motorcycle.naked > 0}">네이키드</span>
+                    <span class="tag" th:if="${motorcycle.replica > 0}">스포츠</span>
+                    <span class="tag" th:if="${motorcycle.cruiser > 0}">크루저</span>
+                    <span class="tag" th:if="${motorcycle.tourer > 0}">투어러</span>
+                    <span class="tag" th:if="${motorcycle.scrambler > 0}">스크램블러</span>
+                    <span class="tag" th:if="${motorcycle.offRoad > 0}">오프로드</span>
+                    <span class="tag" th:if="${motorcycle.motard > 0}">모타드</span>
+                    <span class="tag" th:if="${motorcycle.scooter > 0}">스쿠터</span>
+                    <span class="tag" th:if="${motorcycle.classic > 0}">클래식</span>
+                    <span class="tag" th:if="${motorcycle.cafeRacer > 0}">카페레이서</span>
+                </div>
+                <div class="basic-info">
+                    <span th:text="${motorcycle.brand}"></span> |
+                    <span th:text="${#numbers.formatInteger(motorcycle.years, 0) + '년식'}"></span> |
+                    <span class="price" th:text="${#numbers.formatInteger(motorcycle.price, 0, 'COMMA') + '만원'}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            최고출력
+            <span th:text="${#numbers.formatInteger(motorcycle.maxPowerHp, 0, 'COMMA') + 'hp / ' + #numbers.formatInteger(motorcycle.maxPowerRpm, 0, 'COMMA') + 'rpm'}"></span>
+        </div>
+        <div class="stat-card">
+            최대토크
+            <span th:text="${#numbers.formatInteger(motorcycle.maxTorqueNm, 0, 'COMMA') + 'Nm / ' + #numbers.formatInteger(motorcycle.maxTorqueRpm, 0, 'COMMA') + 'rpm'}"></span>
+        </div>
+        <div class="stat-card">
+            연비
+            <span th:text="${#numbers.formatDecimal(motorcycle.mileage, 1, 1) + 'km/l'}"></span>
+        </div>
+        <div class="stat-card">
+            배기량
+            <span th:text="${#numbers.formatInteger(motorcycle.capacity, 0, 'COMMA') + 'cc'}"></span>
+        </div>
+        <div class="stat-card">
+            최고속도
+            <span th:text="${#numbers.formatInteger(motorcycle.topSpeed, 0, 'COMMA') + 'km'}"></span>
+        </div>
+    </div>
+
+    <div class="specs-grid">
+        <div class="specs-card">
+            <h2>엔진 제원</h2>
+            <div class="specs-details">
+                <div class="spec-item">
+                    엔진형식
+                    <span th:text="${motorcycle.engineType}"></span>
+                </div>
+                <div class="spec-item">
+                    배기량
+                    <span th:text="${#numbers.formatInteger(motorcycle.capacity, 0, 'COMMA') + 'cc'}"></span>
+                </div>
+                <div class="spec-item">
+                    압축비
+                    <span th:text="${motorcycle.compressionRatio}"></span>
+                </div>
+                <div class="spec-item">
+                    밸브방식
+                    <span th:text="${motorcycle.engineCamshaft}"></span>
+                </div>
+                <div class="spec-item">
+                    냉각방식
+                    <span th:text="${motorcycle.coolingSystem}"></span>
+                </div>
+                <div class="spec-item">
+                    연료공급방식
+                    <span th:text="${motorcycle.fuelSystem}"></span>
+                </div>
+                <div class="spec-item">
+                    트랜스미션 타입
+                    <span th:text="${motorcycle.transmissionType}"></span>
+                </div>
+                <div class="spec-item">
+                    엔진 형식
+                    <span th:text="${#numbers.formatDecimal(motorcycle.engineStroke,0,0)}"></span>밸브
+                    <span th:if="${motorcycle.engineCylinder == 1}" th:text="'단기통'"></span>
+                    <span th:unless="${motorcycle.engineCylinder == 1}"
+                            th:text="${#numbers.formatDecimal(motorcycle.engineCylinder, 0, 0) + '기통'}"></span>
+                    <span th:text="${motorcycle.engineType}"></span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="specs-card">
+            <h2>제원 및 섀시</h2>
+            <div class="specs-details">
+                <div class="spec-item">
+                    전장 X 전폭 X 전고<br>
+                    <span th:text="${#numbers.formatDecimal(motorcycle.length, 0, 0, 'COMMA') + ' x ' +
+                   #numbers.formatDecimal(motorcycle.width, 0, 0, 'COMMA') + ' x ' +
+                   #numbers.formatDecimal(motorcycle.height, 0, 0, 'COMMA') + ' mm'}"></span>
+                </div>
+
+                <div class="spec-item">
+                    시트고
+                    <span th:text="${#numbers.formatInteger(motorcycle.seatHeight, 0, 'COMMA') + ' mm'}"></span>
+                </div>
+                <div class="spec-item">
+                    휠베이스
+                    <span th:text="${#numbers.formatInteger(motorcycle.wheelbase, 0, 'COMMA') + ' mm'}"></span>
+                </div>
+                <div class="spec-item">
+                    최저지상고
+                    <span th:text="${#numbers.formatInteger(motorcycle.groundClearance, 0, 'COMMA') + ' mm'}"></span>
+                </div>
+                <div class="spec-item">
+                    차량중량
+                    <span th:text="${#numbers.formatInteger(motorcycle.wetWeight, 0, 'COMMA') + ' kg'}"></span>
+                </div>
+                <div class="spec-item">
+                    연료탱크
+                    <span th:text="${#numbers.formatDecimal(motorcycle.fuelCapacity, 1, 1) + ' L'}"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="brake-suspension">
+            <h2>서스펜션 및 제동장치</h2>
+            <div class="specs-details-single">
+                <div class="spec-item">
+                    전륜 브레이크
+                    <span th:text="${#numbers.formatInteger(motorcycle.frontBrakeDiscCount, 0, 'COMMA') + '피스톤 ' + motorcycle.frontBrakeDiscType}"></span>
+                    <span th:text="${#numbers.formatInteger(motorcycle.frontBrakeDiscSize, 0, 'COMMA') + 'mm'}"></span>
+                </div>
+                <div class="spec-item">
+                    후륜 브레이크
+                    <span th:text="${motorcycle.rearBrakeDiscType}"></span>
+                    <span th:text="${#numbers.formatInteger(motorcycle.rearBrakeDiscSize, 0, 'COMMA') + 'mm'}"></span>
+                </div>
+                <div class="spec-item">
+                    타이어 전륜
+                    <span th:text="${#numbers.formatInteger(motorcycle.frontTyreWidth, 0, 'COMMA') + '/' +
+                                   #numbers.formatInteger(motorcycle.frontTyreAspectRatio, 0, 'COMMA') + 'R' +
+                                   #numbers.formatInteger(motorcycle.frontTyreDiameter, 0, 'COMMA')}"></span>
+                    / 타이어 후륜
+                    <span th:text="${#numbers.formatInteger(motorcycle.rearTyreWidth, 0, 'COMMA') + '/' +
+                                   #numbers.formatInteger(motorcycle.rearTyreAspectRatio, 0, 'COMMA') + 'R' +
+                                   #numbers.formatInteger(motorcycle.rearTyreDiameter, 0, 'COMMA')}"></span>
+                </div>
+                <div class="spec-item">
+                    프레임
+                    <span th:text="${motorcycle.frameType + ' / ' + motorcycle.frameMaterial}"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="electronics">
+            <h2>전자장비</h2>
+            <div class="electronics-tags">
+                <span class="tag" th:if="${motorcycle.abs}">ABS</span>
+                <span class="tag" th:if="${motorcycle.tcs}">TCS</span>
+                <span class="tag" th:if="${motorcycle.cruiseControl}">크루즈 컨트롤</span>
+                <span class="tag" th:if="${motorcycle.assistSlipperClutch}">어시스트 슬리퍼 클러치</span>
+                <span class="tag" th:if="${motorcycle.electricScreen}">전동 스크린</span>
+                <span class="tag" th:if="${motorcycle.clutchAssistSystem}">클러치 어시스트</span>
+                <span class="tag" th:if="${motorcycle.imu}">IMU</span>
+                <span class="tag" th:if="${motorcycle.corneringAbs}">코너링 ABS</span>
+                <span class="tag" th:if="${motorcycle.wheelieControl}">윌리 컨트롤</span>
+                <span class="tag" th:if="${motorcycle.ridingModeChange}">라이딩 모드</span>
+                <span class="tag" th:if="${motorcycle.bankingAngleDisplay}">뱅킹 앵글</span>
+                <span class="tag" th:if="${motorcycle.absLevelControl}">ABS 레벨 조절</span>
+                <span class="tag" th:if="${motorcycle.quickshiftUp}">퀵시프트 업</span>
+                <span class="tag" th:if="${motorcycle.quickshiftUpDown}">퀵시프트 업/다운</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 기존 navigation 클래스를 수정 -->
+    <div class="navigation">
+        <a class="nav-btn prev" th:if="${currentIndex > 0}" th:href="@{/results(index=${currentIndex - 1})}">
+            <svg class="nav-icon" viewbox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </a>
+
+        <div class="page-navigation">
+            <input type="number"
+                    class="page-input"
+                    min="1"
+                    th:max="${totalResults}"
+                    th:value="${currentIndex + 1}"
+                    aria-label="페이지 번호 입력">
+            <span class="page-total" th:text="'/ ' + ${totalResults}"></span>
+        </div>
+
+        <a class="nav-btn next" th:if="${currentIndex < totalResults - 1}" th:href="@{/results(index=${currentIndex + 1})}">
+            <svg class="nav-icon" viewbox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </a>
+    </div>
+</div>
+
+<script th:src="@{/js/resultPage.js}"></script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+Model : YZF-R 125
+Years : 2023
+Engine : Four stroke, single cylinder, SOHC, 4 valves
+Capacity : 124.7 cc / 7.6 cu-in
+Bore x Stroke : 52 x 58.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Induction : Electronic fuel Injection
+Emission : EURO5
+Lubrication : Wet sump
+Ignition : TCI
+Starting : Electric
+Max Power : 11 kW / 14.7 hp @ 109000 rpm
+Max Torque : 11.5 Nm / 8.48 lb-ft @ 8000 rpm
+Clutch : Wet, multiple-disc coil spring
+Transmission : 6 Speed, Constant mesh
+Final Drive : Chain
+Frame : Steel Deltabox
+Front Suspension : 41mm Upside-down telescopic fork
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Swingarm, link type suspension
+Rear Wheel Travel : 110 mm / 4.3 in
+Front Brakes : Single 292mm disc
+Rear Brakes : Single 220mm disc
+Front Tyre : 100/80 -17 M/C
+Rear Tyre : 140/70 -17 M/C
+Caster : 26°
+Trail : 95 mm / 3.7 mm
+Dimension : Length 1990 mm / 78.3 in Width 715 mm / 28.1 in Height 1145 mm / 45.0 in
+Wheelbase : 1325 mm / 52.1 in
+Seat Height : 820 mm / 32.2 in
+Ground Clearance : 160 mm / 9.3 in
+Wet Weight : 144 kg / 317.4 lbs
+Fuel Capacity : 11 Litres / 2.9 US gal

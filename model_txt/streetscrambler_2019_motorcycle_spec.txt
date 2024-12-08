@@ -1,0 +1,36 @@
+Model : Street Scrambler
+Years : 2019
+Engine : Four stroke, 270&#176; Crank angle parallel twin, SOHC, 8 valves
+Capacity : 900 cc / 54.9 cu in
+Bore x Stroke : 84.6 x 80 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.0:1
+Lubrication : Wet sump
+Exhaust : Brushed 2-into-2 exhaust system with twin brushed silencers
+Induction : Multipoint sequential electronic fuel injection, Ride by wire
+Emission : EURO 4
+Ignition : Digital
+Starting : Electric
+Max Power : 47.8 kW / 64.1 hp @ 7500 rpm
+Max Torque : 80 Nm / 8.16 kgf-m / 59 lb-ft @ 3800 rpm
+Clutch : Wet, multi-plate assist clutch
+Transmission : 5-Speed
+Final Drive : O ring Chain
+Frame : Tubular steel cradle, Swingarm Twin-sided, tubular steel
+Front Suspension : Kayaba 41 mm fork
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Kayaba twin shocks with adjustable preload
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : Single 310mm floating disc Brembo 4 piston fixed caliper, ABS
+Rear Brakes : Single 255mm disc. Nissin 2-piston floating caliper, ABS
+Wheels Front : Spoked, 2.5 x 19 in
+Wheels Rear : Spoked, 4.25 x 17 in
+Front Tyre : 100/90-19
+Rear Tyre : 150/70 R17
+Rake : 25.6&#176;
+Trail : 109 mm / 4.3 in
+Dimensions : Width: 836 mm / 32.8 in Height: 1180 mm / 46.4 in (without mirrors)
+Wheelbase : 1446 mm / 57.7 in
+Seat Height : 790 mm / 31.1 in
+Dry Weight : 203 kg / 447.5 lbs
+Fuel Capacity : 12 Litres / 3.2 US gal / 2.7 Imp gal

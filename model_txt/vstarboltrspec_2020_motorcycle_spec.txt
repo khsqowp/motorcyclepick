@@ -1,0 +1,26 @@
+Model : V-Star Bolt R Spec
+Years : 2020
+Engine : Four stroke, 60&#176;V-cylinder, SOHC, 4 valve per cylinder
+Capacity : 942 cc / 58-cu-in
+Bore x Stroke : 85 x 83mm
+Cooling System : Air cooled
+Compression Ratio : 9.0:1
+Induction : 35mm dual bore throttle body fuel injection
+Ignition : Digital TCI
+Starting : Electric
+Max Torque : 8.2 kgf-m / 59.3 ft-lb @ 3000rpm
+Transmission : 5 Speed
+Final Drive : Belt
+Front Suspension : 41mm forks, 5.3in wheel travel
+Rear Suspension : Preload adjustable dual shocks
+Front Brakes : Single 298mm disc 2 piston caliper
+Rear Brakes : Single 298mm disc
+Front Tyre : 100/90 -19
+Rear Tyre : 150/80-16
+Rake : 29&#176;
+Trail : 130 mm / 5.1 in
+Dimensions : Length 2290 mm / 90.2 in Width 830 mm / 37.2 in Height 1120 mm / 44.1in
+Wheelbase : 1570 mm / 61.8 in
+Seat Height : 690 mm / 27.2 in
+Wet Weight : 247 kg / 545 lbs
+Fuel Capacity : 12 Litres / 3.1 US gal

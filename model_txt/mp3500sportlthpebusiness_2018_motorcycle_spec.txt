@@ -1,0 +1,31 @@
+Model : MP3 500 Sport LT / HPE Business
+Years : 2018
+Engine : Four stroke, single cylinder, SOHC, 4 valve Piaggio MASTER, catalysedFour stroke, single cylinder, SOHC, 4 valve Piaggio MASTER, catalysed
+Capacity : 492.7 cc / 30.0 cub in.
+Bore x Stroke : 94 x 71 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.0:1
+Lubrication : Wet sump
+Induction : Electronic injection system
+Ignition : Electronic inductive discharge, integrated variable timing
+Starting : Electric
+Max Power : 29.4 kW / 40.1 hp @ 7250 rpm
+Max Toque : 42.2 Nm / 31.2 lb-ft @ 5550 rpm
+Clutch : Automatic centrifugal dry
+Transmission : Twin Cradle: tubes in high tensile steel
+Final Drive : Belt
+Frame : Double cradle in high strength steel tubes
+Front Suspension : Articulated quadrilateral consisting of four aluminum arms sustaining two steering tubes, and leading arm suspension geometry with offset wheel axle. Stroke: 95mm. Electro-hydraulic suspension locking system.
+Front Wheel Travel : 95 mm / 3.7 in
+Rear Suspension : Dual effect hydraulic shock absorbers and adjustable spring pre-load.
+Rear Wheel Travel : 108 mm / 4.2 in
+Front Brakes : 2x 258mm stainless steel discs, One disc brake per wheel, c 2 piston caliper
+Rear Brakes : Single 240mm disc
+ABS : ABS with braking integrated with the pedal
+Front Tyre : 2x 120/70 -13
+Rear Tyre : 140/70 -14
+Dimensions : Length 2160 mm / 85.0 in Width 775 mm / 30.5 in Height 1350 mm / 53.1 in
+Wheelbase : 1549 mm / 61.0 in
+Seat Height : 790 mm / 30.9 in
+Dry Weight : 261 kg / 577 lbs
+Fuel Capacity : 12 Litres / 3.2 US gal

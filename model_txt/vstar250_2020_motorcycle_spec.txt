@@ -1,0 +1,29 @@
+Model : V-Star 250
+Years : 2020
+Engine : Four stroke, V-twin cylinder, SOHC, 2 valves per cylinder.
+Capacity : 249 cc / 15.1 cu/in
+Bore x Stroke : 49 x 66 mm
+Cooling System : Air cooled
+Compression Ratio : 10.0:1
+Lubrication : Wet sump
+Induction : 26mm Mikuni BDS26 carburetor
+Ignition : TCI (Transistor Controlled Ignition)
+Spark P;ug : NGK, CR6HSA
+Starting : Electric
+Max Power : 21 hp / 15.4 kW @ 8000 rpm
+Max Torque : 2.1 kgf-m / 15.2 ft-lb @ 6,000 rpm
+Clutch : Wet, multiple discs, cable operated
+Transmission : 5 Speed
+Final Drive : Chain
+Front Suspension : 33 mm Telescopic fork with 140mm wheel travel.
+Rear Suspension : Dual shock Swinging arm with 100mm wheel travel.
+Front Brakes : Single 282mm disc
+Rear Brakes : 130mm drum
+Front Tyre : 3.00 18
+Rear Tyre : 130/90-15
+Dimensions : Length 2190 mm / 86.2 in Width 710 mm / 28 in Height 1060 mm / 41.7 in
+Wheelbase : 1490 mm / 58.7 in
+Seat Height : 685 mm / 27in
+Dry Weight : 137 kg / 302 lbS
+Wet Weight : 147 kg / 324 lbs
+Fuel Capacity : 9.5 Litres / 2.5 US gal

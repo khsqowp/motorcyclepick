@@ -1,0 +1,35 @@
+Model : XSR 125 Legacy
+Years : 2022
+Engine : Four stroke, single cylinder, SOHC, 4 valve with variable valve actuation
+Capacity : 124 cc / 7.6 cu-in
+Bore x Stroke : 52 x 58.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Induction : Electronic fuel injection
+Emission : EURO5
+Lubrication : Wet sump
+Ignition : TCI
+Starting : Electric
+Max Power : 11 kW / 14.7 hp @ 10000 rpm
+Max Torque : 11.5 Nm / 8.5 lb-ft @ 8000 rpm
+Clutch : Wet multiple-disc
+Transmission : 6 Speed slip-and-assist clutch
+Final Drive : Chain
+Frame : Steel Deltabox
+Front Suspension : 37mm USD telescopic fork
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Monoshock operating on a die-cast aluminium swingarm
+Rear Wheel Travel : 110 mm / 4.3 in
+Front Brakes : Single 267mm disc 2 piston caliper
+Rear Brakes : Single 220mm disc 1 piston caliper
+ABS : Standard
+Front Tyre : 110/70 -17
+Rear Tyre : 140/70 -17
+Caster : 26°
+Trail : 95 mm / 3.7 in
+Dimensions : Length: 1960 mm / 77.1 in Width: 800 mm / 31.5 in Height: 1065 mm / 41.9 in
+Wheelbase : 1330 mm / 52.3 in
+Seat Height : 815 mm / 32 in
+Ground Clearance : 160 mm / 6.2 in
+Wet Weight : 140 kg / 308.6 lbs
+Fuel Capacity : 11 Litres / 2.9 US gal

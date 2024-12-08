@@ -1,0 +1,35 @@
+Model : XSR 700
+Years : 2022
+Engine : Four stroke, parallel twin cylinder, DOHC, 4-valve per cylinder
+Capacity : 689 cc / 42.0 cu-in
+Bore x Stroke : 80.0 x 68.6 mm
+Lubrication : Wet sump
+Cooling System : Liquid cooled
+Compression Ratio : 11.5:1
+Induction : Fuel Injection
+Emission : Euro 5
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : 73.4 hp / 54,0 kW @ 8750 rpm
+Max Torque : 67 Nm / 49.4 lb-ft @ 6500 rpm
+Clutch : Wet, multiple disc
+Transmission : Constant mesh, 6-speed
+Final Drive : Chain
+Frame : Diamond
+Front Suspension : 41mm telescopic fork
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Single shock, adjustable preload, swingarm, link type suspension
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 298mm hydraulic discs
+Rear Brakes : Single 245mm hydraulic disc
+ABS : Standard
+Front Tyre : 120/70 ZR 17M/C(58V) (Tubeless)
+Rear Tyre : 180/55 ZR 17M/C(73V) (Tubeless)
+Caster Angle : 24°30′
+Trail : 90 mm / 3.5 in
+Dimensions : Length 2075 mm / 81.7 in Width 820 mm / 32.2 in Height 1130 mm / 44.5 in
+Wheelbase : 1405 mm / 55.3 in
+Seat Height : 835 mm / 32.8 in
+Ground Clearance : 140 mm / 5.5 in
+Wet Weight : 188 kg ABS / 414.4 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal

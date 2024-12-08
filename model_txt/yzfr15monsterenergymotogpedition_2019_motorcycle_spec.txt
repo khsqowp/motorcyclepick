@@ -1,0 +1,31 @@
+Model : YZF-R15 Monster Energy  MotoGP Edition
+Years : 2019
+Engine : Four stroke, single cylinder, SOHC, 4 valve with variable valve actuation
+Capacity : 155.1 cc / 9.14 cu-in
+Bore x Stroke : 58.0 &#215; 58.7 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.6:1
+Induction : Fuel Injection
+Lubrication : Wet sump
+Ignition : TCI
+Starting : Electric
+Max Power : 14.1 kW / 19 hp @ 10000 rpm
+Max Torque : 14.7 Nm / 40.8 lb-ft @ 8500 rpm
+Clutch : Wet Multiple-disc
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Steel Deltabox
+Front Suspension : Up-sidedown Telescopic fork
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Aluminum swingarm with monoshock
+Rear Wheel Travel : 118 mm / 4.6 in
+Front Brakes : Single 282mm disc 2 piston caliper, ABS
+Rear Brakes : Single 240mm disc 1 piston caliper, ABS
+Front Tyre : 100/80 -17
+Rear Tyre : 140/70 -17
+Caster : 26&#176;
+Trail : 98 mm
+Wheelbase : 1355 mm / 53.3 inc
+Seat Height : 815 mm / 32.1 in
+Wet Weight : 157 kg / 346 lbs
+Fuel Capacity : 11.5 Litres / 3.0 US gal

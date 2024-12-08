@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오류가 발생했습니다 - 16Motorbikes</title>
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --error-color: #dc2626;
+      --success-color: #16a34a;
+      --warning-color: #ca8a04;
+      --background-color: #f8fafc;
+      --text-color: #1e293b;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: var(--background-color);
+      color: var(--text-color);
+    }
+
+    .error-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .error-header {
+      text-align: center;
+      padding: 2rem 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .error-title {
+      font-size: 2rem;
+      color: var(--error-color);
+      margin: 0;
+    }
+
+    .error-subtitle {
+      font-size: 1.25rem;
+      color: #64748b;
+      margin: 0.5rem 0;
+    }
+
+    .error-details {
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      margin: 2rem 0;
+      padding: 1.5rem;
+    }
+
+    .error-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .error-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .error-section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin: 0 0 0.5rem 0;
+    }
+
+    .error-info {
+      background: #f1f5f9;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      font-family: monospace;
+      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+
+    .error-stack-trace {
+      font-size: 0.875rem;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .error-navigation {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.375rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.2s;
+      cursor: pointer;
+    }
+
+    .button-primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background-color: #1d4ed8;
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .status-indicator.error {
+      background-color: #fee2e2;
+      color: var(--error-color);
+    }
+
+    .status-indicator.success {
+      background-color: #dcfce7;
+      color: var(--success-color);
+    }
+
+    .status-indicator.warning {
+      background-color: #fef3c7;
+      color: var(--warning-color);
+    }
+
+    .error-trace-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .error-trace-link:hover {
+      text-decoration: underline;
+    }
+
+    .collapsible {
+      display: none;
+    }
+
+    .collapsible.show {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .error-container {
+        margin: 1rem auto;
+      }
+
+      .error-title {
+        font-size: 1.5rem;
+      }
+
+      .error-subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="error-container">
+  <header class="error-header">
+    <h1 class="error-title">오류가 발생했습니다</h1>
+    <p class="error-subtitle" th:text="${error != null ? error : '처리 중 예기치 않은 오류가 발생했습니다.'}">처리 중 예기치 않은 오류가 발생했습니다.</p>
+  </header>
+
+  <div class="error-details">
+    <!-- 오류 상태 표시 -->
+    <div class="status-indicator error">
+      <span th:text="${status != null ? status : '오류'}">오류</span>
+    </div>
+
+    <!-- 오류 발생 위치 -->
+    <section class="error-section">
+      <h2 class="error-section-title">오류 발생 위치</h2>
+      <div class="error-info">
+        <p>파일: <span th:text="${#strings.isEmpty(errorLocation)} ? '알 수 없음' : ${errorLocation}">알 수 없음</span></p>
+        <p>메소드: <span th:text="${#strings.isEmpty(errorMethod)} ? '알 수 없음' : ${errorMethod}">알 수 없음</span></p>
+        <p>라인: <span th:text="${errorLine != null} ? ${errorLine} : '알 수 없음'">알 수 없음</span></p>
+      </div>
+    </section>
+
+    <!-- 마지막 처리된 데이터 -->
+    <section class="error-section">
+      <h2 class="error-section-title">마지막으로 처리된 데이터</h2>
+      <div class="error-info">
+        <p th:if="${lastProcessedData != null}" th:text="${lastProcessedData}">처리된 데이터가 없습니다.</p>
+        <p th:unless="${lastProcessedData != null}">처리된 데이터가 없습니다.</p>
+      </div>
+    </section>
+
+    <!-- 오류 상세 정보 -->
+    <section class="error-section">
+      <h2 class="error-section-title">오류 상세 정보</h2>
+      <div class="error-info">
+        <p>타입: <span th:text="${errorType != null ? errorType : '알 수 없음'}">알 수 없음</span></p>
+        <p>메시지: <span th:text="${errorMessage != null ? errorMessage : '상세 메시지가 없습니다.'}">상세 메시지가 없습니다.</span></p>
+      </div>
+    </section>
+
+    <!-- 스택 트레이스 -->
+    <section class="error-section">
+      <h2 class="error-section-title">
+        <a class="error-trace-link" onclick="toggleStackTrace()">
+          스택 트레이스 (클릭하여 표시/숨기기)
+        </a>
+      </h2>
+      <div id="stackTrace" class="error-info error-stack-trace collapsible">
+        <pre th:text="${stackTrace != null ? stackTrace : '스택 트레이스를 사용할 수 없습니다.'}">스택 트레이스를 사용할 수 없습니다.</pre>
+      </div>
+    </section>
+  </div>
+
+  <div class="error-navigation">
+    <a href="/static" class="button button-primary">메인으로 돌아가기</a>
+  </div>
+</div>
+
+<script>
+  function toggleStackTrace() {
+    const stackTrace = document.getElementById('stackTrace');
+    stackTrace.classList.toggle('show');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+Model : Scout Rogue
+Years : 2022
+Engine : Four stroke, 60° V-Twin, DOHC, 4 valves per cylinder
+Capacity : 1133 cc / 69 cu-in
+Bore x Stroke : 99 x 73.6 mm
+Cooling System : Liquid
+Lubrication : Semi-dry sump
+Compression Ratio : 10.7:1
+Exhaust : Split dual exhaust with crossover
+Induction : EFI, closed loop fuel injection, 60mm bore
+Starting : Electric
+Max Power : 100 hp / 73.5 kW @ 8100 rpm
+Max Torque : 97 Nm / 72 lb-ft @ 5900 rpm
+Clutch : Wet, multi-plate
+Transmission : 6 Speed, constant mesh
+Final Drive : Belt
+Final Drive Ratio : 2.357:1
+Primary Drive : Gear drive wet clutch
+Gear Ratio : 1st 10.926:1 / 2nd 7.427:1 / 3rd 5.918:1 / 4th 5.022:1 / 5th 4.439:1 / 6th 3.810:1
+Front Suspension : 41mm Telescopic fork
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Dual shocks
+Rear Wheel Travel : 51 mm / 2.0 in
+Front Brakes : Single 298 mm disc with 2 piston caliper
+Rear Brakes : Single 298 mm disc with 1 piston caliper
+ABS : Standard
+Front Wheel : Cast Black 19 in x 3.5 in
+Rear Wheel : Cast Black 16 in x 3.5 in
+Front Tyre : 130/60B19 61H
+Rear Tyre : 150/80R-16
+Rake : 29°
+Trail : 120 mm / 4.7 in
+Dimensions : Length 2223 mm / 87.5 in Width 995 mm / 39.2 in Height 1181 mm / 46.5 in
+Wheelbase : 1576 mm / 62 in
+Seat Height : 649 mm / 25.6 in
+Ground Clearance : 130 mm / 5.1 in
+Dry Weight : 238 kg / 525 lbs
+Wet Weight : 247 kg / 545 lbs
+Fuel Capacity : 12.5 Litres / 3.3 gal

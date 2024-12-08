@@ -1,0 +1,30 @@
+Model : TMAX 560 20th Anniversary Edition
+Years : 2021
+Production : 560 Units
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valves per cylinder
+Capacity : 562 cc / cu-in
+Bore x Stroke : 70 &#215; 73 mm
+Compression Ratio : 10.9:1
+Cooling System : Liquid cooled
+Induction : Fuel injection
+Emission : Euro 5
+Lubrication : Dry sump
+Ignition : TCI/LMAR7G
+Starting : Electric
+Max Power : 47 hp / 35 kW @ 7500 rpm
+Max Torque : 55.7 Nm / 41 lb-ft @ 5250 rpm
+Transmission : V-belt automatic
+Front Suspension : Telescopic forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Swingarm, link suspension
+Rear Wheel Travel : 117 mm / 4.6 in
+Front Brakes : 2x 267mm disc
+Rear Brakes : Single 282mm disc
+Front Tyre : 120/70R15M/C 56H Tubeless
+Rear Tyre : 160/60R15M/C 67H Tubeless
+Dimensions : Length 2200 mm / 86.6 in Width 765 mm / 30.1 in Height 1420 mm / 55.9 in
+Wheelbase : 1575 mm / 62 in
+Seat Height : 800 mm /31.4 in
+Ground Clearance : 125 mm / 4.9 in
+Wet Weight : 220 kg / 485 lbs
+Fuel Capacity : 15 Litres / 4.0 US gal

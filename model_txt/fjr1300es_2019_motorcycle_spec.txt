@@ -1,0 +1,35 @@
+Model : FJR 1300ES
+Years : 2019
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder.
+Capacity : 1298 cc / 79.2 cu-in
+Bore x Stroke : 79 x 66.2 mm
+Compression Ratio : 10.8:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Yamaha Electronic Fuel Injection with YCC-T
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : 105.7 kW / 146.2 hp @ 8000 rpm
+Max Torque : 138 Nm / 14,1kgf-m / 101.8 lb-ft @ 7000 rpm
+Clutch : Wet, multiple discs, hydraulic operated A/ES: Assist -and-Slipper clutch AS: Electronic clutch-less gearshift system
+Transmission : 6 Speed
+Final Drive : Shaft
+Frame : Aluminium, diamond shaped
+Front Suspension : 48mm Upside-down telescopic fork with adjustable preload, compression and rebound damping (AE/AS/ES: Suspension electronically adjustable)
+Front Wheel Travel : 135 mm / 5.3 in
+Rear Suspension : Single shock, link-type, with adjustable preload and rebound damping (AE/AS/ES: Suspension electronically adjustable)
+Rear Wheel Travel : 124 mm / 4.9 in
+Front Brakes : 2 x 320mm discs, 4 piston calipers, unified brake system, ABS
+Rear Brakes : Single 282 mm disc, 2 piston caliper, unified brake system, ABS
+Front Tyre : 120/70 ZR17
+Rear Tyre : 180/55 ZR17
+Dimensions : Length 2230 mm / 87.8 in. Width 749.3 mm / 29.5 in. Height 1455 mm / 57.3 in.
+Wheelbase : 1544.3 mm / 60.8 in
+Ground Clearance : 130 mm / 5.1 in.
+Rake : 26.0&#176;
+Trail : 109 mm / 4.3 in.
+Seat Height : 805 mm - 825.5 mm / 31.7 in - 32.5 in.
+Wet Weight : A: 288 kg / 635 lbs AE/ ES: 292 kg / 644 lbs AS: 296 kg / 653 lbs
+Fuel Capacity : 25 Litres / 6.6 gal
+Oil Tank Capacity : 4.9 L / 10.4 US pts
+Fuel Consumption : 6.5 L/100 km / 15.3 km/l / 36 US mpg
