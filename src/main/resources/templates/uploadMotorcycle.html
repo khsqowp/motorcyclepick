@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>오토바이 등록</title>
+    <style>
+        /* 기존 스타일 유지 */
+        .brand-list, .model-list {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .brand-list td, .model-list td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .brand-list td:hover, .model-list td:hover {
+            background-color: #f5f5f5;
+        }
+        .selected {
+            background-color: #e0e0e0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .section {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #ddd;
+        }
+        .search-result {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .search-item {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .search-item:hover {
+            background-color: #f5f5f5;
+        }
+        .model-name {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* 팝업 관련 새로운 스타일 */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .popup-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+            z-index: 1001;
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .close-button {
+            cursor: pointer;
+            font-size: 24px;
+            color: #666;
+        }
+
+        .image-preview {
+            max-width: 100%;
+            max-height: 300px;
+            margin: 10px 0;
+            border: 1px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .image-preview img {
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+        }
+
+        .upload-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .upload-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<!-- 기존 컨테이너 내용 유지 -->
+<div class="container">
+    <!-- 제조사 섹션 -->
+    <div class="section">
+        <div class="section-title">제조사</div>
+        <table class="brand-list">
+            <tbody>
+            <tr th:each="brand : ${brands}">
+                <td th:text="${brand}"
+                        th:data-brand="${brand}"
+                        th:id="'brand-' + ${brand}"
+                        onclick="selectBrand(this)">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 모델 섹션 -->
+    <div class="section">
+        <div class="section-title">모델</div>
+        <table class="model-list">
+            <tbody id="modelList">
+            <!-- 모델 목록이 여기에 동적으로 로드됩니다 -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 검색 섹션 -->
+    <div class="section">
+        <div class="section-title">색인검색</div>
+        <input type="text" id="searchInput" placeholder="검색어를 입력하세요"
+                onkeyup="searchItems()" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+        <div id="searchResults" class="search-result">
+            <!-- 검색 결과가 여기에 표시됩니다 -->
+        </div>
+    </div>
+</div>
+
+<!-- 이미지 업로드 팝업 -->
+<div id="uploadPopup" class="popup-overlay">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h3>이미지 업로드</h3>
+            <span class="close-button" onclick="closePopup()">&times;</span>
+        </div>
+        <div id="selectedInfo"></div>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="hidden" id="selectedBrand" name="brand">
+            <input type="hidden" id="selectedModel" name="model">
+            <div class="image-preview" id="imagePreview">
+                <p>이미지를 선택하세요</p>
+            </div>
+            <input type="file" id="imageInput" name="image" accept="image/*" style="display: none;"
+                    onchange="previewImage(this)">
+            <button type="button" class="upload-button" onclick="document.getElementById('imageInput').click()">
+                이미지 선택
+            </button>
+            <button type="button" class="upload-button" onclick="uploadImage()" style="float: right;">
+                업로드
+            </button>
+        </form>
+    </div>
+</div>
+
+<script th:inline="javascript">
+    // 기존 스크립트 유지
+    const allBrandsAndModels = {};
+    let currentSelectedBrand = '';
+
+    async function initializeData() {
+        const brands = Array.from(document.querySelectorAll('.brand-list td')).map(td => td.dataset.brand);
+
+        for (const brand of brands) {
+            try {
+                const response = await fetch(`/api/models/${brand}`);
+                const models = await response.json();
+                allBrandsAndModels[brand] = models;
+            } catch (error) {
+                console.error(`Error loading models for ${brand}:`, error);
+            }
+        }
+    }
+
+    function selectBrand(element) {
+        document.querySelectorAll('.brand-list td').forEach(td => {
+            td.classList.remove('selected');
+        });
+        element.classList.add('selected');
+        currentSelectedBrand = element.dataset.brand;
+
+        const models = allBrandsAndModels[currentSelectedBrand] || [];
+        updateModelList(models);
+    }
+
+    function updateModelList(models) {
+        const modelList = document.getElementById('modelList');
+        modelList.innerHTML = '';
+
+        models.forEach(model => {
+            const tr = document.createElement('tr');
+            const td = document.createElement('td');
+            td.textContent = model;
+            td.onclick = () => selectModel(td, model);
+            tr.appendChild(td);
+            modelList.appendChild(tr);
+        });
+    }
+
+    function selectModel(element, model) {
+        document.querySelectorAll('.model-list td').forEach(td => {
+            td.classList.remove('selected');
+        });
+        element.classList.add('selected');
+        showUploadPopup(currentSelectedBrand, model);
+    }
+
+    // 팝업 관련 새로운 함수들
+    function showUploadPopup(brand, model) {
+        document.getElementById('selectedBrand').value = brand;
+        document.getElementById('selectedModel').value = model;
+        document.getElementById('selectedInfo').innerHTML = `
+                <p><strong>브랜드:</strong> ${brand}</p>
+                <p><strong>모델:</strong> ${model}</p>
+            `;
+        document.getElementById('uploadPopup').style.display = 'block';
+        // 이미지 미리보기 초기화
+        document.getElementById('imagePreview').innerHTML = '<p>이미지를 선택하세요</p>';
+    }
+
+    function closePopup() {
+        document.getElementById('uploadPopup').style.display = 'none';
+        document.getElementById('imageInput').value = '';
+    }
+
+    function previewImage(input) {
+        const preview = document.getElementById('imagePreview');
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    async function uploadImage() {
+        const formData = new FormData(document.getElementById('uploadForm'));
+        try {
+            const response = await fetch('/api/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                alert('이미지가 성공적으로 업로드되었습니다.');
+                closePopup();
+            } else {
+                alert('업로드 중 오류가 발생했습니다.');
+            }
+        } catch (error) {
+            console.error('Upload error:', error);
+            alert('업로드 중 오류가 발생했습니다.');
+        }
+    }
+
+    // 검색 기능
+    function searchItems() {
+        const searchText = document.getElementById('searchInput').value.toLowerCase();
+        const searchResults = document.getElementById('searchResults');
+        searchResults.innerHTML = '';
+
+        if (searchText.length < 1) {
+            return;
+        }
+
+        for (const brand in allBrandsAndModels) {
+            const models = allBrandsAndModels[brand];
+
+            if (brand.toLowerCase().includes(searchText)) {
+                const div = document.createElement('div');
+                div.className = 'search-item';
+                div.innerHTML = `<strong>${brand}</strong>`;
+                div.onclick = () => {
+                    const brandElement = document.querySelector(`[data-brand="${brand}"]`);
+                    if (brandElement) {
+                        selectBrand(brandElement);
+                        brandElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                };
+                searchResults.appendChild(div);
+            }
+
+            models.forEach(model => {
+                if (model.toLowerCase().includes(searchText)) {
+                    const div = document.createElement('div');
+                    div.className = 'search-item';
+                    div.innerHTML = `<strong>${brand}</strong> - <span class="model-name">${model}</span>`;
+                    div.onclick = () => {
+                        const brandElement = document.querySelector(`[data-brand="${brand}"]`);
+                        if (brandElement) {
+                            selectBrand(brandElement);
+                            setTimeout(() => {
+                                const modelElements = document.querySelectorAll('.model-list td');
+                                modelElements.forEach(el => {
+                                    if (el.textContent === model) {
+                                        selectModel(el, model);
+                                        el.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                });
+                            }, 100);
+                        }
+                    };
+                    searchResults.appendChild(div);
+                }
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', initializeData);
+</script>
+</body>
+</html>

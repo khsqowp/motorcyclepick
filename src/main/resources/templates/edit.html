@@ -8,7 +8,8 @@
 <body>
 <div class="motorcycle-container">
     <div class="section-container">
-        <h1 class="section-title" th:text="'Edit : '+ ${motorcycleDTO.model}"></h1>
+        <h1 class="section-title" th:text="
+       ${motorcycleDTO.motorcycleID} + ' ) Edit : '+ ${motorcycleDTO.model}"></h1>
 
         <form action="/motorcycle/edit" method="post" class="edit-form">
             <input type="hidden" name="motorcycleID" th:value="${motorcycleDTO.motorcycleID}">

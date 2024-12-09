@@ -22,4 +22,8 @@ public interface MotorcycleMapper {
 
     // 선호도 기반 검색 (기존 코드 유지)
     List<MotorcycleDomain> findByAllRangePreferences(Map<String, Object> params);
+
+    List<String> findDistinctBrands();
+
+    List<String> findModelsByBrand(@Param("brand") String brand);
 }

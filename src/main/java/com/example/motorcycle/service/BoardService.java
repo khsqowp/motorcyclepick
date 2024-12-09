@@ -19,6 +19,29 @@ import java.util.stream.Collectors;
 public class BoardService {
     private final MotorcycleMapper motorcycleMapper;
 
+    //    ___________________________________________________________________________________________________________________________
+
+    public List<String> getDistinctBrands() {
+        try {
+            return motorcycleMapper.findDistinctBrands();
+        } catch (Exception e) {
+            log.error("브랜드 목록 조회 중 오류 발생: ", e);
+            return new ArrayList<>();
+        }
+    }
+
+
+    public List<String> getModelsByBrand(String brand) {
+        try {
+            return motorcycleMapper.findModelsByBrand(brand);
+        } catch (Exception e) {
+            log.error("브랜드별 모델 조회 중 오류 발생: ", e);
+            return new ArrayList<>();
+        }
+    }
+
+//    ___________________________________________________________________________________________________________________________
+
     public List<MotorcycleDomain> getRecommendedBikes(BoardForm boardForm) {
         if (boardForm == null) {
             log.warn("BoardForm이 null입니다.");

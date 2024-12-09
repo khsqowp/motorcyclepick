@@ -113,24 +113,25 @@
 </head>
 <body>
 <!-- 네비게이션 바 -->
-<div class="nav-container">
+<nav class="nav-container">
     <div class="nav-content">
         <div class="logo" th:text="${siteTitle}">16Motorbikes</div>
+        <a href="/uploadMotorcycle" class="upload-btn">오토바이 자랑하기</a>
         <a href="/motorcycle" class="motorcycle-btn">Motorcycle</a>
     </div>
-</div>
+</nav>
 
-<!-- 히어로 섹션 -->
-<div class="hero">
+<main class="hero">
     <div class="text-content">
-        <h2 th:text="${heroText}">드디어 제 스타일의 오토바이를 찾을 수 있어서 정말 기뻐요.</h2>
-        <p class="mb-8" th:text="${heroDescription}">테스트를 통해 자신에게 맞는 오토바이를 추천받아보세요!</p>
+        <h2 id="드디어-제-스타일의-오토바이를-찾을-수-있어서-정말-기뻐요" th:text="${heroText}">
+            드디어 제 스타일의 오토바이를 찾을 수 있어서 정말 기뻐요.
+        </h2>
+        <p>테스트를 통해 자신에게 맞는 오토바이를 추천받아보세요!</p>
         <a href="/surveyMotorcycle" class="btn-primary">검사 실시</a>
     </div>
 
-    <!-- 육각형 애니메이션 -->
     <div class="hexagon-container">
-        <svg viewBox="-175 -175 350 350">  <!-- viewBox 크기 30% 감소 -->
+        <svg viewbox="-175 -175 350 350">
             <defs>
                 <path id="text-path-1" d="M 0,-140 A 140,140 0 0,1 121,-70" />
                 <path id="text-path-2" d="M 121,-70 A 140,140 0 0,1 121,70" />
@@ -141,35 +142,28 @@
             </defs>
 
             <polygon class="hexagon" fill="none" stroke="#fff" stroke-width="2">
-                <animate
-                        attributeName="points"
-                        dur="2s"
-                        fill="freeze"
-                        calcMode="spline"
-                        keySplines="0.4 0 0.2 1; 0.4 0 0.2 1"
-                        values="0,-105 91,-52.5 91,52.5 0,105 -91,52.5 -91,-52.5;
+                <animate attributename="points" dur="2s" fill="freeze" calcmode="spline" keysplines="0.4 0 0.2 1; 0.4 0 0.2 1" values="0,-105 91,-52.5 91,52.5 0,105 -91,52.5 -91,-52.5;
                         0,-140 133,-56 119,63 0,126 -133,66.5 -112,-77;
-                        0,-94.5 82,-47.25 82,47.25 0,94.5 -82,47.25 -82,-47.25"
-                />
+                        0,-94.5 82,-47.25 82,47.25 0,94.5 -82,47.25 -82,-47.25"></animate>
             </polygon>
 
-            <!-- 카테고리 텍스트 위치 조정 -->
-            <text class="text" x="0" y="-108.5">레플리카</text>
-            <text class="text" x="94.5" y="-47.25">멀티퍼포즈</text>
-            <text class="text" x="94.5" y="47.25">클래식</text>
-            <text class="text" x="0" y="108.5">어드벤처</text>
-            <text class="text" x="-94.5" y="47.25">네이키드</text>
-            <text class="text" x="-94.5" y="-47.25">스쿠터</text>
+            <!-- 헥사곤 텍스트 내용 위치 -->
+            <text class="text" x="0" y="-108.5">레이싱바이크</text>
+            <text class="text" x="94.5" y="-47.25">어드벤처투어링</text>
+            <text class="text" x="94.5" y="47.25">네이키드</text>
+            <text class="text" x="0" y="108.5">스트리트바이크</text>
+            <text class="text" x="-94.5" y="47.25">듀얼퍼포스</text>
+            <text class="text" x="-94.5" y="-47.25">스포츠</text>
 
-            <!-- 점들 위치 조정 -->
-            <circle class="text" cx="0" cy="-94.5" r="4" fill="#fff"/>
-            <circle class="text" cx="82" cy="-47.25" r="4" fill="#fff"/>
-            <circle class="text" cx="82" cy="47.25" r="4" fill="#fff"/>
-            <circle class="text" cx="0" cy="94.5" r="4" fill="#fff"/>
-            <circle class="text" cx="-82" cy="47.25" r="4" fill="#fff"/>
-            <circle class="text" cx="-82" cy="-47.25" r="4" fill="#fff"/>
+            <!-- 점들의 위치 -->
+            <circle class="text" cx="0" cy="-94.5" r="4" fill="#fff"></circle>
+            <circle class="text" cx="82" cy="-47.25" r="4" fill="#fff"></circle>
+            <circle class="text" cx="82" cy="47.25" r="4" fill="#fff"></circle>
+            <circle class="text" cx="0" cy="94.5" r="4" fill="#fff"></circle>
+            <circle class="text" cx="-82" cy="47.25" r="4" fill="#fff"></circle>
+            <circle class="text" cx="-82" cy="-47.25" r="4" fill="#fff"></circle>
         </svg>
     </div>
-</div>
+</main>
 </body>
 </html>

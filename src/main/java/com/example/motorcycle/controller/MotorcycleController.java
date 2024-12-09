@@ -36,12 +36,16 @@ public class MotorcycleController {
         return "motorcycle";
     }
 
+//    ___________________________________________________________________________________________________________________________
+
     @GetMapping("/list")
     public String listMotorcycles(Model model) {
         List<MotorcycleDTO> motorcycles = motorcycleService.findFullMotorcycleList();
         model.addAttribute("motorcycles", motorcycles);
         return "list";
     }
+
+    //    ___________________________________________________________________________________________________________________________
 
     @GetMapping("/singleSearchID")
     public String viewMotorcycleById(@RequestParam(value = "id", required = false) Long id, Model model) {
@@ -53,6 +57,8 @@ public class MotorcycleController {
         }
         return "singleSearchID"; // singleSearchID.html 파일을 렌더링
     }
+
+    //    ___________________________________________________________________________________________________________________________
 
     @GetMapping("/new")
     public String createMotorcycleForm(Model model) {
@@ -66,6 +72,8 @@ public class MotorcycleController {
         redirectAttributes.addFlashAttribute("message", "새로운 Motorcycle이 성공적으로 생성되었습니다.");
         return "redirect:/motorcycle/";
     }
+
+    //    ___________________________________________________________________________________________________________________________
 
     @GetMapping("/edit")  // 이건 그대로 유지
     public String editMotorcycle(@RequestParam("editId") Long motorcycleID, Model model) {
@@ -90,6 +98,8 @@ public class MotorcycleController {
         }
     }
 
+    //    ___________________________________________________________________________________________________________________________
+
     // 전체 Motorcycle 리스트를 불러와서 엑셀처럼 수정할 수 있는 페이지로 이동
     @GetMapping("/editList")
     public String editMotorcycleList(Model model) {
@@ -104,6 +114,8 @@ public class MotorcycleController {
         motorcycleService.updateMultipleMotorcycles(forms);
         return "redirect:/motorcycle/list";
     }
+
+    //    ___________________________________________________________________________________________________________________________
 
     @PostMapping("/edit")  // /edit 에서 /update로 변경
     public String updateMotorcycle(@ModelAttribute @Valid MotorcycleForm form, RedirectAttributes redirectAttributes) {
@@ -120,6 +132,8 @@ public class MotorcycleController {
             return "redirect:/motorcycle/";
         }
     }
+
+//    ___________________________________________________________________________________________________________________________
 
     @PostMapping("/delete")
     public String deleteMotorcycle(@ModelAttribute DeleteMotorcycleDTO dto, RedirectAttributes redirectAttributes) {

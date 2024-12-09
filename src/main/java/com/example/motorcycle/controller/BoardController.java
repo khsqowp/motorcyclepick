@@ -2,15 +2,21 @@ package com.example.motorcycle.controller;
 
 import com.example.motorcycle.domain.MotorcycleDomain;
 import com.example.motorcycle.form.BoardForm;
-import com.example.motorcycle.service.BoardService;
+import com.example.motorcycle.service.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/")
@@ -20,6 +26,7 @@ import java.util.List;
 public class BoardController {
 
     private final BoardService boardService;
+    private final ImageService imageService;
 
     @ModelAttribute("boardForm")
     public BoardForm boardForm() {
@@ -31,6 +38,62 @@ public class BoardController {
         }
     }
 
+//    ________________________________________________________________________________________________
+
+    @GetMapping("/api/models/{brand}")
+    @ResponseBody
+    public List<String> getModelsByBrand(@PathVariable String brand) {
+        return boardService.getModelsByBrand(brand);
+    }
+
+    @GetMapping("/uploadMotorcycle")
+    public String showUploadMotorcycle(Model model) {
+        try {
+            List<String> brands = boardService.getDistinctBrands();
+            model.addAttribute("brands", brands);
+            return "uploadMotorcycle";
+        } catch (Exception e) {
+            log.error("오토바이 자랑하기 페이지 로딩 중 오류 발생: ", e);
+            model.addAttribute("error", "페이지 로딩 중 오류가 발생했습니다.");
+            return "error";
+        }
+    }
+
+    @PostMapping("/api/upload")
+    @ResponseBody  // 추가
+    public ResponseEntity<?> uploadImage(
+            @RequestParam("image") MultipartFile file,
+            @RequestParam("brand") String brand,
+            @RequestParam("model") String model) {
+        try {
+            if (file.isEmpty()) {
+                return ResponseEntity.badRequest().body("File is empty");
+            }
+
+            // 파일 타입 검증
+            String contentType = file.getContentType();
+            if (contentType == null || !contentType.startsWith("image/")) {
+                return ResponseEntity.badRequest().body("Only image files are allowed");
+            }
+
+            // 이미지 저장
+            String savedFileName = imageService.saveImage(file, brand, model);
+
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "Image uploaded successfully");
+            response.put("fileName", savedFileName);
+
+            return ResponseEntity.ok(response);
+
+        } catch (Exception e) {
+            log.error("Failed to upload image", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Failed to upload image: " + e.getMessage());
+        }
+    }
+
+
+//    _________________________________________________________________________________________________________
     // 시작 페이지
     @GetMapping("")
     public String startPage(Model model) {
@@ -48,6 +111,8 @@ public class BoardController {
             return "error";
         }
     }
+
+
 
     // 설문조사 페이지
     @GetMapping("/surveyMotorcycle")

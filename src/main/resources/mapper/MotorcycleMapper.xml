@@ -244,6 +244,18 @@
         </delete>
 
 
+    <select id="findDistinctBrands" resultType="string">
+        SELECT DISTINCT brand
+        FROM MotorcycleAll
+        ORDER BY brand
+    </select>
+
+    <select id="findModelsByBrand" parameterType="string" resultType="string">
+        SELECT model
+        FROM MotorcycleAll
+        WHERE brand = #{brand}
+        ORDER BY model
+    </select>
 
     <!-- 아래는 테스트용 매퍼 -->
     <!-- 아래는 테스트용 매퍼 -->
