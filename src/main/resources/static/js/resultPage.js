@@ -1,108 +1,150 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 스크롤 애니메이션
-    const specItems = document.querySelectorAll('.spec-item');
+    const state = {
+        currentImageIndex: 1,
+        totalImages: 0,
+        imagesList: []
+    };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
+    const elements = {
+        container: document.querySelector('.container'),
+        imageContainer: document.querySelector('.slider-image-container'),
+        prevButton: document.getElementById('prevImage'),
+        nextButton: document.getElementById('nextImage'),
+        imageCounter: document.getElementById('imageCounter'),
+        currentImage: document.getElementById('currentImage')
+    };
+
+    function getMotorcycleInfo() {
+        const container = elements.container;
+        if (!container) {
+            console.error('Container element not found');
+            return null;
+        }
+
+        // data-brand 속성과 data-model 속성에서 값을 가져옵니다
+        const brand = container.getAttribute('data-brand');
+        const model = container.getAttribute('data-model');
+
+        console.log('Found motorcycle info:', { brand, model });
+        return { brand, model };
+    }
+
+    function initializeImageElement() {
+        if (!elements.currentImage) {
+            elements.currentImage = document.createElement('img');
+            elements.currentImage.id = 'currentImage';
+            elements.currentImage.alt = 'Motorcycle Image';
+            elements.currentImage.className = 'slider-image';
+            elements.imageContainer.appendChild(elements.currentImage);
+        }
+
+        elements.currentImage.onerror = function() {
+            console.log('Image load error, falling back to no-image');
+            this.src = '/static/images/no-image.jpg';
+            this.onerror = null;
+        };
+    }
+
+    async function fetchImages(brand, model) {
+        try {
+            const formattedBrand = brand.charAt(0).toUpperCase() + brand.slice(1).toLowerCase();
+            console.log(`Fetching images for ${formattedBrand} ${model}`);
+            const response = await fetch(`/api/images/${formattedBrand}/${model}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
-        });
-    }, {
-        threshold: 0.1
-    });
+            const images = await response.json();
+            console.log('Fetched images:', images);
+            return images;
+        } catch (error) {
+            console.error('Error fetching images:', error);
+            return [];
+        }
+    }
 
-    specItems.forEach(item => {
-        observer.observe(item);
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-    });
+    function updateImage() {
+        if (state.imagesList.length > 0) {
+            const info = getMotorcycleInfo();
+            if (!info) return;
 
-    // 통계 카드 호버 효과
-    const statCards = document.querySelectorAll('.stat-card');
+            const formattedBrand = info.brand.charAt(0).toUpperCase() + info.brand.slice(1).toLowerCase();
+            const imagePath = `/static/images/${formattedBrand}/${state.imagesList[state.currentImageIndex - 1]}`;
 
-    statCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-5px)';
-            card.style.transition = 'transform 0.2s ease';
-        });
+            console.log('Updating image to:', imagePath);
+            elements.currentImage.src = imagePath;
+            updateNavigationControls();
+        } else {
+            console.log('No images available to display');
+        }
+    }
 
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-        });
-    });
+    function updateNavigationControls() {
+        if (elements.prevButton && elements.nextButton && elements.imageCounter) {
+            elements.prevButton.style.display = state.totalImages > 1 ? 'block' : 'none';
+            elements.nextButton.style.display = state.totalImages > 1 ? 'block' : 'none';
+            elements.imageCounter.textContent = `${state.currentImageIndex} / ${state.totalImages}`;
+        }
+    }
 
-    // 네비게이션 버튼 스무스 효과
-    const navBtns = document.querySelectorAll('.nav-btn');
-
-    navBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const href = btn.getAttribute('href');
-
-            // 페이지 전환 애니메이션
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.3s ease';
-
-            setTimeout(() => {
-                window.location.href = href;
-            }, 300);
-        });
-    });
-    const pageInput = document.querySelector('.page-input');
-    if (pageInput) {
-        pageInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                const pageNumber = parseInt(this.value);
-                const maxPage = parseInt(this.getAttribute('max'));
-
-                if (pageNumber && pageNumber >= 1 && pageNumber <= maxPage) {
-                    // 페이지 전환 애니메이션
-                    document.body.style.opacity = '0';
-                    document.body.style.transition = 'opacity 0.3s ease';
-
-                    setTimeout(() => {
-                        // index는 0부터 시작하므로 1을 빼줍니다
-                        window.location.href = `/results?index=${pageNumber - 1}`;
-                    }, 300);
+    function setupEventListeners() {
+        if (elements.prevButton) {
+            elements.prevButton.addEventListener('click', () => {
+                if (state.currentImageIndex > 1) {
+                    state.currentImageIndex--;
                 } else {
-                    alert('유효한 페이지 번호를 입력해주세요.');
-                    this.value = this.defaultValue;
+                    state.currentImageIndex = state.totalImages;
                 }
-            }
-        });
+                updateImage();
+            });
+        }
 
-        // 입력값 유효성 검사
-        pageInput.addEventListener('input', function() {
-            const maxPage = parseInt(this.getAttribute('max'));
-            let value = parseInt(this.value);
+        if (elements.nextButton) {
+            elements.nextButton.addEventListener('click', () => {
+                if (state.currentImageIndex < state.totalImages) {
+                    state.currentImageIndex++;
+                } else {
+                    state.currentImageIndex = 1;
+                }
+                updateImage();
+            });
+        }
+    }
 
-            if (value > maxPage) {
-                this.value = maxPage;
-            } else if (value < 1) {
-                this.value = 1;
-            }
+    function preloadImages() {
+        const info = getMotorcycleInfo();
+        if (!info) return;
+
+        const formattedBrand = info.brand.charAt(0).toUpperCase() + info.brand.slice(1).toLowerCase();
+
+        state.imagesList.forEach(imageName => {
+            const img = new Image();
+            img.src = `/images/${formattedBrand}/${imageName}`;
         });
     }
+
+    async function initialize() {
+        const info = getMotorcycleInfo();
+        if (!info) {
+            console.error('Could not get motorcycle info');
+            return;
+        }
+
+        console.log('Initializing with:', info);
+
+        initializeImageElement();
+        setupEventListeners();
+
+        const images = await fetchImages(info.brand, info.model);
+        if (images && images.length > 0) {
+            state.imagesList = images;
+            state.totalImages = images.length;
+            updateImage();
+            preloadImages();
+        }
+    }
+
+    // 앱 시작
+    initialize().catch(error => {
+        console.error('Failed to initialize:', error);
+    });
 });
-
-// CSS 애니메이션을 위한 스타일 추가
-const style = document.createElement('style');
-style.textContent = `
-  .fade-in {
-    animation: fadeIn 0.5s ease forwards;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-`;
-document.head.appendChild(style);

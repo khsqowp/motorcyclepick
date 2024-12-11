@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오토바이 상세 정보</title>
-    <link rel="stylesheet" th:href="@{/resultPage.css}">
+    <link rel="stylesheet" th:href="@{/static/resultPage.css}">
+    <script src="/static/js/resultPage.js"></script>
 </head>
 <body>
-<div class="container">
-        <div class="main-card">
-            <div class="content-wrapper">
-                <div class="main-content">
-                    <!-- 이미지 추가 -->
-                    <img th:src="@{'/images/' + ${motorcycle.brand} + '/' + ${motorcycle.model.replace(' ', '_')} + '.jpg'}"
-                            alt="Motorcycle Image"
-                            class="motorcycle-image" />
+<div class="container" th:data-brand="${motorcycle.brand}" th:data-model="${motorcycle.model}">
+    <div class="main-card">
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div class="slider-container">
+                    <div class="slider-image-container">
+                        <img id="currentImage" alt="Motorcycle Image" class="slider-image" th:src="@{/static/images/no-image.jpg}">
+                    <div class="slider-controls">
+                        <button id="prevImage" class="slider-button">&lt;</button>
+                        <span id="imageCounter" class="slider-counter">1 / 1</span>
+                        <button id="nextImage" class="slider-button">&gt;</button>
+                    </div>
                 </div>
-                <div class="side-content"></div>
             </div>
+            <div class="side-content"></div>
         </div>
-
+    </div>
 
     <div class="motorcycle-info-card">
         <div class="header-section">
@@ -43,32 +48,34 @@
                     <span th:text="${#numbers.formatInteger(motorcycle.years, 0) + '년식'}"></span> |
                     <span class="price" th:text="${#numbers.formatInteger(motorcycle.price, 0, 'COMMA') + '만원'}"></span>
                 </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        배기량
+                        <span th:text="${#numbers.formatInteger(motorcycle.capacity, 0, 'COMMA') + 'cc'}"></span>
+                    </div>
+                    <div class="stat-card">
+                        최고출력
+                        <span th:text="${#numbers.formatInteger(motorcycle.maxPowerHp, 0, 'COMMA') + 'hp / ' + #numbers.formatInteger(motorcycle.maxPowerRpm, 0, 'COMMA') + 'rpm'}"></span>
+                    </div>
+                    <div class="stat-card">
+                        최대토크
+                        <span th:text="${#numbers.formatInteger(motorcycle.maxTorqueNm, 0, 'COMMA') + 'Nm / ' + #numbers.formatInteger(motorcycle.maxTorqueRpm, 0, 'COMMA') + 'rpm'}"></span>
+                    </div>
+                    <div class="stat-card">
+                        연비
+                        <span th:text="${#numbers.formatDecimal(motorcycle.mileage, 1, 1) + 'km/l'}"></span>
+                    </div>
+                    <div class="stat-card">
+                        최고속도
+                        <span th:text="${#numbers.formatInteger(motorcycle.topSpeed, 0, 'COMMA') + 'km'}"></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="stats-grid">
-        <div class="stat-card">
-            최고출력
-            <span th:text="${#numbers.formatInteger(motorcycle.maxPowerHp, 0, 'COMMA') + 'hp / ' + #numbers.formatInteger(motorcycle.maxPowerRpm, 0, 'COMMA') + 'rpm'}"></span>
-        </div>
-        <div class="stat-card">
-            최대토크
-            <span th:text="${#numbers.formatInteger(motorcycle.maxTorqueNm, 0, 'COMMA') + 'Nm / ' + #numbers.formatInteger(motorcycle.maxTorqueRpm, 0, 'COMMA') + 'rpm'}"></span>
-        </div>
-        <div class="stat-card">
-            연비
-            <span th:text="${#numbers.formatDecimal(motorcycle.mileage, 1, 1) + 'km/l'}"></span>
-        </div>
-        <div class="stat-card">
-            배기량
-            <span th:text="${#numbers.formatInteger(motorcycle.capacity, 0, 'COMMA') + 'cc'}"></span>
-        </div>
-        <div class="stat-card">
-            최고속도
-            <span th:text="${#numbers.formatInteger(motorcycle.topSpeed, 0, 'COMMA') + 'km'}"></span>
-        </div>
-    </div>
+
 
     <div class="specs-grid">
         <div class="specs-card">
@@ -106,11 +113,9 @@
                     엔진 형식
                     <span th:text="${#numbers.formatDecimal(motorcycle.engineStroke,0,0)}"></span>밸브
                     <span th:if="${motorcycle.engineCylinder == 1}" th:text="'단기통'"></span>
-                    <span th:unless="${motorcycle.engineCylinder == 1}"
-                            th:text="${#numbers.formatDecimal(motorcycle.engineCylinder, 0, 0) + '기통'}"></span>
+                    <span th:unless="${motorcycle.engineCylinder == 1}" th:text="${#numbers.formatDecimal(motorcycle.engineCylinder, 0, 0) + '기통'}"></span>
                     <span th:text="${motorcycle.engineType}"></span>
                 </div>
-
             </div>
         </div>
 
@@ -119,11 +124,8 @@
             <div class="specs-details">
                 <div class="spec-item">
                     전장 X 전폭 X 전고<br>
-                    <span th:text="${#numbers.formatDecimal(motorcycle.length, 0, 0, 'COMMA') + ' x ' +
-                   #numbers.formatDecimal(motorcycle.width, 0, 0, 'COMMA') + ' x ' +
-                   #numbers.formatDecimal(motorcycle.height, 0, 0, 'COMMA') + ' mm'}"></span>
+                    <span th:text="${#numbers.formatDecimal(motorcycle.length, 0, 0, 'COMMA') + ' x ' + #numbers.formatDecimal(motorcycle.width, 0, 0, 'COMMA') + ' x ' + #numbers.formatDecimal(motorcycle.height, 0, 0, 'COMMA') + ' mm'}"></span>
                 </div>
-
                 <div class="spec-item">
                     시트고
                     <span th:text="${#numbers.formatInteger(motorcycle.seatHeight, 0, 'COMMA') + ' mm'}"></span>
@@ -162,13 +164,9 @@
                 </div>
                 <div class="spec-item">
                     타이어 전륜
-                    <span th:text="${#numbers.formatInteger(motorcycle.frontTyreWidth, 0, 'COMMA') + '/' +
-                                   #numbers.formatInteger(motorcycle.frontTyreAspectRatio, 0, 'COMMA') + 'R' +
-                                   #numbers.formatInteger(motorcycle.frontTyreDiameter, 0, 'COMMA')}"></span>
+                    <span th:text="${#numbers.formatInteger(motorcycle.frontTyreWidth, 0, 'COMMA') + '/' + #numbers.formatInteger(motorcycle.frontTyreAspectRatio, 0, 'COMMA') + 'R' + #numbers.formatInteger(motorcycle.frontTyreDiameter, 0, 'COMMA')}"></span>
                     / 타이어 후륜
-                    <span th:text="${#numbers.formatInteger(motorcycle.rearTyreWidth, 0, 'COMMA') + '/' +
-                                   #numbers.formatInteger(motorcycle.rearTyreAspectRatio, 0, 'COMMA') + 'R' +
-                                   #numbers.formatInteger(motorcycle.rearTyreDiameter, 0, 'COMMA')}"></span>
+                    <span th:text="${#numbers.formatInteger(motorcycle.rearTyreWidth, 0, 'COMMA') + '/' + #numbers.formatInteger(motorcycle.rearTyreAspectRatio, 0, 'COMMA') + 'R' + #numbers.formatInteger(motorcycle.rearTyreDiameter, 0, 'COMMA')}"></span>
                 </div>
                 <div class="spec-item">
                     프레임
@@ -198,7 +196,6 @@
         </div>
     </div>
 
-    <!-- 기존 navigation 클래스를 수정 -->
     <div class="navigation">
         <a class="nav-btn prev" th:if="${currentIndex > 0}" th:href="@{/results(index=${currentIndex - 1})}">
             <svg class="nav-icon" viewbox="0 0 24 24" stroke="currentColor">
@@ -207,12 +204,7 @@
         </a>
 
         <div class="page-navigation">
-            <input type="number"
-                    class="page-input"
-                    min="1"
-                    th:max="${totalResults}"
-                    th:value="${currentIndex + 1}"
-                    aria-label="페이지 번호 입력">
+            <input type="number" class="page-input" min="1" th:max="${totalResults}" th:value="${currentIndex + 1}" aria-label="페이지 번호 입력">
             <span class="page-total" th:text="'/ ' + ${totalResults}"></span>
         </div>
 
@@ -223,7 +215,5 @@
         </a>
     </div>
 </div>
-
-<script th:src="@{/js/resultPage.js}"></script>
 </body>
 </html>

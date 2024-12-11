@@ -7,6 +7,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.nio.file.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -45,6 +47,49 @@ public class ImageService {
         } catch (IOException e) {
             log.error("Failed to save image", e);
             throw new RuntimeException("Failed to save image: " + e.getMessage());
+        }
+    }
+
+    // 모델에 해당하는 모든 이미지들을 찾아서 반환
+    public List<String> getImagesForModel(String brand, String model) {
+        List<String> images = new ArrayList<>();
+        try {
+            Path brandPath = Paths.get(uploadBaseDir, brand);
+            String prefix = model.trim() + "_";
+
+            log.info("========== 이미지 검색 시작 ==========");
+            log.info("검색 브랜드: {}", brand);
+            log.info("검색 모델명: {}", model);
+            log.info("검색할 파일 접두어: {}", prefix);
+            log.info("검색 경로: {}", brandPath.toString());
+
+            try (DirectoryStream<Path> stream = Files.newDirectoryStream(brandPath)) {
+                for (Path entry : stream) {
+                    String fileName = entry.getFileName().toString();
+                    if (fileName.startsWith(prefix) && fileName.endsWith(FILE_EXTENSION)) {
+                        images.add(fileName);
+                        log.info("찾은 이미지: {}", fileName);
+                    } else {
+                        log.debug("스킵된 파일: {} (패턴 불일치)", fileName);
+                    }
+                }
+            }
+
+            log.info("검색된 총 이미지 수: {}", images.size());
+            if (!images.isEmpty()) {
+                log.info("찾은 이미지 목록:");
+                images.forEach(img -> log.info(" - {}", img));
+            } else {
+                log.warn("해당 모델의 이미지를 찾을 수 없습니다.");
+            }
+            log.info("========== 이미지 검색 완료 ==========");
+
+            return images;
+
+        } catch (IOException e) {
+            log.error("이미지 검색 중 오류 발생: {}", e.getMessage());
+            log.error("검색 실패 - 브랜드: {}, 모델: {}", brand, model);
+            return images;
         }
     }
 

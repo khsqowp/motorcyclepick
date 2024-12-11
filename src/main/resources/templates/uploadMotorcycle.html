@@ -128,6 +128,29 @@
         .upload-button:hover {
             background-color: #45a049;
         }
+
+        .return-button-container {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 10;
+        }
+
+        .return-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: black;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s;
+        }
+
+        .return-button:hover {
+            background-color: var(--primary-hover);
+        }
     </style>
 </head>
 <body>
@@ -168,6 +191,11 @@
             <!-- 검색 결과가 여기에 표시됩니다 -->
         </div>
     </div>
+</div>
+
+<!-- 시작 페이지로 돌아가기 버튼 -->
+<div class="return-button-container">
+    <a href="/" class="return-button">시작페이지로 돌아가기</a>
 </div>
 
 <!-- 이미지 업로드 팝업 -->

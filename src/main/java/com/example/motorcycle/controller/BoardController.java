@@ -38,61 +38,6 @@ public class BoardController {
         }
     }
 
-//    ________________________________________________________________________________________________
-
-    @GetMapping("/api/models/{brand}")
-    @ResponseBody
-    public List<String> getModelsByBrand(@PathVariable String brand) {
-        return boardService.getModelsByBrand(brand);
-    }
-
-    @GetMapping("/uploadMotorcycle")
-    public String showUploadMotorcycle(Model model) {
-        try {
-            List<String> brands = boardService.getDistinctBrands();
-            model.addAttribute("brands", brands);
-            return "uploadMotorcycle";
-        } catch (Exception e) {
-            log.error("오토바이 자랑하기 페이지 로딩 중 오류 발생: ", e);
-            model.addAttribute("error", "페이지 로딩 중 오류가 발생했습니다.");
-            return "error";
-        }
-    }
-
-    @PostMapping("/api/upload")
-    @ResponseBody  // 추가
-    public ResponseEntity<?> uploadImage(
-            @RequestParam("image") MultipartFile file,
-            @RequestParam("brand") String brand,
-            @RequestParam("model") String model) {
-        try {
-            if (file.isEmpty()) {
-                return ResponseEntity.badRequest().body("File is empty");
-            }
-
-            // 파일 타입 검증
-            String contentType = file.getContentType();
-            if (contentType == null || !contentType.startsWith("image/")) {
-                return ResponseEntity.badRequest().body("Only image files are allowed");
-            }
-
-            // 이미지 저장
-            String savedFileName = imageService.saveImage(file, brand, model);
-
-            Map<String, String> response = new HashMap<>();
-            response.put("message", "Image uploaded successfully");
-            response.put("fileName", savedFileName);
-
-            return ResponseEntity.ok(response);
-
-        } catch (Exception e) {
-            log.error("Failed to upload image", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Failed to upload image: " + e.getMessage());
-        }
-    }
-
-
 //    _________________________________________________________________________________________________________
     // 시작 페이지
     @GetMapping("")
@@ -300,4 +245,81 @@ public class BoardController {
         log.info("==============================");
         log.info("surveyMotorcycle 문항 완료");
     }
+
+
+
+    //    ________________________________________________________________________________________________
+
+    @GetMapping("/api/images/{brand}/{model}")
+    @ResponseBody
+    public List<String> getImages(@PathVariable String brand, @PathVariable String model) {
+        try {
+            List<String> images = imageService.getImagesForModel(brand, model);
+            log.info("Brand: {}, Model: {} - Found {} images", brand, model, images.size());
+            return images;
+        } catch (Exception e) {
+            log.error("이미지 목록 조회 중 오류 발생: ", e);
+            return new ArrayList<>();
+        }
+    }
+
+    @GetMapping("/uploadMotorcycle")
+    public String showUploadMotorcycle(Model model) {
+        try {
+            List<String> brands = boardService.getDistinctBrands();
+            model.addAttribute("brands", brands);
+            return "uploadMotorcycle";
+        } catch (Exception e) {
+            log.error("오토바이 자랑하기 페이지 로딩 중 오류 발생: ", e);
+            model.addAttribute("error", "페이지 로딩 중 오류가 발생했습니다.");
+            return "error";
+        }
+    }
+
+    @PostMapping("/api/upload")
+    @ResponseBody  // 추가
+    public ResponseEntity<?> uploadImage(
+            @RequestParam("image") MultipartFile file,
+            @RequestParam("brand") String brand,
+            @RequestParam("model") String model) {
+        try {
+            if (file.isEmpty()) {
+                return ResponseEntity.badRequest().body("File is empty");
+            }
+
+            // 파일 타입 검증
+            String contentType = file.getContentType();
+            if (contentType == null || !contentType.startsWith("image/")) {
+                return ResponseEntity.badRequest().body("Only image files are allowed");
+            }
+
+            // 이미지 저장
+            String savedFileName = imageService.saveImage(file, brand, model);
+
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "Image uploaded successfully");
+            response.put("fileName", savedFileName);
+
+            return ResponseEntity.ok(response);
+
+        } catch (Exception e) {
+            log.error("Failed to upload image", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Failed to upload image: " + e.getMessage());
+        }
+    }
+
+    @GetMapping("/api/models/{brand}")
+    @ResponseBody
+    public List<String> getModelsByBrand(@PathVariable String brand) {
+        try {
+            List<String> models = boardService.getModelsByBrand(brand);
+            log.info("Brand: {} - Found {} models", brand, models.size());
+            return models;
+        } catch (Exception e) {
+            log.error("모델 목록 조회 중 오류 발생: ", e);
+            return new ArrayList<>();
+        }
+    }
+
 }
