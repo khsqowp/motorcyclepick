@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.motorcycle.repository.ImagesMapper">
+    <!-- 이미지 정보 저장 (최종 경로로 저장) -->
+    <insert id="insertImage" parameterType="com.example.motorcycle.dto.ImagesDTO" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO images (file_path, instagram_id, custom)
+        VALUES (#{filePath}, #{instagramID}, #{custom})
+    </insert>
+
+    <!-- 인스타그램 계정 정보 저장 -->
+    <insert id="insertInstagram" parameterType="com.example.motorcycle.dto.InstagramDTO" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO instagram_accounts (username)
+        VALUES (#{username})
+    </insert>
+
+    <!-- 파일명으로 이미지 경로 조회 -->
+    <select id="getImagePathByFileName" parameterType="String" resultType="String">
+        SELECT file_path
+        FROM images
+        WHERE file_path LIKE CONCAT('%/', #{fileName})
+    </select>
+
+    <!-- 브랜드와 모델에 해당하는 이미지 목록 조회 -->
+    <select id="getImagesByBrandAndModel" resultType="com.example.motorcycle.dto.ImagesDTO">
+        SELECT id, file_path, instagram_id as instagramID, custom
+        FROM images
+        WHERE file_path LIKE CONCAT('images/', #{brand}, '/', #{model}, '_%')
+    </select>
+
+    <select id="findInstagramByUsername" parameterType="String" resultType="com.example.motorcycle.dto.InstagramDTO">
+        SELECT id, username
+        FROM instagram_accounts
+        WHERE username = #{username}
+    </select>
+
+    <select id="getAllImagePathsByBrandAndModel" resultType="String">
+        SELECT file_path
+        FROM images
+        WHERE file_path LIKE CONCAT(#{brand}, '/', #{model}, '_%')
+        ORDER BY file_path DESC
+    </select>
+
+    <!-- 파일명으로 저장된 이미지 경로들 조회 -->
+    <select id="getStoredPathsByFileName" parameterType="String" resultType="String">
+        SELECT file_path
+        FROM images
+        WHERE file_path LIKE CONCAT('%/', #{fileName})
+    </select>
+
+</mapper>

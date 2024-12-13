@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>오토바이 등록</title>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
     <style>
         /* 기존 스타일 유지 */
         .brand-list, .model-list {
@@ -113,22 +115,6 @@
             object-fit: contain;
         }
 
-        .upload-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-
-        .upload-button:hover {
-            background-color: #45a049;
-        }
-
         .return-button-container {
             position: fixed;
             bottom: 1rem;
@@ -150,6 +136,62 @@
 
         .return-button:hover {
             background-color: var(--primary-hover);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .upload-button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .upload-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -209,17 +251,29 @@
         <form id="uploadForm" enctype="multipart/form-data">
             <input type="hidden" id="selectedBrand" name="brand">
             <input type="hidden" id="selectedModel" name="model">
+
+            <!-- 인스타그램 ID 입력 필드 -->
+            <div class="form-group">
+                <label for="instagramId">인스타그램 ID</label>
+                <input type="text" id="instagramId" name="instagramId" placeholder="@계정명" class="form-control">
+            </div>
+
             <div class="image-preview" id="imagePreview">
                 <p>이미지를 선택하세요</p>
             </div>
-            <input type="file" id="imageInput" name="image" accept="image/*" style="display: none;"
-                    onchange="previewImage(this)">
-            <button type="button" class="upload-button" onclick="document.getElementById('imageInput').click()">
-                이미지 선택
-            </button>
-            <button type="button" class="upload-button" onclick="uploadImage()" style="float: right;">
-                업로드
-            </button>
+
+
+            <!-- 커스텀 여부 체크박스 -->
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="isCustom" name="isCustom">
+                <label for="isCustom">커스텀 여부</label>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="upload-button" onclick="document.getElementById('imageInput').click()">이미지 선택</button>
+                <input type="file" id="imageInput" name="image" accept="image/*" style="display: none;" onchange="previewImage(this)">
+                <button type="button" class="upload-button" onclick="uploadImage()">업로드</button>
+            </div>
         </form>
     </div>
 </div>
@@ -228,6 +282,8 @@
     // 기존 스크립트 유지
     const allBrandsAndModels = {};
     let currentSelectedBrand = '';
+    const instagramId = document.getElementById('instagramId').value;
+    const isCustom = document.getElementById('isCustom').checked;
 
     async function initializeData() {
         const brands = Array.from(document.querySelectorAll('.brand-list td')).map(td => td.dataset.brand);
@@ -306,22 +362,40 @@
     }
 
     async function uploadImage() {
-        const formData = new FormData(document.getElementById('uploadForm'));
+        const form = document.getElementById('uploadForm');
+        const formData = new FormData(form);
+
+        const csrfToken = document.querySelector('meta[name="_csrf"]').content;
+        const csrfHeader = document.querySelector('meta[name="_csrf_header"]').content;
+
         try {
+            const uploadButton = document.querySelector('.upload-button');
+            uploadButton.disabled = true;
+            uploadButton.textContent = '업로드 중...';
+
             const response = await fetch('/api/upload', {
                 method: 'POST',
+                credentials: 'include',  // 'same-origin' 대신 'include' 사용
+                headers: {
+                    [csrfHeader]: csrfToken
+                },
                 body: formData
             });
 
-            if (response.ok) {
-                alert('이미지가 성공적으로 업로드되었습니다.');
-                closePopup();
-            } else {
-                alert('업로드 중 오류가 발생했습니다.');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
+
+            const result = await response.json();
+            alert('이미지가 성공적으로 업로드되었습니다.');
+            closePopup();
         } catch (error) {
             console.error('Upload error:', error);
-            alert('업로드 중 오류가 발생했습니다.');
+            alert(`업로드 실패: ${error.message}`);
+        } finally {
+            const uploadButton = document.querySelector('.upload-button');
+            uploadButton.disabled = false;
+            uploadButton.textContent = '업로드';
         }
     }
 

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+
     const state = {
         currentImageIndex: 1,
         totalImages: 0,

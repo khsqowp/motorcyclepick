@@ -281,7 +281,10 @@ public class BoardController {
     public ResponseEntity<?> uploadImage(
             @RequestParam("image") MultipartFile file,
             @RequestParam("brand") String brand,
-            @RequestParam("model") String model) {
+            @RequestParam("model") String model,
+            @RequestParam(value = "instagramId", required = false) String instagramId,
+            @RequestParam(value = "isCustom", defaultValue = "false") boolean isCustom) {
+
         try {
             if (file.isEmpty()) {
                 return ResponseEntity.badRequest().body("File is empty");
@@ -293,12 +296,24 @@ public class BoardController {
                 return ResponseEntity.badRequest().body("Only image files are allowed");
             }
 
+            // 인스타그램 ID 검증
+            if (instagramId != null && !instagramId.trim().isEmpty()) {
+                if (!instagramId.startsWith("@")) {
+                    instagramId = "@" + instagramId;
+                }
+            }
             // 이미지 저장
-            String savedFileName = imageService.saveImage(file, brand, model);
+            String savedFileName = imageService.saveImage(file, brand, model, instagramId, isCustom);
 
-            Map<String, String> response = new HashMap<>();
+            // 응답 데이터 구성
+            Map<String, Object> response = new HashMap<>();
             response.put("message", "Image uploaded successfully");
             response.put("fileName", savedFileName);
+            response.put("instagramId", instagramId);
+            response.put("isCustom", isCustom);
+
+            log.info("Image upload successful - Brand: {}, Model: {}, Instagram: {}, Custom: {}",
+                    brand, model, instagramId, isCustom);
 
             return ResponseEntity.ok(response);
 

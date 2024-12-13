@@ -3,31 +3,14 @@
 ## To Do
 - [ ] 오토바이 용어사전 페이지 개설
 - [ ] 오토바이 정비주기 페이지 개설
-- [ ] BoardService.java 계산 로직 생성하기
 - [ ] 각 html파일에 대응하는 css 파일 생성하기
-- [ ] 데이터베이스 추가하기
 - [ ] 장르별 점수 재계산 하기
-- [ ] MotoGuzzi 데이터베이스 추가
-- [ ] MV Agusta 데이터베이스 추가
-- [ ] Peugeot 데이터베이스 추가
-- [ ] Piaggio 데이터베이스 추가
-- [ ] Suzuki 데이터베이스 추가
-- [ ] Triumph 데이터베이스 추가
-- [ ] Yamaha 데이터베이스 추가
-- [ ] Bajaj 데이터베이스 추가
-- [ ] Benelli 데이터베이스 추가
-- [ ] CF Moto 데이터베이스 추가
-- [ ] Daelim 데이터베이스 추가
-- [ ] Husqvarna 데이터베이스 추가
-- [ ] Indian 데이터베이스 추가
-- [ ] KYMCO 데이터베이스 추가
-- [ ] Mondial 데이터베이스 추가
-- [ ] Royal Enfield 데이터베이스 추가
-- [ ] Vespa 데이터베이스 추가
-- [ ] Victory 데이터베이스 추가
+- [ ] Controller -> 역할별 파일 나누기
+- 
 
 
-- [ ] 결과 페이지 디자인 코드 수정
+
+- [ ]
 - [ ] 
 - [ ] 
 - [ ] 

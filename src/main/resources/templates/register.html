@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #555;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 2px solid #e1e1e1;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .error-message {
+      color: #dc3545;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.8rem;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #5a6fd6;
+    }
+
+    .link-container {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .link {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .link:hover {
+      color: #5a6fd6;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>회원가입</h2>
+  <form th:action="@{/register}" th:object="${user}" method="post">
+    <div class="form-group">
+      <label for="id">아이디</label>
+      <input type="text" id="id" th:field="*{id}" placeholder="아이디를 입력하세요" required/>
+      <span th:if="${#fields.hasErrors('id')}" th:errors="*{id}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" th:field="*{password}" placeholder="비밀번호를 입력하세요" required/>
+      <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="email">이메일</label>
+      <input type="email" id="email" th:field="*{email}" placeholder="example@email.com" required/>
+      <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">전화번호</label>
+      <input type="tel" id="phoneNumber" th:field="*{phoneNumber}" placeholder="010-0000-0000"/>
+      <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="instagram">인스타그램</label>
+      <input type="text" id="instagram" th:field="*{instagram}" placeholder="@username"/>
+      <span th:if="${#fields.hasErrors('instagram')}" th:errors="*{instagram}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn">가입하기</button>
+    </div>
+    <div class="link-container">
+      <a th:href="@{/login}" class="link">이미 계정이 있으신가요? 로그인</a>
+    </div>
+  </form>
+</div>
+</body>
+</html>

@@ -1,37 +1,47 @@
-HELP.md
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IDE 설정 파일
+.idea/
 *.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
 .vscode/
+
+# 빌드 결과물
+build/
+out/
+bin/
+*.class
+target/
+
+# Gradle 관련
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+# 프로퍼티 파일 (민감한 정보 포함)
+application-local.properties
+application-docker.properties
+application.properties
+
+# 로그 파일
+*.log
+logs/
+
+# 데이터베이스 관련 파일
+*.db
+sqlQueryBackup.txt
+
+# 테스트 결과물
+test-output/
+
+# 기타 민감한 파일들
+Database_Input.md
+HELP.md
+report.md
+
+# OS 관련 파일
+.DS_Store
+Thumbs.db
+
+# 임시 파일
+*.tmp
+*.temp
+*.swp
