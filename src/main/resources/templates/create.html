@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Create New Motorcycle</title>
@@ -11,6 +12,8 @@
         <h1 class="section-title">Create New Motorcycle</h1>
 
         <form action="/motorcycle/create" method="post" class="create-form">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
             <div class="details-section">
                 <h2 class="section-title">Motorcycle Details</h2>
                 <div class="info-grid">

@@ -1,47 +1,87 @@
 package com.example.motorcycle.service;
 
+import com.example.motorcycle.config.SecurityLogger;
 import com.example.motorcycle.domain.User;
 import com.example.motorcycle.repository.UserMapper;
-import org.hibernate.validator.internal.util.stereotypes.Lazy;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
 import java.util.Collections;
 
 @Service
 public class UserService implements UserDetailsService {
     private final UserMapper userMapper;
     private final PasswordEncoder passwordEncoder;
+    private final SecurityLogger securityLogger;
 
-    // @Lazy 어노테이션이 잘못된 패키지에서 임포트됨
-    public UserService(UserMapper userMapper, @org.springframework.context.annotation.Lazy PasswordEncoder passwordEncoder) {
+    public UserService(UserMapper userMapper, @org.springframework.context.annotation.Lazy PasswordEncoder passwordEncoder, SecurityLogger securityLogger) {
         this.userMapper = userMapper;
         this.passwordEncoder = passwordEncoder;
+        this.securityLogger = new SecurityLogger();
     }
 
     @Override
     public UserDetails loadUserByUsername(String id) throws UsernameNotFoundException {
-        // userId 대신 username으로 파라미터 이름 변경 (Spring Security 표준)
-        User user = userMapper.findById(id);  // 메서드 이름도 일관성 있게 변경
-        if (user == null) {
-            throw new UsernameNotFoundException("User not found with id: " + id);
-        }
+        try {
+            User user = userMapper.findById(id);
+            if (user == null) {
+                securityLogger.logSecurityEvent("USER_NOT_FOUND",
+                        id,
+                        ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+                );
+                throw new UsernameNotFoundException("User not found with id: " + id);
+            }
 
-        return new org.springframework.security.core.userdetails.User(
-                user.getId(),  // getId() 대신 getUsername() 사용
-                user.getPassword(),
-                Collections.singletonList(new SimpleGrantedAuthority(user.getRole()))
-        );
+            securityLogger.logSecurityEvent("USER_LOGIN_SUCCESS",
+                    id,
+                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+            );
+
+            return new org.springframework.security.core.userdetails.User(
+                    user.getId(),
+                    user.getPassword(),
+                    Collections.singletonList(new SimpleGrantedAuthority(user.getRole()))
+            );
+        } catch (Exception e) {
+            securityLogger.logSecurityEvent("USER_LOGIN_FAILURE",
+                    id,
+                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+            );
+            throw e;
+        }
     }
 
     public void registerUser(User user) {
-        // 아이디 중복 체크
-        if (userMapper.findById(user.getId()) != null) {
-            throw new RuntimeException("이미 존재하는 아이디입니다.");
+        try {
+            if (userMapper.findById(user.getId()) != null) {
+                securityLogger.logSecurityEvent("USER_REGISTER_DUPLICATE",
+                        user.getId(),
+                        ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+                );
+                throw new RuntimeException("이미 존재하는 아이디입니다.");
+            }
+
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+            user.setRole("ROLE_USER");
+            userMapper.insertUser(user);
+
+            securityLogger.logSecurityEvent("USER_REGISTER_SUCCESS",
+                    user.getId(),
+                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+            );
+        } catch (Exception e) {
+            securityLogger.logSecurityEvent("USER_REGISTER_FAILURE",
+                    user.getId(),
+                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+            );
+            throw e;
         }
-        userMapper.insertUser(user);
     }
 }

@@ -14,6 +14,46 @@ body {
     padding: 20px;
     line-height: 1.6;
 }
+.section-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--razer-green);
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    position: relative;
+}
+
+/* 타이틀과 버튼을 포함하는 영역에 대한 스타일 수정 */
+.section-title {
+    display: inline-block; /* inline-block으로 변경 */
+    margin-right: 20px; /* 버튼과의 간격 */
+}
+
+.back-button {
+    float: right; /* 오른쪽 정렬 */
+    background-color: transparent;
+    color: var(--razer-green);
+    border: 1px solid var(--razer-green);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: var(--terminal-font);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin-top: 20px; /* 타이틀과 같은 높이로 조정 */
+}
+
+.back-button::before {
+    content: "< ";
+    opacity: 0.7;
+}
+
+.back-button:hover {
+    background-color: var(--razer-green);
+    color: var(--razer-dark);
+    box-shadow: 0 0 15px var(--razer-green);
+    text-decoration: none;
+}
 
 .image-container {
     max-width: 1200px;

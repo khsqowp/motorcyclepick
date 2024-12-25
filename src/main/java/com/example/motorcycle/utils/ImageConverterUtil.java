@@ -8,48 +8,61 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
 @Component
 public class ImageConverterUtil {
+    private static final int MAX_WIDTH = 1920;
+    private static final int MAX_HEIGHT = 1080;
+    private static final long MAX_PROCESSING_TIME = 30000; // 30초
 
-    /**
-     * 다양한 이미지 형식을 JPG로 변환합니다.
-     *
-     * @param originalFile 원본 MultipartFile
-     * @return 변환된 JPG 형식의 MultipartFile
-     * @throws IOException 파일 처리 중 오류 발생시
-     */
     public MultipartFile convertToJpg(MultipartFile originalFile) throws IOException {
-        byte[] imageBytes = originalFile.getBytes();
-        BufferedImage originalImage = ImageIO.read(new ByteArrayInputStream(imageBytes));
+        long startTime = System.currentTimeMillis();
 
-        if (originalImage == null) {
-            throw new IOException("Failed to read image file");
+        try {
+            BufferedImage originalImage = ImageIO.read(new ByteArrayInputStream(originalFile.getBytes()));
+            if (originalImage == null) {
+                throw new IOException("Invalid image file");
+            }
+
+            // 이미지 크기 검증
+            if (originalImage.getWidth() > MAX_WIDTH || originalImage.getHeight() > MAX_HEIGHT) {
+                throw new IllegalArgumentException("Image dimensions exceed maximum allowed size");
+            }
+
+            // 메모리 사용량 모니터링
+            Runtime runtime = Runtime.getRuntime();
+            if (runtime.freeMemory() < originalFile.getSize() * 3) {
+                throw new OutOfMemoryError("Insufficient memory for image processing");
+            }
+
+            BufferedImage jpgImage = new BufferedImage(
+                    originalImage.getWidth(),
+                    originalImage.getHeight(),
+                    BufferedImage.TYPE_INT_RGB
+            );
+
+            jpgImage.createGraphics().drawImage(originalImage, 0, 0, null);
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+            if (System.currentTimeMillis() - startTime > MAX_PROCESSING_TIME) {
+                throw new TimeoutException("Image processing exceeded maximum allowed time");
+            }
+
+            if (!ImageIO.write(jpgImage, "jpg", outputStream)) {
+                throw new IOException("Failed to convert image to JPG format");
+            }
+
+            return new MockMultipartFile(
+                    "converted.jpg",
+                    "converted.jpg",
+                    "image/jpeg",
+                    outputStream.toByteArray()
+            );
+        } catch (OutOfMemoryError e) {
+            throw new IOException("Memory limit exceeded during image processing", e);
+        } catch (TimeoutException e) {
+            throw new RuntimeException(e);
         }
-
-        // RGB 이미지로 변환
-        BufferedImage jpgImage = new BufferedImage(
-                originalImage.getWidth(),
-                originalImage.getHeight(),
-                BufferedImage.TYPE_INT_RGB
-        );
-
-        // 이미지 그리기 (배경색 흰색)
-        jpgImage.createGraphics().drawImage(originalImage, 0, 0, null);
-
-        // JPG로 변환
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        boolean success = ImageIO.write(jpgImage, "jpg", outputStream);
-
-        if (!success) {
-            throw new IOException("Failed to convert image to JPG format");
-        }
-
-        return new MockMultipartFile(
-                "converted.jpg",
-                "converted.jpg",
-                "image/jpeg",
-                outputStream.toByteArray()
-        );
     }
 }

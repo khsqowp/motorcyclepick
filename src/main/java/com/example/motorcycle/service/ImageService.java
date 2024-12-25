@@ -18,6 +18,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//import static sun.font.CreatedFontTracker.MAX_FILE_SIZE;
+
 @Service
 @Slf4j
 @RequiredArgsConstructor
@@ -25,14 +27,17 @@ public class ImageService {
     private final ImagesMapper imagesMapper;
     private final ImageConverterUtil imageConverterUtil;
 
+    private static final long MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 
-    @Value("${image.upload.directory:src/main/resources/static/images}")
+
+
+    @Value("${images.path}")
     private String uploadBaseDir;
 
-    @Value("${image.temp.directory:${image.upload.directory}/temp}")
+    @Value("${image.temp.directory}")
     private String tempDir;
 
-    @Value("${image.trashcan.directory:src/main/resources/static/images/TrashCan}")
+    @Value("${image.trashcan.directory:${images.path}/TrashCan}")
     private String trashcanDir;
 
 
@@ -44,60 +49,32 @@ public class ImageService {
     @Transactional
     public String saveImage(MultipartFile file, String brand, String model, String username, boolean isCustom) {
         try {
-            String originalFilename = file.getOriginalFilename();
-            if (originalFilename == null || originalFilename.isEmpty()) {
-                throw new IllegalArgumentException("Invalid file name");
+            validateImageSecurity(file);
+            sanitizeInputParameters(brand, model, username);
+
+            if (!validateBrandModel(brand, model)) {
+                throw new SecurityException("Invalid brand or model");
             }
 
-            MultipartFile jpgFile = imageConverterUtil.convertToJpg(file);
-
-            // 파일 확장자 검증 추가
-            validateFileExtension(jpgFile.getOriginalFilename());
-
-            // 다음 사용 가능한 파일 번호 찾기
-            int nextNumber = findNextAvailableNumber(Paths.get(uploadBaseDir, brand), model);
-
-            // 파일명 생성 (예: model_0001.jpg)
-            String fileName = String.format("%s_%s%s",
-                    model,
-                    String.format(NUMBER_FORMAT, nextNumber),
-                    FILE_EXTENSION);
-
-            // 브랜드 폴더 경로 생성
+            String secureFileName = generateSecureFilename(model, brand);
             Path tempPath = Paths.get(tempDir);
             createDirectoryIfNotExists(tempPath);
-            Path tempFilePath = tempPath.resolve(fileName);
+
+            Path tempFilePath = tempPath.resolve(secureFileName);
+            validatePathTraversal(tempFilePath);
+
             Files.copy(file.getInputStream(), tempFilePath, StandardCopyOption.REPLACE_EXISTING);
 
-            //Instagram 계정 처리
-            Integer instagramId = null;
-            if (username != null && !username.trim().isEmpty()) {
-                InstagramDTO existingInstagram = imagesMapper.findInstagramByUsername(username);
-                if (existingInstagram != null) {
-                    instagramId = existingInstagram.getId();
-                } else {
-                    InstagramDTO instagramDTO = new InstagramDTO();
-                    instagramDTO.setUsername(username);
-                    imagesMapper.insertInstagram(instagramDTO);
-                    instagramId = instagramDTO.getId();
-                }
-            }
+            Integer instagramId = processInstagramUsername(username);
+            saveImageMetadata(brand, secureFileName, instagramId, isCustom);
 
-            // DB에 최종 경로로 저장
-            ImagesDTO imagesDTO = new ImagesDTO();
-            imagesDTO.setFilePath( brand + "/" + fileName);
-            imagesDTO.setInstagramID(instagramId);
-            imagesDTO.setCustom(isCustom);
-            imagesMapper.insertImage(imagesDTO);
-
-            log.info("Image saved to temp: {}", tempFilePath);
-            log.info("Final path will be: {}/{}", brand, fileName);
-
-            return fileName;
-
+            return secureFileName;
         } catch (IOException e) {
-            log.error("Failed to save image", e);
-            throw new RuntimeException("Failed to save image: " + e.getMessage());
+            log.error("IO error during image upload", e);
+            throw new SecurityException("Security check failed: " + e.getMessage());
+        } catch (Exception e) {
+            log.error("Security violation in image upload", e);
+            throw new SecurityException("Security check failed: " + e.getMessage());
         }
     }
 
@@ -227,6 +204,35 @@ public class ImageService {
         }
     }
 
+    private Integer processInstagramUsername(String username) {
+        if (username == null || username.trim().isEmpty()) {
+            return null;
+        }
+
+        try {
+            InstagramDTO existingInstagram = imagesMapper.findInstagramByUsername(username);
+            if (existingInstagram != null) {
+                return existingInstagram.getId();
+            }
+
+            InstagramDTO instagramDTO = new InstagramDTO();
+            instagramDTO.setUsername(username);
+            imagesMapper.insertInstagram(instagramDTO);
+            return instagramDTO.getId();
+        } catch (Exception e) {
+            log.error("Instagram 계정 처리 중 오류 발생", e);
+            return null;
+        }
+    }
+
+    private void saveImageMetadata(String brand, String secureFileName, Integer instagramId, boolean isCustom) {
+        ImagesDTO imagesDTO = new ImagesDTO();
+        imagesDTO.setFilePath(brand + "/" + secureFileName);
+        imagesDTO.setInstagramID(instagramId);
+        imagesDTO.setCustom(isCustom);
+        imagesMapper.insertImage(imagesDTO);
+    }
+
 //    ______________________________________________________________________________________________________________________
 // 승인 대기 중인 이미지 정보 조회
 public List<Map<String, String>> getPendingImages() {
@@ -240,14 +246,26 @@ public List<Map<String, String>> getPendingImages() {
                     List<String> storedPaths = imagesMapper.getStoredPathsByFileName(fileName);
 
                     if (!storedPaths.isEmpty()) {
-                        String storedPath = storedPaths.get(0);  // 첫 번째 경로 사용
+                        String storedPath = storedPaths.get(0);
                         Map<String, String> imageInfo = new HashMap<>();
-                        String[] pathParts = storedPath.split("/");
 
-                        imageInfo.put("fileName", fileName);
-                        imageInfo.put("brand", pathParts[1]);
-                        imageInfo.put("model", pathParts[2].split("_")[0]);
-                        pendingImages.add(imageInfo);
+                        // images/ 접두어 제거
+                        if (storedPath.startsWith("images/")) {
+                            storedPath = storedPath.substring(7);
+                        }
+
+                        // 첫 번째 '/'까지가 브랜드명
+                        int brandEndIndex = storedPath.indexOf('/');
+                        if (brandEndIndex != -1) {
+                            String brand = storedPath.substring(0, brandEndIndex);
+                            // 파일명에서 브랜드명과 모델명 추출
+                            String model = fileName.substring(0, fileName.lastIndexOf('_'));
+
+                            imageInfo.put("fileName", fileName);
+                            imageInfo.put("brand", brand);
+                            imageInfo.put("model", model);
+                            pendingImages.add(imageInfo);
+                        }
                     }
                 }
             }
@@ -278,6 +296,118 @@ public List<Map<String, String>> getPendingImages() {
         } catch (IOException e) {
             log.error("Failed to reject image", e);
             throw new RuntimeException("Failed to reject image: " + e.getMessage());
+        }
+    }
+
+    private void validateImageSecurity(MultipartFile file) {
+        if (file == null || file.isEmpty()) {
+            throw new SecurityException("Empty file detected");
+        }
+
+        // 파일 크기 검증 (10MB)
+        if (file.getSize() > MAX_FILE_SIZE) {
+            throw new SecurityException("File size exceeds maximum limit");
+        }
+
+        // MIME 타입 검증 강화
+        String contentType = file.getContentType();
+        if (contentType == null || !(contentType.equals("image/jpeg") ||
+                contentType.equals("image/jpg") ||
+                contentType.equals("image/png"))) {
+            throw new SecurityException("Invalid file type");
+        }
+
+        // 파일명 보안 검증 강화
+        String fileName = file.getOriginalFilename();
+        if (fileName == null || fileName.contains("..") ||
+                fileName.contains("/") ||
+                !fileName.matches("^[a-zA-Z0-9\\-_\\.]{1,100}$")) {
+            throw new SecurityException("Invalid filename detected");
+        }
+    }
+
+    private void sanitizeInputParameters(String brand, String model, String username) {
+        if (brand == null || model == null ||
+                !brand.matches("^[a-zA-Z0-9\\-_]{1,50}$") ||
+                !model.matches("^[a-zA-Z0-9\\-_]{1,50}$")) {
+            throw new SecurityException("Invalid input parameters");
+        }
+
+        // Instagram ID의 유효성 검사 규칙 완화:
+        // 1. @로 시작하는 것은 선택적 (@가 없어도 됨)
+        // 2. 영숫자와 밑줄, 마침표를 허용
+        // 3. 길이는 1-50자로 제한
+        if (username != null && !username.trim().isEmpty() &&
+                !username.matches("^@?[a-zA-Z0-9._]{1,50}$")) {
+            throw new SecurityException("Invalid username format");
+        }
+    }
+
+    private boolean validateBrandModel(String brand, String model) {
+        if (brand == null || model == null) {
+            return false;
+        }
+
+        // 기본적인 문자열 검증
+        if (!brand.matches("^[a-zA-Z0-9\\s\\-_]{1,50}$") ||
+                !model.matches("^[a-zA-Z0-9\\s\\-_]{1,50}$")) {
+            return false;
+        }
+
+        // 경로 순회 공격 방지
+        if (brand.contains("..") || model.contains("..") ||
+                brand.contains("/") || model.contains("/")) {
+            return false;
+        }
+
+        // DB에서 유효성 검증
+        return imagesMapper.isValidBrandModel(brand, model);
+    }
+
+    private String generateSecureFilename(String model, String brand) {
+        try {
+            List<String> existingPaths = imagesMapper.getAllImagePathsByBrandAndModel(brand, model);
+            int maxNumber = 0;
+
+            for (String path : existingPaths) {
+                String fileName = Paths.get(path).getFileName().toString();
+                String numberStr = fileName.substring(fileName.lastIndexOf('_') + 1, fileName.lastIndexOf('.'));
+                try {
+                    int number = Integer.parseInt(numberStr);
+                    maxNumber = Math.max(maxNumber, number);
+                } catch (NumberFormatException ignored) {}
+            }
+
+            return String.format("%s_%04d%s",
+                    model.replaceAll("[^a-zA-Z0-9\\-_]", ""),
+                    maxNumber + 1,
+                    FILE_EXTENSION);
+        } catch (Exception e) {
+            log.error("파일명 생성 중 오류 발생", e);
+            return model + "_0001" + FILE_EXTENSION;
+        }
+    }
+
+    private void validatePathTraversal(Path path) {
+        String normalizedPath = path.normalize().toString();
+        if (!normalizedPath.startsWith(uploadBaseDir) &&
+                !normalizedPath.startsWith(tempDir) &&
+                !normalizedPath.startsWith(trashcanDir)) {
+            throw new SecurityException("Path traversal attempt detected");
+        }
+    }
+
+    private void validateFileOperations(Path sourcePath, Path targetPath) {
+        validatePathTraversal(sourcePath);
+        validatePathTraversal(targetPath);
+
+        // 파일 크기 검증
+        try {
+            if (Files.size(sourcePath) > MAX_FILE_SIZE) {
+                throw new SecurityException("File size exceeds maximum limit");
+            }
+        } catch (IOException e) {
+            throw new SecurityException("Unable to validate file size");
         }
     }
 }

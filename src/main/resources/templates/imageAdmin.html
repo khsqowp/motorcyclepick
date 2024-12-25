@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
   <meta charset="UTF-8">
   <title>이미지 관리</title>
@@ -9,9 +10,12 @@
   <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
 </head>
 <body>
+
 <div class="image-container">
   <div class="section-container">
     <h1 class="section-title">이미지 관리 콘솔</h1>
+
+    <a href="/motorcycle" class="back-button">관리자 페이지로 돌아가기</a>
 
     <div th:if="${#lists.isEmpty(images)}" class="message">
       처리할 이미지가 없습니다.

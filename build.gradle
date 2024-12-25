@@ -27,7 +27,8 @@ dependencies {
 	// ===== 2. 보안 관련 의존성 =====
 	// 인증, 권한 부여 등 보안 기능 구현
 	implementation 'org.springframework.boot:spring-boot-starter-security'         // 스프링 시큐리티 기본 기능
-	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5:3.0.4.RELEASE'        // 타임리프에서 시큐리티 기능 사용
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'		   // 타임리프에서 시큐리티 기능 사용
+
 
 	// ===== 3. 데이터 액세스 의존성 =====
 	// 데이터베이스 연동 및 ORM 관련

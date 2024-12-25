@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -113,6 +114,8 @@
 <div class="container">
   <h2>회원가입</h2>
   <form th:action="@{/register}" th:object="${user}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
     <div class="form-group">
       <label for="id">아이디</label>
       <input type="text" id="id" th:field="*{id}" placeholder="아이디를 입력하세요" required/>

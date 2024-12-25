@@ -23,4 +23,7 @@ public interface ImagesMapper {
 
     List<String> getStoredPathsByFileName(String fileName);
 
+    boolean isValidBrandModel(String brand, String model);
+
+
 }

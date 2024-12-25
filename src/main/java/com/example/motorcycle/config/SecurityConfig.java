@@ -2,8 +2,6 @@ package com.example.motorcycle.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -12,10 +10,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-
     private final UserDetailsService userDetailsService;
 
     public SecurityConfig(UserDetailsService userDetailsService) {
@@ -33,7 +31,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .antMatchers("/register", "/uploadMotorcycle", "/surveyMotorcycle",
                                 "/resultPage", "/error", "/login",
-                                "/api/**")
+                                "/api/**", "/static/**", "/images/**")
                         .permitAll()
                         .antMatchers("/motorcycle/**").authenticated()
                         .anyRequest().authenticated()
@@ -42,23 +40,46 @@ public class SecurityConfig {
                         .loginPage("/login")
                         .usernameParameter("id")
                         .passwordParameter("password")
-                        .loginProcessingUrl("/login")  // 추가: 로그인 처리 URL
+                        .loginProcessingUrl("/login")
                         .defaultSuccessUrl("/motorcycle/", true)
                         .failureUrl("/login?error=true")
                         .permitAll()
                 )
                 .logout(logout -> logout
                         .logoutSuccessUrl("/")
+                        .invalidateHttpSession(true)
+                        .deleteCookies("JSESSIONID")
                         .permitAll()
                 )
-                .csrf()  // CSRF 보호 추가
-                .and()
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
-                        .invalidSessionUrl("/login")  // 세션이 유효하지 않을 때의 URL
+                        .invalidSessionUrl("/login")
                         .maximumSessions(1)
+                        .maxSessionsPreventsLogin(true)
                         .expiredUrl("/login")
                 )
+                .headers(headers -> headers
+                        .frameOptions().deny()
+                        .xssProtection(xss -> xss.block(true))
+                        .addHeaderWriter((request, response) -> {
+                            response.setHeader("X-XSS-Protection", "1; mode=block");
+                            response.setHeader("Content-Security-Policy",
+                                    "default-src 'self'; " +
+                                            "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
+                                            "style-src 'self' 'unsafe-inline'; " +
+                                            "img-src 'self' data: https:; " +
+                                            "font-src 'self' https:; " +
+                                            "connect-src 'self'"
+                            );
+                        })
+                        .contentTypeOptions().and()
+                        .addHeaderWriter((request, response) ->
+                                response.setHeader("Referrer-Policy", "strict-origin-when-cross-origin")
+                        )
+                        .permissionsPolicy().policy("camera=(), microphone=(), geolocation=(), payment=()")
+                )
+                .csrf()
+                .and()
                 .userDetailsService(userDetailsService);
 
         return http.build();

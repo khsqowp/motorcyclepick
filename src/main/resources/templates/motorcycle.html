@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Motorcycle Management</title>
@@ -20,6 +21,8 @@
                 <a th:href="@{/admin/imageAdmin}" class="btn btn-secondary">모델 사진 승인하기</a>
                 <a th:href="@{/admin/memberList}" class="btn btn-secondary">회원조회</a>
                 <form th:action="@{/logout}" method="post" style="display: inline;">
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
                     <button type="submit" class="btn btn-secondary">로그아웃</button>
                 </form>
             </div>

@@ -2,7 +2,8 @@ package com.example.motorcycle.controller;
 
 import com.example.motorcycle.domain.MotorcycleDomain;
 import com.example.motorcycle.form.BoardForm;
-import com.example.motorcycle.service.*;
+import com.example.motorcycle.service.BoardService;
+import com.example.motorcycle.service.ImageService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

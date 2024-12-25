@@ -47,4 +47,11 @@
         WHERE file_path LIKE CONCAT('%/', #{fileName})
     </select>
 
+    <!-- 브랜드/모델 유효성 검증 -->
+    <select id="isValidBrandModel" resultType="boolean">
+        SELECT count(*) > 0
+        FROM MotorcycleAll
+        WHERE brand = #{brand}
+          AND model LIKE CONCAT(#{model}, '%')
+    </select>
 </mapper>
