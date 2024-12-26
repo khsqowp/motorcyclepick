@@ -1,6 +1,6 @@
 package com.example.motorcycle.dto;
 
-import com.example.motorcycle.domain.*;
+import com.example.motorcycle.domain.MotorcycleDomain;
 import lombok.Data;
 
 @Data

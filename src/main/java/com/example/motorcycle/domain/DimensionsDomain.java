@@ -3,7 +3,6 @@ package com.example.motorcycle.domain;
 import com.example.motorcycle.dto.DimensionsDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.pl.NIP;
 
 @Data
 @NoArgsConstructor

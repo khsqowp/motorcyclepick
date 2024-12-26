@@ -13,12 +13,15 @@
     </resultMap>
 
     <select id="findById" resultMap="UserResultMap">
-        SELECT * FROM User
+        SELECT *
+        FROM User
         WHERE id = #{id}
     </select>
 
     <select id="findAll" resultMap="UserResultMap">
-        SELECT * FROM User
+        SELECT id, username, email, phone_number, instagram, role
+        FROM User
+        ORDER BY id ASC
     </select>
 
     <insert id="insertUser" parameterType="com.example.motorcycle.domain.User">
@@ -28,17 +31,18 @@
 
     <update id="updateUser" parameterType="com.example.motorcycle.domain.User">
         UPDATE User
-        SET password = #{password},
-            email = #{email},
+        SET password     = #{password},
+            email        = #{email},
             phone_number = #{phoneNumber},
-            instagram = #{instagram},
-            username = #{username},
-            role = #{role}
+            instagram    = #{instagram},
+            username     = #{username},
+            role         = #{role}
         WHERE id = #{id}
     </update>
 
-    <delete id="deleteUser" parameterType="Long">
-        DELETE FROM User
+    <delete id="deleteUser" parameterType="string">
+        DELETE
+        FROM User
         WHERE id = #{id}
     </delete>
 

@@ -1,11 +1,17 @@
 package com.example.motorcycle.service;
 
-import com.example.motorcycle.domain.*;
-import com.example.motorcycle.dto.*;
-import com.example.motorcycle.form.MotorcycleForm;
-import com.example.motorcycle.repository.MotorcycleMapper;
+import com.example.motorcycle.domain.DimensionsDomain;
+import com.example.motorcycle.domain.ElectronicsDomain;
+import com.example.motorcycle.domain.EnginesDomain;
+import com.example.motorcycle.domain.MotorcycleDomain;
+import com.example.motorcycle.dto.DimensionsDTO;
+import com.example.motorcycle.dto.ElectronicsDTO;
+import com.example.motorcycle.dto.EnginesDTO;
+import com.example.motorcycle.dto.MotorcycleDTO;
 import com.example.motorcycle.exception.MotorcycleNotFoundException;
 import com.example.motorcycle.exception.MotorcycleValidationException;
+import com.example.motorcycle.form.MotorcycleForm;
+import com.example.motorcycle.repository.MotorcycleMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +19,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import javax.validation.Valid;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 

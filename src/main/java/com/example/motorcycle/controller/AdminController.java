@@ -1,12 +1,12 @@
 package com.example.motorcycle.controller;
 
 import com.example.motorcycle.config.SecurityLogger;
-import com.example.motorcycle.repository.ImagesMapper;
+import com.example.motorcycle.domain.User;
 import com.example.motorcycle.service.ImageService;
+import com.example.motorcycle.service.UserService;
 import com.example.motorcycle.utils.FileValidator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -17,18 +17,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-import com.example.motorcycle.config.SecurityLogger;
-import com.example.motorcycle.utils.FileValidator;
 
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,6 +32,7 @@ public class AdminController {
     private final ImageService imageService;
     private final FileValidator fileValidator;
     private final SecurityLogger securityLogger;
+    private final UserService userService;
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")  // SecurityAspect의 logSecureAccess 적용
     @GetMapping("/imageAdmin")
@@ -105,5 +96,137 @@ public class AdminController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("거절 실패");
         }
     }
-    
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @GetMapping("/memberList")
+    public String listMembers(Model model, HttpServletRequest request) {
+        String remoteAddr = request.getRemoteAddr();
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+
+        try {
+            // 접근 로깅
+            securityLogger.logSecurityEvent(
+                    "MEMBER_LIST_ACCESS",
+                    username,
+                    remoteAddr
+            );
+
+            List<User> users = userService.getAllUsers();
+            model.addAttribute("users", users);
+
+            return "memberList";
+        } catch (Exception e) {
+            // 에러 로깅
+            log.error("회원 목록 조회 중 오류 발생", e);
+            securityLogger.logSecurityEvent(
+                    "MEMBER_LIST_ACCESS_FAILURE",
+                    username,
+                    remoteAddr
+            );
+
+            model.addAttribute("error", "회원 목록 조회 중 오류가 발생했습니다.");
+            return "error";
+        }
+    }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @GetMapping("/editMember/{id}")
+    public String editMemberForm(@PathVariable String id, Model model) {
+        try {
+            User user = userService.findById(id);  // userMapper -> userService
+            if (user == null) {
+                securityLogger.logSecurityEvent(
+                        "MEMBER_EDIT_NOT_FOUND",
+                        SecurityContextHolder.getContext().getAuthentication().getName(),
+                        ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+                );
+                model.addAttribute("error", "사용자를 찾을 수 없습니다.");
+                return "redirect:/admin/memberList";
+            }
+            model.addAttribute("user", user);
+            return "editMember";
+        } catch (Exception e) {
+            securityLogger.logSecurityEvent(
+                    "MEMBER_EDIT_FAILURE",
+                    SecurityContextHolder.getContext().getAuthentication().getName(),
+                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+            );
+            model.addAttribute("error", "사용자 정보 조회 중 오류가 발생했습니다.");
+            return "redirect:/admin/memberList";
+        }
+    }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PostMapping("/editMember/{id}")
+    public String editMember(@PathVariable String id, @ModelAttribute User user, RedirectAttributes redirectAttributes) {
+        try {
+            User existingUser = userService.findById(id);  // userMapper -> userService
+            if (existingUser == null) {
+                securityLogger.logSecurityEvent(
+                        "MEMBER_UPDATE_NOT_FOUND",
+                        SecurityContextHolder.getContext().getAuthentication().getName(),
+                        ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+                );
+                redirectAttributes.addFlashAttribute("error", "사용자를 찾을 수 없습니다.");
+                return "redirect:/admin/memberList";
+            }
+
+            userService.updateUser(user);  // userMapper -> userService
+            securityLogger.logSecurityEvent(
+                    "MEMBER_UPDATE_SUCCESS",
+                    SecurityContextHolder.getContext().getAuthentication().getName(),
+                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+            );
+            redirectAttributes.addFlashAttribute("message", "회원 정보가 성공적으로 수정되었습니다.");
+            return "redirect:/admin/memberList";
+        } catch (Exception e) {
+            securityLogger.logSecurityEvent(
+                    "MEMBER_UPDATE_FAILURE",
+                    SecurityContextHolder.getContext().getAuthentication().getName(),
+                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+            );
+            redirectAttributes.addFlashAttribute("error", "회원 정보 수정 중 오류가 발생했습니다.");
+            return "redirect:/admin/memberList";
+        }
+    }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @DeleteMapping("/deleteMember/{id}")
+    @ResponseBody
+    public ResponseEntity<Map<String, Object>> deleteMember(@PathVariable String id) {
+        Map<String, Object> response = new HashMap<>();
+        try {
+            User user = userService.findById(id);  // userMapper -> userService
+            if (user == null) {
+                securityLogger.logSecurityEvent(
+                        "MEMBER_DELETE_NOT_FOUND",
+                        SecurityContextHolder.getContext().getAuthentication().getName(),
+                        ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+                );
+                response.put("success", false);
+                response.put("message", "사용자를 찾을 수 없습니다.");
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+            }
+
+            userService.deleteUser(id);  // userMapper -> userService, Long.parseLong 제거
+            securityLogger.logSecurityEvent(
+                    "MEMBER_DELETE_SUCCESS",
+                    SecurityContextHolder.getContext().getAuthentication().getName(),
+                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+            );
+
+            response.put("success", true);
+            response.put("message", "회원이 성공적으로 삭제되었습니다.");
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            securityLogger.logSecurityEvent(
+                    "MEMBER_DELETE_FAILURE",
+                    SecurityContextHolder.getContext().getAuthentication().getName(),
+                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+            );
+            response.put("success", false);
+            response.put("message", "회원 삭제 중 오류가 발생했습니다.");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+        }
+    }
 }

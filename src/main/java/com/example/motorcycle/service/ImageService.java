@@ -30,7 +30,6 @@ public class ImageService {
     private static final long MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 
 
-
     @Value("${images.path}")
     private String uploadBaseDir;
 
@@ -43,7 +42,6 @@ public class ImageService {
 
     private static final String FILE_EXTENSION = ".jpg";
     private static final String NUMBER_FORMAT = "%04d";
-
 
 
     @Transactional
@@ -86,7 +84,7 @@ public class ImageService {
                 throw new RuntimeException("Image path not found for file: " + fileName);
             }
 
-            if(finalPath.startsWith("images/")){
+            if (finalPath.startsWith("images/")) {
                 finalPath = finalPath.substring(7);
             }
             // 임시 파일과 최종 경로 설정
@@ -233,49 +231,49 @@ public class ImageService {
         imagesMapper.insertImage(imagesDTO);
     }
 
-//    ______________________________________________________________________________________________________________________
+    //    ______________________________________________________________________________________________________________________
 // 승인 대기 중인 이미지 정보 조회
-public List<Map<String, String>> getPendingImages() {
-    List<Map<String, String>> pendingImages = new ArrayList<>();
-    try {
-        Path tempPath = Paths.get(tempDir);
-        if (Files.exists(tempPath)) {
-            try (DirectoryStream<Path> stream = Files.newDirectoryStream(tempPath, "*.jpg")) {
-                for (Path entry : stream) {
-                    String fileName = entry.getFileName().toString();
-                    List<String> storedPaths = imagesMapper.getStoredPathsByFileName(fileName);
+    public List<Map<String, String>> getPendingImages() {
+        List<Map<String, String>> pendingImages = new ArrayList<>();
+        try {
+            Path tempPath = Paths.get(tempDir);
+            if (Files.exists(tempPath)) {
+                try (DirectoryStream<Path> stream = Files.newDirectoryStream(tempPath, "*.jpg")) {
+                    for (Path entry : stream) {
+                        String fileName = entry.getFileName().toString();
+                        List<String> storedPaths = imagesMapper.getStoredPathsByFileName(fileName);
 
-                    if (!storedPaths.isEmpty()) {
-                        String storedPath = storedPaths.get(0);
-                        Map<String, String> imageInfo = new HashMap<>();
+                        if (!storedPaths.isEmpty()) {
+                            String storedPath = storedPaths.get(0);
+                            Map<String, String> imageInfo = new HashMap<>();
 
-                        // images/ 접두어 제거
-                        if (storedPath.startsWith("images/")) {
-                            storedPath = storedPath.substring(7);
-                        }
+                            // images/ 접두어 제거
+                            if (storedPath.startsWith("images/")) {
+                                storedPath = storedPath.substring(7);
+                            }
 
-                        // 첫 번째 '/'까지가 브랜드명
-                        int brandEndIndex = storedPath.indexOf('/');
-                        if (brandEndIndex != -1) {
-                            String brand = storedPath.substring(0, brandEndIndex);
-                            // 파일명에서 브랜드명과 모델명 추출
-                            String model = fileName.substring(0, fileName.lastIndexOf('_'));
+                            // 첫 번째 '/'까지가 브랜드명
+                            int brandEndIndex = storedPath.indexOf('/');
+                            if (brandEndIndex != -1) {
+                                String brand = storedPath.substring(0, brandEndIndex);
+                                // 파일명에서 브랜드명과 모델명 추출
+                                String model = fileName.substring(0, fileName.lastIndexOf('_'));
 
-                            imageInfo.put("fileName", fileName);
-                            imageInfo.put("brand", brand);
-                            imageInfo.put("model", model);
-                            pendingImages.add(imageInfo);
+                                imageInfo.put("fileName", fileName);
+                                imageInfo.put("brand", brand);
+                                imageInfo.put("model", model);
+                                pendingImages.add(imageInfo);
+                            }
                         }
                     }
                 }
             }
+            return pendingImages;
+        } catch (IOException e) {
+            log.error("Failed to get pending images", e);
+            throw new RuntimeException("Failed to get pending images: " + e.getMessage());
         }
-        return pendingImages;
-    } catch (IOException e) {
-        log.error("Failed to get pending images", e);
-        throw new RuntimeException("Failed to get pending images: " + e.getMessage());
     }
-}
 
     // 이미지 거절 처리
     public void rejectImageToTrashCan(String fileName) {
@@ -375,7 +373,8 @@ public List<Map<String, String>> getPendingImages() {
                 try {
                     int number = Integer.parseInt(numberStr);
                     maxNumber = Math.max(maxNumber, number);
-                } catch (NumberFormatException ignored) {}
+                } catch (NumberFormatException ignored) {
+                }
             }
 
             return String.format("%s_%04d%s",

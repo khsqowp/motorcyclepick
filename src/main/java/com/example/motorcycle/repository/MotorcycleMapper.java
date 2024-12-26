@@ -1,7 +1,9 @@
 package com.example.motorcycle.repository;
 
-import com.example.motorcycle.domain.*;
-import org.apache.ibatis.annotations.*;
+import com.example.motorcycle.domain.MotorcycleDomain;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +11,7 @@ import java.util.Map;
 public interface MotorcycleMapper {
     // 조회
     MotorcycleDomain findByMotorcycleId(Long motorcycleID);
+
     List<MotorcycleDomain> findAll();
 
     // 삽입

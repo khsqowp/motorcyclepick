@@ -283,7 +283,7 @@ public class BoardService {
     }
 
     private boolean matchesRelaxedStylePreferences(MotorcycleDomain motorcycleDomain, List<String> preferences) {
-        if (motorcycleDomain == null ) {
+        if (motorcycleDomain == null) {
             return false;
         }
 

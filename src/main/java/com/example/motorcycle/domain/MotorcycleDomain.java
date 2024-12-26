@@ -2,7 +2,6 @@ package com.example.motorcycle.domain;
 
 import com.example.motorcycle.dto.MotorcycleDTO;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data

@@ -2,13 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.motorcycle.repository.ImagesMapper">
     <!-- 이미지 정보 저장 (최종 경로로 저장) -->
-    <insert id="insertImage" parameterType="com.example.motorcycle.dto.ImagesDTO" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertImage" parameterType="com.example.motorcycle.dto.ImagesDTO" useGeneratedKeys="true"
+            keyProperty="id">
         INSERT INTO images (file_path, instagram_id, custom)
         VALUES (#{filePath}, #{instagramID}, #{custom})
     </insert>
 
     <!-- 인스타그램 계정 정보 저장 -->
-    <insert id="insertInstagram" parameterType="com.example.motorcycle.dto.InstagramDTO" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertInstagram" parameterType="com.example.motorcycle.dto.InstagramDTO" useGeneratedKeys="true"
+            keyProperty="id">
         INSERT INTO instagram_accounts (username)
         VALUES (#{username})
     </insert>

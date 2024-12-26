@@ -1,7 +1,7 @@
 package com.example.motorcycle.controller;
 
-import com.example.motorcycle.domain.MotorcycleDomain;
-import com.example.motorcycle.dto.*;
+import com.example.motorcycle.dto.DeleteMotorcycleDTO;
+import com.example.motorcycle.dto.MotorcycleDTO;
 import com.example.motorcycle.form.MotorcycleForm;
 import com.example.motorcycle.service.MotorcycleService;
 import lombok.RequiredArgsConstructor;
@@ -137,7 +137,7 @@ public class MotorcycleController {
 
     @PostMapping("/delete")
     public String deleteMotorcycle(@ModelAttribute DeleteMotorcycleDTO dto, RedirectAttributes redirectAttributes) {
-        try{
+        try {
             motorcycleService.deleteFullMotorcycle(dto.getMotorcycleID());
             redirectAttributes.addFlashAttribute("message", "Motorcycle이 성공적으로 삭제되었습니다.");
         } catch (Exception e) {
@@ -148,9 +148,7 @@ public class MotorcycleController {
     }
 
 
-
     //___________________________________________-
-
 
 
     @GetMapping("/testCode/resultPage")

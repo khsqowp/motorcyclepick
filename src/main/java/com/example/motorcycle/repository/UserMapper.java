@@ -16,7 +16,7 @@ public interface UserMapper {
 
     void updateUser(User user);
 
-    void deleteUser(Long id);
+    void deleteUser(String id);
 
     // findByUserId 메서드 제거 (findByUsername으로 대체)
 }

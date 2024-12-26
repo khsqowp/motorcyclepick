@@ -1,6 +1,6 @@
 package com.example.motorcycle.form;
 
-import com.example.motorcycle.dto.*;
+import com.example.motorcycle.dto.MotorcycleDTO;
 import lombok.Data;
 
 @Data
@@ -183,8 +183,8 @@ public class MotorcycleForm {
         dto.setMaxTorqueNm(this.maxTorqueNm);
         dto.setMaxTorqueRpm(this.maxTorqueRpm);
         dto.setClassGrade(this.classGrade);
-        
-        
+
+
 //        DimensionsDTO dimensionsDTO = new DimensionsDTO();
 //        dimensionsDTO.setMotorcycleID(this.getMotorcycleID());
 //        dto.setDimensionsDTO(dimensionsDTO);
