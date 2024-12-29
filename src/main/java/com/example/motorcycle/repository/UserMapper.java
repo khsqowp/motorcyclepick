@@ -1,6 +1,6 @@
 package com.example.motorcycle.repository;
 
-import com.example.motorcycle.domain.User;
+import com.example.motorcycle.domain.UserDomain;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -8,13 +8,13 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    User findById(String id);
+    UserDomain findById(String id);
 
-    List<User> findAll();
+    List<UserDomain> findAll();
 
-    void insertUser(User user);
+    void insertUser(UserDomain userDomain);
 
-    void updateUser(User user);
+    void updateUser(UserDomain userDomain);
 
     void deleteUser(String id);
 

@@ -1,8 +1,11 @@
 package com.example.motorcycle.controller;
 
+import com.example.motorcycle.domain.CategoryDomain;
 import com.example.motorcycle.domain.MotorcycleDomain;
+import com.example.motorcycle.dto.DictionaryDTO;
 import com.example.motorcycle.form.BoardForm;
 import com.example.motorcycle.service.BoardService;
+import com.example.motorcycle.service.DictionaryService;
 import com.example.motorcycle.service.ImageService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -28,6 +31,7 @@ public class BoardController {
 
     private final BoardService boardService;
     private final ImageService imageService;
+    private final DictionaryService dictionaryService;
 
     @ModelAttribute("boardForm")
     public BoardForm boardForm() {
@@ -41,7 +45,7 @@ public class BoardController {
 
     //    _________________________________________________________________________________________________________
     // 시작 페이지
-    @GetMapping("")
+    @GetMapping({"/","/startPage"})
     public String startPage(Model model) {
         try {
             model.addAttribute("siteTitle", "16Motorbikes");
@@ -336,4 +340,45 @@ public class BoardController {
         }
     }
 
+    @GetMapping("/dictionary")
+    public String showDictionary(Model model) {
+        try {
+            List<CategoryDomain> categories = dictionaryService.findAllCategoriesForPublic();
+            model.addAttribute("categories", categories);
+            return "dictionary";
+        } catch (Exception e) {
+            log.error("사전 페이지 로딩 중 오류 발생: ", e);
+            model.addAttribute("error", "페이지 로딩 중 오류가 발생했습니다.");
+            model.addAttribute("errorMessage", e.getMessage());
+            model.addAttribute("errorLocation", "dictionary");
+            return "error";
+        }
+    }
+
+    @GetMapping("/api/dictionary/terms/{category}")
+    @ResponseBody
+    public ResponseEntity<List<DictionaryDTO>> getTermsByCategory(@PathVariable String category) {
+        try {
+            List<DictionaryDTO> terms = dictionaryService.findByCategoryForPublic(category);
+            return ResponseEntity.ok(terms);
+        } catch (Exception e) {
+            log.error("카테고리별 용어 조회 중 오류 발생: ", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
+    }
+
+    @GetMapping("/api/dictionary/term/{id}")
+    @ResponseBody
+    public ResponseEntity<DictionaryDTO> getTermById(@PathVariable Long id) {
+        try {
+            DictionaryDTO term = dictionaryService.findByIdForPublic(id);
+            if (term == null) {
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.ok(term);
+        } catch (Exception e) {
+            log.error("용어 상세 조회 중 오류 발생: ", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
+    }
 }

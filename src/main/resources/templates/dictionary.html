@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>오토바이 용어 사전</title>
+    <style>
+        :root {
+            --razer-green: #00ff00;
+            --razer-dark: #111111;
+            --razer-gray: #222222;
+            --terminal-font: 'Consolas', 'Monaco', monospace;
+        }
+
+        body {
+            background-color: var(--razer-dark);
+            color: var(--razer-green);
+            font-family: var(--terminal-font);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .category-button {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--razer-green);
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-button:hover {
+            background-color: rgba(0, 255, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .category-name {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: var(--razer-green);
+        }
+
+        .category-desc {
+            font-size: 0.9em;
+            color: #cccccc;
+        }
+
+        .terms-list {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--razer-green);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .term-item {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+        }
+
+        .term-item:hover {
+            background-color: rgba(0, 255, 0, 0.1);
+        }
+
+        .term-details {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--razer-green);
+            padding: 20px;
+            margin-top: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 300px;
+            max-width: 600px;
+            z-index: 1000;
+        }
+
+        .term-title {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: var(--razer-green);
+        }
+
+        .term-definition {
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: var(--razer-green);
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .back-button {
+            background: none;
+            border: 1px solid var(--razer-green);
+            color: var(--razer-green);
+            padding: 8px 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>오토바이 용어 사전</h1>
+    <button id="backButton" class="back-button">← 카테고리로 돌아가기</button>
+
+    <!-- 카테고리 그리드 -->
+    <div class="category-grid" id="categoryGrid">
+        <div th:each="category : ${categories}" class="category-button"
+                th:data-category="${category.categoryName}">
+            <div class="category-name" th:text="${category.categoryName}"></div>
+            <div class="category-desc" th:text="${category.description}"></div>
+        </div>
+    </div>
+
+    <!-- 용어 리스트 -->
+    <div id="termsList" class="terms-list"></div>
+
+    <!-- 용어 상세 -->
+    <div id="overlay" class="overlay"></div>
+    <div id="termDetails" class="term-details">
+        <button class="close-button">&times;</button>
+        <div class="term-title"></div>
+        <div class="term-definition"></div>
+    </div>
+</div>
+
+<script th:inline="javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        const categoryGrid = document.getElementById('categoryGrid');
+        const termsList = document.getElementById('termsList');
+        const termDetails = document.getElementById('termDetails');
+        const overlay = document.getElementById('overlay');
+        const backButton = document.getElementById('backButton');
+
+        // 카테고리 버튼 클릭 이벤트
+        categoryGrid.addEventListener('click', async function(e) {
+            const categoryButton = e.target.closest('.category-button');
+            if (!categoryButton) return;
+
+            const category = categoryButton.dataset.category;
+            try {
+                const response = await fetch(`/api/dictionary/terms/${category}`);
+                const terms = await response.json();
+
+                displayTerms(terms);
+                categoryGrid.style.display = 'none';
+                termsList.style.display = 'block';
+                backButton.style.display = 'block';
+            } catch (error) {
+                console.error('Error fetching terms:', error);
+            }
+        });
+
+        // 용어 클릭 이벤트
+        termsList.addEventListener('click', async function(e) {
+            const termItem = e.target.closest('.term-item');
+            if (!termItem) return;
+
+            const termId = termItem.dataset.id;
+            try {
+                const response = await fetch(`/api/dictionary/term/${termId}`);
+                const termData = await response.json();
+
+                displayTermDetails(termData);
+            } catch (error) {
+                console.error('Error fetching term details:', error);
+            }
+        });
+
+        // 뒤로가기 버튼 클릭 이벤트
+        backButton.addEventListener('click', function() {
+            termsList.style.display = 'none';
+            categoryGrid.style.display = 'grid';
+            backButton.style.display = 'none';
+        });
+
+        // 닫기 버튼 및 오버레이 클릭 이벤트
+        document.querySelector('.close-button').addEventListener('click', closeTermDetails);
+        overlay.addEventListener('click', closeTermDetails);
+
+        function displayTerms(terms) {
+            termsList.innerHTML = terms.map(term => `
+                <div class="term-item" data-id="${term.id}">
+                    ${term.term}
+                </div>
+            `).join('');
+        }
+
+        function displayTermDetails(termData) {
+            termDetails.querySelector('.term-title').textContent = termData.term;
+            termDetails.querySelector('.term-definition').textContent = termData.definition;
+            termDetails.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        function closeTermDetails() {
+            termDetails.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+
+        // ESC 키로 용어 상세 창 닫기
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeTermDetails();
+            }
+        });
+    });
+</script>
+</body>
+</html>

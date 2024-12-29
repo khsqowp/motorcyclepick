@@ -160,6 +160,37 @@
             animation: blink 1s infinite;
             color: var(--razer-green);
         }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .home-btn {
+            background-color: transparent;
+            color: var(--razer-green);
+            border: 1px solid var(--razer-green);
+            padding: 8px 16px;
+            text-decoration: none;
+            font-family: var(--terminal-font);
+            font-size: 14px;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            height: fit-content;
+        }
+
+        .home-btn::before {
+            content: "$ ";
+            opacity: 0.7;
+        }
+
+        .home-btn:hover {
+            background-color: var(--razer-green);
+            color: var(--razer-dark);
+            box-shadow: 0 0 15px var(--razer-green);
+        }
     </style>
 </head>
 <body>
@@ -168,8 +199,10 @@
 <div class="container">
     <div class="member-container">
         <div sec:authorize="hasRole('ROLE_ADMIN')">
-            <h2 class="section-title">회원 관리 콘솔</h2>
-
+            <div class="header-container">
+                <h2 class="section-title">회원 관리 콘솔</h2>
+                <a href="/motorcycle" class="home-btn">홈으로 돌아가기</a>
+            </div>
             <div th:if="${error}" class="alert" role="alert">
                 <span th:text="${error}">오류 메시지</span>
             </div>
@@ -194,7 +227,13 @@
                         <td th:text="${user.email}">이메일</td>
                         <td th:text="${user.phoneNumber}">전화번호</td>
                         <td th:text="${user.instagram}">인스타그램</td>
-                        <td th:text="${user.role}">권한</td>
+                        <td>
+                            <th:block th:switch="${user.role}">
+                                <span th:case="'ROLE_ADMIN'" style="color: #ff0000;">관리자</span>
+                                <span th:case="'ROLE_MODERATOR'" style="color: #00ff00;">매니저</span>
+                                <span th:case="'ROLE_USER'" style="color: #ffffff;">사용자</span>
+                            </th:block>
+                        </td>
                         <td>
                             <div class="btn-group">
                                 <button type="button" class="btn btn-warning"

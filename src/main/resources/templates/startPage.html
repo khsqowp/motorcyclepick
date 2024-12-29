@@ -1,170 +1,353 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html lang="ko">
 <head>
-    <title>16Motorbikes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16Motorbikes - 오토바이 취향 테스트</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: #1a1a1a;
-            font-family: Arial, sans-serif;
-            color: white;
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --background: #0F172A;
+            --card-bg: #1E293B;
+            --accent: #3B82F6;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --hover-color: #2563EB;
         }
 
-        .nav-container {
-            position: fixed;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
             top: 0;
             left: 0;
-            right: 0;
-            z-index: 50;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.5);
+            background: linear-gradient(
+                    45deg,
+                    rgba(59, 130, 246, 0.1),
+                    rgba(37, 99, 235, 0.1)
+            );
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+        }
+
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1.25rem 0;
         }
 
         .logo {
             font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .motorcycle-btn {
-            background: #3b82f6;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            transition: all 0.3s ease;
-        }
-
-        .motorcycle-btn:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-        }
-
-        .hero {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .text-content {
-            position: absolute;
-            text-align: center;
-            z-index: 10;
-        }
-
-        .text-content h2 {
-            font-size: 2.25rem;
-            margin-bottom: 2rem;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background: #3b82f6;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 9999px;
+            font-weight: 700;
+            color: var(--text-primary);
             text-decoration: none;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
             transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
         }
 
-        .btn-primary:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
+        .nav-link:hover {
+            color: var(--text-primary);
         }
 
-        .hexagon-container {
-            position: fixed;
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hero-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 0 4rem;
+            position: relative;
+            background: url('static/images/hero-background.jpg') center/cover no-repeat;        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero-overlay {
+            position: absolute;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                    to right,
+                    rgba(15, 23, 42, 0.9),
+                    rgba(15, 23, 42, 0.7)
+            );
         }
 
-        .text {
-            fill: #fff;
-            font-size: 14px;
-            text-anchor: middle;
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--text-primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                    45deg,
+                    rgba(59, 130, 246, 0.1),
+                    rgba(37, 99, 235, 0.1)
+            );
             opacity: 0;
-            animation: fadeIn 0.5s ease-out 2s forwards;
+            transition: opacity 0.3s ease;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .emoji-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--accent), var(--hover-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-text {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .start-test-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .start-test-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                    to right,
+                    transparent,
+                    rgba(255, 255, 255, 0.2),
+                    transparent
+            );
+            transition: left 0.5s ease;
+        }
+
+        .start-test-btn:hover {
+            background: var(--hover-color);
+            transform: translateY(-2px);
+        }
+
+        .start-test-btn:hover::before {
+            left: 100%;
+        }
+
+        footer {
+            background: var(--card-bg);
+            padding: 2rem 0;
+            margin-top: 6rem;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-section {
+                padding: 6rem 0 3rem;
+            }
         }
     </style>
 </head>
 <body>
-<!-- 네비게이션 바 -->
-<nav class="nav-container">
-    <div class="nav-content">
-        <div class="logo" th:text="${siteTitle}">16Motorbikes</div>
-        <a href="/uploadMotorcycle" class="upload-btn">오토바이 자랑하기</a>
-        <a href="/motorcycle" class="motorcycle-btn">Motorcycle</a>
+<div class="gradient-overlay"></div>
+
+<header class="header">
+    <div class="container">
+        <nav class="nav-content">
+            <a href="/" class="logo">
+                🏍️ 16MOTORBIKES
+            </a>
+            <div class="nav-links">
+                <a href="/dictionary" class="nav-link">용어사전</a>
+                <a href="/uploadMotorcycle" class="nav-link">오토바이 자랑하기</a>
+                <a href="/motorcycle" class="nav-link">Motorcycle</a>
+            </div>
+        </nav>
     </div>
-</nav>
+</header>
 
-<main class="hero">
-    <div class="text-content">
-        <h2 id="드디어-제-스타일의-오토바이를-찾을-수-있어서-정말-기뻐요" th:text="${heroText}">
-            드디어 제 스타일의 오토바이를 찾을 수 있어서 정말 기뻐요.
-        </h2>
-        <p>테스트를 통해 자신에게 맞는 오토바이를 추천받아보세요!</p>
-        <a href="/surveyMotorcycle" class="btn-primary">검사 실시</a>
-    </div>
+<main>
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="section-title">
+                    당신만의 완벽한<br>
+                    라이딩 파트너를 찾아보세요
+                </h1>
+                <p class="section-subtitle">
+                    16가지 성향 분석을 통해 당신의 라이딩 스타일에 꼭 맞는<br>
+                    최적의 오토바이를 추천해드립니다.
+                </p>
+                <a href="/surveyMotorcycle" class="start-test-btn">
+                    테스트 시작하기
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <div class="hexagon-container">
-        <svg viewbox="-175 -175 350 350">
-            <defs>
-                <path id="text-path-1" d="M 0,-140 A 140,140 0 0,1 121,-70" />
-                <path id="text-path-2" d="M 121,-70 A 140,140 0 0,1 121,70" />
-                <path id="text-path-3" d="M 121,70 A 140,140 0 0,1 0,140" />
-                <path id="text-path-4" d="M 0,140 A 140,140 0 0,1 -121,70" />
-                <path id="text-path-5" d="M -121,70 A 140,140 0 0,1 -121,-70" />
-                <path id="text-path-6" d="M -121,-70 A 140,140 0 0,1 0,-140" />
-            </defs>
+    <section class="container py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="feature-card">
+                <div class="emoji-icon">🎯</div>
+                <h3 class="feature-title">정밀한 분석</h3>
+                <p class="feature-text">
+                    과학적인 성향 분석으로<br>
+                    당신의 라이딩 스타일을<br>
+                    정확하게 파악합니다
+                </p>
+            </div>
 
-            <polygon class="hexagon" fill="none" stroke="#fff" stroke-width="2">
-                <animate attributename="points" dur="2s" fill="freeze" calcmode="spline" keysplines="0.4 0 0.2 1; 0.4 0 0.2 1" values="0,-105 91,-52.5 91,52.5 0,105 -91,52.5 -91,-52.5;
-                        0,-140 133,-56 119,63 0,126 -133,66.5 -112,-77;
-                        0,-94.5 82,-47.25 82,47.25 0,94.5 -82,47.25 -82,-47.25"></animate>
-            </polygon>
+            <div class="feature-card">
+                <div class="emoji-icon">⚡</div>
+                <h3 class="feature-title">맞춤 추천</h3>
+                <p class="feature-text">
+                    분석된 데이터를 기반으로<br>
+                    당신에게 가장 어울리는<br>
+                    오토바이를 추천합니다
+                </p>
+            </div>
 
-            <!-- 헥사곤 텍스트 내용 위치 -->
-            <text class="text" x="0" y="-108.5">레이싱바이크</text>
-            <text class="text" x="94.5" y="-47.25">어드벤처투어링</text>
-            <text class="text" x="94.5" y="47.25">네이키드</text>
-            <text class="text" x="0" y="108.5">스트리트바이크</text>
-            <text class="text" x="-94.5" y="47.25">듀얼퍼포스</text>
-            <text class="text" x="-94.5" y="-47.25">스포츠</text>
-
-            <!-- 점들의 위치 -->
-            <circle class="text" cx="0" cy="-94.5" r="4" fill="#fff"></circle>
-            <circle class="text" cx="82" cy="-47.25" r="4" fill="#fff"></circle>
-            <circle class="text" cx="82" cy="47.25" r="4" fill="#fff"></circle>
-            <circle class="text" cx="0" cy="94.5" r="4" fill="#fff"></circle>
-            <circle class="text" cx="-82" cy="47.25" r="4" fill="#fff"></circle>
-            <circle class="text" cx="-82" cy="-47.25" r="4" fill="#fff"></circle>
-        </svg>
-    </div>
+            <div class="feature-card">
+                <div class="emoji-icon">💎</div>
+                <h3 class="feature-title">상세 정보</h3>
+                <p class="feature-text">
+                    스펙부터 실제 라이더들의<br>
+                    리뷰까지, 모든 정보를<br>
+                    한눈에 확인하세요
+                </p>
+            </div>
+        </div>
+    </section>
 </main>
+
+<footer>
+    <div class="container text-center text-sm text-gray-500">
+        <p>© 2024 16Motorbikes. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>

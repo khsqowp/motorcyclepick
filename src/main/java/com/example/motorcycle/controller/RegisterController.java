@@ -1,7 +1,8 @@
 package com.example.motorcycle.controller;
 
 import com.example.motorcycle.config.SecurityLogger;
-import com.example.motorcycle.domain.User;
+import com.example.motorcycle.domain.UserDomain;
+import com.example.motorcycle.dto.UserDTO;
 import com.example.motorcycle.service.UserService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -28,16 +29,16 @@ public class RegisterController {
 
     @GetMapping("/register")
     public String registerForm(Model model) {
-        model.addAttribute("user", new User());
+        model.addAttribute("user", new UserDTO());
         return "register";
     }
 
     @PostMapping("/register")
-    public String register(@Valid User user, BindingResult result, HttpServletRequest request) {
+    public String register(@Valid UserDTO userDTO, BindingResult result, HttpServletRequest request) {
         if (result.hasErrors()) {
             securityLogger.logSecurityEvent(
                     "REGISTER_VALIDATION_FAILURE",
-                    user.getId(),
+                    userDTO.getId(),
                     request.getRemoteAddr()
             );
             return "register";
@@ -45,19 +46,19 @@ public class RegisterController {
 
 
         // 비밀번호 암호화
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         // 기본 역할 설정
-        user.setRole("ROLE_USER");
+        userDTO.setRole("ROLE_USER");
 
-        userService.registerUser(user);
+        userService.registerUser(userDTO);
 
         try {
-            userService.registerUser(user);
+            userService.registerUser(userDTO);
             return "redirect:/login";
         } catch (Exception e) {
             securityLogger.logSecurityEvent(
                     "REGISTER_ERROR",
-                    user.getId(),
+                    userDTO.getId(),
                     request.getRemoteAddr()
             );
             return "register";

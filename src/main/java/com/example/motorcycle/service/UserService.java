@@ -1,7 +1,8 @@
 package com.example.motorcycle.service;
 
 import com.example.motorcycle.config.SecurityLogger;
-import com.example.motorcycle.domain.User;
+import com.example.motorcycle.domain.UserDomain;
+import com.example.motorcycle.dto.UserDTO;
 import com.example.motorcycle.repository.UserMapper;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,6 +16,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService implements UserDetailsService {
@@ -31,8 +33,8 @@ public class UserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String id) throws UsernameNotFoundException {
         try {
-            User user = userMapper.findById(id);
-            if (user == null) {
+            UserDomain userDomain = userMapper.findById(id);
+            if (userDomain == null) {
                 securityLogger.logSecurityEvent("USER_NOT_FOUND",
                         id,
                         ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
@@ -46,9 +48,9 @@ public class UserService implements UserDetailsService {
             );
 
             return new org.springframework.security.core.userdetails.User(
-                    user.getId(),
-                    user.getPassword(),
-                    Collections.singletonList(new SimpleGrantedAuthority(user.getRole()))
+                    userDomain.getId(),
+                    userDomain.getPassword(),
+                    Collections.singletonList(new SimpleGrantedAuthority(userDomain.getRole()))
             );
         } catch (Exception e) {
             securityLogger.logSecurityEvent("USER_LOGIN_FAILURE",
@@ -59,58 +61,57 @@ public class UserService implements UserDetailsService {
         }
     }
 
-    public void registerUser(User user) {
+    public void registerUser(UserDTO userDTO) {
         try {
-            if (userMapper.findById(user.getId()) != null) {
+            if (userMapper.findById(userDTO.getId()) != null) {
                 securityLogger.logSecurityEvent("USER_REGISTER_DUPLICATE",
-                        user.getId(),
+                        userDTO.getId(),
                         ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
                 );
                 throw new RuntimeException("이미 존재하는 아이디입니다.");
             }
 
-            user.setPassword(passwordEncoder.encode(user.getPassword()));
-            user.setRole("ROLE_USER");
-            userMapper.insertUser(user);
+            UserDomain userDomain = userDTO.toDomain();
+            userMapper.insertUser(userDomain);
 
             securityLogger.logSecurityEvent("USER_REGISTER_SUCCESS",
-                    user.getId(),
+                    userDTO.getId(),
                     ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
             );
         } catch (Exception e) {
             securityLogger.logSecurityEvent("USER_REGISTER_FAILURE",
-                    user.getId(),
+                    userDTO.getId(),
                     ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
             );
             throw e;
         }
     }
 
-    public List<User> getAllUsers() {
+    public List<UserDTO> getAllUsers() {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
         String remoteAddr = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
                 .getRequest().getRemoteAddr();
 
         try {
-            // 접근 로깅
             securityLogger.logSecurityEvent(
                     "GET_ALL_USERS_REQUEST",
                     username,
                     remoteAddr
             );
 
-            List<User> users = userMapper.findAll();
+            List<UserDomain> userDomains = userMapper.findAll();
+            List<UserDTO> userDTOs = userDomains.stream()
+                    .map(UserDTO::fromDomain)
+                    .collect(Collectors.toList());
 
-            // 성공 로깅
             securityLogger.logSecurityEvent(
                     "GET_ALL_USERS_SUCCESS",
                     username,
                     remoteAddr
             );
 
-            return users;
+            return userDTOs;
         } catch (Exception e) {
-            // 실패 로깅
             securityLogger.logSecurityEvent(
                     "GET_ALL_USERS_FAILURE",
                     username,
@@ -120,17 +121,19 @@ public class UserService implements UserDetailsService {
         }
     }
 
-    public User findById(String id) {
+
+    public UserDTO findById(String id) {
         try {
-            User user = userMapper.findById(id);
-            if (user == null) {
+            UserDomain userDomain = userMapper.findById(id);
+            if (userDomain == null) {
                 securityLogger.logSecurityEvent(
                         "USER_FIND_NOT_FOUND",
                         "SYSTEM",
                         ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
                 );
+                return null;
             }
-            return user;
+            return UserDTO.fromDomain(userDomain);
         } catch (Exception e) {
             securityLogger.logSecurityEvent(
                     "USER_FIND_FAILURE",
@@ -141,30 +144,29 @@ public class UserService implements UserDetailsService {
         }
     }
 
-    public void updateUser(User user) {
+
+    public void updateUser(UserDTO userDTO) {
         try {
-            // 기존 사용자 정보 가져오기
-            User existingUser = userMapper.findById(user.getId());
-            if (existingUser == null) {
+            UserDomain existingUserDomain = userMapper.findById(userDTO.getId());
+            if (existingUserDomain == null) {
                 throw new RuntimeException("사용자를 찾을 수 없습니다.");
             }
 
-            // 비밀번호 유지
-            user.setPassword(existingUser.getPassword());
+            UserDomain userDomain = userDTO.toDomain();
+            userDomain.setPassword(existingUserDomain.getPassword());
 
-            // 사용자 정보 업데이트
-            userMapper.updateUser(user);
+            userMapper.updateUser(userDomain);
 
             securityLogger.logSecurityEvent(
                     "USER_UPDATE_SUCCESS",
-                    user.getId(),
+                    userDTO.getId(),
                     ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
                             .getRequest().getRemoteAddr()
             );
         } catch (Exception e) {
             securityLogger.logSecurityEvent(
                     "USER_UPDATE_FAILURE",
-                    user.getId(),
+                    userDTO.getId(),
                     ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
                             .getRequest().getRemoteAddr()
             );
@@ -172,9 +174,10 @@ public class UserService implements UserDetailsService {
         }
     }
 
+
     public void deleteUser(String id) {
         try {
-            userMapper.deleteUser(id);  // String 타입 그대로 전달
+            userMapper.deleteUser(id);
             securityLogger.logSecurityEvent(
                     "USER_DELETE_SUCCESS",
                     id,

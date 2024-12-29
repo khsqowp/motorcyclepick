@@ -325,19 +325,17 @@ public class ImageService {
     }
 
     private void sanitizeInputParameters(String brand, String model, String username) {
+        // 브랜드와 모델명에 공백 허용
         if (brand == null || model == null ||
-                !brand.matches("^[a-zA-Z0-9\\-_]{1,50}$") ||
-                !model.matches("^[a-zA-Z0-9\\-_]{1,50}$")) {
-            throw new SecurityException("Invalid input parameters");
+                !brand.matches("^[a-zA-Z0-9\\s\\-_]{1,50}$") ||
+                !model.matches("^[a-zA-Z0-9\\s\\-_]{1,50}$")) {
+            throw new SecurityException("유효하지 않은 입력값입니다");
         }
 
-        // Instagram ID의 유효성 검사 규칙 완화:
-        // 1. @로 시작하는 것은 선택적 (@가 없어도 됨)
-        // 2. 영숫자와 밑줄, 마침표를 허용
-        // 3. 길이는 1-50자로 제한
+        // Instagram ID 검증 규칙
         if (username != null && !username.trim().isEmpty() &&
                 !username.matches("^@?[a-zA-Z0-9._]{1,50}$")) {
-            throw new SecurityException("Invalid username format");
+            throw new SecurityException("유효하지 않은 사용자명 형식입니다");
         }
     }
 

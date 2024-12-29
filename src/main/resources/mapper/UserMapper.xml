@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.motorcycle.repository.UserMapper">
 
-    <resultMap id="UserResultMap" type="com.example.motorcycle.domain.User">
+    <resultMap id="UserResultMap" type="com.example.motorcycle.domain.UserDomain">
         <id property="id" column="id"/>
         <result property="password" column="password"/>
         <result property="phoneNumber" column="phone_number"/>
@@ -24,19 +24,24 @@
         ORDER BY id ASC
     </select>
 
-    <insert id="insertUser" parameterType="com.example.motorcycle.domain.User">
+    <insert id="insertUser" parameterType="com.example.motorcycle.domain.UserDomain">
         INSERT INTO User (id, password, email, instagram, phone_number, role, username)
         VALUES (#{id}, #{password}, #{email}, #{instagram}, #{phoneNumber}, #{role}, #{username})
     </insert>
 
-    <update id="updateUser" parameterType="com.example.motorcycle.domain.User">
+    <update id="updateUser" parameterType="com.example.motorcycle.domain.UserDomain">
         UPDATE User
         SET password     = #{password},
             email        = #{email},
             phone_number = #{phoneNumber},
             instagram    = #{instagram},
             username     = #{username},
-            role         = #{role}
+            role         = CASE #{role}
+                               WHEN 'ROLE_USER' THEN 'ROLE_USER'
+                               WHEN 'ROLE_MODERATOR' THEN 'ROLE_MODERATOR'
+                               WHEN 'ROLE_ADMIN' THEN 'ROLE_ADMIN'
+                               ELSE 'ROLE_USER'
+                END
         WHERE id = #{id}
     </update>
 
