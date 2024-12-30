@@ -42,9 +42,16 @@
           AND status = 'ACTIVE'
     </select>
 
+    <select id="findByStatus" resultMap="DictionaryResultMap">
+        SELECT *
+        FROM motorcycle_terms
+        WHERE status = #{status}
+        ORDER BY term ASC
+    </select>
+
     <insert id="insertTerm" parameterType="com.example.motorcycle.domain.DictionaryDomain">
         INSERT INTO motorcycle_terms (term, definition, category, created_by, created_at, status)
-        VALUES (#{term}, #{definition}, #{category}, #{createdBy}, CURRENT_TIMESTAMP, 'ACTIVE')
+        VALUES (#{term}, #{definition}, #{category}, #{createdBy}, CURRENT_TIMESTAMP, #{status})
     </insert>
 
     <update id="updateTerm" parameterType="com.example.motorcycle.domain.DictionaryDomain">
@@ -52,7 +59,8 @@
         SET definition = #{definition},
             category = #{category},
             updated_by = #{updatedBy},
-            updated_at = CURRENT_TIMESTAMP
+            updated_at = CURRENT_TIMESTAMP,
+            status = #{status}
         WHERE id = #{id}
     </update>
 

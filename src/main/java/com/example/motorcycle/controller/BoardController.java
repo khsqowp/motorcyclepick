@@ -381,4 +381,20 @@ public class BoardController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
+
+    @PostMapping("/api/dictionary/request")
+    @ResponseBody
+    public ResponseEntity<Map<String, Object>> requestTerm(@RequestBody DictionaryDTO dictionaryDTO) {
+        Map<String, Object> response = new HashMap<>();
+        try {
+            dictionaryService.insertTermRequest(dictionaryDTO);
+            response.put("success", true);
+            response.put("message", "용어 추가 요청이 성공적으로 등록되었습니다.");
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            response.put("success", false);
+            response.put("message", e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+        }
+    }
 }

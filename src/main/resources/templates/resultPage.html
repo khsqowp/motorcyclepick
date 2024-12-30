@@ -4,11 +4,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오토바이 상세 정보</title>
-    <link rel="stylesheet" th:href="@{/static/resultPage.css}">
-    <script src="/static/js/resultPage.js"></script>
+    <title>16Motorbikes - 오토바이 취향 테스트 결과</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --background: #0F172A;
+            --card-bg: #1E293B;
+            --accent: #3B82F6;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --hover-color: #2563EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .home-button {
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .home-button:hover {
+            background: var(--hover-color);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 8rem 2rem 2rem;
+        }
+
+        .main-card {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: #000;
+        }
+
+        .slider-image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .slider-controls {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+        }
+
+        .slider-button {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .slider-button:hover {
+            color: var(--accent);
+        }
+
+        .slider-counter {
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .motorcycle-info-card {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .model-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .model-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .basic-info {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .price {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .stat-card span {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .specs-card {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .specs-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .specs-details {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-secondary);
+        }
+
+        .spec-item span {
+            color: var(--text-primary);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .nav-btn {
+            background: var(--card-bg);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .nav-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .page-navigation {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .page-input {
+            background: var(--card-bg);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            color: var(--text-primary);
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            width: 4rem;
+            text-align: center;
+        }
+
+        .page-total {
+            color: var(--text-secondary);
+        }
+
+        .brake-suspension,
+        .electronics {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .electronics-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .specs-details-single {
+            display: grid;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+<header class="header">
+    <nav class="nav-content">
+        <a href="/" class="logo">
+            🏍️ 16MOTORBIKES
+        </a>
+        <a href="/" class="home-button">홈으로 가기</a>
+    </nav>
+</header>
+
 <div class="container" th:data-brand="${motorcycle.brand}" th:data-model="${motorcycle.model}">
     <div class="main-card">
         <div class="content-wrapper">
@@ -16,14 +333,14 @@
                 <div class="slider-container">
                     <div class="slider-image-container">
                         <img id="currentImage" alt="Motorcycle Image" class="slider-image" th:src="@{/static/images/no-image.jpg}">
-                    <div class="slider-controls">
-                        <button id="prevImage" class="slider-button">&lt;</button>
-                        <span id="imageCounter" class="slider-counter">1 / 1</span>
-                        <button id="nextImage" class="slider-button">&gt;</button>
+                        <div class="slider-controls">
+                            <button id="prevImage" class="slider-button">&lt;</button>
+                            <span id="imageCounter" class="slider-counter">1 / 1</span>
+                            <button id="nextImage" class="slider-button">&gt;</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="side-content"></div>
         </div>
     </div>
 
@@ -75,8 +392,6 @@
             </div>
         </div>
     </div>
-
-
 
     <div class="specs-grid">
         <div class="specs-card">
@@ -216,5 +531,20 @@
         </a>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageInput = document.querySelector('.page-input');
+        if (pageInput) {
+            pageInput.addEventListener('change', function() {
+                const newIndex = parseInt(this.value) - 1;
+                const maxPages = parseInt(this.getAttribute('max'));
+                if (newIndex >= 0 && newIndex < maxPages) {
+                    window.location.href = `/results?index=${newIndex}`;
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>

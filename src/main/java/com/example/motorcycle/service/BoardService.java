@@ -72,7 +72,7 @@ public class BoardService {
         // Q1: 가격 처리
         try {
             if (dto.getQuestion1() != null && !dto.getQuestion1().isEmpty()) {
-                float price = Float.parseFloat(dto.getQuestion1()) * 10000;
+                float price = Float.parseFloat(dto.getQuestion1());
                 params.put("price", price);
             } else {
                 params.put("price", null);

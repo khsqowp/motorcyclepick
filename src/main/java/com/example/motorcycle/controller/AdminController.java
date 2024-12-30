@@ -387,4 +387,41 @@ public class AdminController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
         }
     }
+
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_MODERATOR')")
+    @PostMapping("/dictionary/request/{id}/approve")
+    @ResponseBody
+    public ResponseEntity<Map<String, Object>> approveTermRequest(@PathVariable Long id) {
+        Map<String, Object> response = new HashMap<>();
+        try {
+            dictionaryService.approveTermRequest(id);
+            response.put("success", true);
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            response.put("success", false);
+            response.put("message", e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+        }
+    }
+
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_MODERATOR')")
+    @PostMapping("/dictionary/request/{id}/reject")
+    @ResponseBody
+    public ResponseEntity<Map<String, Object>> rejectTermRequest(@PathVariable Long id) {
+        Map<String, Object> response = new HashMap<>();
+        try {
+            dictionaryService.rejectTermRequest(id);
+            response.put("success", true);
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            response.put("success", false);
+            response.put("message", e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+        }
+    }
+
+    @ModelAttribute("termRequests")
+    public List<DictionaryDTO> getTermRequests() {
+        return dictionaryService.findAllPendingRequests();
+    }
 }

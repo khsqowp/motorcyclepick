@@ -30,10 +30,11 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        .antMatchers("/register", "/uploadMotorcycle", "/surveyMotorcycle",
-                                "/resultPage", "/error", "/login",
-                                "/api/**", "/static/**", "/images/**")
+                        .antMatchers("/", "/register", "/uploadMotorcycle", "/surveyMotorcycle",
+                                "/resultPage", "/error", "/login", "/dictionary",
+                                "/api/**", "/static/**", "/css/**", "/js/**", "/images/**")
                         .permitAll()
+                        .antMatchers("/motorcycle/delete").hasRole("ADMIN")
                         .antMatchers("/motorcycle/**").authenticated()
                         .anyRequest().authenticated()
                 )
@@ -42,7 +43,7 @@ public class SecurityConfig {
                         .usernameParameter("id")
                         .passwordParameter("password")
                         .loginProcessingUrl("/login")
-                        .defaultSuccessUrl("/motorcycle/", true)
+                        .defaultSuccessUrl("/", true)
                         .failureUrl("/login?error=true")
                         .permitAll()
                 )
@@ -54,10 +55,17 @@ public class SecurityConfig {
                 )
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
-                        .invalidSessionUrl("/login")
+                        .invalidSessionUrl("/")
                         .maximumSessions(1)
                         .maxSessionsPreventsLogin(true)
-                        .expiredUrl("/login")
+                        .expiredUrl("/")
+                        .and()
+                        .sessionFixation().newSession()
+                        .sessionAuthenticationErrorUrl("/")
+                        .sessionAuthenticationFailureHandler((request, response, exception) ->
+                                response.sendRedirect("/"))
+                        .enableSessionUrlRewriting(false)
+                        .sessionFixation().migrateSession()
                 )
                 .headers(headers -> headers
                         .frameOptions().deny()
@@ -70,7 +78,9 @@ public class SecurityConfig {
                                             "style-src 'self' 'unsafe-inline'; " +
                                             "img-src 'self' data: https:; " +
                                             "font-src 'self' https:; " +
-                                            "connect-src 'self'"
+                                            "connect-src 'self'" +
+                                            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+                                            "font-src 'self' https://fonts.gstatic.com;"
                             );
                         })
                         .contentTypeOptions().and()
@@ -80,6 +90,7 @@ public class SecurityConfig {
                         .permissionsPolicy().policy("camera=(), microphone=(), geolocation=(), payment=()")
                 )
                 .csrf(csrf -> csrf
+                        .ignoringAntMatchers("/motorcycle/delete", "/api/dictionary/**")
                         .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()))
                 .userDetailsService(userDetailsService);
 

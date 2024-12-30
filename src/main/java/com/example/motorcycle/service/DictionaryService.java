@@ -340,4 +340,130 @@ public class DictionaryService {
             throw new RuntimeException("카테고리별 용어 조회 실패", e);
         }
     }
+
+    @Transactional
+    public void insertTermRequest(DictionaryDTO dictionaryDTO) {
+        try {
+            // 입력값 검증
+            validateTermRequest(dictionaryDTO);
+
+            // XSS 방지를 위한 입력값 정제
+            DictionaryDTO sanitizedDTO = new DictionaryDTO();
+            sanitizedDTO.setTerm(sanitizeInput(dictionaryDTO.getTerm()));
+            sanitizedDTO.setDefinition(sanitizeInput(dictionaryDTO.getDefinition()));
+            sanitizedDTO.setCategory(sanitizeInput(dictionaryDTO.getCategory()));
+
+            // 기본값 설정
+            sanitizedDTO.setStatus("DEACTIVE");
+            sanitizedDTO.setCreatedAt(LocalDateTime.now());
+            sanitizedDTO.setCreatedBy("GUEST");
+
+            // IP 주소 로깅
+            HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
+            log.info("Term request from IP: {}", request.getRemoteAddr());
+
+            // 중복 체크
+            DictionaryDomain existingTerm = dictionaryMapper.findByTerm(sanitizedDTO.getTerm());
+            if (existingTerm != null) {
+                throw new IllegalStateException("이미 존재하는 용어입니다.");
+            }
+
+            dictionaryMapper.insertTerm(sanitizedDTO.toDomain());
+
+        } catch (Exception e) {
+            log.error("용어 추가 요청 처리 중 오류 발생: ", e);
+            throw new RuntimeException("용어 추가 요청 처리에 실패했습니다.", e);
+        }
+    }
+    private String sanitizeInput(String input) {
+        if (input == null) return null;
+
+        // HTML 태그 제거
+        String sanitized = input.replaceAll("<[^>]*>", "");
+
+        // XSS 취약점 방지를 위한 특수문자 이스케이프
+        sanitized = sanitized
+                .replaceAll("&", "&amp;")
+                .replaceAll("\"", "&quot;")
+                .replaceAll("'", "&#x27;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll("/", "&#x2F;")
+                .replaceAll("\\\\", "&#x5C;")
+                .replaceAll("`", "&#x60;");
+
+        // 개행문자 유지
+        sanitized = sanitized.replaceAll("\n", "<br>");
+
+        return sanitized.trim();
+    }
+
+    private void validateTermRequest(DictionaryDTO dto) {
+        if (dto == null) {
+            throw new IllegalArgumentException("요청 데이터가 없습니다.");
+        }
+
+        if (dto.getTerm() == null || dto.getTerm().trim().isEmpty()) {
+            throw new IllegalArgumentException("용어는 필수입니다.");
+        }
+
+        if (dto.getDefinition() == null || dto.getDefinition().trim().isEmpty()) {
+            throw new IllegalArgumentException("정의는 필수입니다.");
+        }
+
+        if (dto.getTerm().length() > 200 || dto.getDefinition().length() > 2000) {
+            throw new IllegalArgumentException("용어는 200자, 정의는 2000자를 초과할 수 없습니다.");
+        }
+
+        if (!dto.getTerm().matches("^[가-힣a-zA-Z0-9\\s,.()\\-]+$")) {
+            throw new IllegalArgumentException("용어에 허용되지 않는 특수문자가 포함되어 있습니다.");
+        }
+
+        if (dto.getCategory() != null && !dto.getCategory().matches("^[가-힣a-zA-Z0-9\\s]+$")) {
+            throw new IllegalArgumentException("카테고리에 허용되지 않는 특수문자가 포함되어 있습니다.");
+        }
+    }
+
+    public List<DictionaryDTO> findAllPendingRequests() {
+        return dictionaryMapper.findByStatus("DEACTIVE").stream()
+                .map(DictionaryDTO::fromDomain)
+                .collect(Collectors.toList());
+    }
+
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_MODERATOR')")
+    public void approveTermRequest(Long id) {
+        try {
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
+
+            DictionaryDomain term = dictionaryMapper.findById(id);
+            if (term != null) {
+                term.setStatus("ACTIVE");
+                term.setUpdatedAt(LocalDateTime.now());
+                term.setUpdatedBy(auth.getName());
+
+                securityLogger.logSecurityEvent(
+                        "DICTIONARY_APPROVE_REQUEST",
+                        auth.getName(),
+                        request.getRemoteAddr()
+                );
+
+                dictionaryMapper.updateTerm(term);
+            }
+        } catch (Exception e) {
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
+
+            securityLogger.logSecurityEvent(
+                    "DICTIONARY_APPROVE_REQUEST_FAILURE",
+                    auth.getName(),
+                    request.getRemoteAddr()
+            );
+            throw e;
+        }
+    }
+
+    public void rejectTermRequest(Long id) {
+        dictionaryMapper.deleteTerm(id);
+    }
 }

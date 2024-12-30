@@ -427,61 +427,52 @@
     <!-- 아래는 테스트용 매퍼 -->
 
     <select id="findByAllRangePreferences" parameterType="map" resultMap="motorcycleResultMap">
-        SELECT *
-        CASE
+        SELECT *,
+        (CASE
         WHEN (
-        <if test="price != null">price &lt;= #{price} AND</if>
-        <if test="minCapacity != null and maxCapacity != null">capacity BETWEEN #{minCapacity} AND #{maxCapacity} AND
-        </if>
-        <if test="minSpeed != null and maxSpeed != null">top_speed BETWEEN #{minSpeed} AND #{maxSpeed} AND</if>
-        <if test="minRpm != null and maxRpm != null">(max_power_rpm BETWEEN #{minRpm} AND #{maxRpm} OR max_torque_rpm
-            BETWEEN #{minRpm} AND #{maxRpm})
-        </if>
+        <if test="price != null">price IS NOT NULL AND price &lt;= #{price} AND </if>
+        <if test="minCapacity != null and maxCapacity != null">capacity IS NOT NULL AND capacity BETWEEN #{minCapacity} AND #{maxCapacity} AND </if>
+        <if test="minSpeed != null and maxSpeed != null">top_speed IS NOT NULL AND top_speed BETWEEN #{minSpeed} AND #{maxSpeed} AND </if>
+        <if test="minRpm != null and maxRpm != null">(max_power_rpm IS NOT NULL AND max_torque_rpm IS NOT NULL) AND
+            (max_power_rpm BETWEEN #{minRpm} AND #{maxRpm} OR max_torque_rpm BETWEEN #{minRpm} AND #{maxRpm}) AND </if>
         1=1
         ) THEN 'EXACT'
         WHEN (
-        <if test="price != null">price &lt;= #{price} * 1.2 AND</if>
-        <if test="minCapacity != null and maxCapacity != null">capacity BETWEEN #{minCapacity} * 0.8 AND #{maxCapacity}
-            * 1.2 AND
-        </if>
-        <if test="minSpeed != null and maxSpeed != null">top_speed BETWEEN #{minSpeed} * 0.8 AND #{maxSpeed} * 1.2 AND
-        </if>
-        <if test="minRpm != null and maxRpm != null">(max_power_rpm BETWEEN #{minRpm} * 0.8 AND #{maxRpm} * 1.2 OR
-            max_torque_rpm BETWEEN #{minRpm} * 0.8 AND #{maxRpm} * 1.2)
-        </if>
+        <if test="price != null">price IS NOT NULL AND price &lt;= #{price} * 1.2 AND </if>
+        <if test="minCapacity != null and maxCapacity != null">capacity IS NOT NULL AND capacity BETWEEN #{minCapacity} * 0.8 AND #{maxCapacity} * 1.2 AND </if>
+        <if test="minSpeed != null and maxSpeed != null">top_speed IS NOT NULL AND top_speed BETWEEN #{minSpeed} * 0.8 AND #{maxSpeed} * 1.2 AND </if>
+        <if test="minRpm != null and maxRpm != null">(max_power_rpm IS NOT NULL AND max_torque_rpm IS NOT NULL) AND
+            (max_power_rpm BETWEEN #{minRpm} * 0.8 AND #{maxRpm} * 1.2 OR max_torque_rpm BETWEEN #{minRpm} * 0.8 AND #{maxRpm} * 1.2) AND </if>
         1=1
         ) THEN 'MEDIUM'
         WHEN (
-        <if test="price != null">price &lt;= #{price} * 1.3 AND</if>
-        <if test="minCapacity != null and maxCapacity != null">capacity BETWEEN #{minCapacity} * 0.7 AND #{maxCapacity}
-            * 1.3 AND
-        </if>
-        <if test="minSpeed != null and maxSpeed != null">top_speed BETWEEN #{minSpeed} * 0.7 AND #{maxSpeed} * 1.3 AND
-        </if>
-        <if test="minRpm != null and maxRpm != null">(max_power_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3 OR
-            max_torque_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3)
-        </if>
+        <if test="price != null">price IS NOT NULL AND price &lt;= #{price} * 1.3 AND </if>
+        <if test="minCapacity != null and maxCapacity != null">capacity IS NOT NULL AND capacity BETWEEN #{minCapacity} * 0.7 AND #{maxCapacity} * 1.3 AND </if>
+        <if test="minSpeed != null and maxSpeed != null">top_speed IS NOT NULL AND top_speed BETWEEN #{minSpeed} * 0.7 AND #{maxSpeed} * 1.3 AND </if>
+        <if test="minRpm != null and maxRpm != null">(max_power_rpm IS NOT NULL AND max_torque_rpm IS NOT NULL) AND
+            (max_power_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3 OR max_torque_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3) AND </if>
         1=1
         ) THEN 'WIDE'
-        END as match_range
+        ELSE 'NONE'
+        END) as match_range
         FROM MotorcycleAll
         WHERE 1=1
         <!-- 장르 조건 -->
         <if test="primaryGenre != null">
             AND (
             CASE #{primaryGenre}
-            WHEN 'replica' THEN replica > 1
-            WHEN 'cruiser' THEN cruiser > 1
-            WHEN 'tourer' THEN tourer > 1
-            WHEN 'adventure' THEN adventure > 1
-            WHEN 'multiPurpose' THEN multiPurpose > 1
-            WHEN 'naked' THEN naked > 1
-            WHEN 'classic' THEN classic > 1
-            WHEN 'scrambler' THEN scrambler > 1
-            WHEN 'offRoad' THEN offRoad > 1
-            WHEN 'motard' THEN motard > 1
-            WHEN 'scooter' THEN scooter > 1
-            WHEN 'cafeRacer' THEN cafe_racer > 1
+            WHEN 'replica' THEN replica IS NOT NULL AND replica > 1
+            WHEN 'cruiser' THEN cruiser IS NOT NULL AND cruiser > 1
+            WHEN 'tourer' THEN tourer IS NOT NULL AND tourer > 1
+            WHEN 'adventure' THEN adventure IS NOT NULL AND adventure > 1
+            WHEN 'multiPurpose' THEN multiPurpose IS NOT NULL AND multiPurpose > 1
+            WHEN 'naked' THEN naked IS NOT NULL AND naked > 1
+            WHEN 'classic' THEN classic IS NOT NULL AND classic > 1
+            WHEN 'scrambler' THEN scrambler IS NOT NULL AND scrambler > 1
+            WHEN 'offRoad' THEN offRoad IS NOT NULL AND offRoad > 1
+            WHEN 'motard' THEN motard IS NOT NULL AND motard > 1
+            WHEN 'scooter' THEN scooter IS NOT NULL AND scooter > 1
+            WHEN 'cafeRacer' THEN cafe_racer IS NOT NULL AND cafe_racer > 1
             ELSE 1=1
             END
             )
@@ -489,6 +480,7 @@
 
         <!-- 등급 조건 -->
         <if test="classGrades != null and classGrades.size() > 0">
+            AND classGrade IS NOT NULL
             AND classGrade IN
             <foreach item="grade" collection="classGrades" open="(" separator="," close=")">
                 #{grade}
@@ -497,15 +489,11 @@
 
         <!-- 최소한 넓은 범위(±30%)에는 들어와야 함 -->
         AND (
-        <if test="price != null">price &lt;= #{price} * 1.3 AND</if>
-        <if test="minCapacity != null and maxCapacity != null">capacity BETWEEN #{minCapacity} * 0.7 AND #{maxCapacity}
-            * 1.3 AND
-        </if>
-        <if test="minSpeed != null and maxSpeed != null">top_speed BETWEEN #{minSpeed} * 0.7 AND #{maxSpeed} * 1.3 AND
-        </if>
-        <if test="minRpm != null and maxRpm != null">(max_power_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3 OR
-            max_torque_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3) AND
-        </if>
+        <if test="price != null">price IS NOT NULL AND price &lt;= #{price} * 1.3 AND </if>
+        <if test="minCapacity != null and maxCapacity != null">capacity IS NOT NULL AND capacity BETWEEN #{minCapacity} * 0.7 AND #{maxCapacity} * 1.3 AND </if>
+        <if test="minSpeed != null and maxSpeed != null">top_speed IS NOT NULL AND top_speed BETWEEN #{minSpeed} * 0.7 AND #{maxSpeed} * 1.3 AND </if>
+        <if test="minRpm != null and maxRpm != null">(max_power_rpm IS NOT NULL AND max_torque_rpm IS NOT NULL) AND
+            (max_power_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3 OR max_torque_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3) AND </if>
         1=1
         )
         ORDER BY
@@ -513,6 +501,7 @@
         WHEN 'EXACT' THEN 1
         WHEN 'MEDIUM' THEN 2
         WHEN 'WIDE' THEN 3
+        ELSE 4
         END,
         motorcycleID
     </select>

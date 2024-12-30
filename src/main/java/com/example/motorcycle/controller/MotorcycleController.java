@@ -6,6 +6,10 @@ import com.example.motorcycle.form.MotorcycleForm;
 import com.example.motorcycle.service.MotorcycleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
@@ -135,18 +139,27 @@ public class MotorcycleController {
 
 //    ___________________________________________________________________________________________________________________________
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/delete")
-    public String deleteMotorcycle(@ModelAttribute DeleteMotorcycleDTO dto, RedirectAttributes redirectAttributes) {
+    public String deleteMotorcycle(@ModelAttribute DeleteMotorcycleDTO dto,
+                                   RedirectAttributes redirectAttributes,
+                                   @AuthenticationPrincipal UserDetails userDetails) {
         try {
+            // 권한 검증
+            if (!userDetails.getAuthorities().stream()
+                    .anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"))) {
+                throw new AccessDeniedException("관리자 권한이 필요합니다.");
+            }
+
             motorcycleService.deleteFullMotorcycle(dto.getMotorcycleID());
             redirectAttributes.addFlashAttribute("message", "Motorcycle이 성공적으로 삭제되었습니다.");
+        } catch (AccessDeniedException e) {
+            redirectAttributes.addFlashAttribute("error", "권한이 없습니다: " + e.getMessage());
         } catch (Exception e) {
-            redirectAttributes.addFlashAttribute("error", "삭제중 오류가 발생했습니다 : " + e.getMessage());
+            redirectAttributes.addFlashAttribute("error", "삭제중 오류가 발생했습니다: " + e.getMessage());
         }
-
         return "redirect:/motorcycle/";
     }
-
 
     //___________________________________________-
 

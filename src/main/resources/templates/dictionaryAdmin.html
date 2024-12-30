@@ -24,11 +24,17 @@
             line-height: 1.6;
         }
 
+        .top-panels {
+            display: flex;
+            gap: 30px;
+        }
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
             display: flex;
+            flex-direction: column;
             gap: 30px;
         }
 
@@ -194,10 +200,53 @@
             width: 100%;
             margin-top: 5px;
         }
+
+        .term-requests-panel {
+            margin-top: 0;  /* 기존 margin-top 제거 */
+            width: 100%;    /* 전체 너비 사용 */
+        }
+
+        .request-item {
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+
+        .request-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .request-term {
+            font-weight: bold;
+            color: var(--razer-green);
+        }
+
+        .request-date {
+            color: rgba(0, 255, 0, 0.7);
+        }
+
+        .request-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .approve-btn {
+            border-color: #00ff00;
+        }
+
+        .reject-btn {
+            border-color: #ff0000;
+        }
+
     </style>
 </head>
 <body>
 <div class="container">
+    <div class="top-panels">
     <div class="category-panel">
         <h4 class="section-title mini">카테고리 목록</h4>
         <!-- 카테고리 추가 폼 -->
@@ -282,6 +331,27 @@
             </div>
 
             <button type="button" class="btn" id="updateBtn">수정</button>
+        </div>
+    </div>
+</div>
+    <div class="term-requests-panel">
+        <h4 class="section-title">용어 추가 요청 관리</h4>
+        <div class="requests-list">
+            <div th:each="request : ${termRequests}" class="request-item">
+                <div class="request-header">
+                    <span class="request-term" th:text="${request.term}"></span>
+                    <div class="request-date" th:text="${#temporals.format(request.createdAt, 'yyyy-MM-dd HH:mm')}"></div>
+                </div>
+                <div class="request-content">
+                    <p class="request-definition" th:text="${request.definition}"></p>
+                    <p class="request-category" th:text="${request.category}"></p>
+                    <p class="request-requester" th:text="${request.createdBy}"></p>
+                </div>
+                <div class="request-actions">
+                    <button class="btn approve-btn" th:data-id="${request.id}">승인</button>
+                    <button class="btn reject-btn" th:data-id="${request.id}">거절</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -455,6 +525,50 @@
                 alert('용어 등록 중 오류가 발생했습니다.');
             });
     });
+
+        document.querySelectorAll('.approve-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const requestId = btn.dataset.id;
+                try {
+                    const response = await fetch(`/admin/dictionary/request/${requestId}/approve`, {
+                        method: 'POST',
+                        headers: {
+                            [csrfHeader]: csrfToken
+                        }
+                    });
+
+                    const result = await response.json();
+                    if (result.success) {
+                        alert('용어 요청이 승인되었습니다.');
+                        location.reload();
+                    }
+                } catch (error) {
+                    alert('처리 중 오류가 발생했습니다.');
+                }
+            });
+        });
+
+        document.querySelectorAll('.reject-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const requestId = btn.dataset.id;
+                try {
+                    const response = await fetch(`/admin/dictionary/request/${requestId}/reject`, {
+                        method: 'POST',
+                        headers: {
+                            [csrfHeader]: csrfToken
+                        }
+                    });
+
+                    const result = await response.json();
+                    if (result.success) {
+                        alert('용어 요청이 거절되었습니다.');
+                        location.reload();
+                    }
+                } catch (error) {
+                    alert('처리 중 오류가 발생했습니다.');
+                }
+            });
+        });
 </script>
 </body>
 </html>

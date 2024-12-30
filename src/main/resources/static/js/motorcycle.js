@@ -39,28 +39,28 @@ function editMotorcycle() {
 
 function deleteMotorcycle() {
     const id = document.getElementById('deleteId').value;
-    if (!id) {
-        addConsoleEffect('Error: ID를 입력해주세요.');
-        return;
-    }
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = '/motorcycle/delete';
 
-    if (confirm('[WARNING] 정말로 이 Motorcycle을 삭제하시겠습니까?')) {
-        addConsoleEffect('Initiating delete sequence for Motorcycle ' + id + '...');
-        setTimeout(() => {
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = '/motorcycle/delete';
+    // CSRF 토큰 추가
+    const csrfToken = document.querySelector("meta[name='_csrf']").content;
+    const csrfHeader = document.querySelector("meta[name='_csrf_header']").content;
 
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = 'motorcycleID';
-            input.value = id;
+    const idInput = document.createElement('input');
+    idInput.type = 'hidden';
+    idInput.name = 'motorcycleID';
+    idInput.value = id;
 
-            form.appendChild(input);
-            document.body.appendChild(form);
-            form.submit();
-        }, 500);
-    }
+    const csrfInput = document.createElement('input');
+    csrfInput.type = 'hidden';
+    csrfInput.name = '_csrf';
+    csrfInput.value = csrfToken;
+
+    form.appendChild(idInput);
+    form.appendChild(csrfInput);
+    document.body.appendChild(form);
+    form.submit();
 }
 
 // 키보드 이벤트 처리

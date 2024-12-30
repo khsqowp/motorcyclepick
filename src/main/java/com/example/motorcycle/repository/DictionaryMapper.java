@@ -30,4 +30,6 @@ public interface DictionaryMapper {
     void updateCategory(Long categoryId, String categoryName, String description);
 
     void deleteCategory(Long categoryId);
+
+    List<DictionaryDomain> findByStatus(String status);
 }
