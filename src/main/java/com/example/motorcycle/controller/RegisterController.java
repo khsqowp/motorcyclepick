@@ -34,13 +34,14 @@ public class RegisterController {
     }
 
     @PostMapping("/register")
-    public String register(@Valid UserDTO userDTO, BindingResult result, HttpServletRequest request) {
+    public String register(@Valid UserDTO userDTO, BindingResult result, HttpServletRequest request, Model model) {
         if (result.hasErrors()) {
             securityLogger.logSecurityEvent(
                     "REGISTER_VALIDATION_FAILURE",
                     userDTO.getId(),
                     request.getRemoteAddr()
             );
+            model.addAttribute("user", userDTO);
             return "register";
         }
 
@@ -50,7 +51,7 @@ public class RegisterController {
         // 기본 역할 설정
         userDTO.setRole("ROLE_USER");
 
-        userService.registerUser(userDTO);
+//        userService.registerUser(userDTO);
 
         try {
             userService.registerUser(userDTO);
@@ -61,6 +62,8 @@ public class RegisterController {
                     userDTO.getId(),
                     request.getRemoteAddr()
             );
+            model.addAttribute("user", userDTO);
+            model.addAttribute("error", e.getMessage());
             return "register";
         }
 

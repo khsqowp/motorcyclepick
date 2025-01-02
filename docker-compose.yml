@@ -1,0 +1,49 @@
+# docker-compose.yml
+version: '3'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: MotorcycleDB
+      TZ: Asia/Seoul
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+    user: "999:999"
+    networks:
+      - motorcycle-network
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  spring-app:
+    build: .
+    container_name: motor-server
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    volumes:
+      - /Users/user/Desktop/CODE/Project/motorcycle/src/main/resources/static/images:/app/src/main/resources/static/images
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - TZ=Asia/Seoul
+    networks:
+      - motorcycle-network
+
+volumes:
+  mysql-data:
+    driver: local
+
+networks:
+  motorcycle-network:
+    driver: bridge
