@@ -1,0 +1,36 @@
+Model : Rocket 3 TFC
+Years : 2019
+Production : 750 Units
+Engine : Four stroke, inline 3-cylinder, DOHC
+Capacity : 2458 cc / 150 cub in
+Bore x Stroke : 110.2 x 85.9 mm
+Cooling System : Liquid cooled
+Compression Ratio : NA
+Induction : Ride-by-Wire, fuel injected
+Lubrication : Wet sump
+Exhaust : Stainless 3-into-1 headers with 3-exit Arrow-branded silencer / CAT box
+Ignition : Digital inductive type via electronic engine management
+Starting : Electric
+Max Power : 133.8 kW / 182 PS @ 7000 rpm
+Max Torque : 221 Nm / 163 ft-lb @ 4000 rpm
+Clutch : Hydraulic, slip-assist
+Transmission : 6 Speed
+Final Drive : Shaft, bevel box
+Frame : Full aluminum frame
+Swingarm : Single-sided, cast aluminum swingarm
+Front Suspension : Showa &#248;47mm upside-down 1+1 cartridge front forks, compression and rebound adj
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Fully adjustable Showa piggyback reservoir RSU with remote hydraulic preload adjuster
+Rear Wheel Travel : 107 mm / 4.2 in
+Front Brakes : 2x 320 mm discs w/ Brembo M4.30 Stylema 4-piston radial monobloc calipers, Cornering ABS
+Rear Brakes : Single 300 mm disc, Brembo M4.32 4-piston monobloc caliper, Cornering ABS
+Front Wheel : 17 x 3.6 in cast aluminum
+Rear Wheel : 16 x 7.5 in cast aluminum
+Front Tyre : 150/80 R17 V
+Rear Tyre : 240/50 R16 V
+Rake : 27.9&#176;
+Trail : 134.9 mm / 5.3 in
+Wheelbase : NA
+Seat Height : 773 mm / 30.6 in
+Dry Weight : 290 kg / 639 lbs
+Fuel Capacity : 19 Litres / 5 US gal

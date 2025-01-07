@@ -1,0 +1,36 @@
+Model : Tiger 1200 Alpine Special Edition
+Years : 2020
+Engine : Four stroke, transverse three cylinder. DOHC, 4 valves per cylinder
+Capacity : 1215 cc / 74.1 cub in
+Bore x Stroke : 85 x 71.4mm
+Cooling System : Liquid-cooled
+Compression Ratio : 11.0:1
+Induction : Ride by Wire, fuel injection
+Ignition : Digital
+Starting : Electric
+Exhaust : 3 into 1 header system, Arrow titanium silencer with carbon fibre end cap, side mounted
+Max Power : 104 kW / 139 hp @ 9300rpm
+Max Torque : 122 Nm / 90.7 lb-ft @ 7600 rpm
+Clutch : Wet, multi-plate hydraulically operated, torque assist
+Transmission : 6 Speed
+Final Drive : Shaft
+Frame : Tubular steel trellis frame
+Swingarm : Single-sided, cast aluminium alloy with shaft drive
+Suspension : Single-sided, cast aluminium alloy with shaft drive
+Front Suspension : WP 48 mm upside down forks, electronically adjustable damping
+Front Wheel Travel : 190 mm / 7.4 in
+Rear Suspension : WP monoshock, electronically adjustable semi active damping with automatic preload adjustment
+Rear Wheel Travel : 193 mm / 7.6 in (XRx low: 158 mm / 6.2 in)
+Front Brakes : 2 x 305 mm floating discs, radially mounted monobloc Brembo 4-piston calipers, switchable ABS
+Rear Brakes : Single 282 mm disc, Nissin 2-piston sliding caliper, switchable ABS
+Front Wheel : Cast aluminium alloy 10-spoke 19 x 3.0 in
+Rear Wheel : Cast aluminium alloy 10-spoke 17 x 4.5 in
+Front Tyre : 120/70 R19
+Rear Tyre : 170/60 R17
+Rake : 23.1&#186;
+Trail : 99.9 mm / 3.9 in
+Dimensions : Width 830 mm / 32.7 in (with handlebars) Height 1470 mm / 57.8 in
+Wheelbase : 1520 mm / 59.8 in
+Seat Height : 835 - 855 mm / 32.8 - 33.6 in
+Dry Weight : 242 kg / 530 lbs
+Fuel Capacity : 20 Litres / 5.3 US gal / 4.4 Imp gal

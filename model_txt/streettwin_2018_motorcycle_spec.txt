@@ -1,0 +1,37 @@
+Model : Street Twin
+Years : 2018
+Engine : Four stroke, 270&#176; Crank angle parallel twin, SOHC, 8 valves
+Capacity : 900 cc / 54.9 cu in
+Bore x Stroke : 84.6 x 80 mm
+Cooling System : Liquid cooled
+Compression Ratio : 10.55:1
+Lubrication : Wet sump
+Exhaust : Brushed stainless steel, 2 into 2 exhaust system with twin silencers
+Induction : Multipoint sequential electronic fuel injection
+Ignition : Digital
+Starting : Electric
+Max Power : 40.5 kW / 55 hp @ 5900 rpm
+Max Torque : 80 Nm / 8.16 kgf-m / 59 ft-lb @ 3230 rpm
+Clutch : Wet, multi-plate, slip-assist
+Transmission : 5-Speed
+Final Drive : Chain, X-ring
+Frame : Tubular steel cradle, twin-sided tubular steel swing-arm
+Front Suspension : Kayaba 41 mm fork
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Kayaba twin shocks with adjustable preload
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : Single 310mm disc, Nissin 2 piston floating caliper, ABS
+Rear Brakes : Single 255mm disc, Nissin 2 piston floating caliper, ABS
+Wheels Front : 2.75 x 18, Cast aluminium alloy, multi-spoke
+Wheels Rear : 4.25 x 17, Cast aluminium alloy, multi-spoke
+Front Tyre : 100/90-R18
+Rear Tyre : 150/70-R17
+Rake : 25.1&#176;
+Trail : 102.4 mm / 4.0 in
+Dimensions : Width: 785 mm / 30.9 in Height: 1114 mm / 43.9 in (without mirrors)
+Wheelbase : 1415 mm / 55.7 in
+Seat Height : 750 mm / 29.5 in
+Dry Weight : 198 kg / 437 lbs
+Fuel Capacity : 12 L / 3.2 US gal / 2.7 Imp gal
+Consumption Average (claimed) : 3.87 L/100 km / 25.8 km/l / 60.8 US mpg / 73.0 Imp mpg
+Colours : Jet black, Crnberry red, Matt black, Phantom black, Aluminium silver

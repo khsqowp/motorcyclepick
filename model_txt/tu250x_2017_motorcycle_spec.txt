@@ -1,0 +1,29 @@
+Model : TU 250X
+Years : 2017-18
+Engine : Four stroke, single cylinder, SOHC, 4 valves
+Capacity : 249 cc / 15.2 cu-in
+Bore x Stroke : 72 x 61.2 mm
+Cooling System : Air/oil-cooled
+Lubrication System : Wet sump
+Compression Ratio : 9.2:1
+Induction : EFI
+Ignition : Electronic ignition (fully transistorized)
+Starting : Electric
+Max Power : 15 kW / 20 hp @ 8000 rpm
+Max Torque : 21 Nm / 2.1 kgf-m / 15.5 lb-ft @ 5500 rpm
+Transmission : 5 Speed
+Final Drive : Chain, DID520V, 108 links
+Frame : Diamond shaped, steel tube
+Front Suspension : Telescopic, hydraulic dampers, coil springs
+Rear Suspension : Swinging arm, hydraulic dampers, coil springs
+Front Brakes : Single disc
+Rear Brakes : Drum
+Front Tyre : 90/90-18 M/C 51S, tube type
+Rear Tyre : 110/90-18 M/C 61S, tube type
+Dimensions : Length 2070 mm / 81.5 in Width 750 mm / 29.5 in Height: 1075 mm / 42.3 in
+Wheelbase : 1375 mm / 54.1 in
+Seat Height : 770 mm / 30.3 in
+Ground Clearance : 165 mm / 6.5 in
+Wet Weight : 149 kg / 326 lbs
+Fuel Capacity : 12 Litres / 3.2 US gal / 2.6 Imp gal
+Top Speed (est.) : 120 km/h / 75 mph

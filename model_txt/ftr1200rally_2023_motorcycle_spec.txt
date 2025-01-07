@@ -1,0 +1,43 @@
+Model : FTR 1200 Rally
+Years : 2023
+Engine : Four stroke, 60° V Twin , DOHC, 4 valves per cylinder, graded buckets
+Capacity : 1203 cc / 73 cu-in
+Bore x Stroke : 102 x 73.6 mm
+Compression Ratio : 12.5:1
+Cooling System : Liquid Cooled
+Induction : Electronic Fuel Injection closed loop, 60 mm bore
+Emission : EURO5
+Exhaust : 2-into-1
+Starting : Electric
+Max Power : 120 hp / 89.4 kW @ 6000 rpm
+Max Torque : 117.9 Nm / 87 lb-ft @ 6000 rpm
+Clutch : Assist &amp; Slip, Multi-Plate
+Transmission : 6 Speed
+Final Drive : Chain
+Final Drive Ratio : 2.647 : 1
+Gear Ratios : 1st 12.270 : 1 2nd 8.341 : 1 3rd 6.646 : 1 4th 5.639 : 1 5th 4.985 : 1 6th 4.278 : 1
+Primary Drive : Gear drive wet clutch
+Lean Angle : 43°
+Frame : Steel trellis
+Front Suspension : 43 mm Inverted Telescopic Cartridge Fork
+Front Wheel Travel : 150 mm / 5.9 in
+Rear Suspension : Monotube IFP
+Rear Wheel Travel : 150 mm / 5.9 in
+Front Brakes : 2x 320mm t5 Rotor Brembo with 4-piston calipers
+Rear Brakes : Single 260mm t5 Rotor Brembo with 2-piston calipers
+ABS : Standard, option to disable
+Wheels : Cast Aluminum
+Front Wheel : 18 x 3.0
+Rear Wheel : 19 x 4.25
+Front Tyre : 120/70R19 M/C 60V M+S
+Rear Tyre : 150/70R18 M/C 70V M+S
+Rake : 26.3°
+Trail : 130 mm / 5.1 in
+Dimensions : Length 2286 mm / 90.0 in Width 867 mm / 34.1 in Height 1396 mm / 53.9 in
+Wheelbase : 1524 mm / 60 in
+Seat Height : 815 mm / 32.1 in
+Ground Clearance : 170 mm / 6.5 in
+Dry Weight : 222 kg / 488 lbs
+Wet Weight : 236 kg / 520 lbs
+Fuel Capacity : 12.9 Litres / 3.4 US gal
+Standard Equipment : ABS, Cruise Control

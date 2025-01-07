@@ -1,0 +1,31 @@
+Model : Leoncino 800
+Years : 2020
+Engine : Four stroke, parallel twin, DOHC, 8 valves
+Capacity : 754 cc / 46.0 cu-in
+Bore x Stroke : 88 x 62 mm
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : EFI with twin 43 mm throttle bodies
+Ignition : TLI
+Starting : Electric
+Max Power : 80 hp / 60 kW @ 9000 rpm
+Max Torque : 50 lb-ft / 67Nm @ 6500 rpm
+Clutch : Wet clutch
+Transmission : 6-Speed
+Final Drive : Chain
+Frame : Steel tube trellis frame
+Front Suspension : 50mm USD fork, adjustable
+Front Wheel Travel : 130 mm / 5.1
+Rear Suspension : Swingarm with monoshock, spring preload adjustable, hydraulic rebound adjustable
+Rear Wheel Travel : 145 mm / 5.7 in
+Front Brakes : 2x 320mm floating discs, Brembo 4-piston calipers
+Rear Brakes : Single 260mm disc, 2-piston caliper,
+ABS : Standard
+Front Tyre : 120/70 ZR17 Pirelli MT60RS
+Rear Tyre : 180/55 ZR17 Pirellu MT60RS
+Dimensions : Length 2140 mm / 84.2 in Width 880 mm / 34.6 in Height 1170 mm / 46.0 in
+Wheelbase : 1460 mm / 57.4 in
+Ground Clearance : 165 mm / 6.4 in
+Seat Height : 800 mm / 31.4 in
+Wet Weight : 220 kg / 485 lbs
+Fuel Capacity : 15 Litres / 4.0 US gal

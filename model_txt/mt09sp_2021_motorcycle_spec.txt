@@ -1,0 +1,34 @@
+Model : MT-09 SP
+Years : 2021
+Engine : Four stroke, transverse triple cylinder, DOHC, 4 valves per cylinder
+Capacity : 889 cc / 54.2 cu-in
+Bore x Stroke : 78 x 62.1 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5:1
+Lubrication : Wet sump
+Induction : Fuel injection with YCC-T
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : 117.4 hp / 119PS / 87.5 kW @ 10000 rpm
+Max Torque : 93 Nm / 68.6lb-ft @ 7000 rpm
+Clutch : Multiplate assist and slipper clutch
+Transmission : 6 Speed
+Final Drive : O-ring chain
+Frame : Controlled-fill die-cast aluminum with subframe
+Front Suspension : 41mm KYB inverted fork, adjustable preload, compression and rebound
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Linkage-free, fully adjustable horizontal &#214;hlins shock
+Rear Wheel Travel : 122 mm / 4.8 in
+Front Brakes : 2x 298mm hydraulic discs, 4-piston calipers
+Rear Brakes : Single 245mm hydraulic disc, single piston caliper
+ABS : Standard
+Front Tyre : 120/70 ZR17 M/C
+Rear Tyre : 180/55 ZR17 M/C
+Caster Angle : 25&#176;
+Trail : 109 mm / 4.3 in
+Dimensions : Length 2090 mm / 82.3 in Width 795 mm / 31.3 in Height 1191 mm / 46.9 in
+Wheelbase : 1430 mm / 56.3 in
+Seat Height : 825.5 mm / 32.5 in
+Ground Clearance : 140 mm / 5.5 in
+Wet Weight : 190 kg / 419 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal

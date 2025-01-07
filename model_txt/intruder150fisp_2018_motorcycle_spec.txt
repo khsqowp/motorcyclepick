@@ -1,0 +1,31 @@
+Model : Intruder 150FI-SP
+Years : 2018-
+Engine : Four stroke, single cylinders, SOHC, 2 valve
+Capacity : 154.9 cc / 9.45 cu-in
+Bore x Stroke : 56 mm x 63 mm
+Compression Ratio : NA
+Cooling System : Air cooled
+Lubrication System : Wet sump
+Induction : Fuel injection
+Ignition : Electronic ignition, fully transistorized
+Starting : Electric
+Max Power : 14.6 hp / 10.8 kW @ 8000 rpm
+Max Torque : 14 Nm / 10.3 lb-ft @ 6000 rpm
+Clutch : Wet Multiplate
+Transmission : 5 Speed
+Final Drive : Chain
+Frame : Single downtube
+Front Suspension : Telescopic, coil spring, oil damped
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Swingarm, monoshock
+Rear Wheel travel : 125 mm / 4.9 in
+Front Brakes : Single 266mm disc 2 piston caliper, additional single channel ABS
+Rear Brakes : Single 220mm disc 1 piston caliper
+Front Tyre : 100/80 -17
+Rear Tyre : 140/60R -17
+Dimensions : Length 2130 mm / 83.8 in Width 805 mm / 31.6 in Height 1095 mm / 43.1 in
+Wheelbase : 1405 mm / 55.3 in
+Seat Height : 740 mm / 29 in
+Ground Clearance : 170 mm / 6.7 in
+Wet Weight : 148 kg / 326 lbs
+Fuel Capacity : 11 Litres / 2.9 US gal

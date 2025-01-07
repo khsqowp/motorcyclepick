@@ -1,0 +1,38 @@
+Model : Chieftain 116
+Years : 2020
+Engine : Thunder Stroke 116, 49&#730; V-Twin
+Capacity : 1890 cc / 115 cub in
+Bore x Stroke : 103.2 x 113mm
+Compression Ratio : 11.0:1
+Cooling : Air / Oil cooled
+Exhaust : Split dual exhaust with cross-over
+Induction : Electronic fuel injection, closed loop, 54 mm bore
+Starting : Electric
+Max Toque : 168 Nm / 126 lb-ft @ 2900 rpm
+Clutch : Wet, multi-plate
+Transmission : 6 Speed
+Final Drive : Belt, 152 tooth
+Gear Ratio : 1st 9.403 : 1 2nd 6.411 : 1 3rd 4.763 : 1 4th 3.796 : 1 5th 3.243 : 1 6th 2.789 : 1
+Final Drive Ratio : 2.2:1
+Frame : High tensile steel, monoshock
+Front Suspension : 46mm Telescopic forks
+Front Wheel Travel : 119 mm / 4.7 in
+Rear Suspension : Single shock, air adjustable
+Rear Wheel Travel : 114 mm / 4.5 in
+Front Brakes : 2x 300mm Floating rotor 4 piston calipers
+Rear Brakes : Single 300mm floating rotor 2 piston calipers
+ABS : Individual front and rear control with ABS
+Front Wheel : Cast 19&#8243; x 3.5&#8243;
+Rear Wheel : Cast 16&#8243; x 5.0&#8243;
+Front Tyre : 130/60B19 61H Dunlop American Elite
+Rear Tyre : 180/60R16 80H Dunlop Elite 3
+Rake : 25&#176;
+Trail : 150 mm / 5.9 in
+Dimensions : Length 2506 mm / 98.7 in
+Wheelbase : 1668 mm / 65.7 in
+Seat Height : 650 mm / 25.6 in
+Ground Clearance : 130 mm / 5.1 in
+Dry Weight : 358 kg / 789 lbs
+Wet Weight : 372 kg / 821 lbs
+GVWR : 628 kg / 1385 lbs
+Fuel Capacity : 20.8 Litres / 5.5 US gal

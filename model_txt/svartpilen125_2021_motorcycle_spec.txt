@@ -1,0 +1,39 @@
+Model : Svartpilen 125
+Years : 2021
+Engine : Four stroke, single cylinder, DOHC, 4 valve
+Capacity : 124 cc / 7.6 cu-in
+Bore x Stroke : 58 x 47.2 mm
+Cooling System : Liquid cooled
+Compression Ratio : 14.5:1
+Lubrication : Wet sump
+Induction : Bosch electronic fuel injection
+Emission : EURO5
+Ignition : Contactless, controlled, fully electronic ignition system with digital ignition timing adjustment
+EMS : Bosch EMS
+Starting : Electric
+Max Power : 11.3 kW / 15 hp @ 10500 rpm
+Max Torque : 12 Nm / 8.85 ft-lb @ 8000 rpm
+Clutch : Wet multi-disc, mechanically actuated
+Transmission : 6 Speed
+Final Drive : X-ring chain
+Frame : Powdercoated steel trellis
+Handlebars : Tapered aluminum, 26-22mm
+Front Suspension : 43mm WP Apex inverted non-adjustable open-cartridge fork
+Front Wheel Travel : 145 mm / 5.6 in
+Rear Suspension : Linkage-free, spring-preload adjustable WP Apex shock w/ progressive damping
+Rear Wheel Travel : 145 mm / 5.6 in
+Front Brakes : Single 320mm disc, 4 piston floating calliper
+Rear Brakes : Single 230mm disc 1 piston floating calliper
+ABS : Bosch 10.1 MB two-channel
+Wheels : Wire-spoked
+Front Tyre : 110/70 - 17 Pirelli Scorpion Rally STR
+Rear Tyre : 150/60 - 17 Pirelli Scorpion Rally STR
+Steering Head Angle : 65 &#176;
+Rake : 25&#176;
+Triple Clamp Offset : 32 mm / 1.8 in
+Trail : 95 mm / 3.7 in
+Wheelbase : 1357 &#177; 15.5 mm / 53.4 in
+Seat Height : 835 mm / 32.9 in
+Ground Clearance : 145 mm / 5.6 in
+Wet Weight : 152.8 kg / 337 lbs
+Fuel Capacity : 9.5 Litres / 2.5 US gal

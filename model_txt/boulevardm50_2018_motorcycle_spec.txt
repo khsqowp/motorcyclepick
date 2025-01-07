@@ -1,0 +1,28 @@
+Model : Boulevard M50
+Years : 2018-19
+Engine : Four stroke, 45&#176; V-Twin, SOHV
+Capacity : 805cc / 49.1 cu-in
+Bore x Stroke : 83 x 74.4 mm
+Cooling System : Liquid cooled
+Compression Ratio : 9.4:1
+Lubrication : Wet sump
+Induction : Mikuni BDSR34
+Ignition : Electronic
+Starting : Electric
+Max Power : 39 kW / 52 hp / @ 6000 rpm
+Max Torque : 69 Nm / 7.0 kgf-m / 51 lb-ft @ 3200 rpm
+Clutch : Wet, multiple discs, cable operated
+Transmission : 5 Speed
+Final Drive : Shaft
+Front Suspension : Inverted, telescopic, coil spring, oil damped
+Rear Suspension : Link-type, oil damped, 7-way adjustable spring preload
+Front Brakes : Single 300 mm disc, 2 piston caliper
+Rear Brakes : Drum
+Front Tyre : 130/90-16M/C 67H, tubeless
+Rear Tyre : 170/80-15M/C 77H, tubeless
+Dimensions : Length 2395 mm / 94.3 in Width 890 mm / 35.0 in Height 1105 mm / 43.5 in
+Wheelbase : 1655 mm / 65.2 in
+Seat Height : 700 mm / 27.6 in.
+Wet Weight : 269 kg / 593 lbs
+Ground Clearance : 140 mm / 5.5 in
+Fuel Capacity : 15.5 Litres / 4.1 / 3.4 US/Imp gal

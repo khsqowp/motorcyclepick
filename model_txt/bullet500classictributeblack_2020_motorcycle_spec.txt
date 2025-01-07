@@ -1,0 +1,32 @@
+Model : Bullet 500 Classic Tribute Black
+Years : 2020
+Engine : Four stroke, single cylinder, OHV
+Capacity : 499 cc / 30.4 cu-in
+Bore x Stroke : 84 x 90 mm
+Cooling System : Air Cooled
+Compression Ratio : 8.5:1
+Lubrication : Wet sump
+Induction : Electronic fuel injection (EFI)
+Exhaust : One-into-one
+Ignition : Digital electronic ignition
+Starting : Electric &amp; Kick
+Max Power : 20.3 kW / 27.2 hp @ 5250 rpm
+Max Torque : 41.3 Nm / 4.2 kgf-m / 30.5 lb-ft @ 4000 rpm
+Clutch : Wet, multiplate
+Transmission : 5 Speed, constant mesh
+Final Drive : Chain
+Frame : Single Down Tube, using engine as stressed member
+Front Suspension : 35mm Hydraulic telescopic fork
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Twin shocks, gas charged with 5-step adjustable preload
+Rear Wheel Travel : 80 mm / 3.1 in
+Front Brakes : Single 280mm disc, 2 piston caliper, ABS
+Rear Brakes : 240 mm disk, 1 piston floating caliper, ABS
+Front Tyre : 90/90-19 - 52 P
+Rear Tyre : 110/80-18 - 62 P
+Dimensions : Length: 2080 mm / 81.9 in Width: 805 mm / 31.7 in Height: 1123 mm / 44.2 in
+Wheelbase : 1380 mm / 51.5 in
+Ground Clearance : 135 mm / 5.3 in
+Seat Height : 800 mm / 31.5 in
+Wet Weight : 196 kg / 432 lbs
+Fuel Capacity : 13.5 Litres / 29.7 US gal

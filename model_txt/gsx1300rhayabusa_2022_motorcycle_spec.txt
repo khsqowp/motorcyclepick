@@ -1,0 +1,35 @@
+Model : GSX 1300R Hayabusa
+Years : 2022
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder
+Capacity : 1340 cc / 81.8 cu-in
+Bore x Stroke : 81 x 65 mm
+Compression Ratio : 12.5:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Fuel injection with Ride-by-Wire throttle bodies
+Ignition : Electronic ignition (transistorized)
+Starting : Electric
+Max Power : 187.7hp / 140kW @ 9700rpm
+Max Torque : 150Nm / 110.6 lb-ft @ 7000rpm
+Clutch : Wet, multi-plate type, SCAS-equipped
+Transmission : 6 Speed constant mesh
+Final Drive : Drive chain, RK GB50GSVZ4, 114L
+Frame : Twin-spar aluminium frame and swingarm
+Front Suspension : KYB inverted telescopic, coil spring, oil damped, fully adjustable
+Rear Suspension : KYB link type, coil spring, oil damped
+Front Brakes : 2 x 320mm floating discs, Brembo Stylema 4 piston calipers, fully adjustable
+Rear Brakes : Single 260mm floating disc, Nissin 1 piston caliper, fully adjustable
+ABS : Standard
+Wheels Front : 17 M/C x MT3.50, cast aluminum alloy
+Wheels Rear : 17 M/C x MT6.00, cast aluminum alloy
+Front Tyre : 1120/70ZR17M/C (58W), tubeless
+Rear Tyre : 190/50ZR17M/C (73W), tubeless
+Rake : 23&#176;
+Trail : 90 mm / 3.54 in
+Dimensions : Length: 2180mm / 85.8 in Width: 735mm / 28.9 in Weight: 1165mm / 45.9 in
+Wheelbase : 1480 mm / 58.3in
+Seat Height : 800 mm / 31.5 in
+Ground Clearance : 125 mm / 4.9 in
+Dry Weight : 220 kg / 485 lbs
+Wet Weight : 264kg / 582 lbs
+Fuel Capacity : 20 Litres / 5.3 US gal

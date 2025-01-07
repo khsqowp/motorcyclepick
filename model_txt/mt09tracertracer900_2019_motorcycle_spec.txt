@@ -1,0 +1,33 @@
+Model : MT-09 Tracer / Tracer 900
+Years : 2019-20
+Engine : Four stroke, transverse three cylinder, DOHC, 12 Valve
+Capacity : 847 cc / 51.6 cu-in
+Bore x Stroke : 78 x 59.1 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5 :1
+Lubrication : Wet sump
+Induction : Electronic fuel injection with YCC-T
+Ignition : Transistorized coil ignition
+Starting : Electric
+Max Power : 84.6 kW / 114 hp @ 10,000 rpm
+Max Torque : 87.5 Nm / 8.9 kgf-m @ 8,500 rpm
+Clutch : Wet, multiple-disc
+Transmission : 6 Speed
+Final Drive : O-ring chain
+Frame : Diamond frame
+Front Suspension : 41mm fork, adjustable preload and rebound damping
+Front Wheel Travel : 137 mm / 5.4 in
+Rear Suspension : Rear single shock, adjustable preload and rebound damping
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 298mm discs, ABS
+Rear Brakes : Single 245mm disc, ABS
+Front Tyre : 120/70-ZR17M/C
+Rear Tyre : 180/55-ZR17M/C
+Rake : 24&#176;
+Trail : 100 mm / 3.9 in
+Dimensions : Length 2160 mm / 85.0 in Width 850 mm / 37.4 in Height 1338 mm to 1375 mm / 52.9 in to 54.1 in
+Wheelbase : 1440 mm / 56.7 in
+Seat Height : 845 mm - 860 mm / 33.3 in - 33.9 in
+Ground Clearance : 135 mm / 5.3 in
+Wet Weight : 207 kg / 462 lbs
+Fuel Capacity : 18 Litres / 4.8 US gal

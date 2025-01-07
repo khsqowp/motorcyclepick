@@ -1,0 +1,40 @@
+Model : Scout Sixty
+Years : 2020
+Engine : Four stroke, 60&#176; V-Twin, DOHC, 4 valves per cylinder
+Capacity : 999.6 cc / 61 cu in
+Bore x Stroke : 93 x 73.6 mm
+Cooling System : Liquid Cooled
+Lubrication : Semi-Dry Sump
+Compression Ratio : 10.7:1
+Exhaust : Split dual exhaust with crossover
+Induction : Injection. Closed Loop Sequential Port Fuel Injection
+Engine Oil : SAE 15W60
+Oil Capacity : 4.73 Litres
+Charging System : 35 amp max output
+Battery : 12 volts / 12 amp/hour, 210 CCA, Maintenance Free AGM
+Starting : Electric
+Max Power : 78 hp / 56.9 kW @ 7300 rpm
+Max Torque : 88.8 Nm / 65.5 lb-ft @ 5600rpm
+Clutch : Wet, multi-plate
+Transmission : 5 Speed
+Final Drive : Belt drive, 141 tooth
+Front Suspension : 41 mm Telescopic fork,
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Dual shocks
+Rear Wheel Travel : 76 mm / 3.0 in
+Front Brakes : Single 298 mm rotor with 2 piston caliper
+Rear Brakes : Single 298 mm rotor with 1 piston caliper
+Front Wheel : Cast 16&#8221; x 3.5&#8221;
+Rear Wheel : Cast 16&#8221; x 3.5&#8221;
+Front Tyre : 130/90-16 72H
+Rear Tyre : 150/80-16 71H
+Rake : 29&#176;
+Trail : 119.9 mm / 4.7 in
+Dimensions : Length 2311 mm / 91 in Width 880 mm / 34.6 in Height 1207 mm / 47.5 in
+Wheelbase : 1562 mm / 61.5 in
+Seat Height : 643 mm / 25.3 in
+Ground Clearance : 135 mm / 5.3 in
+Dry Weight : 246 kg / 542.3 lbs
+Wet Weight : 256 kg / 564.8 lbs
+GVWR : 449 kg / 988 lbs
+Fuel Capacity : 12.5 Litres / 3.3 gal

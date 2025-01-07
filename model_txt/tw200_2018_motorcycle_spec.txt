@@ -1,0 +1,29 @@
+Model : TW 200
+Years : 2018-19
+Engine : Four stroke, single cylinder, SOHC, 2-valve
+Capacity : 196 cc / 11.96 cub in.
+Bore x Stroke : 67 x 55.7 mm
+Cooling System : Air cooled
+Compression Ratio : 9.5:1
+Fuel system : Mikuni 28 mm carburetor
+Ignition : CDI
+Starting : Electric
+Max Power : 16 hp / 11.7 kW @ 8000 rpm
+Max Torque : 15 Nm / 11.1 lb-ft @ 7000 rpm
+Clutch : Multi-plate wet clutch
+Transmission : 5-Speed, constant mesh
+Final Drive : Chain
+Front Suspension : 33mm Telescopic fork
+Front wheel travel : 160 mm / 6.3 in.
+Rear Suspension : Single shock
+Rear wheel travel : 150 mm / 5.9 in.
+Front Brakes : Single 220mm disc
+Rear Brakes : 110mm Drum
+Front Tyre : 130/80 -18 in
+Rear Tyre : 180/80 -14 in
+Dimensions : Length 2090 mm / 82.3 in Width 820 mm / 32.3 in Height 1120 mm / 44.1 in
+Wheelbase : 1326 mm / 52.2 in
+Seat Height : 790 mm / 31.1 in
+Ground Clearance : 264 mm / 10.4 in
+Wet Weight : 126 kg / 278 lbs
+Fuel Capacity : 6.8 Litres / 1.7 US gal

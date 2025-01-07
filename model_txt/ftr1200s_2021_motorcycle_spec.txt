@@ -1,0 +1,42 @@
+Model : FTR 1200S
+Years : 2021
+Engine : Four stroke, 60&#176; V Twin , DOHC, 4 valves per cylinder, graded buckets
+Capacity : 1203 cc / 73 cu-in
+Bore x Stroke : 102 x 73.6 mm
+Compression Ratio : 12.5:1
+Cooling System : Liquid Cooled
+Induction : Electronic Fuel Injection closed loop, 60 mm bore
+Emission : EURO5
+Exhaust : Akrapovi&#269; 2-into-1
+Starting : Electric
+Max Power : 120 hp / 89.4 kW @ 6000 rpm
+Max Torque : 117.9 Nm / 87 lb-ft @ 6000 rpm
+Clutch : Assist &amp; Slip, Multi-Plate
+Transmission : 6 Speed
+Final Drive : Chain
+Final Drive Ratio : 2.647:1
+Gear Ratios : 1st 12.270:1 2nd 8.341:1 3rd 6.646:1 4th 5.639:1 5th 4.985:1 6th 4.278:1
+Primary Drive : Gear drive wet clutch
+Lean Angle : 43&#176;
+Frame : Steel trellis
+Front Suspension : 43 mm ZF Sachs fully adjustable inverted telescopic cartidge fork
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : ZF Sachs fully adjustable piggyback IFP
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2x 320mm t5 Rotor Brembo with 4-piston calipers
+Rear Brakes : Single 260mm t5 Rotor Brembo with 2-piston calipers
+ABS : Standard, option to disable
+Front Wheel : Cast Black with Indy Red Pinstripe 17 in x 3.5 in
+Rear Wheel : Cast Black with Indy Red Pinstripe 17 in x 5.5 in
+Front Tyre : 120/70ZR17 58W Metzeler Sportec
+Rear Tyre : 180/55ZR17 73W Metzeler Sportec
+Rake : 25.3&#176;
+Trail : 99.9 mm / 3.9 in
+Dimensions : Length 2223 mm / 87.5 in Width 830 mm / 32.7 in Height 1297 mm / 51.1 in
+Wheelbase : 1524 mm / 60 in
+Seat Height : 780 mm / 30.7 in
+Ground Clearance : 170 mm / 6.5 in
+Dry Weight : 218 kg / 482 lbs
+Wet Weight : 233 kg / 514 lbs
+Fuel Capacity : 12.9 Litres / 3.4 US gal
+Standard Equipment : Ride Modes (Rain, Standard, Sport), Lean Angle Sensitive ABS, Stabilitiy Control, Traction Control, Wheelie Control with Rear Lift Mitigation, USB Charge Port, Cruise Control)

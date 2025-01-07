@@ -1,0 +1,40 @@
+Model : XT 1200ZE/ES Super Ténéré
+Years : 2018
+Engine : Four stroke, parallel twin cylinders, DOHC, 4-valve per cylinder
+Capacity : 1199 cc / 73.2 cub in.
+Bore x Stroke : 98 x 79.5 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.0:1
+Firing intervals : 270- and 450-degree points
+Induction : Fuel injected, twin spark
+Throttle system : Yamaha Chip-Controlled Throttle (YCC-T)
+Yamaha D-MODE : 2 modes, Sport (S) and Touring (T)
+Traction control : 3 modes, TCS1, TCS2 and OFF
+Lubrication : Dry sump
+Motor oil : Semi-synthetic
+Ignition : TCI
+Starting : Electric
+Max Power : 82.4 kW / 112 hp @7250 rpm
+Max Torque : 117.0 Nm / 11.9 kgf-m / 89 ft-lbs @ 6000 rpm.
+Clutch : Wet, multiple-disc diaphragm spring
+Transmission : 6 Speed
+Final Drive : Shaft
+Frame : Steel tube backbone
+Front Suspension : Upside-down telescopic fork, 43 mm inner tube, adjustable preload, compression and rebound damping,
+Front wheel travel : 190 mm / 7.4 in
+Rear Suspension : Monoshock, adjustable preload and rebound damping,
+Rear wheel travel : 190 mm / 7.4 in
+Front Brakes : 2x 310mm disc, ABS/Unified Brake System
+Rear Brakes : Single 282mm disc
+Front Tyre : 110/80Ｒ19
+Rear Tyre : 150/70/17
+Rake / Trail : 28° / 126mm
+Dimensions : Length: 2,255mm / 88.8 in Width: 980mm / 38.6 in Height: 1,410mm / 55.5 in
+Wheelbase : 1540mm / 60.6 in
+Ground Clearance : 205mm / 8.1 in
+Seat Height : 845 mm - 870 mm / 33.2 in - 34.2 in Adjustable
+Wet Weight : 260 kg / 575 lbs
+Fuel Capacity : 23 Litres / 5.1 US gal
+Consumption Average : 16.2 km/lit
+Standing ¼ Mile : 12.1 sec
+Top Speed : 212 km/h / 131.7 mph

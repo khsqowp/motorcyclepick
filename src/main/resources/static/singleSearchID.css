@@ -1,0 +1,141 @@
+:root {
+    --razer-green: #00ff00;
+    --razer-dark: #111111;
+    --razer-gray: #222222;
+    --razer-light-gray: #333333;
+    --terminal-font: 'Consolas', 'Monaco', monospace;
+}
+
+body {
+    background-color: var(--razer-dark);
+    color: var(--razer-green);
+    font-family: var(--terminal-font);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.motorcycle-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--razer-green);
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    position: relative;
+}
+
+.section-container::before {
+    content: "RAZER CONSOLE v1.0.0";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: var(--razer-dark);
+    padding: 0 10px;
+    color: var(--razer-green);
+    font-size: 12px;
+}
+
+.section-title {
+    color: var(--razer-green);
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--razer-green);
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.section-title::before {
+    content: "> ";
+    color: var(--razer-green);
+    opacity: 0.7;
+}
+
+.details-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--razer-green);
+    border-radius: 2px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-left: 2px solid var(--razer-green);
+    background-color: rgba(0, 255, 0, 0.05);
+}
+
+.label {
+    color: var(--razer-green);
+    min-width: 150px;
+    font-weight: bold;
+}
+
+.value {
+    color: #fff;
+}
+
+.btn {
+    background-color: transparent;
+    color: var(--razer-green);
+    border: 1px solid var(--razer-green);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: var(--terminal-font);
+    font-size: 14px;
+    border-radius: 2px;
+    display: inline-block;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn::before {
+    content: "$ ";
+    opacity: 0.7;
+}
+
+.btn:hover {
+    background-color: var(--razer-green);
+    color: var(--razer-dark);
+    box-shadow: 0 0 15px var(--razer-green);
+    text-shadow: none;
+}
+
+.btn-secondary {
+    border-color: #666;
+    color: #888;
+}
+
+.btn-secondary:hover {
+    background-color: #666;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.section-title::after {
+    content: "_";
+    display: inline-block;
+    animation: blink 1s infinite;
+    color: var(--razer-green);
+}

@@ -1,0 +1,39 @@
+Model : Springfield Dark Horse Jack Daniel Limited Edition
+Years : 2019
+Engine : Thunder Stroke 111 49&#730; V-Twin
+Capacity : 1811cc / 111 cu-in
+Bore x Stroke : 101 x 113 mm
+Compression Ratio : 9.5:1
+Exhaust : Split dual exhaust with crossover
+Induction : Electronic fuel injection, closed loop, 54 mm bore
+Battery 1 : 2 volts / 18 amp/hour, 310 CCA
+Charging System : 42 amp max output
+Starting : Electric
+Max Toque : 161.6 Nm / 119.2 ft-lbs @ 3000 rpm
+Clutch : Wet, multi-plate
+Transmission : 6 Speed
+Final Drive : Belt drive, 152 tooth
+Gear Ratio : 1st 9.403 : 1 2nd 6.411 : 1 3rd 4.763 : 1 4th 3.796 : 1 5th 3.243 : 1 6th 2.789 : 1
+Final Drive Ratio : 2.2:1
+Primary Drive : Gear drive wet clutch
+Frame : Cast aluminum frame with integrated air-box
+Front Suspension : 46mm Telescopic forks
+Front Wheel Travel : 119 mm / 4.7 in
+Rear Suspension : Single shock with air adjust
+Rear Wheel Travel : 114 mm / 4.5 in
+Front Brakes : 2x 300 mm Floating Rotor 4 piston calipers
+Rear Brakes : Single 300 mm floating Rotor 2 piston calipers
+Brake System Type : Individual front and rear control with ABS
+Front Wheel : Cast 19&#8243; x 3.5&#8243; with tire pressure monitoring
+Rear Wheel : Cast 16&#8243; x 5.0&#8243; with tire pressure monitoring
+Front Tyre : Dunlop&#174; American Elite 130/60B19 61H
+Rear Tyre : Dunlop&#174; Elite 3 180/60R16 80H
+Rake : 25&#176;
+Trail : 133mm / 5.2 in
+Ground Clearance : 142 mm / 5.6 in
+Dimensions : Length 2522 mm / 99.3 in
+Wheelbase : 1700 mm / 67.0 in
+GVWR : 630 kg / 1385 lbs
+Seat Height : 660 mm / 26.0 in
+Dry Weight : 349 kg / 770 lbs
+Fuel Capacity : 20.8 Litres / 5.5 US Gal

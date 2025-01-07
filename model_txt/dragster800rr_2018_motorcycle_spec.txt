@@ -1,0 +1,39 @@
+Model : Dragster 800RR
+Years : 2018
+Engine : Four stroke, transverse three cylinder, DOHC with mechanical chain tensioner, 4 valve per cylinder
+Capacity : 798 cc / 48.68 cu-in
+Bore x Stroke : 79 x 54.3 mm
+Cooling System : Cooling with separated liquid and oil radiators
+Compression Ratio : 13.3:1
+Engine management system : Integrated ignition &#8211; injection system MVICS 2.0 (Motor &amp; Vehicle Integrated Control System) with six injectors. Engine control unit Eldor EM2.0, throttle body full ride by wire Mikuni, pencil-coil with ion-sensing technology, control of detonation and misfire. Torque control with four maps, Traction Control with eight levels of intervention with lean angle sensor. Electronic quick-shift MV EAS 2.1 (Electronically Assisted Shift up &amp; down)
+Emission : Euro 4
+Ignition : Multipoint electronic injection
+Starting : Electric
+Max Power : 103 kW / 140 hp @ 12300 rpm
+Max Torque : 87 Nm / 64.1 lb-ft @ 10100 rpm
+Clutch : Wet, multi plate with slipper clutch
+Transmission : Cassette style 6 speed constant mesh
+Final Drive : Chain
+Primary Drive : 22/41
+Gear Ratio : 1st 13/37 / 2nd 16/34 / 3rd 18/32 / 4th 19/30 / 5th 21/30 / 6th 22/29
+Final Drive Ratio : 6/41
+Frame : ALS Steel tubular trellis, aluminium alloy rear swing arm pivot plates
+Front Suspension : 43mm Type Marzocchi USD telescopic hydraulic fork in DLC treated aluminium, with anodized fork legs and having rebound-compression damping and spring preload external and separate adjustment
+Front Wheel Travel : 125 mm / 4.92 in
+Rear Suspension : Progressive Sachs, single shock absorber with rebound and compression damping and spring preload adjustment, Aluminium alloy single sided swing arm
+Rear Wheel Travel : 125 mm / 4.92 in
+Front Brakes : 2x 320mm floating discs, 4 piston Brembo calipers
+Rear Brakes : Single 220mm disc 2 piston Brembo caliper
+ABS : Bosh 9 Plus with rear wheel lift-up mitigation (RLM)
+Rim Front : Material/size With aluminium alloy spokes 3.50 x 17 in
+Rim Rear : Material/size With aluminium alloy spokes 6.00 x 17 in
+Front Tyre : 120/70- ZR 17 M/C (58 W)
+Rear Tyre : 200/50- ZR 17 M/C (75 W)
+Trail : 103.5 mm / 4.07 in
+Dimensions : Length: 2035 mm / 80.1 in Width: 935 mm / 36.8 in
+Wheelbase : 1400 mm / 55.1 in
+Seat Height : 845 mm / 33.3 in
+Ground Clarence : 135 mm / 5.3 in
+Dry Weight : 168 Kg / 370.38 lbs
+Fuel Capacity : 16.5 Litres / US 4.36 gal
+Reserve : 5 Litres / 1.3 US gal

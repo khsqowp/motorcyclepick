@@ -1,0 +1,35 @@
+Model : Thruxton TFC
+Years : 2019
+Engine : Four stroke, 270&#176; crank angle parallel-Twin, SOCH, 4 valves per cylinder
+Capacity : 1200 cc / 73.2 cu-in
+Bore x Stroke : 97.6 x 80 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.0:1
+Emissions : EURO 4 Compliant, CO2 &#8211; 106.0 g/km
+Exhaust : Titanium with carbon-fiber endcaps
+Induction : Multipoint sequential electronic fuel injection
+Ignition : Digital electronic
+Starting : Electric
+Max Power : 80 kW / 107 hp @ rpm
+Max Torque : 115 Nm / 85 lb-ft @ 4850 rpm
+Clutch : Wet multi-plate assist
+Transmission : 6 Speed
+Final Drive : Chain, O-ring
+Frame : Tubular steel cradle, Twin-sided, aluminum swingarm &#8211; Clear anodized
+Front Suspension : Fully adjustable &#214;hlins NIX30 43mm inverted fork
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Fully adjustable &#214;hlins piggyback reservoir shocks
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2 x 310mm discs with Brembo 4-piston radial monoblock calipers and axial-pump master cylinder, ABS
+Rear Brakes : Single 220mm disc w/ Nissin 2-piston floating caliper, ABS
+Wheels : 32-spoke with black anodized rim
+Front Wheel : 3.5 x 17
+Rear Wheel : 5 x 17
+Front Tyre : 120/70 x 17 &#8211; Metzeler Racetec RR
+Rear Tyre : 160/60 x 17 &#8211; Metzeler Racetec RR
+Rake : 22.8&#186;
+Trail : 90.8 mm / 3.57 in
+Wheelbase : 1415 mm / 55.7 in
+Seat Height : 810 mm / 31.9 in
+Dry Weight : 198 kg / 437 lbs
+Fuel Capacity : 12.5 Litres / 3.8 US Gal / 2.7 Imp gal

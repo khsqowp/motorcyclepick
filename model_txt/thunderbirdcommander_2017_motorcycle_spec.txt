@@ -1,0 +1,36 @@
+Model : Thunderbird Commander
+Years : 2017-18
+Engine : Four stroke, parallel twin, DOHC, 4 valves per cylinder, 270&#176; firing interval.
+Capacity : 1699 cc / 103.7 cub in
+Bore x Stroke : 107.1 x 94.3 mm
+Cooling System : Liquid cooled
+Oil Capacity : 4.2 L / 1.1 US gal / 0.92 Imp gal
+Exhaust : Chromed twin-skin stainless steel 2 into 1 into 2, tandem large-volume catalysts in centralized catbox, chrome-plated exhaust
+Lubrication : Wet sump
+Induction : Multipoint sequential electronic fuel injection with SAI , progressive linkage on throttle
+Ignition : Digital, inductive type via electronic engine management system
+Starting : Electric
+Max Power : 70.1 kW / 94 hp @ 5400 rpm
+Max Torque : 146 Nm / 14.9 kgf-m / 107.7 ft-lb @ 2750rpm
+Clutch : Wet, multi-plate
+Transmission : 6 Speed
+Final Drive : Toothed belt
+Frame : Tubular steel, twin spine, swingarm twin sided, steel
+Front Suspension : Showa 47mm forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Showa chromed spring twin shocks with 5 position adjustable preload.
+Rear Wheel Travel : 95 mm / 3.7 in
+Front Brakes : 2 x 310 mm floating discs, Nissin 4 piston fixed calipers, ABS
+Rear Brakes : Single 310 mm fixed disc, Brembo 2 piston floating caliper, ABS
+Front Wheel : Cast aluminium alloy 5-spoke 17 x 3.5 in
+Rear Wheel : Cast aluminium alloy 5-spoke 17 x 6.0 in
+Front Tyre : 140/75 ZR17
+Rear Tyre : 200/50 ZR17
+Rake : 32&#176;
+Trail : 151 mm / 5.9 in
+Dimensions : Length 2340 mm / 92.1 in Width 880 mm / 34.6 in (Handlebars) Height 1120 mm / 44.1 in (without mirrors)
+Wheelbase : 1615 mm / 63.5 in
+Seat Height : 702 mm / 27.6 in
+Dry Weight : 317 kg / 699 lbs
+Wet Weight : 339 kg / 747 lbs
+Fuel Capacity : 22 Litres / 5.8 gal / 4.8 Imp gal

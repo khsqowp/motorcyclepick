@@ -1,0 +1,28 @@
+Model : FZ-S FI V 2.0 / FZ 150i Vixion
+Years : 2017-18
+Engine : Four stroke, single cylinder, SOHC, 4 valve with Variable Valve Actuation
+Capacity : 155.1 cc / 9.14 cu-in
+Bore x Stroke : 58.0 &#215; 58.7 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.6 &#177; 0.4: 1
+Induction : Fuel Injection
+Lubrication : Wet sump
+Ignition : TCI
+Starting : Electric
+Max Power : 14.1 kW / 19 hp @ 10000 rpm
+Max Torque : 14.7 Nm / 40.8 lb-ft @ 8500 rpm
+Clutch : Multi-Plate. Assist &amp; Slipper
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Steel Deltabox
+Front Suspension : Telescopic fork
+Rear Suspension : Aluminum swingarm with monoshock
+Front Brakes : Single 282mm disc 2 piston caliper
+Rear Brakes : Single 240mm disc 1 piston caliper
+Front Tyre : 90/80-17M/C46P
+Rear Tyre : 130/70-17MC/62P
+Wheelbase : 1320 mm / 51.9 in
+Seat Height : 795 mm / 31.2 in
+Ground Clearance : 165 mm / 6.4 in
+Wet Weight : 131 kg / 289 lbs
+Fuel Capacity : 11.5 Litres / 3.0 US gal

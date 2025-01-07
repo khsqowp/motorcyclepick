@@ -1,0 +1,35 @@
+Model : Chief
+Years : 2018-19
+Engine : Thunder Stroke&#8482; 111
+Capacity : 1811.cc / 105 cu-in
+Bore x Stroke : 101 x 113 mm
+Compression Ratio : 9.5:1
+Exhaust : Split Dual Exhaust w/ Cross-over
+Induction : Electronic Fuel Injection System Closed loop fuel injection / 54mm bore
+Starting : Electric
+Max Toque : 161.6 Nm / 119 lb-ft @ 3000 rpm
+Clutch : Wet, Multi-Plate
+Transmission : 6 Speed
+Final Drive : Belt
+Gear Ratio : 1st9.403 2nd6.411 3rd4.763 4th3.796 5th3.243 6th2.789
+Final Drive Ratio : 2.2 : 1
+Frame : Cast Aluminum Frame with Integrated Air-Box
+Front Suspension : 46mm Telescopic forks,
+Front Wheel Travel : 119 mm / 4.7 in
+Rear Suspension : Single shock
+Rear Wheel Travel : 94 mm / 3.7 in
+Front Brakes : 2x 300 mm Floating Rotor 4 piston calipers
+Rear Brakes : Single 300 mm Floating Rotor 2 piston calipers
+Front Wheel : Cast 16 in x 3.5 in
+Rear Wheel : Cast 16 in x 5 in
+Front Tyre : 130/90B16 73H
+Rear Tyre : 180/65B16 81H
+Rake : 29&#176;
+Trail : 155 mm / 6.1 in
+Ground Clearance : 140 mm / 5.5 in
+Dimensions : Height 1176 mm / 46.3 in Length 2630 mm / 103.5 in Width 1000 mm / 39.4 in
+Wheelbase : 1730 mm mm / 68.1 in
+Seat Height : 660 mm / 26.0 in
+Dry Weight : 338.0 kg / 745 lbs
+Wet Weight : 352.0 kg / 777 lbs
+Fuel Capacity : 20.8 Litres / 5.5 US Gal

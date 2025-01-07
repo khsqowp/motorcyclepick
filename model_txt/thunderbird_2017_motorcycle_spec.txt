@@ -1,0 +1,38 @@
+Model : Thunderbird
+Years : 2017-18
+Engine : Four stroke, parallel twin, DOHC, 4 valves per cylinder, 270&#176; firing interval.
+Capacity : 1597 cc / 97.5 cub in
+Bore x Stroke : 103.8 x 94.3 mm
+Cooling System : Liquid cooled
+Compression Ratio : 9.7:1
+Oil Capacity : 4.2 L / 1.1 US gal .0.92 Imp gal
+Exhaust : Chromed twin-skin stainless steel 2 into 1 into 2 exhaust system with chrome plated silencers
+Lubrication : Wet sump
+Induction : Multipoint sequential electronic fuel injection with SAI , progressive linkage on throttle
+Ignition : Digital inductive type via electronic engine management
+Starting : Electric
+Max Power : 64 kW / 86 hp @ 4850 rpm
+Max Torque : 146 Nm / 14.9 kgf-m / 107.7 ft-lb @ 2750rpm
+Clutch : Wet, multi-plate
+Transmission : 6 Speed
+Final Drive : Toothed belt
+Gear Ratio : 1st 2.9875 / 2nd 1.958 / 3rd 1.536 / 4th 1.219 / 5th 1.029 / 6th 0.909:1
+Frame : Tubular steel, twin spine, swingarm twin sided, steel
+Front Suspension : Showa 47mm forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Showa chromed spring twin shocks with 5 position adjustable preload.
+Rear Wheel Travel : 95 mm / 3.7 in
+Front Brakes : 2 x 310 mm floating discs, Nissin 4 piston fixed calipers, ABS
+Rear Brakes : Single 310 mm fixed disc, Brembo 2 piston floating caliper, ABS
+Front Wheel : Cast aluminium alloy 5-spoke 19 x 3.5 in
+Rear Wheel : Cast aluminium alloy 5-spoke 17 x 6 in
+Front Tyre : 120/70 R19
+Rear Tyre : 200/50 R17
+Rake : 32&#176;
+Trail : 151 mm / 5.9 in
+Dimensions : Length 2340 mm / 92.1 in Width 800 mm / 34.6 in (Handlebars) Height 1120 mm / 44.1 in
+Wheelbase : 1615 mm / 63.5 in
+Seat Height : 702 mm / 27.6 in
+Dry Weight : 308 kg / 679 lbs
+Wet Weight : 339 kg / 747 lbs
+Fuel Capacity : 22 Litres / 5.8 gal

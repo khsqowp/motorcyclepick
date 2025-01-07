@@ -1,0 +1,39 @@
+Model : Rocket III Roadster
+Years : 2017-18
+Engine : Four stroke, 3-cylinder, DOHC
+Capacity : 2294 cc / 140 cub in
+Bore x Stroke : 101.6 x 94.3 mm
+Cooling System : Liquid cooled
+Compression Ratio : 8.7:1
+Induction : Multipoint sequential electronic fuel injection with twin butterflies and progressive linkage on primary butterflies
+Lubrication : Wet sump
+Engine Oil : Synthetic, 15W/50
+Oil Capacity : 5.9 L / 1.6 US gal / 1.3 Impgal
+Exhaust : Stainless steel 3 into 1 into 2, large volume catalysts in front of chrome-plated exhaust
+Ignition : Digital inductive type via electronic engine management
+Starting : Electric
+Max Power : 109 kW / 146 hp @ 5750 rpm
+Max Torque : 221 Nm / 22.5 kgf-m / 163 ft-lb @ 3300 rpm
+Clutch : Wet, multi plate
+Transmission : 5 Speed
+Final Drive : Shaft
+Gear Ratios : 1st: 41/14 / 2nd: 37/19 / 3rd: 33/23 / 4th: 29/25 / 5th: 27/28:1
+Frame : Tubular steel, twin spine, swingarm twin-sided, steel
+Front Suspension : Kayaba 43mm upside down forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Kayaba black spring twin shocks with 5 position adjustable preload
+Rear Wheel Travel : 105 mm / 4.1 in
+Front Brakes : 2 x 320 mm Floating discs, Nissin 4-piston fixed caliper, ABS
+Rear Brakes : Single 316 mm disc, Brembo 2 piston floating caliper, ABS
+Wheels Front : Cast aluminium alloy, 5-spoke, 17 x 3.5 in
+Wheels Rear : Cast aluminium alloy, 5-spoke, 16 x 7.5 in
+Front Tyre : 150/80 V17
+Rear Tyre : 250/50 V16
+Rake : 32&#176;
+Trail : 148 mm / 5.8 in
+Dimensions : Length 2500 mm / 98.3 in Width 970 mm / 38.2 in (Handlebars) Height 1165 mm / 45.8 in
+Wheelbase : 1695 mm / 66.7 in
+Seat Height : 750 mm / 29.5 in
+Dry Weight : 320 kg / 704 lbs
+Wet Weight : 367 kg / 807 lbs
+Fuel Capacity : 24 Litres / 6.3 US gal

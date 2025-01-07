@@ -1,0 +1,34 @@
+Model : Katana
+Years : 2019
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder
+Capacity : 999 cc / 60.9 in
+Bore x Stroke : 73 x 59 mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.2:1
+Lubrication : Wet sump
+Exhaust : 4-2-1 exhaust system
+Induction : Fuel Injection
+Ignition : Digital transistorized
+Starting : Electric
+Max Power : 147.5 hp / 107.7 kW) @ 10000 rpm
+Max Torque : 108 Nm / 79.7 lb-ft @ 9500 rpm
+Clutch : Wet, multiple discs, cable operated
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Steel, double cradle frame
+Front Suspension : Inverted telescopic, coil spring, oil damped
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Link type, single shock, coil spring, oil damped
+Rear Wheel Travel : 120 mm / 4.7 in
+Rear Brakes : Single 240mm disc ABS
+Front Tyre : 120/70-ZR17
+Rear Tyre : 190/50 ZR17
+Rake : 25.0&#176;
+Trail : 100 mm / 3.9 in
+Dimensions : Length 2125 mm / 83.7 in Width 830 mm / 32.7 inch Height 1110 mm / 43.7 in
+Wheelbase : 1460 mm / 57.5 in
+Seat Height : 825 mm / 32.5 in
+Ground Clearance : 140 mm / 5.5 in
+Dry Weight : 232 kg / 511.4 lbs
+Wet Weight : 215.0 kg / 474 lbs
+Fuel Capacity : 12 Litres / 3.2 US gal / Imp gal

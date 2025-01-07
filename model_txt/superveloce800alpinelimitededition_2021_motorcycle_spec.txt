@@ -1,0 +1,43 @@
+Model : Superveloce 800 Alpine Limited Edition
+Years : 2021
+Production : 110 Units
+Engine : Four stroke, transverse three cylinder, DOHC with mechanical chain tensioner and DLC tappet, 4 valves per cylinder
+Capacity : 798 cc / 48.7 cu-in
+Bore x Stroke : 79 x 54.3 mm
+Cooling System : Cooling with separated liquid and oil radiators
+Compression Ratio : 13.3:1
+Exhaust : Arrow three-exit exhaust system (for track use only)
+Emission : EURO5
+Engine Management System : Integrated ignition - injection system MVICS (Motor &amp; Vehicle Integrated Control System) with six injectors Engine control unit Eldor EM2.0, throttle body full ride by wire Mikuni, pencil-coil with ion-sensing technology, control of detonation and misfire Torque control with four maps, Traction Control with eight levels of intervention
+Starting : Electric
+Max Power : 148 hp / 108 kW @ 13000 rpm
+Max Power Race Kit : 153 hp / 112,5 kW @ 13250 rpm (racing kit with SC exhaust and dedicated ECU map version)
+Max Torque : 88 Nm / 65 lb-ft @ 10100 rpm
+Electronic Quick Shift : MV EAS 2.0 (Electronically Assisted Shift Up &amp; Down)
+Clutch : Wet, multi-disc slipper clutch
+Transmission : Cassette-style 6-speed with clutchless shifting
+Primary Drive : 22/41
+Final Drive : Chain
+Gear Ratio : 1st 13/37 2nd 16/34 3rd 18/32 4th 19/30 5th 21/30 6th 22/29
+Final Drive Ratio : 17/43
+Frame : ALS Steel tubular trellis with aluminium alloy rear swing arm pivot plates
+Front Suspension : 43mm Marzocchi USD telescopic hydraulic fork with rebound-compression damping and spring preload external and separate adjustment
+Front Wheel Travel : 125 mm / 4.9 in
+Rear Suspension : Progressive Sachs, single shock absorber with rebound and compression damping and spring preload adjustment, single sided swing arm material Aluminium alloy
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 320mm floating discs, Brembo radial-type monobloc 4 piston calipers
+Rear Brakes : Single 220mm disc, Brembo 2 piston caliper
+ABS : Bosch 9 Plus w/ Race Mode and rear-wheel lift mitigation
+Wheels : Aluminium alloy
+Front Wheel : 3.50 x 17
+Rear Wheel : 5.50 x 17
+Front Tyre : 120/70 - ZR 17 M/C (58 W) Pirelli Diablo Rosso Corsa II
+Rear Tyre : 180/55 - ZR 17 M/C (73 W) Pirelli Diablo Rosso Corsa II
+Trail : 99 mm / 3.89 in
+Dimensions : Length: 2030 mm / 79.92 in Width: 730 mm / 28.74 in
+Wheelbase : 1380 mm / 54.33 in
+Ground Clarence : 120 mm / 4.72 in
+Seat Height : 830 mm / 32.7 in
+Dry Weight : 173 kg / 381.4 lbs
+Dry Weight Race Kit : 165 kg / 363.7 lbs
+Fuel Capacity : 16.5 Litres / 4.36 US gal

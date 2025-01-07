@@ -1,0 +1,32 @@
+Model : XT 250
+Years : 2020
+Engine : Four stroke, single cylinder. SOHC, 2 valve
+Capacity : 249 cc / 15.2 cu-in
+Bore x Stroke : 74.0 x 58.0mm
+Cooling System : Air cooled
+Compression Ratio : 9.5;1
+Lubrication : Wet sump
+Induction : Mikuni 33mm throttle body fuel injection
+Ignition : TCI
+Starting : Electric
+Max Power : 18 hp / 13.1 kW @ 7500 rpm
+Max Torque : 19 Nm / 14.5 lb-fts @ 6500 rpm
+Clutch : Wet, multiple discs, cable operated
+Transmission : 5 Speed
+Final Drive : &#8220;O&#8221; ring chain
+Front Suspension : 35mm Telescopic forks
+Front Wheel Travel : 225 mm / 8.9 in
+Rear Suspension : Monocross, Swingarm rebound-adjustable single shock
+Rear Wheel Travel : 180 mm / 7.1 in
+Front Brakes : Single 245mm disc
+Rear Brakes : Single 203mm disc
+Front Tyre : 80/70-21
+Rear Tyre : 120/80-18
+Rake : 26.0&#176;
+Dimensions : Length 2150 mm / 84.6 in Width 805mm / 31.7 in Height 1160mm / 45.7 in
+Wheelbase : 1359 mm / 53.5 in
+Seat Height : 830 mm / 32.7 in
+Ground Clearacne : 285 mm / 11.2 in
+Dry Weight : 123 kg / 271 lbs
+Wet Weight : 132 kg / 291 lbs
+Fuel Capacity : 9.6 Litres / 2.5 US gal

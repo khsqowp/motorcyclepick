@@ -1,0 +1,35 @@
+Model : XSR700 XTribute
+Years : 2019
+Engine : Four stroke, Parallel twin cylinder, DOHC, 4-valve per cylinder
+Capacity : 689 cc / 42.0 cu-in
+Bore x Stroke : 80.0 x 68.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5 : 1
+Oil Capacity : 2.7 Litres
+Induction : Fuel Injection
+Lubrication : Wet sump
+Ignition : TCI
+Starting : Electric
+Max Power : 55.0 kW / 74.8 PS @ 9000 rpm
+Limited Power Vesion : 35.0 kW
+Max Torque : 68.0 Nm / 6.9 kg-m @ 6500 rpm
+Clutch : Wet, Multiple Disc
+Transmission : Constant Mesh, 6-speed
+Final Drive : Chain
+Frame : Diamond
+Front Suspension : Telescopic forks
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Swingarm (Link type suspension)
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 282mm Hydraulic discs
+Rear Brakes : Single 245mm Hydraulic disc
+Front Tyre : Pirelli MT60 RS 120/70 ZR18 MC 59W
+Rear Tyre : Pirelli MT60 RS 180/55 ZR17 MC 73W
+Caster Angle : 24&#186; 50
+Trail : 90 mm / 3.5 in
+Dimensions : Length 2075 mm / 81.7 in Width 865 mm / 34 in Height 1085 mm / 42.7 in
+Wheelbase : 1405 mm / 55.3 in
+Seat Height : NA
+Ground Clearance : 140 mm / 5.5 in
+Wet Weight : 191 kg ABS / lbs
+Fuel Capacity : 14 Litres / 3.7 US gal

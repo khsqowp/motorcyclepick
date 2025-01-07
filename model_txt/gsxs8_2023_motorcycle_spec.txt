@@ -1,0 +1,35 @@
+Model : GSX-S 8
+Years : 2023
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valves per cylinder
+Capacity : 776 cc / 47.3 cu-in
+Bore x Stroke : 84 x 70 mm
+Compression Ratio : 12.8:1
+Cooling System : Liquid/oil cooled
+Lubrication : Wet sump
+Induction : EFI with two 42mm throttle bodies
+Exhaust : Stainless-steel 2-into-1 exhaust system
+Emission : Euro 5
+Starting : Electric
+Max Power : 83.1 hp / 61.9 kW @ 8500 rpm
+Max Torque : 78 Nm / 57.5 lb-ft @ 6800 rpm
+Clutch : Wet multiplate with assist and slipper functions
+Transmission : 6-speed with quickshifter
+Final Drive : D.I.D O-ring chain
+Frame : Steel
+Front Suspension : 43mm KYB inverted fork, non-adjustable
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Linkage-assisted, spring-preload adjustable KYB shock
+Rear Wheel Travel : N/A
+Front Brakes : 2 x 310mm floating discs with 4-piston Nissan calipers
+Rear Brakes : Single 240mm disc with single-piston Nissin caliper
+ABS : Standard
+Wheels : Cast aluminum
+Front Tyre : 120/70 x 17
+Rear Tyre : 180/55 x 17
+Rake : 25.0°
+Trail : 104 mm / 4.1 in
+Wheelbase : 1460 mm / 57.5 in
+Seat Height : 810 mm / 31.9 in
+Ground clearance : 140 mm / 5.5 in
+Wet Weight : 202 kg / 445 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal

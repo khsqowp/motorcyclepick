@@ -1,0 +1,41 @@
+Model : 701 Vitpilen
+Years : 2020
+Engine : Four stroke, single cylinder, SOHC, 4 valves with intake cam levers and exhaust rocker arm
+Capacity : 692.7 cc / 42.27 cu in
+Bore x Stroke : 105 x 80 mm
+Compression Ratio : 12.8:1
+Cooling System : Liquid cooling
+Lubrication : Pressure lubrication with 2 oil pumps
+Exhaust : Stainless steel primary and secondary silencer
+Engine Management : Keihin EMS with Ride By Wire
+Induction : Keihin EFI, 50mm throttle body
+Ignition : Keihin EMS, double ignition
+Starting : Electric
+Max Power : 55 kW / 75 hp @ 8500 rpm
+Max Torque : 71 Nm / 7.24 kgf-m / 52.4 ft-lb @ 6750 rpm
+Clutch : APTC slipper clutch, hydraulically operated
+Transmission : 6 Speed
+Final Drive : Chain X-Ring 5/8 x 1/4"
+Primary Drive Ratio : 36:79
+Final Drive Ratio : 16:40
+Frame : Chromium-Molybdenum-Steel trellis frame, powder coated, aluminium
+Handlebar : Aluminium clip-on
+Front Suspension : 43 mm WP-USD forks
+Front Wheel Travel : 135 mm / 5.3 in
+Rear Suspension : WP-Monoshock with Pro-Lever linkage
+Rear Wheel Travel : 135 mm / 5.3 in
+Front Brakes : Single 320 mm disc, 4 piston Brembo caliper
+Rear Brakes : Single 240 mm disc, Brembo single piston, floating caliper
+ABS : ABS Bosch 9M+ Two Channel
+Front Wheel : Cast aluminium 3.50 x 17"
+Rear Wheel : Cast aluminium 5.00 x 17"
+Front Tyre : 129/70 R 17 Bridgestone Battlax
+Rear Tyre : 160/60 R 17 Bridgestone Battlax
+Steering Head Angle : 65&#176;
+Triple Clamp Offset : 28 mm / 1.10 in
+Trail : 109 mm / 4.3 in
+Wheelbase : 1434 +/- 15 mm / 56.5 in
+Seat Height : 830 mm / 32.6 in
+Ground Clearance : 140 mm / 5.5 in
+Dry Weight : 157 kg / 346 lbs
+Fuel Capacity : 12 Litres / 3.17 US gal

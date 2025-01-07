@@ -1,0 +1,30 @@
+Model : YS 125
+Years : 2017
+Engine : Four stroke, single cylinder, SOHC, 2 valves
+Capacity : 124 cc / 7.6 cu-in
+Bore x Stroke : 52.4 x 57.9 mm
+Cooling System : Air cooled
+Compression Ratio : 10.0:1
+Lubrication : Wet sump
+Induction : Fuel infection
+Ignition : TCI
+Starting : Electric &amp; kick
+Max Power : 7.8 kW / 10.4 hp @ 7500 rpm
+Max Torque : 10.8 Nm / 1.1 kg-m @ 6000 rpm
+Transmission : 5 Speed Constant Mesh
+Final Drive : Chain
+Frame : Steel double cradle
+Front Suspension : Telescopic forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Bottom link swingarm
+Rear Wheel Travel : 112 mm / 4.4 in
+Front Brakes : Single 245mm disc
+Rear Brakes : 120mm Drum
+Front Tyre : 2.75-18-42P
+Rear Tyre : 100/80-18-59P
+Dimensions : Length 2005 mm / 78.9 in Width 735 mm / 28.9 in Height 1050 mm / 41.3 in
+Wheelbase : 1320 mm / 51.9 in
+Seat Height : 795 mm / 31.2 in
+Ground Clearacne : 150 mm / 5.9 in
+Wet Weight : 125 kg / 275.5 lbs
+Fuel Capacity : 14 Litres / 3.6 US gal

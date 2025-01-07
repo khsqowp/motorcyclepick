@@ -1,0 +1,39 @@
+Model : Trident 660
+Years : 2021
+Engine : Four stroke, transverse three cylinder, DOHC, 4 valves per cylinder
+Capacity : 660 cc / 40.2 cu-in
+Bore x Stroke : 74.0 x 51.1mm
+Compression Ratio : 11.1:1
+Cooling System : Liquid cooled
+Exhaust : Stainless steel 3 into 1 header system with low single sided stainless steel silencer
+Emission : Euro-5
+Induction : Multipoint sequential electronic fuel injection with electronic throttle control
+Starting : Electric
+Max Power : 80 hp / 60 kW @ 10250 rpm
+Max Power A2 Restriction : 46 hp / 35 kW @ 8750 rpm
+Max Torque : 64 Nm / 47 lb-ft @ 6250 rpm
+Max Torque A2 Restriction : 59 Nm / 43.5 lb-ft @ 5250 rpm
+Clutch : Wet, multi-plate, slip and assist
+Transmission : 6 Speed
+Final Drive : X-ring chain
+Frame : Tubular steel perimeter frame, twin-sided, fabricated steel Swingarm
+Front Suspension : 41mm Showa upside down separate function forks (SFF)
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Showa monoshock RSU, with preload adjustment
+Rear Wheel Travel : 134 mm / 5.3 in
+Front Brakes : 2x 310mm discs Nissin 2-piston calipers
+Rear Brakes : Single 255mm disc Nissin single-piston sliding caliper
+ABS System : Standard
+Wheels : 5 Spoke cast aluminum
+Front Rim : 3.5 x 17
+Rear Rim : 5.5 x 17
+Front Tyre : 120/70 - R17
+Rear Tyre : 180/55 - R17
+Rake : 24.6&#176;
+Trail : 107.3 mm / 4.2 in
+Dimensions : Length 2020 mm / 79.5 in Width 795 mm / 31.3 in (incl Handlebars) Height 1089 mm / 42.9 in (excl Mirrors)
+Wheelbase : 1401 mm mm / 55.2 in
+Seat Height : 805 mm / 31.7 in
+Wet Weight : 189 kg / 417 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal
+Instruments : Multi-function instruments with colour TFT screen

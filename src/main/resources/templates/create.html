@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Motorcycle</title>
+    <link rel="stylesheet" th:href="@{/static/create.css}">
+</head>
+<body>
+<div class="motorcycle-container">
+    <div class="section-container">
+        <h1 class="section-title">Create New Motorcycle</h1>
+
+        <form action="/motorcycle/create" method="post" class="create-form">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+            <div class="details-section">
+                <h2 class="section-title">Motorcycle Details</h2>
+                <div class="info-grid">
+                    <div class="input-group">
+                        <label>Brand:</label>
+                        <input type="text" name="brand" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Model:</label>
+                        <input type="text" name="model" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Years:</label>
+                        <input type="number" name="years" required>
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Replica:</label>
+                        <input type="number" name="replica" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Cruiser:</label>
+                        <input type="number" name="cruiser" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Tourer:</label>
+                        <input type="number" name="tourer" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Adventure:</label>
+                        <input type="number" name="adventure" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Multi-Purpose:</label>
+                        <input type="number" name="multiPurpose" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Naked:</label>
+                        <input type="number" name="naked" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Scrambler:</label>
+                        <input type="number" name="scrambler" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Off-Road:</label>
+                        <input type="number" name="offRoad" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Motard:</label>
+                        <input type="number" name="motard" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Trial:</label>
+                        <input type="number" name="trial" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Scooter:</label>
+                        <input type="number" name="scooter" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Classic:</label>
+                        <input type="number" name="classic" min="0" max="100">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Cafe Racer:</label>
+                        <input type="number" name="cafeRacer" min="0" max="100">
+                    </div>
+                    <div class="input-group">
+                        <label>price:</label>
+                        <input type="number" name="price" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-section">
+                <h2 class="section-title">Dimensions Details</h2>
+                <div class="info-grid">
+                    <div class="input-group">
+                        <label>Wheelbase:</label>
+                        <input type="number" step="0.1" name="wheelbase">
+                    </div>
+                    <div class="input-group">
+                        <label>Seat Height:</label>
+                        <input type="number" step="0.1" name="seatHeight">
+                    </div>
+                    <div class="input-group">
+                        <label>Wet Weight:</label>
+                        <input type="number" step="0.1" name="wetWeight">
+                    </div>
+                    <div class="input-group">
+                        <label>Fuel Capacity:</label>
+                        <input type="number" step="0.1" name="fuelCapacity">
+                    </div>
+                    <div class="input-group">
+                        <label>Ground Clearance:</label>
+                        <input type="number" step="0.1" name="groundClearance">
+                    </div>
+                    <div class="input-group">
+                        <label>Dry Weight:</label>
+                        <input type="number" step="0.1" name="dryWeight">
+                    </div>
+                    <div class="input-group">
+                        <label>Length:</label>
+                        <input type="number" step="0.1" name="length">
+                    </div>
+                    <div class="input-group">
+                        <label>Width:</label>
+                        <input type="number" step="0.1" name="width">
+                    </div>
+                    <div class="input-group">
+                        <label>Height:</label>
+                        <input type="number" step="0.1" name="height">
+                    </div>
+                    <div class="input-group">
+                        <label>Front Tyre Width:</label>
+                        <input type="number" name="frontTyreWidth">
+                    </div>
+                    <div class="input-group">
+                        <label>Front Tyre Aspect Ratio:</label>
+                        <input type="number" name="frontTyreAspectRatio">
+                    </div>
+                    <div class="input-group">
+                        <label>Front Tyre Structure:</label>
+                        <input type="text" name="frontTyreStructure">
+                    </div>
+                    <div class="input-group">
+                        <label>Front Tyre Diameter:</label>
+                        <input type="number" name="frontTyreDiameter">
+                    </div>
+                    <div class="input-group">
+                        <label>Rear Tyre Width:</label>
+                        <input type="number" name="rearTyreWidth">
+                    </div>
+                    <div class="input-group">
+                        <label>Rear Tyre Aspect Ratio:</label>
+                        <input type="number" name="rearTyreAspectRatio">
+                    </div>
+                    <div class="input-group">
+                        <label>Rear Tyre Structure:</label>
+                        <input type="text" name="rearTyreStructure">
+                    </div>
+                    <div class="input-group">
+                        <label>Rear Tyre Diameter:</label>
+                        <input type="number" name="rearTyreDiameter">
+                    </div>
+                    <div class="input-group">
+                        <label>Front Brake Disc Count:</label>
+                        <input type="number" name="frontBrakeDiscCount">
+                    </div>
+                    <div class="input-group">
+                        <label>Front Brake Disc Size:</label>
+                        <input type="number" name="frontBrakeDiscSize">
+                    </div>
+                    <div class="input-group">
+                        <label>Front Brake Disc Type:</label>
+                        <input type="text" name="frontBrakeDiscType">
+                    </div>
+                    <div class="input-group">
+                        <label>Front Brake Piston Count:</label>
+                        <input type="number" name="frontBrakePistonCount">
+                    </div>
+                    <div class="input-group">
+                        <label>Rear Brake Disc Size:</label>
+                        <input type="number" name="rearBrakeDiscSize">
+                    </div>
+                    <div class="input-group">
+                        <label>Rear Brake Disc Type:</label>
+                        <input type="text" name="rearBrakeDiscType">
+                    </div>
+                    <div class="input-group">
+                        <label>Rear Brake Piston Count:</label>
+                        <input type="number" name="rearBrakePistonCount">
+                    </div>
+                    <div class="input-group">
+                        <label>Frame Type:</label>
+                        <input type="text" name="frameType">
+                    </div>
+                    <div class="input-group">
+                        <label>Frame Material:</label>
+                        <input type="text" name="frameMaterial">
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-section">
+                <h2 class="section-title">Electronics Details</h2>
+                <div class="info-grid">
+                    <div class="input-group">
+                        <label>Start System:</label>
+                        <input type="text" name="startSystem">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>ABS:</label>
+                        <input type="checkbox" name="abs">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>TCS:</label>
+                        <input type="checkbox" name="tcs">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Cruise Control:</label>
+                        <input type="checkbox" name="cruiseControl">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Assist Slipper Clutch:</label>
+                        <input type="checkbox" name="assistSlipperClutch">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Electronic Screen:</label>
+                        <input type="checkbox" name="electronicsScreen">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Clutch Assist System:</label>
+                        <input type="checkbox" name="clutchAssistSystem">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>IMU:</label>
+                        <input type="checkbox" name="imu">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Cornering ABS:</label>
+                        <input type="checkbox" name="corneringAbs">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Wheelie Control:</label>
+                        <input type="checkbox" name="wheelieControl">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Riding Mode Change:</label>
+                        <input type="checkbox" name="ridingModeChange">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Banking Angle Display:</label>
+                        <input type="checkbox" name="bankingAngleDisplay">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>ABS Level Control:</label>
+                        <input type="checkbox" name="absLevelControl">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Quickshift Up:</label>
+                        <input type="checkbox" name="quickshiftUp">
+                    </div>
+                    <div class="checkbox-group">
+                        <label>Quickshift Up Down:</label>
+                        <input type="checkbox" name="quickshiftUpDown">
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-section">
+                <h2 class="section-title">Engine Details</h2>
+                <div class="info-grid">
+                    <div class="input-group">
+                        <label>Capacity:</label>
+                        <input type="number" step="0.1" name="capacity">
+                    </div>
+                    <div class="input-group">
+                        <label>Bore & Stroke:</label>
+                        <input type="text" name="boreStroke">
+                    </div>
+                    <div class="input-group">
+                        <label>Compression Ratio:</label>
+                        <input type="text" name="compressionRatio">
+                    </div>
+                    <div class="input-group">
+                        <label>Cooling System:</label>
+                        <input type="text" name="coolingSystem">
+                    </div>
+                    <div class="input-group">
+                        <label>Lubrication:</label>
+                        <input type="text" name="lubrication">
+                    </div>
+                    <div class="input-group">
+                        <label>Fuel System:</label>
+                        <input type="text" name="fuelSystem">
+                    </div>
+                    <div class="input-group">
+                        <label>Emission:</label>
+                        <input type="text" name="emission">
+                    </div>
+                    <div class="input-group">
+                        <label>Induction:</label>
+                        <input type="text" name="induction">
+                    </div>
+                    <div class="input-group">
+                        <label>Mileage:</label>
+                        <input type="number" step="0.1" name="mileage">
+                    </div>
+                    <div class="input-group">
+                        <label>Top Speed:</label>
+                        <input type="number" step="0.1" name="topSpeed">
+                    </div>
+                    <div class="input-group">
+                        <label>Clutch:</label>
+                        <input type="text" name="clutch">
+                    </div>
+                    <div class="input-group">
+                        <label>Transmission Gear Count:</label>
+                        <input type="number" name="transmissionGearCount">
+                    </div>
+                    <div class="input-group">
+                        <label>Transmission Type:</label>
+                        <input type="text" name="transmissionType">
+                    </div>
+                    <div class="input-group">
+                        <label>Engine Stroke:</label>
+                        <input type="text" name="engineStroke">
+                    </div>
+                    <div class="input-group">
+                        <label>Engine Cylinder:</label>
+                        <input type="text" name="engineCylinder">
+                    </div>
+                    <div class="input-group">
+                        <label>Engine Camshaft:</label>
+                        <input type="text" name="engineCamshaft">
+                    </div>
+                    <div class="input-group">
+                        <label>Engine Type:</label>
+                        <input type="text" name="engineType">
+                    </div>
+                    <div class="input-group">
+                        <label>Engine Crank Angle:</label>
+                        <input type="text" name="engineCrankAngle">
+                    </div>
+                    <div class="input-group">
+                        <label>Max Power (HP):</label>
+                        <input type="number" step="0.1" name="maxPowerHp">
+                    </div>
+                    <div class="input-group">
+                        <label>Max Power RPM:</label>
+                        <input type="number" name="maxPowerRpm">
+                    </div>
+                    <div class="input-group">
+                        <label>Max Torque (Nm):</label>
+                        <input type="number" step="0.1" name="maxTorqueNm">
+                    </div>
+                    <div class="input-group">
+                        <label>Max Torque RPM:</label>
+                        <input type="number" name="maxTorqueRpm">
+                    </div>
+                    <div class="input-group">
+                        <label>Class Grade:</label>
+                        <input type="number" name="classGrade">
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-container">
+                <button type="submit" class="btn">Create Motorcycle</button>
+                <a href="/motorcycle" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script th:src="@{/static/js/create.js}"></script>
+</body>
+</html>

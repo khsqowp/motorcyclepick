@@ -1,0 +1,36 @@
+Model : Chief Dark Horse
+Years : 2020
+Engine : Four stroke, Thunder Stroke&#8482; 116 49&#730; V-Twin
+Capacity : 1890 cc / 115 cu in
+Bore x Stroke : 103.2 x 113 mm
+Compression Ratio : 11.0:1
+Cooling System : Air / Oil cooled
+Induction : Electronic fuel injection, closed loop/54 mm bore
+Exhaust : Split dual exhaust with crossover
+Battery : 12 volts / 18 amp/hour, 310 CCA
+Starting : Electric
+Max Toque : 168 Nm / 126 lb-ft @ 2900 rpm
+Clutch : Wet, Multi-Plate
+Transmission : 6 Speed
+Final Drive : Belt drive, 152 tooth
+Gear Ratio : 1st 9.403 : 1 2nd 6.411 : 1 3rd 4.763 : 1 4th 3.796 : 1 5th 3.243 : 1 6th 2.789 : 1
+Final Drive Ratio : 2.2 : 1
+Frame : Cast Aluminum Frame with Integrated Air-Box
+Front Suspension : 46mm cartridge forks with dual rate springs
+Front Wheel Travel : 119 mm / 4.7 in
+Rear Suspension : Single shock,
+Rear Wheel Travel : 104 mm / 3.7 in
+Front Brakes : 2x 300 mm Floating Rotor 4 piston calipers
+Rear Brakes : Single 300 mm Floating Rotor 2 piston calipers
+Front Tyre : Dunlop&#174; American Elite, 130/60B19 61H
+Rear Tyre : Dunlop&#174; American Elite 180/65B16 81H
+Front Wheel : Cast 19&#8243; x 3.5&#8243; with tire pressure monitoring
+Rear Wheel : 16&#8243; x 5.0&#8243; with tire pressure monitoring
+Rake : 25&#176;
+Trail : 150 mm / 5.9 in
+Ground Clearance : 139.7 mm / 5.5 in
+Dimensions : Length 2506 mm / 98.7 in
+Wheelbase : 1668 mm / 65.7 in
+Seat Height : 650 mm / 25.6 in
+Dry Weighty : 362 kg / 798 lbs
+Fuel Capacity : 20.8 Litres / US 5.5 Gal

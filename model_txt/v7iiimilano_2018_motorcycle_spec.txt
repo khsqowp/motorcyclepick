@@ -1,0 +1,37 @@
+Model : V7III Milano
+Years : 2018
+Engine : Four stroke, V twin, longitudinally mounted, OHV, 2 valves with light alloy pushrods and rockers
+Capacity : 744 cc / 45.4 in
+Bore x Stroke : 80 x 74 mm
+Cooling System : Air cooled
+Compression Ratio : 9.6:1
+Exhaust system : 3 way catalytic converter with twin oxygen sensor
+Induction : Weber- Marelli electronic injection
+Ignition : Magneti Marelli electronic digital
+Battery : 12 V - 330 Watt Voltage 12 V - 14 Amph
+Head Lamp : 12 V - 55/60 W
+Starting : Electric
+Max Power : 38 kW / 52 hp @ 6200 rpm
+Max Torque : 60 Nm / 44.2 lb-ft @ 4900 rpm
+Clutch : Single disc, dry, with cush drive
+Transmission : 6 Speed
+Final Drive : Shaft
+Frame : Double cradle tubular frame. ALS steel. Detachable elements 1463 mm (57.6 inches)
+Front Suspension : Marzocchi &#216; 40 mm telescopic front forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Die-cast alloy swing arm with 2 shocks with adjustable spring preload (&#214;hlins fully adjustable for Racer)
+Rear Wheel Travel : 93 mm / 3.6 in
+Front Brakes : 320 mm stainless steel floating discs, Brembo callipers with 4 differently sized opposed pistons
+Rear Brakes : 260 mm, stainless steel disc, floating calliper with 2 pistons
+Front wheel : 18&#8243; in lightweight alloy (Stone), spoked (Special/Racer/Anniversario)100/90 (110/80 R18 as alternative)
+Rear wheel : 17&#8243; in lightweight alloy (Stone), spoked (Special/Racer/Anniversario)130/80
+Front Tyre : 18&#8243;
+Rear Tyre : 17&#8243;
+Rake : 26.4&#176;
+Trail : 106 mm / 4.2 in
+Dimensions : Length 2184 mm / 86 in Height 1110 mm / 43.7 in
+Wheelbase : 1445 mm / 56.8 in
+Seat Height : 770 mm / 30.3 in
+Ground Clearance : 150 mm / 5.9 in
+Wet Weight : 193 kg / 425 lbs
+Fuel Capacity : 21 Litres / 5.5 US gal

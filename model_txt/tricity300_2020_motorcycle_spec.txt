@@ -1,0 +1,28 @@
+Model : Tricity 300
+Years : 2020
+Engine : 4-stroke, single cylinder, SOHC, 4-valves
+Capacity : 292 cc / 17.8 cu-in
+Bore x Stroke : 70.0 x 75.9 mm
+Compression Ratio : 10.9:1
+Cooling System : Liquid-cooled
+Lubrication : Wet sump
+Induction : Fuel Injection
+Ignition : TCI
+Starting : Electric
+Max Power : 27.6 hp / 20.6 kW @ 7250 rpm
+Max Torque : 29.0 Nm / 21.3 lb-ft @ 5750 rpm
+Transmission : V-Belt Automatic
+Front Suspension : Telescopic fork
+Front Wheel Travel : 100 mm / 3.9 in
+Rear Suspension : Unit Swing
+Rear Wheel Travel : 84 mm / 3.3 in
+Front Brakes : 2x 267 mm hydraulic discs
+Rear Brakes : Single 267 mm hydraulic disc
+Front Tyre : 2x 120/70-14M/C 55P tubeless
+Rear Tyre : 140/70-14M/C 62P tubeless
+Dimensions : Length 2250 mm / 88.5 in Width 815 mm / 32.0 in Height 1470 mm / 57.8 in
+Wheelbase : 1595 mm / 62.7 in
+Seat Height : 795 mm / 31.2 in
+Ground Clearance : 130 mm / 5.1 in
+Wet Weight : 239 kg / 527 lbs
+Fuel Capacity : 13 Litres / 3.4 US gal

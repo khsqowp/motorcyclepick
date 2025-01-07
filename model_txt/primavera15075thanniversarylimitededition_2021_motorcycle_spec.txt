@@ -1,0 +1,36 @@
+Model : Primavera 150 75th Anniversary Limited Edition
+Years : 2021
+Engine : Four stroke, single cylinder, SOHC, 3 valve
+Capacity : 155 cc / 9.5 cub in.
+Bore x Stroke : 58 x 58.6 mm
+Cooling System : Air cooled, forced
+Compression Ratio : 10.5:1
+Fuel system : Electronic fuel injection
+Exhaust : Catalytic converter
+Emission : Euro5
+Ignition : Electronic
+Starting : Electric
+Max Power : 9.5 kW / 12.7 hp @ 7750 rpm
+Max Torque : 12.8 Nm / 1.3 kgf-m / 9.4 lb-ft @ 6500 rpm
+Clutch : Automatic, dry centrifugal with vibration dampers
+Transmission : Auto, twist and go
+Final Drive : Belt
+Frame : Sheet metal body with welded reinforcements
+Front Suspension : Single arm with coil spring and dual action mono shock absorber
+Front Wheel Travel : 78 mm / 3.1 in.
+Rear Suspension : Hydraulic monoshock
+Rear Wheel Travel : 70 mm / 2.8 in.
+Front Brakes : Stainless steel disc, 200 mm, hydraulically operated
+Rear Brakes : Drum, 140 mm, mechanically operated
+Wheels : Die-cast aluminium alloy
+Front Rim : 2.50 x 12
+Rear Rim : 3.00 x 12
+Front Tyre : 110/70-12
+Rear Tyre : 20/70-112
+Dimensions : Length 1860 mm / 73.2 in Width 735 mm / 28.9 in
+Wheelbase : 1340 mm / 52.7 in.
+Seat Height : 780 mm / 30.7 in.
+Dry Weight : 117 kg / 258 lbs
+Fuel Capacity : 8 Litres / 2.1 US gal
+Average Consumption : 2.0 L/100 km / 49.7 km/l / 117 US mpg
+Top Speed : 95 km/h / 59 mph

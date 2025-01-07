@@ -1,0 +1,38 @@
+Model : Katana
+Years : 2022
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder
+Capacity : 999 cc / 60.9 in
+Bore x Stroke : 73.4 x 59 mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.2:1
+Lubrication : Wet sump
+Exhaust : 4-2-1 exhaust system
+Emission : Euro 5
+Induction : Fuel Injection
+Ignition : Electronic ignition (transistorized)
+Starting : Electric
+Max Power : 152.2 hp / 112 kW @ 11000 rpm
+Max Torque : 106 Nm / 78.1 lb-ft @ 9250 rpm
+Clutch : Wet, multiple discs, cable operated
+Transmission : 6 Speed constant mesh
+Final Drive : Chain
+Gear Ratios : 1st 2,562 (41/16) 2nd 2,052 (39/19) 3rd 1,714 (36/21) 4th 1,500 (36/24) 5th 1,360 (34/25) 6th 1,269 (33/26)
+Frame : Steel, double cradle frame
+Front Suspension : KYB inverted telescopic, coil spring, oil damped
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Link type, single shock, coil spring, oil damped
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brake : 2 x 310mm discs
+Rear Brake : Single 250mm disc
+ABS : Standard
+Front Tyre : 120/70-ZR17
+Rear Tyre : 190/50 ZR17
+Rake : 25.0°
+Trail : 100 mm / 3.9 in
+Dimensions : Length 2125 mm / 83.7 in Width 830 mm / 32.7 in Height 1110 mm / 43.7 in
+Wheelbase : 1460 mm / 57.5 in
+Seat Height : 825 mm / 32.5 in
+Ground Clearance : 140 mm / 5.5 in
+Dry Weight : 232 kg / 511.4 lbs
+Wet Weight : 215 kg / 474 lbs
+Fuel Capacity : 12 Litres / 3.2 US gal

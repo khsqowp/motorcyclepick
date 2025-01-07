@@ -1,0 +1,41 @@
+Model : Bonneville Elvis Presley Limited Edition
+Years : 2024
+Production : 925 units
+Engine : Four stoke, parallel twin, 270? crank, SOHC, 4 valves per cylinder
+Capacity : 1198 cc / 73.1 cu-in
+Bore x Stroke : 97.6 x 80 mm
+Compression Ratio : 10.0:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Exhaust : Chromed 2 into 2 exhaust system with twin chrome silencers
+Ignition : Digital
+Emisson : Euro 5
+Induction : Multipoint sequential electronic fuel injection
+Starting : Electric
+Max Power : 58.8 kW / 78.9 hp @ 6550 rpm
+Max Torque : 105 Nm / 77.4 lb-ft @ 3500 rpm
+Clutch : Wet, multi-plate, torque assist clutch
+Transmission : 6-Speed
+Final Drive : Chain, X-ring
+Frame : Tubular steel, twin cradle
+Swingarm : Twin sided fabrication
+Front Suspension : Kayaba 41 mm cartridge forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Twin RSUs, with pre-load adjustment
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2 x 310mm discs, Brembo 2 piston floating caliper
+Rear Brakes : Single 255mm disc, Nissin 2 piston floating caliper
+ABS : Standard
+Wheels : Lightweight 32-spoke wire wheels with aluminum rims
+Wheels Front : 18 x 2.75 in
+Wheels Rear : 17 x 4.25 in
+Front Tyre : 100/90-18
+Rear Tyre : 150/70 R17
+Rake : 25.5?
+Trail : 105.2 mm / 4.1 in
+Dimensions : Length: 2170 mm / 85.4 in Width: 780 mm / 30.7 in Height: 1100 mm / 43.3 in
+Wheelbase : 1450 mm / 57.1 in
+Seat Height : 790 mm / 31.1 in
+Wet Weight : 236 kg / 520 lbs
+Fuel Capacity : 14.5 Litres / 3.8 US gal
+Instruments : Twin dial analogue speedometer and tachometer with LCD multi-functional displays

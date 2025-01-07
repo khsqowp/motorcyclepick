@@ -1,0 +1,30 @@
+Model : TMAX 530DX
+Years : 2017-18
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valves per cylinder.
+Capacity : 530 cc / 32.34 cu-in
+Bore x Stroke : 68.0 x 73.0 mm
+Cooling System : Liquid cooled
+Compression Ratio : 10:9 : 1
+Lubrication : Semi-dry-sump
+Induction : Injection. Electronic fuel injection
+Ignition : TCI
+Starting : Electric
+Max Power : 45.3 hp / 33.8 kW @ 6750 rpm
+Max Torque : 52.3 Nm / 38.6 ft.lbs @ 5250 rpm
+Clutch : Wet, multiple-disc automatic
+Transmission : Fully automatic CVT
+Final Drive : V-Belt
+Front Suspension : 43mm Telescopic forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Swingarm - single shock
+Rear Wheel Travel : 116 mm / 4.6 in
+Front Brakes : 2x 267 discs
+Rear Brakes : Single 267 disc
+Front Tyre : 120/70-15
+Rear Tyre : 160/60-15
+Dimensions : Length 2200mm / 86.6 in Width 765mm / 30.1 in Height 1420 or 1555mm / 55.9 or 61.2 in
+Wheelbase : 1575 mm / 62.0 in
+Seat Height : 800 mm / 31.5 in
+Ground Clearance : 125mm / 4.9 in
+Wet Weight : 216 kg / 476 lbs
+Fuel Capacity : 15 Litters / 4 gal

@@ -1,0 +1,36 @@
+Model : Scrambler 400X
+Years : 2024
+Engine : Four stroke, DOHC, single cylinder, 4 valves
+Capacity : 398 cc / 24.3 cu-in
+Bore x Stroke : 89.0 x 64.0mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.1:1
+Induction : Bosch ride-by-wire EFI
+Emission : Euro 5
+Starting : Electric
+Max Power : 29.4 kW / 40hp @ 8000 rpm
+Max Torque : 38 Nm / 28 ft-lbs @ 6500 rpm
+Clutch : Wet multiplate with assist and slip functions
+Transmission : 6-Speed
+Final Drive : X-ring chain
+Frame : Hybrid spine/perimeter, tubular steel, bolt-on rear subframe
+Swingarm : Twin-sided, cast aluminium alloy
+Front Suspension : 43mm Showa Big Piston, non-adjustable inverted fork
+Front Wheel Travel : 150 mm / 5.9 in
+Rear Suspension : Gas monoshock RSU with external reservoir and pre-load adjustment.
+Rear Wheel Travel : 150 mm / 5.9 in
+Front Brakes : Single 320 mm fixed disc with radially mounted 4-piston caliper
+Rear Brakes : Single 230 mm disc with floating caliper
+ABS : Bosch dual channel
+Wheels Front : 19 x 2.5 in with 10-spoke cast aluminium alloy rims
+Wheels Rear : 17 x 3.5 in with 10-spoke cast aluminium alloy rims
+Front Tyre : 100/970 x R19
+Rear Tyre : 1450/80 x R17
+Rake : 23.2°
+Trail : 108 mm / 4.25 in
+Dimensions : Length: 2117 mm / 83.3 in Width: 825 mm / 32.5 in Height: 1190 mm / 46.8 in
+Wheelbase : 1418 mm / 55.8 in
+Seat Height : 835 mm / 32.9 in
+Wet Weight : 179 kg / 394.6 lbs
+Fuel Capacity : 13 Litres / 3.43 US gal
+Instruments : Analogue speedometer with integrated multi-function LCD screen

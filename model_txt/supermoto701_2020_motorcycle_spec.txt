@@ -1,0 +1,44 @@
+Model : Supermoto 701
+Years : 2020
+Engine : Four stroke, single cylinder, SOHC, 4 valves
+Capacity : 692.7 cc / 42.27 cu in
+Bore x Stroke : 105 x 80 mm
+Compression Ratio : 12.7:1
+Cooling System : Liquid cooling
+Lubrication : Pressure lubrication with 2 oil pumps
+Engine Oil : Bel Ray, SAE 10W-50
+Exhaust : Stainless steel silencer with regulated catalytic converter
+Engine Management : Keihin EMS with Ride By Wire
+Induction : Keihin EMS with RBW
+Ignition : Double ignition
+Starting : Electric
+Battery : 12V 8.6Ah
+Max Power : 55 kW / 74 hp @ 8000 rpm
+Max Torque : 71 Nm / 7.24 kgf-m / 52.4 ft-lb @ 6750 rpm
+Clutch : APTC(TM) slipper clutch, hydraulically operated
+Transmission : 6 Speed
+Final Drive : Chain X-Ring 5/8 x 1/4"
+Primary Drive Ratio : 36:79
+Final Drive Ratio : 16:42
+Frame : Chromium-Molybdenum-Steel trellis frame, powder coated, Subframe Self-supporting polyamide tank
+Handlebar : Aluminium, tapered, &#216; 28/22 mm
+Front Suspension : WP-USD split function fork &#216; 48 mm
+Front Wheel Travel : 215 mm / 8.4 in
+Rear Suspension : WP-Monoshock with Pro-Lever linkage
+Rear Wheel Travel : 250 mm / 9.8 in
+Front Brakes : Single 320 mm disc, Brembo four piston, radially bolted caliper
+Rear Brakes : Single 240 mm disc, Brembo single piston, floating caliper
+ABS : ABS Bosch 9M+ Two Channel (disengageable, supermoto mode)
+Front Wheel : Spoked wheels with aluminium tubeless rims 3.50 x 17";
+Rear Wheel : Spoked wheels with aluminium tubeless rims 5.00 x 17"
+Front Tyre : 120/70 ZR 17
+Rear Tyre : 160/60 ZR 17
+Steering Head Angle : 63&#176;
+Triple Clamp Ofset : 35 mm / 33 mm
+Trail : 112 mm / 4.4 in
+Wheelbase : 1480 &#177; 15 mm mm / 58.2 in
+Seat Height : 890 mm / 35.0 in
+Ground Clearance : 270 mm / 10.6 in
+Dry Weight : 145 kb / 319.6 lbs
+Fuel Capacity : 13 L / 3.4 US gal / 2.9 Imp gal
+Reserve : 2.5 L / 0.66 US gal / 0.55 Imp gal

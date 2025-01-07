@@ -1,0 +1,36 @@
+Model : TRK 800
+Years : 2022
+Engine : Parallel twin, DOHC, 8 valves
+Capacity : 754 cc / 46 cu-in
+Bore x Stroke : 88 x 62 mm
+Compression Ratio : 11.5:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : EFI with dual 43mm throttle bodies
+Ignition : Digital
+Starting : Electric
+Max Power : 55 kW / 75 hp @ 8500 rpm
+Max Torque : 66.4 Nm / 49 ft-lbs @ 6500 rpm
+Clutch : Multi disc wet clutch
+Transmission : 6-speed with assist and slipper functions
+Final Drive : Chain
+Frame : Steel trellis with aluminum swingarm
+Front Suspension : Fully adjustable Marzocchi 50mm inverted fork
+Front Wheel Travel : 170 mm / 6.7 in
+Rear Suspension : Cantilevered rebound-damping and spring-preload adjustable shock
+Rear Wheel Travel : 170 mm / 6.7 in
+Front Brakes : 2 x 320mm semi-floating discs with radially mounted Brembo 4-piston monobloc calipers
+Rear Brakes : Single 260mm disc with Brembo single-piston caliper
+ABS : Standard
+Wheels : Wire-spoked with aluminum rim
+Front Wheel : 19 x 3.00
+Rear Wheel : 17 x 4.25
+Front Tyre : 110/80 x 19
+Rear Tyre : 150/70 x 17
+Dimensions : Length: 2240 mm / 88.1 in Width: 927 mm / 36.4 in Height: 1408 mm / 55.4 in
+Wheelbase : 1529 mm / 60.2 in
+Ground Clearance : 211 mm / 8.3 in
+Seat Height : 834 mm / 32.8 in
+Dry : 226 kg / 498 lbs
+Wet Weight : 249 kg / 550 lbs
+Fuel Capacity : 22 Litres / 5.8 US gal

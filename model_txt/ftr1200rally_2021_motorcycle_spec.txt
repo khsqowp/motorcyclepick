@@ -1,0 +1,42 @@
+Model : FTR1200 Rally
+Years : 2021
+Engine : Four stroke, 60&#176; V Twin , DOHC, 4 valves per cylinder, graded buckets
+Capacity : 1203 cc / 73 cu-in
+Bore x Stroke : 102 x 73.6 mm
+Compression Ratio : 12.5:1
+Cooling System : Liquid Cooled
+Induction : Electronic Fuel Injection closed loop, 60 mm bore
+Emission : EURO5
+Exhaust : 2-into-1
+Starting : Electric
+Max Power : 120 hp / 89.4 kW @ 6000 rpm
+Max Torque : 117.9 Nm / 87 lb-ft @ 6000 rpm
+Clutch : Assist &amp; Slip, Multi-Plate
+Transmission : 6 Speed
+Final Drive : Chain
+Final Drive Ratio : 2.882:1
+Gear Ratios : 1st 13.361:1 2nd 9.082:1 3rd 7.237:1 4th 6.141:1 5th 5.428:1 6th 5.428:1
+Primary Drive : Gear drive wet clutch
+Lean Angle : 43&#176;
+Frame : Steel trellis
+Front Suspension : 43 mm Inverted telescopic cartridge fork
+Front Wheel Travel : 150 mm / 5.9 in
+Rear Suspension : Monotube IFP
+Rear Wheel Travel : 150 mm / 5.9 in
+Front Brakes : 2x 320mm t5 Rotor Brembo with 4-piston calipers
+Rear Brakes : Single 260mm t5 Rotor Brembo with 2-piston calipers
+ABS : Standard, option to disable
+Front Wheel : Aluminum spoke wheel 19 x 3
+Rear Wheel : Aluminum spoke wheel 18 x 4.25
+Front Tyre : 120/70R19 M/C 60V M+S Pirelli Scorpion Rally STR Tires
+Rear Tyre : 150/70R18 M/C 70V M+S Pirelli Scorpion Rally STR Tires
+Rake : 26.3&#176;
+Trail : 130 mm / 5.1 in
+Dimensions : Length 2286 mm / 90 in Width 867 mm / 34.1 in Height 1369 mm / 53.9 in
+Wheelbase : 1524 mm / 60 in
+Seat Height : 815 mm / 32.1 in
+Ground Clearance : 183 mm / 7.2 in
+Dry Weight : 225 kg / 497 lbs
+Wet Weight : 240 kg / 529 lbs
+Fuel Capacity : 12.9 Litres / 3.4 US gal
+Standard Equipment : 4" Analog, Digital Tachometer, Odometer, Trip Meter, Engine Temp, Low Fuel Lamp, ABS, Cruise Control

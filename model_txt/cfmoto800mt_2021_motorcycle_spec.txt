@@ -1,0 +1,28 @@
+Model : CFMoto 800MT
+Years : 2021
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 valve per cylinder
+Capacity : 799 cc / 48.7 cu-in
+Bore x Stroke : 88 mm x 65.7 mm
+Cooling System : Liquid cooled
+Compression Ratio : -
+Lubrication : Pressure lubrication with two oil pumps
+Induction : DKK Dell&#8217;Orto, 46 mm throttle body
+Ignition : Bosch EMS with Ride-By-Wire
+Starting : Electric
+Max Power : 94hp / 70 kW
+Max Torque : 77 Nm / 57 lb-ft
+Clutch : -
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Tubular steel
+Front Suspension : KYB Telescopic fork
+Rear Suspension : Aluminum swingarm
+Front Brakes : Single disc
+Rear Brakes : Single disc
+ABS : Bosch cornering ABS
+Front Tyre : 110/80 R19
+Rear Tyre : 150/70 R17
+Wheelbase : -
+Seat Height : 825 mm / 32.5 in
+Wet Weight : 231 kg / 509 lbs - 248kg / 547 lbs (incl alloy side cases and top box)
+Fuel Capacity : 19 Litres / 5.0 US gal

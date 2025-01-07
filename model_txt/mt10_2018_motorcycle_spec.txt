@@ -1,0 +1,35 @@
+Model : MT-10
+Years : 2018-19
+Engine : Four stroke, Transverse four cylinder, DOHC, 4 valves per cylinder.
+Capacity : 998 cc / 60.9 cu-in
+Bore x Stroke : 79.0 x 50.9 mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.0:1
+Lubrication : Wet sump
+Oil Capacity : 3.9 Litres
+Induction : Fuel Injection
+Ignition : Digital TCI
+Starting : Electric
+Max Power : 118.0 kW / 160.4 PS @ 11500 rpm
+Max Torque : 111.0 Nm / 11.3 kg-m @ 9000 rpm
+Clutch : Wet, Multiple Disc
+Transmission : Constant Mesh, 6-speed
+Final Drive : Chain
+CO2 Emission : 185 g/km
+Frame : Aluminium Deltabox
+Front Suspension : 43mm Telescopic forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Swingarm, (link suspension)
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2x 320 mm hydraulic discs
+Rear Brakes : Single 220 mmhydraulic disc
+Front Tyre : 120/70 ZR17 M/C (58W)
+Rear Tyre : 190/55 ZR17 M/C (75W)
+Rake : 24&#176;
+Trail : 102 mm / 4.0 in
+Dimensions : Length 2096 mm / 82.5 in Width 800 mm / 31.4 in Height 1110 mm / 43.7 in
+Wheelbase : 1400 mm / 55.1 in
+Seat Height : 825 mm / 32.4 in
+Ground Clearance : 130 mm / 5.1 in
+Wet Weight : 210 kg / 462.9 lbs
+Fuel Capacity : 17 Litres / 4.5 US gal

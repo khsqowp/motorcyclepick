@@ -1,0 +1,37 @@
+Model : MXT 890 Niken GT
+Years : 2023
+Engine : Four Stroke, in line 3-cylinder, DOHC, 4 valves per cylinder
+Capacity : 890 cc / 54.3 cu-in
+Bore x Stroke : 78.0 x 62.1 mm
+Compression Ratio : 11.5:1
+Cooling System : Liquid cooled
+Emission : Euro 5
+Lubrication : Wet sump
+Induction : Fuel injection with YCC-T
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : 113 hp / 84.5 kW @ 10000 rpm
+Max Torque : 90.7 Nm / 66.8 lb-ft @ 7000 rpm
+Clutch : Multiplate assist and slipper clutch
+Transmission : 6 Speed, constant mesh
+Final Drive : Chain
+Frame : Diamond, Aluminum twin-spar
+Front Suspension : 43 / 41mm LMW dual tube fork, fully adjustable
+Front Wheel Travel : 110 mm / 4.3 in
+Rear Suspension : Single shock, adjustable preload (with remote adjuster) and rebound damping
+Rear Wheel Travel : 125 mm / 4.9 in
+Front Brakes : 2x 298mm Hydraulic discs
+Rear Brakes : Single 282mm hydraulic disc
+ABS : Standard
+Front Tyre : 2x 120/70R15M/C 56V Tubeless
+Rear Tyre : 190/55R17M/C 75V Tubeless
+Rake : 20.0°
+Trail : 74 mm / 2.9 in
+Wheel Track : 409 mm / 16.1 in
+Lean Angle : 45.0°
+Dimensions : Length 2150 mm / 84.6 in Width 875 mm / 34.8 in Height 1395 mm / 54.9 in to 1430 mm / 56.2 in
+Wheelbase : 1510 mm / 59.4 in
+Seat Height : 825mm / 32.4 in
+Ground Clearance : 150 mm / 5.9 in
+Wet Weight : 270 kg / 595.2 lbs
+Fuel Capacity : 18.1 Litres / 4.8 US gal

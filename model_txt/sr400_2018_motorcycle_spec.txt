@@ -1,0 +1,33 @@
+Model : SR 400
+Years : 2018
+Engine : Four stroke, single cylinder, SOHC, 2 valves per cylinder.
+Capacity : 399 cc / 24.3 cu-in
+Bore x Stroke : 87 &#1093; 67.2 mm
+Compression Ratio : 8.5:1
+Cooling System : Air cooled
+Oil Capacity : 2.4 Litres
+Lubrication : Dry sump
+Induction : Fuel injection
+Ignition : TCI
+Starting : Kick
+Max Power : 27 hp / 17.1 KW @ 7000 rpm
+Max Torque : 27.4 Nm / 6.3 kgf-m @ 6500 rpm
+Clutch : Wet, Multiple Disc
+Transmission : 5 Speed
+Final Drive : Chain
+Frame : Steel Double Cradle
+Front Suspension : Telescopic fork
+Front Wheel Travel : 111 mm / 4.3 in
+Rear Suspension : Dual shocks
+Front Brakes : Single disc
+Rear Brakes : Drum
+Front Tyre : 3.50-19
+Rear Tyre : 4.00-16
+Rake Caster Angle : 27&#186;
+Trail : 111 mm / 4.4 in
+Dimensions : Length 2085 mm / 82.1 in Width 750 mm / 29.5 in Height 1090 mm / 43.1 in
+Wheelbase : 1410 mm / 55.5 in
+Seat Height : 790 mm / 30.9 in
+Ground Clearance : 130 mm / 5.1 in
+Wet Weight : 174 kg / 384 lbs
+Fuel Capacity : 12 Litres / 3.2 US gal

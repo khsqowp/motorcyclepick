@@ -1,0 +1,37 @@
+Model : Daytona 675
+Years : 2017-18
+Engine : Four stroke, in-line 3-cylinder, DOHC, 4 valve per cylinder.
+Capacity : 675 cc / 41.2 cub in.
+Bore x Stroke : 76 x 49.6 mm
+Cooling System : Liquid-cooled
+Lubrication : Wet sump
+Oil Capacity : 3.6 Litres / 1.0 US gal / 0.8 Imp gal
+Induction : Multipoint sequential electronic fuel injection with forced air induction and SAI
+Exhaust : Stainless steel 3 into 1 system with valve in secondary and under engine silencer
+Ignition : Digital - inductive type
+Starting : Electric
+Max Power : 94 kW / 126 hp @ 12500rpm
+Max Torque : 74 Nm / 7.5 kgf-m / 55 ft/lb @ 11900rpm
+Clutch : Wet, multi-plate, slipper.
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Aluminium beam twin spar. Rear - 2 piece high pressure die cast swingarm braced, twin-sided, aluminium alloy with adjustable pivot position
+Front Suspension : Kayaba 41mm upside down forks with adjustable preload, rebound and high/low speed compression damping
+Front Wheel Travel : 110 mm / 4.3 in
+Rear Suspension : Kayaba monoshock with piggy back reservoir adjustable for preload, rebound and high/low speed compression damping
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Wheels : Cast aluminium alloy 5-spoke 17 x 3.5in
+Rear Wheels : Cast aluminium alloy 5-spoke 17 x 5.5in
+Front Brakes : 2 x 308 mm discs, Nissin 4 piston radial calipers, ABS
+Rear Brakes : Single 220mm disc Brembo 1 piston caliper, ABS
+Front Tyre : 120/70 ZR 17
+Rear Tyre : 180/55 ZR 17
+Rake : 22.9&#186;
+Trail : 87.2 mm / 3.4 in
+Dimensions : Length 2045 mm / 80.4 in Width 695 mm / 27.3 in (handlebars) Height 1112 mm / 43.7 in (without mirrors)
+Wheelbase : 1375 mm / 54.1 in
+Seat Height : 820 mm / 32.3 in
+Dry Weight : 167 kg / 368 lbs
+Wet Weight : 187 kg / 412 lbs
+Fuel Capacity : 17.5 Litres / 4.6 US gals / 3.8 Imp gal
+Consumption Average : 4.5 L/100 km / 22.3 km/l / 52.4 US mpg / 62.7 Imp mpg

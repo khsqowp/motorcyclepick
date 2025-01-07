@@ -1,0 +1,31 @@
+Model : CFMoto 450SR
+Years : 2023
+Engine : Four stroke parallel twin cylinder, DOHC, 270? crankshaft
+Capacity : 449.5 cc / 27.4 cu in
+Bore x Stroke : 72 x 55.2 mm
+Compression Ratio : 11.1:1
+Cooling System : Liquid cooled
+Induction : Electronic Fuel Injection, Bosch
+Ignition : ECU
+Starting : Electric
+Max Power : 34.5 kW / 46.9 hp @ 10000 rpm
+Max Torque : 39.3 Nm 29 lb-ft @ 7750 rpm
+Clutch : Wet multi-plate, FCC slipper
+Transmission : 6 Speed constant mesh
+Final Drive : Chain
+Frame : Chrome Moly alloy steel chassis
+Front Suspension : 37mm Upside down hydraulic damper, adjustable
+Rear Suspension : Multi-link central single rear shock, adjustable spring preload
+Front Wheel Travel : 120mm / 4.7 in
+Rear Wheel Travel : 130mm / 5.1 in
+Front Brakes : Single 320mm disc, Brembo M40, 4 piston radially mounted calliper
+Rear Brakes : Single 220mm disc, single piston calliper
+Wheels : 6-Spoke aluminium alloy
+Front Tyre : 110/70-R17
+Rear Tyre : 150/60-R17
+ABS : Standard
+Dimensions : Length: 1990 mm / 78.3 in Width: 735 mm / 28.9 in Height: 1130 mm / 44.5 in
+Wheelbase : 1370 mm / 53.9 in
+Seat Height : 795mm / 31.3 in
+Wet Weight : 179 kg / lbs / 394 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal

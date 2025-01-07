@@ -1,0 +1,36 @@
+Model : Rocket 3 GT 221 Special Edition
+Years : 2022
+Engine : Four stroke, inline 3-cylinder, DOHC
+Capacity : 2458 cc / 150 cub in
+Bore x Stroke : 110.2 x 85.9 mm
+Cooling System : Liquid cooled
+Compression Ratio : 10.8:1
+Induction : Ride-by-Wire, fuel injected
+Lubrication : Wet sump
+Exhaust : Stainless 3-into-1 headers with 3 exit silencer / CAT box
+Ignition : Digital inductive type via electronic engine management
+Starting : Electric
+Max Power : 123 kW / 167 PS / 165 hp @ 6000 rpm
+Max Torque : 221 Nm / 163 ft-lb @ 4000 rpm
+Clutch : Wet, multi-plate hydraulically operated, torque assist
+Transmission : 6 Speed
+Final Drive : Shaft, bevel box
+Frame : Full aluminum frame
+Swingarm : Single-sided, cast aluminum
+Front Suspension : Showa 47mm upside-down 1+1 cartridge front forks, compression and rebound adjuster.
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Fully adjustable Showa piggyback reservoir RSU with remote hydraulic preload adjuster
+Rear Wheel Travel : 107 mm / 4.2 in
+Front Brakes : 2x 320 mm discs w/ Brembo M4.30 Stylema 4-piston radial monobloc calipers, Cornering ABS
+Rear Brakes : Single 300mm disc, Brembo M4.32 4-piston monobloc caliper, Cornering ABS
+Front Wheel : 17 x 3.5 in cast aluminium
+Rear Wheel : 16 x 7.5 in cast aluminium
+Front Tyre : 150/80 R17 V
+Rear Tyre : 240/50 R16 V
+Rake : 27.9°
+Trail : 134.9 mm / 5.3 in
+Dimensions : Width 886 mm / 34.8 in - Handlebars Height 1066 mm / 41.5 in - Without Mirrors
+Wheelbase : 1677 mm / 66 in
+Seat Height : 750 mm / 29.7 in
+Dry Weight : 294 kg / 648 lbs
+Fuel Capacity : 18 Litres / 4.7 US gal

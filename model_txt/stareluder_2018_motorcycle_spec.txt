@@ -1,0 +1,31 @@
+Model : Star Eluder
+Years : 2018-19
+Engine : Four stroke, pushrod 48&#176; V-Twin, OHV, 4 valves per cylinder
+Capacity : 1854 cc / 113 cu-in
+Bore x Stroke : 100 &#1093; 118 mm
+Cooling System : Air cooled
+Compression Ratio : 9.5:1
+Lubrication : Dry sump
+Induction : Yamaha Fuel Injection with YCC-T and D-Mode
+Ignition : Digital TCI
+Starting : Electric
+Max Torque : 170.8 Nm / 126 ft-lb @ 2250 rpm
+Clutch : Multiplate assist and slipper wet clutch
+Transmission : 6 Speed
+Final Drive : Belt
+Front Suspension : 46mm telescopic fork
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Single shock with remote preload adjustment
+Rear Wheel Travel : 109 mm / 4.3 in
+Front Brakes : 2x 298 mm discs 4 piston calipers, Unified Brake System and ABS
+Rear Brakes : Single 320 mm disc 1 piston caliper, Unified Brake System and ABS
+Front Tyre : 130/70 R18
+Rear Tyre : 200/55 R16
+Rake : 31&#176;
+Trail : mm / 5.7 in
+Dimensions : Length 2489 mm / 98 in Width 884 mm / 34.8 in Height 1275 mm / 50.2 in
+Wheelbase : 1717 mm / 67.6 in
+Seat Height : 701 mm / 27.6 in
+Ground Clearance : 140 mm / 5.5 in
+Wet Weight : Star Eluder 397 kg / 875 lb Star Eluder GT 398 kg / 877 lb
+Fuel Capacity : 25 Litres / 6.6 US gal

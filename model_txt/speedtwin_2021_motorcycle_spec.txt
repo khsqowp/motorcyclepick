@@ -1,0 +1,39 @@
+Model : Speed Twin
+Years : 2021
+Engine : Four stoke, parallel twin, 270&#176; crank, SOHC, 4 valve per cylinder
+Capacity : 1198 cc / 73.1 cu-in
+Bore x Stroke : 97.6 x 80 mm
+Compression Ratio : 12.1:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Exhaust : Brushed 2-into-2 exhaust system with twin silencers
+Emission : Euro5
+Induction : Multipoint sequential electronic fuel injection
+Ignition : Digital
+Starting : Electric
+Max Power : 73.6 kW / 98.6 hp @ 7250 rpm
+Max Torque : 112.5 Nm / 83 lb-ft @ 4250 rpm
+Clutch : Wet, multi-plate assist clutch
+Transmission : 6-Speed
+Final Drive : Chain, O-ring
+Frame : Tubular steel with steel cradles
+Swingarm : Twin sided aluminium
+Front Suspension : 43mm USD Marzocchi forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Twin RSUs with adjustable preload
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2 x 320 mm discs, Brembo M50 4 piston radial monobloc calipers
+Rear Brakes : Single 220 mm disc, Nissin 2-piston floating caliper
+ABS : Standard
+Front Wheel : Cast aluminium alloy 17 x 3.5
+Rear Wheel : Cast aluminium alloy 17 x 5.0
+Front Tyre : 120/70 ZR17
+Rear Tyre : 160/60 ZR17
+Rake : 22.3&#176;
+Trail : 91.5 mm / 3.6 in
+Dimensions : Length: 2099 mm / 82.6 in Width: 778 mm / 30.6 in Height: 1097 mm / 43.2 in
+Wheelbase : 1413 mm / 55.6 in
+Seat Height : 809 mm / 31.8 in
+Wet Weight : 216kg / 476 lbs
+Fuel Capacity : 14.5 Litres / 3.8 US gal
+Instruments : Twin dial analogue speedometer and tachometer with LCD multi-functional displays

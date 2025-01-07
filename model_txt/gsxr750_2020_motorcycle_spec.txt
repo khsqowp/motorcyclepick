@@ -1,0 +1,48 @@
+Model : GSX-R 750
+Years : 2020
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder.
+Capacity : 749 c / 45.7 cub. in.
+Bore x Stroke : 70 x 48.7 mm
+Compression Ratio : 12.5:1
+Cooling System : Liquid. High capacity large trapezoidal-shaped radiator which includes compact cooling fan assembly designed for improved air flow.
+Engine Oil : Synthetic,10W/40
+Exhaust System : Suzuki Advanced Exhaust System (SAES) with under engine muffler layout and Suzuki Exhaust Tuning (SET) system.
+Lubrication : Wet sump
+Induction : New 32 bit ECM features 1024 kilobytes of ROM for maximum engine performance working in conjunction with the new S-DMS engine management system
+Ignition : Digital DC-CDI
+Spark Plug : NGK, CR9E
+Starting : Electric
+Max Power : 110.3 kW / 148 hp @ 12800 rpm
+Max Torque : 86.3 Nm / 8.8 kgf-m / 64 ft-lb @ 11200 rpm
+Clutch : Wet, multiple discs
+Transmission : 6 Speed, constant mesh
+Final Drive : Chain, RK525ROZ5Y, 116 links
+Gear Ratios : 1st 2.79 / 2nd 2.05 / 3rd 1.71 / 4th 1.50 / 5th 1.35 / 6th 1.20:1
+Frame : Ultra-lightweight frame built entirely of aluminum alloy castings.
+Front Suspension : Showa inverted 41 mm cartridge front forks fully adjustable for high and low speed compression, spring preload, and rebound damping
+Rear Suspension : Showa 41mm aluminum alloy rear shock with a 16mm rod diameter are fully adjustable for high and low speed compression, spring preload and rebound damping
+Front Wheel Travel : 120 mm / 4.7 in.
+Rear Wheel Travel : 130 mm / 5.1 in.
+Front Brakes : 2 x 310 mm Discs, radial-mount opposed-four-piston Brembo 4 piston monoblock calipers
+Rear Brakes : Single 220 mm disc, Nissin single piston caliper
+Wheels : Aluminum, 3 spoke
+Front Rim : 3.8 x 17
+Rear Rim : 5.5 x 17
+Front Tyre : 120/70 ZR17
+Rear Tyre : 180/55 ZR17
+Rake : 23.8&#176;
+Trail : 97 mm / 3.8 in.
+Dimensions : Length 2030 mm / 79.9 in. Width 710 mm / 28.0 in. Height 1125 mm / 44.6 in.
+Wheelbase : 1390 mm / 54.7 in.
+Seat Height : 810 mm / 31.8 in.
+Ground Clearance : 130 mm / 5.1 in
+Dry Weight : 156 kg / 344 lbs
+Wet Weight : 190 kg / 418 lbs
+Fuel Capacity : 17 Litres / 4.5 US gal / 3.7 Imp gal
+Average Consumption : 5.5 l/100 km / 18.3 km/l / 43 US mpg / 51 Imp mpg
+Standing &#188; mile : 10.7 sec
+Standing 0 - 100 km/h / 62 mph : 3.2 sec
+Acc 60 - 100 km/h / 37 - 62 mph : 4.1 sec
+Acc 100 - 140 km/h / 62 - 87 mph : 3.9 sec
+Acc 140 - 180 km/h / 87 - 112 mph : 4.5 sec
+Top Speed : 270.7 km/h / 168 mph

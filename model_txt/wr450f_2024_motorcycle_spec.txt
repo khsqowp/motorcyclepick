@@ -1,0 +1,40 @@
+Model : WR450F
+Years : 2024
+Engine : Four stroke, Single cylinder, DOHC, 4 titanium valves
+Capacity : 449 cc / 27.4 cu in
+Bore x Stroke : 97.0 x 60.8mm
+Cooling System : Liquid cooled
+Compression Ratio : 13.0:1
+Lubrication : Dry sump
+Oil Capacity : 1.2 L / 2.5 US pt
+Exhaust : Single, upswept, under seat
+Induction : Fuel injection
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : NA
+Max Torque : NA
+Clutch : Wet, multi-disc
+Transmission : 5-Speed, Wide-ratio constant-mesh
+Final Drive : O-ring chain
+Primary Ratio : 2.481 (67/27)
+Secondary Ratio : 3.846 (50/13)
+Gear Ratio : 1st 2.500 (30/12) 2nd 1.800 (27/15) 3rd 1.350 (27/20) 4th 1.100 (22/20) 5th 0.880 (25/21)
+Frame : Control Fill Aluminium bilateral beam
+Front Suspension : 48mm Kayaba spring-type fork with speed sensitive, damping; fully adjustable
+Front Wheel Travel : 300 mm / 11.8 in
+Rear Suspension : Swingarm, link suspension, mono shock, Kayaba single shock; fully adjustable
+Rear Wheel Travel : 306 mm / 12.0 in
+Front Brakes : Single hydraulic single 270 mm disc 4 piston caliper
+Rear Brakes : Single 240 mm disc 2 piston caliper
+Wheels : Aluminium alloy, laced spokes
+Front Tyre : 90/90-21
+Rear Tyre : 140/80-18
+Rake : 27.0?
+Trail : 121 mm / 4.76 in
+Dimensions : Length: 2170 mm / 85.4 in Width: 825 mm / 32.5 in Height: 1265 mm / 49.8 in
+Wheelbase : 1470 mm / 57.9 in
+Seat Height : 955 mm / 37.6 in
+Ground Clearance : 330 mm / 13.0 in
+Wet Weight : 117 kg / 258 lbs
+Fuel Capacity : 7.4 Litres / 2.0 US gal
+Dashboard : Multifunction display meter LCD display with dual tripmeters, digital speedometer, clock, timer, fuel and engine lights

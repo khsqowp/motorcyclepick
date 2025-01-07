@@ -1,0 +1,29 @@
+Model : WR 250R
+Years : 2019-20
+Engine : Four stroke, single cylinder, DOHC, 4 valve
+Capacity : 249 cc / 15.2 cub in.
+Bore x Stroke : 77 x 53.6 mm
+Compression Ratio : 11.8:1
+Cooling system : Liquid cooled
+Lubrication : Dry sump
+Induction : Electronic fuel injection
+Ignition : TCI
+Starting : Electric
+Transmission : 6 Speed, constant mesh
+Final Drive : Chain
+Clutch : Wet, multi-plate
+Frame : Semi-double-cradle, main frame of cast and forged aluminium, with high-strength downtubes
+Front Suspension : Inverted 46 mm fork, adjustable
+Front Wheel Travel : 269 mm / 10.6 in.
+Rear Suspension : Swingarm, single shock, 46 mm, adjustable
+Rear Wheel Travel : 269 mm / 10.6 in.
+Front Brakes : Hydraulic, single disc, 250 mm &#216;
+Rear Brakes : Hydraulic, single disc, 230 mm &#216;
+Front Tyre : 80/100 -21
+Rear Tyre : 120/80 -18
+Dimensions : Length: 2174 mm / 85.6 in Width: 810 mm / 31.9 in Height: 1229 mm / 48.4 in
+Wheelbase : 1420 mm . 55.9 in.
+Seat Height : 930 mm / 36.6 in
+Ground Clearance : 300 mm / 11.8 in.
+Wet Weight : 134 kg / 295 lbs
+Fuel Capacity : 7.6 Litres / 2 US gal

@@ -1,0 +1,36 @@
+Model : MXT 850 Niken
+Years : 2020
+Engine : Four Stroke, in line 3-cylinder, DOHC, 4 valves per cylinder
+Capacity : 847 cc / 51.6 cu-in
+Bore x Stroke : 78.0 x 59.1 mm
+Compression Ratio : 11.5:1
+Cooling System : Liquid cooled
+Emission : Euro 4
+Lubrication : Wet sump
+Induction : Fuel injection with YCC-T
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : 115 hp / 83.9 kW) @ 10120 rpm
+Max Torque : 87.5 Nm / 8.9 kgf-m / 45.3 lb-ft @ 8500 rpm
+Clutch : Multiplate assist and slipper clutch
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Diamond, Aluminum twin-spar
+Front Suspension : 43 / 41mm LMW dual tube fork, fully adjustable
+Front Wheel Travel : 110 mm / 4.3 in
+Rear Suspension : Single shock, adjustable preload (w/remote adjuster) and rebound damping
+Rear Wheel Travel : 125 mm / 4.9 in
+Front Brakes : 2x 298mm Hydraulic discs, ABS
+Rear Brakes : Single 298mm hydraulic disc, ABS
+Front Tyre : 2x 120/70 R 15
+Rear Tyre : 190/55R17
+Rake : 20.0&#176;
+Trail : 74 mm / 2.9 in
+Wheel Track : 409 mm / 16.1 in
+Lean Angle : 45.0&#176;
+Dimensions : Length 2150 mm / 84.6 in Width 85 mm / 34.8 in Height 1250 mm / 56.1 in
+Wheelbase : 1510 mm / 59.4 in
+Seat Height : 820 mm / 32.9 in
+Ground Clearance : 150 mm / 5.9 in
+Wet Weight : 263 kg / 580 lbs
+Fuel Capacity : 18.1 Litres / 4.8 US gal

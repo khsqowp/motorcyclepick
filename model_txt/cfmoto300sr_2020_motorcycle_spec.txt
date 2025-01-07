@@ -1,0 +1,30 @@
+Model : CFMoto 300 SR
+Years : 2020
+Engine : Four stroke, single-cylinder, DOHC, 4 valves
+Capacity : 292.4 cc / 17.8 cu-in
+Bore x Stroke : 78 x 61.2 mm
+Compression Ratio : 11.0:1
+Cooling System : Liquid-cooled
+Emission : Euro 4
+Induction : EFIT
+Ignition : ECU
+Starting : Electric
+Max Power : 29 hp / 21.4 kW @ 8,750rpm
+Max Torque : 25.3 Nm / 18.6 lb-ft @ 7,250 rpm
+Clutch : Wet multi plate
+Transmission : 6-speed
+Final Drive : Chain
+Front Suspension : 37mm Hydraulic upside down telescopic forks
+Rear Suspension : Monoshock
+Front Brakes : Single 292mm disc, four-piston caliper
+Rear Brakes : Single 220mm disc, single-piston floating caliper
+ABS System : Continental AG, dual chanel
+Wheels : Aluminium alloy
+Front Tyre : 110/70 R17
+Rear Tyre : 140/60 R17
+Dimensions : Length 2010 mm / 79.0 in Width 750 mm / 29.5 in Height 1080 mm / 42.5 in
+Wheelbase : 1360 mm / 53.5 in
+Seat Height : 780 mm / 30.7 in
+Ground Clearance : 135 mm / 5.3 in
+Wet Weight : 165 kg / 363.7 lbs
+Fuel Capacity : 12 Litres / 3.1 US gal

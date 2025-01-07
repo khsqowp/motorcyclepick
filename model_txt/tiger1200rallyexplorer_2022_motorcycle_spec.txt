@@ -1,0 +1,39 @@
+Model : Tiger 1200 Rally Explorer
+Years : 2022
+Engine : Four stroke, transverse three cylinder, DOHC, 4 valves per cylinder
+Capacity : 1160 cc / 70.7 cub-in
+Bore x Stroke : 90 x 60.7 mm
+Cooling System : Liquid-cooled
+Compression Ratio : 13.2:1
+Exhaust : Stainless steel 3 into 1 header system with underslung primary silencer and side mounted secondary silencer
+Induction : Multipoint sequential electronic fuel injection with electronic throttle control
+Emission : Euro 5
+Ignition : Digital
+Starting : Electric
+Max Power : 148 hp / 110.4 kW @ 9,000 rpm
+Max Torque : 130 Nm / 96 lb-ft @ 7,000 rpm
+Clutch : Hydraulic, wet, multi-plate, slip &amp; assist
+Transmission : 6 Speed
+Final Drive : Shaft
+Frame : Tubular steel frame, with forged aluminium outriggers. Fabricated, bolt-on aluminium rear subframe
+Swingarm : Twin sided "Tri-Link" aluminium swingarm with twin aluminium torque arms
+Front Suspension : Showa 49mm USD forks with semi-active damping
+Front Wheel Travel : 220 mm / 8.6 in
+Rear Suspension : Showa monoshock with semi-active damping and automatic electronic preload adjustment
+Rear Wheel Travel : 220 mm / 8.6 in
+Front Brakes : 2 x 320 mm floating discs, Brembo M4.30 Stylema monoblock radial calipers, Magura HC1 span adjustable radial master cylinder with separate reservoir
+Rear Brakes : Single 282 mm disc, Brembo single piston caliper, rear master cylinder with remote reservoir
+ABS : OC-ABS
+Wheels : Spoked
+Front Wheel : 21 x 2.15
+Rear Wheel : 18 x 4.25
+Front Tyre : Metzeler Karoo Street 90/90-21 (M/C 54V TL)
+Rear Tyre : Metzeler Karoo Street 150/70R18 (M/C 70V TL)
+Rake : 23.7°
+Trail : 112 mm / 4.4 in
+Dimensions : Length: 2296 mm / 90.3 in Width: 849 mm / 33.4 in (with handlebars) Height: 1487  1547 mm / in (adjustable screen)
+Wheelbase : 1560 mm / 61.4 in
+Seat Height : 875-895 mm / 34.4-35.2 in (adjustable)
+Wet Weight : 261 kg / 575.4 lbs
+Fuel Capacity : 30 Litres / 7.9 US gal
+Instuments : Full-colour 7 TFT instrument pack with My Triumph Connectivity System

@@ -1,0 +1,40 @@
+Model : Svartpilen 401
+Years : 2018-19
+Engine : Four stroke, single cylinder, DOHC, 4 valve
+Capacity : 373.2 cc / 22.8 cu-in
+Bore x Stroke : 89 x 60 mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.6:1
+Lubrication : Wet sump
+Induction : Fuel injection
+Ignition : Digital CDI
+Starting : Electric
+Max Power : 43 hp / 32 kW @ 9000 rpm
+Max Torque : 37 Nm / 27.3 lb-ft @ 7000 rpm
+Clutch : PASC&#8482; antihopping clutch, mechanically operated
+Transmission : 6 Speed
+Final Drive : Chain, X-Ring 5/8 x 1/4&#8243;
+Secondary Gear Ratio : 15:45
+Primary Gear Ratio : 30:80
+EMS : Bosch EMS
+Frame : Steel trellis frame, powder coated
+Front Suspension : 43mm WP upside-down forks
+Front Wheel Travel : 142 mm / 5.5 in
+Rear Suspension : WP monoshock
+Rear Wheel Travel : 150 mm / 5.9 in
+Front Brakes : Single 320mm disc, 4 piston floating calliper
+Rear Brakes : Single 230mm disc 1 piston floating calliper
+ABS : Bosch 9M+ two-channel ABS (disengageable)
+Front Wheel : Wire-spoked w/ aluminum rims 3.00 x 17
+Rear Wheel : Wire-spoked w/ aluminum rims 4.00 x 17
+Front Tyre : 110/70 - 17 Pirelli Scorpion Rally STR
+Rear Tyre : 150/60 - 17 Pirelli Scorpion Rally STR
+Steering Head Angle : 65 &#176;
+Rake : 25&#176;
+Triple Clamp Offset : 32 mm / 1.8 in
+Trail : 95 mm / 3.7 in
+Wheelbase : 1357 &#177; 15.5 mm / 53.4 in
+Seat Height : 835 mm / 32.8 in
+Ground Clearance : 170 mm / 6.7 in
+Wet Weight : 150kg / 330.6 lbs
+Fuel Capacity : 9.5 Litres / 2.5 US gal

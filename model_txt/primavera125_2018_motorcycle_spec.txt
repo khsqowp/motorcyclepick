@@ -1,0 +1,36 @@
+Model : Primavera 125
+Years : 2018
+Engine : Four stroke, single cylinder, SOHC, 3 valve
+Capacity : 124.5 cc / 7.6 cub in
+Bore x Stroke : 52 x 58.6 mm mm
+Cooling System : Air cooled, forced
+Compression Ratio : 10.5:1
+Fuel system : Fuel injection
+Exhaust : Catalytic converter
+Emission : Euro 4
+Ignition : Electronic
+Starting : Electric
+Max Power : 7.8 kW / 10.6 hp @ 7700 rpm
+Max Torque : 10.4 Nm / 1.06 kgf-m / 7.7 ft-lbs @ 6500 rpm
+Clutch : Automatic, dry centrifugal with vibration dampers
+Transmission : CVT
+Final Drive : Belt
+Frame : Sheet metal body with welded reinforcements
+Front Suspension : Single arm with coil spring and dual action mono shock absorber
+Front Wheel Travel : 78 mm / 3.1 in.
+Rear Suspension : Hydraulic monoshock
+Rear Wheel Travel : 70 mm / 2.8 in.
+Front Brakes : Stainless steel disc, 200 mm, hydraulically operated
+Rear Brakes : Drum, 140 mm, mechanically operated
+Wheels : Die-cast aluminium alloy
+Front Rim : 2.50 x 12
+Rear Rim : 3.00 x 12
+Front Tyre : 110/70-12
+Rear Tyre : 20/70-12
+Dimensions : Length: 1860 mm / 73.2 in. Width: 735 mm / 28.9 in.
+Wheelbase : 1340 mm / 52.7 in.
+Seat Height : 780 mm / 30.7 in.
+Dry Weight : 115 kg / 254 lbs
+Fuel Capacity : 8 L / 2.1 US gal
+Average Consumption : 3.1 L/100 km / 32 km/l / 75 US mpg
+Top Speed : 64 km/h / 40 mph

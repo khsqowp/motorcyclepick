@@ -1,0 +1,28 @@
+Model : CFMoto 400NK
+Years : 2017-
+Engine : Four stroke, Parallel twin cylinder, DOHC, 4 valve per cylinder with 180&#176; crankshaft, chain camshaft drive and single gear-driven counterbalancer
+Capacity : 400.4 cc / 24.4 cu-in
+Bore x Stroke : 68.4 x 54.5 mm
+Compression Ratio : 11.1:1
+Cooling System : Liquid cooled
+Induction : Electronic Fuel Injection
+Ignition : ECU
+Starting : Electric
+Max Power : 40.9 hp / 29.9 kW @ 9000 rpm
+Max Torque : 34.4 Nm 25.4 lb-ft @ 7650 rpm
+Clutch : Wet multi-plate
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Tubular steel diamond frame employing engine as fully-stressed member
+Front Suspension : 41mm KYB upright telescopic forks.
+Rear Suspension : KYB air-gas mixed, with 7 adjustable sections.
+Front Brakes : 2x 300mm discs, 2 piston caliper
+Rear Brakes : Single 225mm disc, 1 piston caliper
+Front Tyre : 120/70-17
+Rear Tyre : 160/60-17
+Wheelbase : 1415 mm / 55.7 in
+Seat Height : 795 mm / 31.3 in
+Ground Clearance : 150 mm / 5.9 in
+Dry Weight : 193 kg / 425.5 lbs
+Wet Weight : 206 kg / 454.2 lbs
+Fuel Capacity : 17 Litres / 4.4 US gal

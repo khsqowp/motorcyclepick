@@ -1,0 +1,35 @@
+Model : Speed Twin
+Years : 2019
+Engine : Four stoke, parallel twin, 270o crank, SOHC, 4 valve per cylinder
+Capacity : 1198 cc / 73.1 cu in
+Bore x Stroke : 97.6 x 80 mm
+Compression Ratio : 11.0:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Exhaust : Brushed 2-into-2 exhaust system with twin silencers
+Induction : Multipoint sequential electronic fuel injection
+Ignition : Digital
+Starting : Electric
+Max Power : 71.5 kW / 96 hp @ 6750 rpm
+Max Torque : 112.5 Nm / 83 lb-ft @ 4950 rpm
+Clutch : Wet, multi-plate assist clutch
+Transmission : 6-Speed
+Final Drive : Chain, X-ring
+Frame : Tubular steel with aluminum cradle
+Front Suspension : 41mm cartridge forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Twin-sided, aluminum swingarm, twin shocks with adjustable preload
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2 x 305 mm discs, Brembo 4-piston fixed calipers, ABS
+Rear Brakes : Single 220 mm disc, Nissin 2-piston floating caliper, ABS
+Wheels Front : Cast aluminum alloy 7-spoke 17 x 3.5 in
+Wheels Rear : Cast aluminum alloy 7-spoke 17 x 5 in
+Front Tyre : 120/70 ZR17
+Rear Tyre : 160/60 ZR17
+Rake : 22.8o
+Trail : 93.5 mm / 3.6 in
+Dimensions : Width: 760 mm / 29.9 in Height: 1110 mm / 43.7 in
+Wheelbase : 1430 mm / 56.3 in
+Seat Height : 807 mm / 31.8 in
+Dry Weight : 196 kg / 432 lbs
+Fuel Capacity : 14.5 Litres / 3.8 US gal

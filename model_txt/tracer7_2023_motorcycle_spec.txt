@@ -1,0 +1,35 @@
+Model : Tracer 7
+Years : 2023
+Engine : Four stroke, parallel twin, DOHC, 4 valves per cylinder
+Capacity : 689 cc / 42.04 cu-in
+Bore x Stroke : 80 x 68.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5:1
+Lubrication : Wet sump
+Induction : Fuel injection
+Emission : Euro 5
+Ignition : TCI (Transistor Controlled Ignition)
+Starting : Electric
+Max Power : 54 kW / 74.8 hp @ 8750 rpm
+Limited Power Version : 35 kW / 46.9 hp @ 7750 rpm
+Max Torque : 67 Nm / 50.0 lb-ft @ 6500 rpm
+Clutch : Wet, multi plate
+Transmission : Constant Mesh, 6 speed
+Final Drive : Chain
+Frame : Diamond
+Front Suspension : Telescopic forks
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Swinging arm, (link suspension)
+Rear Wheel Travel : 142 mm / 5.59 in
+Front Brakes : 2x 298mm hydraulic discs
+Rear Brakes : Single 245mm hydraulic disc
+Front Tyre : 120/70 ZR 17 M/C (58W)
+Rear Tyre : 180/55 R 17 M/C (73W)
+Caster Angle : 25°
+Trail : 90 mm / 3.5 in
+Dimensions : Length 2140 mm / 84.3 in Width 840 mm / 33.0 in Height 1290 mm / 50.8 in to 1330 mm / 52.3 in
+Wheelbase : 1460 mm / 57.5 in
+Ground Clearance : 140 mm / 5.51 in
+Seat Height : 835 mm / 32.8 in
+Wet Weight : 197 kg / 434 lbs
+Fuel Capacity : 17 Litres / 4.49 US gal

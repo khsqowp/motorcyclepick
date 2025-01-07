@@ -1,0 +1,36 @@
+Model : Speed 400
+Years : 2024
+Engine : Four stroke, DOHC, single cylinder, 4 valves
+Capacity : 398 cc / 24.3 cu-in
+Bore x Stroke : 89.0 x 64.0mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.1:1
+Induction : Bosch ride-by-wire EFI
+Emission : Euro 5
+Starting : Electric
+Max Power : 29.4 kW / 40hp @ 8000 rpm
+Max Torque : 38 Nm / 28 ft-lbs @ 6500 rpm
+Clutch : Wet multiplate with assist and slip functions
+Transmission : 6-Speed
+Final Drive : X-ring chain
+Frame : Hybrid spine/perimeter, tubular steel, bolt-on rear subframe
+Swingarm : Twin-sided, cast aluminium alloy
+Front Suspension : 43mm Showa Big Piston, non-adjustable inverted fork
+Front Wheel Travel : 139.7 mm / 5.5 in
+Rear Suspension : Single shock, fixed damping with the shock adjustable piggy-back reservior
+Rear Wheel Travel : 129.4 mm / 5.1 in
+Front Brakes : Single 300 mm disc with radially mounted 4-piston caliper
+Rear Brakes : Single 230 mm disc with floating caliper
+ABS : Bosch dual channel
+Wheels Front : 17 x 3 in with 10-spoke cast aluminium alloy rims
+Wheels Rear : 17 x 4 in with 10-spoke cast aluminium alloy rims
+Front Tyre : 110/70 x R17
+Rear Tyre : 150/60 x R17
+Rake : 26.6°
+Trail : 101.6 mm / 4 in
+Dimensions : Length: 2056 mm / 80.9 in Width: 795 mm / 31.3 in Height: 1075 mm / 42.3 in
+Wheelbase : 1377 mm / 54.2 in
+Seat Height : 790 mm / 31.1 in
+Wet Weight : 170 kg / 375 lbs
+Fuel Capacity : 13 Litres / 3.43 US gal
+Instruments : Analogue speedometer with integrated multi-function LCD screen

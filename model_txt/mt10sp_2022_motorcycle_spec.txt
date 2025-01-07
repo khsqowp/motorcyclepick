@@ -1,0 +1,35 @@
+Model : MT-10SP
+Years : 2022
+Engine : Four stroke, Transverse four cylinder, DOHC, 4 valves per cylinder
+Capacity : 998 cc / 60.9 cu-in
+Bore x Stroke : 79.0 x 50.9 mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.0:1
+Lubrication : Wet sump
+Oil Capacity : 3.9 Litres
+Induction : Fuel Injection
+Emission : EURO5
+Ignition : Digital TCI
+Starting : Electric
+Max Power : 122.0 kW / 165.8 hp @ 11500 rpm
+Max Torque : 112.0 Nm / 82.6 lb-ft @ 9000 rpm
+Clutch : Wet, Multiple Disc
+Transmission : Constant Mesh, 6-speed
+Final Drive : Chain
+Frame : Diamond
+Front Suspension : 43mm Öhlins electronically controlled suspension, fully adjustable
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Öhlins electronically controlled suspension, fully adjustable
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2x 320 mm hydraulic discs
+Rear Brakes : Single 220 mm hydraulic disc
+Front Tyre : 120/70 ZR17 M/C (58W)
+Rear Tyre : 190/55 ZR17 M/C (75W)
+Rake : 24°
+Trail : 102 mm / 4.0 in
+Dimensions : Length 2100 mm / 82.6 in Width 800 mm / 31.4 in Height 1165 mm / 45.8 in
+Wheelbase : 1405 mm / 55.3 in
+Seat Height : 835 mm / 32.8 in
+Ground Clearance : 135 mm / 5.3 in
+Wet Weight : 214 kg / 472 lbs
+Fuel Capacity : 17 Litres / 4.5 US gal

@@ -1,0 +1,39 @@
+Model : LXP Orioli
+Years : 2024
+Production : 500 Units
+Engine : Four stroke, transverse three cylinder, DOHC with mechanical chain tensioner and DLC tappets, 4 valves per cylinder
+Capacity : 931 cc / 96.8 cu-in
+Bore x Stroke : 81 x 60.2 mm
+Cooling System : Cooling with separated liquid and oil radiators
+Compression Ratio : 13.4:1
+Engine Management System : Integrated ignition ? injection system MVICS 2.1 (Motor &amp; Vehicle Integrated Control System) with three injectors. Engine control unit Eldor Nemo EM 3.0 Throttle body with 47 mm diameter bore, full-ride-by wire Mikuni Pencil-coil with ion-sensing technology, control of detonation and misfire. Torque control with four maps. Traction Control with eight levels of intervention with lean angle sensor and inertial measurement unit (IMU)
+Emission : Euro 5
+Starting : Electric
+Max Power : 125 hp / 90.5 kW @ 10000 rpm
+Max Torque : 102 Nm / 75 lb-ft @ 7000 rpm
+Clutch : Wet multi-disc hydraulic clutch
+Transmission : Cassette style, six speed, constant mesh
+Final Drive : 17/41
+Primary Drive : 21/39
+Gear Ratios : 1st = 13/40, 2nd = 16/35, 3rd = 18/30, 4th = 21/29, 5th = 23/28, 6th = 27/29
+Frame : Double beam frame structure, composed of high-tensile steel pipes and forged components. Bolt on double cradle and rear from Trellis structure, composed of high-tensile steel pipes and forged components
+Front Suspension : 48 mm Sachs ?UPSIDE DOWN? telescopic hydraulic fork with rebound ? compression damping and spring preload external and separate adjustment.
+Front Wheel Travel : 210 mm / 8.3 in
+Rear Suspension : Progressive link, Sachs monoshock with rebound, compression and spring preload adjustable hydraulics.
+Rear Wheel Travel : 210 mm / 8.3 in
+Front Brakes : 2x 320mm floating disc with steel braking disc and flange Front brake radial-type monobloc Brembo Stylema 4-piston calipers
+Rear Brakes : Single 265mm disc with Brembo 2-piston caliper
+ABS : Continental MK100 with RLM (Rear Wheel Lift-up Mitigation) and cornering function.
+Wheels : Spoked
+Front Wheel : Tubeless, with aluminium hub and rim 2.15 x 21
+Rear Wheel : Tubeless, with aluminium hub and rim 4.00 x 18
+Front Tyre : 90/90 ? 21M/C
+Rear Tyre : 150/70 ? B18M/C
+Trail : 118 mm / 4.6 in
+Dimensions : Length: 2360 mm / 92.9 in Width: 980 mm / 38.58 in
+Wheelbase : 1610 mm / 63.4 in
+Ground Clarence : 230 mm / 9.05 in
+Seat Height : 850 - 870 mm / 33.46 - 34.25 in
+Dry Weight : 220 kg / 485 lbs
+Fuel Capacity : 20 Litres / 5.28 US gal
+Electronics : Full HD 7″ TFT Dash ? Bluetooth and Wi-Fi connectivity ? Cruise control ? Launch control ? 8 level Traction Control ? GPS sensor ? Immobilizer ? Full led headlight with DRL and bending function ? Full led tail light ? Fog light ? MV Ride app with turn by turn navigation system, engine and vehicle setup.

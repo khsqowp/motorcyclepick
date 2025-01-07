@@ -1,0 +1,26 @@
+Model : CFMoto ST Papio 125
+Years : 2017-
+Engine : Four stroke, Single cylinder, SOHC, 2 valve.
+Capacity : 124.6 cc / 7.6 cu-in
+Bore x Stroke : 57.0 &#215; 8.8 mm
+Compression Ratio : 9.0:1
+Cooling System : Air cooled
+Induction : Injection. EFI
+Ignition : CDI
+Starting : Electric
+Max Power : 9.3 hp / 6.9 kW @ 8500 rpm
+Max Torque : 8.5 Nm / 6.1 lb-ft @ 6500 rpm
+Clutch : Wet multi-plate
+Transmission : 6 Speed
+Final Drive : Chain
+Front Suspension : Retractable
+Rear Suspension : Cantilever
+Front Brakes : Single 210mm disc
+Rear Brakes : Single 210mm disc
+Front Tyre : 2.75-12
+Rear Tyre : 3.50-12
+Wheelbase : 1214 mm / 47.8 in
+Seat Height : 775 mm / 30.5 in
+Ground Clearance : 145 mm / 5.7 in
+Wet Weight : 114.0 kg / 251.3 lbs
+Fuel Capacity : 7 Litres / 1.85 US gal

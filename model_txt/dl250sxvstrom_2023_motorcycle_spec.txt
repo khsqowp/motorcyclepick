@@ -1,0 +1,27 @@
+Model : DL 250SX V-Strom
+Years : 2023
+Engine : Four stroke, single cylinder, SOHC
+Capacity : 249 cc / 15.2 cu-in
+Bore x Stroke : -
+Cooling System : Air/Oil cooled
+Compression Ratio : -
+Lubrication : -
+Induction : Fuel injection
+Ignition : -
+Starting : Electric
+Max Power : 19.5 kW / 26 hp @ 9300 rpm
+Max Torque : 22.2 Nm / 16.4 lb-ft @ 7300 rpm
+Clutch : -
+Transmission : 6-Speed, constant mesh
+Final Drive : Chain
+Front Suspension : Telescopic, coil spring, oil damped
+Rear Suspension : Swingarm type, coil spring, oil damped, preload adjustable
+Front Brakes : 310 mm Single disc, two piston caliper
+Rear Brakes : 240 mm Single disc
+Front Tyre : 100/90-19M/C 57S, tubeless
+Rear Tyre : 140/70-17M/C 66S, tubeless
+Dimensions : Length: 2180 mm / 85.8 in Width: 880 mm / 34.6 in Height: 1355 mm / 53.3 in
+Wheelbase : 1440 mm / 56.7 in
+Seat Height : 835 mm / 32.9 in
+Wet Weight : 167 kg / 270 lbs
+Fuel Capacity : 12 L / 3.17 US gal

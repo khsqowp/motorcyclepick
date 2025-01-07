@@ -1,0 +1,39 @@
+Model : GSX-S 1000GX
+Years : 2024
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder, TSCC
+Capacity : 999 cc / 60.9 cub-in
+Bore x Stroke : 73.4 x 59.0 mm
+Compression Ratio : 12.2:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Fuel injection with Ride-by-Wire electronic throttle bodies
+Emission : EURO5
+Exhaust : 4-2-1
+Ignition : Electronic ignition (transistorised)
+Starting : Electric
+Max Power : 152 hp / 112 kW @ 11000 rpm
+Max Torque : 106 Nm / 78.2 lb-ft @ 9250 rpm
+Clutch : Wet, multi-plate SCAS type
+Transmission : 6 Speed, constant mesh
+Final Drive : Chain, RK525GSH, 525 x 116 links
+Primary Reduction Ratio : 1.553 (73/47)
+Final Reduction Ratio : 2.588 ( 44/17)
+Frame : Aluminium, twin spar
+Front Suspension : Inverted telescopic, coil spring, oil damped
+Front Wheel Travel : 150 mm / 5.9 in
+Rear Suspension : Link type, coil spring, oil damped
+Rear Wheel Travel : 150 mm / 5.9 in
+Front Brakes : 2 x 310mm floating discs with Brembo monoblock 4-piston calipers
+Rear Brakes : Single 240 mm disc with Nissin single-piston caliper
+ABS : Standard
+Wheels : 6-spoke cast aluminum
+Front Tyre : 120/70ZR17M/C (58W) tubeless
+Rear Tyre : 190/50ZR17M/C (73W) tubeless
+Rake : 25.5?
+Trail : 97 mm / 3.8 in
+Dimensions : Length 2150 mm / 84. 6 in Width 925 mm / 36.4 in Height 1350 mm / 53.1 in
+Wheelbase : 1470 mm / 57.9 in
+Seat Height : 845 mm / 33.3 in
+Ground clearance : 155 mm / 6.1 in
+Wet Weight : 232 kg / 511 lbs
+Fuel Capacity : 19 Litres / 5 US gal

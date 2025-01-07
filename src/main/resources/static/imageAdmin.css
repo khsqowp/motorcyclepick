@@ -1,0 +1,243 @@
+:root {
+    --razer-green: #00ff00;
+    --razer-dark: #111111;
+    --razer-gray: #222222;
+    --razer-light-gray: #333333;
+    --terminal-font: 'Consolas', 'Monaco', monospace;
+}
+
+body {
+    background-color: var(--razer-dark);
+    color: var(--razer-green);
+    font-family: var(--terminal-font);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+.section-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--razer-green);
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    position: relative;
+}
+
+/* 타이틀과 버튼을 포함하는 영역에 대한 스타일 수정 */
+.section-title {
+    display: inline-block; /* inline-block으로 변경 */
+    margin-right: 20px; /* 버튼과의 간격 */
+}
+
+.back-button {
+    float: right; /* 오른쪽 정렬 */
+    background-color: transparent;
+    color: var(--razer-green);
+    border: 1px solid var(--razer-green);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: var(--terminal-font);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin-top: 20px; /* 타이틀과 같은 높이로 조정 */
+}
+
+.back-button::before {
+    content: "< ";
+    opacity: 0.7;
+}
+
+.back-button:hover {
+    background-color: var(--razer-green);
+    color: var(--razer-dark);
+    box-shadow: 0 0 15px var(--razer-green);
+    text-decoration: none;
+}
+
+.image-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--razer-green);
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    position: relative;
+}
+
+.section-container::before {
+    content: "IMAGE ADMIN CONSOLE v1.0.0";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: var(--razer-dark);
+    padding: 0 10px;
+    color: var(--razer-green);
+    font-size: 12px;
+}
+
+.section-title {
+    color: var(--razer-green);
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--razer-green);
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.section-title::before {
+    content: "> ";
+    color: var(--razer-green);
+    opacity: 0.7;
+}
+
+.section-title::after {
+    content: "_";
+    display: inline-block;
+    animation: blink 1s infinite;
+    color: var(--razer-green);
+}
+
+.image-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 15px 0;
+    border: 1px solid var(--razer-green);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.image-preview {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid var(--razer-green);
+    transition: all 0.3s ease;
+}
+
+.image-preview:hover {
+    box-shadow: 0 0 15px var(--razer-green);
+    transform: scale(1.05);
+}
+
+.image-info {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.image-info p {
+    margin: 5px 0;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: transparent;
+    color: var(--razer-green);
+    border: 1px solid var(--razer-green);
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: var(--terminal-font);
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.btn::before {
+    content: "$ ";
+    opacity: 0.7;
+}
+
+.btn:hover {
+    background-color: var(--razer-green);
+    color: var(--razer-dark);
+    box-shadow: 0 0 15px var(--razer-green);
+}
+
+.btn-secondary {
+    border-color: #666;
+    color: #888;
+}
+
+.btn-secondary:hover {
+    background-color: #666;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.message {
+    text-align: center;
+    padding: 20px;
+    color: var(--razer-green);
+    border: 1px solid var(--razer-green);
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: var(--razer-dark);
+    padding: 20px;
+    border: 1px solid var(--razer-green);
+    border-radius: 8px;
+    box-shadow: 0 0 30px var(--razer-green);
+}
+
+.popup-image {
+    max-width: 100%;
+    max-height: calc(90vh - 40px);
+    object-fit: contain;
+}
+
+.close-button {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--razer-dark);
+    border: 1px solid var(--razer-green);
+    color: var(--razer-green);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--razer-green);
+}
+
+.close-button:hover {
+    background-color: var(--razer-green);
+    color: var(--razer-dark);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

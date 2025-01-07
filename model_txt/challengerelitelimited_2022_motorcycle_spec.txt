@@ -1,0 +1,44 @@
+Model : Challenger Elite Limited
+Years : 2022
+Units : 200
+Engine : Four stroke, PowerPlus, 60° V-twin, SOHC, 4 valve per cylinder
+Capacity : 1768 cc / 108 cu-in
+Bore x Stroke : 108 x 96.5 mm
+Compression Ratio : 11.0:1
+Cooling System : Liquid cooled
+Exhaust : Split dual exhaust with resonator
+Lubrication : Semi-dry sump
+Induction : EFI with 52mm dual-bore throttle bodies
+Ignition : Electronic
+Battery : 12V 18AH
+Charging Output : 803 watts max.
+Starting : Electric
+Max Power : 122 hp / 90 kW @ 5500 rpm
+Max Torque : 173.5 Nm / 128 lb-ft @ 3800 rpm
+Clutch : Wet, multi-plate, assist
+Transmission : 6 Speed with overdrive
+Final Drive : Belt
+Gear Ratio : 1st 10.169:1 2nd 6.933:1 3rd 5.151:1 4th 4.105:1 5th 3.508:1 6th 3.017:1
+Final Drive Ratio : 2.379:1
+Frame : Cast aluminum
+Front Suspension : 43mm Inverted telescopic fork
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Fox Single Shock with electronically controlled hydraulically adjust
+Rear Wheel Travel : 114 mm / 4.5 in
+Front Brakes : 2x 320mm floating rotor discs, with radially mounted Brembo 4 piston caliper
+Rear Brakes : Single 298mm floating rotor disc, 2 piston caliper
+ABS System : Standard
+Wheels : Sport Contrast Cut with Indian Red Pin Stripe
+Front Wheel : 19 x 3.5
+Rear Wheel : 16 x 5.0
+Front Tyre : 130/60B19 66H
+Rear Tyre : 180/60R16 80H
+Rake : 25°
+Trail : 150 mm / 5.9 in
+Dimensions : Length: 2501 mm / 98.5 in Width: 990 mm / 39.0 in Height: 1428.5 mm / 56.2 in
+Wheelbase : 1668 mm / 65.7 in
+Seat Height : 672 mm / 26.5 in
+Ground Clearance : 137.3 mm / 5.4 in
+Dry Weight : 365 kg / 804 lbs
+Wet Weight : 381 kg / 839 lbs
+Fuel Capacity : 22.7 Litres / 6 US gal

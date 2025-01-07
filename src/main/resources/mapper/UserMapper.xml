@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.motorcycle.repository.UserMapper">
+
+    <resultMap id="UserResultMap" type="com.example.motorcycle.domain.UserDomain">
+        <id property="id" column="id"/>
+        <result property="password" column="password"/>
+        <result property="phoneNumber" column="phone_number"/>
+        <result property="instagram" column="instagram"/>
+        <result property="username" column="username"/>
+        <result property="email" column="email"/>
+        <result property="role" column="role"/>
+    </resultMap>
+
+    <select id="findById" resultMap="UserResultMap">
+        SELECT *
+        FROM User
+        WHERE id = #{id}
+    </select>
+
+    <select id="findAll" resultMap="UserResultMap">
+        SELECT id, username, email, phone_number, instagram, role
+        FROM User
+        ORDER BY id ASC
+    </select>
+
+    <insert id="insertUser" parameterType="com.example.motorcycle.domain.UserDomain">
+        INSERT INTO User (id, password, phone_number, instagram, username, email, role)
+        VALUES (#{id}, #{password}, #{phoneNumber}, #{instagram}, #{username}, #{email}, #{role})
+    </insert>
+    <update id="updateUser" parameterType="com.example.motorcycle.domain.UserDomain">
+        UPDATE User
+        SET password     = #{password},
+            email        = #{email},
+            phone_number = #{phoneNumber},
+            instagram    = #{instagram},
+            username     = #{username},
+            role         = CASE #{role}
+                               WHEN 'ROLE_USER' THEN 'ROLE_USER'
+                               WHEN 'ROLE_MODERATOR' THEN 'ROLE_MODERATOR'
+                               WHEN 'ROLE_ADMIN' THEN 'ROLE_ADMIN'
+                               ELSE 'ROLE_USER'
+                END
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="string">
+        DELETE
+        FROM User
+        WHERE id = #{id}
+    </delete>
+
+</mapper>

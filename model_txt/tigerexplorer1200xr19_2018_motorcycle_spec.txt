@@ -1,0 +1,35 @@
+Model : Tiger Explorer 1200 XR
+Years : 2018-2019
+Engine : Four stroke, transverse three cylinder. DOHC, 4 valves per cylinder
+Capacity : 1215 cc / 74.1 cub in
+Bore x Stroke : 85 x 71.4mm
+Cooling System : Liquid-cooled
+Compression Ratio : 11.0:1
+Induction : Ride by wire, fuel injection
+Ignition : Digital
+Starting : Electric
+Exhaust : Stainless steel 3 into 1 header system, side mounted stainless steel silencer
+Oil Capacity : 4.0 Litres / 1.1 US gals / 0.88 Imp gal
+Max Power : 101 kW / 137 hp / 139 PS @ 9300rpm
+Max Torque : 123 Nm / 12.5 kgf-m / 90.7 lb-ft / @ 6200 rpm
+Clutch : Wet, multi-plate
+Transmission : 6 Speed
+Final Drive : Shaft
+Frame : Tubular steel trellis frame, swingarm single-sided, cast aluminium alloy with shaft drive
+Front Suspension : WP 48 mm upside down forks, adjustable rebound and compression damping
+Front Wheel Travel : 190 mm / 7.5 in
+Rear Suspension : WP monoshock with remote oil reservoir, hydraulically adjustable preload, rebound damping adjustment
+Rear Wheel Travel : 193 mm / 7.6 in
+Front Brakes : 2 x 305 mm Floating discs, radially mounted monobloc Brembo 4-piston calipers, switchable ABS
+Rear Brakes : Single 282 mm disc, Nissin 2-piston sliding caliper, switchable ABS
+Front Wheel : 10-Spoke, cast aluminium alloy, 19 x 3.0 in
+Rear Wheel : 10-Spoke, casr aluminium alloy, 17 x 4.5 in
+Front Tyre : 120/70 R19
+Rear Tyre : 170/60 R17
+Rake : 23.1&#186;
+Trail : 99.2 mm / 3.9 in
+Dimensions : Width 830 mm / 32.7 in (with handlebars) Height 1400 mm / 55.1 in (without mirrors)
+Wheelbase : 1520 mm / 59.8 in
+Seat Height : 837 - 857 mm / 32.9 - 33.7 in
+Dry Weight : 242 kg / 533 lbs
+Fuel Capacity : 20 Litres / 5.3 US gal / 4.4 Imp gal

@@ -1,0 +1,26 @@
+Model : CFMoto 1250TR-G
+Years : 2021
+Engine : Four stroke, 75&#176; V-twin cylinder, DOHC, 4 valves per cylinder
+Capacity : 1279 cc / 78 cu in
+Bore x Stroke : 108 x 69.8 mm
+Compression Ratio : 12.5:1
+Cooling System : Liquid cooling
+Induction : Bosch EFI
+Ignition : Electronic
+Starting : Electric
+Max Power : 105kW / 140hp @ 8500 rpm
+Max Torque : 120Nm / 88.5 lb-ft @ 7000rpm
+Clutch : Wet, slipper
+Transmission : 6-speed
+Final Drive : Chain
+Frame : Tubular-steel diamond frame employing engine as stressed member
+Front Suspension : Semi-active WP fork with electronically adjustable damping
+Rear Suspension : Semi-active WP monoshock, with electronically adjustable preload and damping
+Front Brakes : 2x 320mm floating discs with four-piston Brembo calipers, Bosch cornering ABS and traction control
+Rear Brakes : 240 mm Single disc, twin-piston caliper, Bosch cornering ABS and traction control
+Front Tyre : 120/70 ZR17
+Rear Tyre : 190/55 ZR17
+Wheelbase : 1482 mm / 58.3 in
+Seat Height : 820 mm / 32.2 in
+Dry Weight : 300 kg / 661.3 lbs
+Fuel Capacity : 22.7 Litres / 6 US gal

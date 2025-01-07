@@ -1,0 +1,23 @@
+Model : Kymco AK 550
+Years : 2018
+Engine : Four stroke, parallel twin cylinder, DOHC, 4 Valve per cylinder
+Capacity : 550.4 cc / 33.5 cu-in
+Cooling System : Liquid Cooled
+Induction : ECU
+Starting : Electric
+Max Power : 52.7 hp / 39.3 kW @ 7500 rpm
+Max Torque : 55.6 Nm / 41 lb-ft @ 5500 rpm
+Clutch : Wet Clutch
+Transmission : CVT Automatic
+Front Suspension : 41mm Inverted fork
+Rear Suspension : Horizontal Trailing Arm
+Front Brakes : 2x 270mm Brembo floating disks
+Rear Brakes : Single 260mm disc
+ABS : Bosch 9.1 ABS front &amp; rear
+Front Tyre : 120/70 &#8211;R15
+Rear Tyre : 160/60 &#8211;R15
+Dimensions : Length: 2165 mm / 85.2 in Width: 795 mm / 31.3 in Height: 1400 mm / 55.1 in
+Wheelbase : 1580 mm / 62.2 in
+Seat Height : 785 mm / 30.9 in
+Dry Weight : 226 kg / 498.2 lbs
+Fuel Capacity : 15 Litres / 4 US gal

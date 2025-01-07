@@ -1,0 +1,35 @@
+Model : Primavera 50 Sean Wotherspoon
+Years : 2020
+Engine : Four stroke, single cylinder, SOHC, 4 valve, catalytic converter
+Capacity : 49 cc / 3 cub in
+Bore x Stroke : 39 x 41.8 mm
+Cooling System : Air cooled, forced
+Compression Ratio : 10.5:1
+Fuel system : Fuel injection
+Emission : Euro 4
+Ignition : Electronic
+Starting : Electric
+Max Power : 3.0 kW / 4.1 hp
+Max Torque : 3.5 Nm / 0.36 kgf-m / 2.6 ft-lbs
+Clutch : Automatic, dry centrifugal with vibration dampers
+Transmission : CVT
+Final Drive : Belt
+Frame : Sheet metal body with welded reinforcements
+Front Suspension : Single arm with coil spring and dual action mono shock absorber
+Front Wheel Travel : 78 mm / 3.1 in
+Rear Suspension : Hydraulic monoshock
+Rear Wheel Travel : 70 mm / 2.8 in
+Front Brakes : Stainless steel disc, 200 mm, hydraulically operated
+Rear Brakes : Drum, 140 mm, mechanically operated
+Wheels : Die-cast aluminium alloy
+Front Rim : 2.50 x 11 in
+Rear Rim : 3.00 x 11 in
+Front Tyre : 110/70-12 tubeless
+Rear Tyre : 20/70-12, tubeless
+Dimensions : Length: 1860 mm / 73.2 in Width: 735 mm / 28.9 in
+Wheelbase : 1340 mm / 52.7 in
+Seat Height : 780 mm / 30.7 in
+Dry Weight : 115 kg / 254 lbs
+Fuel Capacity : 7 L / 1.8 US gal
+Average Consumption : 3.1 L/100 km / 32 km/l / 75 US mpg
+Top Speed : 64 km/h / 40 mph

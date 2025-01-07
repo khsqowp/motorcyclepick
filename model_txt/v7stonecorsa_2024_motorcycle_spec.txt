@@ -1,0 +1,33 @@
+Model : V7 Stone Corsa
+Years : 2024
+Engine : Four stroke, 90? V-twin, longitudinally mounted, OHV, 2 valves per cylinder with light alloy pushrods and rockers
+Capacity : 853 cc / 52.0 cu-in
+Bore x Stroke : 84 x 77 mm
+Cooling System : Air/oil cooled
+Emission : Euro 5
+Induction : Weber Marelli electronic injection
+Ignition : Electronic
+Starting : Electric
+Max Power : 65 hp / 47.8 kW @ 6800 rpm
+Max Power A2 License : 47 hp / 35 kW @ 6800 rpm
+Max Torque : 73 Nm / 54 lb-ft @ 5000 rpm
+Clutch : Dry single disc
+Transmission : 6 Speed
+Final Drive : Shaft
+Frame : Tubular steel
+Front Suspension : 40mm Telescopic forks, non-adjustable
+Rear Suspension : Swingarm Twin-sided with two spring preload adjustable KYB shock absorbers
+Front Brakes : Single 320mm floating disc, Brembo caliper with 4 differentiated and opposed pistons
+Rear Brakes : Single 260mm disc, floating 2 piston caliper
+ABS : Standard double channel ABS
+Wheels : Lightweight alloy
+Front Tyre : 100/90-18
+Rear Tyre : 150/70-17
+Rake : 28?
+Trail : 104 mm / 4.1 in
+Wheelbase : 1450 mm / 57.1 in
+Seat Height : 780 mm / 30.7 in
+Ground Clearance : 150 mm / 5.9 in
+Dry Weight : 198 kg / 436.5 lbs
+Wet Weight : 218 kg / 480.6 lbs
+Fuel Capacity : 21 Litres / 5.5 US gal

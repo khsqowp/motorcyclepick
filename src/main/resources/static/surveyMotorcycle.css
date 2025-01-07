@@ -1,0 +1,226 @@
+/* 배경 그라데이션 */
+.bg-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%);
+    z-index: -1;
+}
+
+/* 네비게이션 바 스타일 */
+.nav-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 메인 컨테이너 스타일 */
+.main-container {
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+}
+
+/* 프로그레스 섹션 스타일 */
+.progress-section {
+    margin-bottom: 2rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+#progress {
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* 질문 스타일 */
+.question {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.question.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.question h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+}
+
+/* 입력 그룹 스타일 */
+.input-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 1.1rem;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: white;
+}
+
+.input-group span {
+    color: white;
+}
+
+/* 옵션 컨테이너 스타일 */
+.option-container {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.option-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 1rem;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+/* 다중 선택 스타일 */
+.multiple-select {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.select-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.select-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+.select-item.selected {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+}
+
+/* 버튼 스타일 */
+.cta-button {
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    background: #f0f0f0;
+}
+
+/* 에러 메시지 스타일 */
+.error {
+    color: #ff4444;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+/* 최종 제출 버튼 스타일 */
+#finalSubmitBtn {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto 0;
+    display: none;
+}

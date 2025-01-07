@@ -1,0 +1,33 @@
+Model : XSR 900
+Years : 2020
+Engine : Four stroke, Transverse trree cylinder, DOHC, 12-valve
+Capacity : 847 cc / 51.6 cu-in
+Bore x Stroke : 78.0 x 59.1mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5 : 1
+Oil Capacity : 2.7 Litres
+Induction : Yamaha Fuel Injection with YCC-T
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : 113 hp / 84.2 kW @ 10000 rpm
+Max Torque : 87.4 Nm / 64.5 lb-ft @ 8500 rpm
+Clutch : Wet, Multiple Disc
+Transmission : 6-speed; multiplate assist-and-slipper wet clutch
+Final Drive : Chain
+Frame : Diamond
+Front Suspension : 41mm inverted fork, adjustable rebound and spring preload
+Front Wheel Travel : 137 mm / 5.3 in
+Rear Suspension : Single shock absorber, adjustable rebound and spring preload
+Rear Wheel Travel : 130 mm // 5.1 in
+Front Brakes : 2x 298mm Hydraulic discs 4 piston caliper
+Rear Brakes : Single 245mm Hydraulic disc 2 poston caliper
+Front Tyre : 120/70 ZR17
+Rear Tyre : 180/55 ZR17
+Rake : 25&#176;
+Trail : 103 mm / 4.06 in
+Dimensions : Length 2075 mm / 81.7 in Width 815 mm / 32.1 in Height 1140 mm / 44.9 in
+Wheelbase : 1440 mm /
+Seat Height : 830 mm / 32.6 in
+Ground Clearance : 135 mm / 5.3 in
+Wet Weight : 195 kg / 430 lbs
+Fuel Capacity : 14 Litres / 3.7 US gal

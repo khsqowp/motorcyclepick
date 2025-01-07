@@ -1,0 +1,36 @@
+Model : YZF-R 3 Monster Moto GP Replica
+Years : 2021
+Engine : Four stroke, parallel twin cylinder, DUHC, 4 valve per cylinder
+Capacity : 321 cc / 19.5 cu-in
+Bore x Stroke : 68.0 x 44.1mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Induction : Electronic Fuel Injection, 32 mm throttle body
+Emission : EURO5
+Lubrication : Wet sump
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : 30.9 kW 41.4 hp @ 10750 rpm
+Max Torque : 29.6 Nm / 3.0 kg-m @ 9000 rpm
+Clutch : Wet, multiple-disc coil spring
+Transmission : Constant Mesh, 6-speed
+Final Drive : &#8220;O&#8221; ring chain
+Frame : Delta box
+Front Suspension : 37 mm USD Inverted telescopic fork
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Monocross single Kayaba shock, adjustable preload
+Rear Wheel Travel : 125mm / 4.9 in
+Front Brakes : Single 298mm disc 2 piston caliper
+Rear Brakes : Single 220mm disc 1 piston caliper
+ABS : Standard
+Wheels : 10-spoke cast aluminum wheels
+Front Tyre : 110/70-17M/C 54H
+Rear Tyre : 140/70-17M/C 66H
+Caster : 25&#176;
+Trail : 93.9 mm / 3.7 in
+Dimension : Length 2090 mm / 82.3 in Width 729 mm / 28.7 in Height 1140 mm / 44.9 in
+Wheelbase : 1379.2 mm / 54.3 in
+Seat Height : 780 mm / 30.7 in
+Ground Clearance : 160 mm / 6.2 in
+Wet Weight : 170 kg / 374.7 lbs ABS
+Fuel Capacity : 14 Litres / 3.7 US gal

@@ -1,0 +1,36 @@
+Model : Tiger 800 XRx
+Years : 2019
+Engine : Four stroke, transverse three cylinder, DOHC, 4 valve per cylinder.
+Capacity : 799 cc / 48.7 cub in
+Bore x Stroke : 74 x 61.9 mm
+Compression Ratio : 11.3:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Oil Capacity : 3.7 L / 0.98 US gal / 0.81 Imp gal
+Induction : Multipoint sequential electronic fuel injection
+Ignition : Digital CDI
+Starting : Electric
+Exhaust : Stainless steel 3 into 1 header system, side mounted stainless steel silencer
+Clutch : Wet, multi-plate
+Max Power : 70.8 KW / 95 hp @ 9250 rpm
+Max Torque : 79 Nm / 8.1 kgf-m / 58 ft.lb @ 7950 rpm
+Transmission : 6 Speed
+Final Drive : Chain, O-ring
+Frame : Tubular steel trellis frame, swingarm: twin-sided, cast aluminum alloy
+Front Suspension : Showa 43mm upside down forks
+Front Wheel Travel : 180 mm / 7.1 in
+Rear Suspension : Showa monoshock with hydraulically adjustable preload
+Rear Wheel Travel : 170 mm / 6.7 in
+Front Brakes : 2 x 308 mm floating discs, Nissin 2-piston sliding caliper, switchable ABS
+Rear Brakes : Single 255 mm disc, Nissin single-piston sliding caliper, switchable ABS
+Front Wheel : Cast aluminium, 10-spoke, 19 x 2.50
+Rear Wheel : Cast aluminium, 10-spoke, 17 x 4.25
+Front Tyre : 100/90-19
+Rear Tyre : 150/70 R17
+Rake : 23.9&#176;
+Trail : 92.4 mm / 3.64 in
+Dimensions : Length 2215 mm / 87.1in Width 795 mm / 31.3 in (with handlebars) Height 1350 mm / 53.1 in (without mirrors)
+Wheelbase : 1530 mm / 60.2 in
+Seat Height : 810 mm - 830 mm / 31.8 in- 32.6 in adjustable
+Dry Weight : 199 kg / 438.7 lbs
+Fuel Capacity : 19 Litres / 5.0 US gal / 4.2 Imp gal

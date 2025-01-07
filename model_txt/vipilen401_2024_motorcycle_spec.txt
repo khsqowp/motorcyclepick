@@ -1,0 +1,41 @@
+Model : Vipilen 401
+Years : 2024
+Engine : Four stroke, single cylinder, DOHC with cam levers, 4 valves
+Capacity : 398.6 cc / 24.3 cu in
+Bore x Stroke : 89 x 64 mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.6:1
+Lubrication : Wet sump with 2 oil pumps
+Exhaust : Stainless steel / Aluminium silencer with regulated catalytic converter
+Emission : EURO 5+
+Induction : Dell' Orto EFI (46mm throttle body)
+Engine Management : Bosch EMS with RBW
+Starting : Electric, 12V 8Ah
+Max Power : 33 kW / 45 hp @ 8500 rpm
+Max Torque : 39 Nm / 28.8 lb-ft @ 7000 rpm
+Clutch : Multi disc PASC slipper clutch
+Transmission : 6 Speed
+Primary Drive Ratio : 33:86
+Final Drive Ratio : 14:43
+Final Drive : Chain, X-Ring 520
+Frame : Steel trellis frame, powder coated
+Front Suspension : 43mm WP APEX upside-down forks, with compression rebound adjustability
+Front Wheel Travel : 150 mm / 5.9 in
+Rear Suspension : WP APEX monoshock with preload and rebound adjustability
+Rear Wheel Travel : 150 mm / 5.9 in
+Front Brakes : Single 320mm disc, ByBre opposed 4 piston caliper
+Rear Brakes : Single 240mm disc, ByBre, twon piston, floating caliper
+ABS : Two channel Bosch 9.31MP (cornering ABS and Supermoto Mode, disengageable
+Wheels : Cast aluminium
+Front Wheel : 3.00 x 17
+Rear Wheel : 4.00 x 17
+Front Tyre : 110/70-R17 Michelin Power 6
+Rear Tyre : 150/60-R17 Michelin Power 6
+Steering Head Angle : 66?
+Triple Clamp Offset : 32 mm / 1.8 in
+Trail : 95 mm / 3.7 in
+Wheelbase : 1368 ? 15.5 mm / 53.8 ?0.6 in
+Seat Height : 820 mm / 32.3 in
+Ground Clearance : 180 mm / 7.1 in
+Dry Weight : 154.5 kg / 340.6 lbs
+Fuel Capacity : 13 Litres / 3.4 US gal

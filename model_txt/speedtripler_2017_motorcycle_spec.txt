@@ -1,0 +1,32 @@
+Model : Speed Triple R
+Years : 2017
+Engine : Four stroke, transverse three cylinder. DOHC, 4 valves per cylinder
+Capacity : 1050 cc / 64.1 cu in
+Bore x Stroke : 79 x 71.4 mm
+Cooling System : Liquid cooled
+Induction : Multipoint sequential electronic fuel injection with SAI
+Exhaust : Stainless Steel 3 into 1 into 2, twin high level stainless steel silencers
+Ignition : Electronic
+Starting : Electric
+Max Power : 104 kW / 140 hp @ 9500 rpm
+Max Torque : 111.9 Nm / 11.4 kgf-m / 82.6 ft-lb @ 7850 rpm
+Clutch : Wet, multi-plate slip assist cltuch
+Transmission : 6-Speed
+Frame : Aluminium beam twin-spar, single-sided swingarm, aluminium alloy with eccentric chain adjuster
+Front Suspension : 43mm &#214;hlins NIX30 fully adjustable USD front forks with adjustable preload, rebound and compression damping
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : &#214;hlins TTX36 RSU twin tube monoshock with adjustable preload, rebound and compression damping
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 320mm floating discs, Brembo 4-piston Monobloc radial calipers, switchable ABS
+Rear Brakes : Single 255 mm disc, Nissin 2 piston sliding caliper, ABS
+Front Wheel : Cast aluminium alloy multi-spoke 17 x 3.5 in
+Front Tyre : 120/70 ZR17
+Rear Wheel : Cast aluminium alloy multi-spoke 17 x 6.0 in
+Rear Tyre : 190/55 ZR17
+Rake : 22.9&#186;
+Trail : 91.3 mm / 3.6 in
+Dimensions : Width: 780 mm / 30.7 in Height: 1070 mm / 42.1 in
+Wheelbase : 1445 mm / 56.9 in
+Seat Height : 825.5 mm / 32.5 in
+Dry Weight : 192 kg / 423 lbs
+Fuel Capacity : 15.5 Litres / 4.1 US gal / 3.4 Imp gal

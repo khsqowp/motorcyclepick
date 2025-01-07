@@ -1,0 +1,44 @@
+Model : 701 Enduro
+Years : 2018-19
+Engine : Four stroke, single cylinder, SOHC, 4 valves
+Capacity : 692.7 cc / 42.27 cu in
+Bore x Stroke : 105 x 80 mm
+Compression Ratio : 12.7:1
+Cooling System : Liquid cooling
+Lubrication : Pressure lubrication with 2 oil pumps
+Engine Oil : Bel Ray, SAE 10W-50
+Exhaust : Stainless steel silencer with regulated catalytic converter
+Engine Management : Keihin EMS with Ride By Wire
+Induction : Keihin EMS with RBW
+Ignition : Double ignition
+Starting : Electric
+Battery : 12V 8.6Ah
+Max Power : 55 kW / 74 hp @ 8000 rpm
+Max Torque : 71 Nm / 7.24 kgf-m / 52.4 ft-lb @ 6750 rpm
+Clutch : APTC slipper clutch, hydraulically operated
+Transmission : 6 Speed
+Final Drive : Chain X-Ring 5/8 x 1/4"
+Primary Drive Ratio : 36:79
+Final Drive Ratio : 15:45
+Frame : Chromium-Molybdenum-Steel trellis frame, powder coated, Subframe self-supporting polyamide tank
+Handlebar : Aluminium, tapered, 28/22 mm
+Front Suspension : 48mm WP-USD split function fork
+Front Wheel Travel : 275 mm / 10.8 in
+Rear Suspension : WP-Monoshock with Pro-Lever linkage
+Rear Wheel Travel : 275 mm / 10.8 in
+Front Brakes : Single 300 mm disc, Brembo floating caliper, 2 piston
+Rear Brakes : Single 240 mm disc, Brembo single piston, floating caliper
+ABS : ABS Bosch 9M+ Two Channel (disengageable, supermoto mode)
+Front Wheel : Spoked wheels with aluminium tubeless rims 1.85 x 21"
+Rear Wheel : Spoked wheels with aluminium tubeless rims 2.50 x 18"
+Front Tyre : 90/90 - 21
+Rear Tyre : 140/80 - 18
+Steering Head Angle : 63&#176;
+Triple Clamp Offset : 35 - 33 mm /
+Trail : 112 mm / 4.4 in
+Wheelbase : 1504 mm / 59.2 in
+Seat Height : 910 mm / 35.8 in
+Ground Clearance : 280 mm / 11.0 in
+Dry Weight : 145 kg / 319.6 lbs
+Fuel Capacity : 13 Litres / 3.4 US gal / 2.9 Imp gal
+Reserve : 2.5 Litres / 0.66 US gal / 0.55 Imp gal

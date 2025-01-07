@@ -1,0 +1,36 @@
+Model : MT-125
+Years : 2020
+Engine : Four stroke, single cylinder, SOHC, 4-valves with Variable Valve Actuation
+Capacity : 124.7 cc / 7.6 cub in.
+Bore x Stroke : 52 x 58.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Lubrication : Wet sump
+Oil Capacity : 1.15 L / 0.3 US gal
+Exhaust : Single, stainless steel
+Induction : Electronic fuel injection
+Ignition : TCI (digital)
+Starting : Electric
+Max Power : 11 kW / 15 hp @ 9000 rpm
+Max Torque : 11.5 Nm / ft-lb @ 8000 rpm
+Clutch : Wet, multi-disc, coil spring
+Transmission : 6-Speed, constant mesh
+Final Drive : Chain
+Frame : Steel Deltabox
+Front Suspension : 41mm Upside-down telescopic fork
+Front Wheel Travel : 130 mm / 5.1 in.
+Rear Suspension : Linked monoshock with spring preload adjustment
+Rear Wheel Travel : 114 mm / 4.5 in.
+Front Brakes : Hydraulic, single disc, 292 mm dia.
+Rear Brakes : Hydraulic, single disc, 230 mm dia.
+ABS : 2-Channel
+Front Tyre : 100/80-17 M/C 52S
+Rear Tyre : 140/70-17 M/C 66S
+Caster : 25&#176;
+Trail : 89 mm / 3.5 in.
+Dimensions : Length 1960 mm / 77.1 in Width 800 mm / 31.4 in Height 1065 mm / 41.9 in
+Wheelbase : 1325 mm / 52.1 in
+Ground Clearance : 140 mm / 5.5 in
+Seat Height : 810 mm / 31.9 in
+Wet Weight : 140 kg / 308.6 lbs
+Fuel Capacity : 10 Litres / 2.6 US gal

@@ -1,0 +1,38 @@
+Model : GSX-S 950
+Years : 2021
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder, TSCC
+Capacity : 998.6 cc / 60.9 cub-in
+Bore x Stroke : 73.4 x 59.0 mm
+Compression Ratio : 12.2:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Fuel Injection
+Emission : Euro 5
+Ignition : Electronic ignition (transistorised)
+Starting : Electric
+Max Power : 94 hp / 70 kW @ 7800 rpm
+Max Torque : 92 Nm / 67.8 lb-ft @ 6500 rpm
+Clutch : Wet multiplate with assist-and-slip functions
+Transmission : 6 Speed, constant mesh
+Final Drive : 525 RK chain
+Primary Reduction Ratio : 1.553 (73/47)
+Final Reduction Ratio : 2.588 ( 44/17)
+Frame : Aluminium, twin spar
+Front Suspension : 43mm KYB Inverted telescopic, coil spring, oil damped
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Linkage-assisted spring-preload and rebound-damping adjustable KYB shock
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2 x 310mm floating discs with Tokico 4-piston calipers
+Rear Brakes : Single 240mm disc with Nissin single-piston caliper
+ABS : Standard
+Wheels : TRP 6-spoke cast aluminum
+Front Tyre : 120/70ZR17M/C (58W) tubeless
+Rear Tyre : 190/50ZR17M/C (73W) tubeless
+Rake : 25.0&#176;
+Trail : 100 mm / 3.9 in
+Dimensions : Length 2115 mm / 83. 2 in Width 810 mm / 31.9 in Height 1080 mm / 42.5 in
+Wheelbase : 1460 mm / 57.5 in
+Seat Height : 810 mm / 31.9 in
+Ground clearance : 140 mm / 5.5 in
+Wet Weight : 214 kg / 472 lbs
+Fuel Capacity : 19 Litres / 5.0 US gal

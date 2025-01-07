@@ -1,0 +1,30 @@
+Model : Bonneville Speedmaster
+Years : 2019
+Engine : Four stoke, parallel twin, 270o crank, SOHC
+Capacity : 1198 cc / 73.1 cu in
+Bore x Stroke : 97.6 x 80 mm
+Compression Ratio : 10.0:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Exhaust : Straight line stainless steel twin-skin slash cut twin stubby silencers
+Induction : Multipoint sequential electronic fuel injection
+Ignition : Digital
+Starting : Electric
+Max Power : 57.4 kW / 77 hp @ 6550 rpm
+Max Torque : 106 Nm / 10.7 kgf-m / 77.4 lb-ft @ 3100 rpm
+Clutch : Wet, multi-plate
+Transmission : 6-Speed
+Final Drive : Chain, X-ring
+Frame : Dual tubular steel cradle
+Front Suspension : 41 mm Kayaba fork
+Front Wheel Travel : 90 mm / 3.5 in
+Rear Suspension : Kayaba twin shocks with adjustable preload
+Rear Wheel Travel : 73 mm / 2.8 in
+Front Brakes : 2 x 310 mm Disc, 2 piston calipers, ABS
+Rear Brakes : Single 255 mm disc, 2 piston caliper, ABS
+Wheels : Wire 32-spoke, steel rims
+Front Tyre : 130/90-16
+Rear Tyre : 150/80-16
+Seat Height : 705 mm / 27.7 in
+Dry Weight : 245.5kg / 540 lbs
+Fuel Capacity : 12 Litres / 3.17 US gal

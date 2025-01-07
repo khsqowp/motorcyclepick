@@ -1,0 +1,36 @@
+Model : Tiger Sport
+Years : 2018
+Engine : Four stroke, transverse three cylinder. DOHC, 4 valves per cylinder
+Capacity : 1050 cc / 64.1 cub in
+Bore x Stroke : 79 x 71.4 mm
+Compression Ratio : 12.25:1
+Cooling System : Liquid-cooled
+Induction : Multipoint sequential electronic fuel injection with SAI
+Oil Capacity : 3.5 L / 0.92 US gal / 0.77 Imp gal
+Exhaust : Stainless steel 3 into 1, brushed stainless steel silencer
+Starting : Electric
+Max Power : 93 kW / 126 hp @ 9475 rpm
+Max Torque : 106 Nm / 10.8 kgf-m / 78 ft.lbs @ 7000 rpm
+Clutch : Wet, multi-plate, assist and slip
+Transmission : 6 Speed
+Final Drive : X-ring chain
+Frame : Aluminium beam twin-spar, single sided swingarm, aluminium alloy with eccentric chain adjuster
+Front Suspension : Showa 43 mm upside down forks with adjustable preload, rebound and compression damping
+Front Wheel Travel : 140 mm / 5.5 in
+Rear Suspension : Showa Monoshock with adjustable preload and rebound damping
+Rear Wheel Travel : 155 mm / 6.1 in
+Front Brakes : 2 x 320 mm Floating discs, Nissin 4 piston radial calipers, switchable ABS
+Rear Brakes : Single 255 mm disc, Nissin 2 piston caliper, switchable ABS
+Front Wheel : Cast aluminium alloy multi spoke 17 x 3.5 in
+Rear Wheel : Cast aluminium alloy multi spoke 17 x 5.5in
+Front Tyre : 120/70 ZR 17
+Rear Tyre : 180/55 ZR 17
+Rake : 22.8&#176;
+Trail : 88.7 mm / 3.5 in
+Dimensions : Length 2150 mm / 84.6 in Width 850 mm / 33.5 in (handlebars) Height 1330 mm - 1385 mm / 52.4 in - 54.5 in (Screen low - high position)
+Wheelbase : 1540 mm / 60.6 in
+Seat Height : 830 mm / 32.7 in
+Dry Weight : 218 kg / 479 lbs
+Wet Weight : 235 kg / 518 lbs
+Fuel Capacity : 20 Litres / 5.3 US gal / 4.4 Imp gal
+Consumption average : @ 120 km/h / 75 mph: 4.2 L/100 km / 23.3 km/l / 54.9 US mpg / 67 Imp mpg

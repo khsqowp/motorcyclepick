@@ -1,0 +1,36 @@
+Model : TRK 502X
+Years : 2018-19
+Engine : Parallel twin, DOHC, 8 valves
+Capacity : 499.6 cc / 30.5 cu in
+Bore x Stroke : 69 x 66.8 mm
+Compression Ratio : 11.5:1
+Cooling System : Liquid cooled
+Librication : Forced with wet sump
+Exhaust : With catalytic converter and oxygen sensors
+Induction : EFI with 37 mm throttle body
+Emission : Euro 4
+Ignition : ECU - TL1
+Starting : Electric
+Max Power : 35.8 kW / 48 hp @ 8500 rpm
+Max Torque : 45 Nm / 4.59 kgf-m @ 5000 rpm
+Clutch : Multidisc wet clutch
+Transmission : 6-Speed
+Final Drive : Chain
+Frame : Steel tube trellis frame
+Front Suspension : 50 mm USD fork, adjustable
+Front Wheel Travel : 145 mm / 5.7 in
+Rear Suspension : Rear swing arm with central shock absorber, spring preload, hydraulic rebound and compression setting adjustable
+Rear Wheel Travel : 145 mm / 5.7 in
+Front Brakes : Dual 320 mm floating discs, 4-piston calipers, ABS
+Rear Brakes : Single 260 mm disc, 2-piston caliper, ABS
+Front Wheel : Rim and hub in Aluminum alloy with iron spokes, 19&#8221; x 3.00&#8221; DOT &#8211;D
+Rear Wheel : Rim and hub in Aluminum alloy with iron spokes, 17&#8221; x 4.25&#8221; DOT &#8211; D
+Front Tyre : 110/80- R19 - M/C 59V
+Rear Tyre : 150/70 - R17 &#8211; M/C 69V
+Dimensions : Length: 2200 mm / 86.6 in Width: 915 mm / 36 in Height: 1490 mm / 58.6 in
+Wheelbase : 1525 mm / 60 in
+Ground Clearance : 220 mm / 8.6 in
+Seat Height : 840 mm / 33 in
+Dry Weight : 213 kg / 469.5 lbs
+Fuel Capacity : 20 Litres / 5.2 US gal
+Fuel Reserve : 3 Litres / 0.8 US gal

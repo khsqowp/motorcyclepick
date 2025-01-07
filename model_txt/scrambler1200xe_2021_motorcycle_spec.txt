@@ -1,0 +1,38 @@
+Model : Scrambler 1200 XE
+Years : 2021
+Engine : Four stroke, 270&#176; crank angle parallel twin, SOHC, 4 valves per cylinder
+Capacity : 1200 cc / 73.2 cu-in
+Bore x Stroke : 97.6 x 80.0 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.0:1
+Exhaust : Brushed 2 into 2 exhaust system with brushed high level silencers
+Emission : EURO5
+Lubrication : Wet sump
+Induction : Multipoint sequential electronic fuel injection
+Ignition : Digital &#8211; inductive type
+Starting : Electric
+Max Power : 89 hp / 66.2 kW @ 7250 rpm
+Max Torque : 110 Nm / 81.1 lb-ft @ 4500 rpm
+Clutch : Wet, multi-plate torque assist
+Transmission : 6 Speed
+Final Drive : X ring chain
+Frame : Tubular steel with aluminum cradles, Twin-sided, aluminum, 579 mm long swingarm
+Front Suspension : 47mm Showa fully adjustable USD forks
+Front Wheel Travel : 250 mm / 9.8 in
+Rear Suspension : &#214;hlins fully adjustable piggy-back RSUs with twin springs
+Rear Wheel Travel : 250 mm / 9.8 in
+Front Brakes : 2x 320mm discs, Brembo M50 monoblock calipers, radial master cylinder
+Rear Brakes : Single 255mm disc, Brembo 2-piston floating caliper
+ABS : Switchable ABS
+Wheel Front : 36-spoke 21 x 2.15 in, aluminum rims
+Wheel Rear : 32-spoke 17 x 4.25 in, aluminum rims
+Front Tyre : 90/90-21
+Rear Tyre : 150/70 R17
+Rake : 26.9&#176;
+Trail : 129.2 mm / 5.1 in
+Dimensions : Length 2330 mm / 91.7 in Width 905 mm / 35.6 in with handlebars Height 1250 mm / 49.2 in without mirrors
+Wheelbase : 1570 mm / 61.8 in
+Seat Height : 870 mm / 34.3 in
+Wet Weight : 230 kg / 507 lbs
+Fuel Capacity : 16 Litres / 4.2 US gal
+Instruments : Full-colour TFT instruments

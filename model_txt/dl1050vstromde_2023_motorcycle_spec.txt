@@ -1,0 +1,39 @@
+Model : DL 1050 V-Strom DE
+Years : 2023
+Engine : Four stroke, 90° V-twin, DOHC, 4 valves per cylinder
+Capacity : 1037 cc / 63.2 cu-in
+Bore x Stroke : 100 x 66 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.5:1
+Lubrication : Wet sump
+Induction : EFI with 49mm throttle body
+Emission : Euro 5
+Ignition : Electronic ignition (transistorized)
+Starting : Electric
+Max Power : 107.4 hp / 79 kW @ 8500 rpm
+Max Torque : 100 Nm / 73.7 lb-ft @ 6000 rpm
+Clutch : Wet, multiple-plate
+Transmission : 6 Speed
+Final Drive : RK 525 O-ring chain
+Final Drive Ratio : 2.647 (45/17)
+Primary Drive Ratio : 1.838 (57/31)
+Gear Ratio : 1st 2.666 (32/12) 2nd 1.933 (29/15) 3rd 1.500 (27/18) 4th 1.227 (27/22) 5th 1.086 (25/23) 6th 0.913 (21/23)
+Frame : Aluminium, twin spar
+Front Suspension : 43mm KYB inverted telescopic front forks, full adjustable, coil spring, oil damped
+Front Wheel Travel : 170 mm / 6.7 in
+Rear Suspension : Link-type KYB mono-shock, full adjustable, coil spring, oil damped
+Rear Wheel Travel : 169 mm / 6.6 in
+Front Brakes : 2 x 310mm discs, radially mounted 4-piston Tokico calipers
+Rear Brakes : Single 265mm disc, 2-piston Nissin caliper
+ABS : ABS with rear cancel mode
+Wheels : Wire-spoked wheels, aluminium front rim
+Front Tyre : 90/90-21M/C 54H tube type
+Rear Tyre : 150/70R17M/C 69H tubeless
+Rake : 27°
+Trail : 126 mm / 4.9 in
+Dimensions : Length 2390mm / 94.1 in Width 960mm / 37.8 in Height 1505mm / 59.3 in
+Wheelbase : 1595mm / 59.3 in
+Seat Height : 880 mm / 34.6 in
+Ground Clearance : 190 mm / 7.5 in
+Wet Weight : 252 kg / 554 lbs
+Fuel Capacity : 20 Litres / 5.3 US gal

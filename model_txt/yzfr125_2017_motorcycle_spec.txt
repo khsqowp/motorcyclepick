@@ -1,0 +1,33 @@
+Model : YZF-R 125
+Years : 2017
+Engine : Four stroke, single cylinder, SOHC, 4 valve
+Capacity : 124.7 cc / 7.6 cu-in
+Bore x Stroke : 52 x 58.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Induction : Fuel Injection
+Oil Capacity : 1.20 liters / 0.08 quarts)
+Lubrication : Wet sump
+Ignition : TCI
+Starting : Electric
+Max Power : 11 kW / 15 hp @ 9000 rpm
+Max Torque : 12.4 Nm / 1.25 kg-m @ 8000 rpm
+Clutch : Wet Multiple-disc
+Transmission : 6 Speed
+Final Drive : Chain
+Frame : Steel Deltabox
+Front Suspension : Upside-down telescopic fork, &#216; 41 mm
+Front Wheel Travel : 130 mm / 5.1 in
+Rear Suspension : Linked monoshock with spring preload adjustment
+Rear Wheel Travel : 118 mm / 4.6 in
+Front Brakes : Single 292mm disc
+Rear Brakes : Single 230mm disc
+Front Tyre : 110/80 -17
+Rear Tyre : 130/70 -17
+Caster : 26&#176;
+Trail : 98 mm
+Dimension : Height 1065 mm / 41.9 in Length 1955 mm / 76.9 in Width 680 mm / 26.7 in
+Wheelbase : 1355 mm / 53.3 inc
+Seat Height : 825 mm / 32.4 in
+Wet Weight : 140 kg / 308.5 lbs
+Fuel Capacity : 11.5 Litres / 3.0 US gal

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8">
+  <title>Motorcycle List</title>
+  <link rel="stylesheet" href="@{/static/list.css}">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111111;
+      color: #ffffff;
+    }
+
+    .search-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #1a1a1a;
+      padding: 8px 20px;
+      box-shadow: none;
+      z-index: 1000;
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 1px solid #00FF00;
+      height: 40px;
+    }
+
+    #searchInput {
+      padding: 8px 12px;
+      width: 250px;
+      border: 1px solid #00FF00;
+      border-radius: 4px;
+      font-size: 14px;
+      background-color: #222222;
+      color: #00FF00;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+    }
+
+    #searchInput:focus {
+      outline: none;
+      border-color: #00FF00;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    }
+
+    .highlight {
+      background-color: #003300;
+      color: #00FF00;
+      padding: 2px;
+      border-radius: 2px;
+    }
+
+    .hidden-row {
+      display: none;
+    }
+
+    h1 {
+      margin-top: 50px;
+      margin-bottom: 0;
+      padding-left: 20px;
+      color: #00FF00;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    }
+
+    .table-container {
+      margin-top: 0;
+      overflow-x: auto;
+      position: relative;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: max-content;
+      min-width: 100%;
+      background-color: #1a1a1a;
+    }
+
+    thead {
+      position: sticky;
+      top: 55px;
+      z-index: 99;
+    }
+
+    th {
+      white-space: nowrap;
+      padding: 8px 12px;
+      background-color: #0D1F0D;
+      font-weight: bold;
+      color: #00FF00;
+      border: 1px solid #333333;
+      min-width: 100px;
+      height: 18px;
+      box-sizing: border-box;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    td {
+      padding: 8px 12px;
+      border: 1px solid #333333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
+      color: #cccccc;
+      white-space: normal;
+      word-break: break-word;
+    }
+
+    td a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    td a:hover{
+      text-decoration: underline;
+      color: #007acc;
+    }
+
+    tr.filtered a {
+      color: inherit !important;
+      pointer-events: auto !important;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #1a1a1a;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #222222;
+    }
+
+    tbody tr:hover {
+      background-color: #2a2a2a;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    }
+
+    .search-container::after {
+      content: '';
+      position: fixed;
+      top: 33px;
+      left: 0;
+      right: 0;
+      height: 0px;
+      background-color: #00FF00;
+      z-index: 1001;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    }
+
+    thead::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      height: 2px;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    }
+
+    button {
+      margin: 20px;
+      padding: 8px 16px;
+      background-color: #003300;
+      color: #00FF00;
+      border: 1px solid #00FF00;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004400;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* 스크롤바 커스터마이징 */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      background-color: #1a1a1a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #00FF00;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #1a1a1a;
+      border-radius: 5px;
+    }
+
+    motorcycle-link{
+      display: inline-block;
+      width: 100%;
+      text-decoration: none;
+      color: #00FF00;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="search..">
+</div>
+
+<h1>Motorcycle List</h1>
+<table>
+  <thead>
+  <tr>
+    <!-- Motorcycle Table Fields -->
+    <th>MotorcycleID</th>
+    <th>Brand</th>
+    <th>Model</th>
+    <th>Years</th>
+    <th>Replica</th>
+    <th>Cruiser</th>
+    <th>Tourer</th>
+    <th>Adventure</th>
+    <th>Multi-Purpose</th>
+    <th>Naked</th>
+    <th>Scrambler</th>
+    <th>Off-Road</th>
+    <th>Motard</th>
+    <th>Scooter</th>
+    <th>Classic</th>
+    <th>Cafe Racer</th>
+    <th>Price</th>
+
+    <!-- Dimensions Table Fields -->
+    <th>Wheelbase</th>
+    <th>Seat Height</th>
+    <th>Wet Weight</th>
+    <th>Fuel Capacity</th>
+    <th>Ground Clearance</th>
+    <th>Dry Weight</th>
+    <th>Length</th>
+    <th>Width</th>
+    <th>Height</th>
+    <th>Front Tyre Width</th>
+    <th>Front Tyre Aspect Ratio</th>
+    <th>Front Tyre Structure</th>
+    <th>Front Tyre Diameter</th>
+    <th>Rear Tyre Width</th>
+    <th>Rear Tyre Aspect Ratio</th>
+    <th>Rear Tyre Structure</th>
+    <th>Rear Tyre Diameter</th>
+    <th>Front Brake Disc Count</th>
+    <th>Front Brake Disc Size</th>
+    <th>Front Brake Disc Type</th>
+    <th>Front Brake Piston Count</th>
+    <th>Rear Brake Disc Size</th>
+    <th>Rear Brake Disc Type</th>
+    <th>Rear Brake Piston Count</th>
+    <th>Frame Type</th>
+    <th>Frame Material</th>
+
+    <!-- Electronics Table Fields -->
+    <th>Start System</th>
+    <th>ABS</th>
+    <th>TCS</th>
+    <th>Cruise Control</th>
+    <th>Assist Slipper Clutch</th>
+    <th>Electronic Screen</th>
+    <th>Clutch Assist System</th>
+    <th>IMU</th>
+    <th>Cornering ABS</th>
+    <th>Wheelie Control</th>
+    <th>Riding Mode Change</th>
+    <th>Banking Angle Display</th>
+    <th>ABS Level Control</th>
+    <th>Quickshift Up</th>
+    <th>Quickshift Up Down</th>
+
+    <!-- Engines Table Fields -->
+    <th>Capacity</th>
+    <th>Bore Stroke</th>
+    <th>Compression Ratio</th>
+    <th>Cooling System</th>
+    <th>Lubrication</th>
+    <th>Fuel System</th>
+    <th>Emission</th>
+    <th>Induction</th>
+    <th>Mileage</th>
+    <th>Top Speed</th>
+    <th>Clutch</th>
+    <th>Transmission Gear Count</th>
+    <th>Transmission Type</th>
+    <th>Engine Stroke</th>
+    <th>Engine Cylinder</th>
+    <th>Engine Camshaft</th>
+    <th>Engine Type</th>
+    <th>Engine Crank Angle</th>
+    <th>Max Power HP</th>
+    <th>Max Power RPM</th>
+    <th>Max Torque NM</th>
+    <th>Max Torque RPM</th>
+    <th>Class Grade</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="motorcycle : ${motorcycles}">
+    <td>
+      <a th:href="@{/motorcycle/edit(editId=${motorcycle.motorcycleID})}"
+              th:text="${motorcycle.motorcycleID}"
+              style="text-decoration: none; color: inherit;">
+      </a>
+    </td>
+    <td th:text="${motorcycle.brand}"></td>
+    <td th:text="${motorcycle.model}"></td>
+    <td th:text="${motorcycle.years}"></td>
+    <td th:text="${motorcycle.replica}"></td>
+    <td th:text="${motorcycle.cruiser}"></td>
+    <td th:text="${motorcycle.tourer}"></td>
+    <td th:text="${motorcycle.adventure}"></td>
+    <td th:text="${motorcycle.multiPurpose}"></td>
+    <td th:text="${motorcycle.naked}"></td>
+    <td th:text="${motorcycle.scrambler}"></td>
+    <td th:text="${motorcycle.offRoad}"></td>
+    <td th:text="${motorcycle.motard}"></td>
+    <td th:text="${motorcycle.scooter}"></td>
+    <td th:text="${motorcycle.classic}"></td>
+    <td th:text="${motorcycle.cafeRacer}"></td>
+    <td th:text="${motorcycle.price}"></td>
+
+    <!-- Dimensions Table Fields -->
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.wheelbase}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.seatHeight}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.wetWeight}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.fuelCapacity}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.groundClearance}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.dryWeight}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.length}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.width}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.height}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.frontTyreWidth}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.frontTyreAspectRatio}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.frontTyreStructure}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.frontTyreDiameter}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.rearTyreWidth}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.rearTyreAspectRatio}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.rearTyreStructure}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.rearTyreDiameter}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.frontBrakeDiscCount}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.frontBrakeDiscSize}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.frontBrakeDiscType}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.frontBrakePistonCount}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.rearBrakeDiscSize}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.rearBrakeDiscType}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.rearBrakePistonCount}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.frameType}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.frameMaterial}"></td>
+
+    <!-- Electronics Table Fields -->
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.startSystem}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.abs}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.tcs}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.cruiseControl}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.assistSlipperClutch}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.electricScreen}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.clutchAssistSystem}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.imu}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.corneringAbs}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.wheelieControl}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.ridingModeChange}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.bankingAngleDisplay}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.absLevelControl}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.quickshiftUp}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.quickshiftUpDown}"></td>
+
+    <!-- Engines Table Fields -->
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.capacity}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.boreStroke}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.compressionRatio}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.coolingSystem}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.lubrication}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.fuelSystem}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.emission}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.induction}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.mileage}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.topSpeed}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.clutch}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.transmissionGearCount}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.transmissionType}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.engineStroke}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.engineCylinder}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.engineCamshaft}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.engineType}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.engineCrankAngle}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.maxPowerHp}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.maxPowerRpm}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.maxTorqueNm}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.maxTorqueRpm}"></td>
+    <td th:if="${motorcycle != null}" th:text="${motorcycle.classGrade}"></td>
+  </tr>
+  </tbody>
+</table>
+<script th:inline="javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const tableRows = document.querySelectorAll('tbody tr');
+    let debounceTimer;
+
+    // debounce 함수
+    function debounce(func, wait) {
+      return function executedFunction() {
+        const context = this;
+        const args = arguments;
+
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          func.apply(context, args);
+        }, wait);
+      };
+    }
+
+    // 하이라이트 적용 함수 최적화
+    function highlightText(text, searchTerm) {
+      if (!searchTerm) return text;
+      const regex = new RegExp(`(${searchTerm})`, 'gi');
+      return text.replace(regex, '<span class="highlight">$1</span>');
+    }
+
+    // 검색 함수 최적화
+    function performSearch() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+
+      tableRows.forEach(row => {
+        const cells = row.getElementsByTagName('td');
+        let found = false;
+        let rowText = Array.from(cells).map(cell => cell.textContent.toLowerCase()).join(' ');
+
+        if (searchTerm === '') {
+          row.classList.remove('hidden-row');
+          Array.from(cells).forEach(cell => {
+            cell.textContent = cell.textContent;
+          });
+          found = true;
+        } else if (rowText.includes(searchTerm)) {
+          row.classList.remove('hidden-row');
+          Array.from(cells).forEach(cell => {
+            const originalText = cell.textContent;
+            if (originalText.toLowerCase().includes(searchTerm)) {
+              cell.innerHTML = highlightText(originalText, searchTerm);
+            }
+          });
+          found = true;
+        } else {
+          row.classList.add('hidden-row');
+        }
+      });
+    }
+
+    // debounce 적용된 검색 실행
+    const debouncedSearch = debounce(performSearch, 300);
+    searchInput.addEventListener('input', debouncedSearch);
+  });
+
+  function searchTable() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const rows = document.querySelectorAll('tbody tr');
+
+    rows.forEach(row => {
+      const cells = row.getElementsByTagName('td');
+      let found = false;
+
+      Array.from(cells).forEach(cell => {
+        const text = cell.textContent || cell.innerText;
+        if (text.toLowerCase().includes(filter)) {
+          found = true;
+        }
+      });
+
+      if (found) {
+        row.style.display = '';
+        row.classList.add('filtered');
+      } else {
+        row.style.display = 'none';
+        row.classList.remove('filtered');
+      }
+    });
+  }
+
+  // 테이블 정렬 기능
+  function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.querySelector("table");
+    switching = true;
+    // 정렬 방향을 오름차순으로 설정
+    dir = "asc";
+
+    while (switching) {
+      switching = false;
+      rows = table.rows;
+
+      for (i = 1; i < (rows.length - 1); i++) {
+        shouldSwitch = false;
+        x = rows[i].getElementsByTagName("TD")[n];
+        y = rows[i + 1].getElementsByTagName("TD")[n];
+
+        if (dir == "asc") {
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        } else if (dir == "desc") {
+          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+
+      if (shouldSwitch) {
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+        switchcount++;
+      } else {
+        if (switchcount == 0 && dir == "asc") {
+          dir = "desc";
+          switching = true;
+        }
+      }
+    }
+  }
+</script>
+<button onclick="location.href='/motorcycle'">Back to Main</button>
+</body>
+</html>

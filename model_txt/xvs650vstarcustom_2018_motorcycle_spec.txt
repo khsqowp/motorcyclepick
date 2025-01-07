@@ -1,0 +1,28 @@
+Model : XVS 650 V-Star Custom
+Years : 2018-19
+Engine : Four stroke, 70&#176;V-twin cylinder, SOHC, 2 valve per cylinder
+Capacity : 649 cc / 39.6 cu-in
+Bore x Stroke : 81 x 63mm
+Cooling System : Air cooled
+Compression Ratio : 9.0:1
+Lubrication : Wet sump
+Induction : 2x 28mm Mikuni BDS28 CV carburetors
+Ignition : Digital TCI
+Starting : Electric
+Max Power : 40 hp / 29.2 kW @ 6500 rpm
+Max Torque : 50.9 Nm / 37.5 lb-ft @ 3000 rpm
+Clutch : Wet, multiple disc
+Transmission : 5 Speed
+Final Drive : Shaft
+Front Suspension : 41mm forks
+Rear Suspension : Adjustable link Monocross
+Front Brakes : Single 298mm disc
+Rear Brakes : 200mm Drum
+Front Tyre : 100/90-19
+Rear Tyre : 170/80-15
+Dimensions : Length 2340mm / 92.1 in Width 880mm / 34.6 in Height 1075mm / 42.3 in
+Wheelbase : 1610mm / 63.4 in
+Seat Height : 695 mm / 27.4 in
+Dry Weight : 214 kg / 471 lbs
+Wet Weight : 233 kg / 514 lbs
+Fuel Capacity : 16 Liters / 4.2 US gal

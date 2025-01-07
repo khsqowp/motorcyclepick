@@ -1,0 +1,39 @@
+Model : WR450F
+Years : 2017-18
+Engine : Four stroke, Single cylinder, DOHC, 4 titanium valves
+Capacity : 449 cc / 27.4 cu in
+Bore x Stroke : 97.0 x 60.8mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.5:1
+Lubrication : Dry sump
+Oil Capacity : 1.2 L / 2.5 US pt
+Exhaust : Single, upswept, under seat
+Induction : 44mm Keihin&#174; fuel injection
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : NA
+Max Torque : NA
+Clutch : Wet, multi-disc,
+Transmission : 5-Speed, Wide-ratio constant-mesh
+Final Drive : O-ring chain
+Primary Ratio : 2.609 (60/23)
+Secondary Ratio : 3.846 (50/13)
+Gear Ratio : 1st 2.417 (29/12) 2nd 1.733 (26/15) 3rd 1.313 (21/16) 4th 1.050 (21/20) 5th 0.840 (21/25)
+Frame : Aluminium bilateral beam
+Front Suspension : 48mm Kayaba spring-type fork with speed sensitive, damping; fully adjustable
+Front Wheel Travel : 310 mm / 12.2 in
+Rear Suspension : Swingarm, link suspension, mono shock, Kayaba single shock; fully adjustable
+Rear Wheel Travel : 310 mm / 12.2 in
+Front Brakes : Single hydraulic single 270 mm disc 4 piston caliper
+Rear Brakes : Single 245 mm disc 2 piston caliper
+Wheels : Aluminium alloy, laced spokes
+Front Tyre : 80/100-21
+Rear Tyre : 120/90-18
+Rake : 26.3&#176;
+Trail : 115 mm / 4.5 in
+Dimensions : Length: 2165 mm / 85.2 in Width: 825 mm / 32.5 in Height: 1280 mm / 50.4 in
+Wheelbase : 1465 mm / 57.7 in
+Seat Height : 965 mm / 38. in
+Ground Clearance : 325 mm / 12.8 in
+Wet Weight : 123 kg / 271 lbs
+Fuel Capacity : 7.5 Litres / 2.0 US gal

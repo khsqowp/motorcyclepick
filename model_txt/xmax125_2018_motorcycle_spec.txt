@@ -1,0 +1,30 @@
+Model : XMAX 125
+Years : 2018
+Engine : Four stroke, single cylinder
+Capacity : 124 cc / 7.6 cu-in
+Bore x Stroke : 52 x 58.6 mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.2:1
+Lubrication : Wet sump
+Induction : Fuel Injection
+Ignition : Electronic TCI
+CO2 emission : 63 g/km
+Starting : Electric
+Max Power : 14 hp / 10.5 kW @ 8750 rpm
+Max Torque : 12 Nm / 8.8 lb-ft @ 6500 rpm
+Transmission : Automatic
+Final Drive : Belt
+Front Suspension : Hydraulic telescopic fork
+Front Wheel Travel : 110 mm / 4.3 in
+Rear Suspension : Hydraulic unit swing
+Rear Wheel Travel : 75 mm / 2.9 in
+Front Brakes : Single 267mm disc
+Rear Brakes : Single 245mm disc
+Front Tyre : 120/70-15
+Rear Tyre : 140/70-14
+Dimensions : Height 1415 mm / 55.7 in Width 775 mm / 30.5 in Length 2185 mm / 86 in
+Wheelbase : 1526 mm / 59.8 in
+Seat Height : 795 mm / 31.2 in
+Ground Clearance : 130 mm / 5.1 in
+Wet Weight : 175 kg / 385.8 lbs
+Fuel Capacity : 13 Litres / 3.4 US gal

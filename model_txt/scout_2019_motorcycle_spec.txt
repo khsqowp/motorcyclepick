@@ -1,0 +1,43 @@
+Model : Scout
+Years : 2019
+Engine : Four stroke, 60&#176; V-Twin, DOHC, 4-valves per cylinder
+Capacity : 1133 cc / 69 cu in
+Bore x Stroke : 99 x 73.6mm / 3.898 x 2.898 in
+Cooling System : Liquid cooled
+Lubrication : Semi-Dry Sump
+Compression Ratio : 10.7:1
+Exhaust : Split dual exhaust with crossover, exhaust control two O2 sensors, one each bank, single three-way catalyst in each muffler
+Induction : Electronic fuel injection, closed loop, 60 mm bore
+Engine Oil : SAE 15W60
+Oil Capacity : 4.73 Litres
+Charging System : 35 amp max output
+Battery : 12 volts / 12 amp/hour, 210 CCA, maintenance free AGM
+Starting : Electric
+Max Power : 100 hp / 74.5 kW @ 8100 rpm
+Max Torque : 72.2 ft-lbs / 97.7 Nm @ 5900 rpm
+Clutch : Wet, multi-plate
+Transmission : 6 Speed sliding-mesh/foot shift
+Final Drive : Belt drive, 141 tooth
+Primary Drive : Gear drive wet clutch
+Gear Ratio : 1st 10.782:1 2nd 7.328:1 3rd 5.841:1 4th 4.957:1 5th 4.380:1 6th 4.034:1
+Final Drive Ratop : 2.357:1
+Front Suspension : 41 mm Telescopic fork
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : Dual shocks
+Rear Wheel Travel : 76 mm / 3.0 in
+Front Brakes : Single 298 mm rotor with 2 piston caliper
+Rear Brakes : Single 298 mm rotor with 1 piston caliper
+Front Wheel : Cast 16&#8221; x 3.5&#8221;
+Rear Wheel : Cast 16&#8221; x 3.5&#8221;
+Front Tyre : 130/90-16 72H
+Rear Tyre : 150/80-16 71H
+Rake : 29&#176;
+Trail : 119.9 mm / 4.7 in
+Dimensions : Length 2311 mm / 91 in Width 880 mm / 34.6 in Height 1207 mm / 47.5 in
+Wheelbase : 1562 mm / 61.5 in
+Seat Height : 673 mm / 26.5 in Laden 643 mm/ 25.3 in
+Dry Weight : 244 kg / 538 lbs
+Wet Weight : 253 kg / 558 lbs
+Ground Clearance : 135 mm / 5.3 in
+GVWR : 449 kg / 988 lbs
+Fuel Capacity : 12.5 Litres / 3.3 US gal

@@ -1,0 +1,39 @@
+Model : Street Triple S / A2
+Years : 2020
+Engine : Four stroke, in-line 3-cylinder, DOHC, 4 valve per cylinder
+Capacity : 660 cc / 40.27 cu-in
+Bore x Stroke : 76.0 x 48.5 mm
+Cooling System : Liquid-cooled
+Compression Ratio : 12.1:1
+Lubrication : Wet sump
+Induction : Multipoint sequential electronic fuel injection with SAI, Electronic throttle control
+Exhaust : Stainless steel 3 into 1 exhaust system low single sided stainless steel silencer
+Ignition : Digital - inductive type
+Starting : Electric
+Max Power : 35kW / 46.9 hp / 47.6 PS @ 9,000 rpm
+Max Power Derestricted : 70kW / 93.8 hp / 95.2 PS @ 11,250 rpm
+Max Torque : 60 Nm / 44.2 lb-ft @ 5,250 rpm
+Max Torque Derestricted : 66 Nm / 48.6 lb-ft @ 9,250 rpm
+Clutch : Wet, multi-plate
+Transmission : 6 Speed
+Final Drive : X ring chain
+Frame : Front - Aluminium beam twin spar Rear - 2 piece high pressure die cast
+Swingarm : Twin-sided, cast aluminium alloy
+Front Suspension : Showa 41mm upside down forks
+Front Wheel Travel : 110 mm / 4.3 in
+Rear Suspension : Showa piggyback reservoir monoshock, adjustable preload
+Rear Wheel Travel : 124 mm / 4.9 in
+Front Brakes : 2 x 310mm floating discs, Nissin 2-piston sliding calipers
+Rear Brakes : Single 220mm disc, Brembo single piston caliper
+ABS : Switchable ABS
+Front Wheels : Cast aluminium alloy 5-spoke 17 x 3.5 in
+Rear Wheels : Cast aluminium alloy 5-spoke 17 x 5.5 in
+Front Tyre : 120/70 ZR17 Pirelli Diablo Rosso III
+Rear Tyre : 180/55 ZR17 Pirelli Diablo Rosso III
+Rake : 24.8&#186;
+Trail : 103.4 mm / 4.0 in
+Dimensions : Width 765mm / 30.1 in - with handlebars Height 1060 mm / 41.7 in - without mirrors
+Wheelbase : 1410 mm / 55.5 in
+Seat Height : 810 mm / 31.8 in
+Dry Weight : 168 Kg / 370.3 lbs
+Fuel Capacity : 17.4 Litres / 4.6 US gal / 3.8 Imp gal

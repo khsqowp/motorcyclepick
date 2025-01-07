@@ -1,0 +1,48 @@
+Model : F4 Claudio Special Edition
+Years : 2019
+Production : 100 Units
+Engine : Four stroke, transverse four cylinder. DOHC, 4 radial valves per cylinder
+Capacity : 998 cc / 60.9 cu-in
+Bore x Stroke : 79 x 50.9 mm
+Compression Ratio : 13.4:1
+Cooling System : Cooling with separated liquid and oil radiators
+Lubrication : Wet sump
+Engine Management : Integrated ignition - injection system MVICS (Motor &amp; Vehicle Integrated Control System) with eight injectors (4 lower fuel injectors by Mikuni + 4 upper fuel injectors by Magneti Marelli with increased fuel flow). Engine control unit Eldor EM2.0, throttle body full drive by wire Mikuni, pencil-coil with ion-sensing technology, control of detonation and misfire - Torque control with four maps, Traction Control with eight levels of intervention with lean angle sensor - TSS Torque Shift System employing variable length intake runners
+Electronic : Right/left racing controls - "AIM MXS" racing dashboard with data acquisition, integrated GPS and dedicated software
+Alternator : 350 W at 5000 rpm
+Battery : Li-ion 12.8 V - 4.0 Ah
+Starting : Electric
+Max Power Crankshaft : 158.0 kW / 212 hp @ 13600 rpm
+Max Power : 151.0 kW / 205 hp @ 13450 rpm
+Max Torque : 115.0 Nm / 11.7 kg-m @ 9300 rpm
+Clutch : Wet, multi-disc with back torque limiting device and Brembo radial pump/lever assembly
+Electronic Quick-shift : MV EAS 2.0 (Electronically Assisted Shift Up &amp; Down)
+Transmission : Cassette style, six speed, constant mesh and DLC coated shift forks
+Final Drive : Chain
+Primary Drive : 48/82
+Gear Ratio : 1st 14/37 2nd 16/33 3rd 18/31 4th 20/30 5th 22/29 6th 21/25
+Final Drive Ratio : 15/41
+Frame : CrMo Steel tubular trellis, Rear swing arm pivot plates material is Aluminium alloy - Adjustable swingarm pivot height
+Steering Damper : &#214;hlins linear telescopic, manual adjustment
+Front Suspension : 43 mm &#214;hlins USD front fork, NIX 30 type with TIN coating on inner tubes, left compression and right rebound manual adjustment, top out spring
+Front Wheel Travel : 120 mm / 4.72 in
+Rear Suspension : &#214;hlins progressive, TTX36 twin tube rear shock absorber with piggyback resevoir, compression and rebound adjusted with anodized aluminium adjustment knobs, Single sided swing arm material Aluminium alloy
+Rear Wheel Travel : 120 mm / 4.72 in
+Front Brakes : 2x floating disc with 320mm Brembo Racing with T-Drive system, with steel braking disc and aluminium flange Brembo radial pump/level assembly, Brembo GP radial-type, single-piece with 4 pistons 30 mm caliper
+Rear Brakes : Single 210mm disc, Nissin 4 pistons caliper
+ABS : Bosch 9 Plus with Race Mode and RLM (Rear wheel Lift-up Mitigation)
+Front Wheel : BST Full carbon 3.50 &#8221; x 17 &#8221;
+Rear Wheel : BST Full carbon 600 &#8221; x 17 &#8221;
+Front Tyre : 120/70 ZR17 M/C (58 W) Pirelli DIABLO Supercorsa SP (limited edition CC12)
+Rear Tyre : 200/55 ZR17 M/C (78 W) Pirelli DIABLO Supercorsa SP (limited edition CC12)
+Material : Carbon fiber and thermoplastic
+CNC Components : Top triple clamp - Rear set footpegs adjustable height - Rear wheel nut - Front brake lever - Clutch lever - Right/left controls Front brake fluid tank cap - Clutch reservoir cap - Oil engine cap and racing fuel cap Clutch SBK cover - Swingarm protection Phonic wheel cover
+Carbon Components : Carbon fiber Fairing and dedicated weave with gold thread - Upper side fairings - Toe Tail - Front and rear fenders - Upper and lower chain guard - Full carbon rims "BST"
+Exclusive content : Intake and exhaust ports, hand-worked by the "Reparto Corse"- Cam followers with DLC treatment to reduce friction - Low-friction "ASSO" piston ring - Light crankshaft - Seat with dedicated cover and &#8220;Claudio&#8221; logo Tinted windshield
+Trail : 100.4 mm / 3.9 in
+Dimensions : Length 2115 mm / 83.3 in Width 750 mm / 29.5 in
+Wheelbase : 1430 mm / 56.2 in
+Seat Height : 830 mm / 2.6 in
+Ground Clearance : 115 mm / 4.7 in
+Dry Weight : 183 kg / 403.4 lbs
+Fuel Capacity : 17 Litres / 4.4 US gal

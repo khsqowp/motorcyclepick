@@ -1,0 +1,33 @@
+Model : AN 650 Burgman Executive
+Years : 2018
+Engine : Four stroke, twin cylinder, DOHC, 4 valves per cylinder.
+Capacity : 638 cc / 38.9 cu in
+Bore x Stroke : 75.5 x 71.3 mm
+Compression Ratio : 11.2:1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Electronic fuel injection
+Ignition : Digital electronic
+Starting : Electric
+Max Power : 40 kW / 55 hp @ 7000 rpm
+Max Torque : 62 Nm / 6.3 kgf-m / 45.7 lb-ft @ 5000 rpm
+Transmission : Electronically-controlled, CVT- automatic and manual shift
+Final Drive : V-belt
+Frame : Tubular steel
+Front Suspension : Telescopic front fork with 41mm inner tubes, coil spring, oil damped
+Rear Suspension : Swingarm-style, twin preload-adjustable shock absorbers and a separate aluminum swingarm, coil spring, oil damped
+Front Wheel Travel : 110 mm / 4.3"
+Rear Wheel Travel : 100 mm / 3.9"
+Front Brakes : 2 x 260 mm discs, 2 piston calipers, ABS
+Rear Brakes : Single 250 mm disc, 2 piston caliper, ABS
+Front Tyre : 120/70 R15M/C 56H, tubeless
+Rear Tyre : 160/60 R14M/C 65H, tubeless
+Dimensions : Length: 2265 mm / 89.2" Width: 810 mm / 31.9"
+Wheelbase : 1585 mm / 62.4"
+Seat Height : 755 mm / 29.7"
+Ground Clearance : 125 mm / 4.9"
+Dry Weight : 238 kg / 525 lbs
+Wet Weight : 277 kg / 611 lbs
+Fuel Capacity : 15 Litres / 4.0 US gal
+Top Speed : 177 km/h / 110 mph
+&#188; Mile Acceleration : 16 sec

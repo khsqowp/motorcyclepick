@@ -1,0 +1,41 @@
+Model : Brutal 800RR
+Years : 2021
+Engine : Four stroke, transverse three cylinder, DOHC with mechanical chain tensioner and DLC tappet, 4 valves per cylinder
+Capacity : 798 cc / 48.68 cu-in
+Bore x Stroke : 79 x 54.3 mm
+Cooling System : Cooling with separated liquid and oil radiators
+Compression Ratio : 12.3:1
+Engine management system : Integrated ignition - injection system MVICS 2.1 (Motor &amp; Vehicle Integrated Control System) with three injectors. Engine control unit Eldor Nemo 2.1, throttle body full ride by wire Mikuni, pencil-coil. Torque control with four maps, Traction Control with eight levels of intervention.
+Electronic Quick-shift : MV EAS 2.0 (Electronically Assisted Shift up &amp; down)
+Environmental Standard : Euro 5
+Ignition : Multipoint electronic injection and back torque limiting device
+Starting : Electric
+Max Power : 82 kW / 112 hp @ 11000 rpm
+Max Torque : 85 Nm / 63 lb-ft @ 8500 rpm
+Clutch : Wet multi-disc with slipper function and hydraulic actuation
+Transmission : Cassette style, 6 speed, constant mesh
+Final Drive : Chain
+Primary Drive Ratio : 22/41
+Gear Ratio : 1st 13/37 2nd 16/35 3rd 18/32 4th 20/30 5th 22/29 6th 21/25
+Final Drive Ratio : 16/41
+Frame : ALS Steel tubular trellis, aluminium alloy rear swing arm pivot plates
+Front Suspension : 43mm Marzocchi USD aluminium telescopic hydraulic fork with DLC treatment, with anodized fork legs and having rebound-compression damping and spring preload external and separate adjustment
+Front Wheel Travel : 125 mm / 4.9 in
+Rear Suspension : Progressive Sachs, single shock absorber with rebound and compression damping and spring preload adjustment, aluminium alloy single sided swing arm
+Rear Wheel Travel : 130 mm / 5.1 in
+Front Brakes : 2x 320mm floating discs, with steel braking disc and flange, Brembo radial-type with 4 piston calipers
+Rear Brakes : Single 220mm disc, Brembo 2 piston caliper
+ABS : Continental MK100 with RLM (Rear Wheel Lift-up Mitigation) and with cornering function
+Rim Front : Aluminium alloy 3.50 x 17 in
+Rim Rear : Aluminium alloy 5.50 x 17 in
+Front Tyre : 120/70 - ZR 17 M/C (58 W)
+Rear Tyre : 180/55 - ZR 17 M/C (73 W)
+Trail : 103.5 mm / 4.0 in
+Dimensions : Length: 2045 mm / 80.51 in Width: 875 mm / 34.45 in
+Wheelbase : 1400 mm / 55.12 in
+Seat Height : 830 mm / 32.6 in
+Ground Clarence : 135 mm / 5.3 in
+Dry Weight : 175 kg / 385.8 lbs
+Fuel Capacity : 16.5 Litres / 4.36 US gal
+Exclusive features : MV Ride App - GPS sensor - Bluetooth - Cruise control
+Optional : The full Special Parts range is available on the MV Agusta Special Parts website

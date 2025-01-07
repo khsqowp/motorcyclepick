@@ -1,0 +1,38 @@
+Model : Daytona 675R
+Years : 2017-18
+Engine : Four stroke, in-line 3-cylinder, DOHC, 4 valve per cylinder.
+Capacity : 675 cc / 41.2 cu in
+Bore x Stroke : 76 x 49.6 mm
+Cooling System : Liquid-cooled
+Compression Ratio : 13.1:1
+Lubrication : Wet sump
+Oil Capacity : 3.6 Litres / 1.0 US gal / 0.8 Imp gal
+Induction : Multipoint sequential electronic fuel injection with forced air induction and SAI
+Exhaust : Stainless steel 3 into 1 system with valve in secondary and under engine silencer
+Ignition : Digital - inductive type
+Starting : Electric
+Max Power : 95.4 kW / 128 hp @ 12500rpm
+Max Torque : 74 Nm / 7.5 kgf-m / 55 ft.lbs @ 11900rpm
+Clutch : Wet, multi-plate, slipper.
+Transmission : 6 Speed
+Final Drive : O-ring chain
+Frame : Aluminium beam twin spar. Rear - 2 piece high pressure die cast swingarm braced, twin-sided, aluminium alloy with adjustable pivot position
+Front Suspension : &#214;hlins 43mm upside down NIX30 forks with adjustable preload, rebound and compression damping
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : &#214;hlins TTX36 twin tube monoshock with piggy back reservoir, adjustable preload, rebound and compression damping
+Rear Wheel Travel : 133 mm / 5.2 in
+Front Wheel : Front Cast aluminium alloy 5-spoke 17 x 3.5in
+Rear Wheel : Rear Cast aluminium alloy 5-spoke 17 x 5.5in
+Front Brakes : 2 x 308 mm Discs, 4 piston calipers, Brembo, switchable ABS
+Rear Brakes : Single 220 mm disc, 1 piston caliper, Brembo, swotchable ABS
+Front Tyre : 120/70 ZR 17
+Rear Tyre : 180/55 ZR 17
+Rake : 23.0&#186;
+Trail : 87.9 mm / 3.5 in
+Dimensions : Length 2045 mm / 80.4 in Width (handlebars) 695 mm / 27.3 in Height without mirrors 1112 mm / 43.7 in
+Wheelbase : 1375 mm / 54.1 in
+Seat Height : 830 mm / 32.7 in
+Dry Weight : 167 kg / 368lbs
+Wet Weight : 184 kg / 406 lbs
+Fuel Capacity : 17.5 Litres / 4.6 US gal / 3.8 Imp gal
+Consumption Average : 4.5 L/100 km / 22.3 km/l / 52.4 US mpg / 62.8 Imp mpg

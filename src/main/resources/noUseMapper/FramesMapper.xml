@@ -1,0 +1,63 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<!DOCTYPE mapper-->
+<!--        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"-->
+<!--        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+
+<!--<mapper namespace="com.example.motorcycle.repository.FramesMapper">-->
+
+<!--        &lt;!&ndash; resultMap 정의 &ndash;&gt;-->
+<!--        <resultMap id="framesResultMap" type="com.example.motorcycle.dto.FramesDTO">-->
+<!--                <id property="motorcycleID" column="motorcycleID" />-->
+<!--                <result property="frame" column="frame" />-->
+<!--                <result property="frontSuspension" column="frontSuspension" />-->
+<!--                <result property="rearSuspension" column="rearSuspension" />-->
+<!--                <result property="frontWheelTravel" column="frontWheelTravel" />-->
+<!--                <result property="rearWheelTravel" column="rearWheelTravel" />-->
+<!--                <result property="frontBrakes" column="frontBrakes" />-->
+<!--                <result property="rearBrakes" column="rearBrakes" />-->
+<!--                <result property="absSystem" column="absSystem" />-->
+<!--                <result property="frontWheel" column="frontWheel" />-->
+<!--                <result property="rearWheel" column="rearWheel" />-->
+<!--                <result property="frontTyre" column="frontTyre" />-->
+<!--                <result property="rearTyre" column="rearTyre" />-->
+<!--                <result property="wheels" column="wheels" />-->
+<!--                <result property="abs" column="abs" />-->
+<!--                <result property="absPro" column="absPro" />-->
+<!--                <result property="rake" column="rake" />-->
+<!--                <result property="trail" column="trail" />-->
+<!--                <result property="frontRim" column="frontRim" />-->
+<!--                <result property="rearRim" column="rearRim" />-->
+<!--                <result property="castor" column="castor" />-->
+<!--                <result property="steeringAngle" column="steeringAngle" />-->
+<!--                <result property="steeringHeadAngle" column="steeringHeadAngle" />-->
+<!--        </resultMap>-->
+
+<!--        &lt;!&ndash; 데이터 삽입 &ndash;&gt;-->
+<!--        <insert id="insertFramesData" parameterType="com.example.motorcycle.dto.FramesDTO" keyProperty="motorcycleID">-->
+<!--                INSERT INTO Frames (motorcycleID, frame, frontSuspension, rearSuspension, frontWheelTravel, rearWheelTravel, frontBrakes, rearBrakes, absSystem, frontWheel, rearWheel, frontTyre, rearTyre, wheels, abs, absPro, rake, trail, frontRim, rearRim, castor, steeringAngle, steeringHeadAngle)-->
+<!--                VALUES (#{motorcycleID}, #{frame}, #{frontSuspension}, #{rearSuspension}, #{frontWheelTravel}, #{rearWheelTravel}, #{frontBrakes}, #{rearBrakes}, #{absSystem}, #{frontWheel}, #{rearWheel}, #{frontTyre}, #{rearTyre}, #{wheels}, #{abs}, #{absPro}, #{rake}, #{trail}, #{frontRim}, #{rearRim}, #{castor}, #{steeringAngle}, #{steeringHeadAngle})-->
+<!--        </insert>-->
+
+<!--        &lt;!&ndash; 데이터 조회 &ndash;&gt;-->
+<!--        <select id="findByMotorcycleId" parameterType="long" resultMap="framesResultMap">-->
+<!--                SELECT * FROM Frames WHERE motorcycleID = #{motorcycleID}-->
+<!--        </select>-->
+
+<!--        &lt;!&ndash; 데이터 업데이트 &ndash;&gt;-->
+<!--        <update id="updateFramesData" parameterType="com.example.motorcycle.dto.FramesDTO">-->
+<!--                UPDATE Frames-->
+<!--                SET frame = #{frame}, frontSuspension = #{frontSuspension}, rearSuspension = #{rearSuspension},-->
+<!--                    frontWheelTravel = #{frontWheelTravel}, rearWheelTravel = #{rearWheelTravel}, frontBrakes = #{frontBrakes},-->
+<!--                    rearBrakes = #{rearBrakes}, absSystem = #{absSystem}, frontWheel = #{frontWheel}, rearWheel = #{rearWheel},-->
+<!--                    frontTyre = #{frontTyre}, rearTyre = #{rearTyre}, wheels = #{wheels}, abs = #{abs}, absPro = #{absPro},-->
+<!--                    rake = #{rake}, trail = #{trail}, frontRim = #{frontRim}, rearRim = #{rearRim}, castor = #{castor},-->
+<!--                    steeringAngle = #{steeringAngle}, steeringHeadAngle = #{steeringHeadAngle}-->
+<!--                WHERE motorcycleID = #{motorcycleID}-->
+<!--        </update>-->
+
+<!--        &lt;!&ndash; 데이터 삭제 &ndash;&gt;-->
+<!--        <delete id="deleteFramesData" parameterType="long">-->
+<!--                DELETE FROM Frames WHERE motorcycleID = #{motorcycleID}-->
+<!--        </delete>-->
+
+<!--</mapper>-->

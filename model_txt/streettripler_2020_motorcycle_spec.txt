@@ -1,0 +1,37 @@
+Model : Street Triple R
+Years : 2020
+Engine : Four stroke, in-line 3-cylinder, DOHC, 4 valve per cylinder
+Capacity : 765 cc / 46.6 cu-in
+Bore x Stroke : 78 x 53.4 mm
+Cooling System : Liquid-cooled
+Compression Ratio : 12.5:1
+Lubrication : Wet sump
+Induction : Multipoint sequential electronic fuel injection with SAI. Electronic throttle control
+Exhaust : Stainless steel 3 into 1 exhaust system low single sided stainless steel silencer
+Emission : Euro 5
+Ignition : Digital - inductive type
+Starting : Electric
+Max Power : 116 hp / 118 PS / 87 kW @ 12,000 rpm
+Max Torque : 56.8 lb-ft / 77 Nm @ 9,400 rpm
+Clutch : Wet, multi-plate, slip-assisted
+Transmission : 6-speed with Triumph Shift Assist
+Final Drive : X ring chain
+Frame : Front &#8211; Aluminium beam twin spar. Rear &#8211; 2 piece high pressure die cast
+Swingarm : Twin-sided, cast aluminium alloy
+Front Suspension : Showa 41 mm upside down separate function big piston forks (SF-BPF), Adjustable compression damping, rebound damping and preload adjustment
+Front Wheel Travel : 115 mm / 4.5 in
+Rear Suspension : Showa piggyback reservoir monoshock, Adjustable compression and rebound damping and preload adjustment
+Rear Wheel Travel : 131 mm / 5.1 in
+Front Brakes : 2 x 310 mm floating discs, Brembo M4.32 4-piston radial monobloc calipers, ABS
+Rear Brakes : Single 220 mm disc, Brembo single piston caliper, ABS
+Front Wheels : Cast aluminium alloy 5-spoke 17 x 3.5 in
+Rear Wheels : Cast aluminium alloy 5-spoke 17 x 5.5 in
+Front Tyre : 120/70 ZR17
+Rear Tyre : 180/55 ZR17
+Rake : 23.5&#176; (24.5&#176; LRH)
+Trail : 98.3 mm (102.7 mm LRH) /
+Dimensions : Length 2055 mm / 80.9 in Width 775 mm / 30.5 in - with handlebars Height 1065 mm (1045 mm LRH) / 41.9 in (41.1 in LRH) - without mirrors
+Wheelbase : 1405 mm / 55.3 in
+Seat Height : 825 mm (780 mm LRH) / 32.4 in
+Dry Weight : 168 kg / 370.3 lbs
+Fuel Capacity : 17.4 Litres / 4.6 US gal / 3.8 Imp gal

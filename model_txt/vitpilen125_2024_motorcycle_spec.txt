@@ -1,0 +1,43 @@
+Model : Vitpilen 125
+Years : 2024
+Engine : Four stroke, single cylinder, DOHC with cam levers, 4 valve
+Capacity : 125 cc / 7.6 cu-in
+Bore x Stroke : 58 x 47.3 mm
+Cooling System : Liquid cooled
+Compression Ratio : 12.3:1
+Lubrication : Wet sump with 2 oil pumps
+Exhaust : Stainless steel with regulated catalytic converter
+Induction : Dell' Orto EFI (33 mm throttle body)
+Emission : EURO5+
+Ignition : Contactless, controlled, fully electronic ignition system with digital ignition timing adjustment
+Engine Management : Bosch EMS with RBW
+Starting : Electric 12V 8Ah
+Max Power : 11 kW / 15 hp @ 1000 rpm
+Max Torque : 11.5 Nm / 8.5 ft-lb @ 7750 rpm
+Clutch : Multi-disc PASC slipper clutch
+Transmission : 6 Speed
+Primary Drive Ratio : 23:80
+Final Drive Ratio : 14:45
+Final Drive : X-ring chain 520
+Frame : Powder coated steel trellis
+Handlebars : Tapered aluminum
+Front Suspension : 43mm WP Apex inverted non-adjustable open-cartridge fork
+Front Wheel Travel : 150 mm / 5.9 in
+Rear Suspension : WP Apex mono shock with progressive damping
+Rear Wheel Travel : 150 mm / 5.9 in
+Front Brakes : Single 320mm disc, ByBre, opposed 4 piston caliper
+Rear Brakes : Single 240mm disc, ByBre, twin piston, floating caliper
+ABS : Bosch 9.3 MP Cornering ABS and Supermoto mode, disengageable
+Wheels : Cast aluminium
+Front Wheel : 3.00 x 17
+Rear Wheel : 4.00 x 17
+Front Tyre : 110/70-R17 Michelin Power 6
+Rear Tyre : 150/60-R17 Michelin Power 6
+Steering Head Angle : 66?
+Triple Clamp Offset : 32 mm / 1.26 in
+Trail : 95 mm / 3.7 in
+Wheelbase : 1368 ? 15.5 mm / 53.9 ?0.6 in
+Seat Height : 820 mm / 32.3 in
+Ground Clearance : 180 mm / 7.1 in
+Dry Weight : 147.5 kg / 325 lbs
+Fuel Capacity : 13 Litres / 3.4 US gal

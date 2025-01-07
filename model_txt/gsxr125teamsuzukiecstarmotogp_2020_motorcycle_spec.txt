@@ -1,0 +1,27 @@
+Model : GSX-R125 Team SUZUKI ECSTAR MotoGP
+Years : 2020
+Engine : Four stroke, single cylinder, DOHC, 4-valve
+Capacity : 124.4 cc / 7.6 cu in
+Bore x Stroke : 62 x 41.2 mm
+Cooling System : Liquid cooled
+Lubrication System : Wet sump
+Induction : Electronic fuel injection
+Ignition : Electronic
+Starting : Electric
+Transmission : 6-Speed, constant mesh
+Final Drive : Chain
+Front Suspension : Telescopic fork, oil damped
+Rear Suspension : Link type monoshock, coil spring, oil damped
+Front Brakes : Single disc
+Rear Brakes : Single disc
+Front Wheel : Alloy, 10-spoke
+Rear Wheel : Alloy, 10-spoke
+Front Tyre : 90/80-17 M/C, tubeless
+Rear Tyre : 130/70-17 M/C, tubeless
+Rake : 25.5o
+Trail : 93.3 mm / 3.7 in
+Dimensions : Length: 1975 mm / 77.8 in Width: 670 mm / 26.3 in Height: 1070 mm / 42.1 in
+Wheelbase : 1300 mm / 51.2 in
+Ground Clearance : 150 mm / 5.9 in
+Seat Height : 785 mm / 30.9 in
+Fuel Capacity : 11 L / 2.9 US gal / 2.4 Imp gal

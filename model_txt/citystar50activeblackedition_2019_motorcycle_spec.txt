@@ -1,0 +1,27 @@
+Model : Citystar 50 (Active, Black Edition)
+Years : 2019
+Engine : Two stroke, single cylinder
+Capacity : 49.9 cc / 3.05 cu-in
+Bore x Stroke : 39.9 x 39.8 mm
+Cooling System : Air cooled
+Emission : Euro 4
+Induction : Carburetor
+Starting : Electronic
+Max Power : 3.4 kW / 4.6 hp @ 7000 rpm
+Max Torque : 4.6 Nm / 0.47 kgf-m / 1.03 lb-ft @ 6700 rpm
+Transmission : Automatic
+Final Drive : Belt
+Front Suspension : 37mm Hydraulic telescopic fork
+Rear Suspension : Hydraulic shock absorber
+Front Brakes : Single 240 mm disc
+Rear Brakes : 190 mm Drum
+ABS System : None
+Front Tyre : 120/70-13
+Rear Tyre : 130/60-13
+Dimensions : Length 1985 mm / 78.1 in Width 750 mm / 29.5 in Height: 1300 mm / 51.2 in
+Wheelbase : 1430 mm / 56.3 in
+Seat Height : 795 mm / 31.3 in
+Wet Weight : 130 kg / 287 lbs
+Fuel Capacity : 9.7 Litres / 2.56 US gal / 2.13 Imp gal
+Fuel Consumption : 2.9 Litres/100 km / 81 US mpg / 97 Imp mpg
+Top Speed : 45 km/h / 28 mph

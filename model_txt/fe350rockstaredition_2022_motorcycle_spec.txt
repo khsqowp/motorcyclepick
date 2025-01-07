@@ -1,0 +1,30 @@
+Model : FE 350 Rockstar Edition
+Years : 2022
+Engine : Four stroke, single cylinder, DOHC, 4 valves
+Capacity : 349.7 cc / 21.3 cu in
+Bore x Stroke : 88 x 57.5 mm
+Compression Ratio : 13.5:1
+Cooling System : Liquid cooling system, continuous circulation of cooling liquid with water pump
+Lubrication : Forced oil lubrication with 2 Eaton pumps
+Induction : Keihin electronic fuel injection and 42mm throttle body
+EMS : Keihin EMS
+Starting : Electric
+Max Power : 45 hp / 32.8 kW
+Clutch : Wet, DDS multi-disc clutch, Magura hydraulics
+Transmission : 6-speed, claw shifted
+Final Drive : X-Ring 5/8 x 1/4 in chain
+Frame : 25CrMo4 steel central-tube frame
+Front Suspension : 48 mm WP-USD Xplor forks with preload adjuster
+Front Wheel Travel : 300 mm / 11.8 in
+Rear Suspension : WP XACT Monoshock with linkage
+Rear Wheel Travel : 300 mm / 11.8 in
+Front Brakes : Single 260 mm disk, Magura two-piston floating calliper
+Rear Brakes : Single 220 mm disc, Magura single-piston floating calliper
+Front Tyre : 90/90-21
+Rear Tyre : 140/90-18
+Steering Head Angle : 63.5&#176;
+Wheelbase : 1482&#177;10 mm / 58.3 in
+Seat Height : 950 mm / 37.4 in
+Ground Clearance : 360 mm / 14.1 in
+Dry Weight : 106.8 kg / 235.4 lbs
+Fuel Capacity : 8.5 Litres / 2.25 US gal

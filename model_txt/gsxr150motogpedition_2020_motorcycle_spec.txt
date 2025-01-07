@@ -1,0 +1,24 @@
+Model : GSX-R 150 MotoGP Edition
+Years : 2020-21
+Engine : Four stroke, single cylinder, SOHC, 2 valves
+Capacity : 154.9 cc / 9.4 cu in
+Bore x Stroke : 56 x 62.9 mm
+Cooling System : Air cooled
+Induction : Carburettor
+Starting : Electric
+Battery : 12V, 3Ah, maintenance free
+Max Power : 14 kW / 18.9 hp @8000 rpm
+Max Torque : 14 Nm / 1.4 kgf-m / 10.3 ft-lb @ 6000 rpm
+Transmission : 6 Speed
+Final Drive : Chain
+Front Suspension : Telescopic fork
+Rear Suspension : Swing Arm, mono shock
+Front Brakes : Single disc
+Rear Brakes : Drum
+Front Tyre : 100/80-17-Tubeless
+Rear Tyre : 140/60R-17-Tubeless
+Wheelbase : 1300 mm / 51.2 in
+Seat Height : 785 mm / 30.9
+Ground Clearance : 160 mm / 6.2 in
+Dry Weight : 135 kg / 297.6 lbs
+Fuel Capacity : 11 Litres / 2.9 US gal / 2.6 Imp gal

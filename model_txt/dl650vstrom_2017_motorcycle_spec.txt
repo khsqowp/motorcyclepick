@@ -1,0 +1,34 @@
+Model : DL 650 V-Strom
+Years : 2017-18
+Engine : Four stroke, 90&#176;-V-twin, DOHC, 4 valves per cylinder.
+Capacity : 645 cc / 39.4 cu-in
+Bore x Stroke : 81 x 62.6 mm
+Compression Ratio : 11.2:1
+Cooling System : Liquid cooled
+Oil Capacity : 3.0 L (3.2 / 2.6 US / Imp qt)
+Lubrication : Wet sump
+Induction : Fuel Injection
+Ignition : Electronic Ignition
+Starting : Electric
+Clutch : Wet, multiple discs, cable operated
+Transmission : 6 Speed
+Final Drive : Chain, DID525V8, 118 links
+Primary Reduction Ratio : 2.088 (71 / 34)
+Final Reduction Ratio : 3.133 (47 / 15)
+Frame : Aluminium, twin spar
+Front Suspension : 43mm Telescopic, coil spring, oil damped
+Front Wheel Travel : 150 mm / 5.9 in
+Rear Suspension : Link type, with adjustable rebound and spring preload
+Rear Wheel Travel : 160 mm / 6.3 in
+Front Brakes : 2 x 310 mm disc, 2 piston calipers, ABS
+Rear Brakes : Single 260 mm disc, 1 piston caliper, ABS
+Front Tyre : 110/80R19M/C 59H
+Rear Tyre : 150/70R17M/C 69H
+Rake : 26&#176;
+Trail : 110 mm / 4.3 in
+Dimensions : Length 2275 mm / 89.5 in Width 910 mm / 35.8 in Height 1405mm / 55.3 in
+Wheelbase : 1560 mm / 61.4 in
+Seat Height : 830 mm / 32.7 in
+Ground Clearance : 175 mm / 6.9 in
+Wet Weight : 216 kg / 476 lbs
+Fuel Capacity : 20 Litres / 5.2 US gal / 4.4 Imp gal

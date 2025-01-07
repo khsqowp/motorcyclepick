@@ -1,0 +1,34 @@
+Model : V85 TT
+Years : 2024
+Engine : Four stroke, Transversal 90? V-twin, 2-valves per cylinder, titanium intake
+Capacity : 853 cc / 52.0 cu in
+Bore x Stroke : 84 x 77 mm
+Cooling System : Air cooled
+Compression Ratio : 10.5:1
+Emission : EURO 5+
+Induction : Electronic injection; ? 52 mm single throttle body, Ride-by-Wire
+Ignition : Electronic
+Starting : Electric
+Max Power : 80 hp / 58.8 kW @ 7750 rpm
+Max Torque : 83 Nm / 61.2 lb-ft @ 5100 rpm
+Clutch : Dry single disc
+Transmission : 6 Speed
+Final Drive : Shaft, double universal joint and double bevel gear units
+Gear Ratios : 1st 16/39 = 1: 2.437 2nd 18/32 = 1: 1.778 3rd 21/28 = 1: 1.333 4th 24/26 = 1: 1.083 5th 25/24 = 1: 0.960 6th 27/24 = 1: 0.889
+Frame : High strength steel tubular frame
+Front Suspension : 41 mm hydraulic telescopic USD fork, with adjustable spring preload and hydraulic rebound
+Front Wheel Travel : 170 mm / 6.7 in
+Rear Suspension : Double-sided swingarm in box-type aluminium with a single shock on the right side, with adjustable spring (controlled via a knob on the V85 TT and V85 TT Travel) preload and hydraulic rebound
+Rear Wheel Travel : 170 mm / 6.7 in
+Front Brakes : 2x 320mm stainless steel floating discs, Brembo radial-mounted calipers with 4 opposed pistons
+Rear Brakes : Single 260 mm stainless steel disc, floating caliper with 2 pistons
+ABS : Standard double channel ABS
+Wheels : Cross Spoked
+Front Wheel : 2.50 x 19
+Rear Wheel : 4.25 x 17
+Front Tyre : 110/80 ? R19
+Rear Tyre : 150/70 ? R17
+Seat Height : 830 mm / 32.7 in
+Dry Weight : 209 kg / 460.7 lbs
+Wet Weight : 230 kg / 507 lbs
+Fuel Capacity : 23 Litres / 6.0 US gal

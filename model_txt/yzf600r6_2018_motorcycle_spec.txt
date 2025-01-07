@@ -1,0 +1,33 @@
+Model : YZF 600 R6
+Years : 2018
+Engine : Four stroke, transverse four cylinder, DOHC, 4 valves per cylinder.
+Capacity : 599 cc / 36.5 cu-in
+Bore x Stroke : 67 x 42.5 mm
+Compression Ratio : 13.1;1
+Cooling System : Liquid cooled
+Lubrication : Wet sump
+Induction : Fuel injection with YCC-T and YCC-I
+Ignition : TCI: Transistor Controlled Ignition
+Starting : Electric
+Max Power : 87.1 kW / 116.7 hp @ 14500 rpm
+Max Torque : 61.7 Nm / 45.5 lb-ft @ 10500 rpm
+Clutch : Wet, slipper, cable operated
+Transmission : 6 Speed
+Final Drive : O-ring chain
+Frame : Deltabox aluminium frame with revised rigidity balance
+Front Suspension : 43mm KYB telescopic forks
+Front Wheel Travel : 120 mm / 4.7 in
+Rear Suspension : KYB&#174; piggyback shock, 4-way adjustable
+Rear Wheel Travel : 120 mm / 4.7 in
+Front Brakes : 2x 320mm discs 4 piston calipers
+Rear Brakes : Single 220mm disc 1 piston caliper
+Front Tyre : 120/70 ZR17
+Rear Tyre : 180/55 ZR17
+Rake : 24&#176;
+Trail : 97mm / 3.8 in
+Dimensions : Length 2,040 mm / 80.3 in Width 706 mm / 27.8 in Height 1095 mm / 43.1 in
+Wheelbase : 1375 mm / 54.1 in
+Ground Clearance : 130 mm / 5.1 in
+Seat Height : 850 mm / 33.5 in
+Wet Weight : 190 kg / 419 lbs
+Fuel Capacity : 17.5 Litres / 4.5 US gal

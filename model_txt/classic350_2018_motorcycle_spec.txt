@@ -1,0 +1,30 @@
+Model : Classic 350
+Years : 2018-21
+Engine : Four Stroke, single Cylinder, OHV, SI Engine, Twinspark
+Capacity : 346 cc / 21.1 cu-in
+Bore x Stroke : 70 x 90mm
+Cooling System : Air Cooled
+Compression Ratio : 6.5:1
+Induction : BS29 / UCAL
+Ignition : Digital TCI
+Starting : Electric &amp; Kick
+Max Power : 19.8 hp / 15.3 kW @ 5250 rpm
+Max Torque : 28 Nm / 15.4 lb-ft @ 4000 rpm
+Transmission : Constant Mesh 5 speed
+Final Drive : Chain
+Frame : Single down tube, using engine as stressed member
+Front Suspension : 35mm Hydraulic telescopic forks
+Front Wheel Travel : 135 mm / 5.3 in
+Rear Suspension : Swing Arm With dual gas charged shock absorbers with 5-step adjustable preload
+Rear Wheel Travel : 80 mm / 3.1 in
+Front Brakes : Single 280mm disc
+Rear Brakes : Single 240mm disc
+ABS : Dual Channel
+Front Tyre : 90 / 90 -19
+Rear Tyre : 110/80 -18
+Dimensions : Length 2160 mm / 85.0 in Width 700 mm / 27.5 in Height 1090 mm / 42.9 in
+Wheelbase : 1370 mm / 54.0 in
+Seat Height : 760 mm / 29.9 in
+Ground Clearance : 135 mm / 5.3 in
+Wet Weight : 192 kg / 423 lbs
+Fuel Capacity : 13.5 Litres / 3.5 US gal

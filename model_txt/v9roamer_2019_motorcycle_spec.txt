@@ -1,0 +1,40 @@
+Model : V9 Roamer
+Years : 2019-20
+Engine : Transversal 90&#176; V-twin, 4-stroke, 2-valves per cylinder
+Capacity : 853 cc / 52.0 cu in
+Bore x Stroke : 84 x 77 mm
+Cooling System : Air/oil cooled
+Compression Ratio : 10.5:1
+Exhaust : Stainless steel, 2-in-2 type, three-way catalytic converter with double lambda probe
+Emission : EURO4
+Induction : Marelli MIU single-body electronic injection, integrated management of traction control on 2 levels
+Ignition : Electronic
+Starting : Electric
+Max Power : 40.44 kW / 55 hp @ 6250 rpm
+Max Torque : 62 Nm / 45.7 lb-ft @ 3000 rpm
+Clutch : 170 mm Single disc with integrated flexible couplings
+Transmission : 6-Speed
+Final Drive : Shaft, double universal joint and double bevel gear units, 8:33 ratio
+Gear Ratios : 1st 16:39 (2.437) / 2nd 18:32 (1.778) / 3rd 21:28 (1.333) / 4th 24:26 (1.083) / 5th 25:24 (0.960) 6 th 28:24 (0.857)
+Primary Drive : Helical teeth, 21:25 ratio
+Frame : ALS steel twin tube cradle frame
+Front Suspension : 40mm Standard fork
+Front Wheel Travel : 130 mm / 5.1
+Rear Suspension : Swingarm with double shock absorber with adjustable spring preload.
+Rear Wheel Travel : 99 mm / 3.9 in
+Front Brakes : Single 320mm stainless steel floating disc, Brembo opposed four-piston callipers
+Rear Brakes : Single 260mm stainless steel floating disc, Brembo opposed two-piston callipers
+ABS : Standard advanced two-channel ABS
+Wheels : Aluminium alloy
+Front Rim : 2.50 x 19
+Rear Rim : 4.00 x 16
+Front Tyre : 100/90 - 19
+Rear Tyre : 150/80 - 16
+Rake : 26.4&#176;
+Trail : 125.1 mm / 4.9 i n
+Dimensions : Length: 2240 mm / 88.1 in Width: 865 mm / 34.0 in Height: 1165 mm / 45.8 in
+Wheelbase : 1465 mm / 57.6 in
+Seat Height : 818 mm / 32.2 in
+Wet Weight : 200 kg / 441 lbs
+Fuel Capacity : 15 Litres / 4.0 US gal
+Reserve : 4 Litres / 1.1 US gal

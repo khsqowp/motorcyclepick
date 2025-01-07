@@ -1,0 +1,26 @@
+Model : Belville 125 / RS
+Years : 2017-
+Engine : Four stroke, single cylinder, 2 valve
+Capacity : 124 cc / 7.6 cu-in
+Bore x Stroke : 52.4 x 57.8 mm
+Cooling System : Liquid cooled
+Emission : Euro 4
+Induction : Electronic fuel injection
+Starting : Electric
+Max Power : 11.1 hp / 8.1 kW @8000 rpm
+Max Torque : 10.7 Nm / 7.9 lb-ft @ 6500 rpm
+Transmission : CVT Automatic
+Final Drive : Belt
+Front Suspension : Hydraulic telescopic fork
+Front Wheel Travel : 260 mm / 10.2 in
+Rear Suspension : Adjustable monoshock
+Rear Wheel Travel : 220 mm / 8.7 in
+Front Brakes : Single 260mm disc. ABS
+Rear Brakes : Single 240mm disc. ABS
+Front Tyre : 110/70-16
+Rear Tyre : 110/80-14
+Dimensions : Length 2055 mm / 80.9 in Width 725 mm / 28.5 in Height 1165 mm / 45.9 in
+Wheelbase : 1355 mm / 53.3 in
+Seat Height : 790 mm / 31.1 in
+Dry Weight : 130 kg / 286.6 in
+Fuel Capacity : 7.5 Litres / 1.98 gal

@@ -1,0 +1,37 @@
+Model : DL 1000XT V-Strom GT
+Years : 2018
+Engine : Four stroke, 90&#176;-V-twin, DOHC, 4 valves per cylinder
+Capacity : 1037 cc / 63.2 cu-in
+Bore x Stroke : 100 x 66.0mm
+Cooling System : Liquid cooled
+Compression Ratio : 11.3:1
+Lubrication : Wet sump
+Oil capacity : (Overhaul) 3.5 Litres / 7.4 US pts / 6.2 Imp pts
+Induction : Suzuki Fuel Injection
+Ignition : Electronic ignition
+Starting : Electric
+Max Power : 73.9 kW / 99.2 hp / @ 8000 rpm
+Max Torque : 103 Nm / 10.5 kgf-m / 76 lb-ft @ 4000 rpm
+Clutch : Wet, multiple discs, hydraulic
+Transmission : 6 Speed
+Final Drive : Chain
+Primary Reduction Ratio : 1.838 (57/31)
+Final Reduction Ratio : 2.411 (41/17)
+Frame : Aluminium, twin spar
+Front Suspension : 40mm Inverted telescopic, coil spring, oil damped
+Front Wheel Travel : 160 mm / 6.3 in
+Rear Suspension : Link type, coil spring, oil damped
+Rear Wheel Travel : 160 mm / 6.3 in
+Front Brakes : 2 x 310 mm discs, 4 piston radial calipers, ABS
+Rear Brakes : Single 265 mm disc, 2 piston caliper, ABS
+Wheels : Wire spoked
+Front Tyre : 110/80R19M/C 59V
+Rear Tyre : 150/70R17M/C 69V
+Rake : 25.7&#176;
+Trail : 109 mm / 4.3 in
+Dimensions : Length 2285 mm / 89.96 in Width 865 mm / 34.1 in Height 1410 mm / 55.5 in
+Wheelbase : 1535 mm / 60.4 in
+Ground Clearance : 165 mm / 6.5 in
+Seat Height : 840 mm / 33.1 in
+Wet Weight : 228 kg / 502.6 lbs
+Fuel Capacity : 20 Litres / 5.3 US gal / 4.4 Imp gal

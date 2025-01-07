@@ -1,0 +1,35 @@
+Model : Svartpilen
+Years : 2019-20
+Engine : Four stroke, single cylinder, SOHC, 4 valves with intake cam levers and exhaust rocker arm
+Capacity : 692.7 cc / 42.27 cu in
+Bore x Stroke : 105 x 80 mm
+Compression Ratio : 12.8:1
+Cooling System : Liquid cooling
+Lubrication : Pressure lubrication with 2 oil pumps
+Exhaust : Stainless steel primary and secondary silencer
+Engine Management : Keihin EMS with Ride By Wire
+Induction : Keihin EFI, 50mm throttle body
+Ignition : Keihin EMS, double ignition
+Starting : Electric
+Max Power : 55 kW / 75 hp @ 8500 rpm
+Max Torque : 71 Nm / 7.24 kgf-m / 52.4 ft-lb @ 6750 rpm
+Clutch : APTC slipper clutch, hydraulically actuated
+Transmission : 6 Speed
+Final Drive : Chain X-Ring 5/8 x 1/4"
+Frame : Chromium-Molybdenum-Steel trellis frame, powder coated, aluminium
+Handlebar : Forged aluminium triple clamps
+Front Suspension : 43 mm WP-USD forks
+Front Wheel Travel : 150 mm / 5.9 in
+Rear Suspension : WP-Monoshock with Pro-Lever linkage
+Rear Wheel Travel : 150 mm / 5.9 in
+Front Brakes : Single 320 mm disc, 4 piston Brembo caliper
+Rear Brakes : Single 240 mm disc, Brembo single piston, floating caliper
+ABS : ABS Bosch 9M+ Two Channel
+Front Tyre : Pirelli MT60 RS 18 in
+Rear Tyre : Pirelli MT60 RS 17 in
+Steering Head Angle : 65&#176;
+Wheelbase : NA
+Seat Height : 835 mm / 32.9 in
+Ground Clearance : 164 mm / 6.5 in
+Dry Weight : 158.5 kg / 349.4 lbs
+Fuel Capacity : 12 Litres / 3.17 US gal

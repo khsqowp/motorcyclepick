@@ -1,0 +1,24 @@
+Model : GTS 300 HPE Super
+Years : 2019
+Engine : Four stroke single cylinder, SOHC, 4 valve
+Capacity : 278 cc / 18.2 cub in
+Bore x Stroke : 75 mm x 63 mm
+Cooling : Liquid cooled
+Lubrication : Wet sump, chain driven lube pump
+Ignition : Magneti Marelli MIUG4 ECU
+Starting : Electric
+Max Power : 17.5 kW / 23.8 hp @ 8250 rpm
+Max Torque : 26 Nm / 19.2 lb-ft @ 5250 rpm
+Clutch : Automatic, dry centrifuge with damper buffers
+Transmission : CVT with torque server
+Final Drive : Belt
+Frame : Sheet metal body with welded reinforcements
+Front Suspension : Single sided form with shock
+Rear Suspension : Mono shock
+Front Brakes : Single 220 mm disc - ABS/ASR
+Rear Brakes : Single 220 mm disc - ABS/ASR
+Front Tyre : 120/70 - 12
+Rear Tyre : 130/70 - 12
+Seat Height : 790 mm / 31.1 in
+Dry Weight : 148 kg / 326 lbs
+Fuel Capacity : 7 Litres / 1.8 US gal

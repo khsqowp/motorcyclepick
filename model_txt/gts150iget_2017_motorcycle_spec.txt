@@ -1,0 +1,27 @@
+Model : GTS 150 i-get
+Years : 2017-
+Engine : Four stroke, single cylinder, SOHC, 4 valve
+Capacity : 155.2 cc / 9.5 cu in
+Bore x Stroke : 58 x 58.7 mm
+Cooling System : Liquid cooling
+Lubrication System : Wet sump
+Emissions Compliance : Euro 4
+Induction : Electronic fuel injection
+Ignition : Electronic variable advance
+Starting : Electric
+Max Power : 11 kW / 15 hp @ 8250 rpm
+Max Torque : 14 Nm / 1.43 kgf-m / 10.3 ft-lb @ 6500 rpm
+Clutch : Automatic centrifugal dry clutch
+Transmission : Twist and go CVT with torque server
+Final Drive : Belt
+Frame : Pressed steel sheetmetal with welded reinforcements
+Front Suspension : Single arm suspension with coil spring and hydraulic shock absorber
+Rear Suspension : Double hydraulic shock absorbers with adjustable preload with 4 settings
+Front Brakes : Single 220 mm stainless steel disc, Hydraulically operated
+Rear Brakes : Single 220 mm stainless steel disc, Hydraulically operated
+Front Tyre : 120/70-12, Tubeless
+Rear Tyre : 130/70-12, Tubeless
+Dimensions : Length 1930 mm / 76.0 in Width 755 mm / 29.7 in
+Wheelbase : 1370 mm / 53.9 in
+Seat Height : 790 mm / 31.1 in
+Fuel Capacity : 7 Litres / 1.8 US gal / 1.5 Imp gal

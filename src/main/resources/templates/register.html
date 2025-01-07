@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="_csrf" th:content="${_csrf.token}"/>
+  <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+  <title>Register</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #555;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 2px solid #e1e1e1;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .error-message {
+      color: #dc3545;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.8rem;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #5a6fd6;
+    }
+
+    .link-container {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .link {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .link:hover {
+      color: #5a6fd6;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>회원가입</h2>
+  <!-- form 태그 수정 -->
+  <form th:action="@{/register}" th:object="${user}" method="post" id="registerForm">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+    <div class="form-group">
+      <label for="id">아이디</label>
+      <input type="text" id="id" th:field="*{id}" placeholder="아이디를 입력하세요" required/>
+      <span th:if="${#fields.hasErrors('id')}" th:errors="*{id}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" th:field="*{password}" placeholder="비밀번호를 입력하세요" required/>
+      <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="username">이름</label>
+      <input type="text" id="username" th:field="*{username}" placeholder="이름을 입력하세요" required/>
+      <span th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="email">이메일</label>
+      <input type="email" id="email" th:field="*{email}" placeholder="example@email.com" required/>
+      <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">전화번호</label>
+      <input type="tel" id="phoneNumber" th:field="*{phoneNumber}" placeholder="010-0000-0000"/>
+      <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="instagram">인스타그램</label>
+      <input type="text" id="instagram" th:field="*{instagram}" placeholder="@username"/>
+      <span th:if="${#fields.hasErrors('instagram')}" th:errors="*{instagram}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <button type="button" id="emailVerifyBtn" class="btn">이메일 인증하기</button>
+      <button type="submit" id="submitBtn" class="btn" style="display:none">가입하기</button>
+    </div>
+    <div class="link-container">
+      <a th:href="@{/login}" class="link">이미 계정이 있으신가요? 로그인</a>
+    </div>
+  </form>
+  <div class="form-group" id="verificationCodeGroup" style="display:none">
+    <label for="verificationCode">인증번호</label>
+    <input type="text" id="verificationCode" placeholder="인증번호 6자리"/>
+    <span class="timer" id="timer"></span>
+  </div>
+
+</div>
+<script th:inline="javascript">
+  let verificationTimer;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const csrfHeader = document.querySelector('meta[name="_csrf_header"]').content;
+    const csrfToken = document.querySelector('meta[name="_csrf"]').content;
+
+    const emailVerifyBtn = document.getElementById('emailVerifyBtn');
+    emailVerifyBtn.onclick = async function() {
+      const emailInput = document.getElementById('email');
+      const email = emailInput.value.trim();
+
+      if (!email) {
+        alert('이메일을 입력해주세요.');
+        return;
+      }
+
+      try {
+        const headers = {
+          'Content-Type': 'application/json',
+          [csrfHeader]: csrfToken
+        };
+
+        const response = await fetch('/send-verification', {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify({ email: email })
+        });
+
+        if (response.ok) {
+          document.getElementById('verificationCodeGroup').style.display = 'block';
+          startTimer();
+          alert('인증번호가 전송되었습니다.');
+        } else {
+          const errorText = await response.text();
+          alert(errorText || '인증번호 전송에 실패했습니다.');
+        }
+      } catch (error) {
+        console.error('에러 발생:', error);
+        alert('인증번호 전송 중 오류가 발생했습니다.');
+      }
+    };
+
+    const registerForm = document.getElementById('registerForm');
+    registerForm.onsubmit = function(e) {
+      const emailVerified = document.getElementById('submitBtn').style.display === 'block';
+      if (!emailVerified) {
+        e.preventDefault(); // 폼 제출 막기
+        alert('이메일 인증이 필요합니다.');
+        return false;
+      }
+      return true;
+    };
+
+    document.getElementById('verificationCode').addEventListener('input', async function() {
+      if (this.value.length === 6) {
+        const email = document.getElementById('email').value;
+        try {
+          const response = await fetch('/verify-code', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+              [csrfHeader]: csrfToken
+            },
+            body: `email=${encodeURIComponent(email)}&code=${this.value}`
+          });
+
+          if (response.ok) {
+            clearInterval(verificationTimer);
+            document.getElementById('timer').textContent = '인증완료';
+            document.getElementById('emailVerifyBtn').style.display = 'none';
+            document.getElementById('submitBtn').style.display = 'block';
+            alert('이메일 인증이 완료되었습니다.');
+          } else {
+            const errorText = await response.text();
+            alert(errorText || '잘못된 인증번호입니다.');
+          }
+        } catch (error) {
+          alert('인증 확인에 실패했습니다.');
+        }
+      }
+    });
+  });
+
+  function startTimer() {
+    let timeLeft = 300; // 5분
+    const timerElement = document.getElementById('timer');
+
+    if (verificationTimer) {
+      clearInterval(verificationTimer);
+    }
+
+    verificationTimer = setInterval(() => {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+      if (--timeLeft < 0) {
+        clearInterval(verificationTimer);
+        timerElement.textContent = '시간 만료';
+      }
+    }, 1000);
+  }
+</script>
+</body>
+</html>
