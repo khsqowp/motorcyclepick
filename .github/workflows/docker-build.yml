@@ -38,5 +38,5 @@ jobs:
           tags: |
             khsqowp/motorcyclepick:latest
             khsqowp/motorcyclepick:${{ github.sha }}
-          cache-from: type=registry,ref=khsqowp/motorcycle:latest
+          cache-from: type=registry,ref=khsqowp/motorcyclepick:latest
           cache-to: type=inline
