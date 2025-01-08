@@ -337,12 +337,18 @@ CREATE TABLE `User` (
   `password` varchar(255) NOT NULL,
   `phone_number` char(13) DEFAULT NULL,
   `instagram` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `username` varchar(255) DEFAULT NULL,
+  `birth_date` date DEFAULT '2000-01-01',
+  `region` varchar(50) DEFAULT 'Unknown',
   `email` varchar(255) DEFAULT NULL,
   `role` varchar(20) NOT NULL DEFAULT 'ROLE_USER',
   `encrypted_email` varchar(255) DEFAULT NULL,
   `encrypted_phone` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `idx_id` (`id`),
+  KEY `idx_phone_number` (`phone_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -352,7 +358,7 @@ CREATE TABLE `User` (
 
 LOCK TABLES `User` WRITE;
 /*!40000 ALTER TABLE `User` DISABLE KEYS */;
-INSERT INTO `User` VALUES ('kknd0325','$2a$10$xYKZ2iYplWV5S57HNWT83ufEfkDmaqBfV5wXuwvvLm.mE5F/0AA7.','01050898602','kknd03255','김한수','kknd0325@naver.com','ROLE_USER',NULL,NULL),('kknd03255','$2a$10$ZCFOjI2YtYDZw0DwO67su.0piiOp9/X/eOkWaMNPW0GyMKvLU5ikW','01050058602','88motorcycle','khsqowp','kknd03255@naver.com','ROLE_ADMIN',NULL,NULL),('pillow12356','$2a$10$yCqUylvqZXidJX4nOPFHw.I9jQGzxWQ/VB3b38mISDJXRwIMupesS','010-6663-1256','pillow12360',NULL,'ehdcks1256@naver.com','ROLE_USER',NULL,NULL),('qwer1234','$2a$10$dF2QL0Y4yr1BoWaLugvUuumWZvmtq1CVeWDYs3Dc9ZMq28TU8yHDm','010-4054-8602','qwer1234','qwer1234','qwer1234@naver.com','ROLE_MODERATOR','aErlrkw9NIXseZc+V+xD6tPnZSn8Sj8B9UcYyvRpZDILy2xCfUT9T30kqLlQqQ==','flqxuTW4yq61/nc0de6QGPQf/Z7fpz1sLWvaH+0byQnyhjNfaxp1aEU=');
+INSERT INTO `User` VALUES ('kknd0325','$2a$10$xYKZ2iYplWV5S57HNWT83ufEfkDmaqBfV5wXuwvvLm.mE5F/0AA7.','01050898602','kknd03255','2025-01-08 05:00:35','2025-01-08 05:00:35','김한수','2000-01-01','Unknown','kknd0325@naver.com','ROLE_USER',NULL,NULL),('kknd03255','$2a$10$ZCFOjI2YtYDZw0DwO67su.0piiOp9/X/eOkWaMNPW0GyMKvLU5ikW','01050058602','88motorcycle','2025-01-08 05:00:35','2025-01-08 05:00:35','khsqowp','2000-01-01','Unknown','kknd03255@naver.com','ROLE_ADMIN',NULL,NULL),('pillow12356','$2a$10$yCqUylvqZXidJX4nOPFHw.I9jQGzxWQ/VB3b38mISDJXRwIMupesS','010-6663-1256','pillow12360','2025-01-08 05:00:35','2025-01-08 05:00:35',NULL,'2000-01-01','Unknown','ehdcks1256@naver.com','ROLE_USER',NULL,NULL),('qwer','$2a$10$Hkd2Sgy9W7Hf9gPUhlfQIeXCl.fW2e1dv/HtCcfN6SzN13hcSyAPW','010-5005-8602','khsqowp1','2025-01-08 12:03:23','2025-01-08 12:03:23','qwer','2000-03-25','seoul','kknd03255@naver.com','ROLE_USER',NULL,NULL);
 /*!40000 ALTER TABLE `User` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -365,4 +371,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-07 20:32:50
+-- Dump completed on 2025-01-08 21:20:26
