@@ -48,7 +48,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'        // 실시간 양방향 통신 지원
 	implementation 'org.springframework.boot:spring-boot-starter-validation'       // 폼 데이터 검증
 	implementation 'org.springframework.boot:spring-boot-starter-mail'            // 이메일 발송 기능
-	testImplementation 'com.icegreen:greenmail-junit5:2.0.0'
+	testImplementation 'com.icegreen:greenmail-junit5'
 
 	// ===== 5. 개발 도구 및 유틸리티 =====
 	// 개발 생산성 향상을 위한 도구들

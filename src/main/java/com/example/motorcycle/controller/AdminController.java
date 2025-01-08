@@ -167,7 +167,8 @@ public class AdminController {
     @PostMapping("/editMember/{id}")
     public String editMember(@PathVariable String id, @ModelAttribute UserDTO userDTO, RedirectAttributes redirectAttributes) {
         try {
-            if (userService.findById(id) == null) {
+            UserDTO existingUser = userService.findById(id);
+            if (existingUser == null) {
                 securityLogger.logSecurityEvent(
                         "MEMBER_UPDATE_NOT_FOUND",
                         SecurityContextHolder.getContext().getAuthentication().getName(),
@@ -175,6 +176,25 @@ public class AdminController {
                 );
                 redirectAttributes.addFlashAttribute("error", "사용자를 찾을 수 없습니다.");
                 return "redirect:/admin/memberList";
+            }
+
+            // 휴대폰 번호 포맷팅 (if not null)
+            if (userDTO.getPhoneNumber() != null) {
+                String formattedPhone = userDTO.getPhoneNumber().replaceAll("[^0-9]", "");
+                if (formattedPhone.length() == 11) {
+                    userDTO.setPhoneNumber(String.format("%s-%s-%s",
+                            formattedPhone.substring(0, 3),
+                            formattedPhone.substring(3, 7),
+                            formattedPhone.substring(7)));
+                }
+            }
+
+            // 기본값 설정
+            if (userDTO.getBirthDate() == null) {
+                userDTO.setBirthDate(existingUser.getBirthDate());
+            }
+            if (userDTO.getRegion() == null || userDTO.getRegion().isEmpty()) {
+                userDTO.setRegion(existingUser.getRegion());
             }
 
             userService.updateUser(userDTO);

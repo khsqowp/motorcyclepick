@@ -16,6 +16,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -193,6 +194,94 @@ public class UserService implements UserDetailsService {
                             .getRequest().getRemoteAddr()
             );
             throw new RuntimeException("사용자 삭제 중 오류가 발생했습니다.", e);
+        }
+    }
+
+    public List<UserDTO> findByRegion(String region) {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        String remoteAddr = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
+                .getRequest().getRemoteAddr();
+
+        try {
+            securityLogger.logSecurityEvent(
+                    "FIND_USERS_BY_REGION_REQUEST",
+                    username,
+                    remoteAddr
+            );
+
+            List<UserDomain> userDomains = userMapper.findByRegion(region);
+            List<UserDTO> userDTOs = userDomains.stream()
+                    .map(UserDTO::fromDomain)
+                    .collect(Collectors.toList());
+
+            securityLogger.logSecurityEvent(
+                    "FIND_USERS_BY_REGION_SUCCESS",
+                    username,
+                    remoteAddr
+            );
+
+            return userDTOs;
+        } catch (Exception e) {
+            securityLogger.logSecurityEvent(
+                    "FIND_USERS_BY_REGION_FAILURE",
+                    username,
+                    remoteAddr
+            );
+            throw new RuntimeException("지역별 사용자 조회 중 오류가 발생했습니다.", e);
+        }
+    }
+
+    public List<UserDTO> findByBirthDateBetween(Date startDate, Date endDate) {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        String remoteAddr = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
+                .getRequest().getRemoteAddr();
+
+        try {
+            securityLogger.logSecurityEvent(
+                    "FIND_USERS_BY_BIRTHDATE_REQUEST",
+                    username,
+                    remoteAddr
+            );
+
+            List<UserDomain> userDomains = userMapper.findByBirthDateBetween(startDate, endDate);
+            List<UserDTO> userDTOs = userDomains.stream()
+                    .map(UserDTO::fromDomain)
+                    .collect(Collectors.toList());
+
+            securityLogger.logSecurityEvent(
+                    "FIND_USERS_BY_BIRTHDATE_SUCCESS",
+                    username,
+                    remoteAddr
+            );
+
+            return userDTOs;
+        } catch (Exception e) {
+            securityLogger.logSecurityEvent(
+                    "FIND_USERS_BY_BIRTHDATE_FAILURE",
+                    username,
+                    remoteAddr
+            );
+            throw new RuntimeException("생년월일 범위로 사용자 조회 중 오류가 발생했습니다.", e);
+        }
+    }
+
+    public void updateEncryptedFields(String id, String encryptedEmail, String encryptedPhone) {
+        try {
+            userMapper.updateEncryptedFields(id, encryptedEmail, encryptedPhone);
+            securityLogger.logSecurityEvent(
+                    "UPDATE_ENCRYPTED_FIELDS_SUCCESS",
+                    id,
+                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
+                            .getRequest().getRemoteAddr()
+            );
+        } catch (Exception e) {
+            securityLogger.logSecurityEvent(
+                    "UPDATE_ENCRYPTED_FIELDS_FAILURE",
+                    id,
+                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
+                            .getRequest().getRemoteAddr()
+            );
+            throw new RuntimeException("암호화된 필드 업데이트 중 오류가 발생했습니다.", e);
         }
     }
 }

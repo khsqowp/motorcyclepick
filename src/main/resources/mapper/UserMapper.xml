@@ -10,7 +10,17 @@
         <result property="username" column="username"/>
         <result property="email" column="email"/>
         <result property="role" column="role"/>
+        <result property="region" column="region"/>
+        <result property="encryptedEmail" column="encrypted_email"/>
+        <result property="encryptedPhone" column="encrypted_phone"/>
+        <result property="birthDate" column="birth_date" jdbcType="DATE"
+                typeHandler="org.apache.ibatis.type.LocalDateTypeHandler"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"
+                typeHandler="org.apache.ibatis.type.LocalDateTimeTypeHandler"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"
+                typeHandler="org.apache.ibatis.type.LocalDateTimeTypeHandler"/>
     </resultMap>
+
 
     <select id="findById" resultMap="UserResultMap">
         SELECT *
@@ -19,35 +29,64 @@
     </select>
 
     <select id="findAll" resultMap="UserResultMap">
-        SELECT id, username, email, phone_number, instagram, role
+        SELECT *
         FROM User
         ORDER BY id ASC
     </select>
 
     <insert id="insertUser" parameterType="com.example.motorcycle.domain.UserDomain">
-        INSERT INTO User (id, password, phone_number, instagram, username, email, role)
-        VALUES (#{id}, #{password}, #{phoneNumber}, #{instagram}, #{username}, #{email}, #{role})
+        INSERT INTO User (
+            id, password, phone_number, instagram, username,
+            email, role, birth_date, region,
+            encrypted_email, encrypted_phone
+        )
+        VALUES (
+                   #{id}, #{password}, #{phoneNumber}, #{instagram}, #{username},
+                   #{email}, #{role}, #{birthDate}, #{region},
+                   #{encryptedEmail}, #{encryptedPhone}
+               )
     </insert>
+
     <update id="updateUser" parameterType="com.example.motorcycle.domain.UserDomain">
         UPDATE User
-        SET password     = #{password},
-            email        = #{email},
+        SET password = #{password},
+            email = #{email},
             phone_number = #{phoneNumber},
-            instagram    = #{instagram},
-            username     = #{username},
-            role         = CASE #{role}
-                               WHEN 'ROLE_USER' THEN 'ROLE_USER'
-                               WHEN 'ROLE_MODERATOR' THEN 'ROLE_MODERATOR'
-                               WHEN 'ROLE_ADMIN' THEN 'ROLE_ADMIN'
-                               ELSE 'ROLE_USER'
-                END
+            instagram = #{instagram},
+            username = #{username},
+            role = CASE
+                       WHEN #{role} = 'ROLE_USER' THEN 'ROLE_USER'
+                       WHEN #{role} = 'ROLE_MODERATOR' THEN 'ROLE_MODERATOR'
+                       WHEN #{role} = 'ROLE_ADMIN' THEN 'ROLE_ADMIN'
+                       ELSE 'ROLE_USER'
+                END,
+            birth_date = #{birthDate},
+            region = #{region},
+            encrypted_email = #{encryptedEmail},
+            encrypted_phone = #{encryptedPhone}
         WHERE id = #{id}
     </update>
 
-    <delete id="deleteUser" parameterType="string">
-        DELETE
+    <select id="findByRegion" resultMap="UserResultMap">
+        SELECT *
         FROM User
-        WHERE id = #{id}
-    </delete>
+        WHERE region = #{region}
+        ORDER BY created_at DESC
+    </select>
 
+    <select id="findByBirthDateBetween" resultMap="UserResultMap">
+    <![CDATA[
+        SELECT * FROM User
+        WHERE birth_date >= #{startDate}
+          AND birth_date <= #{endDate}
+        ORDER BY birth_date ASC
+        ]]>
+</select>
+
+    <update id="updateEncryptedFields">
+        UPDATE User
+        SET encrypted_email = #{encryptedEmail},
+            encrypted_phone = #{encryptedPhone}
+        WHERE id = #{id}
+    </update>
 </mapper>

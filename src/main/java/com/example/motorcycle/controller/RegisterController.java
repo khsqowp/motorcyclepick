@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.sql.Date;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -54,39 +56,68 @@ public class RegisterController {
     }
 
     @PostMapping("/register")
-    public String register(@Valid UserDTO userDTO, BindingResult result, HttpServletRequest request, Model model) {
+    @ResponseBody  // JSON 응답을 위해 추가
+    public ResponseEntity<?> register(@RequestBody @Valid UserDTO userDTO,
+                                      BindingResult result,
+                                      HttpServletRequest request) {
+        log.debug("수신된 회원가입 데이터: {}", userDTO);  // 로그 추가
+
         if (result.hasErrors()) {
+            log.error("유효성 검사 실패: {}", result.getAllErrors());  // 로그 추가
             securityLogger.logSecurityEvent(
                     "REGISTER_VALIDATION_FAILURE",
                     userDTO.getId(),
                     request.getRemoteAddr()
             );
-            model.addAttribute("user", userDTO);
-            return "register";
+            return ResponseEntity.badRequest()
+                    .body(result.getAllErrors().get(0).getDefaultMessage());
         }
 
-
-        // 비밀번호 암호화
-        userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
-        // 기본 역할 설정
-        userDTO.setRole("ROLE_USER");
-
-//        userService.registerUser(userDTO);
-
         try {
+            // 기본값 설정
+            userDTO.setBirthDate(validateAndConvertBirthDate(userDTO.getBirthDate()));
+            userDTO.setRegion(validateAndSetDefaultRegion(userDTO.getRegion()));
+            userDTO.setPhoneNumber(formatPhoneNumber(userDTO.getPhoneNumber()));
+
+            // 비밀번호 암호화 및 기본 역할 설정
+            userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+            userDTO.setRole("ROLE_USER");
+
             userService.registerUser(userDTO);
-            return "redirect:/login";
+            log.debug("회원가입 성공: {}", userDTO.getId());  // 로그 추가
+
+            return ResponseEntity.ok().build();
         } catch (Exception e) {
+            log.error("회원가입 처리 중 오류 발생: {}", e.getMessage());  // 로그 추가
             securityLogger.logSecurityEvent(
                     "REGISTER_ERROR",
                     userDTO.getId(),
                     request.getRemoteAddr()
             );
-            model.addAttribute("user", userDTO);
-            model.addAttribute("error", e.getMessage());
-            return "register";
+            return ResponseEntity.badRequest().body(e.getMessage());
         }
+    }
 
+    private LocalDate validateAndConvertBirthDate(LocalDate birthDate) {
+        return birthDate == null ? LocalDate.of(2000, 1, 1) : birthDate;
+    }
+
+    private String validateAndSetDefaultRegion(String region) {
+        return (region == null || region.trim().isEmpty()) ? "Unknown" : region;
+    }
+
+    private String formatPhoneNumber(String phoneNumber) {
+        if (phoneNumber == null || phoneNumber.trim().isEmpty()) {
+            return null;
+        }
+        String numbers = phoneNumber.replaceAll("[^0-9]", "");
+        if (numbers.length() == 11) {
+            return String.format("%s-%s-%s",
+                    numbers.substring(0, 3),
+                    numbers.substring(3, 7),
+                    numbers.substring(7));
+        }
+        return phoneNumber;
     }
 
     @Autowired
@@ -120,7 +151,10 @@ public class RegisterController {
 
     @PostMapping("/verify-code")
     @ResponseBody
-    public ResponseEntity<?> verifyCode(@RequestParam String email, @RequestParam String code) {
+    public ResponseEntity<?> verifyCode(@RequestBody Map<String, String> payload) {
+        String email = payload.get("email");
+        String code = payload.get("code");
+
         VerificationInfo info = verificationCodes.get(email);
         if (info != null && info.getCode().equals(code) && LocalDateTime.now().isBefore(info.getExpiry())) {
             verificationCodes.remove(email);

@@ -10,9 +10,27 @@
         <typeAlias alias="FramesDomain"           type="com.example.motorcycle.domain.FramesDomain"/>
         <typeAlias alias="TransmissionsDomain"    type="com.example.motorcycle.domain.TransmissionsDomain"/>
         <typeAlias alias="EnginesDomain"          type="com.example.motorcycle.domain.EnginesDomain"/>
+        <typeAlias alias="UserDomain"             type="com.example.motorcycle.domain.UserDomain"/>
+
     </typeAliases>
+
+    <settings>
+        <!-- camelCase를 snake_case로 자동 변환 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+
+    <typeHandlers>
+        <typeHandler handler="org.apache.ibatis.type.LocalDateTypeHandler"
+                     javaType="java.time.LocalDate"/>
+        <typeHandler handler="org.apache.ibatis.type.LocalDateTimeTypeHandler"
+                     javaType="java.time.LocalDateTime"/>
+        <typeHandler handler="org.apache.ibatis.type.TimestampTypeHandler"
+                     javaType="java.sql.Timestamp"/>
+    </typeHandlers>
 
     <mappers>
         <mapper resource="mapper/MotorcycleMapper.xml" />
+        <mapper resource="mapper/UserMapper.xml" />  <!-- 이 부분 추가 필요 -->
     </mappers>
 </configuration>

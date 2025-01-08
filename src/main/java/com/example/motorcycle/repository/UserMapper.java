@@ -2,7 +2,9 @@ package com.example.motorcycle.repository;
 
 import com.example.motorcycle.domain.UserDomain;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.data.repository.query.Param;
 
+import java.util.Date;
 import java.util.List;
 
 @Mapper
@@ -19,4 +21,10 @@ public interface UserMapper {
     void deleteUser(String id);
 
     // findByUserId 메서드 제거 (findByUsername으로 대체)
+
+    List<UserDomain> findByRegion(String region);
+
+    List<UserDomain> findByBirthDateBetween(@Param("startDate") Date startDate, @Param("endDate") Date endDate);
+
+    void updateEncryptedFields(@Param("id") String id, @Param("encryptedEmail") String encryptedEmail, @Param("encryptedPhone") String encryptedPhone);
 }
