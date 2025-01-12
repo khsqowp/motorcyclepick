@@ -1,4 +1,5 @@
--- MySQL dump 10.13  Distrib 9.0.1, for macos15.1 (arm64)
+Terminal close -- exit!
+trib 9.0.1, for macos15.1 (arm64)
 --
 -- Host: localhost    Database: MotorcycleDB
 -- ------------------------------------------------------

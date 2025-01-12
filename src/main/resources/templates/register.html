@@ -624,6 +624,33 @@
       }
     }, 1000);
   }
+
+  // register.html의 script 태그 내에 추가
+  document.getElementById('id').addEventListener('blur', async function() {
+    const id = this.value;
+    if (!id) return;
+
+    try {
+      const response = await fetch(`/check-id/${id}`, {
+        method: 'GET',
+        headers: {
+          [csrfHeader]: csrfToken
+        }
+      });
+
+      const result = await response.text();
+
+      if (result === 'duplicate') {
+        // 에러 메시지 표시 로직
+        this.setCustomValidity('이미 사용중인 아이디입니다.');
+        // 또는 별도의 에러 메시지 엘리먼트에 표시
+      } else {
+        this.setCustomValidity('');
+      }
+    } catch (error) {
+      console.error('ID 중복 체크 중 오류 발생:', error);
+    }
+  });
 </script>
 </body>
 </html>

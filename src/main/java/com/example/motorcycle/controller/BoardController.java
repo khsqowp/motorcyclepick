@@ -2,8 +2,10 @@ package com.example.motorcycle.controller;
 
 import com.example.motorcycle.domain.CategoryDomain;
 import com.example.motorcycle.domain.MotorcycleDomain;
+import com.example.motorcycle.dto.BoardDTO;
 import com.example.motorcycle.dto.DictionaryDTO;
 import com.example.motorcycle.form.BoardForm;
+import com.example.motorcycle.service.BoardAnalService;
 import com.example.motorcycle.service.BoardService;
 import com.example.motorcycle.service.DictionaryService;
 import com.example.motorcycle.service.ImageService;
@@ -32,6 +34,7 @@ public class BoardController {
     private final BoardService boardService;
     private final ImageService imageService;
     private final DictionaryService dictionaryService;
+    private final BoardAnalService boardAnalService;
 
     @ModelAttribute("boardForm")
     public BoardForm boardForm() {
@@ -130,6 +133,10 @@ public class BoardController {
                 return "resultPage";
             }
 
+            // resultPage.html로 이동하기 전에 추가
+            BoardDTO dto = BoardDTO.fromBoardForm(boardForm);
+            boardAnalService.saveRecommendationStats(dto, results.get(0));
+
             session.setAttribute("results", results);
 
 
@@ -184,6 +191,7 @@ public class BoardController {
             HttpSession session) {
         try {
             List<MotorcycleDomain> results = (List<MotorcycleDomain>) session.getAttribute("results");
+            BoardForm boardForm = (BoardForm) session.getAttribute("boardForm");
 
             if (results == null || results.isEmpty()) {
                 model.addAttribute("error", "검색 결과를 찾을 수 없습니다.");
@@ -197,6 +205,12 @@ public class BoardController {
                 model.addAttribute("errorMessage", "유효하지 않은 인덱스입니다.");
                 model.addAttribute("errorLocation", "resultsNavigation");
                 return "error";
+            }
+
+            // 현재 선택된 모터사이클에 대한 통계 저장
+            if (boardForm != null) {
+                BoardDTO dto = BoardDTO.fromBoardForm(boardForm);
+                boardAnalService.saveRecommendationStats(dto, results.get(index));
             }
 
             model.addAttribute("motorcycle", results.get(index));

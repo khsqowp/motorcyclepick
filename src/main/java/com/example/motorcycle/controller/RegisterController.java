@@ -162,6 +162,7 @@ public class RegisterController {
         }
         return ResponseEntity.badRequest().body("잘못된 인증번호 또는 만료된 인증번호입니다.");
     }
+
     static class VerificationInfo {
         private final String code;
         private final LocalDateTime expiry;
@@ -188,4 +189,37 @@ public class RegisterController {
         }
     }
 
+    @GetMapping("/check-id/{id}")
+    @ResponseBody
+    public ResponseEntity<?> checkIdDuplicate(@PathVariable String id,
+                                              HttpServletRequest request) {
+        try {
+            // 무작위 지연 시간 추가 (200~500ms)
+            Thread.sleep((long) (Math.random() * 300) + 200);
+
+            // SecurityLogger를 통한 로깅
+            securityLogger.logSecurityEvent(
+                    "ID_CHECK_REQUEST",
+                    id,
+                    request.getRemoteAddr()
+            );
+
+            if (userService.findById(id) != null) {
+                securityLogger.logSecurityEvent(
+                        "ID_CHECK_DUPLICATE",
+                        id,
+                        request.getRemoteAddr()
+                );
+                return ResponseEntity.ok().body("duplicate");
+            }
+            return ResponseEntity.ok().body("available");
+        } catch (InterruptedException e) {
+            securityLogger.logSecurityEvent(
+                    "ID_CHECK_ERROR",
+                    id,
+                    request.getRemoteAddr()
+            );
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
 }

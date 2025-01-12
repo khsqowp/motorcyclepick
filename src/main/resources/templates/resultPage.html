@@ -545,6 +545,47 @@
             });
         }
     });
+
+    /*<![CDATA[*/
+    document.getElementById('saveResultBtn').addEventListener('click', function() {
+        const boardForm = [[${session.boardForm}]];
+        if (!boardForm) {
+            alert('설문 데이터를 찾을 수 없습니다.');
+            return;
+        }
+
+        fetch('/analysis/save-recommendation', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector("meta[name='_csrf']").content
+            },
+            body: JSON.stringify({
+                question1: boardForm.question1,
+                question2: boardForm.question2,
+                question3: boardForm.question3,
+                question4: boardForm.question4,
+                question5: boardForm.question5,
+                question6: boardForm.question6,
+                question7: boardForm.question7
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('결과가 성공적으로 저장되었습니다.');
+                    document.getElementById('saveResultBtn').disabled = true;
+                    document.getElementById('saveResultBtn').textContent = '저장 완료';
+                } else {
+                    alert(data.message || '저장 중 오류가 발생했습니다.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('저장 중 오류가 발생했습니다.');
+            });
+    });
+    /*]]>*/
 </script>
 </body>
 </html>

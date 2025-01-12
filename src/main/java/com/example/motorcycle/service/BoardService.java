@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 public class BoardService {
     private final MotorcycleMapper motorcycleMapper;
 
+
     //    ___________________________________________________________________________________________________________________________
 
     public List<String> getDistinctBrands() {

@@ -39,10 +39,11 @@ public class SecurityConfig {
                         .csrfTokenRepository(csrfTokenRepository()))
                 .authorizeHttpRequests(auth -> auth
                         .antMatchers(
-                                "/", "/register", "/uploadMotorcycle", "/surveyMotorcycle",
+                                "/", "/register", "/check-id/*", "/uploadMotorcycle", "/surveyMotorcycle",
                                 "/resultPage", "/error", "/login", "/dictionary",
-                                "/api/**", "/static/**", "/css/**", "/js/**", "/images/**",
-                                "/send-verification", "/verify-code", "/email-verification")
+                                "/api/**", "analytics/**", "/static/**", "/css/**", "/js/**", "/images/**",
+                                "/send-verification", "/verify-code", "/email-verification",
+                                "https://cdnjs.cloudflare.com/**")  // CDN 접근 허용
                         .permitAll()
                         .antMatchers("/motorcycle/delete").hasRole("ADMIN")
                         .antMatchers("/motorcycle/**").authenticated()
@@ -73,7 +74,7 @@ public class SecurityConfig {
                         .xssProtection(xss -> xss.block(true))
                         .contentSecurityPolicy(csp -> csp.policyDirectives(
                                 "default-src 'self'; " +
-                                        "script-src 'self' 'unsafe-inline'; " +
+                                        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; " +
                                         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
                                         "img-src 'self' data: https:; " +
                                         "font-src 'self' https://fonts.gstatic.com;"))
@@ -81,7 +82,7 @@ public class SecurityConfig {
                             response.setHeader("X-XSS-Protection", "1; mode=block");
                             response.setHeader("Content-Security-Policy",
                                     "default-src 'self'; " +
-                                            "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
+                                            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; " +
                                             "style-src 'self' 'unsafe-inline'; " +
                                             "img-src 'self' data: https:; " +
                                             "font-src 'self' https:; ");
@@ -99,4 +100,6 @@ public class SecurityConfig {
     public CsrfTokenRepository csrfTokenRepository() {
         return CookieCsrfTokenRepository.withHttpOnlyFalse();
     }
+
+
 }

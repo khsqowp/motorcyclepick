@@ -74,4 +74,6 @@ public class SecurityLogger {
         blockedIPs.put(ipAddress, LocalDateTime.now());
         log.warn("IP {} has been blocked due to multiple failed login attempts", ipAddress);
     }
+
+
 }
