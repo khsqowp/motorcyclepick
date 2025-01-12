@@ -1,0 +1,243 @@
+2025-01-12 00:01:55 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s157ms).
+2025-01-12 00:07:02 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m6s362ms).
+2025-01-12 00:09:14 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s569ms).
+2025-01-12 00:26:43 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m29s123ms).
+2025-01-12 00:28:27 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m43s313ms).
+2025-01-12 00:37:08 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m10s810ms).
+2025-01-12 00:38:51 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m43s511ms).
+2025-01-12 01:30:01 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m39s404ms).
+2025-01-12 01:58:59 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m28s112ms).
+2025-01-12 02:31:46 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m47s537ms).
+2025-01-12 02:43:53 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m6s649ms).
+2025-01-12 03:16:35 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m42s446ms).
+2025-01-12 03:25:18 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m42s339ms).
+2025-01-12 03:27:00 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s620ms).
+2025-01-12 04:49:02 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h21m31s356ms).
+2025-01-12 05:53:39 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h4m36s965ms).
+2025-01-12 06:59:39 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h5m30s692ms).
+2025-01-12 07:43:14 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=43m3s893ms).
+2025-01-12 07:54:43 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m58s746ms).
+2025-01-12 08:03:13 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m640ms).
+2025-01-12 08:04:55 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m41s593ms).
+2025-01-12 08:36:46 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m20s730ms).
+2025-01-12 08:45:13 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m56s918ms).
+2025-01-12 08:46:54 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m41s815ms).
+2025-01-12 08:51:03 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m54s477ms).
+2025-01-12 08:54:39 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m5s218ms).
+2025-01-12 08:56:44 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m35s297ms).
+2025-01-12 09:05:00 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m15s781ms).
+2025-01-12 09:07:13 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m43s517ms).
+2025-01-12 09:23:19 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m5s820ms).
+2025-01-12 11:03:08 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m18s264ms).
+2025-01-12 11:04:51 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s871ms).
+2025-01-12 11:21:52 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m31s492ms).
+2025-01-12 13:23:06 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m13s581ms).
+2025-01-12 13:24:49 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s617ms).
+2025-01-12 13:28:34 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m15s825ms).
+2025-01-12 13:37:14 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m9s968ms).
+2025-01-12 13:38:58 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m43s495ms).
+2025-01-12 13:46:08 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m40s107ms).
+2025-01-12 13:55:47 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m39s561ms).
+2025-01-12 14:04:45 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m45s30ms).
+2025-01-12 14:16:57 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m42s35ms).
+2025-01-12 14:32:54 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s556ms).
+2025-01-12 14:33:53 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-12 14:33:53 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-01-12 14:33:53 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-01-12 14:34:00 [restartedMain] INFO  c.e.motorcycle.MotorcycleApplication - Starting MotorcycleApplication using Java 17.0.12 on 192.168.nate.com with PID 50037 (/Users/user/Desktop/CODE/Project/motorcycle/build/classes/java/main started by user in /Users/user/Desktop/CODE/Project/motorcycle)
+2025-01-12 14:34:00 [restartedMain] INFO  c.e.motorcycle.MotorcycleApplication - The following 1 profile is active: "local"
+2025-01-12 14:34:00 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-12 14:34:00 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-12 14:34:00 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-12 14:34:00 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2025-01-12 14:34:00 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-12 14:34:00 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-12 14:34:00 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-01-12 14:34:00 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-12 14:34:00 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 686 ms
+2025-01-12 14:34:01 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-01-12 14:34:01 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-01-12 14:34:01 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-12 14:34:01 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+2025-01-12 14:34:01 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-01-12 14:34:01 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-01-12 14:34:01 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-12 14:34:01 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-12 14:34:01 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31405a3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2eacc275, org.springframework.security.web.context.SecurityContextPersistenceFilter@7de550be, org.springframework.security.web.header.HeaderWriterFilter@7fea6a3b, org.springframework.security.web.csrf.CsrfFilter@18f9783c, org.springframework.security.web.authentication.logout.LogoutFilter@3ac9ff46, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f830ee, org.springframework.security.web.session.ConcurrentSessionFilter@612d2e99, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6076cb86, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@97b2108, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c11bf69, org.springframework.security.web.session.SessionManagementFilter@4d082754, org.springframework.security.web.access.ExceptionTranslationFilter@3cd26ddd, org.springframework.security.web.access.intercept.AuthorizationFilter@f13a79e]
+2025-01-12 14:34:01 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-12 14:34:01 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-01-12 14:34:01 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-01-12 14:34:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-12 14:34:01 [restartedMain] INFO  c.e.motorcycle.MotorcycleApplication - Started MotorcycleApplication in 1.911 seconds (JVM running for 2.449)
+2025-01-12 14:34:02 [RMI TCP Connection(2)-192.168.30.151] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-12 14:34:02 [RMI TCP Connection(2)-192.168.30.151] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-12 14:34:02 [RMI TCP Connection(2)-192.168.30.151] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-01-12 14:34:02 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:34:02.436970]
+2025-01-12 14:34:02 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:34:02.438515]
+2025-01-12 14:34:04 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:34:04.650194]
+2025-01-12 14:34:05 [http-nio-0.0.0.0-8080-exec-6] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:34:05.865945]
+2025-01-12 14:35:53 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:35:53.951044]
+2025-01-12 14:35:59 [http-nio-0.0.0.0-8080-exec-10] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=USER_LOGIN_SUCCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:35:59.670984]
+2025-01-12 14:35:59 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:35:59.744785]
+2025-01-12 14:36:02 [http-nio-0.0.0.0-8080-exec-3] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:02.793725]
+2025-01-12 14:36:02 [http-nio-0.0.0.0-8080-exec-3] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:02.795218]
+2025-01-12 14:36:02 [http-nio-0.0.0.0-8080-exec-3] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:02.795677]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_PAGE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.121926]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_DAILY_RESPONSE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.134213]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_BUDGET_DISTRIBUTION_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.151575]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_ENGINE_CAPACITY_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.155937]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ACCESS_SUCCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.156854]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_RIDING_STYLE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.157547]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_SPEED_RANGE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.159209]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_RIDING_DISTANCE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.160500]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_RPM_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.161505]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_STYLE_PREFERENCE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.162799]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_TOP_MODELS_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.177749]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_BRAND_FREQUENCY_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.197243]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ACCESS_SUCCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.198419]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_BRAND_TRENDS_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.199325]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_MODELS_BY_BUDGET_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.217685]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_MODELS_BY_PURPOSE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.221482]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_STYLE_COMBINATION_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.225022]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_MONTHLY_TRENDS_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.230451]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_SEASONAL_PREFERENCE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.233604]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ACCESS_SUCCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.236905]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.237159]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-10] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_ENGINE_CAPACITY_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.403885]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_BUDGET_DISTRIBUTION_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.404524]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_RIDING_STYLE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.404630]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-3] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_SPEED_RANGE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.404965]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_RIDING_DISTANCE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.404660]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-10] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ACCESS_SUCCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.407890]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-10] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.410281]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.410309]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-3] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.410290]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.410290]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.410281]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-8] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_DAILY_RESPONSE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.428742]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_RPM_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.433893]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-6] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_TOP_MODELS_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.434]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=ANALYTICS_STYLE_PREFERENCE_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.433906]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-8] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.433864]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.436153]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.436153]
+2025-01-12 14:36:04 [http-nio-0.0.0.0-8080-exec-6] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:04.436153]
+2025-01-12 14:36:06 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:06.840367]
+2025-01-12 14:36:06 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:06.841181]
+2025-01-12 14:36:06 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:06.841621]
+2025-01-12 14:36:21 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T14:36:21.042198]
+2025-01-12 15:09:02 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:09:02.644096]
+2025-01-12 15:09:02 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:09:02.646116]
+2025-01-12 15:09:04 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:09:04.347677]
+2025-01-12 15:18:16 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=USER_NOT_FOUND, user=kknd, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:16.138561]
+2025-01-12 15:18:16 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=USER_LOGIN_FAILURE, user=kknd, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:16.144530]
+2025-01-12 15:18:16 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=USER_NOT_FOUND, user=kknd, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:16.296213]
+2025-01-12 15:18:16 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=USER_LOGIN_FAILURE, user=kknd, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:16.296405]
+2025-01-12 15:18:16 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:16.382825]
+2025-01-12 15:18:21 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=USER_LOGIN_SUCCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:21.470118]
+2025-01-12 15:18:21 [http-nio-0.0.0.0-8080-exec-3] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:21.590928]
+2025-01-12 15:18:31 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=USER_LOGIN_SUCCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:31.506424]
+2025-01-12 15:18:31 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:31.619816]
+2025-01-12 15:18:32 [http-nio-0.0.0.0-8080-exec-10] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:32.864682]
+2025-01-12 15:18:34 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:34.045390]
+2025-01-12 15:18:37 [http-nio-0.0.0.0-8080-exec-6] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:37.449890]
+2025-01-12 15:18:38 [http-nio-0.0.0.0-8080-exec-8] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:38.079833]
+2025-01-12 15:18:38 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:38.301920]
+2025-01-12 15:18:38 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:38.501664]
+2025-01-12 15:18:38 [http-nio-0.0.0.0-8080-exec-3] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:38.708939]
+2025-01-12 15:18:39 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:39.930631]
+2025-01-12 15:18:43 [http-nio-0.0.0.0-8080-exec-10] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=USER_LOGIN_SUCCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:43.252962]
+2025-01-12 15:18:43 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=anonymousUser, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:43.363922]
+2025-01-12 15:18:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-12 15:18:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-01-12 15:18:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-01-12 15:18:48 [restartedMain] INFO  c.e.motorcycle.MotorcycleApplication - Starting MotorcycleApplication using Java 17.0.12 on 192.168.nate.com with PID 59150 (/Users/user/Desktop/CODE/Project/motorcycle/build/classes/java/main started by user in /Users/user/Desktop/CODE/Project/motorcycle)
+2025-01-12 15:18:48 [restartedMain] INFO  c.e.motorcycle.MotorcycleApplication - The following 1 profile is active: "local"
+2025-01-12 15:18:48 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-12 15:18:48 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-12 15:18:48 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-12 15:18:48 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2025-01-12 15:18:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-12 15:18:48 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-12 15:18:48 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-01-12 15:18:48 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-12 15:18:48 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 556 ms
+2025-01-12 15:18:48 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-01-12 15:18:49 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-01-12 15:18:49 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-12 15:18:49 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+2025-01-12 15:18:49 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-01-12 15:18:49 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-01-12 15:18:49 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-12 15:18:49 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-12 15:18:49 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@13288dcd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65d60303, org.springframework.security.web.context.SecurityContextPersistenceFilter@47c92bdb, org.springframework.security.web.header.HeaderWriterFilter@1cb4f5ee, org.springframework.security.web.csrf.CsrfFilter@552bd328, org.springframework.security.web.authentication.logout.LogoutFilter@6dc2bd04, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2b4386c, org.springframework.security.web.session.ConcurrentSessionFilter@4210c978, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d53ae92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ac0d087, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a032b66, org.springframework.security.web.session.SessionManagementFilter@599b6472, org.springframework.security.web.access.ExceptionTranslationFilter@3bdba23d, org.springframework.security.web.access.intercept.AuthorizationFilter@5dce5681]
+2025-01-12 15:18:49 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-12 15:18:49 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-01-12 15:18:49 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-01-12 15:18:49 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-12 15:18:49 [restartedMain] INFO  c.e.motorcycle.MotorcycleApplication - Started MotorcycleApplication in 1.607 seconds (JVM running for 2.316)
+2025-01-12 15:18:50 [RMI TCP Connection(2)-192.168.30.151] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-12 15:18:50 [RMI TCP Connection(2)-192.168.30.151] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-12 15:18:50 [RMI TCP Connection(2)-192.168.30.151] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-01-12 15:18:54 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=USER_LOGIN_SUCCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:54.681634]
+2025-01-12 15:18:54 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:54.790977]
+2025-01-12 15:18:54 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:54.792228]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.358638]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.m.controller.BoardController - Brand: Aprilia - Found 8 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.477517]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-6] INFO  c.e.m.controller.BoardController - Brand: Benelli - Found 6 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-6] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.492854]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.m.controller.BoardController - Brand: BMW - Found 52 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.500233]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-8] INFO  c.e.m.controller.BoardController - Brand: CFMoto - Found 4 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-8] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.506875]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.m.controller.BoardController - Brand: Ducati - Found 53 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.513704]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-10] INFO  c.e.m.controller.BoardController - Brand: Harley Davidson - Found 40 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-10] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.520283]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.m.controller.BoardController - Brand: Honda - Found 38 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.526344]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.m.controller.BoardController - Brand: Husqvarna - Found 10 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.532597]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-3] INFO  c.e.m.controller.BoardController - Brand: Indian - Found 14 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-3] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.539496]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.m.controller.BoardController - Brand: Kawasaki - Found 25 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.544671]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.m.controller.BoardController - Brand: KTM - Found 25 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.550376]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-6] INFO  c.e.m.controller.BoardController - Brand: Kymco - Found 1 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-6] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.555668]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.m.controller.BoardController - Brand: Moto Guzzi - Found 8 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.562273]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-8] INFO  c.e.m.controller.BoardController - Brand: MV Agusta - Found 11 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-8] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.569147]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.m.controller.BoardController - Brand: Peugeot - Found 1 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.575383]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-10] INFO  c.e.m.controller.BoardController - Brand: Piaggio - Found 2 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-10] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.581230]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.m.controller.BoardController - Brand: Royal Enfield - Found 3 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.586780]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.m.controller.BoardController - Brand: Suzuki - Found 33 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-2] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.594280]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-3] INFO  c.e.m.controller.BoardController - Brand: Triumph - Found 35 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-3] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.599705]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.m.controller.BoardController - Brand: Unknown - Found 4 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-4] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.605560]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.m.controller.BoardController - Brand: Vespa - Found 10 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.610402]
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-6] INFO  c.e.m.controller.BoardController - Brand: Yamaha - Found 31 models
+2025-01-12 15:18:57 [http-nio-0.0.0.0-8080-exec-6] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:18:57.615922]
+2025-01-12 15:19:00 [http-nio-0.0.0.0-8080-exec-7] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:19:00.104183]
+2025-01-12 15:19:01 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=DICTIONARY_PUBLIC_CATEGORY_LIST_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:19:01.173730]
+2025-01-12 15:19:01 [http-nio-0.0.0.0-8080-exec-9] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:19:01.179633]
+2025-01-12 15:19:02 [http-nio-0.0.0.0-8080-exec-10] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:19:02.230228]
+2025-01-12 15:19:03 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:19:03.444753]
+2025-01-12 15:19:03 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:19:03.446551]
+2025-01-12 15:19:03 [http-nio-0.0.0.0-8080-exec-1] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:19:03.447111]
+2025-01-12 15:19:06 [http-nio-0.0.0.0-8080-exec-5] INFO  c.e.motorcycle.config.SecurityLogger - Security Event: SecurityEvent[event=CONTROLLER_ACCESS, user=kknd03255, ip=0:0:0:0:0:0:0:1, time=2025-01-12T15:19:06.148758]
+2025-01-12 15:22:34 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 127 class path changes (0 additions, 127 deletions, 0 modifications)
+2025-01-12 15:22:34 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-01-12 15:22:34 [Thread-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2025-01-12 15:22:34 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-12 15:22:34 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-01-12 15:22:34 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
