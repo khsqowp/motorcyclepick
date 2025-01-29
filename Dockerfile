@@ -14,10 +14,6 @@ RUN mkdir -p ~/.gradle && \
 # gradle wrapper 설정
 COPY gradle/wrapper/gradle-wrapper.properties .
 
-# DNS 및 네트워크 설정
-RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf && \
-    echo "nameserver 8.8.4.4" >> /etc/resolv.conf
-
 # 소스 코드 복사
 COPY src src
 
@@ -31,7 +27,8 @@ RUN --mount=type=cache,target=/root/.gradle \
     -Dorg.gradle.console=plain \
     -Dhttps.protocols=TLSv1.2,TLSv1.3 \
     -Djdk.http.auth.tunneling.disabledSchemes="" \
-    -Dgradle.user.home=/root/.gradle
+    -Dgradle.user.home=/root/.gradle \
+    -Djava.net.preferIPv4Stack=true
 
 # 실행 환경
 FROM eclipse-temurin:17-jre-jammy
