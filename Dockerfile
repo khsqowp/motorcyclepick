@@ -9,10 +9,7 @@ COPY settings.gradle .
 
 # 플러그인 리포지토리 설정 추가
 RUN mkdir -p ~/.gradle && \
-    echo "pluginManagement { repositories { gradlePluginPortal() } }" > settings.gradle
-
-# gradle wrapper 설정
-COPY gradle/wrapper/gradle-wrapper.properties .
+    echo "pluginManagement { repositories { gradlePluginPortal(); mavenCentral() } }" > settings.gradle
 
 # 소스 코드 복사
 COPY src src
@@ -21,14 +18,7 @@ COPY src src
 RUN chmod +x ./gradlew
 RUN --mount=type=cache,target=/root/.gradle \
     ./gradlew build -x test --no-daemon \
-    --refresh-dependencies \
-    -Dorg.gradle.internal.http.socketTimeout=180000 \
-    -Dorg.gradle.internal.http.connectionTimeout=180000 \
-    -Dorg.gradle.console=plain \
-    -Dhttps.protocols=TLSv1.2,TLSv1.3 \
-    -Djdk.http.auth.tunneling.disabledSchemes="" \
-    -Dgradle.user.home=/root/.gradle \
-    -Djava.net.preferIPv4Stack=true
+    -Dorg.gradle.console=plain
 
 # 실행 환경
 FROM eclipse-temurin:17-jre-jammy
