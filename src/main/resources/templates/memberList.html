@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 관리</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;">
+    <style>
+        :root {
+            --razer-green: #00ff00;
+            --razer-dark: #111111;
+            --razer-gray: #222222;
+            --razer-light-gray: #333333;
+            --terminal-font: 'Consolas', 'Monaco', monospace;
+        }
+
+        body {
+            background-color: var(--razer-dark);
+            color: var(--razer-green);
+            font-family: var(--terminal-font);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .member-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--razer-green);
+            border-radius: 4px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+            position: relative;
+        }
+
+        .member-container::before {
+            content: "RAZER MEMBER CONSOLE v1.0.0";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background-color: var(--razer-dark);
+            padding: 0 10px;
+            color: var(--razer-green);
+            font-size: 12px;
+        }
+
+        .section-title {
+            color: var(--razer-green);
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--razer-green);
+            padding-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .section-title::before {
+            content: "> ";
+            color: var(--razer-green);
+            opacity: 0.7;
+        }
+
+        .table {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--razer-green);
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .table th, .table td {
+            padding: 12px;
+            border: 1px solid var(--razer-green);
+            color: var(--razer-green);
+        }
+
+        .table th {
+            background-color: rgba(0, 255, 0, 0.1);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .table tbody tr:hover {
+            background-color: rgba(0, 255, 0, 0.05);
+        }
+
+        .btn {
+            background-color: transparent;
+            color: var(--razer-green);
+            border: 1px solid var(--razer-green);
+            padding: 8px 16px;
+            text-decoration: none;
+            font-family: var(--terminal-font);
+            font-size: 14px;
+            border-radius: 2px;
+            display: inline-block;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        .btn::before {
+            content: "$ ";
+            opacity: 0.7;
+        }
+
+        .btn:hover {
+            background-color: var(--razer-green);
+            color: var(--razer-dark);
+            box-shadow: 0 0 15px var(--razer-green);
+        }
+
+        .btn-warning {
+            border-color: #ffc107;
+            color: #ffc107;
+        }
+
+        .btn-warning:hover {
+            background-color: #ffc107;
+            box-shadow: 0 0 15px #ffc107;
+        }
+
+        .btn-danger {
+            border-color: #dc3545;
+            color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #dc3545;
+            box-shadow: 0 0 15px #dc3545;
+        }
+
+        .alert {
+            font-family: var(--terminal-font);
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 3px solid;
+            background-color: rgba(255, 0, 0, 0.1);
+            border-color: #ff0000;
+            color: #ff0000;
+        }
+
+        .alert::before {
+            content: "[ERROR] ";
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .section-title::after {
+            content: "_";
+            display: inline-block;
+            animation: blink 1s infinite;
+            color: var(--razer-green);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .home-btn {
+            background-color: transparent;
+            color: var(--razer-green);
+            border: 1px solid var(--razer-green);
+            padding: 8px 16px;
+            text-decoration: none;
+            font-family: var(--terminal-font);
+            font-size: 14px;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            height: fit-content;
+        }
+
+        .home-btn::before {
+            content: "$ ";
+            opacity: 0.7;
+        }
+
+        .home-btn:hover {
+            background-color: var(--razer-green);
+            color: var(--razer-dark);
+            box-shadow: 0 0 15px var(--razer-green);
+        }
+    </style>
+</head>
+<body>
+<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+<div class="container">
+    <div class="member-container">
+        <div sec:authorize="hasRole('ROLE_ADMIN')">
+            <div class="header-container">
+                <h2 class="section-title">회원 관리 콘솔</h2>
+                <a href="/motorcycle" class="home-btn">홈으로 돌아가기</a>
+            </div>
+            <div th:if="${error}" class="alert" role="alert">
+                <span th:text="${error}">오류 메시지</span>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>아이디</th>
+                        <th>사용자명</th>
+                        <th>이메일</th>
+                        <th>전화번호</th>
+                        <th>인스타그램</th>
+                        <th>권한</th>
+                        <th>관리</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="user : ${users}">
+                        <td th:text="${user.id}">아이디</td>
+                        <td th:text="${user.username}">사용자명</td>
+                        <td th:text="${user.email}">이메일</td>
+                        <td th:text="${user.phoneNumber}">전화번호</td>
+                        <td th:text="${user.instagram}">인스타그램</td>
+                        <td>
+                            <th:block th:switch="${user.role}">
+                                <span th:case="'ROLE_ADMIN'" style="color: #ff0000;">관리자</span>
+                                <span th:case="'ROLE_MODERATOR'" style="color: #00ff00;">매니저</span>
+                                <span th:case="'ROLE_USER'" style="color: #ffffff;">사용자</span>
+                            </th:block>
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-warning"
+                                        th:data-id="${user.id}"
+                                        onclick="editUser(this.getAttribute('data-id'))">수정</button>
+                                <button type="button" class="btn btn-danger"
+                                        th:data-id="${user.id}"
+                                        onclick="deleteUser(this.getAttribute('data-id'))">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div sec:authorize="!hasRole('ROLE_ADMIN')" class="alert">
+            접근 권한이 없습니다.
+        </div>
+    </div>
+</div>
+
+<script>
+    function addConsoleEffect(message) {
+        const chars = message.split('');
+        let output = '';
+        let i = 0;
+        const interval = setInterval(() => {
+            if (i < chars.length) {
+                output += chars[i];
+                console.log(`${output}_`);
+                i++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 50);
+    }
+
+    function getCSRFToken() {
+        return document.querySelector('input[name="_csrf"]').value;
+    }
+
+    function editUser(userId) {
+        if(confirm('[CONFIRM] 해당 회원 정보를 수정하시겠습니까?')) {
+            addConsoleEffect('Initiating edit sequence for User ' + userId + '...');
+            const token = getCSRFToken();
+            setTimeout(() => {
+                window.location.href = `/admin/editMember/${userId}?_csrf=${token}`;
+            }, 500);
+        }
+    }
+
+    function deleteUser(userId) {
+        if(confirm('[WARNING] 정말로 이 회원을 삭제하시겠습니까?')) {
+            addConsoleEffect('Initiating delete sequence for User ' + userId + '...');
+            const token = getCSRFToken();
+
+            fetch(`/admin/deleteMember/${userId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': token
+                },
+                credentials: 'same-origin'
+            })
+                .then(response => {
+                    // 응답 상태 확인 추가
+                    if (response.status === 403) {
+                        throw new Error('권한이 없습니다.');
+                    }
+                    if (response.status === 401) {
+                        throw new Error('인증이 필요합니다.');
+                    }
+                    if (!response.ok) {
+                        return response.json().then(data => {
+                            throw new Error(data.message || '회원 삭제 중 오류가 발생했습니다.');
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if(data.success) {
+                        addConsoleEffect('[SUCCESS] 회원이 성공적으로 삭제되었습니다.');
+                        setTimeout(() => location.reload(), 1000);
+                    } else {
+                        addConsoleEffect('[ERROR] ' + (data.message || '회원 삭제 중 오류가 발생했습니다.'));
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    addConsoleEffect('[ERROR] ' + error.message);
+                    // 오류 메시지를 화면에 표시
+                    const errorDiv = document.createElement('div');
+                    errorDiv.className = 'alert';
+                    errorDiv.textContent = error.message;
+                    document.querySelector('.member-container').insertBefore(
+                        errorDiv,
+                        document.querySelector('.table-responsive')
+                    );
+                });
+        }
+    }
+
+    // 페이지 로드 시 콘솔 효과
+    document.addEventListener('DOMContentLoaded', function() {
+        addConsoleEffect('Initializing Member Management Console...');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <title>오토바이 용어 사전</title>
+    <style>
+        /* 기존 스타일 코드는 동일하게 유지 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --background: #0F172A;
+            --card-bg: #1E293B;
+            --accent: #3B82F6;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --hover-color: #2563EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .category-button {
+            background: var(--card-bg);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-button:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .category-name {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .category-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .terms-list {
+            display: none;
+            background: var(--card-bg);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .term-item {
+            padding: 1rem;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+            color: var(--text-primary);
+        }
+
+        .term-item:hover {
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .term-details {
+            display: none;
+            background: var(--card-bg);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 1rem;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 300px;
+            max-width: 600px;
+            z-index: 1000;
+        }
+
+        .term-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .term-definition {
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .close-button:hover {
+            color: var(--text-primary);
+        }
+
+        .back-button {
+            background: var(--accent);
+            color: var(--text-primary);
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: var(--hover-color);
+            transform: translateY(-2px);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(4px);
+            z-index: 999;
+        }
+
+        @media (max-width: 768px) {
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .term-details {
+                width: 90%;
+                margin: 1rem;
+            }
+        }
+
+        .request-term-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 2rem;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .request-term-btn:hover {
+            background: var(--hover-color);
+            transform: translateY(-2px);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+        }
+
+        .modal-content {
+            position: relative;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            max-width: 500px;
+            margin: 4rem auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 0.5rem;
+            background: var(--background);
+            color: var(--text-primary);
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        .submit-btn,
+        .cancel-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+        }
+
+        .cancel-btn {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <nav class="nav-content">
+        <a class="logo" href="/"> 🏍️ 16MOTORBIKES </a>
+    </nav>
+</header>
+
+<div class="container">
+    <button class="back-button" id="backButton">← 카테고리로 돌아가기</button>
+
+    <div class="category-grid" id="categoryGrid">
+        <div class="category-button" th:data-category="${category.categoryName}"
+                th:each="category : ${categories}">
+            <div class="category-name" th:text="${category.categoryName}"></div>
+            <div class="category-desc" th:text="${category.description}"></div>
+        </div>
+    </div>
+
+    <div class="terms-list" id="termsList"></div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="term-details" id="termDetails">
+        <button class="close-button">&times;</button>
+        <div class="term-title"></div>
+        <div class="term-definition"></div>
+    </div>
+
+    <button class="request-term-btn" id="requestTermBtn">
+        + 용어 추가 요청
+    </button>
+</div>
+
+<div class="modal" id="requestTermModal">
+    <div class="modal-content">
+        <h2>용어 추가 요청</h2>
+        <form id="termRequestForm">
+            <input name="_csrf" th:value="${_csrf.token}" type="hidden"/>
+            <div class="form-group">
+                <label for="requestTerm">용어</label>
+                <input id="requestTerm" required type="text">
+            </div>
+            <div class="form-group">
+                <label for="requestDefinition">정의</label>
+                <textarea id="requestDefinition" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="requestCategory">카테고리</label>
+                <select id="requestCategory">
+                    <option value="">카테고리 선택</option>
+                    <option th:each="category : ${categories}"
+                            th:text="${category.categoryName}"
+                            th:value="${category.categoryName}">
+                    </option>
+                </select>
+            </div>
+            <div class="modal-buttons">
+                <button class="submit-btn" type="submit">요청하기</button>
+                <button class="cancel-btn" type="button">취소</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script th:inline="javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        // DOM 요소
+        const categoryGrid = document.getElementById('categoryGrid');
+        const termsList = document.getElementById('termsList');
+        const termDetails = document.getElementById('termDetails');
+        const overlay = document.getElementById('overlay');
+        const backButton = document.getElementById('backButton');
+        const requestTermBtn = document.getElementById('requestTermBtn');
+        const requestTermModal = document.getElementById('requestTermModal');
+        const termRequestForm = document.getElementById('termRequestForm');
+
+        // CSRF 토큰 설정
+        const csrfToken = document.querySelector("meta[name='_csrf']").content;
+        const csrfHeader = document.querySelector("meta[name='_csrf_header']").content;
+
+        // 카테고리 클릭 이벤트
+        categoryGrid.addEventListener('click', async function (e) {
+            const categoryButton = e.target.closest('.category-button');
+            if (!categoryButton) return;
+
+            const category = categoryButton.dataset.category;
+            try {
+                const response = await fetch(`/api/dictionary/terms/${category}`);
+                const terms = await response.json();
+
+                displayTerms(terms);
+                categoryGrid.style.display = 'none';
+                termsList.style.display = 'block';
+                backButton.style.display = 'block';
+            } catch (error) {
+                console.error('Error fetching terms:', error);
+            }
+        });
+
+        // 용어 클릭 이벤트
+        termsList.addEventListener('click', async function (e) {
+            const termItem = e.target.closest('.term-item');
+            if (!termItem) return;
+
+            const termId = termItem.dataset.id;
+            try {
+                const response = await fetch(`/api/dictionary/term/${termId}`);
+                const termData = await response.json();
+
+                displayTermDetails(termData);
+            } catch (error) {
+                console.error('Error fetching term details:', error);
+            }
+        });
+
+        // 뒤로가기 버튼 이벤트
+        backButton.addEventListener('click', function () {
+            termsList.style.display = 'none';
+            categoryGrid.style.display = 'grid';
+            backButton.style.display = 'none';
+        });
+
+        // 용어 상세 닫기 이벤트
+        document.querySelector('.close-button').addEventListener('click', closeTermDetails);
+        overlay.addEventListener('click', closeTermDetails);
+
+        // 용어 목록 표시 함수
+        function displayTerms(terms) {
+            termsList.innerHTML = terms.map(term => `
+                <div class="term-item" data-id="${term.id}">
+                    ${term.term}
+                </div>
+            `).join('');
+        }
+
+        // 용어 상세 표시 함수
+        function displayTermDetails(termData) {
+            termDetails.querySelector('.term-title').textContent = termData.term;
+            termDetails.querySelector('.term-definition').textContent = termData.definition;
+            termDetails.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        // 용어 상세 닫기 함수
+        function closeTermDetails() {
+            termDetails.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+
+        // ESC 키 이벤트
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeTermDetails();
+            }
+        });
+
+        // 용어 추가 요청 버튼 이벤트
+        requestTermBtn.addEventListener('click', () => {
+            requestTermModal.style.display = 'block';
+        });
+
+        // 모달 취소 버튼 이벤트
+        document.querySelector('.cancel-btn').addEventListener('click', () => {
+            requestTermModal.style.display = 'none';
+        });
+
+        // 용어 추가 요청 폼 제출 이벤트
+        termRequestForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                term: document.getElementById('requestTerm').value,
+                definition: document.getElementById('requestDefinition').value,
+                category: document.getElementById('requestCategory').value
+            };
+
+            try {
+                const response = await fetch('/api/dictionary/request', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        [csrfHeader]: csrfToken
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert('용어 추가 요청이 성공적으로 제출되었습니다.');
+                    requestTermModal.style.display = 'none';
+                    termRequestForm.reset();
+                } else {
+                    alert('요청 중 오류가 발생했습니다.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('요청 중 오류가 발생했습니다.');
+            }
+        });
+    });
+</script>
+</body>
+</html>

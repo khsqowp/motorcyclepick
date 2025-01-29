@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.motorcyclepick.repository.UserMapper">
+
+    <resultMap id="UserResultMap" type="com.example.motorcyclepick.domain.UserDomain">
+        <id property="id" column="id"/>
+        <result property="password" column="password"/>
+        <result property="phoneNumber" column="phone_number"/>
+        <result property="instagram" column="instagram"/>
+        <result property="username" column="username"/>
+        <result property="email" column="email"/>
+        <result property="role" column="role"/>
+        <result property="region" column="region"/>
+        <result property="encryptedEmail" column="encrypted_email"/>
+        <result property="encryptedPhone" column="encrypted_phone"/>
+        <result property="birthDate" column="birth_date" jdbcType="DATE"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+
+    <select id="findById" resultMap="UserResultMap">
+        SELECT *
+        FROM User
+        WHERE id = #{id}
+    </select>
+
+    <select id="findAll" resultMap="UserResultMap">
+        SELECT *
+        FROM User
+        ORDER BY id ASC
+    </select>
+
+    <insert id="insertUser" parameterType="com.example.motorcyclepick.domain.UserDomain">
+        INSERT INTO User (
+            id, password, phone_number, instagram, username,
+            email, role, birth_date, region,
+            encrypted_email, encrypted_phone
+        )
+        VALUES (
+                   #{id}, #{password}, #{phoneNumber}, #{instagram}, #{username},
+                   #{email}, #{role}, #{birthDate}, #{region},
+                   #{encryptedEmail}, #{encryptedPhone}
+               )
+    </insert>
+
+    <update id="updateUser" parameterType="com.example.motorcyclepick.domain.UserDomain">
+        UPDATE User
+        SET password = #{password},
+            email = #{email},
+            phone_number = #{phoneNumber},
+            instagram = #{instagram},
+            username = #{username},
+            role = CASE
+                       WHEN #{role} = 'ROLE_USER' THEN 'ROLE_USER'
+                       WHEN #{role} = 'ROLE_MODERATOR' THEN 'ROLE_MODERATOR'
+                       WHEN #{role} = 'ROLE_ADMIN' THEN 'ROLE_ADMIN'
+                       ELSE 'ROLE_USER'
+                END,
+            birth_date = #{birthDate},
+            region = #{region},
+            encrypted_email = #{encryptedEmail},
+            encrypted_phone = #{encryptedPhone}
+        WHERE id = #{id}
+    </update>
+
+    <select id="findByRegion" resultMap="UserResultMap">
+        SELECT *
+        FROM User
+        WHERE region = #{region}
+        ORDER BY created_at DESC
+    </select>
+
+    <select id="findByBirthDateBetween" resultMap="UserResultMap">
+    <![CDATA[
+        SELECT * FROM User
+        WHERE birth_date >= #{startDate}
+          AND birth_date <= #{endDate}
+        ORDER BY birth_date ASC
+        ]]>
+</select>
+
+    <update id="updateEncryptedFields">
+        UPDATE User
+        SET encrypted_email = #{encryptedEmail},
+            encrypted_phone = #{encryptedPhone}
+        WHERE id = #{id}
+    </update>
+</mapper>

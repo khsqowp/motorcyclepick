@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.motorcyclepick.repository.BoardMapper">
+
+    <!-- 설문 응답 저장 -->
+    <insert id="insertRecommendationStats" parameterType="map">
+        INSERT INTO recommendation_stats (
+            survey_date,
+            q1_value,
+            q2_value,
+            q3_value,
+            q4_value,
+            q5_value,
+            q6_value,
+            q7_value1,
+            q7_value2,
+            count
+        ) VALUES (
+                     #{surveyDate},
+                     #{q1Value},
+                     #{q2Value},
+                     #{q3Value},
+                     #{q4Value},
+                     #{q5Value},
+                     #{q6Value},
+                     #{q7Value1},
+                     #{q7Value2},
+                     1
+                 )
+    </insert>
+
+    <!-- 모델 추천 통계 저장 -->
+    <insert id="insertModelRecommendationStats" parameterType="map">
+        INSERT INTO model_recommendation_stats (
+            survey_date,
+            brand,
+            model,
+            recommendation_count
+        ) VALUES (
+                     #{surveyDate},
+                     #{brand},
+                     #{model},
+                     1
+                 )
+    </insert>
+
+    <!-- 설문 응답 중복 체크 -->
+    <select id="checkDuplicateRecommendation" parameterType="map" resultType="Integer">
+        SELECT id
+        FROM recommendation_stats
+        WHERE q1_value = #{q1Value}
+          AND q2_value = #{q2Value}
+          AND q3_value = #{q3Value}
+          AND q4_value = #{q4Value}
+          AND q5_value = #{q5Value}
+          AND q6_value = #{q6Value}
+          AND q7_value1 = #{q7Value1}
+          AND q7_value2 = #{q7Value2}
+    </select>
+
+    <!-- 설문 응답 count 업데이트 -->
+    <update id="updateRecommendationStatsCount" parameterType="map">
+        UPDATE recommendation_stats
+        SET count = count + 1
+        WHERE q1_value = #{q1Value}
+          AND q2_value = #{q2Value}
+          AND q3_value = #{q3Value}
+          AND q4_value = #{q4Value}
+          AND q5_value = #{q5Value}
+          AND q6_value = #{q6Value}
+          AND q7_value1 = #{q7Value1}
+          AND q7_value2 = #{q7Value2}
+    </update>
+
+    <!-- 모델 추천 중복 체크 -->
+    <select id="checkDuplicateModelRecommendation" parameterType="map" resultType="Integer">
+        SELECT id
+        FROM model_recommendation_stats
+        WHERE survey_date = #{surveyDate}
+          AND brand = #{brand}
+          AND model = #{model}
+    </select>
+
+    <!-- 모델 추천 횟수 업데이트 -->
+    <update id="updateModelRecommendationCount" parameterType="map">
+        UPDATE model_recommendation_stats
+        SET recommendation_count = recommendation_count + 1
+        WHERE survey_date = #{surveyDate}
+          AND brand = #{brand}
+          AND model = #{model}
+    </update>
+
+</mapper>

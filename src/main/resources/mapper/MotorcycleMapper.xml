@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.motorcyclepick.repository.MotorcycleMapper">
+
+    <!-- resultMap 정의 -->
+    <resultMap id="motorcycleResultMap" type="com.example.motorcyclepick.domain.MotorcycleDomain">
+        <id property="motorcycleID" column="motorcycleID"/>
+        <result property="brand" column="brand"/>
+        <result property="model" column="model"/>
+        <result property="years" column="years"/>
+        <result property="replica" column="replica"/>
+        <result property="cruiser" column="cruiser"/>
+        <result property="tourer" column="tourer"/>
+        <result property="adventure" column="adventure"/>
+        <result property="multiPurpose" column="multiPurpose"/>
+        <result property="naked" column="naked"/>
+        <result property="scrambler" column="scrambler"/>
+        <result property="offRoad" column="offRoad"/>
+        <result property="motard" column="motard"/>
+        <result property="scooter" column="scooter"/>
+        <result property="classic" column="classic"/>
+        <result property="cafeRacer" column="cafe_racer"/>
+        <result property="price" column="price"/>
+
+        <result property="wheelbase" column="wheelbase"/>
+        <result property="seatHeight" column="seat_height"/>
+        <result property="wetWeight" column="wet_weight"/>
+        <result property="fuelCapacity" column="fuel_capacity"/>
+        <result property="groundClearance" column="ground_clearance"/>
+        <result property="dryWeight" column="dry_weight"/>
+        <result property="length" column="length"/>
+        <result property="width" column="width"/>
+        <result property="height" column="height"/>
+        <result property="frontTyreWidth" column="front_tyre_width"/>
+        <result property="frontTyreAspectRatio" column="front_tyre_aspect_ratio"/>
+        <result property="frontTyreStructure" column="front_tyre_structure"/>
+        <result property="frontTyreDiameter" column="front_tyre_diameter"/>
+        <result property="rearTyreWidth" column="rear_tyre_width"/>
+        <result property="rearTyreAspectRatio" column="rear_tyre_aspect_ratio"/>
+        <result property="rearTyreStructure" column="rear_tyre_structure"/>
+        <result property="rearTyreDiameter" column="rear_tyre_diameter"/>
+        <result property="frontBrakeDiscCount" column="front_brake_disc_count"/>
+        <result property="frontBrakeDiscSize" column="front_brake_disc_size"/>
+        <result property="frontBrakeDiscType" column="front_brake_disc_type"/>
+        <result property="frontBrakePistonCount" column="front_brake_piston_count"/>
+        <result property="rearBrakeDiscSize" column="rear_brake_disc_size"/>
+        <result property="rearBrakeDiscType" column="rear_brake_disc_type"/>
+        <result property="rearBrakePistonCount" column="rear_brake_piston_count"/>
+        <result property="frameType" column="frame_type"/>
+        <result property="frameMaterial" column="frame_material"/>
+
+        <result property="startSystem" column="start_system"/>
+        <result property="abs" column="abs"/>
+        <result property="tcs" column="tcs"/>
+        <result property="cruiseControl" column="cruise_control"/>
+        <result property="assistSlipperClutch" column="assist_slipper_clutch"/>
+        <result property="electricScreen" column="electric_screen"/>
+        <result property="clutchAssistSystem" column="clutch_assist_system"/>
+        <result property="imu" column="imu"/>
+        <result property="corneringAbs" column="cornering_abs"/>
+        <result property="wheelieControl" column="wheelie_control"/>
+        <result property="ridingModeChange" column="riding_mode_change"/>
+        <result property="bankingAngleDisplay" column="banking_angle_display"/>
+        <result property="absLevelControl" column="abs_level_control"/>
+        <result property="quickshiftUp" column="quickshift_up"/>
+        <result property="quickshiftUpDown" column="quickshift_up_down"/>
+
+        <result property="capacity" column="capacity"/>
+        <result property="boreStroke" column="bore_stroke"/>
+        <result property="compressionRatio" column="compression_ratio"/>
+        <result property="coolingSystem" column="cooling_system"/>
+        <result property="lubrication" column="lubrication"/>
+        <result property="fuelSystem" column="fuel_system"/>
+        <result property="emission" column="emission"/>
+        <result property="induction" column="induction"/>
+        <result property="mileage" column="mileage"/>
+        <result property="topSpeed" column="top_speed"/>
+        <result property="clutch" column="clutch"/>
+        <result property="transmissionGearCount" column="transmission_gear_count"/>
+        <result property="transmissionType" column="transmission_type"/>
+        <result property="engineStroke" column="engine_stroke"/>
+        <result property="engineCylinder" column="engine_cylinder"/>
+        <result property="engineCamshaft" column="engine_camshaft"/>
+        <result property="engineType" column="engine_type"/>
+        <result property="engineCrankAngle" column="engine_crank_angle"/>
+        <result property="maxPowerHp" column="max_power_hp"/>
+        <result property="maxPowerRpm" column="max_power_rpm"/>
+        <result property="maxTorqueNm" column="max_torque_nm"/>
+        <result property="maxTorqueRpm" column="max_torque_rpm"/>
+        <result property="classGrade" column="classGrade"/>
+    </resultMap>
+    <!--단일 데이터 조회 -->
+    <select id="findByMotorcycleId" parameterType="long" resultMap="motorcycleResultMap">
+        SELECT motorcycleID,
+               brand,
+               model,
+               years,
+               replica,
+               cruiser,
+               tourer,
+               adventure,
+               multiPurpose,
+               naked,
+               scrambler,
+               offRoad,
+               motard,
+               scooter,
+               classic,
+               cafe_racer,
+               price,
+               wheelbase,
+               seat_height,
+               wet_weight,
+               fuel_capacity,
+               ground_clearance,
+               dry_weight,
+               length,
+               width,
+               height,
+               front_tyre_width,
+               front_tyre_aspect_ratio,
+               front_tyre_structure,
+               front_tyre_diameter,
+               rear_tyre_width,
+               rear_tyre_aspect_ratio,
+               rear_tyre_structure,
+               rear_tyre_diameter,
+               front_brake_disc_count,
+               front_brake_disc_size,
+               front_brake_disc_type,
+               front_brake_piston_count,
+               rear_brake_disc_size,
+               rear_brake_disc_type,
+               rear_brake_piston_count,
+               frame_type,
+               frame_material,
+               start_system,
+               abs,
+               tcs,
+               cruise_control,
+               assist_slipper_clutch,
+               electric_screen,
+               clutch_assist_system,
+               imu,
+               cornering_abs,
+               wheelie_control,
+               riding_mode_change,
+               banking_angle_display,
+               abs_level_control,
+               quickshift_up,
+               quickshift_up_down,
+               capacity,
+               bore_stroke,
+               compression_ratio,
+               cooling_system,
+               lubrication,
+               fuel_system,
+               emission,
+               induction,
+               mileage,
+               top_speed,
+               clutch,
+               transmission_gear_count,
+               transmission_type,
+               engine_stroke,
+               engine_cylinder,
+               engine_camshaft,
+               engine_type,
+               engine_crank_angle,
+               max_power_hp,
+               max_power_rpm,
+               max_torque_nm,
+               max_torque_rpm,
+               classGrade
+        FROM MotorcycleAll
+        WHERE motorcycleID = #{motorcycleID}
+    </select>
+
+    <!--전체 데이터 조회 -->
+    <select id="findAll" resultMap="motorcycleResultMap">
+        SELECT motorcycleID,
+               brand,
+               model,
+               years,
+               replica,
+               cruiser,
+               tourer,
+               adventure,
+               multiPurpose,
+               naked,
+               scrambler,
+               offRoad,
+               motard,
+               scooter,
+               classic,
+               cafe_racer,
+               price,
+               wheelbase,
+               seat_height,
+               wet_weight,
+               fuel_capacity,
+               ground_clearance,
+               dry_weight,
+               length,
+               width,
+               height,
+               front_tyre_width,
+               front_tyre_aspect_ratio,
+               front_tyre_structure,
+               front_tyre_diameter,
+               rear_tyre_width,
+               rear_tyre_aspect_ratio,
+               rear_tyre_structure,
+               rear_tyre_diameter,
+               front_brake_disc_count,
+               front_brake_disc_size,
+               front_brake_disc_type,
+               front_brake_piston_count,
+               rear_brake_disc_size,
+               rear_brake_disc_type,
+               rear_brake_piston_count,
+               frame_type,
+               frame_material,
+               start_system,
+               abs,
+               tcs,
+               cruise_control,
+               assist_slipper_clutch,
+               electric_screen,
+               clutch_assist_system,
+               imu,
+               cornering_abs,
+               wheelie_control,
+               riding_mode_change,
+               banking_angle_display,
+               abs_level_control,
+               quickshift_up,
+               quickshift_up_down,
+               capacity,
+               bore_stroke,
+               compression_ratio,
+               cooling_system,
+               lubrication,
+               fuel_system,
+               emission,
+               induction,
+               mileage,
+               top_speed,
+               clutch,
+               transmission_gear_count,
+               transmission_type,
+               engine_stroke,
+               engine_cylinder,
+               engine_camshaft,
+               engine_type,
+               engine_crank_angle,
+               max_power_hp,
+               max_power_rpm,
+               max_torque_nm,
+               max_torque_rpm,
+               classGrade
+        FROM MotorcycleAll
+        ORDER BY brand, model
+    </select>
+
+
+    <!-- 데이터 삽입 -->
+    <insert id="insertMotorcycleData" parameterType="com.example.motorcyclepick.domain.MotorcycleDomain"
+            useGeneratedKeys="true" keyProperty="motorcycleID">
+        INSERT INTO MotorcycleAll (brand, model, years, replica, cruiser, tourer, adventure, multiPurpose, naked,
+                                   scrambler, offRoad, motard, scooter, classic, cafe_racer, price,
+                                   wheelbase, seat_height, wet_weight, fuel_capacity, ground_clearance, dry_weight,
+                                   length, width, height, front_tyre_width, front_tyre_aspect_ratio,
+                                   front_tyre_structure, front_tyre_diameter, rear_tyre_width, rear_tyre_aspect_ratio,
+                                   rear_tyre_structure, rear_tyre_diameter, front_brake_disc_count,
+                                   front_brake_disc_size, front_brake_disc_type, front_brake_piston_count,
+                                   rear_brake_disc_size, rear_brake_disc_type, rear_brake_piston_count, frame_type,
+                                   frame_material,
+                                   start_system, abs, tcs, cruise_control, assist_slipper_clutch, electric_screen,
+                                   clutch_assist_system, imu, cornering_abs, wheelie_control, riding_mode_change,
+                                   banking_angle_display, abs_level_control, quickshift_up, quickshift_up_down
+            , capacity, bore_stroke, compression_ratio, cooling_system, lubrication, fuel_system, emission, induction,
+                                   mileage, top_speed, clutch, transmission_gear_count, transmission_type,
+                                   engine_stroke, engine_cylinder, engine_camshaft, engine_type, engine_crank_angle,
+                                   max_power_hp, max_power_rpm, max_torque_nm, max_torque_rpm, classGrade)
+        VALUES (#{brand}, #{model}, #{years}, #{replica}, #{cruiser}, #{tourer}, #{adventure}, #{multiPurpose},
+                #{naked}, #{scrambler}, #{offRoad}, #{motard}, #{scooter}, #{classic}, #{cafeRacer}, #{price},
+                #{wheelbase}, #{seatHeight}, #{wetWeight}, #{fuelCapacity}, #{groundClearance}, #{dryWeight}, #{length},
+                #{width}, #{height}, #{frontTyreWidth}, #{frontTyreAspectRatio}, #{frontTyreStructure},
+                #{frontTyreDiameter}, #{rearTyreWidth}, #{rearTyreAspectRatio}, #{rearTyreStructure},
+                #{rearTyreDiameter}, #{frontBrakeDiscCount}, #{frontBrakeDiscSize}, #{frontBrakeDiscType},
+                #{frontBrakePistonCount}, #{rearBrakeDiscSize}, #{rearBrakeDiscType}, #{rearBrakePistonCount},
+                #{frameType}, #{frameMaterial},
+                #{startSystem}, #{abs}, #{tcs}, #{cruiseControl}, #{assistSlipperClutch}, #{electricScreen},
+                #{clutchAssistSystem}, #{imu}, #{corneringAbs}, #{wheelieControl}, #{ridingModeChange},
+                #{bankingAngleDisplay}, #{absLevelControl}, #{quickshiftUp}, #{quickshiftUpDown},
+                #{capacity}, #{boreStroke}, #{compressionRatio}, #{coolingSystem}, #{lubrication}, #{fuelSystem},
+                #{emission}, #{induction}, #{mileage}, #{topSpeed}, #{clutch}, #{transmissionGearCount},
+                #{transmissionType}, #{engineStroke}, #{engineCylinder}, #{engineCamshaft}, #{engineType},
+                #{engineCrankAngle}, #{maxPowerHp}, #{maxPowerRpm}, #{maxTorqueNm}, #{maxTorqueRpm}, #{classGrade})
+    </insert>
+
+    <!-- 데이터 업데이트 -->
+    <update id="updateMotorcycle">
+        UPDATE MotorcycleAll
+        <set>
+            <if test="brand != null">brand = #{brand},</if>
+            <if test="model != null">model = #{model},</if>
+            <if test="years != null">years = #{years},</if>
+            <if test="replica != null">replica = #{replica},</if>
+            <if test="cruiser != null">cruiser = #{cruiser},</if>
+            <if test="tourer != null">tourer = #{tourer},</if>
+            <if test="adventure != null">adventure = #{adventure},</if>
+            <if test="multiPurpose != null">multiPurpose = #{multiPurpose},</if>
+            <if test="naked != null">naked = #{naked},</if>
+            <if test="scrambler != null">scrambler = #{scrambler},</if>
+            <if test="offRoad != null">offRoad = #{offRoad},</if>
+            <if test="motard != null">motard = #{motard},</if>
+            <if test="scooter != null">scooter = #{scooter},</if>
+            <if test="classic != null">classic = #{classic},</if>
+            <if test="cafeRacer != null">cafe_racer = #{cafeRacer},</if>
+            <if test="price != null">price = #{price},</if>
+
+            <if test="wheelbase != null">wheelbase = #{wheelbase},</if>
+            <if test="seatHeight != null">seat_height = #{seatHeight},</if>
+            <if test="wetWeight != null">wet_weight = #{wetWeight},</if>
+            <if test="fuelCapacity != null">fuel_capacity = #{fuelCapacity},</if>
+            <if test="groundClearance != null">ground_clearance = #{groundClearance},</if>
+            <if test="dryWeight != null">dry_weight = #{dryWeight},</if>
+            <if test="length != null">length = #{length},</if>
+            <if test="width != null">width = #{width},</if>
+            <if test="height != null">height = #{height},</if>
+            <if test="frontTyreWidth != null">front_tyre_width = #{frontTyreWidth},</if>
+            <if test="frontTyreAspectRatio != null">front_tyre_aspect_ratio = #{frontTyreAspectRatio},</if>
+            <if test="frontTyreStructure != null">front_tyre_structure = #{frontTyreStructure},</if>
+            <if test="frontTyreDiameter != null">front_tyre_diameter = #{frontTyreDiameter},</if>
+            <if test="rearTyreWidth != null">rear_tyre_width = #{rearTyreWidth},</if>
+            <if test="rearTyreAspectRatio != null">rear_tyre_aspect_ratio = #{rearTyreAspectRatio},</if>
+            <if test="rearTyreStructure != null">rear_tyre_structure = #{rearTyreStructure},</if>
+            <if test="rearTyreDiameter != null">rear_tyre_diameter = #{rearTyreDiameter},</if>
+            <if test="frontBrakeDiscCount != null">front_brake_disc_count = #{frontBrakeDiscCount},</if>
+            <if test="frontBrakeDiscSize != null">front_brake_disc_size = #{frontBrakeDiscSize},</if>
+            <if test="frontBrakeDiscType != null">front_brake_disc_type = #{frontBrakeDiscType},</if>
+            <if test="frontBrakePistonCount != null">front_brake_piston_count = #{frontBrakePistonCount},</if>
+            <if test="rearBrakeDiscSize != null">rear_brake_disc_size = #{rearBrakeDiscSize},</if>
+            <if test="rearBrakeDiscType != null">rear_brake_disc_type = #{rearBrakeDiscType},</if>
+            <if test="rearBrakePistonCount != null">rear_brake_piston_count = #{rearBrakePistonCount},</if>
+            <if test="frameType != null">frame_type = #{frameType},</if>
+            <if test="frameMaterial != null">frame_material = #{frameMaterial},</if>
+
+            <if test="startSystem != null">start_system = #{startSystem},</if>
+            <if test="abs != null">abs = #{abs},</if>
+            <if test="tcs != null">tcs = #{tcs},</if>
+            <if test="cruiseControl != null">cruise_control = #{cruiseControl},</if>
+            <if test="assistSlipperClutch != null">assist_slipper_clutch = #{assistSlipperClutch},</if>
+            <if test="electricScreen != null">electric_screen = #{electricScreen},</if>
+            <if test="clutchAssistSystem != null">clutch_assist_system = #{clutchAssistSystem},</if>
+            <if test="imu != null">imu = #{imu},</if>
+            <if test="corneringAbs != null">cornering_abs = #{corneringAbs},</if>
+            <if test="wheelieControl != null">wheelie_control = #{wheelieControl},</if>
+            <if test="ridingModeChange != null">riding_mode_change = #{ridingModeChange},</if>
+            <if test="bankingAngleDisplay != null">banking_angle_display = #{bankingAngleDisplay},</if>
+            <if test="absLevelControl != null">abs_level_control = #{absLevelControl},</if>
+            <if test="quickshiftUp != null">quickshift_up = #{quickshiftUp},</if>
+            <if test="quickshiftUpDown != null">quickshift_up_down = #{quickshiftUpDown},</if>
+
+            <if test="capacity != null">capacity = #{capacity},</if>
+            <if test="boreStroke != null">bore_stroke = #{boreStroke},</if>
+            <if test="compressionRatio != null">compression_ratio = #{compressionRatio},</if>
+            <if test="coolingSystem != null">cooling_system = #{coolingSystem},</if>
+            <if test="lubrication != null">lubrication = #{lubrication},</if>
+            <if test="fuelSystem != null">fuel_system = #{fuelSystem},</if>
+            <if test="emission != null">emission = #{emission},</if>
+            <if test="induction != null">induction = #{induction},</if>
+            <if test="mileage != null">mileage = #{mileage},</if>
+            <if test="topSpeed != null">top_speed = #{topSpeed},</if>
+            <if test="clutch != null">clutch = #{clutch},</if>
+            <if test="transmissionGearCount != null">transmission_gear_count = #{transmissionGearCount},</if>
+            <if test="transmissionType != null">transmission_type = #{transmissionType},</if>
+            <if test="engineStroke != null">engine_stroke = #{engineStroke},</if>
+            <if test="engineCylinder != null">engine_cylinder = #{engineCylinder},</if>
+            <if test="engineCamshaft != null">engine_camshaft = #{engineCamshaft},</if>
+            <if test="engineType != null">engine_type = #{engineType},</if>
+            <if test="engineCrankAngle != null">engine_crank_angle = #{engineCrankAngle},</if>
+            <if test="maxPowerHp != null">max_power_hp = #{maxPowerHp},</if>
+            <if test="maxPowerRpm != null">max_power_rpm = #{maxPowerRpm},</if>
+            <if test="maxTorqueNm != null">max_torque_nm = #{maxTorqueNm},</if>
+            <if test="maxTorqueRpm != null">max_torque_rpm = #{maxTorqueRpm}</if>
+            <if test="classGrade != null">classGrade = #{classGrade}</if>
+        </set>
+        WHERE motorcycleID = #{motorcycleID}
+    </update>
+
+    <!-- 데이터 삭제 -->
+    <delete id="deleteMotorcycle" parameterType="long">
+        DELETE
+        FROM MotorcycleAll
+        WHERE motorcycleID = #{motorcycleID}
+    </delete>
+
+
+    <select id="findDistinctBrands" resultType="string">
+        SELECT DISTINCT brand
+        FROM MotorcycleAll
+        ORDER BY brand
+    </select>
+
+    <select id="findModelsByBrand" parameterType="string" resultType="string">
+        SELECT model
+        FROM MotorcycleAll
+        WHERE brand = #{brand}
+        ORDER BY model
+    </select>
+
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+    <!-- 아래는 테스트용 매퍼 -->
+
+    <select id="findByAllRangePreferences" parameterType="map" resultMap="motorcycleResultMap">
+        SELECT *,
+        (CASE
+        WHEN (
+        <if test="price != null">price IS NOT NULL AND price &lt;= #{price} AND </if>
+        <if test="minCapacity != null and maxCapacity != null">capacity IS NOT NULL AND capacity BETWEEN #{minCapacity} AND #{maxCapacity} AND </if>
+        <if test="minSpeed != null and maxSpeed != null">top_speed IS NOT NULL AND top_speed BETWEEN #{minSpeed} AND #{maxSpeed} AND </if>
+        <if test="minRpm != null and maxRpm != null">(max_power_rpm IS NOT NULL AND max_torque_rpm IS NOT NULL) AND
+            (max_power_rpm BETWEEN #{minRpm} AND #{maxRpm} OR max_torque_rpm BETWEEN #{minRpm} AND #{maxRpm}) AND </if>
+        1=1
+        ) THEN 'EXACT'
+        WHEN (
+        <if test="price != null">price IS NOT NULL AND price &lt;= #{price} * 1.2 AND </if>
+        <if test="minCapacity != null and maxCapacity != null">capacity IS NOT NULL AND capacity BETWEEN #{minCapacity} * 0.8 AND #{maxCapacity} * 1.2 AND </if>
+        <if test="minSpeed != null and maxSpeed != null">top_speed IS NOT NULL AND top_speed BETWEEN #{minSpeed} * 0.8 AND #{maxSpeed} * 1.2 AND </if>
+        <if test="minRpm != null and maxRpm != null">(max_power_rpm IS NOT NULL AND max_torque_rpm IS NOT NULL) AND
+            (max_power_rpm BETWEEN #{minRpm} * 0.8 AND #{maxRpm} * 1.2 OR max_torque_rpm BETWEEN #{minRpm} * 0.8 AND #{maxRpm} * 1.2) AND </if>
+        1=1
+        ) THEN 'MEDIUM'
+        WHEN (
+        <if test="price != null">price IS NOT NULL AND price &lt;= #{price} * 1.3 AND </if>
+        <if test="minCapacity != null and maxCapacity != null">capacity IS NOT NULL AND capacity BETWEEN #{minCapacity} * 0.7 AND #{maxCapacity} * 1.3 AND </if>
+        <if test="minSpeed != null and maxSpeed != null">top_speed IS NOT NULL AND top_speed BETWEEN #{minSpeed} * 0.7 AND #{maxSpeed} * 1.3 AND </if>
+        <if test="minRpm != null and maxRpm != null">(max_power_rpm IS NOT NULL AND max_torque_rpm IS NOT NULL) AND
+            (max_power_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3 OR max_torque_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3) AND </if>
+        1=1
+        ) THEN 'WIDE'
+        ELSE 'NONE'
+        END) as match_range
+        FROM MotorcycleAll
+        WHERE 1=1
+        <!-- 장르 조건 -->
+        <if test="primaryGenre != null">
+            AND (
+            CASE #{primaryGenre}
+            WHEN 'replica' THEN replica IS NOT NULL AND replica > 1
+            WHEN 'cruiser' THEN cruiser IS NOT NULL AND cruiser > 1
+            WHEN 'tourer' THEN tourer IS NOT NULL AND tourer > 1
+            WHEN 'adventure' THEN adventure IS NOT NULL AND adventure > 1
+            WHEN 'multiPurpose' THEN multiPurpose IS NOT NULL AND multiPurpose > 1
+            WHEN 'naked' THEN naked IS NOT NULL AND naked > 1
+            WHEN 'classic' THEN classic IS NOT NULL AND classic > 1
+            WHEN 'scrambler' THEN scrambler IS NOT NULL AND scrambler > 1
+            WHEN 'offRoad' THEN offRoad IS NOT NULL AND offRoad > 1
+            WHEN 'motard' THEN motard IS NOT NULL AND motard > 1
+            WHEN 'scooter' THEN scooter IS NOT NULL AND scooter > 1
+            WHEN 'cafeRacer' THEN cafe_racer IS NOT NULL AND cafe_racer > 1
+            ELSE 1=1
+            END
+            )
+        </if>
+
+        <!-- 등급 조건 -->
+        <if test="classGrades != null and classGrades.size() > 0">
+            AND classGrade IS NOT NULL
+            AND classGrade IN
+            <foreach item="grade" collection="classGrades" open="(" separator="," close=")">
+                #{grade}
+            </foreach>
+        </if>
+
+        <!-- 최소한 넓은 범위(±30%)에는 들어와야 함 -->
+        AND (
+        <if test="price != null">price IS NOT NULL AND price &lt;= #{price} * 1.3 AND </if>
+        <if test="minCapacity != null and maxCapacity != null">capacity IS NOT NULL AND capacity BETWEEN #{minCapacity} * 0.7 AND #{maxCapacity} * 1.3 AND </if>
+        <if test="minSpeed != null and maxSpeed != null">top_speed IS NOT NULL AND top_speed BETWEEN #{minSpeed} * 0.7 AND #{maxSpeed} * 1.3 AND </if>
+        <if test="minRpm != null and maxRpm != null">(max_power_rpm IS NOT NULL AND max_torque_rpm IS NOT NULL) AND
+            (max_power_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3 OR max_torque_rpm BETWEEN #{minRpm} * 0.7 AND #{maxRpm} * 1.3) AND </if>
+        1=1
+        )
+        ORDER BY
+        CASE match_range
+        WHEN 'EXACT' THEN 1
+        WHEN 'MEDIUM' THEN 2
+        WHEN 'WIDE' THEN 3
+        ELSE 4
+        END,
+        motorcycleID
+    </select>
+</mapper>

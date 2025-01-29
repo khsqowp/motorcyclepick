@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.motorcyclepick.repository.BikeAnalyticsMapper">
+
+    <resultMap id="BikeAnalyticsResultMap" type="com.example.motorcyclepick.domain.BikeAnalyticsDomain">
+        <id property="id" column="id"/>
+        <result property="surveyDate" column="survey_date" javaType="java.time.LocalDate" jdbcType="DATE"/>
+        <result property="q1Value" column="q1_value" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result property="q2Value" column="q2_value" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="q3Value" column="q3_value" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="q4Value" column="q4_value" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="q5Value" column="q5_value" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="q6Value" column="q6_value" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="q7Value1" column="q7_value1" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="q7Value2" column="q7_value2" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="count" column="count" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!-- 일자별 응답 통계 -->
+    <select id="findDailyResponseStats" resultMap="BikeAnalyticsResultMap">
+    <![CDATA[
+        SELECT
+            survey_date,
+            COUNT(*) as daily_count
+        FROM recommendation_stats
+        WHERE survey_date >= #{startDate}
+          AND survey_date <= #{endDate}
+        GROUP BY survey_date
+        ORDER BY survey_date
+        ]]>
+    </select>
+
+    <!-- 기타 필요한 SELECT 쿼리들 -->
+    <select id="getBudgetDistribution" resultType="map">
+        <![CDATA[
+        SELECT
+            CASE
+                WHEN q1_value <= 300 THEN '300만원 이하'
+                WHEN q1_value <= 500 THEN '300-500만원'
+                WHEN q1_value <= 1000 THEN '500-1000만원'
+                ELSE '1000만원 이상'
+                END as budget_range,
+            COUNT(*) as count
+        FROM recommendation_stats
+        GROUP BY
+            CASE
+                WHEN q1_value <= 300 THEN '300만원 이하'
+                WHEN q1_value <= 500 THEN '300-500만원'
+                WHEN q1_value <= 1000 THEN '500-1000만원'
+                ELSE '1000만원 이상'
+                END
+        ORDER BY
+            CASE budget_range
+                WHEN '300만원 이하' THEN 1
+                WHEN '300-500만원' THEN 2
+                WHEN '500-1000만원' THEN 3
+                ELSE 4
+                END
+        ]]>
+    </select>
+
+    <!-- 배기량 선호도 분석 -->
+    <select id="getEngineCapacityPreference" resultType="map">
+        SELECT q2_value, COUNT(*) as count
+        FROM recommendation_stats
+        GROUP BY q2_value
+        ORDER BY count DESC
+    </select>
+
+    <!-- 주행 스타일 선호도 -->
+    <select id="getRidingStylePreference" resultType="map">
+        SELECT q3_value, COUNT(*) as count
+        FROM recommendation_stats
+        GROUP BY q3_value
+        ORDER BY count DESC
+    </select>
+
+    <!-- 속도 범위 선호도 -->
+    <select id="getSpeedRangePreference" resultType="map">
+        SELECT q4_value, COUNT(*) as count
+        FROM recommendation_stats
+        GROUP BY q4_value
+        ORDER BY
+            CASE q4_value
+                WHEN '60km' THEN 1
+                WHEN '80km' THEN 2
+                WHEN '100km' THEN 3
+                WHEN '120km' THEN 4
+                WHEN '170km' THEN 5
+                WHEN '200km' THEN 6
+                WHEN '250km' THEN 7
+                ELSE 8
+                END
+    </select>
+
+    <!-- 주행 거리 선호도 -->
+    <select id="getRidingDistancePreference" resultType="map">
+        SELECT q5_value, COUNT(*) as count
+        FROM recommendation_stats
+        GROUP BY q5_value
+        ORDER BY count DESC
+    </select>
+
+    <!-- RPM 선호도 -->
+    <select id="getRpmPreference" resultType="map">
+        SELECT q6_value, COUNT(*) as count
+        FROM recommendation_stats
+        GROUP BY q6_value
+        ORDER BY
+            CASE q6_value
+                WHEN '3500' THEN 1
+                WHEN '6000' THEN 2
+                WHEN '10000' THEN 3
+                ELSE 4
+                END
+    </select>
+
+    <!-- 스타일 선호도 분석 -->
+    <select id="getStylePreference" resultType="map">
+        SELECT
+            style, COUNT(*) as count
+        FROM (
+                 SELECT q7_value1 as style FROM recommendation_stats
+                 UNION ALL
+                 SELECT q7_value2 FROM recommendation_stats
+             ) styles
+        GROUP BY style
+        ORDER BY count DESC
+    </select>
+
+    <!-- 가장 많이 추천된 모델 순위 -->
+    <select id="getTopRecommendedModels" resultType="map">
+        SELECT brand, model, SUM(recommendation_count) as total_recommendations
+        FROM model_recommendation_stats
+        GROUP BY brand, model
+        ORDER BY total_recommendations DESC
+        <if test="limit != null">
+            LIMIT #{limit}
+        </if>
+    </select>
+
+    <!-- 브랜드별 추천 빈도 -->
+    <select id="getBrandRecommendationFrequency" resultType="map">
+        SELECT brand, SUM(recommendation_count) as total_count
+        FROM model_recommendation_stats
+        GROUP BY brand
+        ORDER BY total_count DESC
+    </select>
+
+    <!-- 기간별 브랜드 추천 추이 -->
+    <select id="getBrandTrendsByPeriod" resultType="map">
+        SELECT survey_date,
+               brand,
+               SUM(recommendation_count) as daily_count
+        FROM model_recommendation_stats
+        WHERE survey_date >= #{startDate}
+          AND survey_date &lt;= #{endDate}
+        GROUP BY survey_date, brand
+        ORDER BY survey_date, brand
+    </select>
+
+    <!-- 가격대별 선호 모델 -->
+    <select id="getPreferredModelsByBudget" resultType="map">
+    <![CDATA[
+        SELECT
+            CASE
+                WHEN rs.q1_value <= 300 THEN '300만원 이하'
+                WHEN rs.q1_value <= 500 THEN '300-500만원'
+                WHEN rs.q1_value <= 1000 THEN '500-1000만원'
+                ELSE '1000만원 이상'
+                END as budget_range,
+            mrs.brand,
+            mrs.model,
+            COUNT(*) as preference_count
+        FROM recommendation_stats rs
+                 JOIN model_recommendation_stats mrs ON rs.survey_date = mrs.survey_date
+        GROUP BY
+            CASE
+                WHEN rs.q1_value <= 300 THEN '300만원 이하'
+                WHEN rs.q1_value <= 500 THEN '300-500만원'
+                WHEN rs.q1_value <= 1000 THEN '500-1000만원'
+                ELSE '1000만원 이상'
+                END,
+            mrs.brand,
+            mrs.model
+        ORDER BY budget_range, preference_count DESC
+        ]]>
+</select>
+
+    <!-- 주행목적별 선호 모델 -->
+    <select id="getPreferredModelsByPurpose" resultType="map">
+        SELECT
+            rs.q2_value as riding_purpose,
+            mrs.brand,
+            mrs.model,
+            COUNT(*) as preference_count
+        FROM recommendation_stats rs
+                 JOIN model_recommendation_stats mrs ON rs.survey_date = mrs.survey_date
+        GROUP BY rs.q2_value, mrs.brand, mrs.model
+        ORDER BY rs.q2_value, preference_count DESC
+    </select>
+
+    <!-- 스타일 조합 분석 -->
+    <select id="getStyleCombinationAnalysis" resultType="map">
+        SELECT
+            q7_value1,
+            q7_value2,
+            COUNT(*) as combination_count
+        FROM recommendation_stats
+        GROUP BY q7_value1, q7_value2
+        ORDER BY combination_count DESC
+    </select>
+
+    <!-- 월별 추천 트렌드 -->
+    <select id="getMonthlyRecommendationTrends" resultType="map">
+        SELECT
+            survey_date,
+            brand,
+            model,
+            SUM(recommendation_count) as monthly_count
+        FROM model_recommendation_stats
+        GROUP BY survey_date, brand, model
+        ORDER BY survey_date DESC, monthly_count DESC
+    </select>
+
+    <!-- 계절별 선호도 분석 -->
+    <select id="getSeasonalPreferences" resultType="map">
+        SELECT
+            survey_date,
+            q3_value as riding_style,
+            COUNT(*) as preference_count
+        FROM recommendation_stats
+        GROUP BY survey_date, q3_value
+        ORDER BY survey_date, preference_count DESC
+    </select>
+
+</mapper>

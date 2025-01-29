@@ -1,0 +1,18 @@
+<!-- src/main/resources/templates/api/models/brand.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Motorcycle Models</title>
+</head>
+<body>
+<div class="container">
+    <h2 th:text="${brand} + ' Models'"></h2>
+    <div class="models-list">
+        <div th:each="model : ${models}" class="model-item">
+            <p th:text="${model.name}"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>오토바이 갤러리</title>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --background: #0F172A;
+            --card-bg: #1E293B;
+            --accent: #3B82F6;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --table-bg: #1f4a6f;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        .header-section {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--table-bg);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .header-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .header-table td {
+            padding: 0.75rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .image-grid {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .image-card {
+            background: var(--table-bg);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .model-name {
+            padding: 0.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .image-container {
+            aspect-ratio: 1;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a365d;
+        }
+
+        .instagram-id {
+            padding: 0.5rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 800px;
+            margin: 1rem auto;
+            padding: 0.5rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 4px;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+        }
+
+        .pagination {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .brand-list, .model-list {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .brand-list tbody, .model-list tbody {
+            display: block;
+            height: 300px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.1);
+        }
+
+        .brand-list tr, .model-list tr {
+            display: block;
+        }
+
+        .brand-list td, .model-list td {
+            display: block;
+            width: calc(100% - 1.5rem);
+            padding: 0.75rem;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .brand-list td:hover, .model-list td:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--text-primary);
+        }
+
+        .brand-list td.selected, .model-list td.selected {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--text-primary);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 0.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .search-result {
+            background: var(--card-bg);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 0.5rem;
+            overflow-y: auto;
+            max-height: 200px;
+        }
+
+        .brand-list tbody::-webkit-scrollbar,
+        .model-list tbody::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .brand-list tbody::-webkit-scrollbar-track,
+        .model-list tbody::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        .brand-list tbody::-webkit-scrollbar-thumb,
+        .model-list tbody::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+        }
+
+        .brand-list tbody::-webkit-scrollbar-thumb:hover,
+        .model-list tbody::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .search-result:not(.hidden) {
+            border-top: none;
+        }
+
+        .search-item {
+            padding: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .search-item:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .error-message {
+            background-color: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            display: none;
+        }
+
+        .loading-spinner {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .loading-spinner::after {
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            border: 2px solid var(--text-secondary);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="p-4">
+
+<div class="header-section">
+    <table class="header-table">
+        <thead>
+        <tr>
+            <td class="section-title">브랜드</td>
+            <td class="section-title">모델</td>
+            <td class="section-title">모델 검색</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="brand-column">
+                <table class="brand-list">
+                    <tbody>
+                    <!-- JavaScript로 동적으로 채워짐 -->
+                    </tbody>
+                </table>
+            </td>
+            <td class="model-column">
+                <table class="model-list">
+                    <tbody id="modelList">
+                    <!-- JavaScript로 동적으로 채워짐 -->
+                    </tbody>
+                </table>
+            </td>
+            <td class="search-column">
+                <input type="text"
+                        id="searchInput"
+                        class="search-input"
+                        placeholder="모델명 검색...">
+                <div id="searchResults" class="search-result hidden"></div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="error-message" id="errorMessage"></div>
+<div class="loading-spinner" id="loadingSpinner"></div>
+
+<!-- 이미지 그리드 -->
+<div class="image-grid" id="imageGrid">
+    <!-- 이미지 카드 템플릿 -->
+    <div class="image-card">
+        <div class="model-name">모델명</div>
+        <div class="image-container">이미지</div>
+        <div class="instagram-id">인스타 아이디</div>
+    </div>
+</div>
+
+<!-- 페이지네이션 -->
+<div class="pagination">
+    <button id="prevBtn" class="px-4 py-2 bg-gray-700 rounded">이전</button>
+    <span id="currentPage" class="px-4 py-2">1/10</span>
+    <button id="nextBtn" class="px-4 py-2 bg-gray-700 rounded">다음</button>
+</div>
+
+<script th:inline="javascript">
+    let allBrandsAndModels = new Map();
+    let currentSelectedBrand = '';
+
+    const csrfToken = document.querySelector("meta[name='_csrf']").content;
+    const csrfHeader = document.querySelector("meta[name='_csrf_header']").content;
+
+    // CSRF 토큰을 포함한 fetch 함수
+    async function fetchWithCSRF(url, options = {}) {
+        const headers = {
+            [csrfHeader]: csrfToken,
+            ...options.headers
+        };
+        return fetch(url, { ...options, headers });
+    }
+
+    function showError(message) {
+        const errorElement = document.getElementById('errorMessage');
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+        setTimeout(() => {
+            errorElement.style.display = 'none';
+        }, 5000);
+    }
+
+    function showLoading(show) {
+        document.getElementById('loadingSpinner').style.display = show ? 'flex' : 'none';
+    }
+
+    // 초기 데이터 로드
+    async function initializeData() {
+        try {
+            showLoading(true);
+            const brandsResponse = await fetchWithCSRF('/gallery/api/brands');
+            const brands = await brandsResponse.json();
+
+            for (const brand of brands) {
+                const modelsResponse = await fetchWithCSRF(`/gallery/api/models/${brand}`);
+                const models = await modelsResponse.json();
+                allBrandsAndModels[brand] = models;
+            }
+
+            const brandList = document.querySelector('.brand-list tbody');
+            brandList.innerHTML = brands.map(brand => `
+                <tr>
+                    <td data-brand="${brand}" onclick="selectBrand(this)">${brand}</td>
+                </tr>
+            `).join('');
+        } catch (error) {
+            showError('데이터 로드 중 오류가 발생했습니다.');
+            console.error('데이터 로드 중 오류 발생:', error);
+        } finally {
+            showLoading(false);
+        }
+    }
+
+    async function selectBrand(element) {
+        const brand = element.dataset.brand;
+        document.querySelectorAll('.brand-list td').forEach(td => {
+            td.classList.remove('selected');
+        });
+        element.classList.add('selected');
+
+        try {
+            showLoading(true);
+            const response = await fetchWithCSRF(`/gallery/api/models/${brand}`);
+            const models = await response.json();
+
+            const modelList = document.getElementById('modelList');
+            modelList.innerHTML = models.map(model => `
+                <tr>
+                    <td onclick="selectModel(this, '${model}')">${model}</td>
+                </tr>
+            `).join('');
+        } catch (error) {
+            showError('모델 목록을 불러오는데 실패했습니다.');
+            console.error('모델 로드 중 오류 발생:', error);
+        } finally {
+            showLoading(false);
+        }
+    }
+
+    async function selectModel(element, model) {
+        document.querySelectorAll('.model-list td').forEach(td => {
+            td.classList.remove('selected');
+        });
+        element.classList.add('selected');
+
+        const selectedBrand = document.querySelector('.brand-list td.selected').dataset.brand;
+        await loadImages(selectedBrand, model);
+    }
+
+    async function loadImages(brand, model) {
+        try {
+            showLoading(true);
+            const response = await fetchWithCSRF(`/gallery/api/images/${brand}/${model}`);
+            const images = await response.json();
+
+            const imageGrid = document.getElementById('imageGrid');
+            imageGrid.innerHTML = images.map(image => {
+                console.log("원본 경로:", image.filePath);
+
+                return `
+                <div class="image-card">
+                    <div class="model-name">${model}</div>
+                    <div class="image-container">
+                        <img src="/images/${image.filePath}"
+                             alt="${model}"
+                             class="w-full h-full object-cover"
+                             onerror="this.onerror=null; this.src='/images/no-image.jpg';">
+                    </div>
+                    <div class="instagram-id">
+                        ${image.instagram_username ? '@' + image.instagram_username : ''}
+                    </div>
+                </div>
+            `;
+            }).join('');
+        } catch (error) {
+            showError('이미지를 불러오는데 실패했습니다.');
+            console.error('이미지 로드 중 오류 발생:', error);
+        } finally {
+            showLoading(false);
+        }
+    }
+
+    function handleSearch(input) {
+        const searchText = input.value.toLowerCase();
+        const searchResults = document.getElementById('searchResults');
+
+        if (searchText.length < 1) {
+            searchResults.classList.add('hidden');
+            return;
+        }
+
+        const results = [];
+        Object.entries(allBrandsAndModels).forEach(([brand, models]) => {
+            models.forEach(model => {
+                if (model.toLowerCase().includes(searchText)) {
+                    results.push({ brand, model });
+                }
+            });
+        });
+
+        if (results.length > 0) {
+            searchResults.innerHTML = results.map(({ brand, model }) => `
+            <div class="search-result-item p-2 hover:bg-blue-600/20 cursor-pointer"
+                onclick="selectSearchResult('${brand}', '${model}')">
+                ${brand} - ${model}
+            </div>
+        `).join('');
+            searchResults.classList.remove('hidden');
+        } else {
+            searchResults.innerHTML = `
+            <div class="p-2 text-gray-400">검색 결과가 없습니다</div>
+        `;
+            searchResults.classList.remove('hidden');
+        }
+    }
+
+    document.addEventListener('click', (event) => {
+        if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+            searchResults.classList.add('hidden');
+        }
+    });
+
+    function selectSearchResult(brand, model) {
+        const brandElement = document.querySelector(`[data-brand="${brand}"]`);
+        if (brandElement) {
+            selectBrand(brandElement);
+            setTimeout(() => {
+                const modelElements = document.querySelectorAll('.model-list td');
+                modelElements.forEach(el => {
+                    if (el.textContent === model) {
+                        selectModel(el, model);
+                    }
+                });
+            }, 100);
+        }
+        document.getElementById('searchResults').classList.add('hidden');
+        document.getElementById('searchInput').value = '';
+    }
+
+    // 페이지 로드 시 초기화
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeData();
+
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', () => handleSearch(searchInput));
+
+        document.addEventListener('click', (e) => {
+            const searchResults = document.getElementById('searchResults');
+            const searchInput = document.getElementById('searchInput');
+            if (!searchResults.contains(e.target) && !searchInput.contains(e.target)) {
+                searchResults.classList.add('hidden');
+            }
+        });
+    });
+
+    function updateModelList(models) {
+        const modelList = document.getElementById('modelList');
+        modelList.innerHTML = models.map(model => `
+   <tr>
+       <td onclick="selectModel(this, '${model}')">${model}</td>
+   </tr>
+`).join('');
+    }
+</script>
+</body>
+</html>

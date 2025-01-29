@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16Motorbikes - 오토바이 취향 테스트 결과</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --background: #0F172A;
+            --card-bg: #1E293B;
+            --accent: #3B82F6;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --hover-color: #2563EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .home-button {
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .home-button:hover {
+            background: var(--hover-color);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 8rem 2rem 2rem;
+        }
+
+        .main-card {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: #000;
+        }
+
+        .slider-image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .slider-controls {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+        }
+
+        .slider-button {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .slider-button:hover {
+            color: var(--accent);
+        }
+
+        .slider-counter {
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .motorcycle-info-card {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .model-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .model-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .basic-info {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .price {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .stat-card span {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .specs-card {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .specs-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .specs-details {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-secondary);
+        }
+
+        .spec-item span {
+            color: var(--text-primary);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .nav-btn {
+            background: var(--card-bg);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .nav-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .page-navigation {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .page-input {
+            background: var(--card-bg);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            color: var(--text-primary);
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            width: 4rem;
+            text-align: center;
+        }
+
+        .page-total {
+            color: var(--text-secondary);
+        }
+
+        .brake-suspension,
+        .electronics {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .electronics-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .specs-details-single {
+            display: grid;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <nav class="nav-content">
+        <a href="/" class="logo">
+            🏍️ 16MOTORBIKES
+        </a>
+        <a href="/" class="home-button">홈으로 가기</a>
+    </nav>
+</header>
+
+<div class="container" th:data-brand="${motorcycle.brand}" th:data-model="${motorcycle.model}">
+    <div class="main-card">
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div class="slider-container">
+                    <div class="slider-image-container">
+                        <img id="currentImage" alt="Motorcycle Image" class="slider-image" th:src="@{/static/images/no-image.jpg}">
+                        <div class="slider-controls">
+                            <button id="prevImage" class="slider-button">&lt;</button>
+                            <span id="imageCounter" class="slider-counter">1 / 1</span>
+                            <button id="nextImage" class="slider-button">&gt;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="motorcycle-info-card">
+        <div class="header-section">
+            <div>
+                <div class="model-header">
+                    <h1 id="section" th:text="${motorcycle.model}"></h1>
+                    <span class="tag" th:if="${motorcycle.adventure > 0}">어드벤처</span>
+                    <span class="tag" th:if="${motorcycle.naked > 0}">네이키드</span>
+                    <span class="tag" th:if="${motorcycle.replica > 0}">스포츠</span>
+                    <span class="tag" th:if="${motorcycle.cruiser > 0}">크루저</span>
+                    <span class="tag" th:if="${motorcycle.tourer > 0}">투어러</span>
+                    <span class="tag" th:if="${motorcycle.scrambler > 0}">스크램블러</span>
+                    <span class="tag" th:if="${motorcycle.offRoad > 0}">오프로드</span>
+                    <span class="tag" th:if="${motorcycle.motard > 0}">모타드</span>
+                    <span class="tag" th:if="${motorcycle.scooter > 0}">스쿠터</span>
+                    <span class="tag" th:if="${motorcycle.classic > 0}">클래식</span>
+                    <span class="tag" th:if="${motorcycle.cafeRacer > 0}">카페레이서</span>
+                </div>
+                <div class="basic-info">
+                    <span th:text="${motorcycle.brand}"></span> |
+                    <span th:text="${#numbers.formatInteger(motorcycle.years, 0) + '년식'}"></span> |
+                    <span class="price" th:text="${#numbers.formatInteger(motorcycle.price, 0, 'COMMA') + '만원'}"></span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        배기량
+                        <span th:text="${#numbers.formatInteger(motorcycle.capacity, 0, 'COMMA') + 'cc'}"></span>
+                    </div>
+                    <div class="stat-card">
+                        최고출력
+                        <span th:text="${#numbers.formatInteger(motorcycle.maxPowerHp, 0, 'COMMA') + 'hp / ' + #numbers.formatInteger(motorcycle.maxPowerRpm, 0, 'COMMA') + 'rpm'}"></span>
+                    </div>
+                    <div class="stat-card">
+                        최대토크
+                        <span th:text="${#numbers.formatInteger(motorcycle.maxTorqueNm, 0, 'COMMA') + 'Nm / ' + #numbers.formatInteger(motorcycle.maxTorqueRpm, 0, 'COMMA') + 'rpm'}"></span>
+                    </div>
+                    <div class="stat-card">
+                        연비
+                        <span th:text="${#numbers.formatDecimal(motorcycle.mileage, 1, 1) + 'km/l'}"></span>
+                    </div>
+                    <div class="stat-card">
+                        최고속도
+                        <span th:text="${#numbers.formatInteger(motorcycle.topSpeed, 0, 'COMMA') + 'km'}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="specs-grid">
+        <div class="specs-card">
+            <h2>엔진 제원</h2>
+            <div class="specs-details">
+                <div class="spec-item">
+                    엔진형식
+                    <span th:text="${motorcycle.engineType}"></span>
+                </div>
+                <div class="spec-item">
+                    배기량
+                    <span th:text="${#numbers.formatInteger(motorcycle.capacity, 0, 'COMMA') + 'cc'}"></span>
+                </div>
+                <div class="spec-item">
+                    압축비
+                    <span th:text="${motorcycle.compressionRatio}"></span>
+                </div>
+                <div class="spec-item">
+                    밸브방식
+                    <span th:text="${motorcycle.engineCamshaft}"></span>
+                </div>
+                <div class="spec-item">
+                    냉각방식
+                    <span th:text="${motorcycle.coolingSystem}"></span>
+                </div>
+                <div class="spec-item">
+                    연료공급방식
+                    <span th:text="${motorcycle.fuelSystem}"></span>
+                </div>
+                <div class="spec-item">
+                    트랜스미션 타입
+                    <span th:text="${motorcycle.transmissionType}"></span>
+                </div>
+                <div class="spec-item">
+                    엔진 형식
+                    <span th:text="${#numbers.formatDecimal(motorcycle.engineStroke,0,0)}"></span>밸브
+                    <span th:if="${motorcycle.engineCylinder == 1}" th:text="'단기통'"></span>
+                    <span th:unless="${motorcycle.engineCylinder == 1}" th:text="${#numbers.formatDecimal(motorcycle.engineCylinder, 0, 0) + '기통'}"></span>
+                    <span th:text="${motorcycle.engineType}"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="specs-card">
+            <h2>제원 및 섀시</h2>
+            <div class="specs-details">
+                <div class="spec-item">
+                    전장 X 전폭 X 전고<br>
+                    <span th:text="${#numbers.formatDecimal(motorcycle.length, 0, 0, 'COMMA') + ' x ' + #numbers.formatDecimal(motorcycle.width, 0, 0, 'COMMA') + ' x ' + #numbers.formatDecimal(motorcycle.height, 0, 0, 'COMMA') + ' mm'}"></span>
+                </div>
+                <div class="spec-item">
+                    시트고
+                    <span th:text="${#numbers.formatInteger(motorcycle.seatHeight, 0, 'COMMA') + ' mm'}"></span>
+                </div>
+                <div class="spec-item">
+                    휠베이스
+                    <span th:text="${#numbers.formatInteger(motorcycle.wheelbase, 0, 'COMMA') + ' mm'}"></span>
+                </div>
+                <div class="spec-item">
+                    최저지상고
+                    <span th:text="${#numbers.formatInteger(motorcycle.groundClearance, 0, 'COMMA') + ' mm'}"></span>
+                </div>
+                <div class="spec-item">
+                    차량중량
+                    <span th:text="${#numbers.formatInteger(motorcycle.wetWeight, 0, 'COMMA') + ' kg'}"></span>
+                </div>
+                <div class="spec-item">
+                    연료탱크
+                    <span th:text="${#numbers.formatDecimal(motorcycle.fuelCapacity, 1, 1) + ' L'}"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="brake-suspension">
+            <h2>서스펜션 및 제동장치</h2>
+            <div class="specs-details-single">
+                <div class="spec-item">
+                    전륜 브레이크
+                    <span th:text="${#numbers.formatInteger(motorcycle.frontBrakeDiscCount, 0, 'COMMA') + '피스톤 ' + motorcycle.frontBrakeDiscType}"></span>
+                    <span th:text="${#numbers.formatInteger(motorcycle.frontBrakeDiscSize, 0, 'COMMA') + 'mm'}"></span>
+                </div>
+                <div class="spec-item">
+                    후륜 브레이크
+                    <span th:text="${motorcycle.rearBrakeDiscType}"></span>
+                    <span th:text="${#numbers.formatInteger(motorcycle.rearBrakeDiscSize, 0, 'COMMA') + 'mm'}"></span>
+                </div>
+                <div class="spec-item">
+                    타이어 전륜
+                    <span th:text="${#numbers.formatInteger(motorcycle.frontTyreWidth, 0, 'COMMA') + '/' + #numbers.formatInteger(motorcycle.frontTyreAspectRatio, 0, 'COMMA') + 'R' + #numbers.formatInteger(motorcycle.frontTyreDiameter, 0, 'COMMA')}"></span>
+                    / 타이어 후륜
+                    <span th:text="${#numbers.formatInteger(motorcycle.rearTyreWidth, 0, 'COMMA') + '/' + #numbers.formatInteger(motorcycle.rearTyreAspectRatio, 0, 'COMMA') + 'R' + #numbers.formatInteger(motorcycle.rearTyreDiameter, 0, 'COMMA')}"></span>
+                </div>
+                <div class="spec-item">
+                    프레임
+                    <span th:text="${motorcycle.frameType + ' / ' + motorcycle.frameMaterial}"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="electronics">
+            <h2>전자장비</h2>
+            <div class="electronics-tags">
+                <span class="tag" th:if="${motorcycle.abs}">ABS</span>
+                <span class="tag" th:if="${motorcycle.tcs}">TCS</span>
+                <span class="tag" th:if="${motorcycle.cruiseControl}">크루즈 컨트롤</span>
+                <span class="tag" th:if="${motorcycle.assistSlipperClutch}">어시스트 슬리퍼 클러치</span>
+                <span class="tag" th:if="${motorcycle.electricScreen}">전동 스크린</span>
+                <span class="tag" th:if="${motorcycle.clutchAssistSystem}">클러치 어시스트</span>
+                <span class="tag" th:if="${motorcycle.imu}">IMU</span>
+                <span class="tag" th:if="${motorcycle.corneringAbs}">코너링 ABS</span>
+                <span class="tag" th:if="${motorcycle.wheelieControl}">윌리 컨트롤</span>
+                <span class="tag" th:if="${motorcycle.ridingModeChange}">라이딩 모드</span>
+                <span class="tag" th:if="${motorcycle.bankingAngleDisplay}">뱅킹 앵글</span>
+                <span class="tag" th:if="${motorcycle.absLevelControl}">ABS 레벨 조절</span>
+                <span class="tag" th:if="${motorcycle.quickshiftUp}">퀵시프트 업</span>
+                <span class="tag" th:if="${motorcycle.quickshiftUpDown}">퀵시프트 업/다운</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <a class="nav-btn prev" th:if="${currentIndex > 0}" th:href="@{/results(index=${currentIndex - 1})}">
+            <svg class="nav-icon" viewbox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </a>
+
+        <div class="page-navigation">
+            <input type="number" class="page-input" min="1" th:max="${totalResults}" th:value="${currentIndex + 1}" aria-label="페이지 번호 입력">
+            <span class="page-total" th:text="'/ ' + ${totalResults}"></span>
+        </div>
+
+        <a class="nav-btn next" th:if="${currentIndex < totalResults - 1}" th:href="@{/results(index=${currentIndex + 1})}">
+            <svg class="nav-icon" viewbox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const container = document.querySelector('.container');
+        const brand = container.dataset.brand;
+        const model = container.dataset.model;
+        const currentImage = document.getElementById('currentImage');
+
+        // 기본 이미지 설정
+        currentImage.onerror = function() {
+            this.src = '/static/images/no-image.jpg';
+        };
+
+        // 이미지 로드
+        fetch(`/api/images/${encodeURIComponent(brand)}/${encodeURIComponent(model)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('이미지를 불러올 수 없습니다');
+                }
+                return response.json();
+            })
+            .then(images => {
+                if (images && images.length > 0) {
+                    currentImage.src = `/static/images/${images[0].filePath}`;
+                    console.log('이미지 로드 성공:', images);
+                }
+            })
+            .catch(error => {
+                console.error('이미지 로드 실패:', error);
+                currentImage.src = '/static/images/no-image.jpg';
+            });
+    });
+
+    /*<![CDATA[*/
+    document.getElementById('saveResultBtn').addEventListener('click', function() {
+        const boardForm = [[${session.boardForm}]];
+        if (!boardForm) {
+            alert('설문 데이터를 찾을 수 없습니다.');
+            return;
+        }
+
+        fetch('/analysis/save-recommendation', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector("meta[name='_csrf']").content
+            },
+            body: JSON.stringify({
+                question1: boardForm.question1,
+                question2: boardForm.question2,
+                question3: boardForm.question3,
+                question4: boardForm.question4,
+                question5: boardForm.question5,
+                question6: boardForm.question6,
+                question7: boardForm.question7
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('결과가 성공적으로 저장되었습니다.');
+                    document.getElementById('saveResultBtn').disabled = true;
+                    document.getElementById('saveResultBtn').textContent = '저장 완료';
+                } else {
+                    alert(data.message || '저장 중 오류가 발생했습니다.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('저장 중 오류가 발생했습니다.');
+            });
+    });
+    /*]]>*/
+</script>
+</body>
+</html>

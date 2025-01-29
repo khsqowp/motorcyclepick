@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8">
+  <title>이미지 관리</title>
+  <link rel="stylesheet" th:href="@{/static/imageAdmin.css}">
+  <!-- CSRF 토큰을 meta 태그로 추가 -->
+  <meta name="_csrf" th:content="${_csrf.token}"/>
+  <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+<body>
+
+<div class="image-container">
+  <div class="section-container">
+    <h1 class="section-title">이미지 관리 콘솔</h1>
+
+    <a href="/motorcycle" class="back-button">관리자 페이지로 돌아가기</a>
+
+    <div th:if="${#lists.isEmpty(images)}" class="message">
+      처리할 이미지가 없습니다.
+    </div>
+
+    <div th:each="image : ${images}" class="image-item">
+      <img th:src="@{'/images/temp/' + ${image.fileName}}"
+              th:alt="${image.fileName}"
+              class="image-preview"
+              onclick="showPopup(this.src)">
+
+      <div class="image-info">
+        <p>브랜드: <span th:text="${image.brand}"></span></p>
+        <p>모델: <span th:text="${image.model}"></span></p>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn approve" th:data-filename="${image.fileName}"
+                onclick="approveImage(this.getAttribute('data-filename'))">승인</button>
+        <button type="button" class="btn btn-secondary reject" th:data-filename="${image.fileName}"
+                onclick="rejectImage(this.getAttribute('data-filename'))">거절</button>
+      </div>
+    </div>
+
+    <!-- 팝업 -->
+    <div id="imagePopup" class="popup-overlay">
+      <div class="popup-content">
+        <button class="close-button" onclick="hidePopup()">×</button>
+        <img id="popupImage" class="popup-image" src="" alt="팝업 이미지">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script th:src="@{/static/js/imageAdmin.js}"></script>
+</body>
+</html>

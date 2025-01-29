@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>16Motorbikes - 오토바이 취향 테스트</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+    :root {
+      --background: #0F172A;
+      --card-bg: #1E293B;
+      --accent: #3B82F6;
+      --text-primary: #F1F5F9;
+      --text-secondary: #94A3B8;
+      --hover-color: #2563EB;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--background);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .header {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .main-container {
+      min-height: 100vh;
+      padding: 6rem 2rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .progress-section {
+      margin-bottom: 2rem;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    #progress {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+    }
+
+    .question {
+      display: none;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.1);
+      margin-bottom: 1rem;
+    }
+
+    .question.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .question h3 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: var(--text-primary);
+    }
+
+    .input-group {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group input {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid transparent;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      width: 200px;
+      transition: all 0.3s ease;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .input-group span {
+      color: var(--text-primary);
+    }
+
+    .option-container {
+      display: grid;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .option-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid transparent;
+      border-radius: 8px;
+      padding: 1rem;
+      color: var(--text-primary);
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .option-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .option-btn.selected {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .multiple-select {
+      display: grid;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .select-item {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid transparent;
+      border-radius: 8px;
+      padding: 1rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .select-item:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .select-item.selected {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .error {
+      color: #ff4444;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 0.5rem;
+      display: none;
+    }
+
+    #finalSubmitBtn {
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto 0;
+      display: none;
+      background: var(--accent);
+      color: var(--text-primary);
+      border: none;
+      border-radius: 8px;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #finalSubmitBtn:hover {
+      background: var(--hover-color);
+      transform: translateY(-2px);
+    }
+
+    button {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    .back-button {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+      display: none;
+    }
+
+    .back-button:hover {
+      color: var(--text-primary);
+    }
+
+    /* 2번 질문부터 이전 버튼 표시 */
+    #q2 .back-button,
+    #q3 .back-button,
+    #q4 .back-button,
+    #q5 .back-button,
+    #q6 .back-button,
+    #q7 .back-button {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <nav class="nav-content">
+    <a href="/" class="logo">
+      🏍️ 16MOTORBIKES
+    </a>
+  </nav>
+</header>
+
+<form th:action="@{/resultPage}" th:object="${boardForm}" method="POST" class="main-container">
+  <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+  <div class="progress-section">
+    <div class="progress-bar">
+      <div id="progressFill" class="progress-fill" style="width: 14.28%"></div>
+    </div>
+    <div id="progress">
+      <span id="currentStep">1</span> / <span id="totalSteps">7</span>
+    </div>
+  </div>
+
+  <div id="q1" class="question active">
+    <h3>당신이 바이크 구매에 투자 가능한 비용은?</h3>
+    <div class="input-group">
+      <input type="number" id="costInput" th:field="*{question1}" placeholder="금액을 입력하세요" min="1">
+      <span>만원</span>
+      <button type="button" onclick="handleCostSubmit()">완료</button>
+    </div>
+    <div id="budgetError" class="error">유효한 금액을 입력해주세요</div>
+  </div>
+
+  <div id="q2" class="question">
+    <h3>당신의 바이크 주행 목적은?</h3>
+    <div class="option-container">
+      <button type="button" class="option-btn" onclick="selectOption(2, '동네마실')">동네 마실 (125cc 미만)</button>
+      <button type="button" class="option-btn" onclick="selectOption(2, '출퇴근')">출퇴근 (125 ~ 350cc)</button>
+      <button type="button" class="option-btn" onclick="selectOption(2, '시내바리')">시내바리 (125 ~ 650cc)</button>
+      <button type="button" class="option-btn" onclick="selectOption(2, '근교바리')">근교바리 (300 ~ 1000cc)</button>
+      <button type="button" class="option-btn" onclick="selectOption(2, '중거리투어')">중거리 투어 (500cc ~)</button>
+      <button type="button" class="option-btn" onclick="selectOption(2, '장거리투어')">장거리 투어 (650cc ~)</button>
+    </div>
+    <div id="q2Error" class="error">선택해주세요</div>
+    <div class="button-container">
+      <button type="button" class="back-button" onclick="goToPreviousQuestion(2)">← 이전</button>
+    </div>
+  </div>
+
+  <div id="q3" class="question">
+    <h3>당신의 평균적인 주행 스타일은?</h3>
+    <div class="option-container">
+      <button type="button" class="option-btn" onclick="selectOption(3, '레플리카')">나는 날카로운 코너링과 스포티한 자세가 최고야</button>
+      <button type="button" class="option-btn" onclick="selectOption(3, '크루저')">나는 시트고가 낮고 편안하게 앉아서 한적한 도로를 따라 여유롭게 달리고싶어</button>
+      <button type="button" class="option-btn" onclick="selectOption(3, '투어러')">나는 장거리 투어를 좋아하고, 넉넉한 수납공간과 편안한 시트가 필요해</button>
+      <button type="button" class="option-btn" onclick="selectOption(3, '어드벤처')">나는 공도도 주행하고 싶고, 임도도 주행하면서 여기저기 돌아다니고싶어</button>
+      <button type="button" class="option-btn" onclick="selectOption(3, '멀티퍼포즈')">도심 출퇴근부터, 주말 투어까지 모든걸 딱 한대로 해결하고싶어</button>
+      <button type="button" class="option-btn" onclick="selectOption(3, '네이키드')">도심 사이를 가로지르며 날것 그대로의 라이딩을 즐기고 싶어</button>
+      <button type="button" class="option-btn" onclick="selectOption(3, '클래식')">옛날 디자인이 좋고, 엔진의 고동감을 느끼면서 여유있게 주행하는게 좋아</button>
+      <button type="button" class="option-btn" onclick="selectOption(3, '스크램블러')">오프로드도 좋은데 클래식한 디자인이 내 취향이야</button>
+      <button type="button" class="option-btn" onclick="selectOption(3, '오프로드')">난 산길 어디든 마음대로 다니고, 험난한 지형을 타고싶어</button>
+      <button type="button" class="option-btn" onclick="selectOption(3, '모타드')">난 도심속에서 가볍고 높은 시트고로 치고 나가면서, 산 속에서 스릴을 느끼고 싶어</button>
+      <button type="button" class="option-btn" onclick="selectOption(3, '스쿠터')">난 실용성과 경제성을 모두 갖추고, 무엇보다 편한게 최고야</button>
+      <button type="button" class="option-btn" onclick="selectOption(3, '카페레이서')">클래식한 멋과, 레플리카와 같은 스포티한 주행이 내 취향이야</button>
+    </div>
+    <div id="q3Error" class="error">선택해주세요</div>
+    <div class="button-container">
+      <button type="button" class="back-button" onclick="goToPreviousQuestion(3)">← 이전</button>
+    </div>
+  </div>
+
+  <div id="q4" class="question">
+    <h3>당신의 평균적인 주행 속도는?</h3>
+    <div class="option-container">
+      <button type="button" class="option-btn" onclick="selectOption(4, '60km')">난 자동차랑 비슷한 속도로 다닐거야 (60 ~ 110km)</button>
+      <button type="button" class="option-btn" onclick="selectOption(4, '80km')">국도 제한속도는 그래도 달려야지 (80 ~ 120km)</button>
+      <button type="button" class="option-btn" onclick="selectOption(4, '100km')">난 세자리 숫자로는 달릴거야 (100 ~ 130km)</button>
+      <button type="button" class="option-btn" onclick="selectOption(4, '120km')">100Km에서 추월은 가능해야지 (120 ~ 170km)</button>
+      <button type="button" class="option-btn" onclick="selectOption(4, '170km')">빠른건 좋지만 200은 무서워 (150 ~ 199km)</button>
+      <button type="button" class="option-btn" onclick="selectOption(4, '200km')">y영역대까지는 달리고싶어 (200 ~ 240km)</button>
+      <button type="button" class="option-btn" onclick="selectOption(4, '250km')">난 y영역 이상을 원해 (250 ~ 299km)</button>
+      <button type="button" class="option-btn" onclick="selectOption(4, '250km+')"> y? 나는 z영역도 달릴거야(300 ~ )</button>
+    </div>
+    <div id="q4Error" class="error">선택해주세요</div>
+    <div class="button-container">
+      <button type="button" class="back-button" onclick="goToPreviousQuestion(4)">← 이전</button>
+    </div>
+  </div>
+
+  <div id="q5" class="question">
+    <h3>당신의 평균 주행 거리는?</h3>
+    <div class="option-container">
+      <button type="button" class="option-btn" onclick="selectOption(5, '동네')">난 내 동네 주변에서만 탈거야 (언더본, 쿼터)</button>
+      <button type="button" class="option-btn" onclick="selectOption(5, '도시')">난 내 도시에서 타고 투어는 안나가 (쿼터 미들)</button>
+      <button type="button" class="option-btn" onclick="selectOption(5, '근교')">난 근교까지는 투어 다니고 싶어 (쿼터 미들 리터 오버리터)</button>
+      <button type="button" class="option-btn" onclick="selectOption(5, '장거리')">난 장거리 위주로 다닐거야 (미들 리터 오버리터)</button>
+    </div>
+    <div id="q5Error" class="error">선택해주세요</div>
+    <div class="button-container">
+      <button type="button" class="back-button" onclick="goToPreviousQuestion(5)">← 이전</button>
+    </div>
+  </div>
+
+  <div id="q6" class="question">
+    <h3>당신이 희망하는 평균 주행 rpm은?</h3>
+    <div class="option-container">
+      <button type="button" class="option-btn" onclick="selectOption(6, '3500')">난 조금만 당겨서 여유롭게 다닐거야 (3500rpm)</button>
+      <button type="button" class="option-btn" onclick="selectOption(6, '6000')">그래도 차 2배는 써야지 (6000rpm)</button>
+      <button type="button" class="option-btn" onclick="selectOption(6, '10000')">난 우와앙 거리는게 좋아 (10000rpm)</button>
+      <button type="button" class="option-btn" onclick="selectOption(6, '10000+')">나는 10,000rpm은 넘기면서 짜야지 재밌을거같아</button>
+    </div>
+    <div id="q6Error" class="error">선택해주세요</div>
+    <div class="button-container">
+      <button type="button" class="back-button" onclick="goToPreviousQuestion(6)">← 이전</button>
+    </div>
+  </div>
+
+  <div id="q7" class="question">
+    <h3>당신이 좋아하는 바이크 외형은? (가장 필요한 기능 2개)</h3>
+    <div class="multiple-select">
+      <div class="select-item" onclick="toggleSelect(this, '토크중시')">출력보다는 토크가 더 좋은 바이크</div>
+      <div class="select-item" onclick="toggleSelect(this, '낮은시트')">키 작은 사람도 편하게 탈 수 있는 낮은 시트고를 가진 바이크</div>
+      <div class="select-item" onclick="toggleSelect(this, '경량화')">직진성보다는 조작성이 편한 가벼운 바이크</div>
+      <div class="select-item" onclick="toggleSelect(this, '대형바이크')">컴팩트한 사이즈보다는 우람한 크기를 가진 바이크</div>
+      <div class="select-item" onclick="toggleSelect(this, '연비중시')">퍼포먼스보다는 좋은 연비를 가진 바이크</div>
+      <div class="select-item" onclick="toggleSelect(this, '대용량')">한번 주유하면 오랫동안 달릴 수 있는 큰 연료탱크를 가진 바이크</div>
+    </div>
+    <div id="q7Error" class="error">선택해주세요</div>
+    <button type="button" id="finalSubmitBtn" class="final-submit-btn" onclick="submitSurvey(event)" style="display: none;">설문 완료</button>
+    <div class="button-container">
+      <button type="button" class="back-button" onclick="goToPreviousQuestion(7)">← 이전</button>
+    </div>
+  </div>
+
+  <input type="hidden" th:field="*{question1}" id="question1Input">
+  <input type="hidden" th:field="*{question2}" id="question2Input">
+  <input type="hidden" th:field="*{question3}" id="question3Input">
+  <input type="hidden" th:field="*{question4}" id="question4Input">
+  <input type="hidden" th:field="*{question5}" id="question5Input">
+  <input type="hidden" th:field="*{question6}" id="question6Input">
+  <input type="hidden" th:field="*{question7}" id="question7Input">
+</form>
+
+<script>
+  // 전역 변수 설정
+  let selectedItems = [];
+  let answers = {
+    question1: '',
+    question2: '',
+    question3: '',
+    question4: '',
+    question5: '',
+    question6: '',
+    question7: []
+  };
+
+  // 문항 전환 애니메이션 함수
+  function transitionQuestion(currentQuestion, nextQuestion) {
+    if (currentQuestion && nextQuestion) {
+      currentQuestion.style.opacity = '0';
+      currentQuestion.style.transform = 'translateY(20px)';
+
+      setTimeout(() => {
+        currentQuestion.classList.remove('active');
+        nextQuestion.classList.add('active');
+
+        setTimeout(() => {
+          nextQuestion.style.opacity = '1';
+          nextQuestion.style.transform = 'translateY(0)';
+        }, 50);
+      }, 300);
+    }
+  }
+
+  // 비용 입력 처리 함수
+  function handleCostSubmit() {
+    const costInput = document.getElementById('costInput');
+    const costInputHidden = document.getElementById('question1Input');
+    const errorDiv = document.getElementById('budgetError');
+    const cost = parseInt(costInput.value);
+
+    if (!cost || cost <= 0 || isNaN(cost)) {
+      errorDiv.style.display = 'block';
+      costInput.classList.add('error-input');
+      return false;
+    }
+
+    const costValue = cost.toString();
+    answers.question1 = costValue;
+    if (costInputHidden) {
+      costInputHidden.value = costValue;
+    }
+
+    errorDiv.style.display = 'none';
+    costInput.classList.remove('error-input');
+
+    const currentQuestion = document.getElementById('q1');
+    const nextQuestion = document.getElementById('q2');
+    transitionQuestion(currentQuestion, nextQuestion);
+    updateProgress(2);
+  }
+
+  // 옵션 선택 처리 함수
+  function selectOption(questionNum, value) {
+    // 이전 선택된 옵션의 스타일 초기화
+    const prevSelected = document.querySelector(`#q${questionNum} .option-btn.selected`);
+    if (prevSelected) {
+      prevSelected.classList.remove('selected');
+    }
+
+    // 현재 선택된 버튼에 스타일 적용
+    const selectedBtn = event.target;
+    selectedBtn.classList.add('selected');
+
+    answers[`question${questionNum}`] = value;
+    const hiddenInput = document.getElementById(`question${questionNum}Input`);
+    if (hiddenInput) {
+      hiddenInput.value = value;
+    }
+
+    const errorDiv = document.getElementById(`q${questionNum}Error`);
+    if (errorDiv) {
+      errorDiv.style.display = 'none';
+    }
+
+    // 애니메이션과 함께 다음 질문으로 전환
+    setTimeout(() => {
+      const currentQuestion = document.getElementById(`q${questionNum}`);
+      const nextQuestion = document.getElementById(`q${questionNum + 1}`);
+      transitionQuestion(currentQuestion, nextQuestion);
+      updateProgress(questionNum + 1);
+    }, 300);
+  }
+
+  // 다중 선택 토글 함수
+  function toggleSelect(element, value) {
+    const errorDiv = document.getElementById('q7Error');
+    const hiddenInput = document.getElementById('question7Input');
+
+    if (element.classList.contains('selected')) {
+      // 선택 해제
+      element.classList.remove('selected');
+      const index = selectedItems.indexOf(value);
+      if (index !== -1) {
+        selectedItems.splice(index, 1);
+      }
+    } else {
+      // 새로운 선택
+      if (selectedItems.length >= 2) {
+        // 이미 2개가 선택된 경우, 첫 번째 선택 항목 제거
+        const firstSelected = document.querySelector('.select-item.selected');
+        if (firstSelected) {
+          firstSelected.classList.remove('selected');
+          selectedItems.shift();
+        }
+      }
+      element.classList.add('selected');
+      selectedItems.push(value);
+    }
+
+    // 입력값 업데이트
+    answers.question7 = selectedItems;
+    if (hiddenInput) {
+      hiddenInput.value = selectedItems.join(',');
+    }
+
+    // 에러 메시지와 제출 버튼 표시 상태 업데이트
+    errorDiv.style.display = selectedItems.length > 0 ? 'none' : 'block';
+    const finalSubmitBtn = document.getElementById('finalSubmitBtn');
+    if (finalSubmitBtn) {
+      finalSubmitBtn.style.display = selectedItems.length > 0 ? 'block' : 'none';
+    }
+  }
+
+  // 진행률 업데이트 함수
+  function updateProgress(step) {
+    const progress = ((step - 1) / 6) * 100;
+    const progressFill = document.getElementById('progressFill');
+    const currentStep = document.getElementById('currentStep');
+
+    if (progressFill) {
+      progressFill.style.width = `${progress}%`;
+    }
+
+    if (currentStep) {
+      currentStep.textContent = step;
+    }
+  }
+
+  // 설문 제출 함수
+  function submitSurvey(event) {
+    if (event) {
+      event.preventDefault();
+    }
+
+    // 모든 답변 검증
+    let isValid = true;
+    for (let i = 1; i <= 6; i++) {
+      const answer = answers[`question${i}`];
+      if (!answer || answer.trim() === '') {
+        const errorDiv = document.getElementById(`q${i}Error`);
+        if (errorDiv) {
+          errorDiv.style.display = 'block';
+        }
+        document.getElementById(`q${i}`).classList.add('active');
+        isValid = false;
+        break;
+      }
+    }
+
+    // 마지막 질문(다중 선택) 검증
+    if (selectedItems.length === 0) {
+      const errorDiv = document.getElementById('q7Error');
+      if (errorDiv) {
+        errorDiv.style.display = 'block';
+      }
+      isValid = false;
+    }
+
+    if (!isValid) {
+      return false;
+    }
+
+    // 폼 제출
+    const form = document.querySelector('form');
+    if (form) {
+      form.submit();
+    }
+  }
+
+  // 이전 문항으로 이동하는 함수
+  function goToPreviousQuestion(currentQuestionNum) {
+    const currentQuestion = document.getElementById(`q${currentQuestionNum}`);
+    const previousQuestion = document.getElementById(`q${currentQuestionNum - 1}`);
+
+    if (currentQuestion && previousQuestion) {
+      currentQuestion.style.opacity = '0';
+      currentQuestion.style.transform = 'translateY(20px)';
+
+      setTimeout(() => {
+        currentQuestion.classList.remove('active');
+        previousQuestion.classList.add('active');
+
+        setTimeout(() => {
+          previousQuestion.style.opacity = '1';
+          previousQuestion.style.transform = 'translateY(0)';
+        }, 50);
+      }, 300);
+
+      updateProgress(currentQuestionNum - 1);
+    }
+  }
+
+  // 페이지 로드 시 초기화
+  document.addEventListener('DOMContentLoaded', function() {
+    // 비용 입력 필드에 엔터 키 이벤트 리스너 추가
+    const costInput = document.getElementById('costInput');
+    if (costInput) {
+      costInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          handleCostSubmit();
+        }
+      });
+
+      // 자동 포커스
+      costInput.focus();
+    }
+
+    // 에러 메시지 초기화
+    const errorDivs = document.querySelectorAll('.error');
+    errorDivs.forEach(div => div.style.display = 'none');
+
+    // 첫 번째 질문 애니메이션
+    const firstQuestion = document.getElementById('q1');
+    if (firstQuestion) {
+      setTimeout(() => {
+        firstQuestion.style.opacity = '1';
+        firstQuestion.style.transform = 'translateY(0)';
+      }, 100);
+    }
+
+    // 진행률 초기화
+    updateProgress(1);
+
+    function goToPreviousQuestion(currentQuestionNum) {
+      const currentQuestion = document.getElementById(`q${currentQuestionNum}`);
+      const previousQuestion = document.getElementById(`q${currentQuestionNum - 1}`);
+
+      if (currentQuestion && previousQuestion) {
+        currentQuestion.style.opacity = '0';
+        currentQuestion.style.transform = 'translateY(20px)';
+
+        setTimeout(() => {
+          currentQuestion.classList.remove('active');
+          previousQuestion.classList.add('active');
+
+          setTimeout(() => {
+            previousQuestion.style.opacity = '1';
+            previousQuestion.style.transform = 'translateY(0)';
+          }, 50);
+        }, 300);
+
+        updateProgress(currentQuestionNum - 1);
+      }
+    }
+
+    // 옵션 버튼에 호버 효과 추가
+    const options = document.querySelectorAll('.option-btn, .select-item');
+    options.forEach(option => {
+      option.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px)';
+      });
+      option.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+  });
+
+
+</script>
+</body>
+</html>

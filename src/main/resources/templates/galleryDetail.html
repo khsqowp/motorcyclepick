@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${siteTitle}">갤러리 상세</title>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* gallery.html의 스타일을 그대로 가져오고 추가 스타일 정의 */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .image-card {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 75%; /* 4:3 비율 */
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-info {
+            padding: 1rem;
+        }
+
+        .model-selector {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: 1rem;
+            background: var(--card-bg);
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .model-button {
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 0.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .model-button:hover {
+            background: var(--accent);
+        }
+
+        .model-button.active {
+            background: var(--accent);
+        }
+
+        .no-images {
+            text-align: center;
+            padding: 4rem;
+            color: var(--text-secondary);
+            grid-column: 1 / -1;
+        }
+
+        .instagram-tag {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .custom-badge {
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <nav class="nav-content">
+        <a class="logo" href="/"> 🏍️ 16MOTORBIKES </a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2 class="text-2xl font-bold mb-4" th:text="${brand} + ' 갤러리'">브랜드 갤러리</h2>
+
+    <!-- 모델 선택기 -->
+    <div class="model-selector" th:if="${models != null}">
+        <div class="model-button"
+                th:each="m : ${models}"
+                th:data-url="@{'/gallery/' + ${brand} + '/' + ${m}}"
+                th:text="${m}"
+                onclick="location.href=this.getAttribute('data-url')">
+        </div>
+    </div>
+
+    <!-- 이미지 그리드 -->
+    <div class="image-grid">
+        <div class="no-images" th:if="${#lists.isEmpty(images)}">
+            <p>등록된 이미지가 없습니다.</p>
+        </div>
+
+        <div class="image-card" th:each="image : ${images}">
+            <div class="image-container">
+                <img th:alt="${brand + ' ' + model}"
+                        th:src="@{'/static/images/' + ${image.filePath}}">
+            </div>
+            <div class="image-info">
+                <h3 class="font-bold" th:text="${brand + ' ' + model}">모델명</h3>
+                <div class="instagram-tag" th:if="${image.instagramID != null}">
+                    <a target="_blank"
+                            th:href="'https://instagram.com/' + ${image.instagramID}"
+                            th:text="${image.instagramID}"> </a>
+                </div>
+                <div class="custom-badge" th:if="${image.custom}">
+                    커스텀
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="return-button-container">
+    <a class="return-button" href="/gallery">갤러리로 돌아가기</a>
+</div>
+
+<script>
+    // 현재 선택된 모델에 active 클래스 추가
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentModel = '[[${model}]]';
+        if (currentModel) {
+            const modelButtons = document.querySelectorAll('.model-button');
+            modelButtons.forEach(button => {
+                if (button.textContent.trim() === currentModel) {
+                    button.classList.add('active');
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

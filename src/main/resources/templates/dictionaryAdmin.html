@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <title>오토바이 용어 관리</title>
+    <style>
+        :root {
+            --razer-green: #00ff00;
+            --razer-dark: #111111;
+            --razer-gray: #222222;
+            --terminal-font: 'Consolas', 'Monaco', monospace;
+        }
+
+        body {
+            background-color: var(--razer-dark);
+            color: var(--razer-green);
+            font-family: var(--terminal-font);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .top-panels {
+            display: flex;
+            gap: 30px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .left-panel, .right-panel {
+            flex: 1;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--razer-green);
+            border-radius: 4px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+            position: relative;
+        }
+
+        .section-title {
+            color: var(--razer-green);
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--razer-green);
+            padding-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--razer-green);
+            color: var(--razer-green);
+            padding: 8px;
+            width: 100%;
+            font-family: var(--terminal-font);
+        }
+
+        .btn {
+            background-color: transparent;
+            color: var(--razer-green);
+            border: 1px solid var(--razer-green);
+            padding: 8px 16px;
+            cursor: pointer;
+            font-family: var(--terminal-font);
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--razer-green);
+            color: var(--razer-dark);
+        }
+
+        .term-exists {
+            color: #ff0000;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--razer-green);
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .search-item {
+            padding: 8px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+        }
+
+        .search-item:hover {
+            background-color: rgba(0, 255, 0, 0.1);
+        }
+
+        .form-container {
+            position: relative;
+        }
+
+        .left-panel {
+            flex: 1;
+            display: block;
+        }
+
+        .category-list {
+            border-right: 1px solid rgba(0, 255, 0, 0.2);
+            padding-right: 15px;
+        }
+
+        .section-title.mini {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .categories {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .category-item {
+            padding: 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            margin-bottom: 10px;
+        }
+
+        .category-item:hover {
+            background-color: rgba(0, 255, 0, 0.1);
+        }
+
+        .category-icon {
+            color: var(--razer-green);
+            margin-right: 8px;
+        }
+
+        .category-name {
+            font-weight: bold;
+        }
+
+        .category-desc {
+            display: block;
+            font-size: 12px;
+            color: rgba(0, 255, 0, 0.7);
+            margin-left: 18px;
+        }
+
+        .category-panel {
+            width: 250px; /* 카테고리 패널 고정 너비 */
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--razer-green);
+            border-radius: 4px;
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .term-add-form {
+            padding-left: 15px;
+        }
+
+        /* 기존 style 태그 내에 추가 */
+        .category-add-form {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid var(--razer-green);
+            border-radius: 4px;
+        }
+
+        .category-add-form .form-group {
+            margin-bottom: 10px;
+        }
+
+        .category-add-form input {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        .category-add-form .btn {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .term-requests-panel {
+            margin-top: 0;  /* 기존 margin-top 제거 */
+            width: 100%;    /* 전체 너비 사용 */
+        }
+
+        .request-item {
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+
+        .request-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .request-term {
+            font-weight: bold;
+            color: var(--razer-green);
+        }
+
+        .request-date {
+            color: rgba(0, 255, 0, 0.7);
+        }
+
+        .request-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .approve-btn {
+            border-color: #00ff00;
+        }
+
+        .reject-btn {
+            border-color: #ff0000;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top-panels">
+    <div class="category-panel">
+        <h4 class="section-title mini">카테고리 목록</h4>
+        <!-- 카테고리 추가 폼 -->
+        <div class="category-add-form">
+            <h4 class="section-title mini">카테고리 추가</h4>
+            <div class="form-group">
+                <label for="newCategoryName">카테고리명</label>
+                <input type="text" class="form-control" id="newCategoryName" required>
+            </div>
+            <div class="form-group">
+                <label for="newCategoryDesc">설명</label>
+                <input type="text" class="form-control" id="newCategoryDesc" required>
+            </div>
+            <button type="button" class="btn" id="addCategoryBtn">카테고리 추가</button>
+        </div>
+        <div class="categories">
+            <div th:each="category : ${categories}" class="category-item">
+                <span class="category-icon">></span>
+                <span class="category-name" th:text="${category.categoryName}"></span>
+                <span class="category-desc" th:text="${category.description}"></span>
+            </div>
+        </div>
+    </div>
+    <!-- 왼쪽 패널 - 용어 추가 -->
+    <div class="left-panel">
+        <div class="left-panel">
+            <h4 class="section-title">용어 등록</h4>
+        <form id="addTermForm">
+            <div class="form-group">
+                <label for="term">용어</label>
+                <input type="text" class="form-control" id="term" name="term" required>
+                <div id="termExistsMessage" class="term-exists" style="display: none;">
+                    이미 등록된 용어입니다.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="definition">정의</label>
+                <textarea class="form-control" id="definition" name="definition" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="category">카테고리</label>
+                <select class="form-control" id="category" name="category">
+                    <option value="">카테고리 선택</option>
+                    <option th:each="category : ${categories}"
+                            th:value="${category.categoryName}"
+                            th:text="${category.categoryName}">
+                    </option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">등록</button>
+        </form>
+    </div>
+        </div>
+
+    <!-- 오른쪽 패널 - 용어 수정 -->
+    <div class="right-panel">
+        <h4 class="section-title">용어 수정</h4>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="searchTerm">용어 검색</label>
+                <input type="text" class="form-control" id="searchTerm" autocomplete="off">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="editDefinition">정의</label>
+                <textarea class="form-control" id="editDefinition" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="editCategory">카테고리</label>
+                <select class="form-control" id="editCategory">
+                    <option value="">카테고리 선택</option>
+                    <option th:each="category : ${categories}"
+                            th:value="${category.categoryName}"
+                            th:text="${category.categoryName}">
+                    </option>
+                </select>
+            </div>
+
+            <button type="button" class="btn" id="updateBtn">수정</button>
+        </div>
+    </div>
+</div>
+    <div class="term-requests-panel">
+        <h4 class="section-title">용어 추가 요청 관리</h4>
+        <div class="requests-list">
+            <div th:each="request : ${termRequests}" class="request-item">
+                <div class="request-header">
+                    <span class="request-term" th:text="${request.term}"></span>
+                    <div class="request-date" th:text="${#temporals.format(request.createdAt, 'yyyy-MM-dd HH:mm')}"></div>
+                </div>
+                <div class="request-content">
+                    <p class="request-definition" th:text="${request.definition}"></p>
+                    <p class="request-category" th:text="${request.category}"></p>
+                    <p class="request-requester" th:text="${request.createdBy}"></p>
+                </div>
+                <div class="request-actions">
+                    <button class="btn approve-btn" th:data-id="${request.id}">승인</button>
+                    <button class="btn reject-btn" th:data-id="${request.id}">거절</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        // CSRF 토큰 설정
+        const csrfToken = document.querySelector("meta[name='_csrf']").content;
+        const csrfHeader = document.querySelector("meta[name='_csrf_header']").content;
+
+
+        document.getElementById('term').addEventListener('input', function() {
+        const term = this.value;
+        if(term.length > 0) {
+            // 기존 용어 확인 API 호출
+            fetch(`/admin/dictionary/check-term?term=${encodeURIComponent(term)}`)
+                .then(response => response.json())
+                .then(data => {
+                    const messageElement = document.getElementById('termExistsMessage');
+                    if(data.exists) {
+                        messageElement.style.display = 'block';
+                    } else {
+                        messageElement.style.display = 'none';
+                    }
+                });
+        }
+    });
+
+    document.getElementById('searchTerm').addEventListener('input', function() {
+        const searchTerm = this.value;
+        const resultsDiv = document.getElementById('searchResults');
+
+        let currentTermId = null; // 현재 선택된 용어의 ID를 저장할 전역 변수
+
+
+        if(searchTerm.length > 0) {
+            fetch(`/admin/dictionary/search?term=${encodeURIComponent(searchTerm)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if(data.length > 0) {
+                        const html = data.map(term => `
+                               <div class="search-item" data-id="${term.id}" data-term="${term.term}">
+                                   ${term.term}
+                               </div>
+                           `).join('');
+                        resultsDiv.innerHTML = html;
+                        resultsDiv.style.display = 'block';
+                    } else {
+                        resultsDiv.style.display = 'none';
+                    }
+                });
+        } else {
+            resultsDiv.style.display = 'none';
+        }
+    });
+
+    document.getElementById('searchResults').addEventListener('click', function(e) {
+        if(e.target.classList.contains('search-item')) {
+            const id = e.target.dataset.id;
+            currentTermId = id; // ID 저장
+            fetch(`/admin/dictionary/${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('searchTerm').value = data.term;
+                    document.getElementById('editDefinition').value = data.definition;
+                    document.getElementById('editCategory').value = data.category;
+                    this.style.display = 'none';
+                });
+        }
+    });
+
+    document.getElementById('updateBtn').addEventListener('click', function() {
+        const formData = {
+            id: currentTermId, // 전역 변수로 선언 필요
+            term: document.getElementById('searchTerm').value,
+            definition: document.getElementById('editDefinition').value,
+            category: document.getElementById('editCategory').value
+        };
+
+        const token = document.querySelector("meta[name='_csrf']").getAttribute("content");
+        const header = document.querySelector("meta[name='_csrf_header']").getAttribute("content");
+
+        fetch('/admin/dictionary/update', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                [header]: token
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    alert('용어가 성공적으로 수정되었습니다.');
+                    location.reload();
+                } else {
+                    alert('용어 수정 중 오류가 발생했습니다.');
+                }
+            });
+    });
+
+    // 기존 script 끝에 추가
+        document.getElementById('addCategoryBtn').addEventListener('click', function() {
+            const categoryData = {
+                categoryName: document.getElementById('newCategoryName').value,
+                description: document.getElementById('newCategoryDesc').value
+            };
+
+            // 입력값 검증
+            if (!categoryData.categoryName || categoryData.categoryName.trim() === '') {
+                alert('카테고리명을 입력해주세요.');
+                return;
+            }
+
+            fetch('/admin/dictionary/category', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    [document.querySelector("meta[name='_csrf_header']").content]:
+                    document.querySelector("meta[name='_csrf']").content
+                },
+                credentials: 'include',
+                body: JSON.stringify(categoryData)
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('서버 응답 오류');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message);
+                        location.reload();
+                    } else {
+                        alert(data.message || '카테고리 추가 실패');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('카테고리 추가 중 오류가 발생했습니다.');
+                });
+        });
+
+    document.getElementById('addTermForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = {
+            term: document.getElementById('term').value,
+            definition: document.getElementById('definition').value,
+            category: document.getElementById('category').value
+        };
+
+        fetch('/admin/dictionary/term', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                [csrfHeader]: csrfToken
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    alert('용어가 성공적으로 등록되었습니다.');
+                    location.reload();
+                } else {
+                    alert('용어 등록 중 오류가 발생했습니다: ' + data.message);
+                }
+            })
+            .catch(error => {
+                alert('용어 등록 중 오류가 발생했습니다.');
+            });
+    });
+
+        document.querySelectorAll('.approve-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const requestId = btn.dataset.id;
+                try {
+                    const response = await fetch(`/admin/dictionary/request/${requestId}/approve`, {
+                        method: 'POST',
+                        headers: {
+                            [csrfHeader]: csrfToken
+                        }
+                    });
+
+                    const result = await response.json();
+                    if (result.success) {
+                        alert('용어 요청이 승인되었습니다.');
+                        location.reload();
+                    }
+                } catch (error) {
+                    alert('처리 중 오류가 발생했습니다.');
+                }
+            });
+        });
+
+        document.querySelectorAll('.reject-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const requestId = btn.dataset.id;
+                try {
+                    const response = await fetch(`/admin/dictionary/request/${requestId}/reject`, {
+                        method: 'POST',
+                        headers: {
+                            [csrfHeader]: csrfToken
+                        }
+                    });
+
+                    const result = await response.json();
+                    if (result.success) {
+                        alert('용어 요청이 거절되었습니다.');
+                        location.reload();
+                    }
+                } catch (error) {
+                    alert('처리 중 오류가 발생했습니다.');
+                }
+            });
+        });
+</script>
+</body>
+</html>

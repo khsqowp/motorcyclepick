@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 정보 수정</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;">
+    <style>
+        :root {
+            --razer-green: #00ff00;
+            --razer-dark: #111111;
+            --razer-gray: #222222;
+            --razer-light-gray: #333333;
+            --terminal-font: 'Consolas', 'Monaco', monospace;
+        }
+
+        body {
+            background-color: var(--razer-dark);
+            color: var(--razer-green);
+            font-family: var(--terminal-font);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .edit-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--razer-green);
+            border-radius: 4px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+            position: relative;
+        }
+
+        .edit-container::before {
+            content: "RAZER EDIT CONSOLE v1.0.0";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background-color: var(--razer-dark);
+            padding: 0 10px;
+            color: var(--razer-green);
+            font-size: 12px;
+        }
+
+        .section-title {
+            color: var(--razer-green);
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--razer-green);
+            padding-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .section-title::before {
+            content: "> ";
+            color: var(--razer-green);
+            opacity: 0.7;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--razer-green);
+            padding: 15px;
+            border-radius: 2px;
+        }
+
+        .form-label {
+            display: block;
+            color: var(--razer-green);
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .form-label::before {
+            content: "$ ";
+            opacity: 0.7;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            background-color: var(--razer-dark);
+            border: 1px solid var(--razer-green);
+            color: var(--razer-green);
+            font-family: var(--terminal-font);
+            font-size: 14px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 8px;
+            background-color: var(--razer-dark);
+            border: 1px solid var(--razer-green);
+            color: var(--razer-green);
+            font-family: var(--terminal-font);
+            font-size: 14px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .form-select:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+        }
+
+        .form-select option {
+            background-color: var(--razer-dark);
+            color: var(--razer-green);
+        }
+
+        .btn {
+            background-color: transparent;
+            color: var(--razer-green);
+            border: 1px solid var(--razer-green);
+            padding: 8px 16px;
+            text-decoration: none;
+            font-family: var(--terminal-font);
+            font-size: 14px;
+            border-radius: 2px;
+            display: inline-block;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        .btn::before {
+            content: "$ ";
+            opacity: 0.7;
+        }
+
+        .btn:hover {
+            background-color: var(--razer-green);
+            color: var(--razer-dark);
+            box-shadow: 0 0 15px var(--razer-green);
+        }
+
+        .btn-secondary {
+            border-color: #666;
+            color: #888;
+        }
+
+        .btn-secondary:hover {
+            background-color: #666;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .alert {
+            font-family: var(--terminal-font);
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 3px solid;
+            background-color: rgba(255, 0, 0, 0.1);
+            border-color: #ff0000;
+            color: #ff0000;
+        }
+
+        .alert::before {
+            content: "[ERROR] ";
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .section-title::after {
+            content: "_";
+            display: inline-block;
+            animation: blink 1s infinite;
+            color: var(--razer-green);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="edit-container">
+        <h2 class="section-title">회원 정보 수정</h2>
+
+        <div th:if="${error}" class="alert" role="alert">
+            <span th:text="${error}">오류 메시지</span>
+        </div>
+
+        <form th:action="@{/admin/editMember/{id}(id=${user.id})}" method="post">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+            <input type="hidden" name="id" th:value="${user.id}" />
+
+            <div class="form-group">
+                <label for="username" class="form-label">사용자명</label>
+                <input type="text" class="form-control" id="username" name="username"
+                        th:value="${user.username}" required pattern="^[가-힣a-zA-Z]{2,20}$"
+                        title="2-20자의 한글 또는 영문만 허용됩니다.">
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">이메일</label>
+                <input type="email" class="form-control" id="email" name="email"
+                        th:value="${user.email}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber" class="form-label">전화번호</label>
+                <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+                        th:value="${user.phoneNumber}">
+            </div>
+
+            <div class="form-group">
+                <label for="instagram" class="form-label">인스타그램</label>
+                <input type="text" class="form-control" id="instagram" name="instagram"
+                        th:value="${user.instagram}">
+            </div>
+
+            <div class="form-group">
+                <label for="role" class="form-label">권한</label>
+                <select class="form-select" id="role" name="role" required>
+                    <option value="ROLE_USER" th:selected="${user.role == 'ROLE_USER'}">일반 사용자</option>
+                    <option value="ROLE_MODERATOR" th:selected="${user.role == 'ROLE_MODERATOR'}">매니저</option>
+                    <option value="ROLE_ADMIN" th:selected="${user.role == 'ROLE_ADMIN'}">관리자</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn">수정</button>
+                <a href="/admin/memberList" class="btn btn-secondary">취소</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function addConsoleEffect(message) {
+        const chars = message.split('');
+        let output = '';
+        let i = 0;
+        const interval = setInterval(() => {
+            if (i < chars.length) {
+                output += chars[i];
+                console.log(`${output}_`);
+                i++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 50);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        addConsoleEffect('Initializing User Edit Console...');
+
+        // 폼 입력 필드에 포커스 효과 추가
+        const inputs = document.querySelectorAll('.form-control, .form-select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.boxShadow = '0 0 15px rgba(0, 255, 0, 0.3)';
+            });
+
+            input.addEventListener('blur', function() {
+                this.parentElement.style.boxShadow = 'none';
+            });
+        });
+
+        // 폼 제출 시 효과
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            addConsoleEffect('Processing user data update...');
+            setTimeout(() => {
+                this.submit();
+            }, 1000);
+        });
+    });
+</script>
+</body>
+</html>

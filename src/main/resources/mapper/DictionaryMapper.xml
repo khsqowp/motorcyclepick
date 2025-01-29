@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.motorcyclepick.repository.DictionaryMapper">
+
+    <resultMap id="DictionaryResultMap" type="com.example.motorcyclepick.domain.DictionaryDomain">
+        <id property="id" column="id"/>
+        <result property="term" column="term"/>
+        <result property="definition" column="definition"/>
+        <result property="category" column="category"/>
+        <result property="createdBy" column="created_by"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedBy" column="updated_by"/>
+        <result property="updatedAt" column="updated_at"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+    <select id="findById" resultMap="DictionaryResultMap">
+        SELECT *
+        FROM motorcycle_terms
+        WHERE id = #{id}
+    </select>
+
+    <select id="findAll" resultMap="DictionaryResultMap">
+        SELECT *
+        FROM motorcycle_terms
+        WHERE status = 'ACTIVE'
+        ORDER BY term ASC
+    </select>
+
+    <select id="findByCategory" resultMap="DictionaryResultMap">
+        SELECT *
+        FROM motorcycle_terms
+        WHERE category = #{category}
+          AND status = 'ACTIVE'
+        ORDER BY term ASC
+    </select>
+
+    <select id="findByTerm" resultMap="DictionaryResultMap">
+        SELECT *
+        FROM motorcycle_terms
+        WHERE term = #{term}
+          AND status = 'ACTIVE'
+    </select>
+
+    <select id="findByStatus" resultMap="DictionaryResultMap">
+        SELECT *
+        FROM motorcycle_terms
+        WHERE status = #{status}
+        ORDER BY term ASC
+    </select>
+
+    <insert id="insertTerm" parameterType="com.example.motorcyclepick.domain.DictionaryDomain">
+        INSERT INTO motorcycle_terms (term, definition, category, created_by, created_at, status)
+        VALUES (#{term}, #{definition}, #{category}, #{createdBy}, CURRENT_TIMESTAMP, #{status})
+    </insert>
+
+    <update id="updateTerm" parameterType="com.example.motorcyclepick.domain.DictionaryDomain">
+        UPDATE motorcycle_terms
+        SET definition = #{definition},
+            category = #{category},
+            updated_by = #{updatedBy},
+            updated_at = CURRENT_TIMESTAMP,
+            status = #{status}
+        WHERE id = #{id}
+    </update>
+
+    <update id="deleteTerm" parameterType="long">
+        UPDATE motorcycle_terms
+        SET status = 'INACTIVE'
+        WHERE id = #{id}
+    </update>
+
+    <select id="findAllCategories" resultType="com.example.motorcyclepick.domain.CategoryDomain">
+        SELECT id, category_name as categoryName, description
+        FROM term_categories
+        ORDER BY category_name ASC
+    </select>
+
+    <insert id="insertCategory">
+        INSERT INTO term_categories (category_name, description)
+        VALUES (#{categoryName}, #{description})
+    </insert>
+
+    <update id="updateCategory">
+        UPDATE term_categories
+        SET category_name = #{categoryName},
+            description = #{description}
+        WHERE id = #{categoryId}
+    </update>
+
+    <delete id="deleteCategory">
+        DELETE FROM term_categories
+        WHERE id = #{categoryId}
+    </delete>
+
+</mapper>

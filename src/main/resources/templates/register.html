@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="_csrf" th:content="${_csrf.token}"/>
+  <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+  <title>Register</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #555;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 2px solid #e1e1e1;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .error-message {
+      color: #dc3545;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.8rem;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #5a6fd6;
+    }
+
+    .link-container {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .link {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .link:hover {
+      color: #5a6fd6;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem;
+      }
+    }
+
+    /* style 태그 내에 추가 */
+    .privacy-agreement {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .privacy-agreement input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    .link-button {
+      background: none;
+      border: none;
+      color: #667eea;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 0;
+      font-size: 0.9rem;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 700px;
+      max-height: 80vh;
+      overflow-y: auto;
+      border-radius: 8px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+    }
+
+    .modal-body {
+      margin-top: 20px;
+      white-space: pre-line;
+    }
+    .verification-container {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .verification-container input {
+      flex: 1;
+    }
+
+    .verify-btn {
+      width: auto;
+      padding: 0.8rem 1.2rem;
+      white-space: nowrap;
+    }
+
+    .verification-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+      font-size: 0.85rem;
+    }
+
+    .timer {
+      color: #667eea;
+    }
+
+    #resendCodeBtn {
+      color: #667eea;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    #resendCodeBtn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>회원가입</h2>
+  <!-- form 태그 수정 -->
+  <form th:action="@{/register}" th:object="${user}" method="post" id="registerForm">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+    <div class="form-group">
+      <label for="id">아이디</label>
+      <input type="text" id="id" th:field="*{id}" placeholder="아이디를 입력하세요" required/>
+      <span th:if="${#fields.hasErrors('id')}" th:errors="*{id}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" th:field="*{password}" placeholder="비밀번호를 입력하세요" required/>
+      <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="username">이름</label>
+      <input type="text" id="username" th:field="*{username}" placeholder="이름을 입력하세요" required/>
+      <span th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="email">이메일</label>
+      <input type="email" id="email" th:field="*{email}" placeholder="example@email.com" required/>
+      <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">전화번호</label>
+      <input type="tel" id="phoneNumber" th:field="*{phoneNumber}" placeholder="010-0000-0000"/>
+      <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="instagram">인스타그램</label>
+      <input type="text" id="instagram" th:field="*{instagram}" placeholder="@username"/>
+      <span th:if="${#fields.hasErrors('instagram')}" th:errors="*{instagram}" class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="birthDate">생년월일</label>
+      <input type="date" id="birthDate" th:field="*{birthDate}"/>
+      <div th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}" class="error-message"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="region">지역</label>
+      <input type="text" id="region" th:field="*{region}" maxlength="50"/>
+      <div th:if="${#fields.hasErrors('region')}" th:errors="*{region}" class="error-message"></div>
+    </div>
+
+    <div class="form-group privacy-agreement">
+      <input type="checkbox" id="privacyCheck" required />
+      <label for="privacyCheck">개인정보 수집 및 이용에 동의합니다</label>
+      <button type="button" id="privacyDetailBtn" class="link-button">개인정보 이용 동의서</button>
+    </div>
+
+    <div id="privacyModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>개인정보 수집 및 이용 동의서</h3>
+        <div class="modal-body">
+          <!-- 개인정보 수집 및 이용 동의서 내용 -->
+          <p>개인정보 수집 및 이용 동의서
+
+            당사는 「개인정보 보호법」 제15조 및 제22조에 따라 회원의 개인정보를 다음과 같이 수집·이용하고자 합니다.
+
+            1. 개인정보의 수집 및 이용 목적
+            당사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
+
+            가. 회원 가입 및 관리
+            - 회원제 서비스 제공에 따른 본인 식별·인증
+            - 회원자격 유지·관리
+            - 서비스 부정이용 방지
+            - 각종 고지·통지
+            - 분쟁 조정을 위한 기록 보존
+            - 불만처리 등 민원처리
+            - 고충처리
+
+            나. 서비스 제공
+            - 서비스 제공
+            - 콘텐츠 제공
+            - 맞춤서비스 제공
+            - 본인인증
+            - 연령인증
+
+            2. 수집하는 개인정보의 항목
+            당사는 회원가입, 상담, 서비스 신청 등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+
+            가. 필수항목
+            - 성명: 본인 식별 및 회원관리를 위한 기본정보로 「개인정보 보호법」 제15조에 근거
+            - 생년월일: 연령 확인 및 본인 인증을 위한 정보로 「정보통신망법」 제23조의2에 근거
+            - 거주지역(시/도): 지역별 서비스 제공 및 통계를 위한 정보
+            - 아이디: 회원식별을 위한 고유식별자로 「정보통신망법」 제23조에 근거
+            - 비밀번호: 회원정보 보호를 위한 본인 인증 수단
+            - 휴대전화번호: 본인인증 및 고지사항 전달을 위한 정보로 「전자상거래법」 제6조에 근거
+            - 인스타그램 아이디: 소셜 미디어 연동 서비스 제공을 위한 정보
+
+            나. 자동 수집 항목
+            - IP주소: 「정보통신망법」 제64조제1항에 따른 서비스 이용 기록 확보
+            - 쿠키정보: 「개인정보 보호법」 제30조 및 동법 시행령 제48조에 근거한 이용자 편의 제공
+            - 서비스 이용 기록: 「전자상거래법」 제6조 및 동법 시행령 제6조에 근거한 거래기록 보관
+            - 접속 로그: 「정보통신망법」 제64조제2항에 따른 접속기록 보관
+            - 기기 정보: 「정보통신망법」 제64조제3항에 따른 보안 및 부정이용 방지
+
+            3. 개인정보의 보유 및 이용 기간
+            당사는 수집된 개인정보를 회원가입일로부터 5년간 보유 및 이용하며, 위 보유기간의 경과 또는 처리목적 달성 후에는 해당 정보를 지체 없이 파기합니다.
+
+            4. 정보주체의 권리·의무 및 행사방법
+            정보주체는 당사에 대해 언제든지 개인정보 열람·정정·삭제·처리정지 요구 등의 권리를 행사할 수 있습니다.
+            ※ 만 14세 미만 아동의 경우, 위 권리는 법정대리인이 행사할 수 있습니다.
+
+            가. 권리 행사는 「개인정보 보호법」 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며, 당사는 이에 대해 지체없이 조치하겠습니다.
+
+            나. 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 "개인정보 처리 방법에 관한 고시(제2020-7호)" 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.
+
+            다. 개인정보 열람 및 처리정지 요구는 「개인정보 보호법」 제35조 제4항, 제37조 제2항에 의하여 정보주체의 권리가 제한될 수 있습니다.
+
+            라. 개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.
+
+            5. 개인정보의 안전성 확보조치
+            당사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.
+
+            가. 관리적 조치
+            - 내부관리계획 수립 및 시행
+            - 정기적 직원 교육
+            - 개인정보취급자 지정의 최소화
+
+            나. 기술적 조치
+            - 개인정보처리시스템 등의 접근권한 관리
+            - 개인정보의 암호화
+            - 보안프로그램 설치 및 갱신
+            - 접속기록의 보관 및 위변조 방지
+
+            다. 물리적 조치
+            - 전산실, 자료보관실 등의 접근통제
+            - 비인가자에 대한 출입 통제
+
+            6. 개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항
+            당사는 이용자에게 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다.
+
+            가. 쿠키의 사용목적
+            - 이용자의 접속 빈도나 방문 시간 등을 분석
+            - 서비스 이용 패턴을 파악
+            - 맞춤형 서비스 제공
+
+            나. 쿠키의 설치·운영 및 거부
+            - 이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다.
+            - 웹브라우저에서 옵션을 설정함으로써 모든 쿠키를 허용하거나, 쿠키가 저장될 때마다 확인을 거치거나, 아니면 모든 쿠키의 저장을 거부할 수도 있습니다.
+
+            다. 쿠키 설정 거부 방법
+            - 웹브라우저 설정을 통해 쿠키 저장을 거부할 수 있습니다.
+
+            7. 개인정보 처리방침 변경
+            이 개인정보 처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.
+
+            본인은 위의 개인정보 수집 및 이용에 관한 설명을 모두 읽었으며, 이에 동의합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="button" id="emailVerifyBtn" class="btn">이메일 인증하기</button>
+      <button type="submit" id="submitBtn" class="btn" style="display:none">가입하기</button>
+    </div>
+    <div class="link-container">
+      <a th:href="@{/login}" class="link">이미 계정이 있으신가요? 로그인</a>
+    </div>
+  </form>
+  <div class="form-group" id="verificationCodeGroup" style="display:none">
+    <label for="verificationCode">인증번호</label>
+    <div class="verification-container">
+      <input type="text" id="verificationCode" placeholder="인증번호 6자리" maxlength="6"/>
+      <button type="button" id="verifyCodeBtn" class="btn verify-btn">확인</button>
+    </div>
+    <div class="verification-bottom">
+      <span class="timer" id="timer"></span>
+      <button type="button" id="resendCodeBtn" class="link-button">인증번호 재전송</button>
+    </div>
+  </div>
+
+</div>
+<script th:inline="javascript">
+  let verificationTimer;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const csrfHeader = document.querySelector('meta[name="_csrf_header"]').content;
+    const csrfToken = document.querySelector('meta[name="_csrf"]').content;
+    const privacyModal = document.getElementById('privacyModal');
+    const privacyDetailBtn = document.getElementById('privacyDetailBtn');
+    const closeBtn = document.querySelector('.close');
+    const privacyCheck = document.getElementById('privacyCheck');
+    const emailVerifyBtn = document.getElementById('emailVerifyBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const verifyCodeBtn = document.getElementById('verifyCodeBtn');
+    const resendCodeBtn = document.getElementById('resendCodeBtn');
+
+    // 개인정보 모달 관련 이벤트
+    privacyDetailBtn.onclick = function () {
+      privacyModal.style.display = "block";
+    }
+
+    closeBtn.onclick = function () {
+      privacyModal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == privacyModal) {
+        privacyModal.style.display = "none";
+      }
+    }
+
+    // 이메일 인증번호 전송
+    emailVerifyBtn.onclick = async function () {
+      if (!privacyCheck.checked) {
+        alert('개인정보 수집 동의 후 인증 가능합니다.');
+        return;
+      }
+
+      const emailInput = document.getElementById('email');
+      const email = emailInput.value.trim();
+
+      if (!email) {
+        alert('이메일을 입력해주세요.');
+        return;
+      }
+
+      try {
+        const response = await fetch('/send-verification', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            [csrfHeader]: csrfToken
+          },
+          body: JSON.stringify({email: email})
+        });
+
+        if (response.ok) {
+          document.getElementById('verificationCodeGroup').style.display = 'block';
+          startTimer();
+          alert('인증번호가 전송되었습니다.');
+        } else {
+          const errorText = await response.text();
+          alert(errorText || '인증번호 전송에 실패했습니다.');
+        }
+      } catch (error) {
+        console.error('에러 발생:', error);
+        alert('인증번호 전송 중 오류가 발생했습니다.');
+      }
+    };
+
+    // 인증번호 재전송
+    resendCodeBtn.addEventListener('click', async function () {
+      const email = document.getElementById('email').value;
+
+      if (!email) {
+        alert('이메일을 입력해주세요.');
+        return;
+      }
+
+      try {
+        const response = await fetch('/send-verification', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            [csrfHeader]: csrfToken
+          },
+          body: JSON.stringify({email: email})
+        });
+
+        if (response.ok) {
+          document.getElementById('verificationCode').value = '';
+          startTimer();
+          alert('인증번호가 재전송되었습니다.');
+        } else {
+          const errorText = await response.text();
+          alert(errorText || '인증번호 전송에 실패했습니다.');
+        }
+      } catch (error) {
+        console.error('에러 발생:', error);
+        alert('인증번호 전송 중 오류가 발생했습니다.');
+      }
+    });
+
+    // 인증번호 확인
+    verifyCodeBtn.addEventListener('click', async function () {
+      const codeInput = document.getElementById('verificationCode');
+      const code = codeInput.value;
+      if (code.length !== 6) {
+        alert('인증번호 6자리를 입력해주세요.');
+        return;
+      }
+
+      const email = document.getElementById('email').value;
+      try {
+        const response = await fetch('/verify-code', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            [csrfHeader]: csrfToken
+          },
+          body: JSON.stringify({
+            email: email,
+            code: code
+          })
+        });
+
+        if (response.ok) {
+          clearInterval(verificationTimer);
+          document.getElementById('timer').textContent = '인증완료';
+          document.getElementById('emailVerifyBtn').style.display = 'none';
+          submitBtn.style.display = 'block';
+          submitBtn.disabled = false;
+          verifyCodeBtn.disabled = true;
+          resendCodeBtn.disabled = true;
+          alert('이메일 인증이 완료되었습니다.');
+        } else {
+          const errorText = await response.text();
+          alert(errorText || '잘못된 인증번호입니다.');
+        }
+      } catch (error) {
+        alert('인증 확인에 실패했습니다.');
+      }
+    });
+
+    // 회원가입 폼 제출
+    // registerForm.onsubmit을 다음과 같이 수정
+    const registerForm = document.getElementById('registerForm');
+    registerForm.onsubmit = function (e) {
+      e.preventDefault(); // 기본 제출 동작 중지
+
+      const emailVerified = submitBtn.style.display === 'block';
+
+      if (!emailVerified) {
+        alert('이메일 인증이 필요합니다.');
+        return false;
+      }
+
+      const birthDate = document.getElementById('birthDate').value;
+      if (!birthDate) {
+        document.getElementById('birthDate').value = '2000-01-01';
+      }
+
+      const region = document.getElementById('region').value;
+      if (!region || region.trim() === '') {
+        document.getElementById('region').value = 'Unknown';
+      }
+
+      // 폼 데이터를 FormData 객체로 생성
+      const formData = new FormData(this);
+
+      // FormData를 JSON 객체로 변환
+      const jsonData = {};
+      formData.forEach((value, key) => {
+        jsonData[key] = value;
+      });
+
+      // CSRF 토큰 가져오기
+      const csrfToken = document.querySelector('meta[name="_csrf"]').content;
+      const csrfHeader = document.querySelector('meta[name="_csrf_header"]').content;
+
+      // Fetch를 사용하여 데이터 전송
+      fetch('/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          [csrfHeader]: csrfToken
+        },
+        body: JSON.stringify(jsonData)
+      })
+              .then(response => {
+                if (response.ok) {
+                  window.location.href = '/login'; // 성공 시 로그인 페이지로 리다이렉트
+                } else {
+                  return response.text().then(text => {
+                    throw new Error(text || '회원가입에 실패했습니다.');
+                  });
+                }
+              })
+              .catch(error => {
+                console.error('Error:', error);
+                alert(error.message);
+              });
+
+      return false;
+    };
+  });
+  function startTimer() {
+    let timeLeft = 300;
+    const timerElement = document.getElementById('timer');
+
+    if (verificationTimer) {
+      clearInterval(verificationTimer);
+    }
+
+    verificationTimer = setInterval(() => {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+      if (--timeLeft < 0) {
+        clearInterval(verificationTimer);
+        timerElement.textContent = '시간 만료';
+      }
+    }, 1000);
+  }
+
+  // register.html의 script 태그 내에 추가
+  document.getElementById('id').addEventListener('blur', async function() {
+    const id = this.value;
+    if (!id) return;
+
+    try {
+      const response = await fetch(`/check-id/${id}`, {
+        method: 'GET',
+        headers: {
+          [csrfHeader]: csrfToken
+        }
+      });
+
+      const result = await response.text();
+
+      if (result === 'duplicate') {
+        // 에러 메시지 표시 로직
+        this.setCustomValidity('이미 사용중인 아이디입니다.');
+        // 또는 별도의 에러 메시지 엘리먼트에 표시
+      } else {
+        this.setCustomValidity('');
+      }
+    } catch (error) {
+      console.error('ID 중복 체크 중 오류 발생:', error);
+    }
+  });
+</script>
+</body>
+</html>

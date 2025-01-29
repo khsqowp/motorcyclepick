@@ -1,0 +1,42 @@
+*.jar
+.gradle/
+### 빌드 관련 ###
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+### IDE 관련 ###
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+bin/
+.settings/
+.classpath
+.project
+.factorypath
+
+### 로그 파일 ###
+logs/
+*.log
+nohup.out
+
+### 기타 ###
+.DS_Store
+application-*.properties
+!application-docker.properties
+!application-local.properties
+!application-test.properties
+src/main/resources/keystore.p12
+*.pem
+.env
+
+### 배포에 필요한 파일은 제외하지 않음 ###
+!Dockerfile
+!docker-compose.yml
+!gradlew
+!gradlew.bat
+!settings.gradle
+!build.gradlegradle-dist/

@@ -1,0 +1,81 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id "org.sonarqube" version "4.4.1.3373"
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+test {
+//	useJUnitPlatform()
+	enabled = false
+}
+
+dependencies {
+	// ===== 1. Spring Boot 핵심 의존성 =====
+	// 스프링 부트의 기본적인 기능과 자동 구성을 제공
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+	implementation 'org.springframework.boot:spring-boot-starter-web'              // 웹 애플리케이션 개발 지원 (MVC, REST)
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'         // 애플리케이션 모니터링 및 관리 기능
+
+	// ===== 2. 보안 관련 의존성 =====
+	// 인증, 권한 부여 등 보안 기능 구현
+	implementation 'org.springframework.boot:spring-boot-starter-security'         // 스프링 시큐리티 기본 기능
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'		   // 타임리프에서 시큐리티 기능 사용
+
+
+	// ===== 3. 데이터 액세스 의존성 =====
+	// 데이터베이스 연동 및 ORM 관련
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'         // JPA를 통한 데이터 접근
+	runtimeOnly 'mysql:mysql-connector-java'                               // MySQL 데이터베이스 드라이버
+	testImplementation 'com.h2database:h2'
+
+	// ===== 4. 웹 개발 관련 의존성 =====
+	// 웹 애플리케이션 개발에 필요한 기능들
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'        // 서버사이드 템플릿 엔진
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'        // 실시간 양방향 통신 지원
+	implementation 'org.springframework.boot:spring-boot-starter-validation'       // 폼 데이터 검증
+	implementation 'org.springframework.boot:spring-boot-starter-mail'            // 이메일 발송 기능
+	testImplementation 'com.icegreen:greenmail-junit5:2.0.1'
+
+	// ===== 5. 개발 도구 및 유틸리티 =====
+	// 개발 생산성 향상을 위한 도구들
+	implementation 'org.springframework.boot:spring-boot-devtools'                 // 개발 편의 기능 (핫 리로딩 등)
+	implementation 'com.squareup.okhttp3:okhttp'                                  // HTTP 클라이언트 라이브러리
+	implementation 'org.imgscalr:imgscalr-lib:4.2'                               // 이미지 처리 라이브러리
+
+	// ===== 6. Lombok 의존성 =====
+	// 반복적인 코드 제거를 위한 도구
+	compileOnly 'org.projectlombok:lombok'                                        // 롬복 컴파일 타임 기능
+	annotationProcessor 'org.projectlombok:lombok'                                // 롬복 애노테이션 처리
+
+	// ===== 7. 테스트 관련 의존성 =====
+	// 단위 테스트 및 통합 테스트를 위한 도구들
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'        // 스프링 부트 테스트 프레임워크
+	testImplementation 'org.junit.jupiter:junit-jupiter-api'               // JUnit 5 테스트 프레임워크
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'               // JUnit 5 테스트 실행 엔진
+	implementation 'org.springframework:spring-test'                       // 스프링 테스트 지원
+
+
+	// 이후 추가 의존성들 -> 나중에 재분류하기
+	implementation 'jakarta.persistence:jakarta.persistence-api'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+	implementation 'com.github.vladimir-bukhtoyarov:bucket4j-core:7.6.0'
+	implementation 'com.github.vladimir-bukhtoyarov:bucket4j-jcache:7.6.0'
+
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
+
+}
