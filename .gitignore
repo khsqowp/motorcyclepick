@@ -1,8 +1,7 @@
-*.jar
-.gradle/
-### 빌드 관련 ###
+HELP.md
 .gradle
 build/
+!gradle/wrapper/
 !gradle/wrapper/gradle-wrapper.jar
 !gradle/wrapper/gradle-wrapper.properties
 
@@ -33,10 +32,10 @@ src/main/resources/keystore.p12
 *.pem
 .env
 
-### 배포에 필요한 파일은 제외하지 않음 ###
+### 배포 파일은 제외하지 않음 ###
 !Dockerfile
 !docker-compose.yml
 !gradlew
 !gradlew.bat
 !settings.gradle
-!build.gradlegradle-dist/
+!build.gradle
