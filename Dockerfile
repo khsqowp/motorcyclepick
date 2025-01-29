@@ -48,21 +48,19 @@ RUN mkdir -p ~/.gradle && \
     echo "pluginManagement { repositories { gradlePluginPortal() } }" > settings.gradle
 
 # gradle wrapper 설정
-ENV GRADLE_OPTS="-Dhttp.proxyHost=8.8.8.8 -Dhttp.proxyPort=80 -Dhttps.proxyHost=8.8.8.8 -Dhttps.proxyPort=443"
 COPY gradle/wrapper/gradle-wrapper.properties .
+RUN ./gradlew wrapper --gradle-version 7.6.1 --no-daemon || true
 
 # 소스 코드 복사
 COPY src src
 
 # gradle 권한 설정 및 빌드
 RUN chmod +x ./gradlew
-RUN ./gradlew build -x test --no-daemon \
+RUN --mount=type=cache,target=/root/.gradle \
+    ./gradlew build -x test --no-daemon \
     -Dorg.gradle.internal.http.socketTimeout=120000 \
     -Dorg.gradle.internal.http.connectionTimeout=120000 \
-    -Dhttp.proxyHost=8.8.8.8 \
-    -Dhttp.proxyPort=80 \
-    -Dhttps.proxyHost=8.8.8.8 \
-    -Dhttps.proxyPort=443
+    -Dorg.gradle.console=plain
 
 # 실행 환경
 FROM eclipse-temurin:17-jre-jammy
