@@ -4,11 +4,14 @@ package com.example.motorcyclepick.controller;
 import com.example.motorcyclepick.config.SecurityLogger;
 import com.example.motorcyclepick.domain.UserDomain;
 import com.example.motorcyclepick.dto.UserDTO;
+import com.example.motorcyclepick.exception.DataIntegrityException;
+import com.example.motorcyclepick.exception.EmailVerificationException;
 import com.example.motorcyclepick.service.EmailService;
 import com.example.motorcyclepick.service.SecurityService;
 import com.example.motorcyclepick.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.params.shadow.com.univocity.parsers.common.DataValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -64,14 +67,12 @@ public class RegisterController {
         // 입력값 유효성 검증
         if (result.hasErrors()) {
             log.error("유효성 검사 실패: {}", result.getAllErrors());
-            // 보안 이벤트 로깅
             securityLogger.logSecurityEvent(
                     "REGISTER_VALIDATION_FAILURE",
                     userDTO.getId(),
                     request.getRemoteAddr()
             );
-            return ResponseEntity.badRequest()
-                    .body(result.getAllErrors().get(0).getDefaultMessage());
+            throw new DataValidationException(result.getAllErrors().get(0).getDefaultMessage());
         }
 
         try {
@@ -96,7 +97,12 @@ public class RegisterController {
             userDTO.setUpdatedAt(now);
 
             // 회원 등록 수행
-            userService.registerUser(userDTO);
+            try {
+                userService.registerUser(userDTO);
+            } catch (Exception e) {
+                throw new DataIntegrityException("회원 등록 중 오류가 발생했습니다: " + e.getMessage(), e);
+            }
+
             log.debug("회원가입 성공: {}", userDTO.getId());
 
             // 보안 이벤트 로깅
@@ -108,7 +114,7 @@ public class RegisterController {
 
             return ResponseEntity.ok().build();
 
-        } catch (Exception e) {
+        } catch (DataValidationException | DataIntegrityException e) {
             // 에러 로깅
             log.error("회원가입 처리 중 오류 발생: {}", e.getMessage());
             securityLogger.logSecurityEvent(
@@ -157,21 +163,23 @@ public class RegisterController {
         try {
             String email = payload.get("email");
             if (email == null || email.isEmpty()) {
-                return ResponseEntity.badRequest().body("이메일이 제공되지 않았습니다.");
+                throw new EmailVerificationException("이메일이 제공되지 않았습니다.");
             }
 
             // 인증 이메일 전송
-            String code = emailService.sendVerificationEmail(email);
-
-            // 인증 코드 저장
-            log.debug("인증 코드 생성 완료: {}, 코드: {}", email, code);
-            verificationCodes.put(email, new VerificationInfo(code, LocalDateTime.now().plusMinutes(5)));
-
-            return ResponseEntity.ok().body("이메일이 성공적으로 전송되었습니다.");
-        } catch (MailException e) {
+            try {
+                String code = emailService.sendVerificationEmail(email);
+                // 인증 코드 저장
+                log.debug("인증 코드 생성 완료: {}, 코드: {}", email, code);
+                verificationCodes.put(email, new VerificationInfo(code, LocalDateTime.now().plusMinutes(5)));
+                return ResponseEntity.ok().body("이메일이 성공적으로 전송되었습니다.");
+            } catch (MailException e) {
+                throw new EmailVerificationException("이메일 전송 실패", e);
+            }
+        } catch (EmailVerificationException e) {
             log.error("이메일 전송 실패: {}", e.getMessage());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("이메일 전송 실패: " + e.getMessage());
+                    .body(e.getMessage());
         }
     }
 

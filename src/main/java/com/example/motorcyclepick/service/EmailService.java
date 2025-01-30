@@ -1,5 +1,7 @@
 package com.example.motorcyclepick.service;
 
+import com.example.motorcyclepick.exception.DataIntegrityException;
+import com.example.motorcyclepick.exception.EmailVerificationException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -44,7 +46,11 @@ public class EmailService {
             return code;
         } catch (Exception e) {
             log.error("이메일 전송 실패 - 수신자: {}, 에러: {}", to, e.getMessage(), e);
-            throw new MailSendException("이메일 전송 실패", e);
+
+            if (e instanceof MailException) {
+                throw new EmailVerificationException("이메일 전송에 실패했습니다.", e);
+            }
+            throw new DataIntegrityException("이메일 검증 처리 중 오류가 발생했습니다.", e);
         }
     }
 

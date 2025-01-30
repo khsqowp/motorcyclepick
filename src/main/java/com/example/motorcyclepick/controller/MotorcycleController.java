@@ -4,6 +4,7 @@ package com.example.motorcyclepick.controller;
 import com.example.motorcyclepick.config.SecurityLogger;
 import com.example.motorcyclepick.dto.DeleteMotorcycleDTO;
 import com.example.motorcyclepick.dto.MotorcycleDTO;
+import com.example.motorcyclepick.exception.*;
 import com.example.motorcyclepick.form.MotorcycleForm;
 import com.example.motorcyclepick.service.MotorcycleService;
 import com.example.motorcyclepick.service.SecurityService;
@@ -72,13 +73,20 @@ public class MotorcycleController {
     // ID로 단일 오토바이 조회
     @GetMapping("/singleSearchID")
     public String viewMotorcycleById(@RequestParam(value = "id", required = false) Long id, Model model) {
-        if (id == null) {
-            model.addAttribute("error", "ID가 입력되지 않았습니다");
-        } else {
+        try {
+            if (id == null) {
+                throw new DataNotFoundException("ID가 입력되지 않았습니다");
+            }
             MotorcycleDTO motorcycle = motorcycleService.findOneMotorcycle(id);
+            if (motorcycle == null) {
+                throw new MotorcycleNotFoundException("해당 ID의 오토바이를 찾을 수 없습니다: " + id);
+            }
             model.addAttribute("motorcycleDTO", motorcycle);
+            return "singleSearchID";
+        } catch (DataNotFoundException | MotorcycleNotFoundException e) {
+            model.addAttribute("error", e.getMessage());
+            return "singleSearchID";
         }
-        return "singleSearchID";
     }
 
     // 입력 폼 데이터 검증
@@ -101,13 +109,6 @@ public class MotorcycleController {
     }
 
     // 신규 오토바이 등록 폼 표시
-    @GetMapping("/new")
-    public String createMotorcycleForm(Model model) {
-        model.addAttribute("motorcycleForm", new MotorcycleForm());
-        return "create";
-    }
-
-    // 신규 오토바이 등록 처리
     @PostMapping("/new")
     public String createMotorcycle(@ModelAttribute @Valid MotorcycleForm form,
                                    RedirectAttributes redirectAttributes,
@@ -118,7 +119,9 @@ public class MotorcycleController {
             logMotorcycleAccess("CREATE", form.getMotorcycleID(), userDetails);
             redirectAttributes.addFlashAttribute("message", "새로운 Motorcycle이 성공적으로 생성되었습니다.");
             return "redirect:/motorcycle/";
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
+            throw new MotorcycleValidationException(e.getMessage(), e);
+        } catch (MotorcycleValidationException | DataIntegrityException e) {
             redirectAttributes.addFlashAttribute("error", "생성 중 오류가 발생했습니다: " + e.getMessage());
             return "redirect:/motorcycle/";
         }
@@ -185,14 +188,16 @@ public class MotorcycleController {
             // 관리자 권한 재확인
             if (!userDetails.getAuthorities().stream()
                     .anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"))) {
-                throw new AccessDeniedException("관리자 권한이 필요합니다.");
+                throw new AuthorizationException("관리자 권한이 필요합니다.");
             }
 
             motorcycleService.deleteFullMotorcycle(dto.getMotorcycleID());
             redirectAttributes.addFlashAttribute("message", "Motorcycle이 성공적으로 삭제되었습니다.");
-        } catch (AccessDeniedException e) {
+        } catch (AuthorizationException e) {
             redirectAttributes.addFlashAttribute("error", "권한이 없습니다: " + e.getMessage());
-        } catch (Exception e) {
+        } catch (DataNotFoundException e) {
+            redirectAttributes.addFlashAttribute("error", "삭제할 데이터를 찾을 수 없습니다: " + e.getMessage());
+        } catch (DataAccessException e) {
             redirectAttributes.addFlashAttribute("error", "삭제중 오류가 발생했습니다: " + e.getMessage());
         }
         return "redirect:/motorcycle/";

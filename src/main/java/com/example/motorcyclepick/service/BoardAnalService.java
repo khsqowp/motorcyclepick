@@ -3,6 +3,9 @@ package com.example.motorcyclepick.service;
 import com.example.motorcyclepick.config.SecurityLogger;
 import com.example.motorcyclepick.domain.MotorcycleDomain;
 import com.example.motorcyclepick.dto.BoardDTO;
+import com.example.motorcyclepick.exception.AuthorizationException;
+import com.example.motorcyclepick.exception.DataAccessException;
+import com.example.motorcyclepick.exception.DataIntegrityException;
 import com.example.motorcyclepick.repository.BoardMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -73,7 +76,13 @@ public class BoardAnalService {
                     auth != null ? auth.getName() : "anonymous",
                     request.getRemoteAddr()
             );
-            throw new SecurityException("보안 위반이 감지되었습니다.", e);
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("추천 통계 저장 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("추천 통계 데이터 저장 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("추천 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -133,7 +142,13 @@ public class BoardAnalService {
                     auth != null ? auth.getName() : "anonymous",
                     request.getRemoteAddr()
             );
-            throw new SecurityException("보안 위반이 감지되었습니다.", e);
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("설문 응답 저장 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("설문 응답 데이터 저장 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("설문 응답 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -170,7 +185,13 @@ public class BoardAnalService {
                     auth != null ? auth.getName() : "anonymous",
                     request.getRemoteAddr()
             );
-            throw new SecurityException("보안 위반이 감지되었습니다.", e);
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("모델 추천 저장 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("모델 추천 데이터 저장 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("모델 추천 처리 중 오류가 발생했습니다.", e);
         }
     }
 }

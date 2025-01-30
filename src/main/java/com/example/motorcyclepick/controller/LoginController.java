@@ -3,6 +3,8 @@ package com.example.motorcyclepick.controller;
 // 필요한 Spring 및 기타 라이브러리 import
 
 import com.example.motorcyclepick.config.SecurityLogger;
+import com.example.motorcyclepick.exception.AuthorizationException;
+import com.example.motorcyclepick.exception.UserAuthenticationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -84,11 +86,15 @@ public class LoginController {
             // 아이디와 비밀번호 유효성 검사
             if (id == null || id.trim().isEmpty() ||
                     password == null || password.trim().isEmpty()) {
-                throw new ServletException("아이디와 비밀번호를 입력해주세요.");
+                throw new UserAuthenticationException("아이디와 비밀번호를 입력해주세요.");
             }
 
             // 로그인 수행
-            request.login(id, password);
+            try {
+                request.login(id, password);
+            } catch (ServletException e) {
+                throw new UserAuthenticationException("로그인에 실패했습니다.", e);
+            }
 
             // 인증 정보 확인
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -108,7 +114,7 @@ public class LoginController {
             // 메인 페이지로 리다이렉트
             return "redirect:/";
 
-        } catch (ServletException e) {
+        } catch (UserAuthenticationException e) {
             // 로그인 실패 이벤트 로깅
             securityLogger.logSecurityEvent(
                     "LOGIN_FAILURE",
@@ -117,8 +123,7 @@ public class LoginController {
             );
 
             // 에러 메시지 설정 및 로그인 페이지로 리다이렉트
-            redirectAttributes.addFlashAttribute("loginError",
-                    "로그인에 실패했습니다. 아이디와 비밀번호를 확인해주세요.");
+            redirectAttributes.addFlashAttribute("loginError", e.getMessage());
             return "redirect:/login?error=true";
         }
     }
@@ -147,12 +152,16 @@ public class LoginController {
             // 보안 컨텍스트 클리어
             SecurityContextHolder.clearContext();
             // 로그아웃 수행
-            request.logout();
+            try {
+                request.logout();
+            } catch (ServletException e) {
+                throw new AuthorizationException("로그아웃 처리 중 오류가 발생했습니다.", e);
+            }
 
             // 성공 메시지 설정
             redirectAttributes.addFlashAttribute("message", "성공적으로 로그아웃되었습니다.");
 
-        } catch (ServletException e) {
+        } catch (AuthorizationException e) {
             // 로그아웃 실패 이벤트 로깅
             securityLogger.logSecurityEvent(
                     "LOGOUT_FAILURE",
@@ -160,7 +169,7 @@ public class LoginController {
                     request.getRemoteAddr()
             );
             // 에러 메시지 설정
-            redirectAttributes.addFlashAttribute("error", "로그아웃 처리 중 오류가 발생했습니다.");
+            redirectAttributes.addFlashAttribute("error", e.getMessage());
         }
 
         // 로그인 페이지로 리다이렉트

@@ -2,6 +2,9 @@ package com.example.motorcyclepick.service;
 
 import com.example.motorcyclepick.config.SecurityLogger;
 import com.example.motorcyclepick.dto.BikeAnalyticsDTO;
+import com.example.motorcyclepick.exception.AuthorizationException;
+import com.example.motorcyclepick.exception.DataAccessException;
+import com.example.motorcyclepick.exception.DataIntegrityException;
 import com.example.motorcyclepick.repository.BikeAnalyticsMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -63,7 +66,8 @@ public class BikeAnalyticsService {
                     .map(this::convertMapToDTO)  // 기존의 convertMapToDTO 메서드 활용
                     .collect(Collectors.toList());
 
-        } catch (Exception e) {
+        } // 수정 후
+        catch (Exception e) {
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
@@ -72,7 +76,13 @@ public class BikeAnalyticsService {
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("데일리 응답 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("데일리 응답 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("데일리 응답 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -92,18 +102,24 @@ public class BikeAnalyticsService {
                     .map(this::convertMapToDTO)
                     .collect(Collectors.toList());
 
-        } catch (Exception e) {
+        } // 수정 후
+        catch (Exception e) {
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
-            // 여기에 추가
             log.error("보안 위반 시도 감지: {}", e.getMessage());
             securityLogger.logSecurityEvent(
                     "SECURITY_VIOLATION",
                     auth != null ? auth.getName() : "anonymous",
                     request.getRemoteAddr()
             );
-            throw new SecurityException("보안 위반이 감지되었습니다.", e);
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("예산 분포 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("예산 분포 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("예산 분포 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -133,7 +149,13 @@ public class BikeAnalyticsService {
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -158,11 +180,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_RIDING_STYLE_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -187,11 +215,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_SPEED_RANGE_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -216,11 +250,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_RIDING_DISTANCE_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -245,11 +285,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_RPM_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -274,11 +320,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_STYLE_PREFERENCE_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -303,11 +355,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_TOP_MODELS_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -333,11 +391,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_BRAND_FREQUENCY_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -475,11 +539,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_BRAND_TRENDS_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -504,11 +574,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_MODELS_BY_BUDGET_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -533,11 +609,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_MODELS_BY_PURPOSE_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -562,11 +644,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_STYLE_COMBINATION_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -613,11 +701,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_MONTHLY_TRENDS_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -642,11 +736,17 @@ public class BikeAnalyticsService {
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
 
             securityLogger.logSecurityEvent(
-                    "ANALYTICS_SEASONAL_PREFERENCE_FAILURE",
+                    "ANALYTICS_ENGINE_CAPACITY_FAILURE",
                     auth.getName(),
                     request.getRemoteAddr()
             );
-            throw e;
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("엔진 용량 선호도 통계 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("엔진 용량 선호도 통계 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("엔진 용량 선호도 통계 처리 중 오류가 발생했습니다.", e);
         }
     }
 }

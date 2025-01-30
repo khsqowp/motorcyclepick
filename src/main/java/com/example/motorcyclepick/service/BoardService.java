@@ -3,6 +3,9 @@ package com.example.motorcyclepick.service;
 import com.example.motorcyclepick.config.SecurityLogger;
 import com.example.motorcyclepick.domain.MotorcycleDomain;
 import com.example.motorcyclepick.dto.BoardDTO;
+import com.example.motorcyclepick.exception.AuthorizationException;
+import com.example.motorcyclepick.exception.DataAccessException;
+import com.example.motorcyclepick.exception.DataIntegrityException;
 import com.example.motorcyclepick.form.BoardForm;
 import com.example.motorcyclepick.repository.MotorcycleMapper;
 import lombok.RequiredArgsConstructor;
@@ -51,10 +54,7 @@ public class BoardService {
 
             return motorcycleMapper.findDistinctBrands();
         } catch (Exception e) {
-            // 기존 로그 유지
             log.error("브랜드 목록 조회 중 오류 발생: ", e);
-
-            // 보안 로깅 추가
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 
@@ -64,7 +64,13 @@ public class BoardService {
                     auth != null ? auth.getName() : "anonymous",
                     request.getRemoteAddr()
             );
-            throw new SecurityException("보안 위반이 감지되었습니다.", e);
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("브랜드 목록 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("브랜드 목록 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("브랜드 목록 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -87,10 +93,7 @@ public class BoardService {
 
             return motorcycleMapper.findModelsByBrand(sanitizedBrand);
         } catch (Exception e) {
-            // 기존 로그 유지
             log.error("브랜드별 모델 조회 중 오류 발생: ", e);
-
-            // 보안 로깅 추가
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 
@@ -100,7 +103,13 @@ public class BoardService {
                     auth != null ? auth.getName() : "anonymous",
                     request.getRemoteAddr()
             );
-            throw new SecurityException("보안 위반이 감지되었습니다.", e);
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("브랜드별 모델 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("브랜드별 모델 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("브랜드별 모델 처리 중 오류가 발생했습니다.", e);
         }
     }
 

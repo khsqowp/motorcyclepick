@@ -9,12 +9,12 @@ import com.example.motorcyclepick.dto.DimensionsDTO;
 import com.example.motorcyclepick.dto.ElectronicsDTO;
 import com.example.motorcyclepick.dto.EnginesDTO;
 import com.example.motorcyclepick.dto.MotorcycleDTO;
-import com.example.motorcyclepick.exception.MotorcycleNotFoundException;
-import com.example.motorcyclepick.exception.MotorcycleValidationException;
+import com.example.motorcyclepick.exception.*;
 import com.example.motorcyclepick.form.MotorcycleForm;
 import com.example.motorcyclepick.repository.MotorcycleMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
@@ -61,7 +61,13 @@ public class MotorcycleService {
         } catch (Exception e) {
             securityLogger.logSecurityEvent("MOTORCYCLE_INSERT_FAILURE", "SYSTEM", e.getMessage());
             log.error("Error occurred while inserting motorcycle data", e);
-            throw new MotorcycleValidationException("Failed to insert motorcycle data: " + e.getMessage());
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("오토바이 데이터 입력 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("오토바이 데이터 저장 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("오토바이 데이터 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -99,7 +105,13 @@ public class MotorcycleService {
             throw e;
         } catch (Exception e) {
             log.error("Error occurred while updating motorcycle data", e);
-            throw new MotorcycleValidationException("Failed to update motorcycle data: " + e.getMessage());
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("오토바이 데이터 수정 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("오토바이 데이터 수정 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("오토바이 데이터 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -119,7 +131,13 @@ public class MotorcycleService {
             log.info("Successfully deleted motorcycle data with ID: {}", motorcycleID);
         } catch (Exception e) {
             log.error("Error occurred while deleting motorcycle data", e);
-            throw new MotorcycleValidationException("Failed to delete motorcycle data: " + e.getMessage());
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("오토바이 데이터 삭제 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("오토바이 데이터 삭제 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("오토바이 데이터 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -151,7 +169,13 @@ public class MotorcycleService {
         } catch (Exception e) {
             securityLogger.logSecurityEvent("MOTORCYCLE_ACCESS_FAILURE", "SYSTEM", e.getMessage());
             log.error("Error occurred while fetching motorcycle data", e);
-            throw new MotorcycleValidationException("Failed to fetch motorcycle data: " + e.getMessage());
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("오토바이 데이터 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("오토바이 데이터 조회 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("오토바이 데이터 처리 중 오류가 발생했습니다.", e);
         }
     }
 

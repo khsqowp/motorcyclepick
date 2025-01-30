@@ -3,6 +3,7 @@ package com.example.motorcyclepick.service;
 import com.example.motorcyclepick.config.SecurityLogger;
 import com.example.motorcyclepick.domain.UserDomain;
 import com.example.motorcyclepick.dto.UserDTO;
+import com.example.motorcyclepick.exception.*;
 import com.example.motorcyclepick.repository.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
@@ -79,12 +80,12 @@ public class UserService implements UserDetailsService {
                         userDTO.getId(),
                         ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
                 );
-                throw new RuntimeException("이미 존재하는 아이디입니다.");
+                throw new DataIntegrityException("이미 존재하는 아이디입니다.");
             }
 
             // 비밀번호 암호화
             if (!securityService.isPasswordValid(userDTO.getPassword())) {
-                throw new RuntimeException("비밀번호는 8자 이상이며, 숫자, 대문자, 소문자, 특수문자를 포함해야 합니다.");
+                throw new UserAuthenticationException("비밀번호는 8자 이상이며, 숫자, 대문자, 소문자, 특수문자를 포함해야 합니다.");
             }
             userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
 
@@ -100,9 +101,11 @@ public class UserService implements UserDetailsService {
                     userDTO.getId(),
                     ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
             );
-            throw e;
+            throw new DataAccessException("사용자 등록 중 오류가 발생했습니다.", e);
         }
     }
+
+
 
     private void validateAndSanitizeUserInput(UserDTO userDTO) {
         if (userDTO.getId() == null || userDTO.getId().trim().isEmpty()) {
@@ -210,16 +213,18 @@ public class UserService implements UserDetailsService {
                         "SYSTEM",
                         ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
                 );
-                return null;
+                throw new DataNotFoundException("사용자를 찾을 수 없습니다.");
             }
             return UserDTO.fromDomain(userDomain);
+        } catch (DataNotFoundException e) {
+            throw e;
         } catch (Exception e) {
             securityLogger.logSecurityEvent(
                     "USER_FIND_FAILURE",
                     "SYSTEM",
                     ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
             );
-            throw new RuntimeException("사용자 조회 중 오류가 발생했습니다.", e);
+            throw new DataAccessException("사용자 조회 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -265,7 +270,7 @@ public class UserService implements UserDetailsService {
                         ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
                                 .getRequest().getRemoteAddr()
                 );
-                throw new RuntimeException("해당 사용자를 삭제할 권한이 없습니다.");
+                throw new AuthorizationException("해당 사용자를 삭제할 권한이 없습니다.");
             }
 
             if (userMapper.findById(id) == null) {
@@ -274,7 +279,7 @@ public class UserService implements UserDetailsService {
                         ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
                                 .getRequest().getRemoteAddr()
                 );
-                throw new RuntimeException("사용자를 찾을 수 없습니다.");
+                throw new DataNotFoundException("사용자를 찾을 수 없습니다.");
             }
 
             userMapper.deleteUser(id);
@@ -283,13 +288,15 @@ public class UserService implements UserDetailsService {
                     ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
                             .getRequest().getRemoteAddr()
             );
+        } catch (AuthorizationException | DataNotFoundException e) {
+            throw e;
         } catch (Exception e) {
             securityLogger.logSecurityEvent("USER_DELETE_FAILURE",
                     id,
                     ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
                             .getRequest().getRemoteAddr()
             );
-            throw e;
+            throw new DataAccessException("사용자 삭제 중 오류가 발생했습니다.", e);
         }
     }
 

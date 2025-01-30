@@ -3,6 +3,10 @@ package com.example.motorcyclepick.service;
 import com.example.motorcyclepick.config.SecurityLogger;
 import com.example.motorcyclepick.dto.ImagesDTO;
 import com.example.motorcyclepick.dto.InstagramDTO;
+import com.example.motorcyclepick.exception.AuthorizationException;
+import com.example.motorcyclepick.exception.DataAccessException;
+import com.example.motorcyclepick.exception.DataIntegrityException;
+import com.example.motorcyclepick.exception.FileUploadException;
 import com.example.motorcyclepick.repository.ImagesMapper;
 import com.example.motorcyclepick.utils.ImageConverterUtil;
 import lombok.RequiredArgsConstructor;
@@ -85,10 +89,15 @@ public class ImageService {
             return secureFileName;
         } catch (IOException e) {
             log.error("IO error during image upload", e);
-            throw new SecurityException("Security check failed: " + e.getMessage());
+            throw new DataAccessException("이미지 업로드 중 IO 오류가 발생했습니다.", e);
         } catch (Exception e) {
             log.error("Security violation in image upload", e);
-            throw new SecurityException("Security check failed: " + e.getMessage());
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("이미지 업로드 권한이 없습니다.", e);
+            } else if (e instanceof FileUploadException) {
+                throw new FileUploadException("파일 업로드 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("이미지 업로드 처리 중 오류가 발생했습니다.", e);
         }
     }
 

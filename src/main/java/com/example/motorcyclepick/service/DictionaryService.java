@@ -4,10 +4,14 @@ import com.example.motorcyclepick.config.SecurityLogger;
 import com.example.motorcyclepick.domain.CategoryDomain;
 import com.example.motorcyclepick.domain.DictionaryDomain;
 import com.example.motorcyclepick.dto.DictionaryDTO;
+import com.example.motorcyclepick.exception.AuthorizationException;
+import com.example.motorcyclepick.exception.DataAccessException;
+import com.example.motorcyclepick.exception.DataIntegrityException;
 import com.example.motorcyclepick.repository.DictionaryMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -387,8 +391,6 @@ public class DictionaryService {
 
         } catch (Exception e) {
             log.error("용어 추가 요청 처리 중 오류 발생: ", e);
-
-            // 보안 로깅 추가
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 
@@ -398,7 +400,13 @@ public class DictionaryService {
                     auth != null ? auth.getName() : "anonymous",
                     request.getRemoteAddr()
             );
-            throw new SecurityException("보안 위반이 감지되었습니다.", e);
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("용어 추가 요청 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("용어 추가 요청 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("용어 추가 요청 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -507,7 +515,13 @@ public class DictionaryService {
                     auth != null ? auth.getName() : "anonymous",
                     request.getRemoteAddr()
             );
-            throw new SecurityException("보안 위반이 감지되었습니다.", e);
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("대기중인 요청 조회 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("대기중인 요청 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("대기중인 요청 처리 중 오류가 발생했습니다.", e);
         }
     }
 
@@ -567,7 +581,13 @@ public class DictionaryService {
                     auth != null ? auth.getName() : "anonymous",
                     request.getRemoteAddr()
             );
-            throw new SecurityException("보안 위반이 감지되었습니다.", e);
+
+            if (e instanceof AccessDeniedException) {
+                throw new AuthorizationException("용어 요청 거절 권한이 없습니다.", e);
+            } else if (e instanceof DataAccessException) {
+                throw new DataAccessException("용어 요청 거절 데이터 접근 중 오류가 발생했습니다.", e);
+            }
+            throw new DataIntegrityException("용어 요청 거절 처리 중 오류가 발생했습니다.", e);
         }
     }
 }
