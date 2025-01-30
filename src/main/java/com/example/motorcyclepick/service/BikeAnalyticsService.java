@@ -55,9 +55,12 @@ public class BikeAnalyticsService {
                     request.getRemoteAddr()
             );
 
+            // 여기를 수정합니다
             List<Map<String, Object>> results = bikeAnalyticsMapper.findDailyResponseStats(startDate, endDate);
+
+            // convertMapToDTO 메서드를 직접 사용하여 변환
             return results.stream()
-                    .map(this::convertMapToDTO)
+                    .map(this::convertMapToDTO)  // 기존의 convertMapToDTO 메서드 활용
                     .collect(Collectors.toList());
 
         } catch (Exception e) {

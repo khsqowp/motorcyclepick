@@ -1,5 +1,6 @@
 package com.example.motorcyclepick.controller;
 
+// 필요한 클래스들 import
 import com.example.motorcyclepick.config.SecurityLogger;
 import com.example.motorcyclepick.dto.DeleteMotorcycleDTO;
 import com.example.motorcyclepick.dto.MotorcycleDTO;
@@ -23,16 +24,19 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.List;
 
+// 오토바이 관련 요청을 처리하는 컨트롤러
 @Controller
-@RequiredArgsConstructor
-@RequestMapping("/motorcycle")
+@RequiredArgsConstructor // final 필드를 위한 생성자 자동 생성
+@RequestMapping("/motorcycle") // 기본 URL 경로 설정
 public class MotorcycleController {
+    // 필요한 서비스 클래스들 주입
     private final MotorcycleService motorcycleService;
-    private final SecurityLogger securityLogger;  // final로 변경
+    private final SecurityLogger securityLogger;
 
-        @Autowired
-        private SecurityService securityService;
+    @Autowired
+    private SecurityService securityService;
 
+    // 모든 요청에 대해 관리자 권한 체크
     @ModelAttribute
     public void addAuthChecks(Model model, @AuthenticationPrincipal UserDetails userDetails) {
         if (userDetails != null) {
@@ -42,12 +46,14 @@ public class MotorcycleController {
         }
     }
 
+    // 문자열 입력값의 앞뒤 공백 제거를 위한 설정
     @InitBinder
     public void initBinder(WebDataBinder binder) {
         StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
         binder.registerCustomEditor(String.class, stringTrimmerEditor);
     }
 
+    // 메인 페이지 표시
     @GetMapping({"", "/"})
     public String motorcycleMain(Model model) {
         model.addAttribute("motorcycleForm", new MotorcycleForm());
@@ -55,8 +61,7 @@ public class MotorcycleController {
         return "motorcycle";
     }
 
-//    ___________________________________________________________________________________________________________________________
-
+    // 전체 오토바이 목록 조회
     @GetMapping("/list")
     public String listMotorcycles(Model model) {
         List<MotorcycleDTO> motorcycles = motorcycleService.findFullMotorcycleList();
@@ -64,8 +69,7 @@ public class MotorcycleController {
         return "list";
     }
 
-    //    ___________________________________________________________________________________________________________________________
-
+    // ID로 단일 오토바이 조회
     @GetMapping("/singleSearchID")
     public String viewMotorcycleById(@RequestParam(value = "id", required = false) Long id, Model model) {
         if (id == null) {
@@ -74,9 +78,10 @@ public class MotorcycleController {
             MotorcycleDTO motorcycle = motorcycleService.findOneMotorcycle(id);
             model.addAttribute("motorcycleDTO", motorcycle);
         }
-        return "singleSearchID"; // singleSearchID.html 파일을 렌더링
+        return "singleSearchID";
     }
 
+    // 입력 폼 데이터 검증
     private void validateMotorcycleForm(MotorcycleForm form) {
         if (form == null) {
             throw new IllegalArgumentException("폼 데이터가 없습니다.");
@@ -88,20 +93,21 @@ public class MotorcycleController {
             throw new IllegalArgumentException("제조사명은 필수입니다.");
         }
 
+        // XSS 방지를 위한 입력값 살균
         String sanitizedModel = securityService.sanitizeInput(form.getModel());
         String sanitizedMaker = securityService.sanitizeInput(form.getMaker());
         form.setModel(sanitizedModel);
         form.setMaker(sanitizedMaker);
     }
 
-    //    ___________________________________________________________________________________________________________________________
-
+    // 신규 오토바이 등록 폼 표시
     @GetMapping("/new")
     public String createMotorcycleForm(Model model) {
         model.addAttribute("motorcycleForm", new MotorcycleForm());
         return "create";
     }
 
+    // 신규 오토바이 등록 처리
     @PostMapping("/new")
     public String createMotorcycle(@ModelAttribute @Valid MotorcycleForm form,
                                    RedirectAttributes redirectAttributes,
@@ -118,23 +124,12 @@ public class MotorcycleController {
         }
     }
 
-    //    ___________________________________________________________________________________________________________________________
-
-    @GetMapping("/edit")  // 이건 그대로 유지
+    // 오토바이 수정 폼 표시
+    @GetMapping("/edit")
     public String editMotorcycle(@RequestParam("editId") Long motorcycleID, Model model) {
         try {
             MotorcycleDTO motorcycleDTO = motorcycleService.findOneMotorcycle(motorcycleID);
             MotorcycleForm motorcycleForm = MotorcycleForm.fromDTO(motorcycleDTO);
-//            if (motorcycleDTO.getEnginesDTO() == null) {
-//                motorcycleDTO.setEnginesDTO(new EnginesDTO());
-//            }
-//            if (motorcycleDTO.getElectronicsDTO() == null) {
-//                motorcycleDTO.setElectronicsDTO(new ElectronicsDTO());
-//            }
-//            if (motorcycleDTO.getDimensionsDTO() == null) {
-//                motorcycleDTO.setDimensionsDTO(new DimensionsDTO());
-//            }
-
             model.addAttribute("motorcycleDTO", motorcycleDTO);
             model.addAttribute("motorcycleForm", motorcycleForm);
             return "edit";
@@ -143,9 +138,7 @@ public class MotorcycleController {
         }
     }
 
-    //    ___________________________________________________________________________________________________________________________
-
-    // 전체 Motorcycle 리스트를 불러와서 엑셀처럼 수정할 수 있는 페이지로 이동
+    // 전체 오토바이 목록 수정 페이지 표시
     @GetMapping("/editList")
     public String editMotorcycleList(Model model) {
         List<MotorcycleDTO> motorcycles = motorcycleService.findFullMotorcycleList();
@@ -153,15 +146,14 @@ public class MotorcycleController {
         return "editList";
     }
 
-    // 다수 Motorcycle 수정 요청 처리 (editList에서 제출 시)
+    // 다수 오토바이 정보 일괄 수정 처리
     @PostMapping("/editList")
     public String updateMotorcycleList(@ModelAttribute("forms") List<MotorcycleForm> forms) {
         motorcycleService.updateMultipleMotorcycles(forms);
         return "redirect:/motorcycle/list";
     }
 
-    //    ___________________________________________________________________________________________________________________________
-
+    // 단일 오토바이 정보 수정 처리
     @PostMapping("/edit")
     public String updateMotorcycle(@ModelAttribute @Valid MotorcycleForm form,
                                    RedirectAttributes redirectAttributes,
@@ -183,15 +175,14 @@ public class MotorcycleController {
         }
     }
 
-//    ___________________________________________________________________________________________________________________________
-
+    // 오토바이 삭제 처리 (관리자 권한 필요)
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/delete")
     public String deleteMotorcycle(@ModelAttribute DeleteMotorcycleDTO dto,
                                    RedirectAttributes redirectAttributes,
                                    @AuthenticationPrincipal UserDetails userDetails) {
         try {
-            // 권한 검증
+            // 관리자 권한 재확인
             if (!userDetails.getAuthorities().stream()
                     .anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"))) {
                 throw new AccessDeniedException("관리자 권한이 필요합니다.");
@@ -207,6 +198,7 @@ public class MotorcycleController {
         return "redirect:/motorcycle/";
     }
 
+    // 보안 로깅을 위한 유틸리티 메서드
     private void logMotorcycleAccess(String action, Long motorcycleId, UserDetails userDetails) {
         String username = userDetails != null ? userDetails.getUsername() : "anonymous";
         securityLogger.logDataAccessEvent(
@@ -216,13 +208,10 @@ public class MotorcycleController {
         );
     }
 
-    //___________________________________________-
-
-
+    // 테스트 결과 페이지 표시
     @GetMapping("/testCode/resultPage")
     public String testResultPage(Model model, HttpSession session) {
         try {
-            // 모든 모터사이클 DTO 조회
             List<MotorcycleDTO> motorcycles = motorcycleService.findFullMotorcycleList();
 
             if (motorcycles.isEmpty()) {
@@ -231,10 +220,7 @@ public class MotorcycleController {
                 return "resultPage";
             }
 
-            // 세션에 결과 저장
             session.setAttribute("results", motorcycles);
-
-            // 모델에 필요한 데이터 추가
             model.addAttribute("motorcycle", motorcycles.get(0));
             model.addAttribute("results", motorcycles);
             model.addAttribute("currentIndex", 0);

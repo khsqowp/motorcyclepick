@@ -1,5 +1,6 @@
 package com.example.motorcyclepick.controller;
 
+// 필요한 의존성 임포트
 import com.example.motorcyclepick.config.SecurityLogger;
 import com.example.motorcyclepick.domain.UserDomain;
 import com.example.motorcyclepick.dto.UserDTO;
@@ -28,11 +29,15 @@ import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+// 회원가입 관련 요청을 처리하는 컨트롤러
 @Controller
-@Slf4j
-@RequiredArgsConstructor  // 이것으로 final 필드들의 생성자 주입이 자동으로 처리됨
+@Slf4j // 로깅을 위한 어노테이션
+@RequiredArgsConstructor // final 필드에 대한 생성자 자동 생성
 public class RegisterController {
+    // 이메일 인증 코드를 저장하는 동시성 해시맵
     private final Map<String, VerificationInfo> verificationCodes = new ConcurrentHashMap<>();
+
+    // 필요한 서비스 및 컴포넌트 주입
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
     private final SecurityLogger securityLogger;
@@ -40,22 +45,26 @@ public class RegisterController {
     private final SecurityService securityService;
     private final EmailService emailService;
 
+    // 회원가입 폼 페이지 표시
     @GetMapping("/register")
     public String registerForm(Model model) {
         model.addAttribute("user", new UserDTO());
         return "register";
     }
 
+    // 회원가입 처리
     @PostMapping("/register")
     @ResponseBody
     public ResponseEntity<?> register(@RequestBody @Valid UserDTO userDTO,
                                       BindingResult result,
                                       HttpServletRequest request) {
+        // 디버그 로깅
         log.debug("수신된 회원가입 데이터: {}", userDTO);
 
-        // 입력값 검증
+        // 입력값 유효성 검증
         if (result.hasErrors()) {
             log.error("유효성 검사 실패: {}", result.getAllErrors());
+            // 보안 이벤트 로깅
             securityLogger.logSecurityEvent(
                     "REGISTER_VALIDATION_FAILURE",
                     userDTO.getId(),
@@ -66,7 +75,7 @@ public class RegisterController {
         }
 
         try {
-            // XSS 방지를 위한 입력값 검증
+            // XSS 방지를 위한 입력값 살균
             userDTO.setId(securityService.sanitizeInput(userDTO.getId()));
             userDTO.setEmail(securityService.sanitizeInput(userDTO.getEmail()));
             userDTO.setUsername(securityService.sanitizeInput(userDTO.getUsername()));
@@ -86,10 +95,11 @@ public class RegisterController {
             userDTO.setCreatedAt(now);
             userDTO.setUpdatedAt(now);
 
+            // 회원 등록 수행
             userService.registerUser(userDTO);
             log.debug("회원가입 성공: {}", userDTO.getId());
 
-            // 보안 로깅
+            // 보안 이벤트 로깅
             securityLogger.logSecurityEvent(
                     "REGISTER_SUCCESS",
                     userDTO.getId(),
@@ -99,6 +109,7 @@ public class RegisterController {
             return ResponseEntity.ok().build();
 
         } catch (Exception e) {
+            // 에러 로깅
             log.error("회원가입 처리 중 오류 발생: {}", e.getMessage());
             securityLogger.logSecurityEvent(
                     "REGISTER_ERROR",
@@ -109,19 +120,24 @@ public class RegisterController {
         }
     }
 
+    // 생년월일 유효성 검증 및 기본값 설정
     private LocalDate validateAndConvertBirthDate(LocalDate birthDate) {
         return birthDate == null ? LocalDate.of(2000, 1, 1) : birthDate;
     }
 
+    // 지역 정보 유효성 검증 및 기본값 설정
     private String validateAndSetDefaultRegion(String region) {
         return (region == null || region.trim().isEmpty()) ? "Unknown" : region;
     }
 
+    // 전화번호 형식 정리
     private String formatPhoneNumber(String phoneNumber) {
         if (phoneNumber == null || phoneNumber.trim().isEmpty()) {
             return null;
         }
+        // 숫자만 추출
         String numbers = phoneNumber.replaceAll("[^0-9]", "");
+        // 11자리면 형식에 맞게 변환
         if (numbers.length() == 11) {
             return String.format("%s-%s-%s",
                     numbers.substring(0, 3),
@@ -131,7 +147,7 @@ public class RegisterController {
         return phoneNumber;
     }
 
-
+    // 이메일 인증 코드 전송
     @PostMapping("/send-verification")
     @ResponseBody
     public ResponseEntity<?> sendVerificationEmail(@RequestBody Map<String, String> payload,
@@ -144,9 +160,10 @@ public class RegisterController {
                 return ResponseEntity.badRequest().body("이메일이 제공되지 않았습니다.");
             }
 
+            // 인증 이메일 전송
             String code = emailService.sendVerificationEmail(email);
 
-            // 코드 생성 및 저장 로그 추가
+            // 인증 코드 저장
             log.debug("인증 코드 생성 완료: {}, 코드: {}", email, code);
             verificationCodes.put(email, new VerificationInfo(code, LocalDateTime.now().plusMinutes(5)));
 
@@ -158,13 +175,16 @@ public class RegisterController {
         }
     }
 
+    // 이메일 인증 코드 검증
     @PostMapping("/verify-code")
     @ResponseBody
     public ResponseEntity<?> verifyCode(@RequestBody Map<String, String> payload,
                                         HttpServletRequest request) {
+        // 입력값 살균
         String email = securityService.sanitizeInput(payload.get("email"));
         String code = securityService.sanitizeInput(payload.get("code"));
 
+        // 필수값 검증
         if (email == null || code == null) {
             securityLogger.logSecurityEvent(
                     "VERIFY_CODE_INVALID_INPUT",
@@ -174,6 +194,7 @@ public class RegisterController {
             return ResponseEntity.badRequest().body("이메일과 인증코드는 필수입니다.");
         }
 
+        // 인증 코드 검증
         VerificationInfo info = verificationCodes.get(email);
         if (info != null && info.getCode().equals(code) && LocalDateTime.now().isBefore(info.getExpiry())) {
             verificationCodes.remove(email);
@@ -185,6 +206,7 @@ public class RegisterController {
             return ResponseEntity.ok().build();
         }
 
+        // 인증 실패 로깅
         securityLogger.logSecurityEvent(
                 "VERIFY_CODE_FAILURE",
                 email,
@@ -193,6 +215,7 @@ public class RegisterController {
         return ResponseEntity.badRequest().body("잘못된 인증번호 또는 만료된 인증번호입니다.");
     }
 
+    // 인증 정보를 저장하는 내부 클래스
     static class VerificationInfo {
         private final String code;
         private final LocalDateTime expiry;
@@ -219,21 +242,23 @@ public class RegisterController {
         }
     }
 
+    // 아이디 중복 체크
     @GetMapping("/check-id/{id}")
     @ResponseBody
     public ResponseEntity<?> checkIdDuplicate(@PathVariable String id,
                                               HttpServletRequest request) {
         try {
-            // 무작위 지연 시간 추가 (200~500ms)
+            // 타이밍 공격 방지를 위한 무작위 지연
             Thread.sleep((long) (Math.random() * 300) + 200);
 
-            // SecurityLogger를 통한 로깅
+            // ID 체크 요청 로깅
             securityLogger.logSecurityEvent(
                     "ID_CHECK_REQUEST",
                     id,
                     request.getRemoteAddr()
             );
 
+            // 중복 체크 수행
             if (userService.findById(id) != null) {
                 securityLogger.logSecurityEvent(
                         "ID_CHECK_DUPLICATE",
@@ -244,6 +269,7 @@ public class RegisterController {
             }
             return ResponseEntity.ok().body("available");
         } catch (InterruptedException e) {
+            // 에러 로깅
             securityLogger.logSecurityEvent(
                     "ID_CHECK_ERROR",
                     id,
