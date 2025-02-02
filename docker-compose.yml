@@ -32,7 +32,10 @@ services:
       mysql:
         condition: service_healthy
     ports:
-      - "0.0.0.0:443:8443"
+      - target: 8443
+        published: 443
+        protocol: tcp
+        mode: host
     volumes:
       - ./src/main/resources/static/images:/app/images
       - ./src/main/resources/motorcycle.p12:/app/ssl/motorcycle.p12:ro
