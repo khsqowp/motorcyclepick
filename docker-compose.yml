@@ -32,14 +32,7 @@ services:
       mysql:
         condition: service_healthy
     ports:
-      - "0.0.0.0:443:8443"  # 모든 인터페이스에서 리스닝
-    extra_hosts:
-      - "host.docker.internal:host-gateway"  # 호스트 연결 추가
-    network_mode: "host"  # 호스트 네트워크 모드 사용
-    security_opt:
-      - apparmor:unconfined
-    cap_add:
-      - NET_ADMIN
+      - "443:8443"
     volumes:
       - ./src/main/resources/static/images:/app/images
       - ./src/main/resources/motorcycle.p12:/app/ssl/motorcycle.p12:ro
