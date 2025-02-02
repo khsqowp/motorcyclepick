@@ -42,11 +42,14 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/MotorcycleDB?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
-      - SERVER_SSL_KEY_STORE=/app/ssl/motorcycle.p12
       - SERVER_SSL_KEY_STORE_PASSWORD=Rlagkstn1@
       - SERVER_SSL_KEY_STORE_TYPE=PKCS12
       - SERVER_PORT=8443
       - SERVER_SSL_KEY_ALIAS=tomcat
+      - SERVER_SSL_ENABLED=true
+      - SERVER_SSL_PROTOCOL=TLS
+      - SERVER_SSL_ENABLED_PROTOCOLS=TLSv1.2,TLSv1.3
+      - SERVER_SSL_KEY_STORE=/app/ssl/motorcycle.p12
     networks:
       - motorcycle-network
 
