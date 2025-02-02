@@ -1,3 +1,63 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: MotorcycleDB
+      TZ: Asia/Seoul
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+    user: "999:999"
+    networks:
+      - motorcycle-network
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  spring-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: motor-server
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "443:8443"
+    volumes:
+      - ./src/main/resources/static/images:/app/images
+      - ./src/main/resources/motorcycle.p12:/app/ssl/motorcycle.p12:ro
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - TZ=Asia/Seoul
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/MotorcycleDB?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SERVER_SSL_KEY_STORE=/app/ssl/motorcycle.p12
+      - SERVER_SSL_KEY_STORE_PASSWORD=Rlagkstn1@
+      - SERVER_SSL_KEY_STORE_TYPE=PKCS12
+      - SERVER_PORT=8443
+      - SERVER_SSL_KEY_ALIAS=tomcat
+    networks:
+      - motorcycle-network
+
+volumes:
+  mysql-data:
+    driver: local
+
+networks:
+  motorcycle-network:
+    driver: bridge
+
 #version: '3.8'
 #services:
 #  mysql:
@@ -34,7 +94,7 @@
 #      - "443:8443"
 #    volumes:
 #      - ./src/main/resources/static/images:/app/images
-#      - ./motorcycle.p12:/app/ssl/motorcycle.p12:ro
+#      - ./src/main/resources/motorcycle.p12:/app/ssl/motorcycle.p12:ro
 #    environment:
 #      - SPRING_PROFILES_ACTIVE=docker
 #      - TZ=Asia/Seoul
@@ -56,62 +116,3 @@
 #networks:
 #  motorcycle-network:
 #    driver: bridge
-
-version: '3.8'
-services:
-  mysql:
-    image: mysql:8.0
-    container_name: mysql-container
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: MotorcycleDB
-      TZ: Asia/Seoul
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql-data:/var/lib/mysql
-      - ./sql:/docker-entrypoint-initdb.d
-    user: "999:999"
-    networks:
-      - motorcycle-network
-    command:
-      - --character-set-server=utf8mb4
-      - --collation-server=utf8mb4_unicode_ci
-      - --default-authentication-plugin=mysql_native_password
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      timeout: 20s
-      retries: 10
-
-  spring-app:
-    build: .
-    container_name: motor-server
-    depends_on:
-      mysql:
-        condition: service_healthy
-    ports:
-      - "443:8443"
-    volumes:
-      - ./src/main/resources/static/images:/app/images
-      - ./src/main/resources/motorcycle.p12:/app/ssl/motorcycle.p12:ro
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-      - TZ=Asia/Seoul
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/MotorcycleDB?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
-      - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=root
-      - SERVER_SSL_KEY_STORE=/app/ssl/motorcycle.p12
-      - SERVER_SSL_KEY_STORE_PASSWORD=Rlagkstn1@
-      - SERVER_SSL_KEY_STORE_TYPE=PKCS12
-      - SERVER_PORT=8443
-      - SERVER_SSL_KEY_ALIAS=tomcat
-    networks:
-      - motorcycle-network
-
-volumes:
-  mysql-data:
-    driver: local
-
-networks:
-  motorcycle-network:
-    driver: bridge
