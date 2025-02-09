@@ -34,7 +34,6 @@ services:
     ports:
 #      - "443:8443"
       - "0.0.0.0:443:8443"
-
     volumes:
       - ./src/main/resources/static/images:/app/images
       - ./src/main/resources/motorcycle.p12:/app/ssl/motorcycle.p12:ro
@@ -54,6 +53,9 @@ services:
       - SERVER_SSL_CIPHERS=TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256
       - SERVER_SSL_CIPHERS=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
       - SERVER_SSL_KEY_STORE=/app/ssl/motorcycle.p12
+      - LOGGING_LEVEL_ROOT=DEBUG
+      - LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB=DEBUG
+      - LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY=DEBUG
     networks:
       - motorcycle-network
 
