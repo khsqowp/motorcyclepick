@@ -33,11 +33,12 @@ services:
         condition: service_healthy
     ports:
 #      - "443:8443"
-      - "0.0.0.0:443:8443"
+      - "0.0.0.0:8443:8443"  # 외부->컨테이너 직접 매핑
     volumes:
       - ./src/main/resources/static/images:/app/images
       - ./src/main/resources/motorcycle.p12:/app/ssl/motorcycle.p12:ro
     environment:
+      - SERVER_PORT=8443
       - SPRING_PROFILES_ACTIVE=docker
       - TZ=Asia/Seoul
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/MotorcycleDB?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
