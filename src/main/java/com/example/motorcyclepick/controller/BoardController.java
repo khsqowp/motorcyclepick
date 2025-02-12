@@ -46,8 +46,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 // Lombok을 사용한 로깅 기능 활성화
 @Slf4j
-// 인증된 사용자만 접근 가능하도록 설정
-@PreAuthorize("isAuthenticated()")
 // CORS 설정
 @CrossOrigin(origins = "*", maxAge = 3600)
 // 세션에서 관리할 속성들 지정
@@ -165,33 +163,23 @@ public class BoardController {
             @RequestParam(defaultValue = "0") int index,
             Model model,
             HttpSession session) {
-        // 세션 검사
         if (session.getAttribute("results") == null) {
             return "redirect:/surveyMotorcycle";
         }
         try {
-            // 세션에서 결과 목록 가져오기
             List<MotorcycleDTO> results = (List<MotorcycleDTO>) session.getAttribute("results");
-
-            // 결과 유효성 검사
             if (results == null || results.isEmpty()) {
                 throw new IllegalStateException("검색 결과를 찾을 수 없습니다");
             }
-
-            // 인덱스 유효성 검사
             if (index < 0 || index >= results.size()) {
                 throw new IllegalArgumentException("유효하지 않은 인덱스입니다");
             }
-
-            // 선택된 결과를 모델에 추가
             MotorcycleDomain motorcycle = results.get(index).toDomain();
             model.addAttribute("motorcycle", motorcycle);
             model.addAttribute("currentIndex", index);
             model.addAttribute("totalResults", results.size());
-
             return "resultPage";
         } catch (Exception e) {
-            // 오류 로깅 및 처리
             log.error("결과 페이지 네비게이션 중 오류 발생: ", e);
             model.addAttribute("error", "결과 페이지 처리 중 오류가 발생했습니다");
             return "error";
