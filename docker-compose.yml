@@ -33,8 +33,8 @@ services:
         condition: service_healthy
     ports:
 #      - "443:8443"
-      - "8443:8443"
-      volumes:
+      - "0.0.0.0:8443:8443"  # 외부->컨테이너 직접 매핑
+    volumes:
       - ./src/main/resources/static/images:/app/images
       - ./src/main/resources/motorcycle.p12:/app/ssl/motorcycle.p12:ro
     environment:
