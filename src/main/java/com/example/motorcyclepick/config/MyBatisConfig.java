@@ -42,6 +42,10 @@ public class MyBatisConfig {
         // Enum 타입을 문자열로 처리하도록 설정
         configuration.setDefaultEnumTypeHandler(StringTypeHandler.class);
 
+        // MyBatis 타임아웃 설정
+        configuration.setDefaultStatementTimeout(Integer.MAX_VALUE);
+        configuration.setDefaultExecutorType(org.apache.ibatis.session.ExecutorType.REUSE);
+
         // 설정 적용
         sessionFactory.setConfiguration(configuration);
 

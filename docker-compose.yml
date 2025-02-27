@@ -15,12 +15,12 @@ services:
     networks:
       - motorcycle-network
     command:
-      - --wait_timeout=31536000        # 1년
-      - --interactive_timeout=31536000  # 1년
-      - --max_connections=151
-      - --connect_timeout=31536000     # 1년
-      - --net_read_timeout=31536000    # 1년
-      - --net_write_timeout=31536000   # 1년
+      - --wait_timeout=2147483647        # 최대값
+      - --interactive_timeout=2147483647  # 최대값
+      - --max_connections=1000
+      - --connect_timeout=2147483647     # 최대값
+      - --net_read_timeout=2147483647    # 최대값
+      - --net_write_timeout=2147483647   # 최대값
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
       - --default-authentication-plugin=mysql_native_password
