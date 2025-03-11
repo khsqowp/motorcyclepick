@@ -90,7 +90,7 @@ public class SecurityConfig {
                         .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
                         .invalidSessionUrl("/")
                         .maximumSessions(1) // 최대 세션 수
-                        .maxSessionsPreventsLogin(true) // 중복 로그인 방지
+                        .maxSessionsPreventsLogin(false) // 중복 로그인 허용하고 이전 세션 무효화
                         .expiredUrl("/login")
                         .and()
                         .sessionFixation().migrateSession()) // 세션 고정 보호

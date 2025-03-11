@@ -94,6 +94,13 @@ public class SecurityLogger {
         return false;
     }
 
+    // IP 차단 카운터 초기화 메서드 추가
+    public void resetLoginAttempts(String ipAddress) {
+        loginAttempts.remove(ipAddress);
+        blockedIPs.remove(ipAddress);
+        log.info("Reset login attempts for IP: {}", ipAddress);
+    }
+
     // IP 차단 처리 메서드
     private void blockIP(String ipAddress) {
         // IP 차단 시작 시간 저장

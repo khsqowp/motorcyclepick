@@ -79,5 +79,7 @@ dependencies {
 	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
 	implementation 'com.univocity:univocity-parsers:2.9.1'
 
+	implementation 'org.jsoup:jsoup:1.15.3'
+	implementation 'com.opencsv:opencsv:5.7.1'
 
 }

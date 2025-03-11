@@ -51,10 +51,17 @@ public class UserService implements UserDetailsService {
                 throw new UsernameNotFoundException("User not found with id: " + id);
             }
 
+            // 사용자 IP 주소 가져오기
+            String ipAddress = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr();
+
+            // 로그인 성공 로깅
             securityLogger.logSecurityEvent("USER_LOGIN_SUCCESS",
                     id,
-                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
+                    ipAddress
             );
+
+            // IP 차단 카운터 초기화
+            securityLogger.resetLoginAttempts(ipAddress);
 
             return new org.springframework.security.core.userdetails.User(
                     userDomain.getId(),

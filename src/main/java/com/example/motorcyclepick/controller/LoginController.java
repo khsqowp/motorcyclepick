@@ -89,6 +89,9 @@ public class LoginController {
                 throw new UserAuthenticationException("아이디와 비밀번호를 입력해주세요.");
             }
 
+            // IP 차단 확인
+            String ipAddress = request.getRemoteAddr();
+
             // 로그인 수행
             try {
                 request.login(id, password);
@@ -99,11 +102,14 @@ public class LoginController {
             // 인증 정보 확인
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             if (auth != null && auth.isAuthenticated()) {
+                // 로그인 성공 시 IP 차단 카운터 초기화
+                securityLogger.resetLoginAttempts(ipAddress);
+
                 // 로그인 성공 이벤트 로깅
                 securityLogger.logSecurityEvent(
                         "LOGIN_SUCCESS",
                         auth.getName(),
-                        request.getRemoteAddr()
+                        ipAddress
                 );
 
                 // 세션 생성 및 만료 시간 설정
