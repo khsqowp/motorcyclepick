@@ -82,7 +82,8 @@ public class SecurityConfig {
                 .logout(logout -> logout
                         .logoutSuccessUrl("/login") // 로그아웃 성공 시 이동
                         .invalidateHttpSession(true) // 세션 무효화
-                        .deleteCookies("JSESSIONID") // 쿠키 삭제
+                        .clearAuthentication(true)
+                        .deleteCookies("JSESSIONID", "XSRF-TOKEN") // 쿠키 삭제
                         .permitAll())
 
                 // 세션 관리 설정
