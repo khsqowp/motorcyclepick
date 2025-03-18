@@ -49,13 +49,13 @@ public class SecurityLogger {
 
     // 보안 이벤트를 로깅하는 메서드
     public void logSecurityEvent(String event, String username, String ipAddress) {
-        // 새로운 보안 이벤트 객체 생성
         SecurityEvent securityEvent = new SecurityEvent(event, username, ipAddress, LocalDateTime.now());
-        // 이벤트 정보 로깅
         log.info("Security Event: {}", securityEvent);
 
-        // 로그인 실패 이벤트인 경우 추가 처리
-        if ("LOGIN_FAILURE".equals(event)) {
+        if ("USER_LOGIN_SUCCESS".equals(event) || "LOGOUT_SUCCESS".equals(event)) {
+            // 로그인 성공 또는 로그아웃 시 IP 차단 상태 초기화
+            resetLoginAttempts(ipAddress);
+        } else if ("LOGIN_FAILURE".equals(event)) {
             handleFailedLogin(ipAddress);
         }
     }
@@ -96,9 +96,10 @@ public class SecurityLogger {
 
     // IP 차단 카운터 초기화 메서드 추가
     public void resetLoginAttempts(String ipAddress) {
+        // IP 차단 상태와 로그인 시도 횟수를 모두 초기화
         loginAttempts.remove(ipAddress);
         blockedIPs.remove(ipAddress);
-        log.info("Reset login attempts for IP: {}", ipAddress);
+        log.info("Successfully reset login attempts and block status for IP: {}", ipAddress);
     }
 
     // IP 차단 처리 메서드

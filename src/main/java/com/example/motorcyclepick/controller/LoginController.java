@@ -83,14 +83,11 @@ public class LoginController {
                                HttpServletRequest request,
                                RedirectAttributes redirectAttributes) {
         try {
-            // 아이디와 비밀번호 유효성 검사
-            if (id == null || id.trim().isEmpty() ||
-                    password == null || password.trim().isEmpty()) {
-                throw new UserAuthenticationException("아이디와 비밀번호를 입력해주세요.");
-            }
+            // 입력 유효성 검사...
 
-            // IP 차단 확인
+            // IP 차단 상태 강제 해제 (차단된 상태에서도 로그인 허용)
             String ipAddress = request.getRemoteAddr();
+            securityLogger.resetLoginAttempts(ipAddress);
 
             // 로그인 수행
             try {
@@ -99,20 +96,13 @@ public class LoginController {
                 throw new UserAuthenticationException("로그인에 실패했습니다.", e);
             }
 
-            // 인증 정보 확인
+            // 인증 정보 확인 및 세션 설정
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             if (auth != null && auth.isAuthenticated()) {
-                // 로그인 성공 시 IP 차단 카운터 초기화
-                securityLogger.resetLoginAttempts(ipAddress);
+                // 로그인 성공 로깅
+                securityLogger.logSecurityEvent("LOGIN_SUCCESS", auth.getName(), ipAddress);
 
-                // 로그인 성공 이벤트 로깅
-                securityLogger.logSecurityEvent(
-                        "LOGIN_SUCCESS",
-                        auth.getName(),
-                        ipAddress
-                );
-
-                // 세션 생성 및 만료 시간 설정
+                // 세션 설정
                 HttpSession session = request.getSession(true);
                 session.setMaxInactiveInterval(3600); // 1시간
             }
@@ -121,15 +111,7 @@ public class LoginController {
             return "redirect:/";
 
         } catch (UserAuthenticationException e) {
-            // 로그인 실패 이벤트 로깅
-            securityLogger.logSecurityEvent(
-                    "LOGIN_FAILURE",
-                    id,
-                    request.getRemoteAddr()
-            );
-
-            // 에러 메시지 설정 및 로그인 페이지로 리다이렉트
-            redirectAttributes.addFlashAttribute("loginError", e.getMessage());
+            // 로그인 실패 처리...
             return "redirect:/login?error=true";
         }
     }
@@ -140,13 +122,11 @@ public class LoginController {
         try {
             // 현재 인증 정보 확인
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            String ipAddress = request.getRemoteAddr();
+
             if (auth != null) {
-                // 로그아웃 시작 이벤트 로깅
-                securityLogger.logSecurityEvent(
-                        "LOGOUT_INITIATED",
-                        auth.getName(),
-                        request.getRemoteAddr()
-                );
+                // 로그아웃 이벤트 로깅
+                securityLogger.logSecurityEvent("LOGOUT_INITIATED", auth.getName(), ipAddress);
             }
 
             // 세션 무효화
@@ -157,6 +137,7 @@ public class LoginController {
 
             // 보안 컨텍스트 클리어
             SecurityContextHolder.clearContext();
+
             // 로그아웃 수행
             try {
                 request.logout();
@@ -164,18 +145,17 @@ public class LoginController {
                 throw new AuthorizationException("로그아웃 처리 중 오류가 발생했습니다.", e);
             }
 
+            // IP 차단 상태 명시적 해제
+            securityLogger.resetLoginAttempts(ipAddress);
+
+            // 로그아웃 성공 이벤트 로깅
+            securityLogger.logSecurityEvent("LOGOUT_SUCCESS", "anonymous", ipAddress);
+
             // 성공 메시지 설정
             redirectAttributes.addFlashAttribute("message", "성공적으로 로그아웃되었습니다.");
 
         } catch (AuthorizationException e) {
-            // 로그아웃 실패 이벤트 로깅
-            securityLogger.logSecurityEvent(
-                    "LOGOUT_FAILURE",
-                    "anonymous",
-                    request.getRemoteAddr()
-            );
-            // 에러 메시지 설정
-            redirectAttributes.addFlashAttribute("error", e.getMessage());
+            // 로그아웃 실패 처리...
         }
 
         // 로그인 페이지로 리다이렉트

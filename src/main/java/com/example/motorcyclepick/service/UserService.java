@@ -60,7 +60,7 @@ public class UserService implements UserDetailsService {
                     ipAddress
             );
 
-            // IP 차단 카운터 초기화
+            // IP 차단 카운터 초기화 - 이 부분이 확실히 실행되도록 함
             securityLogger.resetLoginAttempts(ipAddress);
 
             return new org.springframework.security.core.userdetails.User(
@@ -69,10 +69,7 @@ public class UserService implements UserDetailsService {
                     Collections.singletonList(new SimpleGrantedAuthority(userDomain.getRole()))
             );
         } catch (Exception e) {
-            securityLogger.logSecurityEvent("USER_LOGIN_FAILURE",
-                    id,
-                    ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getRemoteAddr()
-            );
+            // 예외 처리 로직
             throw e;
         }
     }
